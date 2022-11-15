@@ -244,7 +244,7 @@ export default function FrontPageGenerator() {
             )}
           </CardContent>
           <CardActions>
-            <Button size="small" disabled={loading} type="submit">
+            <Button size="small" type="submit">
               Generate Front Page
             </Button>
           </CardActions>
