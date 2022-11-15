@@ -12,17 +12,29 @@ import {
   FormLabel,
   Typography,
 } from "@mui/material";
-import { useEffect, useState, useContext } from "react";
-import useFrontPageGenerator from "../utils/frontPageGenerator";
+import { useEffect, useState, useContext, useRef } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import constants from "../utils/frontPageGenerator/constants";
-import { WordContext } from "../context/wordContext";
-import { prefetchDocument } from "../utils/frontPageGenerator";
+import { AppContext } from "../context/appContext";
+import dynamic from "next/dynamic";
 
 export default function FrontPageGenerator() {
-  const wordFiles = useContext(WordContext);
-  const [roll, setRoll] = useState(null);
+  const NonSSRFrontPageButton = dynamic(
+    () => import("./NonSSRFrontPageButton"),
+    {
+      ssr: false,
+      loading: () => (
+        <Button disabled size="small">
+          Generate Front Page
+        </Button>
+      ),
+    }
+  );
+
+  const namePicker = useRef(null);
+
+  const { roll, setRoll } = useContext(AppContext);
   const [assignmentNumber, setAssignmentNumber] = useState(null);
   const [subject, setSubject] = useState("DL");
   const { names, dlAssignments, fitAssignments } = constants;
@@ -44,26 +56,12 @@ export default function FrontPageGenerator() {
     }
   }, [subject]);
 
-  useEffect(() => {
-    prefetchDocument({ wordFiles, subject, roll });
-  }, [subject, roll]);
-
-  const list = Object.entries(names).map((entry) => ({
-    roll: entry[0],
-    label: entry[1][0],
-  }));
-
-  const handleChange = (event) => {
-    setSubject(event.target.value);
-  };
-
-  const [generateFrontPage, error, loading] = useFrontPageGenerator();
-
-  useEffect(() => {
-    if (error) {
-      alert(error);
-    }
-  }, [error, loading]);
+  const list = [["0", ["Select your name"]], ...Object.entries(names)].map(
+    (entry) => ({
+      roll: entry[0],
+      label: entry[1][0],
+    })
+  );
 
   return (
     <Card sx={{ display: "flex", margin: "1rem auto", maxWidth: 480 }}>
@@ -74,18 +72,7 @@ export default function FrontPageGenerator() {
           flexDirection: "column",
         }}
       >
-        <FormControl
-          component="form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            generateFrontPage({
-              roll,
-              assignmentNumber,
-              subject,
-              wordFiles,
-            });
-          }}
-        >
+        <FormControl component="form">
           <CardContent
             sx={{
               flex: 1,
@@ -107,12 +94,22 @@ export default function FrontPageGenerator() {
               onChange={(event, value) => {
                 setRoll(value.roll);
               }}
+              value={list.find((entry) => entry.roll === roll)}
               disableClearable
               size="small"
               autoHighlight
               options={list}
+              getOptionDisabled={(option) =>
+                option === list.find((entry) => entry.roll === "0")
+              }
               renderInput={(params) => (
-                <TextField required {...params} name="name" label="Name" />
+                <TextField
+                  inputRef={namePicker}
+                  required
+                  {...params}
+                  name="name"
+                  label="Name"
+                />
               )}
               isOptionEqualToValue={(option, value) =>
                 option.roll === value.roll
@@ -141,7 +138,9 @@ export default function FrontPageGenerator() {
             <RadioGroup
               name="subject"
               value={subject}
-              onChange={handleChange}
+              onChange={(event) => {
+                setSubject(event.target.value);
+              }}
               sx={{
                 mb: 1,
                 display: "flex",
@@ -244,9 +243,14 @@ export default function FrontPageGenerator() {
             )}
           </CardContent>
           <CardActions>
-            <Button size="small" type="submit">
-              Generate Front Page
-            </Button>
+            <NonSSRFrontPageButton
+              {...{
+                roll,
+                assignmentNumber,
+                subject,
+                namePicker,
+              }}
+            />
           </CardActions>
         </FormControl>
       </Box>

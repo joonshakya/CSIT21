@@ -1,10 +1,10 @@
 import Navbar from "../components/Navbar";
-import dynamic from "next/dynamic";
+import FrontPageGenerator from "../components/FrontPageGenerator";
 
-const FrontPageGenerator = dynamic(
-  () => import("../components/FrontPageGenerator"),
-  { ssr: false }
-);
+// const FrontPageGenerator = dynamic(
+//   () => import("../components/FrontPageGenerator"),
+//   { ssr: false }
+// );
 
 export default function Index() {
   return (

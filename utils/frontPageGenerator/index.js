@@ -15,7 +15,9 @@ export default function useFrontPageGenerator() {
   }) => {
     const { dlAssignments, fitAssignments, names } = constants;
     setLoading(true);
-
+    if (roll === "0" || !roll) {
+      return;
+    }
     const content = await prefetchDocument({ wordFiles, subject, roll });
     if (subject === "DL") {
       assignmentName = dlAssignments.find(
@@ -44,7 +46,7 @@ export default function useFrontPageGenerator() {
 export async function prefetchDocument({ wordFiles, subject, roll }) {
   const { names } = constants;
   if (subject === "DL") {
-    if (!roll) {
+    if (roll === "0" || !roll) {
       return;
     }
     subject = names[roll][2] == "A" ? "DL Section A" : "DL Section B";
@@ -52,7 +54,7 @@ export async function prefetchDocument({ wordFiles, subject, roll }) {
 
   let content = wordFiles[subject];
   if (content) {
-    console.log(`Using cached ${subject}`);
+    // console.log(`Using cached ${subject}`);
     return content;
   }
 
@@ -65,7 +67,7 @@ export async function prefetchDocument({ wordFiles, subject, roll }) {
     });
   });
 
-  console.log(`Downloaded ${subject}`);
+  // console.log(`Downloaded ${subject}`);
   wordFiles.setWordFile({ subject, content });
   return content;
 }

@@ -1,7 +1,7 @@
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
 
 const initialState = {
-  roll: null,
+  roll: "0",
   loading: 0,
   loadingProgress: null,
   constants: null,
@@ -9,7 +9,7 @@ const initialState = {
 };
 
 const AppContext = createContext({
-  roll: null,
+  roll: "0",
   loading: 0,
   loadingProgress: null,
   errorPopupMessage: null,
@@ -75,11 +75,19 @@ const AppProvider = (props) => {
   };
 
   const setRoll = (roll) => {
+    localStorage.setItem("roll", roll);
     dispatch({
       type: "SET_ROLL",
       payload: roll,
     });
   };
+
+  useEffect(() => {
+    const roll = localStorage.getItem("roll");
+    if (roll) {
+      setRoll(roll);
+    }
+  }, []);
 
   return (
     <>
