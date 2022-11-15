@@ -1,6 +1,3 @@
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import { Box, Toolbar } from "@mui/material";
 import Navbar from "../components/Navbar";
 import dynamic from "next/dynamic";
 
@@ -13,7 +10,6 @@ export default function Index() {
   return (
     <>
       <Navbar />
-      <Toolbar />
       <FrontPageGenerator />
     </>
   );

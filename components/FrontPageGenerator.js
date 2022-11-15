@@ -12,17 +12,42 @@ import {
   FormLabel,
   Typography,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import constants from "../utils/frontPageGenerator/constants";
+import { WordContext } from "../context/wordContext";
+import { prefetchDocument } from "../utils/frontPageGenerator";
 
 export default function FrontPageGenerator() {
+  const wordFiles = useContext(WordContext);
   const [roll, setRoll] = useState(null);
   const [assignmentNumber, setAssignmentNumber] = useState(null);
   const [subject, setSubject] = useState("DL");
   const { names, dlAssignments, fitAssignments } = constants;
+
+  const assignmentLists = [
+    { subject: "DL", assignments: dlAssignments },
+    { subject: "FIT", assignments: fitAssignments },
+  ];
+
+  useEffect(() => {
+    if (subject === "DL" || subject === "FIT") {
+      assignmentLists.forEach((entry) => {
+        if (entry.subject === subject) {
+          setAssignmentNumber(
+            entry.assignments.find((assignment) => assignment.selected).number
+          );
+        }
+      });
+    }
+  }, [subject]);
+
+  useEffect(() => {
+    prefetchDocument({ wordFiles, subject, roll });
+  }, [subject, roll]);
+
   const list = Object.entries(names).map((entry) => ({
     roll: entry[0],
     label: entry[1][0],
@@ -41,7 +66,7 @@ export default function FrontPageGenerator() {
   }, [error, loading]);
 
   return (
-    <Card sx={{ display: "flex", margin: "1rem auto", maxWidth: 768 }}>
+    <Card sx={{ display: "flex", margin: "1rem auto", maxWidth: 480 }}>
       <Box
         sx={{
           flex: 1,
@@ -51,37 +76,20 @@ export default function FrontPageGenerator() {
       >
         <FormControl
           component="form"
-          sx={{
-            my: 1,
-          }}
           onSubmit={(e) => {
             e.preventDefault();
-            // const data = new FormData(e.target).entries();
-            // const values = {};
-            // let result = data.next();
-            // while (!result.done) {
-            //   values[result.value[0]] = result.value[1];
-            //   result = data.next();
-            // }
-            // values.roll = list.find(
-            //   (entry) => entry.label === values.name
-            // ).roll;
-            // // if (values.subject === "DL") {
-            // //   values.assignmentNumber = dlAssignments.find(
-            // //     (assignment) => assignment.name === values.assignmentName
-            // //   ).number;
-            // // } else if (values.subject === "FIT") {
-            // //   values.assignmentNumber = fitAssignments.find(
-            // //     (assignment) => assignment.name === values.assignmentName
-            // //   ).number;
-            // // }
-
-            generateFrontPage({ roll, assignmentNumber, subject });
+            generateFrontPage({
+              roll,
+              assignmentNumber,
+              subject,
+              wordFiles,
+            });
           }}
         >
           <CardContent
             sx={{
               flex: 1,
+              pb: 0,
             }}
           >
             <Typography gutterBottom variant="h5" component="div">
@@ -93,7 +101,7 @@ export default function FrontPageGenerator() {
 
             <Autocomplete
               sx={{
-                my: 1,
+                my: 2,
               }}
               openOnFocus
               onChange={(event, value) => {
@@ -101,6 +109,7 @@ export default function FrontPageGenerator() {
               }}
               disableClearable
               size="small"
+              autoHighlight
               options={list}
               renderInput={(params) => (
                 <TextField required {...params} name="name" label="Name" />
@@ -134,28 +143,37 @@ export default function FrontPageGenerator() {
               value={subject}
               onChange={handleChange}
               sx={{
+                mb: 1,
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "center",
               }}
             >
-              <FormControlLabel
-                value="DL"
-                defaultChecked={true}
-                control={<Radio />}
-                label="Digital Logic"
-              />
-              <FormControlLabel
-                value="C"
-                control={<Radio />}
-                label="C Programming"
-              />
-              <FormControlLabel
-                value="FIT"
-                control={<Radio />}
-                label="Fundamentals of IT"
-              />
+              {[
+                {
+                  shortHand: "DL",
+                  longHand: "Digital Logic",
+                },
+                {
+                  shortHand: "C",
+                  longHand: "C Programming",
+                },
+                {
+                  shortHand: "FIT",
+                  longHand: "Fundamentals of IT",
+                },
+              ].map((subject, index) => (
+                <FormControlLabel
+                  sx={{
+                    my: -0.5,
+                  }}
+                  value={subject.shortHand}
+                  defaultChecked={index === 0}
+                  control={<Radio />}
+                  label={subject.longHand}
+                />
+              ))}
             </RadioGroup>
             {subject === "C" ? (
               <TextField
@@ -167,6 +185,9 @@ export default function FrontPageGenerator() {
                 name="assignmentNumber"
                 label="Assignment Number"
                 type="number"
+                inputProps={{
+                  min: 1,
+                }}
                 required
                 onChange={(e) => {
                   setAssignmentNumber(e.target.value);
@@ -176,15 +197,12 @@ export default function FrontPageGenerator() {
                 }}
               />
             ) : (
-              [
-                { subject: "DL", assignments: dlAssignments },
-                { subject: "FIT", assignments: fitAssignments },
-              ].map((entry) => (
-                <>
+              assignmentLists.map((entry, index) => (
+                <Box key={index}>
                   {entry.subject === subject ? (
                     <Autocomplete
                       sx={{
-                        my: 1,
+                        my: 2,
                       }}
                       options={entry.assignments.map((assignment, index) => ({
                         ...assignment,
@@ -193,6 +211,10 @@ export default function FrontPageGenerator() {
                       onChange={(event, value) => {
                         setAssignmentNumber(value.number);
                       }}
+                      defaultValue={entry.assignments.find(
+                        (assignment) => assignment.selected
+                      )}
+                      autoHighlight
                       groupBy={(option) => option.group}
                       disableClearable
                       size="small"
@@ -210,14 +232,14 @@ export default function FrontPageGenerator() {
                       )}
                       renderGroup={(params) => (
                         <>
-                          <>- - -</>
-                          <>{params.children}</>
+                          <hr />
+                          {params.children}
                         </>
                       )}
                       getOptionLabel={(option) => option.name}
                     />
                   ) : null}
-                </>
+                </Box>
               ))
             )}
           </CardContent>
@@ -228,7 +250,7 @@ export default function FrontPageGenerator() {
           </CardActions>
         </FormControl>
       </Box>
-      <Box
+      {/* <Box
         sx={{
           flex: 1,
           display: "flex",
@@ -244,7 +266,7 @@ export default function FrontPageGenerator() {
           image="/static/images/cards/front-page-example.png"
           alt="Front page example"
         />
-      </Box>
+      </Box> */}
     </Card>
   );
 }
