@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import FrontPageGenerator from "../components/FrontPageGenerator";
+import Soon from "../components/Soon";
 
 // const FrontPageGenerator = dynamic(
 //   () => import("../components/FrontPageGenerator"),
@@ -11,6 +12,7 @@ export default function Index() {
     <>
       <Navbar />
       <FrontPageGenerator />
+      <Soon />
     </>
   );
 }
