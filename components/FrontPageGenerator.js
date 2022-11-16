@@ -1,23 +1,19 @@
-import {
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Button,
-  Box,
-  Radio,
-  RadioGroup,
-  FormControlLabel,
-  FormControl,
-  FormLabel,
-  Typography,
-  InputLabel,
-  Select,
-  SelectField,
-  MenuItem,
-  Container,
-} from "@mui/material";
-import { useEffect, useState, useContext, useRef } from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormControl from "@mui/material/FormControl";
+import FormLabel from "@mui/material/FormLabel";
+import Typography from "@mui/material/Typography";
+import InputLabel from "@mui/material/InputLabel";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import Container from "@mui/material/Container";
+import { useEffect, useState, useContext, useRef, useMemo } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import constants from "../utils/frontPageGenerator/constants";
@@ -34,19 +30,21 @@ export default function FrontPageGenerator() {
 
   const { names, dlAssignments, fitAssignments } = constants;
 
-  const assignmentLists = [
-    { subject: "DL", assignments: dlAssignments },
-    { subject: "FIT", assignments: fitAssignments },
-    {
-      subject: "C",
-      assignments: [
-        {
-          number: 10,
-          selected: true,
-        },
-      ],
-    },
-  ];
+  const assignmentLists = useMemo(() => {
+    return [
+      { subject: "DL", assignments: dlAssignments },
+      { subject: "FIT", assignments: fitAssignments },
+      {
+        subject: "C",
+        assignments: [
+          {
+            number: 10,
+            selected: true,
+          },
+        ],
+      },
+    ];
+  }, [dlAssignments, fitAssignments]);
 
   const [assignmentNumber, setAssignmentNumber] = useState(
     assignmentLists
@@ -70,7 +68,7 @@ export default function FrontPageGenerator() {
           .assignments.find((assignment) => assignment.selected).number
       );
     }
-  }, [subject]);
+  }, [subject, assignmentLists]);
 
   const list = [["0", ["Select your name"]], ...Object.entries(names)].map(
     (entry) => ({
@@ -93,7 +91,7 @@ export default function FrontPageGenerator() {
     if (typeof window !== "undefined") {
       prefetchDocument({ wordFiles, subject, roll });
     }
-  }, [subject, roll]);
+  }, [subject, roll, wordFiles]);
 
   return (
     <Container>
@@ -258,12 +256,8 @@ export default function FrontPageGenerator() {
                           my: 1,
                         }}
                       >
-                        <InputLabel id="assignment-number">
-                          Assignment Name
-                        </InputLabel>
+                        <InputLabel>Assignment Name</InputLabel>
                         <Select
-                          labelId="assignment-number-label"
-                          id="assignment-number"
                           label="Assignment Name"
                           sx={{
                             "& .MuiInputBase-input": {

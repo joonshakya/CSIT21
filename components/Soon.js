@@ -1,4 +1,8 @@
-import { Card, Container, Box, Typography } from "@mui/material";
+import Card from "@mui/material/Card";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+
 export default function Soon() {
   return (
     <Container>

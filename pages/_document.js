@@ -13,6 +13,10 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/static/favicon/favicon.ico" />
           <meta name="emotion-insertion-point" content="" />
+          <meta
+            name="description"
+            content="CSIT21 Beta website made with react."
+          />
           {this.props.emotionStyleTags}
         </Head>
         <body>
