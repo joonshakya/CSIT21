@@ -1,7 +1,6 @@
 import generateDocument from "./useMailMerge";
 import constants from "./constants";
 import { useState } from "react";
-import PizZipUtils from "pizzip/utils/index.js";
 
 export default function useFrontPageGenerator() {
   const [error, setError] = useState(null);
@@ -44,6 +43,8 @@ export default function useFrontPageGenerator() {
 }
 
 export async function prefetchDocument({ wordFiles, subject, roll }) {
+  const PizZipUtils = await import("pizzip/utils/index.js");
+
   const { names } = constants;
   if (subject === "DL") {
     if (roll === "0" || !roll) {
@@ -59,14 +60,12 @@ export async function prefetchDocument({ wordFiles, subject, roll }) {
   }
 
   const link = `/static/word-templates/${subject}.docx`;
-
   content = await new Promise((resolve, reject) => {
     PizZipUtils.getBinaryContent(link, (error, content) => {
       resolve(content);
       reject(error);
     });
   });
-
   // console.log(`Downloaded ${subject}`);
   wordFiles.setWordFile({ subject, content });
   return content;

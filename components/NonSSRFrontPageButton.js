@@ -10,36 +10,8 @@ export default function NonSSRFrontPageButton({
   subject,
   namePicker,
 }) {
-  const wordFiles = useContext(WordContext);
-
-  const [generateFrontPage, error, loading] = useFrontPageGenerator();
-
-  useEffect(() => {
-    if (error) {
-      alert(error);
-    }
-  }, [error, loading]);
-
-  useEffect(() => {
-    prefetchDocument({ wordFiles, subject, roll });
-  }, [subject, roll]);
-
   return (
-    <Button
-      onClick={() => {
-        if (roll === "0" || !roll) {
-          namePicker.current.select();
-          return;
-        }
-        generateFrontPage({
-          roll,
-          assignmentNumber,
-          subject,
-          wordFiles,
-        });
-      }}
-      size="small"
-    >
+    <Button type="submit" size="small">
       Generate Front Page
     </Button>
   );

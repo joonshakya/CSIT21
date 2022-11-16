@@ -22,32 +22,37 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import constants from "../utils/frontPageGenerator/constants";
 import { AppContext } from "../context/appContext";
-import dynamic from "next/dynamic";
+import { WordContext } from "../context/wordContext";
+import { prefetchDocument } from "../utils/frontPageGenerator";
+import useFrontPageGenerator from "../utils/frontPageGenerator";
 
 export default function FrontPageGenerator() {
-  const NonSSRFrontPageButton = dynamic(
-    () => import("./NonSSRFrontPageButton"),
-    {
-      ssr: false,
-      loading: () => (
-        <Button disabled size="small">
-          Generate Front Page
-        </Button>
-      ),
-    }
-  );
-
   const namePicker = useRef(null);
 
   const { roll, setRoll } = useContext(AppContext);
-  const [assignmentNumber, setAssignmentNumber] = useState(0);
   const [subject, setSubject] = useState("DL");
+
   const { names, dlAssignments, fitAssignments } = constants;
 
   const assignmentLists = [
     { subject: "DL", assignments: dlAssignments },
     { subject: "FIT", assignments: fitAssignments },
+    {
+      subject: "C",
+      assignments: [
+        {
+          number: 10,
+          selected: true,
+        },
+      ],
+    },
   ];
+
+  const [assignmentNumber, setAssignmentNumber] = useState(
+    assignmentLists
+      .find((entry) => entry.subject === subject)
+      .assignments.find((assignment) => assignment.selected).number
+  );
 
   useEffect(() => {
     if (subject === "DL" || subject === "FIT") {
@@ -58,6 +63,12 @@ export default function FrontPageGenerator() {
           );
         }
       });
+    } else if (subject === "C") {
+      setAssignmentNumber(
+        assignmentLists
+          .find((entry) => entry.subject === subject)
+          .assignments.find((assignment) => assignment.selected).number
+      );
     }
   }, [subject]);
 
@@ -67,6 +78,22 @@ export default function FrontPageGenerator() {
       label: entry[1][0],
     })
   );
+
+  const wordFiles = useContext(WordContext);
+
+  const [generateFrontPage, error, loading] = useFrontPageGenerator();
+
+  useEffect(() => {
+    if (error) {
+      alert(error);
+    }
+  }, [error, loading]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      prefetchDocument({ wordFiles, subject, roll });
+    }
+  }, [subject, roll]);
 
   return (
     <Container>
@@ -78,7 +105,22 @@ export default function FrontPageGenerator() {
             flexDirection: "column",
           }}
         >
-          <FormControl component="form">
+          <FormControl
+            component="form"
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (roll === "0" || !roll) {
+                namePicker.current.select();
+                return;
+              }
+              generateFrontPage({
+                roll,
+                assignmentNumber,
+                subject,
+                wordFiles,
+              });
+            }}
+          >
             <CardContent
               sx={{
                 flex: 1,
@@ -199,6 +241,7 @@ export default function FrontPageGenerator() {
                     min: 1,
                   }}
                   required
+                  value={assignmentNumber}
                   onChange={(e) => {
                     setAssignmentNumber(e.target.value);
                   }}
@@ -262,34 +305,12 @@ export default function FrontPageGenerator() {
               )}
             </CardContent>
             <CardActions>
-              <NonSSRFrontPageButton
-                {...{
-                  roll,
-                  assignmentNumber,
-                  subject,
-                  namePicker,
-                }}
-              />
+              <Button type="submit" size="small">
+                Generate Front Page
+              </Button>
             </CardActions>
           </FormControl>
         </Box>
-        {/* <Box
-        sx={{
-          flex: 1,
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <CardMedia
-          sx={{
-            height: "100%",
-            objectFit: "contain",
-          }}
-          component="img"
-          image="/static/images/cards/front-page-example.png"
-          alt="Front page example"
-        />
-      </Box> */}
       </Card>
     </Container>
   );
