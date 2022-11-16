@@ -144,7 +144,6 @@ export default function FrontPageGenerator() {
                   setRoll(value.roll);
                 }}
                 value={list.find((entry) => entry.roll === roll)}
-                disableClearable
                 autoHighlight
                 options={list}
                 getOptionDisabled={(option) =>
