@@ -11,10 +11,6 @@ import {
   FormControl,
   FormLabel,
   Typography,
-  InputLabel,
-  Select,
-  SelectField,
-  MenuItem,
   Container,
 } from "@mui/material";
 import { useEffect, useState, useContext, useRef } from "react";
@@ -40,7 +36,7 @@ export default function FrontPageGenerator() {
   const namePicker = useRef(null);
 
   const { roll, setRoll } = useContext(AppContext);
-  const [assignmentNumber, setAssignmentNumber] = useState(0);
+  const [assignmentNumber, setAssignmentNumber] = useState(null);
   const [subject, setSubject] = useState("DL");
   const { names, dlAssignments, fitAssignments } = constants;
 
@@ -95,7 +91,6 @@ export default function FrontPageGenerator() {
               <Autocomplete
                 sx={{
                   my: 2,
-                  mt: 3,
                 }}
                 openOnFocus
                 onChange={(event, value) => {
@@ -103,6 +98,7 @@ export default function FrontPageGenerator() {
                 }}
                 value={list.find((entry) => entry.roll === roll)}
                 disableClearable
+                size="small"
                 autoHighlight
                 options={list}
                 getOptionDisabled={(option) =>
@@ -138,12 +134,7 @@ export default function FrontPageGenerator() {
                   </Box>
                 )}
               />
-              <FormLabel
-                id="demo-row-radio-buttons-group-label"
-                sx={{
-                  fontSize: ".8rem",
-                }}
-              >
+              <FormLabel id="demo-row-radio-buttons-group-label">
                 Subject
               </FormLabel>
               <RadioGroup
@@ -153,7 +144,7 @@ export default function FrontPageGenerator() {
                   setSubject(event.target.value);
                 }}
                 sx={{
-                  mb: 2,
+                  mb: 1,
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
@@ -178,7 +169,6 @@ export default function FrontPageGenerator() {
                     sx={{
                       my: -0.5,
                     }}
-                    key={index}
                     value={subject.shortHand}
                     defaultChecked={index === 0}
                     control={<Radio />}
@@ -192,6 +182,7 @@ export default function FrontPageGenerator() {
                     my: 1,
                     width: "100%",
                   }}
+                  size="small"
                   name="assignmentNumber"
                   label="Assignment Number"
                   type="number"
@@ -210,52 +201,50 @@ export default function FrontPageGenerator() {
                 assignmentLists.map((entry, index) => (
                   <Box key={index}>
                     {entry.subject === subject ? (
-                      <FormControl
-                        fullWidth
+                      <Autocomplete
                         sx={{
-                          my: 1,
+                          my: 2,
                         }}
-                      >
-                        <InputLabel id="assignment-number">
-                          Assignment Name
-                        </InputLabel>
-                        <Select
-                          labelId="assignment-number-label"
-                          id="assignment-number"
-                          label="Assignment Name"
-                          sx={{
-                            "& .MuiInputBase-input": {
-                              whiteSpace: "break-spaces !important",
-                            },
-                          }}
-                          MenuProps={{
-                            anchorOrigin: {
-                              vertical: "top",
-                              horizontal: "left",
-                            },
-                            transformOrigin: {
-                              vertical: "top",
-                              horizontal: "left",
-                            },
-                          }}
-                          value={assignmentNumber}
-                          onChange={(event) =>
-                            setAssignmentNumber(event.target.value)
-                          }
-                        >
-                          {entry.assignments.map((assignment, index) => (
-                            <MenuItem
-                              key={index}
-                              sx={{
-                                whiteSpace: "break-spaces",
-                              }}
-                              value={assignment.number}
-                            >
-                              {assignment.name}
-                            </MenuItem>
-                          ))}
-                        </Select>
-                      </FormControl>
+                        onFocus={(event) => {
+                          event.target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                          });
+                        }}
+                        options={entry.assignments.map((assignment, index) => ({
+                          ...assignment,
+                          label: `${index}`,
+                        }))}
+                        onChange={(event, value) => {
+                          setAssignmentNumber(value.number);
+                        }}
+                        defaultValue={entry.assignments.find(
+                          (assignment) => assignment.selected
+                        )}
+                        autoHighlight
+                        groupBy={(option) => option.group}
+                        disableClearable
+                        size="small"
+                        openOnFocus
+                        isOptionEqualToValue={(option, value) =>
+                          option.number === value.number
+                        }
+                        renderInput={(params) => (
+                          <TextField
+                            required
+                            {...params}
+                            name="assignmentName"
+                            label="Assignment Name"
+                          />
+                        )}
+                        renderGroup={(params) => (
+                          <>
+                            <hr />
+                            {params.children}
+                          </>
+                        )}
+                        getOptionLabel={(option) => option.name}
+                      />
                     ) : null}
                   </Box>
                 ))

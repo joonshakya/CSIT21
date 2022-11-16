@@ -66,7 +66,11 @@ function DrawerAppBar(props) {
             <Typography
               variant="h6"
               component="div"
-              sx={{ flexGrow: 1, display: { sm: "block" } }}
+              sx={{
+                textAlign: "center",
+                flexGrow: 1,
+                display: { sm: "block" },
+              }}
             >
               CSIT21
             </Typography>
