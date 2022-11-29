@@ -12,7 +12,7 @@ export default function useFrontPageGenerator() {
     assignmentName,
     wordFiles,
   }) => {
-    const { dlAssignments, fitAssignments, names } = constants;
+    const { names, dlAssignments, fitAssignments, dsAssignments } = constants;
     setLoading(true);
     if (roll === "0" || !roll) {
       return;
@@ -26,6 +26,10 @@ export default function useFrontPageGenerator() {
       assignmentName = fitAssignments.find(
         (assignment) => assignment.number === assignmentNumber
       ).name;
+    } else if (subject === "DS") {
+      assignmentName = dsAssignments.find(
+        (assignment) => assignment.number === assignmentNumber
+      ).name;
     }
 
     const data = {
@@ -36,7 +40,8 @@ export default function useFrontPageGenerator() {
       section: names[roll][2],
     };
 
-    const outputName = `${names[roll][0]} - ${subject} - Assignment ${assignmentNumber} - Front Page.docx`;
+    const frontPageType = subject === "DS Index" ? "Index" : "Assignment";
+    const outputName = `${names[roll][0]} - ${subject} - ${frontPageType} ${assignmentNumber} - Front Page.docx`;
     generateDocument({ content, data, outputName }, setError, setLoading);
   };
   return [generateFrontPage, error, loading];

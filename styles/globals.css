@@ -1,0 +1,23 @@
+::-webkit-scrollbar {
+  width: 6px;
+  /* for vertical scrollbars */
+  height: 6px;
+  /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: #9b27b02f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9b27b079;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

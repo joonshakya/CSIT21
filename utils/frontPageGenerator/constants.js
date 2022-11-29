@@ -1,4 +1,4 @@
-export default {
+const constants = {
   dlAssignments: [
     {
       group: "0",
@@ -146,6 +146,13 @@ To construct Parallel In Parallel Out Shift Register.`,
       selected: true,
     },
   ],
+  dsAssignments: [
+    {
+      number: 1,
+      name: "Implementing Set Operations",
+      selected: true,
+    },
+  ],
   names: {
     1: ["Aakash Shrestha", "021BSCIT001", "A"],
     2: ["Aayam Pokharel", "021BSCIT002", "A"],
@@ -197,3 +204,5 @@ To construct Parallel In Parallel Out Shift Register.`,
     48: ["Yubraj Khatiwada", "021BSCIT048", "B"],
   },
 };
+
+export default constants;

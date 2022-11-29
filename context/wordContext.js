@@ -5,6 +5,8 @@ const initialState = {
   "DL Section B": null,
   FIT: null,
   C: null,
+  "DS Index": null,
+  DS: null,
 };
 
 const WordContext = createContext({
@@ -12,7 +14,9 @@ const WordContext = createContext({
   "DL Section B": null,
   FIT: null,
   C: null,
-  setWordFile: ({ subject, content }) => {},
+  "DS Index": null,
+  DS: null,
+  setWordFile: () => {},
 });
 
 const wordReducer = (state, action) => {
@@ -44,6 +48,8 @@ const WordProvider = (props) => {
         "DL Section B": state["DL Section B"],
         FIT: state.FIT,
         C: state.C,
+        "DS Index": state["DS Index"],
+        DS: state.DS,
         setWordFile,
       }}
     >

@@ -50,7 +50,12 @@ function DrawerAppBar(props) {
   return (
     <>
       <Box sx={{ display: "flex" }}>
-        <AppBar component="nav">
+        <AppBar
+          component="nav"
+          sx={{
+            background: "linear-gradient(90deg, #3498db, #8e44ad)",
+          }}
+        >
           <Toolbar>
             {navItems.length ? (
               <IconButton
@@ -69,7 +74,9 @@ function DrawerAppBar(props) {
               sx={{
                 textAlign: "center",
                 flexGrow: 1,
+                fontSize: "1.8rem",
                 display: { sm: "block" },
+                fontWeight: "bold",
               }}
             >
               CSIT21
@@ -104,7 +111,6 @@ function DrawerAppBar(props) {
           </Drawer>
         </Box>
       </Box>
-      <Toolbar />
     </>
   );
 }

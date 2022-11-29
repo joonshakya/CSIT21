@@ -1,4 +1,20 @@
 import { Roboto } from "@next/font/google";
+import localFont from "@next/font/local";
+const productSans = localFont({
+  src: [
+    {
+      path: "../public/static/fonts/Product Sans/ProductSans.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/static/fonts/Product Sans/ProductSans-Bold.woff",
+      weight: "700",
+      style: "bold",
+    },
+  ],
+});
+
 import { createTheme } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
 
@@ -26,7 +42,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: productSans.style.fontFamily,
   },
 });
 
