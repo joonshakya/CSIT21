@@ -43,7 +43,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: `${productSans.style.fontFamily}, 'Product Sans', 'Roboto', sans-serif`,
+    fontFamily: `'Product Sans', ${productSans.style.fontFamily}, 'Roboto', sans-serif`,
   },
 });
 
