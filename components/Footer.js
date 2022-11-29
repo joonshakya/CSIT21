@@ -7,6 +7,8 @@ const Footer = () => {
       sx={{
         background: "linear-gradient(90deg, #3498db, #8e44ad)",
         display: "flex",
+        flexWrap: "wrap",
+
         justifyContent: "space-evenly",
       }}
     >
@@ -14,11 +16,21 @@ const Footer = () => {
         href="/"
         style={{
           color: "white",
+          margin: "1rem",
+          textAlign: "center",
         }}
       >
         Copyright © SXC B.Sc. CSIT Batch 2021
       </a>
-      <Typography color="white">V0.1.0 Beta</Typography>
+      <Typography
+        color="white"
+        sx={{
+          m: "1rem",
+          textAlign: "center",
+        }}
+      >
+        V0.1.1 Beta
+      </Typography>
     </Toolbar>
   );
 };
