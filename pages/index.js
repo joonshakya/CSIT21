@@ -3,12 +3,73 @@ import Footer from "../components/Footer";
 import FrontPageGenerator from "../components/FrontPageGenerator";
 import Head from "next/head";
 import { Box, Container, Grid, Toolbar } from "@mui/material";
+import Sem2 from "../components/Sem2";
+import Soon from "../components/Soon";
 
 export default function Index() {
   return (
     <>
       <Head>
-        <title>CSIT21 Beta</title>
+        <title>CSIT21 - SXC B.Sc. CSIT Batch 2021</title>
+        <meta property="og:type" content="profile" />
+        <meta
+          property="og:image"
+          content="https://www.csit21.cf/thumbnail.png"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://www.csit21.cf/thumbnail.png"
+        />
+        <meta property="og:image:width" content="1307" />
+        <meta property="og:image:height" content="878" />
+        <meta
+          property="og:title"
+          content="CSIT21 - SXC B.Sc. CSIT Batch 2021"
+        />
+        <meta property="og:description" content="Class Documents on the go" />
+        <meta property="og:url" content="https://www.csit21.cf/" />
+        <meta property="fb:app_id" content="1265498347173300" />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/static/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/static/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/static/favicon/favicon-16x16.png"
+        />
+        <link
+          rel="mask-icon"
+          href="/static/favicon/safari-pinned-tab.svg"
+          color="#fbddeb"
+        />
+        <meta name="msapplication-TileColor" content="#fbddeb" />
+
+        <meta name="theme-color" content="#6671c6" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta
+          name="mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta name="mobile-web-app-title" content="CSIT21" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <link rel="manifest" href="./manifest.json" />
+
+        <link rel="shortcut icon" href="/static/favicon/favicon.ico" />
       </Head>
       <Navbar />
       <Box
@@ -34,7 +95,7 @@ export default function Index() {
                 mx: "auto",
               }}
             >
-              <FrontPageGenerator />
+              <Sem2 />
             </Grid>
             <Grid
               item
@@ -46,11 +107,19 @@ export default function Index() {
             >
               <FrontPageGenerator />
             </Grid>
+            <Grid
+              item
+              sm={12}
+              sx={{
+                mx: "auto",
+              }}
+            >
+              <Soon />
+            </Grid>
           </Grid>
         </Container>
         <Footer />
       </Box>
-      {/* <Soon /> */}
     </>
   );
 }

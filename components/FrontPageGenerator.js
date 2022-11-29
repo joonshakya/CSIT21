@@ -106,7 +106,17 @@ export default function FrontPageGenerator() {
   }, [subject, roll, wordFiles]);
 
   return (
-    <Card sx={{ display: "flex" }}>
+    <Card
+      sx={{
+        display: "flex",
+        borderRadius: ".6rem",
+        "&:hover": {
+          boxShadow:
+            "0 20px 20px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        },
+      }}
+      elevation={3}
+    >
       <Box
         sx={{
           flex: 1,
