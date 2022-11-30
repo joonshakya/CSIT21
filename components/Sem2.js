@@ -110,7 +110,7 @@ const Sem2 = () => {
             {[
               {
                 name: "Pratik Jung Karki",
-                link: "https://drive.google.com/file/d/1rKmnbHftNWflZOgtMewyohmkVGipWVHZ/view?usp=sharing",
+                link: "https://drive.google.com/drive/folders/1eypTAyhDoSx5CEZXsYnQtcaD_mur2udM?usp=sharing",
                 bgColor: "#5baf70aa",
                 bgImage: "linear-gradient(132deg, #F4D03F 0%, #16A085 100%)",
               },
