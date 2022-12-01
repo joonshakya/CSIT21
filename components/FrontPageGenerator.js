@@ -21,16 +21,36 @@ import { AppContext } from "../context/appContext";
 import { WordContext } from "../context/wordContext";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
+import { CircularProgress } from "@mui/material";
 
 export default function FrontPageGenerator() {
   const namePicker = useRef(null);
 
   const { roll, setRoll } = useContext(AppContext);
-  const [subject, setSubject] = useState("DS Index");
+  const [subject, setSubject] = useState("OOP Index");
 
-  const { names, dlAssignments, fitAssignments, dsAssignments } = constants;
+  const {
+    names,
+    dlAssignments,
+    fitAssignments,
+    dsAssignments,
+    oopAssignments,
+  } = constants;
   const assignmentLists = useMemo(() => {
     return [
+      {
+        subject: "OOP Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "OOP",
+        assignments: oopAssignments,
+      },
       {
         subject: "DS Index",
         assignments: [
@@ -65,7 +85,12 @@ export default function FrontPageGenerator() {
   );
 
   useEffect(() => {
-    if (subject === "DL" || subject === "FIT" || subject === "DS") {
+    if (
+      subject === "DL" ||
+      subject === "FIT" ||
+      subject === "DS" ||
+      subject === "OOP"
+    ) {
       assignmentLists.forEach((entry) => {
         if (entry.subject === subject) {
           setAssignmentNumber(
@@ -223,6 +248,14 @@ export default function FrontPageGenerator() {
               >
                 {[
                   {
+                    shortHand: "OOP Index",
+                    longHand: "OOP First Front Page + Index",
+                  },
+                  {
+                    shortHand: "OOP",
+                    longHand: "OOP Assignment Front Page",
+                  },
+                  {
                     shortHand: "DS Index",
                     longHand: "DS First Front Page + Index",
                   },
@@ -307,7 +340,10 @@ export default function FrontPageGenerator() {
                   event.target.blur();
                 }}
               />
-            ) : subject === "DL" || subject == "FIT" || subject == "DS" ? (
+            ) : subject === "DL" ||
+              subject == "FIT" ||
+              subject == "DS" ||
+              subject == "OOP" ? (
               assignmentLists.map((entry, index) => (
                 <Box key={index}>
                   {entry.subject === subject ? (
@@ -362,6 +398,16 @@ export default function FrontPageGenerator() {
             <Button type="submit" size="small">
               Generate Front Page
             </Button>
+            {/* {loading && ( */}
+            <CircularProgress
+              size={24}
+              sx={{
+                mx: 2,
+                opacity: loading ? 1 : 0,
+                transition: "opacity 0.5s ease-in-out",
+              }}
+            />
+            {/* )} */}
           </CardActions>
         </FormControl>
       </Box>

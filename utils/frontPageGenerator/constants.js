@@ -153,6 +153,13 @@ To construct Parallel In Parallel Out Shift Register.`,
       selected: true,
     },
   ],
+  oopAssignments: [
+    {
+      number: 1,
+      name: "To familiarize with C++ Program Structure and C++ Operators",
+      selected: true,
+    },
+  ],
   names: {
     1: ["Aakash Shrestha", "021BSCIT001", "A"],
     2: ["Aayam Pokharel", "021BSCIT002", "A"],

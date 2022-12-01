@@ -49,19 +49,19 @@ const Sem2 = () => {
               {
                 name: "Maths II",
                 link: "https://drive.google.com/file/d/1rKmnbHftNWflZOgtMewyohmkVGipWVHZ/view?usp=sharing",
-                bgColor: "#FBAB7Eaa",
+                bgColor: "#FBAB7E",
                 bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
               },
               {
                 name: "Stat I",
                 link: "https://drive.google.com/drive/folders/1b6RLI0WL88wprctnlBwAge6gaXLW-VZW?usp=sharing",
-                bgColor: "#6bc6cdaa",
+                bgColor: "#6bc6cd",
                 bgImage: "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)",
               },
               {
-                name: "Descrete Structure",
+                name: "Discrete Structure",
                 link: "https://drive.google.com/drive/folders/1e1wjlK7yvBb9I9Xna5N8zjuq6CVWnRnQ?usp=sharing",
-                bgColor: "#4158D0aa",
+                bgColor: "#6c55cb",
                 bgImage: "linear-gradient(43deg, #4158D0 0%, #C850C0 100%)",
               },
             ].map(({ name, link, bgColor, bgImage }, index) => (
@@ -111,7 +111,7 @@ const Sem2 = () => {
               {
                 name: "Pratik Jung Karki",
                 link: "https://drive.google.com/drive/folders/1eypTAyhDoSx5CEZXsYnQtcaD_mur2udM?usp=sharing",
-                bgColor: "#5baf70aa",
+                bgColor: "#6ab26a",
                 bgImage: "linear-gradient(132deg, #F4D03F 0%, #16A085 100%)",
               },
             ].map(({ name, link, bgColor, bgImage }, index) => (

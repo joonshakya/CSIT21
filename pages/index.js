@@ -5,8 +5,12 @@ import Head from "next/head";
 import { Box, Container, Grid, Toolbar } from "@mui/material";
 import Sem2 from "../components/Sem2";
 import Soon from "../components/Soon";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Index() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <>
       <Head>
@@ -86,7 +90,7 @@ export default function Index() {
             flex: 1,
           }}
         >
-          <Grid container spacing={4}>
+          <Grid container spacing={2}>
             <Grid
               item
               sm={6}
@@ -96,6 +100,7 @@ export default function Index() {
               }}
             >
               <Sem2 />
+              {matches ? <Soon fillWidth={true} /> : null}
             </Grid>
             <Grid
               item
@@ -107,15 +112,17 @@ export default function Index() {
             >
               <FrontPageGenerator />
             </Grid>
-            <Grid
-              item
-              sm={12}
-              sx={{
-                mx: "auto",
-              }}
-            >
-              <Soon />
-            </Grid>
+            {matches ? null : (
+              <Grid
+                item
+                sm={12}
+                sx={{
+                  mx: "auto",
+                }}
+              >
+                <Soon fillWidth={false} />
+              </Grid>
+            )}
           </Grid>
         </Container>
         <Footer />

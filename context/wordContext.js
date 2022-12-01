@@ -7,6 +7,8 @@ const initialState = {
   C: null,
   "DS Index": null,
   DS: null,
+  "OOP Index": null,
+  OOP: null,
 };
 
 const WordContext = createContext({
@@ -16,6 +18,8 @@ const WordContext = createContext({
   C: null,
   "DS Index": null,
   DS: null,
+  "OOP Index": null,
+  OOP: null,
   setWordFile: () => {},
 });
 
@@ -50,6 +54,8 @@ const WordProvider = (props) => {
         C: state.C,
         "DS Index": state["DS Index"],
         DS: state.DS,
+        "OOP Index": state["OOP Index"],
+        OOP: state.OOP,
         setWordFile,
       }}
     >
