@@ -75,7 +75,8 @@ export async function prefetchDocument({ wordFiles, subject, roll }) {
     return content;
   }
 
-  const link = `/static/word-templates/${subject}.docx`;
+  const link = `/static/word-templates/${subject}.docx?${Date.now()}`;
+  console.log(link);
   content = await new Promise((resolve, reject) => {
     PizZipUtils.getBinaryContent(link, (error, content) => {
       resolve(content);
