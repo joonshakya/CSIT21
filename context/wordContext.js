@@ -5,9 +5,8 @@ const initialState = {
   "DL Section B": null,
   FIT: null,
   C: null,
-  "DS Index": null,
+  Index: null,
   DS: null,
-  "OOP Index": null,
   OOP: null,
 };
 
@@ -16,9 +15,8 @@ const WordContext = createContext({
   "DL Section B": null,
   FIT: null,
   C: null,
-  "DS Index": null,
+  Index: null,
   DS: null,
-  "OOP Index": null,
   OOP: null,
   setWordFile: () => {},
 });
@@ -52,9 +50,8 @@ const WordProvider = (props) => {
         "DL Section B": state["DL Section B"],
         FIT: state.FIT,
         C: state.C,
-        "DS Index": state["DS Index"],
+        Index: state.Index,
         DS: state.DS,
-        "OOP Index": state["OOP Index"],
         OOP: state.OOP,
         setWordFile,
       }}

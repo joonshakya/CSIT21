@@ -54,17 +54,26 @@ export default function useFrontPageGenerator() {
       ).name;
     }
 
+    const indexSubjectTable = {
+      "DS Index": "DISCRETE STRUCTURE",
+      "OOP Index": "OBJECT ORIENTED PROGRAMMING",
+      "μP Index": "MICROPROCESSOR",
+    };
+
     const data = {
       name: names[roll][0],
       roll: names[roll][1],
       assignmentNumber,
       assignmentName,
+      subject: indexSubjectTable[subject],
       section: names[roll][2],
     };
 
-    const frontPageType =
-      subject === "DS Index" || subject == "OOP Index" ? "Index" : "Assignment";
-    const outputName = `${names[roll][0]} - ${subject} - ${frontPageType} ${assignmentNumber} - Front Page.docx`;
+    const outputName = `${names[roll][0]} - ${
+      subject.includes("Index")
+        ? `${subject}`
+        : `${subject} Assignment ${assignmentNumber}`
+    } - Front Page.docx`;
     generateDocument({ content, data, outputName }, setError, setLoading);
   };
   return [generateFrontPage, error, loading, setError];
@@ -77,6 +86,8 @@ export async function prefetchDocument({ wordFiles, subject, roll }) {
       return;
     }
     subject = names[roll][2] == "A" ? "DL Section A" : "DL Section B";
+  } else if (subject.includes("Index")) {
+    subject = "Index";
   }
 
   let content = wordFiles[subject];

@@ -64,6 +64,15 @@ export default function FrontPageGenerator() {
         subject: "DS",
         assignments: dsAssignments,
       },
+      {
+        subject: "μP Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
       { subject: "DL", assignments: dlAssignments },
       { subject: "FIT", assignments: fitAssignments },
       {
@@ -257,6 +266,10 @@ export default function FrontPageGenerator() {
                   {
                     shortHand: "DS",
                     longHand: "DS Assignment Front Page",
+                  },
+                  {
+                    shortHand: "μP Index",
+                    longHand: "μP First Front Page + Index",
                   },
                 ].map((subject, index) => (
                   <FormControlLabel
