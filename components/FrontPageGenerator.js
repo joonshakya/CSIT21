@@ -265,11 +265,10 @@ export default function FrontPageGenerator() {
                   },
                 ].map((subject, index) => (
                   <FormControlLabel
-                    sx={{ my: -0.5 }}
                     key={index}
                     value={subject.shortHand}
                     defaultChecked={index === 0}
-                    control={<Radio />}
+                    control={<Radio sx={{ height: "2rem" }} />}
                     label={
                       <>
                         <Box
@@ -307,13 +306,10 @@ export default function FrontPageGenerator() {
                   },
                 ].map((subject, index) => (
                   <FormControlLabel
-                    sx={{
-                      my: -0.5,
-                    }}
                     key={index}
                     value={subject.shortHand}
                     defaultChecked={index === 0}
-                    control={<Radio />}
+                    control={<Radio sx={{ height: "2rem" }} />}
                     label={subject.longHand}
                   />
                 ))}
@@ -398,16 +394,17 @@ export default function FrontPageGenerator() {
             <Button type="submit" size="small">
               Generate Front Page
             </Button>
-            {/* {loading && ( */}
-            <CircularProgress
-              size={24}
-              sx={{
-                mx: 2,
-                opacity: loading ? 1 : 0,
-                transition: "opacity 0.5s ease-in-out",
-              }}
-            />
-            {/* )} */}
+            {loading && (
+              <CircularProgress
+                aria-label="loading"
+                size={24}
+                sx={{
+                  mx: 2,
+                  opacity: loading ? 1 : 0,
+                  transition: "opacity 0.5s ease-in-out",
+                }}
+              />
+            )}
           </CardActions>
         </FormControl>
       </Box>

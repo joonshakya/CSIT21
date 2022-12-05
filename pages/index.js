@@ -10,7 +10,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Index() {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <>
       <Head>
@@ -100,7 +99,16 @@ export default function Index() {
               }}
             >
               <Sem2 />
-              {matches ? <Soon fillWidth={true} /> : null}
+              <Box
+                sx={{
+                  display: {
+                    xs: "none",
+                    sm: "block",
+                  },
+                }}
+              >
+                <Soon fillWidth={true} />
+              </Box>
             </Grid>
             <Grid
               item
@@ -112,17 +120,20 @@ export default function Index() {
             >
               <FrontPageGenerator />
             </Grid>
-            {matches ? null : (
-              <Grid
-                item
-                sm={12}
-                sx={{
-                  mx: "auto",
-                }}
-              >
-                <Soon fillWidth={false} />
-              </Grid>
-            )}
+            <Grid
+              className="hidden"
+              item
+              sm={12}
+              sx={{
+                mx: "auto",
+                display: {
+                  xs: "block",
+                  sm: "none",
+                },
+              }}
+            >
+              <Soon fillWidth={false} />
+            </Grid>
           </Grid>
         </Container>
         <Footer />
