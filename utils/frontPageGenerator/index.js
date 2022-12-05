@@ -20,10 +20,22 @@ export default function useFrontPageGenerator() {
       oopAssignments,
     } = constants;
     setLoading(true);
+    setError(null);
     if (roll === "0" || !roll) {
       return;
     }
-    const content = await prefetchDocument({ wordFiles, subject, roll });
+    const { error, content } = await prefetchDocument({
+      wordFiles,
+      subject,
+      roll,
+    });
+    if (error) {
+      setError(error);
+      setLoading(false);
+      return;
+    } else {
+      setError(null);
+    }
     if (subject === "DL") {
       assignmentName = dlAssignments.find(
         (assignment) => assignment.number === assignmentNumber
@@ -55,12 +67,10 @@ export default function useFrontPageGenerator() {
     const outputName = `${names[roll][0]} - ${subject} - ${frontPageType} ${assignmentNumber} - Front Page.docx`;
     generateDocument({ content, data, outputName }, setError, setLoading);
   };
-  return [generateFrontPage, error, loading];
+  return [generateFrontPage, error, loading, setError];
 }
 
 export async function prefetchDocument({ wordFiles, subject, roll }) {
-  const PizZipUtils = await import("pizzip/utils/index.js");
-
   const { names } = constants;
   if (subject === "DL") {
     if (roll === "0" || !roll) {
@@ -72,17 +82,16 @@ export async function prefetchDocument({ wordFiles, subject, roll }) {
   let content = wordFiles[subject];
   if (content) {
     // console.log(`Using cached ${subject}`);
-    return content;
+    return { content, error: false };
   }
 
   const link = `/static/word-templates/${subject}.docx?${Date.now()}`;
-  content = await new Promise((resolve, reject) => {
-    PizZipUtils.getBinaryContent(link, (error, content) => {
-      resolve(content);
-      reject(error);
-    });
-  });
+  const res = await fetch(link);
+  if (!res.ok) {
+    return { error: "File downloading failed" };
+  }
+  content = await res.arrayBuffer();
   // console.log(`Downloaded ${subject}`);
   wordFiles.setWordFile({ subject, content });
-  return content;
+  return { content, error: false };
 }

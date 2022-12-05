@@ -116,16 +116,11 @@ export default function FrontPageGenerator() {
 
   const wordFiles = useContext(WordContext);
 
-  const [generateFrontPage, error, loading] = useFrontPageGenerator();
-
-  useEffect(() => {
-    if (error) {
-      alert(error);
-    }
-  }, [error, loading]);
+  const [generateFrontPage, error, loading, setError] = useFrontPageGenerator();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
+      setError(false);
       prefetchDocument({ wordFiles, subject, roll });
     }
   }, [subject, roll, wordFiles]);
@@ -390,11 +385,26 @@ export default function FrontPageGenerator() {
               ))
             ) : null}
           </CardContent>
-          <CardActions>
+          <CardActions
+            sx={{
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+            }}
+          >
             <Button type="submit" size="small">
               Generate Front Page
             </Button>
-            {loading && (
+            {error ? (
+              <Typography
+                sx={{
+                  color: "#ee8888",
+                  px: 1,
+                  fontSize: "0.8125rem",
+                }}
+              >
+                {error}
+              </Typography>
+            ) : loading ? (
               <CircularProgress
                 aria-label="loading"
                 size={24}
@@ -404,7 +414,7 @@ export default function FrontPageGenerator() {
                   transition: "opacity 0.5s ease-in-out",
                 }}
               />
-            )}
+            ) : null}
           </CardActions>
         </FormControl>
       </Box>
