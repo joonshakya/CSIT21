@@ -10,7 +10,7 @@ export default function Soon() {
   return (
     <Card
       sx={{
-        mt: 2,
+        mt: { xs: 2, sm: 0, md: 2 },
         maxWidth: "100%",
         borderRadius: ".6rem",
         "&:hover": {

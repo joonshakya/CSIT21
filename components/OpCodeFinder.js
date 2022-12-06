@@ -15,7 +15,7 @@ const OpCodeFinder = () => {
   return (
     <Card
       sx={{
-        mt: { xs: 0, md: 2 },
+        mt: { xs: 0, sm: 2 },
         display: "flex",
         borderRadius: ".6rem",
         "&:hover": {
@@ -47,10 +47,9 @@ const OpCodeFinder = () => {
               mt: 3,
             }}
             openOnFocus
-            disableClearable
             onChange={(event, value) => {
-              setInstruction(value.label);
-              setOpCode(value.opCode);
+              setInstruction(value?.label);
+              setOpCode(value?.opCode);
             }}
             value={opCodes.find((entry) => entry.label === instruction)}
             autoHighlight
@@ -68,7 +67,7 @@ const OpCodeFinder = () => {
               </Box>
             )}
             isOptionEqualToValue={(option, value) =>
-              option.label === value.label
+              option.label === value?.label
             }
             renderOption={(props, option) => (
               <Box
