@@ -388,7 +388,7 @@ export default function FrontPageGenerator() {
                             }}
                             value={assignment.number}
                           >
-                            {assignment.name}
+                            {assignment.number}. {assignment.name}
                           </MenuItem>
                         ))}
                       </Select>

@@ -150,6 +150,10 @@ To construct Parallel In Parallel Out Shift Register.`,
     {
       number: 1,
       name: "Implementing Set Operations",
+    },
+    {
+      number: 2,
+      name: "Implementing Fuzzy Set Operations",
       selected: true,
     },
   ],
@@ -157,6 +161,10 @@ To construct Parallel In Parallel Out Shift Register.`,
     {
       number: 1,
       name: "To familiarize with C++ Program Structure and C++ Operators",
+    },
+    {
+      number: 2,
+      name: "To understand and implement the concept of Function Overloading, Pass by Reference and Default Argument",
       selected: true,
     },
   ],
