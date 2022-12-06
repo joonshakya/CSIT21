@@ -218,6 +218,992 @@ To construct Parallel In Parallel Out Shift Register.`,
     47: ["Yogesh Rijal", "021BSCIT047", "B"],
     48: ["Yubraj Khatiwada", "021BSCIT048", "B"],
   },
+  opCodes: [
+    {
+      label: "ACI Data",
+      opCode: "CE",
+    },
+    {
+      label: "ADC A",
+      opCode: "8F",
+    },
+    {
+      label: "ADC B",
+      opCode: "88",
+    },
+    {
+      label: "ADC C",
+      opCode: "89",
+    },
+    {
+      label: "ADC D",
+      opCode: "8A",
+    },
+    {
+      label: "ADC E",
+      opCode: "8B",
+    },
+    {
+      label: "ADC H",
+      opCode: "8C",
+    },
+    {
+      label: "ADC L",
+      opCode: "8D",
+    },
+    {
+      label: "ADC M",
+      opCode: "8E",
+    },
+    {
+      label: "ADD A",
+      opCode: "87",
+    },
+    {
+      label: "ADD B",
+      opCode: "80",
+    },
+    {
+      label: "ADD C",
+      opCode: "81",
+    },
+    {
+      label: "ADD D",
+      opCode: "82",
+    },
+    {
+      label: "ADD E",
+      opCode: "83",
+    },
+    {
+      label: "ADD H",
+      opCode: "84",
+    },
+    {
+      label: "ADD L",
+      opCode: "85",
+    },
+    {
+      label: "ADD M",
+      opCode: "86",
+    },
+    {
+      label: "ADI Data",
+      opCode: "C6",
+    },
+    {
+      label: "ANA A",
+      opCode: "A7",
+    },
+    {
+      label: "ANA B",
+      opCode: "A0",
+    },
+    {
+      label: "ANA C",
+      opCode: "A1",
+    },
+    {
+      label: "ANA D",
+      opCode: "A2",
+    },
+    {
+      label: "ANA E",
+      opCode: "A3",
+    },
+    {
+      label: "ANA H",
+      opCode: "A4",
+    },
+    {
+      label: "ANA L",
+      opCode: "A5",
+    },
+    {
+      label: "ANA M",
+      opCode: "A6",
+    },
+    {
+      label: "ANI Data",
+      opCode: "E6",
+    },
+    {
+      label: "CALL Label",
+      opCode: "CD",
+    },
+    {
+      label: "CC Label",
+      opCode: "DC",
+    },
+    {
+      label: "CM Label",
+      opCode: "FC",
+    },
+    {
+      label: "CMA",
+      opCode: "2F",
+    },
+    {
+      label: "CMC",
+      opCode: "3F",
+    },
+    {
+      label: "CMP A",
+      opCode: "BF",
+    },
+    {
+      label: "CMP B",
+      opCode: "B8",
+    },
+    {
+      label: "CMP C",
+      opCode: "B9",
+    },
+    {
+      label: "CMP D",
+      opCode: "BA",
+    },
+    {
+      label: "CMP E",
+      opCode: "BB",
+    },
+    {
+      label: "CMP H",
+      opCode: "BC",
+    },
+    {
+      label: "CMP L",
+      opCode: "BD",
+    },
+    {
+      label: "CMP M",
+      opCode: "BD",
+    },
+    {
+      label: "CNC Label",
+      opCode: "D4",
+    },
+    {
+      label: "CNZ Label",
+      opCode: "C4",
+    },
+    {
+      label: "CP Label",
+      opCode: "F4",
+    },
+    {
+      label: "CPE Label",
+      opCode: "EC",
+    },
+    {
+      label: "CPI Data",
+      opCode: "FE",
+    },
+    {
+      label: "CPO Label",
+      opCode: "E4",
+    },
+    {
+      label: "CZ Label",
+      opCode: "CC",
+    },
+    {
+      label: "DAA",
+      opCode: "27",
+    },
+    {
+      label: "DAD B",
+      opCode: "09",
+    },
+    {
+      label: "DAD D",
+      opCode: "19",
+    },
+    {
+      label: "DAD H",
+      opCode: "29",
+    },
+    {
+      label: "DAD SP",
+      opCode: "39",
+    },
+    {
+      label: "DCR A",
+      opCode: "3D",
+    },
+    {
+      label: "DCR B",
+      opCode: "05",
+    },
+    {
+      label: "DCR C",
+      opCode: "0D",
+    },
+    {
+      label: "DCR D",
+      opCode: "15",
+    },
+    {
+      label: "DCR E",
+      opCode: "1D",
+    },
+    {
+      label: "DCR H",
+      opCode: "25",
+    },
+    {
+      label: "DCR L",
+      opCode: "2D",
+    },
+    {
+      label: "DCR M",
+      opCode: "35",
+    },
+    {
+      label: "DCX B",
+      opCode: "0B",
+    },
+    {
+      label: "DCX D",
+      opCode: "1B",
+    },
+    {
+      label: "DCX H",
+      opCode: "2B",
+    },
+    {
+      label: "DCX SP",
+      opCode: "3B",
+    },
+    {
+      label: "DI",
+      opCode: "F3",
+    },
+    {
+      label: "EI",
+      opCode: "FB",
+    },
+    {
+      label: "HLT",
+      opCode: "EF/76",
+    },
+    {
+      label: "IN Port-address",
+      opCode: "DB",
+    },
+    {
+      label: "INR A",
+      opCode: "3C",
+    },
+    {
+      label: "INR B",
+      opCode: "04",
+    },
+    {
+      label: "INR C",
+      opCode: "0C",
+    },
+    {
+      label: "INR D",
+      opCode: "14",
+    },
+    {
+      label: "INR E",
+      opCode: "1C",
+    },
+    {
+      label: "INR H",
+      opCode: "24",
+    },
+    {
+      label: "INR L",
+      opCode: "2C",
+    },
+    {
+      label: "INR M",
+      opCode: "34",
+    },
+    {
+      label: "INX B",
+      opCode: "03",
+    },
+    {
+      label: "INX D",
+      opCode: "13",
+    },
+    {
+      label: "INX H",
+      opCode: "23",
+    },
+    {
+      label: "INX SP",
+      opCode: "33",
+    },
+    {
+      label: "JC Label",
+      opCode: "DA",
+    },
+    {
+      label: "JM Label",
+      opCode: "FA",
+    },
+    {
+      label: "JMP Label",
+      opCode: "C3",
+    },
+    {
+      label: "JNC Label",
+      opCode: "D2",
+    },
+    {
+      label: "JNZ Label",
+      opCode: "C2",
+    },
+    {
+      label: "JP Label",
+      opCode: "F2",
+    },
+    {
+      label: "JPE Label",
+      opCode: "EA",
+    },
+    {
+      label: "JPO Label",
+      opCode: "E2",
+    },
+    {
+      label: "JZ Label",
+      opCode: "CA",
+    },
+    {
+      label: "LDA Address",
+      opCode: "3A",
+    },
+    {
+      label: "LDAX B",
+      opCode: "0A",
+    },
+    {
+      label: "LDAX D",
+      opCode: "1A",
+    },
+    {
+      label: "LHLD Address",
+      opCode: "2A",
+    },
+    {
+      label: "LXI B",
+      opCode: "01",
+    },
+    {
+      label: "LXI D",
+      opCode: "11",
+    },
+    {
+      label: "LXI H",
+      opCode: "21",
+    },
+    {
+      label: "LXI SP",
+      opCode: "31",
+    },
+    {
+      label: "MOV A, A",
+      opCode: "7F",
+    },
+    {
+      label: "MOV A, B",
+      opCode: "78",
+    },
+    {
+      label: "MOV A, C",
+      opCode: "79",
+    },
+    {
+      label: "MOV A, D",
+      opCode: "7A",
+    },
+    {
+      label: "MOV A, E",
+      opCode: "7B",
+    },
+    {
+      label: "MOV A, H",
+      opCode: "7C",
+    },
+    {
+      label: "MOV A, L",
+      opCode: "7D",
+    },
+    {
+      label: "MOV A, M",
+      opCode: "7E",
+    },
+    {
+      label: "MOV B, A",
+      opCode: "47",
+    },
+    {
+      label: "MOV B, B",
+      opCode: "40",
+    },
+    {
+      label: "MOV B, C",
+      opCode: "41",
+    },
+    {
+      label: "MOV B, D",
+      opCode: "42",
+    },
+    {
+      label: "MOV B, E",
+      opCode: "43",
+    },
+    {
+      label: "MOV B, H",
+      opCode: "44",
+    },
+    {
+      label: "MOV B, L",
+      opCode: "45",
+    },
+    {
+      label: "MOV B, M",
+      opCode: "46",
+    },
+    {
+      label: "MOV C, A",
+      opCode: "4F",
+    },
+    {
+      label: "MOV C, B",
+      opCode: "48",
+    },
+    {
+      label: "MOV C, C",
+      opCode: "49",
+    },
+    {
+      label: "MOV C, D",
+      opCode: "4A",
+    },
+    {
+      label: "MOV C, E",
+      opCode: "4B",
+    },
+    {
+      label: "MOV C, H",
+      opCode: "4C",
+    },
+    {
+      label: "MOV C, L",
+      opCode: "4D",
+    },
+    {
+      label: "MOV C, M",
+      opCode: "4E",
+    },
+    {
+      label: "MOV D, A",
+      opCode: "57",
+    },
+    {
+      label: "MOV D, B",
+      opCode: "50",
+    },
+    {
+      label: "MOV D, C",
+      opCode: "51",
+    },
+    {
+      label: "MOV D, D",
+      opCode: "52",
+    },
+    {
+      label: "MOV D, E",
+      opCode: "53",
+    },
+    {
+      label: "MOV D, H",
+      opCode: "54",
+    },
+    {
+      label: "MOV D, L",
+      opCode: "55",
+    },
+    {
+      label: "MOV D, M",
+      opCode: "56",
+    },
+    {
+      label: "MOV E, A",
+      opCode: "5F",
+    },
+    {
+      label: "MOV E, B",
+      opCode: "58",
+    },
+    {
+      label: "MOV E, C",
+      opCode: "59",
+    },
+    {
+      label: "MOV E, D",
+      opCode: "5A",
+    },
+    {
+      label: "MOV E, E",
+      opCode: "5B",
+    },
+    {
+      label: "MOV E, H",
+      opCode: "5C",
+    },
+    {
+      label: "MOV E, L",
+      opCode: "5D",
+    },
+    {
+      label: "MOV E, M",
+      opCode: "5E",
+    },
+    {
+      label: "MOV H, A",
+      opCode: "67",
+    },
+    {
+      label: "MOV H, B",
+      opCode: "60",
+    },
+    {
+      label: "MOV H, C",
+      opCode: "61",
+    },
+    {
+      label: "MOV H, D",
+      opCode: "62",
+    },
+    {
+      label: "MOV H, E",
+      opCode: "63",
+    },
+    {
+      label: "MOV H, H",
+      opCode: "64",
+    },
+    {
+      label: "MOV H, L",
+      opCode: "65",
+    },
+    {
+      label: "MOV H, M",
+      opCode: "66",
+    },
+    {
+      label: "MOV L, A",
+      opCode: "6F",
+    },
+    {
+      label: "MOV L, B",
+      opCode: "68",
+    },
+    {
+      label: "MOV L, C",
+      opCode: "69",
+    },
+    {
+      label: "MOV L, D",
+      opCode: "6A",
+    },
+    {
+      label: "MOV L, E",
+      opCode: "6B",
+    },
+    {
+      label: "MOV L, H",
+      opCode: "6C",
+    },
+    {
+      label: "MOV L, L",
+      opCode: "6D",
+    },
+    {
+      label: "MOV L, M",
+      opCode: "6E",
+    },
+    {
+      label: "MOV M, A",
+      opCode: "77",
+    },
+    {
+      label: "MOV M, B",
+      opCode: "70",
+    },
+    {
+      label: "MOV M, C",
+      opCode: "71",
+    },
+    {
+      label: "MOV M, D",
+      opCode: "72",
+    },
+    {
+      label: "MOV M, E",
+      opCode: "73",
+    },
+    {
+      label: "MOV M, H",
+      opCode: "74",
+    },
+    {
+      label: "MOV M, L",
+      opCode: "75",
+    },
+    {
+      label: "MVI A, Data",
+      opCode: "3E",
+    },
+    {
+      label: "MVI B, Data",
+      opCode: "06",
+    },
+    {
+      label: "MVI C, Data",
+      opCode: "0E",
+    },
+    {
+      label: "MVI D, Data",
+      opCode: "16",
+    },
+    {
+      label: "MVI E, Data",
+      opCode: "1E",
+    },
+    {
+      label: "MVI H, Data",
+      opCode: "26",
+    },
+    {
+      label: "MVI L, Data",
+      opCode: "2E",
+    },
+    {
+      label: "MVI M, Data",
+      opCode: "36",
+    },
+    {
+      label: "NOP",
+      opCode: "00",
+    },
+    {
+      label: "ORA A",
+      opCode: "B7",
+    },
+    {
+      label: "ORA B",
+      opCode: "B0",
+    },
+    {
+      label: "ORA C",
+      opCode: "B1",
+    },
+    {
+      label: "ORA D",
+      opCode: "B2",
+    },
+    {
+      label: "ORA E",
+      opCode: "B3",
+    },
+    {
+      label: "ORA H",
+      opCode: "B4",
+    },
+    {
+      label: "ORA L",
+      opCode: "B5",
+    },
+    {
+      label: "ORA M",
+      opCode: "B6",
+    },
+    {
+      label: "ORI Data",
+      opCode: "F6",
+    },
+    {
+      label: "OUT Port-Address",
+      opCode: "D3",
+    },
+    {
+      label: "PCHL",
+      opCode: "E9",
+    },
+    {
+      label: "POP B",
+      opCode: "C1",
+    },
+    {
+      label: "POP D",
+      opCode: "D1",
+    },
+    {
+      label: "POP H",
+      opCode: "E1",
+    },
+    {
+      label: "POP PSW",
+      opCode: "F1",
+    },
+    {
+      label: "PUSH B",
+      opCode: "C5",
+    },
+    {
+      label: "PUSH D",
+      opCode: "D5",
+    },
+    {
+      label: "PUSH H",
+      opCode: "E5",
+    },
+    {
+      label: "PUSH PSW",
+      opCode: "F5",
+    },
+    {
+      label: "RAL",
+      opCode: "17",
+    },
+    {
+      label: "RAR",
+      opCode: "1F",
+    },
+    {
+      label: "RC",
+      opCode: "D8",
+    },
+    {
+      label: "RET",
+      opCode: "C9",
+    },
+    {
+      label: "RIM",
+      opCode: "20",
+    },
+    {
+      label: "RLC",
+      opCode: "07",
+    },
+    {
+      label: "RM",
+      opCode: "F8",
+    },
+    {
+      label: "RNC",
+      opCode: "D0",
+    },
+    {
+      label: "RNZ",
+      opCode: "C0",
+    },
+    {
+      label: "RP",
+      opCode: "F0",
+    },
+    {
+      label: "RPE",
+      opCode: "E8",
+    },
+    {
+      label: "RPO",
+      opCode: "E0",
+    },
+    {
+      label: "RRC",
+      opCode: "0F",
+    },
+    {
+      label: "RST 0",
+      opCode: "C7",
+    },
+    {
+      label: "RST 1",
+      opCode: "CF",
+    },
+    {
+      label: "RST 2",
+      opCode: "D7",
+    },
+    {
+      label: "RST 3",
+      opCode: "DF",
+    },
+    {
+      label: "RST 4",
+      opCode: "E7",
+    },
+    {
+      label: "RST 5",
+      opCode: "EF",
+    },
+    {
+      label: "RST 6",
+      opCode: "F7",
+    },
+    {
+      label: "RST 7",
+      opCode: "FF",
+    },
+    {
+      label: "RZ",
+      opCode: "C8",
+    },
+    {
+      label: "SBB A",
+      opCode: "9F",
+    },
+    {
+      label: "SBB B",
+      opCode: "98",
+    },
+    {
+      label: "SBB C",
+      opCode: "99",
+    },
+    {
+      label: "SBB D",
+      opCode: "9A",
+    },
+    {
+      label: "SBB E",
+      opCode: "9B",
+    },
+    {
+      label: "SBB H",
+      opCode: "9C",
+    },
+    {
+      label: "SBB L",
+      opCode: "9D",
+    },
+    {
+      label: "SBB M",
+      opCode: "9E",
+    },
+    {
+      label: "SBI Data",
+      opCode: "DE",
+    },
+    {
+      label: "SHLD Address",
+      opCode: "22",
+    },
+    {
+      label: "SIM",
+      opCode: "30",
+    },
+    {
+      label: "SPHL",
+      opCode: "F9",
+    },
+    {
+      label: "STA Address",
+      opCode: "32",
+    },
+    {
+      label: "STAX B",
+      opCode: "02",
+    },
+    {
+      label: "STAX D",
+      opCode: "12",
+    },
+    {
+      label: "STC",
+      opCode: "37",
+    },
+    {
+      label: "SUB A",
+      opCode: "97",
+    },
+    {
+      label: "SUB B",
+      opCode: "90",
+    },
+    {
+      label: "SUB C",
+      opCode: "91",
+    },
+    {
+      label: "SUB D",
+      opCode: "92",
+    },
+    {
+      label: "SUB E",
+      opCode: "93",
+    },
+    {
+      label: "SUB H",
+      opCode: "94",
+    },
+    {
+      label: "SUB L",
+      opCode: "95",
+    },
+    {
+      label: "SUB M",
+      opCode: "96",
+    },
+    {
+      label: "SUI Data",
+      opCode: "D6",
+    },
+    {
+      label: "XCHG",
+      opCode: "EB",
+    },
+    {
+      label: "XRA A",
+      opCode: "AF",
+    },
+    {
+      label: "XRA B",
+      opCode: "A8",
+    },
+    {
+      label: "XRA C",
+      opCode: "A9",
+    },
+    {
+      label: "XRA D",
+      opCode: "AA",
+    },
+    {
+      label: "XRA E",
+      opCode: "AB",
+    },
+    {
+      label: "XRA H",
+      opCode: "AC",
+    },
+    {
+      label: "XRA L",
+      opCode: "AD",
+    },
+    {
+      label: "XRA M",
+      opCode: "AE",
+    },
+    {
+      label: "XRI Data",
+      opCode: "EE",
+    },
+    {
+      label: "XTHL",
+      opCode: "E3",
+    },
+  ],
 };
 
 export default constants;

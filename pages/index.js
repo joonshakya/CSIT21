@@ -7,6 +7,7 @@ import Sem2 from "../components/Sem2";
 import Soon from "../components/Soon";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import OpCodeFinder from "../components/OpCodeFinder";
 
 export default function Index() {
   const theme = useTheme();
@@ -107,7 +108,28 @@ export default function Index() {
                   },
                 }}
               >
-                <Soon fillWidth={true} />
+                <Grid container spacing={2}>
+                  <Grid
+                    item
+                    sm={12}
+                    md={6}
+                    sx={{
+                      mx: "auto",
+                    }}
+                  >
+                    <OpCodeFinder />
+                  </Grid>
+                  <Grid
+                    item
+                    sm={12}
+                    md={6}
+                    sx={{
+                      mx: "auto",
+                    }}
+                  >
+                    <Soon />
+                  </Grid>
+                </Grid>
               </Box>
             </Grid>
             <Grid
@@ -132,7 +154,8 @@ export default function Index() {
                 },
               }}
             >
-              <Soon fillWidth={false} />
+              <OpCodeFinder />
+              <Soon />
             </Grid>
           </Grid>
         </Container>

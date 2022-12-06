@@ -6,12 +6,12 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-export default function Soon({ fillWidth }) {
+export default function Soon() {
   return (
     <Card
       sx={{
-        mt: fillWidth ? 2 : 0,
-        maxWidth: fillWidth ? "100%" : 480,
+        mt: 2,
+        maxWidth: "100%",
         borderRadius: ".6rem",
         "&:hover": {
           boxShadow:
@@ -29,7 +29,7 @@ export default function Soon({ fillWidth }) {
         <Typography gutterBottom variant="h5" component="div">
           Rest Coming Soon
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" sx={{}}>
           CSIT21 is going throgugh some changes under the hood so all the
           feaures and contents aren't available yet. If you want to view the
           previous version of CSIT21, click the button below.
