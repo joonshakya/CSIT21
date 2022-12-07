@@ -189,7 +189,9 @@ export default function FrontPageGenerator() {
               }}
               openOnFocus
               onChange={(event, value) => {
-                setRoll(value.roll);
+                if (value) {
+                  setRoll(value.roll);
+                }
               }}
               value={list.find((entry) => entry.roll === roll)}
               autoHighlight

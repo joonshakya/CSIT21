@@ -48,8 +48,10 @@ const OpCodeFinder = () => {
             }}
             openOnFocus
             onChange={(event, value) => {
-              setInstruction(value?.label);
-              setOpCode(value?.opCode);
+              setInstruction(value?.label || "");
+              if (value) {
+                setOpCode(value.opCode);
+              }
             }}
             value={opCodes.find((entry) => entry.label === instruction)}
             autoHighlight
@@ -63,7 +65,18 @@ const OpCodeFinder = () => {
                 }}
               >
                 <TextField {...params} name="instruction" label="Instruction" />
-                <Box sx={{ pl: 2, fontSize: "1.4rem" }}>{opCode}</Box>
+                <Box
+                  sx={{
+                    maxWidth: !instruction ? 0 : "100%",
+                    pl: !instruction ? 0 : 2,
+                    whiteSpace: "nowrap",
+                    color: !instruction && "transparent",
+                    fontSize: "1.4rem",
+                    transition: "all 0.2s ease-out",
+                  }}
+                >
+                  {opCode}
+                </Box>
               </Box>
             )}
             isOptionEqualToValue={(option, value) =>
