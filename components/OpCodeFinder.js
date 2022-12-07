@@ -85,7 +85,7 @@ const OpCodeFinder = () => {
                   sx={{
                     width: instruction ? opCodeContainerWidth || 0 : 0,
                     position: "relative",
-                    ml: instruction ? 2 : 0,
+                    ml: instruction && opCodeContainerWidth ? 2 : 0,
                     transition: "all 0.2s ease-in",
                   }}
                 >
