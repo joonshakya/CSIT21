@@ -6,11 +6,20 @@ import {
   Card,
   CardContent,
 } from "@mui/material";
-import { useState } from "react";
+import { useEffect } from "react";
+import { useState, useRef } from "react";
 import constants from "../utils/frontPageGenerator/constants";
 const OpCodeFinder = () => {
   const [instruction, setInstruction] = useState("MVI A, Data");
   const [opCode, setOpCode] = useState("3E");
+  const opCodeValueRef = useRef(null);
+  const [opCodeContainerWidth, setOpCodeContainerWidth] = useState(0);
+  useEffect(() => {
+    if (opCodeValueRef.current) {
+      setOpCodeContainerWidth(opCodeValueRef.current.offsetWidth);
+    }
+  }, [opCode]);
+
   const { opCodes } = constants;
   return (
     <Card
@@ -63,18 +72,38 @@ const OpCodeFinder = () => {
                   justifyContent: "center",
                 }}
               >
-                <TextField {...params} name="instruction" label="Instruction" />
+                <TextField
+                  sx={{
+                    zIndex: 2,
+                    backgroundColor: "white",
+                  }}
+                  {...params}
+                  name="instruction"
+                  label="Instruction"
+                />
                 <Box
                   sx={{
-                    maxWidth: !instruction ? 0 : "100%",
-                    pl: !instruction ? 0 : 2,
-                    whiteSpace: "nowrap",
-                    color: !instruction && "transparent",
-                    fontSize: "1.4rem",
-                    transition: "all 0.2s ease-out",
+                    width: instruction ? opCodeContainerWidth || 0 : 0,
+                    position: "relative",
+                    ml: instruction ? 2 : 0,
+                    transition: "all 0.2s ease-in",
                   }}
                 >
-                  {opCode}
+                  <Box
+                    ref={opCodeValueRef}
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      right: 0,
+                      transform: "translateY(-50%)",
+                      height: "fit-content",
+                      fontSize: "1.4rem",
+                      // color: !instruction && "transparent",
+                      transition: "all 0.1s ease-in",
+                    }}
+                  >
+                    {opCode}
+                  </Box>
                 </Box>
               </Box>
             )}
