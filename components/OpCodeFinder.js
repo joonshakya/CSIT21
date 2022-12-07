@@ -44,7 +44,6 @@ const OpCodeFinder = () => {
           <Autocomplete
             sx={{
               my: 2,
-              mt: 3,
             }}
             openOnFocus
             onChange={(event, value) => {
