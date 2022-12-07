@@ -8,7 +8,6 @@ const Footer = () => {
         background: "linear-gradient(90deg, #3498db, #8e44ad)",
         display: "flex",
         flexWrap: "wrap",
-
         justifyContent: "space-evenly",
       }}
     >
@@ -29,7 +28,7 @@ const Footer = () => {
           textAlign: "center",
         }}
       >
-        V0.1.1 Beta
+        V0.1.2 Beta
       </Typography>
     </Toolbar>
   );
