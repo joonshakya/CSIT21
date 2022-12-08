@@ -8,7 +8,14 @@ import Soon from "../components/Soon";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import OpCodeFinder from "../components/OpCodeFinder";
-import ClassRoutine from "../components/ClassRoutine";
+import ClassRoutineLoading from "../components/ClassRoutineLoading";
+import dynamic from "next/dynamic";
+
+// const ClassRoutine = ClassRoutineLoading;
+const ClassRoutine = dynamic(() => import("../components/ClassRoutine"), {
+  ssr: false,
+  loading: () => <ClassRoutineLoading />,
+});
 
 export default function Index() {
   const theme = useTheme();

@@ -1,17 +1,8 @@
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import {
-  Fragment,
-  useEffect,
-  useState,
-  useContext,
-  useRef,
-  useMemo,
-} from "react";
+import { Fragment, useEffect, useState, useContext } from "react";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
@@ -22,7 +13,6 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import { CircularProgress } from "@mui/material";
 import { AppContext } from "../context/appContext";
 
 export default function ClassRoutine() {
@@ -33,14 +23,24 @@ export default function ClassRoutine() {
   const tomorrowDayName = new Date(
     new Date().getTime() + 24 * 60 * 60 * 1000
   ).toLocaleString("en-US", { weekday: "short" });
-  const [fullRoutine, setFullRoutine] = useState(false);
+  const [fullRoutine, setFullRoutine] = useState(
+    JSON.parse(localStorage.getItem("fullRoutine")) || false
+  );
   const { roll } = useContext(AppContext);
-  const [onlySection, setOnlySection] = useState(false);
+  const [onlySection, setOnlySection] = useState(
+    JSON.parse(localStorage.getItem("onlySection")) || false
+  );
+
   const [section, setSection] = useState(roll !== "0" && roll < 25 ? "A" : "B");
-  console.log(roll);
   useEffect(() => {
     setSection(roll !== "0" ? (roll < 25 ? "A" : "B") : false);
   }, [roll]);
+  useEffect(() => {
+    localStorage.setItem("fullRoutine", fullRoutine);
+  }, [fullRoutine]);
+  useEffect(() => {
+    localStorage.setItem("onlySection", onlySection);
+  }, [onlySection]);
   const tCellStyles = {
     px: 0.5,
     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -121,7 +121,7 @@ export default function ClassRoutine() {
                   }}
                 />
               }
-              label={`Show today, tom.`}
+              label={`Show only today, tom.`}
             />
           </FormGroup>
           <TableContainer>
