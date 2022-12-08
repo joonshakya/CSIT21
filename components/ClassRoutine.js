@@ -19,26 +19,26 @@ import Skeleton from "@mui/material/Skeleton";
 export default function ClassRoutine() {
   const [loading, setLoading] = useState(true);
   const { routine } = constants;
-  const todayDayName = new Date().toLocaleString("en-US", {
-    weekday: "short",
-  });
-  const tomorrowDayName = new Date(
-    new Date().getTime() + 24 * 60 * 60 * 1000
-  ).toLocaleString("en-US", { weekday: "short" });
+  const [todayDayName, setTodayDayName] = useState("");
+  const [tomorrowDayName, setTomorrowDayName] = useState("");
+
   const [fullRoutine, setFullRoutine] = useState(false);
   const { roll } = useContext(AppContext);
   const [onlySection, setOnlySection] = useState(false);
-
   const [section, setSection] = useState(roll !== "0" && roll < 25 ? "A" : "B");
+
   useEffect(() => {
     setSection(roll !== "0" ? (roll < 25 ? "A" : "B") : false);
   }, [roll]);
+
   useEffect(() => {
     !loading && localStorage.setItem("fullRoutine", fullRoutine);
   }, [fullRoutine]);
+
   useEffect(() => {
     !loading && localStorage.setItem("onlySection", onlySection);
   }, [onlySection]);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       setTimeout(() => {
@@ -47,6 +47,31 @@ export default function ClassRoutine() {
         setOnlySection(JSON.parse(localStorage.getItem("onlySection")));
       }, 10);
     }
+    setTodayDayName(
+      new Date().toLocaleString("en-US", {
+        weekday: "short",
+      })
+    );
+    setTomorrowDayName(
+      new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toLocaleString(
+        "en-US",
+        { weekday: "short" }
+      )
+    );
+    const dateCheck = setInterval(() => {
+      setTodayDayName(
+        new Date().toLocaleString("en-US", {
+          weekday: "short",
+        })
+      );
+      setTomorrowDayName(
+        new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toLocaleString(
+          "en-US",
+          { weekday: "short" }
+        )
+      );
+    }, 60000);
+    return () => clearInterval(dateCheck);
   }, []);
   const tCellStyles = {
     px: 0.5,
@@ -107,7 +132,7 @@ export default function ClassRoutine() {
                         justifyContent: "center",
                       }}
                     >
-                      {Array(4)
+                      {Array(3)
                         .fill()
                         .map((item, index) => (
                           <Skeleton
