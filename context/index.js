@@ -1,11 +1,14 @@
 import { WordProvider } from "./wordContext";
 import { AppProvider } from "./appContext";
+import { OpCodeProvider } from "./opCodeContext";
 
 export default function ContextProvider({ children }) {
   return (
     <>
       <AppProvider>
-        <WordProvider>{children}</WordProvider>
+        <OpCodeProvider>
+          <WordProvider>{children}</WordProvider>
+        </OpCodeProvider>
       </AppProvider>
     </>
   );

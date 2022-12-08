@@ -7,20 +7,28 @@ import {
   CardContent,
 } from "@mui/material";
 import { useEffect } from "react";
-import { useState, useRef } from "react";
+import { useRef, useContext } from "react";
 import constants from "../utils/frontPageGenerator/constants";
-const OpCodeFinder = () => {
-  const [instruction, setInstruction] = useState("MVI A, Data");
-  const [opCode, setOpCode] = useState("3E");
+import { OpCodeContext } from "../context/opCodeContext";
+
+const OpCodeFinder = ({ operate, size }) => {
+  const { opCodes } = constants;
+
+  const {
+    instruction,
+    setInstruction,
+    opCode,
+    setOpCode,
+    opCodeContainerWidth,
+    setOpCodeContainerWidth,
+  } = useContext(OpCodeContext);
   const opCodeValueRef = useRef(null);
-  const [opCodeContainerWidth, setOpCodeContainerWidth] = useState(0);
+
   useEffect(() => {
-    if (opCodeValueRef.current) {
+    if (opCodeValueRef.current && operate) {
       setOpCodeContainerWidth(opCodeValueRef.current.offsetWidth);
     }
-  }, [opCode]);
-
-  const { opCodes } = constants;
+  }, [opCode, operate]);
   return (
     <Card
       sx={{

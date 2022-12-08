@@ -11,6 +11,7 @@ import OpCodeFinder from "../components/OpCodeFinder";
 
 export default function Index() {
   const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <>
       <Head>
@@ -117,7 +118,7 @@ export default function Index() {
                       mx: "auto",
                     }}
                   >
-                    <OpCodeFinder />
+                    <OpCodeFinder operate={isDesktop} size="desktop" />
                   </Grid>
                   <Grid
                     item
@@ -154,7 +155,7 @@ export default function Index() {
                 },
               }}
             >
-              <OpCodeFinder />
+              <OpCodeFinder operate={!isDesktop} size="mobile" />
               <Soon />
             </Grid>
           </Grid>
