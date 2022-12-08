@@ -201,7 +201,13 @@ export default function ClassRoutine() {
               <TableContainer>
                 <Table size="small">
                   <TableHead>
-                    <TableRow>
+                    <TableRow
+                      sx={{
+                        "&:nth-of-type(odd)": {
+                          backgroundColor: "#f5f5f5",
+                        },
+                      }}
+                    >
                       {["Day", "", "1st", "2nd", "3rd", "4th"].map((item) =>
                         onlySection && item === "" ? null : (
                           <TableCell sx={tCellStyles} key={item} align="center">
@@ -226,7 +232,13 @@ export default function ClassRoutine() {
                       : routine
                     ).map((row) => (
                       <Fragment key={row.day}>
-                        <TableRow>
+                        <TableRow
+                          sx={{
+                            "&:nth-of-type(odd)": {
+                              backgroundColor: "#f5f5f5",
+                            },
+                          }}
+                        >
                           <TableCell
                             sx={tCellStyles}
                             rowSpan={2}
@@ -270,7 +282,13 @@ export default function ClassRoutine() {
                             </>
                           ) : null}
                         </TableRow>
-                        <TableRow>
+                        <TableRow
+                          sx={{
+                            "&:nth-of-type(odd)": {
+                              backgroundColor: "#f5f5f5",
+                            },
+                          }}
+                        >
                           {!onlySection || (onlySection && section !== "A") ? (
                             <>
                               {!onlySection ? (
