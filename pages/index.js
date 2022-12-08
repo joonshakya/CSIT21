@@ -8,6 +8,7 @@ import Soon from "../components/Soon";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import OpCodeFinder from "../components/OpCodeFinder";
+import ClassRoutine from "../components/ClassRoutine";
 
 export default function Index() {
   const theme = useTheme();
@@ -101,6 +102,11 @@ export default function Index() {
               }}
             >
               <Sem2 />
+              <ClassRoutine />
+            </Grid>
+            <Grid item xs={12} sm={6} md={5}>
+              <FrontPageGenerator />
+
               <Box
                 sx={{
                   display: {
@@ -113,7 +119,6 @@ export default function Index() {
                   <Grid
                     item
                     sm={12}
-                    md={6}
                     sx={{
                       mx: "auto",
                     }}
@@ -123,7 +128,6 @@ export default function Index() {
                   <Grid
                     item
                     sm={12}
-                    md={6}
                     sx={{
                       mx: "auto",
                     }}
@@ -132,9 +136,6 @@ export default function Index() {
                   </Grid>
                 </Grid>
               </Box>
-            </Grid>
-            <Grid item xs={12} sm={6} md={5}>
-              <FrontPageGenerator />
             </Grid>
             <Grid
               className="hidden"

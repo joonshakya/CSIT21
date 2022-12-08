@@ -168,6 +168,33 @@ To construct Parallel In Parallel Out Shift Register.`,
       selected: true,
     },
   ],
+  routine: [
+    {
+      day: "Mon",
+      a: ["Math (DKP)", "DS", "MP", "*"],
+      b: ["Stat", "Math (BHS)", "OOP", "*"],
+    },
+    {
+      day: "Tue",
+      a: ["Math (RK)", "DS (Lab)", "Stat", "OOP"],
+      b: ["DS", "Math (AMS)", "MP", "Stat"],
+    },
+    {
+      day: "Wed",
+      a: ["Math (BHS)", "DS", "MP (Lab)", "Stat"],
+      b: ["Math (DKP)", "MP (Lab)", "DS (Lab)", "OOP (Lab)"],
+    },
+    {
+      day: "Thu",
+      a: ["OOP (Lab)", "Math (AMS)", "MP", "*"],
+      b: ["MP", "Stat", "OOP", "*"],
+    },
+    {
+      day: "Fri",
+      a: ["MP (Lab)", "Stat", "OOP", "*"],
+      b: ["Math (RK)", "MP (Lab)", "DS", "*"],
+    },
+  ],
   names: {
     1: ["Aakash Shrestha", "021BSCIT001", "A"],
     2: ["Aayam Pokharel", "021BSCIT002", "A"],

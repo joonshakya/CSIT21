@@ -10,7 +10,7 @@ export default function Soon() {
   return (
     <Card
       sx={{
-        mt: { xs: 2, sm: 0, md: 2 },
+        mt: { xs: 2, sm: 0 },
         maxWidth: "100%",
         borderRadius: ".6rem",
         "&:hover": {
@@ -30,9 +30,9 @@ export default function Soon() {
           Rest Coming Soon
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{}}>
-          CSIT21 is going through some changes under the hood so all the
-          feaures and contents aren't available yet. If you want to view the
-          previous version of CSIT21, click the button below.
+          CSIT21 is going through some changes under the hood so all the feaures
+          and contents aren't available yet. If you want to view the previous
+          version of CSIT21, click the button below.
         </Typography>
       </CardContent>
       <CardActions>
