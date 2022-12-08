@@ -11,7 +11,7 @@ import { useRef, useContext } from "react";
 import constants from "../utils/frontPageGenerator/constants";
 import { OpCodeContext } from "../context/opCodeContext";
 
-const OpCodeFinder = ({ operate, size }) => {
+const OpCodeFinder = ({ operate }) => {
   const { opCodes } = constants;
 
   const {

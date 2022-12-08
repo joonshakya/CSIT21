@@ -11,7 +11,7 @@ import FormLabel from "@mui/material/FormLabel";
 import Typography from "@mui/material/Typography";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
+import { MenuItem, Tab, Tabs } from "@mui/material";
 import Container from "@mui/material/Container";
 import { useEffect, useState, useContext, useRef, useMemo } from "react";
 import TextField from "@mui/material/TextField";
@@ -27,7 +27,8 @@ export default function FrontPageGenerator() {
   const namePicker = useRef(null);
 
   const { roll, setRoll } = useContext(AppContext);
-  const [subject, setSubject] = useState("OOP Index");
+  const [tab, setTab] = useState("assignment");
+  const [subject, setSubject] = useState("OOP");
 
   const {
     names,
@@ -92,6 +93,14 @@ export default function FrontPageGenerator() {
       .find((entry) => entry.subject === subject)
       .assignments.find((assignment) => assignment.selected).number
   );
+
+  useEffect(() => {
+    if (tab === "assignment") {
+      setSubject("OOP");
+    } else if (tab === "index") {
+      setSubject("OOP Index");
+    }
+  }, [tab]);
 
   useEffect(() => {
     if (
@@ -244,36 +253,72 @@ export default function FrontPageGenerator() {
                 setSubject(event.target.value);
               }}
             >
+              <Tabs
+                sx={{
+                  height: "36px",
+                  minHeight: "36px",
+                  display: "flex",
+                  mb: 1,
+                  width: "100%",
+                }}
+                value={tab}
+                onChange={(event, newValue) => {
+                  setTab(newValue);
+                }}
+                aria-label="wrapped label tabs example"
+                centered
+              >
+                <Tab
+                  sx={{
+                    display: "block",
+                  }}
+                  value="index"
+                  label="Index"
+                  wrapped
+                />
+                <Tab
+                  sx={{
+                    display: "block",
+                  }}
+                  value="assignment"
+                  label="Assignment"
+                  wrapped
+                />
+              </Tabs>
               <Box
                 sx={{
-                  mb: 2,
+                  mb: tab === "assignment" ? 1 : 0,
                   display: "flex",
                   flexWrap: "wrap",
                   justifyContent: "center",
                 }}
               >
-                {[
-                  {
-                    shortHand: "OOP Index",
-                    longHand: "OOP First Front Page + Index",
-                  },
-                  {
-                    shortHand: "OOP",
-                    longHand: "OOP Assignment Front Page",
-                  },
-                  {
-                    shortHand: "DS Index",
-                    longHand: "DS First Front Page + Index",
-                  },
-                  {
-                    shortHand: "DS",
-                    longHand: "DS Assignment Front Page",
-                  },
-                  {
-                    shortHand: "μP Index",
-                    longHand: "μP First Front Page + Index",
-                  },
-                ].map((subject, index) => (
+                {(tab === "assignment"
+                  ? [
+                      {
+                        shortHand: "OOP",
+                        longHand: "OOP",
+                      },
+                      {
+                        shortHand: "DS",
+                        longHand: "DS",
+                      },
+                    ]
+                  : [
+                      {
+                        shortHand: "OOP Index",
+                        longHand: "OOP",
+                      },
+                      {
+                        shortHand: "DS Index",
+                        longHand: "DS",
+                      },
+                      {
+                        shortHand: "μP Index",
+                        longHand: "μP",
+                      },
+                    ]
+                ).map((subject, index) => (
                   <FormControlLabel
                     key={index}
                     value={subject.shortHand}
@@ -295,26 +340,29 @@ export default function FrontPageGenerator() {
               </Box>
               <Box
                 sx={{
-                  mb: 2,
+                  mb: 1,
                   display: "flex",
                   flexWrap: "wrap",
                   justifyContent: "center",
                 }}
               >
-                {[
-                  {
-                    shortHand: "DL",
-                    longHand: "Digital Logic",
-                  },
-                  {
-                    shortHand: "C",
-                    longHand: "C Programming",
-                  },
-                  {
-                    shortHand: "FIT",
-                    longHand: "Fundamentals of IT",
-                  },
-                ].map((subject, index) => (
+                {(tab === "assignment"
+                  ? [
+                      {
+                        shortHand: "DL",
+                        longHand: "DL",
+                      },
+                      {
+                        shortHand: "C",
+                        longHand: "C",
+                      },
+                      {
+                        shortHand: "FIT",
+                        longHand: "FIT",
+                      },
+                    ]
+                  : []
+                ).map((subject, index) => (
                   <FormControlLabel
                     key={index}
                     value={subject.shortHand}

@@ -118,7 +118,7 @@ export default function Index() {
                       mx: "auto",
                     }}
                   >
-                    <OpCodeFinder operate={isDesktop} size="desktop" />
+                    <OpCodeFinder operate={isDesktop} />
                   </Grid>
                   <Grid
                     item
@@ -133,14 +133,7 @@ export default function Index() {
                 </Grid>
               </Box>
             </Grid>
-            <Grid
-              item
-              sm={6}
-              md={5}
-              sx={{
-                mx: "auto",
-              }}
-            >
+            <Grid item xs={12} sm={6} md={5}>
               <FrontPageGenerator />
             </Grid>
             <Grid
@@ -155,7 +148,7 @@ export default function Index() {
                 },
               }}
             >
-              <OpCodeFinder operate={!isDesktop} size="mobile" />
+              <OpCodeFinder operate={!isDesktop} />
               <Soon />
             </Grid>
           </Grid>
