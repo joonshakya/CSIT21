@@ -14,8 +14,10 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { AppContext } from "../context/appContext";
+import Skeleton from "@mui/material/Skeleton";
 
 export default function ClassRoutine() {
+  const [loading, setLoading] = useState(true);
   const { routine } = constants;
   const todayDayName = new Date().toLocaleString("en-US", {
     weekday: "short",
@@ -24,11 +26,11 @@ export default function ClassRoutine() {
     new Date().getTime() + 24 * 60 * 60 * 1000
   ).toLocaleString("en-US", { weekday: "short" });
   const [fullRoutine, setFullRoutine] = useState(
-    JSON.parse(localStorage.getItem("fullRoutine")) || false
+    (!loading && JSON.parse(localStorage.getItem("fullRoutine"))) || false
   );
   const { roll } = useContext(AppContext);
   const [onlySection, setOnlySection] = useState(
-    JSON.parse(localStorage.getItem("onlySection")) || false
+    (!loading && JSON.parse(localStorage.getItem("onlySection"))) || false
   );
 
   const [section, setSection] = useState(roll !== "0" && roll < 25 ? "A" : "B");
@@ -36,11 +38,18 @@ export default function ClassRoutine() {
     setSection(roll !== "0" ? (roll < 25 ? "A" : "B") : false);
   }, [roll]);
   useEffect(() => {
-    localStorage.setItem("fullRoutine", fullRoutine);
+    !loading && localStorage.setItem("fullRoutine", fullRoutine);
   }, [fullRoutine]);
   useEffect(() => {
-    localStorage.setItem("onlySection", onlySection);
+    !loading && localStorage.setItem("onlySection", onlySection);
   }, [onlySection]);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setTimeout(() => {
+        setLoading(false);
+      }, 10);
+    }
+  }, []);
   const tCellStyles = {
     px: 0.5,
     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -76,147 +85,194 @@ export default function ClassRoutine() {
           <Typography variant="h5" component="div">
             Class Routine
           </Typography>
-          <FormGroup
-            sx={{
-              userSelect: "none",
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "space-evenly",
-              flexWrap: "wrap",
-            }}
-          >
-            {section && (
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={onlySection}
-                    onChange={(e) => {
-                      setOnlySection(e.target.checked);
-                    }}
-                    sx={{
-                      color: "#3f51b5",
-                      "&.Mui-checked": {
-                        color: "#3f51b5",
-                      },
-                      height: "1.75rem",
-                    }}
+          {loading ? (
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Box
+                sx={{
+                  pt: 4,
+                }}
+              >
+                {Array(3)
+                  .fill()
+                  .map((item, index) => (
+                    <Box
+                      key={index}
+                      sx={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {Array(4)
+                        .fill()
+                        .map((item, index) => (
+                          <Skeleton
+                            key={index}
+                            variant="rectangular"
+                            sx={{ m: 1 }}
+                            width={80}
+                            height={30}
+                          />
+                        ))}
+                    </Box>
+                  ))}
+              </Box>
+            </Box>
+          ) : (
+            <>
+              <FormGroup
+                sx={{
+                  userSelect: "none",
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                  flexWrap: "wrap",
+                }}
+              >
+                {section && (
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={onlySection}
+                        onChange={(e) => {
+                          setOnlySection(e.target.checked);
+                        }}
+                        sx={{
+                          color: "#3f51b5",
+                          "&.Mui-checked": {
+                            color: "#3f51b5",
+                          },
+                          height: "1.75rem",
+                        }}
+                      />
+                    }
+                    label={`Show only section ${section}`}
                   />
-                }
-                label={`Show only section ${section}`}
-              />
-            )}
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={!fullRoutine}
-                  onChange={(e) => {
-                    setFullRoutine(!e.target.checked);
-                  }}
-                  sx={{
-                    color: "#3f51b5",
-                    "&.Mui-checked": {
-                      color: "#3f51b5",
-                    },
-                  }}
+                )}
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={!fullRoutine}
+                      onChange={(e) => {
+                        setFullRoutine(!e.target.checked);
+                      }}
+                      sx={{
+                        color: "#3f51b5",
+                        "&.Mui-checked": {
+                          color: "#3f51b5",
+                        },
+                      }}
+                    />
+                  }
+                  label={`Show only today, tom.`}
                 />
-              }
-              label={`Show only today, tom.`}
-            />
-          </FormGroup>
-          <TableContainer>
-            <Table size="small">
-              <TableHead>
-                <TableRow>
-                  {["Day", "", "1st", "2nd", "3rd", "4th"].map((item) =>
-                    onlySection && item === "" ? null : (
-                      <TableCell sx={tCellStyles} key={item} align="center">
-                        {item}
-                      </TableCell>
-                    )
-                  )}
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {(!fullRoutine
-                  ? [
-                      ...routine.filter(
-                        (row) =>
-                          row.day === todayDayName ||
-                          row.day === tomorrowDayName
-                      ),
-                      ...(todayDayName == "Fri" || todayDayName == "Sat"
-                        ? [routine[0]]
-                        : []),
-                    ]
-                  : routine
-                ).map((row) => (
-                  <Fragment key={row.day}>
+              </FormGroup>
+              <TableContainer>
+                <Table size="small">
+                  <TableHead>
                     <TableRow>
-                      <TableCell sx={tCellStyles} rowSpan={2} align="center">
-                        {todayDayName === row.day ? (
-                          <Typography
-                            sx={{
-                              fontWeight: "bold",
-                            }}
-                          >
-                            Today
-                          </Typography>
-                        ) : tomorrowDayName === row.day ? (
-                          <Typography
-                            sx={{
-                              fontWeight: "bold",
-                            }}
-                          >
-                            Tom.
-                          </Typography>
-                        ) : null}
-                        {row.day}
-                      </TableCell>
-                      {!onlySection || (onlySection && section !== "B") ? (
-                        <>
-                          {!onlySection ? (
-                            <TableCell sx={tCellStyles} align="center">
-                              A
-                            </TableCell>
-                          ) : null}
-                          {row.a.map((period, index) => (
-                            <TableCell
-                              sx={tCellStyles}
-                              align="center"
-                              key={index}
-                            >
-                              {period}
-                            </TableCell>
-                          ))}
-                        </>
-                      ) : null}
+                      {["Day", "", "1st", "2nd", "3rd", "4th"].map((item) =>
+                        onlySection && item === "" ? null : (
+                          <TableCell sx={tCellStyles} key={item} align="center">
+                            {item}
+                          </TableCell>
+                        )
+                      )}
                     </TableRow>
-                    <TableRow>
-                      {!onlySection || (onlySection && section !== "A") ? (
-                        <>
-                          {!onlySection ? (
-                            <TableCell sx={tCellStyles} align="center">
-                              B
-                            </TableCell>
+                  </TableHead>
+                  <TableBody>
+                    {(!fullRoutine
+                      ? [
+                          ...routine.filter(
+                            (row) =>
+                              row.day === todayDayName ||
+                              row.day === tomorrowDayName
+                          ),
+                          ...(todayDayName == "Fri" || todayDayName == "Sat"
+                            ? [routine[0]]
+                            : []),
+                        ]
+                      : routine
+                    ).map((row) => (
+                      <Fragment key={row.day}>
+                        <TableRow>
+                          <TableCell
+                            sx={tCellStyles}
+                            rowSpan={2}
+                            align="center"
+                          >
+                            {todayDayName === row.day ? (
+                              <Typography
+                                sx={{
+                                  fontWeight: "bold",
+                                }}
+                              >
+                                Today
+                              </Typography>
+                            ) : tomorrowDayName === row.day ? (
+                              <Typography
+                                sx={{
+                                  fontWeight: "bold",
+                                }}
+                              >
+                                Tom.
+                              </Typography>
+                            ) : null}
+                            {row.day}
+                          </TableCell>
+                          {!onlySection || (onlySection && section !== "B") ? (
+                            <>
+                              {!onlySection ? (
+                                <TableCell sx={tCellStyles} align="center">
+                                  A
+                                </TableCell>
+                              ) : null}
+                              {row.a.map((period, index) => (
+                                <TableCell
+                                  sx={tCellStyles}
+                                  align="center"
+                                  key={index}
+                                >
+                                  {period}
+                                </TableCell>
+                              ))}
+                            </>
                           ) : null}
-                          {row.b.map((period, index) => (
-                            <TableCell
-                              sx={tCellStyles}
-                              align="center"
-                              key={index}
-                            >
-                              {period}
-                            </TableCell>
-                          ))}
-                        </>
-                      ) : null}
-                    </TableRow>
-                  </Fragment>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
+                        </TableRow>
+                        <TableRow>
+                          {!onlySection || (onlySection && section !== "A") ? (
+                            <>
+                              {!onlySection ? (
+                                <TableCell sx={tCellStyles} align="center">
+                                  B
+                                </TableCell>
+                              ) : null}
+                              {row.b.map((period, index) => (
+                                <TableCell
+                                  sx={tCellStyles}
+                                  align="center"
+                                  key={index}
+                                >
+                                  {period}
+                                </TableCell>
+                              ))}
+                            </>
+                          ) : null}
+                        </TableRow>
+                      </Fragment>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </>
+          )}
         </CardContent>
       </Box>
     </Card>

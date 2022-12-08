@@ -8,15 +8,7 @@ import Soon from "../components/Soon";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import OpCodeFinder from "../components/OpCodeFinder";
-import ClassRoutineLoading from "../components/ClassRoutineLoading";
-import dynamic from "next/dynamic";
-
-// const ClassRoutine = ClassRoutineLoading;
-const ClassRoutine = dynamic(() => import("../components/ClassRoutine"), {
-  ssr: false,
-  loading: () => <ClassRoutineLoading />,
-});
-
+import ClassRoutine from "../components/ClassRoutine";
 export default function Index() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
