@@ -25,13 +25,9 @@ export default function ClassRoutine() {
   const tomorrowDayName = new Date(
     new Date().getTime() + 24 * 60 * 60 * 1000
   ).toLocaleString("en-US", { weekday: "short" });
-  const [fullRoutine, setFullRoutine] = useState(
-    (!loading && JSON.parse(localStorage.getItem("fullRoutine"))) || false
-  );
+  const [fullRoutine, setFullRoutine] = useState(false);
   const { roll } = useContext(AppContext);
-  const [onlySection, setOnlySection] = useState(
-    (!loading && JSON.parse(localStorage.getItem("onlySection"))) || false
-  );
+  const [onlySection, setOnlySection] = useState(false);
 
   const [section, setSection] = useState(roll !== "0" && roll < 25 ? "A" : "B");
   useEffect(() => {
@@ -47,6 +43,8 @@ export default function ClassRoutine() {
     if (typeof window !== "undefined") {
       setTimeout(() => {
         setLoading(false);
+        setFullRoutine(JSON.parse(localStorage.getItem("fullRoutine")));
+        setOnlySection(JSON.parse(localStorage.getItem("onlySection")));
       }, 10);
     }
   }, []);
@@ -82,7 +80,7 @@ export default function ClassRoutine() {
             pb: "1rem !important",
           }}
         >
-          <Typography variant="h5" component="div">
+          <Typography gutterBottom variant="h5" component="div">
             Class Routine
           </Typography>
           {loading ? (
@@ -128,6 +126,7 @@ export default function ClassRoutine() {
             <>
               <FormGroup
                 sx={{
+                  mb: 1,
                   userSelect: "none",
                   display: "flex",
                   flexDirection: "row",
@@ -240,7 +239,7 @@ export default function ClassRoutine() {
                                   align="center"
                                   key={index}
                                 >
-                                  {period}
+                                  {period.split(" (Lab)")[0]}
                                 </TableCell>
                               ))}
                             </>
@@ -260,7 +259,7 @@ export default function ClassRoutine() {
                                   align="center"
                                   key={index}
                                 >
-                                  {period}
+                                  {period.split(" (Lab)")[0]}
                                 </TableCell>
                               ))}
                             </>
