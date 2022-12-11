@@ -255,7 +255,6 @@ export default function FrontPageGenerator() {
             >
               <Tabs
                 sx={{
-                  height: "36px",
                   minHeight: "36px",
                   display: "flex",
                   mb: 1,
@@ -270,7 +269,11 @@ export default function FrontPageGenerator() {
               >
                 <Tab
                   sx={{
+                    borderTopLeftRadius: "1rem",
                     display: "block",
+                    backgroundColor: "#f8f9fd",
+                    minHeight: "36px",
+                    color: "#697194",
                   }}
                   value="index"
                   label="Index"
@@ -278,7 +281,11 @@ export default function FrontPageGenerator() {
                 />
                 <Tab
                   sx={{
+                    borderTopRightRadius: "1rem",
                     display: "block",
+                    backgroundColor: "#f8f9fd",
+                    minHeight: "36px",
+                    color: "#697194",
                   }}
                   value="assignment"
                   label="Assignment"
@@ -323,7 +330,7 @@ export default function FrontPageGenerator() {
                     key={index}
                     value={subject.shortHand}
                     defaultChecked={index === 0}
-                    control={<Radio sx={{ height: "2rem" }} />}
+                    control={<Radio />}
                     label={
                       <>
                         <Box
@@ -367,7 +374,7 @@ export default function FrontPageGenerator() {
                     key={index}
                     value={subject.shortHand}
                     defaultChecked={index === 0}
-                    control={<Radio sx={{ height: "2rem" }} />}
+                    control={<Radio />}
                     label={subject.longHand}
                   />
                 ))}
