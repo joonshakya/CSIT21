@@ -105,7 +105,7 @@ export default function ClassRoutine() {
             pb: "1rem !important",
           }}
         >
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography variant="h5" component="div">
             Class Routine
           </Typography>
           {loading ? (
@@ -173,7 +173,6 @@ export default function ClassRoutine() {
                           "&.Mui-checked": {
                             color: "#3f51b5",
                           },
-                          height: "1.75rem",
                         }}
                       />
                     }
