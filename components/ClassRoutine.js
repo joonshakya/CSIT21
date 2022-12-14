@@ -75,7 +75,7 @@ export default function ClassRoutine() {
   }, []);
   const tCellStyles = {
     px: 1,
-    border: "1px solid rgba(0, 0, 0, 0.12)",
+    border: "1px solid #d7d7d7",
   };
 
   return (
