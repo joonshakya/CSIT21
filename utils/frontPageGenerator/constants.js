@@ -1,4 +1,30 @@
 const constants = {
+  dsAssignments: [
+    {
+      number: 1,
+      name: "Implementing Set Operations",
+    },
+    {
+      number: 2,
+      name: "Implementing Fuzzy Set Operations",
+      selected: true,
+    },
+  ],
+  oopAssignments: [
+    {
+      number: 1,
+      name: "To familiarize with C++ Program Structure and C++ Operators",
+    },
+    {
+      number: 2,
+      name: "To understand and implement the concept of Function Overloading, Pass by Reference and Default Argument",
+      selected: true,
+    },
+    {
+      number: 3,
+      name: "To understand concept of Pointer, Dynamic Memory Allocation",
+    },
+  ],
   dlAssignments: [
     {
       group: "0",
@@ -143,28 +169,6 @@ To construct Parallel In Parallel Out Shift Register.`,
     {
       number: 7,
       name: "Computer Software",
-      selected: true,
-    },
-  ],
-  dsAssignments: [
-    {
-      number: 1,
-      name: "Implementing Set Operations",
-    },
-    {
-      number: 2,
-      name: "Implementing Fuzzy Set Operations",
-      selected: true,
-    },
-  ],
-  oopAssignments: [
-    {
-      number: 1,
-      name: "To familiarize with C++ Program Structure and C++ Operators",
-    },
-    {
-      number: 2,
-      name: "To understand and implement the concept of Function Overloading, Pass by Reference and Default Argument",
       selected: true,
     },
   ],
