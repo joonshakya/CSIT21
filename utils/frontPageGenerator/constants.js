@@ -18,11 +18,11 @@ const constants = {
     {
       number: 2,
       name: "To understand and implement the concept of Function Overloading, Pass by Reference and Default Argument",
-      selected: true,
     },
     {
       number: 3,
       name: "To understand concept of Pointer, Dynamic Memory Allocation",
+      selected: true,
     },
   ],
   dlAssignments: [
@@ -175,28 +175,81 @@ To construct Parallel In Parallel Out Shift Register.`,
   routine: [
     {
       day: "Mon",
-      a: ["Math (DKP)", "DS", "MP", "*"],
-      b: ["Stat", "Math (BHS)", "OOP", "*"],
+      a: [
+        ["Math (DKP)", "419"],
+        ["DS", "419"],
+        ["MP", "419"],
+        ["*", ""],
+      ],
+      b: [
+        ["Stat", "416"],
+        ["Math (BHS)", "416"],
+        ["OOP", "416"],
+        ["*", ""],
+      ],
     },
     {
       day: "Tue",
-      a: ["Math (RK)", "DS (Lab)", "Stat", "OOP"],
-      b: ["DS", "Math (AMS)", "MP", "Stat"],
+      // Totally wrong rooms
+      a: [
+        ["Math (RK)", "Lab E"],
+        ["DS (Lab)", "419"],
+        ["Stat", "419"],
+        ["OOP", "419"],
+      ],
+      b: [
+        ["DS", "416"],
+        ["Math (AMS)", "416"],
+        ["MP", "Lab G"],
+        ["Stat", "Lab B"],
+      ],
     },
     {
       day: "Wed",
-      a: ["Math (BHS)", "DS", "MP (Lab)", "Stat"],
-      b: ["Math (DKP)", "MP (Lab)", "DS (Lab)", "OOP (Lab)"],
+      a: [
+        ["Math (BHS)", "419"],
+        ["DS", "419"],
+        // Need to confirm lab
+        ["MP (Lab)", "Lab G"],
+        ["Stat", "Lab B"],
+      ],
+      b: [
+        ["Math (DKP)", "416"],
+        // Need to confirm lab
+        ["MP (Lab)", "416"],
+        ["DS (Lab)", "Lab D"],
+        ["OOP (Lab)", "Lab D"],
+      ],
     },
     {
       day: "Thu",
-      a: ["OOP (Lab)", "Math (AMS)", "MP", "*"],
-      b: ["MP", "Stat", "OOP", "*"],
+      a: [
+        ["OOP (Lab)", "Lab F"],
+        ["Math (AMS)", "419"],
+        ["MP", "419"],
+        ["*", ""],
+      ],
+      b: [
+        ["MP", "416"],
+        ["Stat", "Lab F"],
+        ["OOP", "416"],
+        ["*", ""],
+      ],
     },
     {
       day: "Fri",
-      a: ["MP (Lab)", "Stat", "OOP", "*"],
-      b: ["Math (RK)", "MP (Lab)", "DS", "*"],
+      a: [
+        ["MP (Lab)", "Lab F"],
+        ["Stat", "419"],
+        ["OOP", "419"],
+        ["*", ""],
+      ],
+      b: [
+        ["Math (RK)", "416"],
+        ["MP (Lab)", "416"],
+        ["DS", "416"],
+        ["*", ""],
+      ],
     },
   ],
   names: {

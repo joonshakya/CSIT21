@@ -74,7 +74,7 @@ export default function ClassRoutine() {
     return () => clearInterval(dateCheck);
   }, []);
   const tCellStyles = {
-    px: 0.5,
+    px: 1,
     border: "1px solid rgba(0, 0, 0, 0.12)",
   };
 
@@ -269,13 +269,15 @@ export default function ClassRoutine() {
                                   A
                                 </TableCell>
                               ) : null}
-                              {row.a.map((period, index) => (
+                              {row.a.map(([period, room], index) => (
                                 <TableCell
                                   sx={tCellStyles}
                                   align="center"
                                   key={index}
                                 >
                                   {period.split(" (Lab)")[0]}
+                                  <br />
+                                  {/* {room} */}
                                 </TableCell>
                               ))}
                             </>
@@ -295,13 +297,15 @@ export default function ClassRoutine() {
                                   B
                                 </TableCell>
                               ) : null}
-                              {row.b.map((period, index) => (
+                              {row.b.map(([period, room], index) => (
                                 <TableCell
                                   sx={tCellStyles}
                                   align="center"
                                   key={index}
                                 >
                                   {period.split(" (Lab)")[0]}
+                                  <br />
+                                  {/* {room} */}
                                 </TableCell>
                               ))}
                             </>
