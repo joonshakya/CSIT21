@@ -105,7 +105,6 @@ export default function Index() {
             </Grid>
             <Grid item xs={12} sm={6} md={5}>
               <FrontPageGenerator />
-
               <Box
                 sx={{
                   display: {

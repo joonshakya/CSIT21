@@ -7,9 +7,9 @@ import {
   CardContent,
 } from "@mui/material";
 import { useEffect } from "react";
-import { useRef, useContext } from "react";
+import { useRef } from "react";
 import constants from "../utils/frontPageGenerator/constants";
-import { OpCodeContext } from "../context/opCodeContext";
+import { useOpCodeStore } from "../src/store";
 
 const OpCodeFinder = ({ operate }) => {
   const { opCodes } = constants;
@@ -21,7 +21,7 @@ const OpCodeFinder = ({ operate }) => {
     setOpCode,
     opCodeContainerWidth,
     setOpCodeContainerWidth,
-  } = useContext(OpCodeContext);
+  } = useOpCodeStore();
   const opCodeValueRef = useRef(null);
 
   useEffect(() => {
@@ -29,6 +29,7 @@ const OpCodeFinder = ({ operate }) => {
       setOpCodeContainerWidth(opCodeValueRef.current.offsetWidth);
     }
   }, [opCode, operate]);
+
   return (
     <Card
       sx={{

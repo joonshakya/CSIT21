@@ -2,7 +2,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Fragment, useEffect, useState, useContext } from "react";
+import { Fragment, useEffect, useState } from "react";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
@@ -13,18 +13,22 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import { AppContext } from "../context/appContext";
 import Skeleton from "@mui/material/Skeleton";
+import { useBaseStore } from "../src/store";
 
 export default function ClassRoutine() {
+  const roll = useBaseStore((state) => state.roll);
+  const setRoll = useBaseStore((state) => state.setRoll);
+  const fullRoutine = useBaseStore((state) => state.fullRoutine);
+  const setFullRoutine = useBaseStore((state) => state.setFullRoutine);
+  const onlySection = useBaseStore((state) => state.onlySection);
+  const setOnlySection = useBaseStore((state) => state.setOnlySection);
+
   const [loading, setLoading] = useState(true);
   const { routine } = constants;
   const [todayDayName, setTodayDayName] = useState("");
   const [tomorrowDayName, setTomorrowDayName] = useState("");
 
-  const [fullRoutine, setFullRoutine] = useState(false);
-  const { roll } = useContext(AppContext);
-  const [onlySection, setOnlySection] = useState(false);
   const [section, setSection] = useState(roll !== "0" && roll < 25 ? "A" : "B");
 
   useEffect(() => {
@@ -32,21 +36,26 @@ export default function ClassRoutine() {
   }, [roll]);
 
   useEffect(() => {
-    !loading && localStorage.setItem("fullRoutine", fullRoutine);
-  }, [fullRoutine]);
-
-  useEffect(() => {
-    !loading && localStorage.setItem("onlySection", onlySection);
-  }, [onlySection]);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setTimeout(() => {
-        setLoading(false);
-        setFullRoutine(JSON.parse(localStorage.getItem("fullRoutine")));
-        setOnlySection(JSON.parse(localStorage.getItem("onlySection")));
-      }, 10);
+    // Later remove start
+    const localRoll = localStorage.getItem("roll");
+    const localFullRoutine = localStorage.getItem("fullRoutine");
+    const localOnlySection = localStorage.getItem("onlySection");
+    if (localRoll) {
+      setRoll(localRoll);
+      localStorage.removeItem("roll");
     }
+    if (localFullRoutine) {
+      setFullRoutine(localFullRoutine === "true");
+      localStorage.removeItem("fullRoutine");
+    }
+    if (localOnlySection) {
+      setOnlySection(localOnlySection === "true");
+      localStorage.removeItem("onlySection");
+    }
+    // Later remove end
+    setTimeout(() => {
+      setLoading(false);
+    }, 10);
     setTodayDayName(
       new Date().toLocaleString("en-US", {
         weekday: "short",
@@ -73,6 +82,7 @@ export default function ClassRoutine() {
     }, 60000);
     return () => clearInterval(dateCheck);
   }, []);
+
   const tCellStyles = {
     px: 1,
     border: "1px solid #d7d7d7",

@@ -12,21 +12,22 @@ import Typography from "@mui/material/Typography";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import { MenuItem, Tab, Tabs } from "@mui/material";
-import Container from "@mui/material/Container";
-import { useEffect, useState, useContext, useRef, useMemo } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import constants from "../utils/frontPageGenerator/constants";
-import { AppContext } from "../context/appContext";
-import { WordContext } from "../context/wordContext";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
 import { CircularProgress } from "@mui/material";
+import { useBaseStore, useWordStore } from "../src/store";
 
 export default function FrontPageGenerator() {
   const namePicker = useRef(null);
 
-  const { roll, setRoll } = useContext(AppContext);
+  const roll = useBaseStore((state) => state.roll);
+  const setRoll = useBaseStore((state) => state.setRoll);
+  const wordFileLoaded = useBaseStore((state) => state.wordFileLoaded);
+
   const [tab, setTab] = useState("assignment");
   const [subject, setSubject] = useState("OOP");
 
@@ -132,16 +133,13 @@ export default function FrontPageGenerator() {
     })
   );
 
-  const wordFiles = useContext(WordContext);
-
+  const wordFiles = useWordStore();
   const [generateFrontPage, error, loading, setError] = useFrontPageGenerator();
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setError(false);
-      prefetchDocument({ wordFiles, subject, roll });
-    }
-  }, [subject, roll, wordFiles]);
+    setError(false);
+    prefetchDocument({ wordFiles, subject, roll, setLoad: false });
+  }, [subject, roll]);
 
   return (
     <Card
@@ -458,7 +456,6 @@ export default function FrontPageGenerator() {
           <CardActions
             sx={{
               flexWrap: "wrap",
-              justifyContent: "space-between",
             }}
           >
             <Button type="submit" size="small">
@@ -478,6 +475,8 @@ export default function FrontPageGenerator() {
               <CircularProgress
                 aria-label="loading"
                 size={24}
+                variant="determinate"
+                value={wordFileLoaded}
                 sx={{
                   mx: 2,
                   opacity: loading ? 1 : 0,

@@ -1,6 +1,7 @@
 import generateDocument from "./useMailMerge";
 import constants from "./constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useBaseStore } from "../../src/store";
 
 export default function useFrontPageGenerator() {
   const [error, setError] = useState(null);
@@ -28,6 +29,7 @@ export default function useFrontPageGenerator() {
       wordFiles,
       subject,
       roll,
+      setLoad: true,
     });
     if (error) {
       setError(error);
@@ -79,7 +81,9 @@ export default function useFrontPageGenerator() {
   return [generateFrontPage, error, loading, setError];
 }
 
-export async function prefetchDocument({ wordFiles, subject, roll }) {
+export async function prefetchDocument({ wordFiles, subject, roll, setLoad }) {
+  useBaseStore.setState({ wordFileLoaded: 0 });
+
   const { names } = constants;
   if (subject === "DL") {
     if (roll === "0" || !roll) {
@@ -97,10 +101,37 @@ export async function prefetchDocument({ wordFiles, subject, roll }) {
   }
 
   const link = `/static/word-templates/${subject}.docx?${Date.now()}`;
-  const res = await fetch(link);
-  if (!res.ok) {
+
+  // console.log(`Downloading ${subject}`);
+  const response = await fetch(link);
+  if (!response.ok) {
     return { error: "File downloading failed" };
   }
+  const contentLength = response.headers.get("content-length");
+  const total = parseInt(contentLength, 10);
+  let loaded = 0;
+  const res = new Response(
+    new ReadableStream({
+      async start(controller) {
+        const reader = response.body.getReader();
+        for (let i = 0; ; i++) {
+          const { done, value } = await reader.read();
+          if (done) {
+            break;
+          }
+          if (setLoad) {
+            loaded += value.byteLength;
+            if (i % 50 === 0) {
+              console.log(subject, (loaded / total) * 100);
+              useBaseStore.setState({ wordFileLoaded: (loaded / total) * 100 });
+            }
+          }
+          controller.enqueue(value);
+        }
+        controller.close();
+      },
+    })
+  );
   content = await res.arrayBuffer();
   // console.log(`Downloaded ${subject}`);
   wordFiles.setWordFile({ subject, content });
