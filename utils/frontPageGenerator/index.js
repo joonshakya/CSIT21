@@ -120,9 +120,8 @@ export async function prefetchDocument({ wordFiles, subject, roll, setLoad }) {
             break;
           }
           if (setLoad) {
-            loaded += value.byteLength;
             if (i % 50 === 0) {
-              console.log(subject, (loaded / total) * 100);
+              loaded += value.byteLength;
               useBaseStore.setState({ wordFileLoaded: (loaded / total) * 100 });
             }
           }
