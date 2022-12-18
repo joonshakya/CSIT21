@@ -287,7 +287,7 @@ export default function ClassRoutine() {
                                 >
                                   {period.split(" (Lab)")[0]}
                                   <br />
-                                  {/* {room} */}
+                                  {room}
                                 </TableCell>
                               ))}
                             </>
@@ -315,7 +315,7 @@ export default function ClassRoutine() {
                                 >
                                   {period.split(" (Lab)")[0]}
                                   <br />
-                                  {/* {room} */}
+                                  {room}
                                 </TableCell>
                               ))}
                             </>
