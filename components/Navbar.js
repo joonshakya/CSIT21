@@ -56,6 +56,11 @@ function DrawerAppBar(props) {
             background: "linear-gradient(90deg, #3498db, #8e44ad)",
           }}
         >
+          <Box
+            sx={{
+              height: "env(safe-area-inset-top)",
+            }}
+          ></Box>
           <Toolbar>
             {navItems.length ? (
               <IconButton

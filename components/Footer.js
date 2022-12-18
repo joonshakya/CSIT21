@@ -9,13 +9,15 @@ const Footer = () => {
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "space-evenly",
+        py: "1rem",
+        pb: "env(safe-area-inset-bottom)",
       }}
     >
       <a
         href="/"
         style={{
           color: "white",
-          margin: "1rem",
+          margin: ".4rem",
           textAlign: "center",
         }}
       >
@@ -24,7 +26,7 @@ const Footer = () => {
       <Typography
         color="white"
         sx={{
-          m: "1rem",
+          margin: ".4rem",
           textAlign: "center",
         }}
       >

@@ -39,6 +39,7 @@ export default function Index() {
           display: "flex",
           flexDirection: "column",
           minHeight: "100vh",
+          paddingTop: "env(safe-area-inset-top)",
         }}
       >
         <Toolbar />
