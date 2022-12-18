@@ -2,6 +2,7 @@
   "name": "CSIT21 - SXC B.Sc. CSIT Batch 2021",
   "short_name": "CSIT21",
   "start_url": ".",
+  "scope": ".",
   "display": "standalone",
   "background_color": "#6671c6",
   "description": "Class Documents on the go",

@@ -13,10 +13,49 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/static/favicon/favicon.ico" />
           <meta name="emotion-insertion-point" content="" />
+          <link rel="manifest" href="/manifest.json" />
           <meta
             name="description"
             content="CSIT21 Beta website made with react."
           />
+          <meta property="og:type" content="website" />
+          <meta property="fb:app_id" content="1265498347173300" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/static/favicon/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/static/favicon/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/static/favicon/favicon-16x16.png"
+          />
+          <link
+            rel="mask-icon"
+            href="/static/favicon/safari-pinned-tab.svg"
+            color="#fbddeb"
+          />
+          <meta name="msapplication-TileColor" content="#fbddeb" />
+
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+          />
+          <meta
+            name="mobile-web-app-status-bar-style"
+            content="black-translucent"
+          />
+          <meta name="mobile-web-app-title" content="CSIT21" />
+          <meta name="mobile-web-app-capable" content="yes" />
+
           {this.props.emotionStyleTags}
         </Head>
         <body>
