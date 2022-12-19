@@ -39,7 +39,6 @@ export default function Index() {
           display: "flex",
           flexDirection: "column",
           minHeight: "100vh",
-          paddingTop: "env(safe-area-inset-top)",
         }}
       >
         <Toolbar />
@@ -49,66 +48,72 @@ export default function Index() {
             flex: 1,
           }}
         >
-          <Grid container spacing={2}>
-            <Grid
-              item
-              sm={6}
-              md={7}
-              sx={{
-                mx: "auto",
-              }}
-            >
-              <Sem2 />
-              <ClassRoutine />
-            </Grid>
-            <Grid item xs={12} sm={6} md={5}>
-              <FrontPageGenerator />
-              <Box
+          <Box
+            sx={{
+              p: "env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left)",
+            }}
+          >
+            <Grid container spacing={2}>
+              <Grid
+                item
+                sm={6}
+                md={7}
                 sx={{
+                  mx: "auto",
+                }}
+              >
+                <Sem2 />
+                <ClassRoutine />
+              </Grid>
+              <Grid item xs={12} sm={6} md={5}>
+                <FrontPageGenerator />
+                <Box
+                  sx={{
+                    display: {
+                      xs: "none",
+                      sm: "block",
+                    },
+                  }}
+                >
+                  <Grid container spacing={2}>
+                    <Grid
+                      item
+                      sm={12}
+                      sx={{
+                        mx: "auto",
+                      }}
+                    >
+                      <OpCodeFinder operate={isDesktop} />
+                    </Grid>
+                    <Grid
+                      item
+                      sm={12}
+                      sx={{
+                        mx: "auto",
+                      }}
+                    >
+                      <Soon />
+                    </Grid>
+                  </Grid>
+                </Box>
+              </Grid>
+              <Grid
+                className="hidden"
+                item
+                sm={12}
+                sx={{
+                  mx: "auto",
                   display: {
-                    xs: "none",
-                    sm: "block",
+                    xs: "block",
+                    sm: "none",
                   },
                 }}
               >
-                <Grid container spacing={2}>
-                  <Grid
-                    item
-                    sm={12}
-                    sx={{
-                      mx: "auto",
-                    }}
-                  >
-                    <OpCodeFinder operate={isDesktop} />
-                  </Grid>
-                  <Grid
-                    item
-                    sm={12}
-                    sx={{
-                      mx: "auto",
-                    }}
-                  >
-                    <Soon />
-                  </Grid>
-                </Grid>
-              </Box>
+                <OpCodeFinder operate={!isDesktop} />
+                <Soon />
+              </Grid>
             </Grid>
-            <Grid
-              className="hidden"
-              item
-              sm={12}
-              sx={{
-                mx: "auto",
-                display: {
-                  xs: "block",
-                  sm: "none",
-                },
-              }}
-            >
-              <OpCodeFinder operate={!isDesktop} />
-              <Soon />
-            </Grid>
-          </Grid>
+          </Box>
         </Container>
         <Footer />
       </Box>
