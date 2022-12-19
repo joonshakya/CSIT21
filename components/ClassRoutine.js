@@ -88,6 +88,8 @@ export default function ClassRoutine() {
     border: "1px solid #d7d7d7",
   };
 
+  const showRoom = true;
+
   return (
     <Card
       sx={{
@@ -116,7 +118,7 @@ export default function ClassRoutine() {
           }}
         >
           <Typography variant="h5" component="div">
-            Class Routine
+            Class Routine (Beta)
           </Typography>
           {loading ? (
             <Box
@@ -287,7 +289,7 @@ export default function ClassRoutine() {
                                 >
                                   {period.split(" (Lab)")[0]}
                                   <br />
-                                  {room}
+                                  {showRoom ? room : null}
                                 </TableCell>
                               ))}
                             </>
@@ -315,7 +317,7 @@ export default function ClassRoutine() {
                                 >
                                   {period.split(" (Lab)")[0]}
                                   <br />
-                                  {room}
+                                  {showRoom ? room : null}
                                 </TableCell>
                               ))}
                             </>
