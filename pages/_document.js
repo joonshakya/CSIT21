@@ -40,7 +40,7 @@ export default class MyDocument extends Document {
           <link
             rel="mask-icon"
             href="/static/favicon/safari-pinned-tab.svg"
-            color="#fbddeb"
+            color={theme.palette.primary.main}
           />
           <meta name="msapplication-TileColor" content="#fbddeb" />
 
