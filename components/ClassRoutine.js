@@ -88,7 +88,7 @@ export default function ClassRoutine() {
     border: "1px solid #d7d7d7",
   };
 
-  const showRoom = true;
+  const showRoom = false;
 
   return (
     <Card

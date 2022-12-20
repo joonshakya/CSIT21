@@ -6,7 +6,7 @@ const Footer = () => {
     <Toolbar
       sx={{
         background: "linear-gradient(90deg, #3498db, #8e44ad)",
-        p: "env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)",
+        p: "0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)",
       }}
     >
       <Box
@@ -35,7 +35,7 @@ const Footer = () => {
             textAlign: "center",
           }}
         >
-          V0.1.7 Beta 2
+          V0.1.7 Beta
         </Typography>
       </Box>
     </Toolbar>
