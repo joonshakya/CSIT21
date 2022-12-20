@@ -7,7 +7,15 @@ const constants = {
     {
       number: 2,
       name: "Implementing Fuzzy Set Operations",
+    },
+    {
+      number: 3,
+      name: "Finding Cartesian Product of Multiple Sets",
       selected: true,
+    },
+    {
+      number: 4,
+      name: "Implementing Encryption/Decryption of Alphabets",
     },
   ],
   oopAssignments: [
