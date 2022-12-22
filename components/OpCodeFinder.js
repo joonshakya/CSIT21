@@ -28,7 +28,7 @@ const OpCodeFinder = ({ operate }) => {
     if (opCodeValueRef.current && operate) {
       setOpCodeContainerWidth(opCodeValueRef.current.offsetWidth);
     }
-  }, [opCode, operate]);
+  }, [opCode, operate, setOpCodeContainerWidth]);
 
   return (
     <Card

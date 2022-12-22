@@ -18,7 +18,6 @@ import { useBaseStore } from "../src/store";
 
 export default function ClassRoutine() {
   const roll = useBaseStore((state) => state.roll);
-  const setRoll = useBaseStore((state) => state.setRoll);
   const fullRoutine = useBaseStore((state) => state.fullRoutine);
   const setFullRoutine = useBaseStore((state) => state.setFullRoutine);
   const onlySection = useBaseStore((state) => state.onlySection);
@@ -36,23 +35,6 @@ export default function ClassRoutine() {
   }, [roll]);
 
   useEffect(() => {
-    // Later remove start
-    const localRoll = localStorage.getItem("roll");
-    const localFullRoutine = localStorage.getItem("fullRoutine");
-    const localOnlySection = localStorage.getItem("onlySection");
-    if (localRoll) {
-      setRoll(localRoll);
-      localStorage.removeItem("roll");
-    }
-    if (localFullRoutine) {
-      setFullRoutine(localFullRoutine === "true");
-      localStorage.removeItem("fullRoutine");
-    }
-    if (localOnlySection) {
-      setOnlySection(localOnlySection === "true");
-      localStorage.removeItem("onlySection");
-    }
-    // Later remove end
     setTimeout(() => {
       setLoading(false);
     }, 10);

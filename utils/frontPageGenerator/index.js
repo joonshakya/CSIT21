@@ -1,6 +1,6 @@
 import generateDocument from "./useMailMerge";
 import constants from "./constants";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useBaseStore } from "../../src/store";
 
 export default function useFrontPageGenerator() {

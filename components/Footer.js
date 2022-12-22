@@ -1,4 +1,5 @@
 import { Toolbar, Typography, Box } from "@mui/material";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -18,7 +19,7 @@ const Footer = () => {
           py: "1rem",
         }}
       >
-        <a
+        <Link
           href="/"
           style={{
             color: "white",
@@ -27,7 +28,7 @@ const Footer = () => {
           }}
         >
           Copyright © SXC B.Sc. CSIT Batch 2021
-        </a>
+        </Link>
         <Typography
           color="white"
           sx={{
@@ -35,7 +36,7 @@ const Footer = () => {
             textAlign: "center",
           }}
         >
-          V0.1.7 Beta 2
+          V0.1.8 Beta
         </Typography>
       </Box>
     </Toolbar>

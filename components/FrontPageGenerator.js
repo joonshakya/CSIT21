@@ -87,7 +87,7 @@ export default function FrontPageGenerator() {
         ],
       },
     ];
-  }, [dlAssignments, fitAssignments, dsAssignments]);
+  }, [dlAssignments, fitAssignments, dsAssignments, oopAssignments]);
 
   const [assignmentNumber, setAssignmentNumber] = useState(
     assignmentLists
@@ -139,7 +139,7 @@ export default function FrontPageGenerator() {
   useEffect(() => {
     setError(false);
     prefetchDocument({ wordFiles, subject, roll, setLoad: false });
-  }, [subject, roll]);
+  }, [subject, roll, setError, wordFiles]);
 
   return (
     <Card

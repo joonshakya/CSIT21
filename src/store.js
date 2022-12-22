@@ -6,19 +6,19 @@ export const useBaseStore = create(
     (set) => ({
       roll: "0",
       setRoll: (roll) => {
-        set((state) => ({
+        set(() => ({
           roll,
         }));
       },
       fullRoutine: false,
       setFullRoutine: (fullRoutine) => {
-        set((state) => ({
+        set(() => ({
           fullRoutine,
         }));
       },
       onlySection: false,
       setOnlySection: (onlySection) => {
-        set((state) => ({
+        set(() => ({
           onlySection,
         }));
       },
@@ -34,19 +34,19 @@ export const useBaseStore = create(
 export const useOpCodeStore = create((set) => ({
   instruction: "MVI A, Data",
   setInstruction: (instruction) => {
-    set((state) => ({
+    set(() => ({
       instruction,
     }));
   },
   opCode: "3E",
   setOpCode: (opCode) => {
-    set((state) => ({
+    set(() => ({
       opCode,
     }));
   },
   opCodeContainerWidth: null,
   setOpCodeContainerWidth: (opCodeContainerWidth) => {
-    set((state) => ({
+    set(() => ({
       opCodeContainerWidth,
     }));
   },
@@ -61,7 +61,7 @@ export const useWordStore = create((set) => ({
   DS: null,
   OOP: null,
   setWordFile: ({ subject, content }) => {
-    set((state) => ({
+    set(() => ({
       [subject]: content,
     }));
   },

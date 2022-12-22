@@ -4,6 +4,7 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV !== "development",
   },
+  // basePath: "/CSIT21 Local",
 };
 
 const withPWA = require("next-pwa")({

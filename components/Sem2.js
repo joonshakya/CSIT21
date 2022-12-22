@@ -1,11 +1,4 @@
-import {
-  Card,
-  Box,
-  CardContent,
-  Typography,
-  Link,
-  Button,
-} from "@mui/material";
+import { Card, Box, CardContent, Typography, Button } from "@mui/material";
 
 const Sem2 = () => {
   return (

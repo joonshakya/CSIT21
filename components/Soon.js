@@ -1,9 +1,7 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 export default function Soon() {
@@ -31,8 +29,8 @@ export default function Soon() {
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{}}>
           CSIT21 is going through some changes under the hood so all the feaures
-          and contents aren't available yet. If you want to view the previous
-          version of CSIT21, click the button below.
+          and contents aren&apos;t available yet. If you want to view the
+          previous version of CSIT21, click the button below.
         </Typography>
       </CardContent>
       <CardActions>

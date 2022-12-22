@@ -1,15 +1,12 @@
 import {
-  Autocomplete,
   TextField,
   Box,
-  Grid,
   Typography,
   Card,
   CardContent,
   CardActions,
   Button,
   Table,
-  TableHead,
   TableRow,
   TableCell,
   TableBody,
@@ -17,8 +14,14 @@ import {
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 
-import { useState, useRef, useEffect, Fragment, forwardRef } from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import {
+  useState,
+  useRef,
+  useEffect,
+  useCallback,
+  Fragment,
+  forwardRef,
+} from "react";
 const Alert = forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
@@ -29,19 +32,20 @@ const TallyBar = () => {
   const frequencies = frequency.split("\n").map((freq) => parseInt(freq));
   const tBodyRef = useRef(null);
 
-  const copyToClipboard = () => {
+  function listener(e) {
+    e.clipboardData.setData("text/html", tBodyRef.current.innerHTML);
+    e.clipboardData.setData("text/text", tBodyRef.current.innerText);
+    e.preventDefault();
+  }
+
+  const copyToClipboard = useCallback(() => {
     if (tBodyRef.current.innerText) {
-      function listener(e) {
-        e.clipboardData.setData("text/html", tBodyRef.current.innerHTML);
-        e.clipboardData.setData("text/text", tBodyRef.current.innerText);
-        e.preventDefault();
-      }
       document.addEventListener("copy", listener);
       document.execCommand("copy");
       document.removeEventListener("copy", listener);
       setAlertOpen(true);
     }
-  };
+  }, []);
 
   const closeAlert = (event, reason) => {
     if (reason === "clickaway") {
@@ -58,7 +62,7 @@ const TallyBar = () => {
         setPasted(false);
       }, 0);
     }
-  }, [pasted, tBodyRef, frequency]);
+  }, [pasted, tBodyRef, frequency, copyToClipboard]);
 
   return (
     <Card
@@ -98,7 +102,7 @@ const TallyBar = () => {
               zIndex: 1,
             }}
             value={frequency}
-            onPaste={(e) => {
+            onPaste={() => {
               setPasted(true);
             }}
             onChange={(e) => setFrequency(e.target.value)}
@@ -130,7 +134,7 @@ const TallyBar = () => {
                         {Array(Math.floor(freq / 5) || 0)
                           .fill(
                             <>
-                              <s>////</s>{" "}
+                              <s>{"////"}</s>{" "}
                             </>
                           )
                           .map((item, index) => (
