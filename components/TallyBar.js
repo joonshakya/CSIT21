@@ -34,7 +34,7 @@ const TallyBar = () => {
 
   function listener(e) {
     e.clipboardData.setData("text/html", tBodyRef.current.innerHTML);
-    e.clipboardData.setData("text/text", tBodyRef.current.innerText);
+    e.clipboardData.setData("text/plain", tBodyRef.current.innerText);
     e.preventDefault();
   }
 
@@ -111,6 +111,7 @@ const TallyBar = () => {
             onChange={(e) => {
               e.target.value = e.target.value
                 .replace(/[^0-9\n]/g, "")
+                .replace("\n\n", "\n")
                 .split("\n")
                 .map((line) => {
                   if (line.length > 3) {
