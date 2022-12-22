@@ -105,10 +105,22 @@ const TallyBar = () => {
             onPaste={() => {
               setPasted(true);
             }}
-            onFocus={(e) => {
-              e.target.select();
+            // onFocus={(e) => {
+            //   e.target.select();
+            // }}
+            onChange={(e) => {
+              e.target.value = e.target.value
+                .replace(/[^0-9\n]/g, "")
+                .split("\n")
+                .map((line) => {
+                  if (line.length > 3) {
+                    return line.slice(0, 3);
+                  }
+                  return line;
+                })
+                .join("\n");
+              setFrequency(e.target.value);
             }}
-            onChange={(e) => setFrequency(e.target.value)}
           />
           <Table
             size="small"
