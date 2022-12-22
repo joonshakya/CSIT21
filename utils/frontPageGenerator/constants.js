@@ -30,6 +30,10 @@ const constants = {
     {
       number: 3,
       name: "To understand concept of Pointer, Dynamic Memory Allocation",
+    },
+    {
+      number: 4,
+      name: "To understand the concept of Classes and Objects",
       selected: true,
     },
   ],

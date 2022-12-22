@@ -8,6 +8,7 @@ import Soon from "../components/Soon";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import OpCodeFinder from "../components/OpCodeFinder";
+import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
 export default function Index() {
   const theme = useTheme();
@@ -92,6 +93,15 @@ export default function Index() {
                         mx: "auto",
                       }}
                     >
+                      <TallyBar />
+                    </Grid>
+                    <Grid
+                      item
+                      sm={12}
+                      sx={{
+                        mx: "auto",
+                      }}
+                    >
                       <Soon />
                     </Grid>
                   </Grid>
@@ -110,6 +120,7 @@ export default function Index() {
                 }}
               >
                 <OpCodeFinder operate={!isDesktop} />
+                <TallyBar />
                 <Soon />
               </Grid>
             </Grid>
