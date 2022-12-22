@@ -105,6 +105,9 @@ const TallyBar = () => {
             onPaste={() => {
               setPasted(true);
             }}
+            onFocus={(e) => {
+              e.target.select();
+            }}
             onChange={(e) => setFrequency(e.target.value)}
           />
           <Table
