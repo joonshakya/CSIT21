@@ -11,11 +11,11 @@ const constants = {
     {
       number: 3,
       name: "Finding Cartesian Product of Multiple Sets",
-      selected: true,
     },
     {
       number: 4,
       name: "Implementing Encryption/Decryption of Alphabets",
+      selected: true,
     },
   ],
   oopAssignments: [
