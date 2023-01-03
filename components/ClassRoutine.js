@@ -24,7 +24,7 @@ export default function ClassRoutine() {
   const setOnlySection = useBaseStore((state) => state.setOnlySection);
 
   const [loading, setLoading] = useState(true);
-  const { routine } = constants;
+  const { classRoutine } = constants;
   const [todayDayName, setTodayDayName] = useState("");
   const [tomorrowDayName, setTomorrowDayName] = useState("");
 
@@ -213,16 +213,16 @@ export default function ClassRoutine() {
                   <TableBody>
                     {(!fullRoutine
                       ? [
-                          ...routine.filter(
+                          ...classRoutine.filter(
                             (row) =>
                               row.day === todayDayName ||
                               row.day === tomorrowDayName
                           ),
                           ...(todayDayName == "Fri" || todayDayName == "Sat"
-                            ? [routine[0]]
+                            ? [classRoutine[0]]
                             : []),
                         ]
-                      : routine
+                      : classRoutine
                     ).map((row) => (
                       <Fragment key={row.day}>
                         <TableRow

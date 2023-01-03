@@ -184,7 +184,7 @@ To construct Parallel In Parallel Out Shift Register.`,
       selected: true,
     },
   ],
-  routine: [
+  classRoutine: [
     {
       day: "Mon",
       a: [
@@ -209,7 +209,7 @@ To construct Parallel In Parallel Out Shift Register.`,
         // ["DS (Lab)", "416"],
         ["DS (Lab)", "Lab E"],
         ["Stat", "416"],
-        ["OOP", "416"],
+        ["OOP", "Lab B"],
       ],
       b: [
         ["DS", "419"],
@@ -268,6 +268,33 @@ To construct Parallel In Parallel Out Shift Register.`,
         ["DS", "419"],
         ["*", ""],
       ],
+    },
+  ],
+  examRoutine: [
+    {
+      day: "Wed",
+      subject: "DS",
+      date: new Date("2023-01-04"),
+    },
+    {
+      day: "Thu",
+      subject: "OOP",
+      date: new Date("2023-01-05"),
+    },
+    {
+      day: "Fri",
+      subject: "Maths II",
+      date: new Date("2023-01-06"),
+    },
+    {
+      day: "Mon",
+      subject: "MP",
+      date: new Date("2023-01-09"),
+    },
+    {
+      day: "Tue",
+      subject: "Stats I",
+      date: new Date("2023-01-10"),
     },
   ],
   names: {

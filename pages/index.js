@@ -10,6 +10,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import OpCodeFinder from "../components/OpCodeFinder";
 import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
+import ExamRoutine from "../components/ExamRoutine";
 export default function Index() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
@@ -64,6 +65,7 @@ export default function Index() {
                 }}
               >
                 <Sem2 />
+                <ExamRoutine />
                 <ClassRoutine />
               </Grid>
               <Grid item xs={12} sm={6} md={5}>
