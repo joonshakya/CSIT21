@@ -127,8 +127,12 @@ const Sem2 = () => {
                 link: "https://drive.google.com/drive/folders/1eypTAyhDoSx5CEZXsYnQtcaD_mur2udM?usp=sharing",
                 bgColor: "#6c55cb",
                 bgImage: "linear-gradient(43deg, #4158D0 0%, #C850C0 100%)",
-                // bgColor: "#FBAB7E",
-                // bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+              },
+              {
+                name: "SXC Old Qs",
+                link: "https://drive.google.com/drive/folders/13pQW9kwmIEDS1vgnrfAeigVyjhSP_dUR?usp=sharing",
+                bgColor: "#FBAB7E",
+                bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
               },
             ].map(({ name, link, bgColor, bgImage }, index) => (
               <GradientButton

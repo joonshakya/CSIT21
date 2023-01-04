@@ -11,6 +11,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Skeleton from "@mui/material/Skeleton";
+import { Button } from "@mui/material";
 
 export default function ExamRoutine() {
   const [loading, setLoading] = useState(true);
@@ -131,6 +132,9 @@ export default function ExamRoutine() {
                       <TableCell sx={tCellStyles} align="center">
                         Subject
                       </TableCell>
+                      <TableCell sx={tCellStyles} align="center">
+                        Old Qs
+                      </TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -167,6 +171,17 @@ export default function ExamRoutine() {
                           </TableCell>
                           <TableCell sx={tCellStyles} align="center">
                             {row.subject}
+                          </TableCell>
+                          <TableCell sx={tCellStyles} align="center">
+                            <Button
+                              color="primary"
+                              size="small"
+                              href={row.oldQ}
+                              target="_blank"
+                              rel="noreferrer noopener"
+                            >
+                              Batch 2020
+                            </Button>
                           </TableCell>
                         </TableRow>
                       </Fragment>
