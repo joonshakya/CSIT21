@@ -250,25 +250,29 @@ export default function FrontPageGenerator() {
               onChange={(event) => {
                 setSubject(event.target.value);
               }}
+              // sx={{
+              //   "& .MuiTabs-indicator": {
+              //     display: "none",
+              //   },
+              // }}
             >
               <Tabs
                 sx={{
                   minHeight: "36px",
                   display: "flex",
-                  mb: 1,
                   width: "100%",
                 }}
                 value={tab}
                 onChange={(event, newValue) => {
                   setTab(newValue);
                 }}
-                aria-label="wrapped label tabs example"
                 centered
               >
                 <Tab
                   sx={{
                     borderTopLeftRadius: "1rem",
                     display: "block",
+                    // backgroundColor: tab === "index" ? "#f3f4f9" : "#e1e4f0",
                     backgroundColor: "#f8f9fd",
                     minHeight: "36px",
                     color: "#697194",
@@ -282,6 +286,8 @@ export default function FrontPageGenerator() {
                     borderTopRightRadius: "1rem",
                     display: "block",
                     backgroundColor: "#f8f9fd",
+                    // backgroundColor:
+                    //   tab === "assignment" ? "#f3f4f9" : "#e1e4f0",
                     minHeight: "36px",
                     color: "#697194",
                   }}
@@ -292,67 +298,74 @@ export default function FrontPageGenerator() {
               </Tabs>
               <Box
                 sx={{
-                  mb: tab === "assignment" ? 1 : 0,
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "center",
+                  mx: "auto",
+                  px: 2,
+                  borderRadius: ".6rem",
+                  backgroundColor: "#f8f9fd",
+                  // backgroundColor: "#f3f4f9",
                 }}
               >
-                {(tab === "assignment"
-                  ? [
-                      {
-                        shortHand: "OOP",
-                        longHand: "OOP",
-                      },
-                      {
-                        shortHand: "DS",
-                        longHand: "DS",
-                      },
-                    ]
-                  : [
-                      {
-                        shortHand: "OOP Index",
-                        longHand: "OOP",
-                      },
-                      {
-                        shortHand: "DS Index",
-                        longHand: "DS",
-                      },
-                      {
-                        shortHand: "μP Index",
-                        longHand: "μP",
-                      },
-                    ]
-                ).map((subject, index) => (
-                  <FormControlLabel
-                    key={index}
-                    value={subject.shortHand}
-                    defaultChecked={index === 0}
-                    control={<Radio />}
-                    label={
-                      <>
-                        <Box
-                          sx={{
-                            py: 0.6,
-                          }}
-                        >
-                          {subject.longHand}
-                        </Box>
-                      </>
-                    }
-                  />
-                ))}
-              </Box>
-              <Box
-                sx={{
-                  mb: 1,
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "center",
-                }}
-              >
-                {(tab === "assignment"
-                  ? [
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
+                  {(tab === "assignment"
+                    ? [
+                        {
+                          shortHand: "OOP",
+                          longHand: "OOP",
+                        },
+                        {
+                          shortHand: "DS",
+                          longHand: "DS",
+                        },
+                      ]
+                    : [
+                        {
+                          shortHand: "OOP Index",
+                          longHand: "OOP",
+                        },
+                        {
+                          shortHand: "DS Index",
+                          longHand: "DS",
+                        },
+                        {
+                          shortHand: "μP Index",
+                          longHand: "μP",
+                        },
+                      ]
+                  ).map((subject, index) => (
+                    <FormControlLabel
+                      key={index}
+                      value={subject.shortHand}
+                      defaultChecked={index === 0}
+                      control={<Radio />}
+                      label={
+                        <>
+                          <Box
+                            sx={{
+                              py: 0.6,
+                            }}
+                          >
+                            {subject.longHand}
+                          </Box>
+                        </>
+                      }
+                    />
+                  ))}
+                </Box>
+                {tab === "assignment" ? (
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {[
                       {
                         shortHand: "DL",
                         longHand: "DL",
@@ -365,23 +378,24 @@ export default function FrontPageGenerator() {
                         shortHand: "FIT",
                         longHand: "FIT",
                       },
-                    ]
-                  : []
-                ).map((subject, index) => (
-                  <FormControlLabel
-                    key={index}
-                    value={subject.shortHand}
-                    defaultChecked={index === 0}
-                    control={<Radio />}
-                    label={subject.longHand}
-                  />
-                ))}
+                    ].map((subject, index) => (
+                      <FormControlLabel
+                        key={index}
+                        value={subject.shortHand}
+                        defaultChecked={index === 0}
+                        control={<Radio />}
+                        label={subject.longHand}
+                      />
+                    ))}
+                  </Box>
+                ) : null}
               </Box>
             </RadioGroup>
             {subject === "C" ? (
               <TextField
                 sx={{
                   my: 1,
+                  mt: 2,
                   width: "100%",
                 }}
                 name="assignmentNumber"
@@ -410,6 +424,7 @@ export default function FrontPageGenerator() {
                       fullWidth
                       sx={{
                         my: 1,
+                        mt: 2,
                       }}
                     >
                       <InputLabel>Assignment Name</InputLabel>

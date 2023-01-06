@@ -11,9 +11,11 @@ import OpCodeFinder from "../components/OpCodeFinder";
 import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
 import ExamRoutine from "../components/ExamRoutine";
+import CheckForUpdate from "../components/CheckForUpdate";
 export default function Index() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
     <>
       <Head>
@@ -129,6 +131,7 @@ export default function Index() {
           </Box>
         </Container>
         <Footer />
+        <CheckForUpdate />
       </Box>
     </>
   );

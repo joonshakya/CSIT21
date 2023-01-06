@@ -134,6 +134,12 @@ const Sem2 = () => {
                 bgColor: "#FBAB7E",
                 bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
               },
+              {
+                name: "SPSS 2022",
+                link: "https://drive.google.com/uc?export=download&id=1vc_TeosdUFqMUHqw0eD0t839NEUQxklt",
+                bgColor: "#72a0ce",
+                bgImage: "linear-gradient(120deg, #bcd8f0 0%, #4b83bc 100%)",
+              },
             ].map(({ name, link, bgColor, bgImage }, index) => (
               <GradientButton
                 key={index}
