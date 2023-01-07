@@ -91,7 +91,6 @@ const TallyBar = () => {
           }}
         >
           <TextField
-            id="outlined-textarea"
             label="Input Frequency (Eg: 20)"
             multiline
             sx={{

@@ -237,7 +237,6 @@ export default function FrontPageGenerator() {
               )}
             />
             <FormLabel
-              id="demo-row-radio-buttons-group-label"
               sx={{
                 fontSize: ".8rem",
               }}
