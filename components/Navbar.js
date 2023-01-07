@@ -19,7 +19,7 @@ const drawerWidth = 240;
 const navItems = [];
 
 function DrawerAppBar(props) {
-  const { window } = props;
+  const { window: _window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const [online, setOnline] = useState(
@@ -27,13 +27,14 @@ function DrawerAppBar(props) {
   );
 
   useEffect(() => {
-    window?.addEventListener("online", () => setOnline(true));
-    window?.addEventListener("offline", () => setOnline(false));
+    if (typeof window === "undefined") return;
+    window.addEventListener("online", () => setOnline(true));
+    window.addEventListener("offline", () => setOnline(false));
     return () => {
-      window?.removeEventListener("online", () => setOnline(true));
-      window?.removeEventListener("offline", () => setOnline(false));
+      window.removeEventListener("online", () => setOnline(true));
+      window.removeEventListener("offline", () => setOnline(false));
     };
-  }, [window]);
+  }, []);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -58,7 +59,7 @@ function DrawerAppBar(props) {
   );
 
   const container =
-    window !== undefined ? () => window().document.body : undefined;
+    _window !== undefined ? () => _window().document.body : undefined;
 
   return (
     <>
