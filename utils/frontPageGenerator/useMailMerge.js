@@ -1,6 +1,17 @@
 import Docxtemplater from "docxtemplater";
 import PizZip from "pizzip";
 import { saveAs } from "file-saver";
+
+function replaceErrors(key, value) {
+  if (value instanceof Error) {
+    return Object.getOwnPropertyNames(value).reduce(function (error, key) {
+      error[key] = value[key];
+      return error;
+    }, {});
+  }
+  return value;
+}
+
 export default function generateDocument(
   { content, data, outputName },
   setError,
@@ -17,15 +28,7 @@ export default function generateDocument(
     doc.render();
   } catch (error) {
     // The error thrown here contains additional information when logged with JSON.stringify (it contains a properties object containing all suberrors).
-    function replaceErrors(key, value) {
-      if (value instanceof Error) {
-        return Object.getOwnPropertyNames(value).reduce(function (error, key) {
-          error[key] = value[key];
-          return error;
-        }, {});
-      }
-      return value;
-    }
+
     console.error(JSON.stringify({ error: error }, replaceErrors));
 
     if (error.properties && error.properties.errors instanceof Array) {

@@ -20,6 +20,7 @@ export default function useFrontPageGenerator() {
       dsAssignments,
       oopAssignments,
     } = constants;
+
     setLoading(true);
     setError(null);
     if (roll === "0" || !roll) {
@@ -103,36 +104,43 @@ export async function prefetchDocument({ wordFiles, subject, roll, setLoad }) {
   const link = `/static/word-templates/${subject}.docx?${Date.now()}`;
 
   // console.log(`Downloading ${subject}`);
-  const response = await fetch(link);
-  if (!response.ok) {
+  try {
+    const response = await fetch(link);
+    if (!response.ok) {
+      return { error: "File downloading failed" };
+    }
+    const contentLength = response.headers.get("content-length");
+    const total = parseInt(contentLength, 10);
+    let loaded = 0;
+    const res = new Response(
+      new ReadableStream({
+        async start(controller) {
+          const reader = response.body.getReader();
+          for (let i = 0; ; i++) {
+            const { done, value } = await reader.read();
+            if (done) {
+              break;
+            }
+            loaded += value.byteLength;
+            if (setLoad) {
+              if (i % 50 === 0) {
+                useBaseStore.setState({
+                  wordFileLoaded: (loaded / total) * 100,
+                });
+              }
+            }
+            controller.enqueue(value);
+          }
+          controller.close();
+        },
+      })
+    );
+    content = await res.arrayBuffer();
+    // console.log(`Downloaded ${subject}`);
+    wordFiles.setWordFile({ subject, content });
+    return { content, error: false };
+  } catch (error) {
+    console.log(error);
     return { error: "File downloading failed" };
   }
-  const contentLength = response.headers.get("content-length");
-  const total = parseInt(contentLength, 10);
-  let loaded = 0;
-  const res = new Response(
-    new ReadableStream({
-      async start(controller) {
-        const reader = response.body.getReader();
-        for (let i = 0; ; i++) {
-          const { done, value } = await reader.read();
-          if (done) {
-            break;
-          }
-          if (setLoad) {
-            if (i % 50 === 0) {
-              loaded += value.byteLength;
-              useBaseStore.setState({ wordFileLoaded: (loaded / total) * 100 });
-            }
-          }
-          controller.enqueue(value);
-        }
-        controller.close();
-      },
-    })
-  );
-  content = await res.arrayBuffer();
-  // console.log(`Downloaded ${subject}`);
-  wordFiles.setWordFile({ subject, content });
-  return { content, error: false };
 }

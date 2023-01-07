@@ -23,7 +23,6 @@ const GradientButton = ({ name, link, bgColor, bgImage }) => (
       "&:hover": {
         boxShadow: `0 4px 24px 0 ${bgColor}`,
       },
-      backdropFilter: "blur( 4px )",
     }}
   >
     {name}

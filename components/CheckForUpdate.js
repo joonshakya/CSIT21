@@ -10,23 +10,19 @@ const Alert = forwardRef(function Alert(props, ref) {
 const CheckForUpdate = () => {
   const [open, setOpen] = useState(false);
 
-  const handleClick = () => {
-    setOpen(true);
-  };
-  const checkForUpdate = setInterval(() => {
+  const checkForUpdate = setInterval(async () => {
     if (typeof __NEXT_DATA__ !== "undefined") {
       const buildId = __NEXT_DATA__.buildId; // eslint-disable-line no-undef
       if (buildId === "development") return;
-      fetch(`/_next/static/${buildId}/_ssgManifest.js?v=${Date.now()}`).then(
-        (res) => {
-          if (res.status !== 200) {
-            handleClick();
-            setTimeout(() => {
-              window.location.reload();
-            }, 10000);
-          }
-        }
+      const res = await fetch(
+        `/_next/static/${buildId}/_ssgManifest.js?v=${Date.now()}`
       );
+      if (res.status === 404) {
+        setOpen(true);
+        setTimeout(() => {
+          window.location.reload();
+        }, 10000);
+      }
     }
   }, 60000);
 
@@ -47,7 +43,14 @@ const CheckForUpdate = () => {
   return (
     <>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
+        <Alert
+          onClose={handleClose}
+          severity="success"
+          sx={{
+            width: "100%",
+            m: "env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)",
+          }}
+        >
           A new version of the website is available. Refreshing in 10 seconds.
         </Alert>
       </Snackbar>

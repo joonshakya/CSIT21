@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -21,6 +21,19 @@ const navItems = [];
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const [online, setOnline] = useState(
+    typeof window === "undefined" || navigator.onLine
+  );
+
+  useEffect(() => {
+    window?.addEventListener("online", () => setOnline(true));
+    window?.addEventListener("offline", () => setOnline(false));
+    return () => {
+      window?.removeEventListener("online", () => setOnline(true));
+      window?.removeEventListener("offline", () => setOnline(false));
+    };
+  }, [window]);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -84,7 +97,7 @@ function DrawerAppBar(props) {
                 fontWeight: "bold",
               }}
             >
-              CSIT21
+              CSIT21 {online ? "" : "- Offline"}
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (

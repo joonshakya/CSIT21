@@ -139,7 +139,7 @@ export default function FrontPageGenerator() {
   useEffect(() => {
     setError(false);
     prefetchDocument({ wordFiles, subject, roll, setLoad: false });
-  }, [subject, roll, setError, wordFiles]);
+  }, [subject, roll, setError]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Card
@@ -487,17 +487,35 @@ export default function FrontPageGenerator() {
                 {error}
               </Typography>
             ) : loading ? (
-              <CircularProgress
-                aria-label="loading"
-                size={24}
-                variant="determinate"
-                value={wordFileLoaded}
+              <Box
                 sx={{
-                  mx: 2,
-                  opacity: loading ? 1 : 0,
-                  transition: "opacity 0.5s ease-in-out",
+                  position: "relative",
                 }}
-              />
+              >
+                <CircularProgress
+                  aria-label="loading"
+                  size={24}
+                  variant="determinate"
+                  value={100}
+                  sx={{
+                    position: "absolute",
+                    mx: 2,
+                    opacity: loading ? 0.25 : 0,
+                    transition: "opacity 0.5s ease-in-out",
+                  }}
+                />
+                <CircularProgress
+                  aria-label="loading"
+                  size={24}
+                  variant="determinate"
+                  value={wordFileLoaded}
+                  sx={{
+                    mx: 2,
+                    opacity: loading ? 1 : 0,
+                    transition: "opacity 0.5s ease-in-out",
+                  }}
+                />
+              </Box>
             ) : null}
           </CardActions>
         </FormControl>

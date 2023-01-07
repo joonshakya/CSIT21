@@ -183,7 +183,14 @@ const TallyBar = () => {
         </Button>
       </CardActions>
       <Snackbar open={alertOpen} autoHideDuration={3000} onClose={closeAlert}>
-        <Alert onClose={closeAlert} severity="success" sx={{ width: "100%" }}>
+        <Alert
+          onClose={closeAlert}
+          severity="success"
+          sx={{
+            width: "100%",
+            m: "env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)",
+          }}
+        >
           Tally Bars Copied to Clipboard
         </Alert>
       </Snackbar>
