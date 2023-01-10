@@ -3,7 +3,6 @@ import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Fragment, useEffect, useState } from "react";
-import constants from "../utils/frontPageGenerator/constants";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -13,9 +12,8 @@ import TableRow from "@mui/material/TableRow";
 import Skeleton from "@mui/material/Skeleton";
 import { Button } from "@mui/material";
 
-export default function ExamRoutine() {
+export default function ExamRoutine({ routine, subtitle, title }) {
   const [loading, setLoading] = useState(true);
-  const { examRoutine } = constants;
   const [todayDate, setTodayDate] = useState("");
   const [tomorrowDate, setTomorrowDate] = useState("");
 
@@ -65,10 +63,10 @@ export default function ExamRoutine() {
           }}
         >
           <Typography variant="h5" component="div">
-            Exam Routine
+            {title}
           </Typography>
           <Typography variant="body2" gutterBottom color="text.secondary">
-            Room: Section A: 203, Section B: 204
+            {subtitle}
           </Typography>
           {loading ? (
             <Box
@@ -138,8 +136,8 @@ export default function ExamRoutine() {
                     </TableRow>
                   </TableHead>
                   <TableBody>
-                    {examRoutine.map((row) => (
-                      <Fragment key={row.day}>
+                    {routine.map((exam) => (
+                      <Fragment key={exam.day}>
                         <TableRow
                           sx={{
                             "&:nth-of-type(even)": {
@@ -148,7 +146,7 @@ export default function ExamRoutine() {
                           }}
                         >
                           <TableCell sx={tCellStyles} align="center">
-                            {row.date.toDateString() ===
+                            {exam.date.toDateString() ===
                             todayDate.toDateString() ? (
                               <Typography
                                 sx={{
@@ -157,7 +155,7 @@ export default function ExamRoutine() {
                               >
                                 Today
                               </Typography>
-                            ) : row.date.toDateString() ===
+                            ) : exam.date.toDateString() ===
                               tomorrowDate.toDateString() ? (
                               <Typography
                                 sx={{
@@ -167,21 +165,27 @@ export default function ExamRoutine() {
                                 Tom.
                               </Typography>
                             ) : null}
-                            {row.day}
+                            {exam.day}
                           </TableCell>
                           <TableCell sx={tCellStyles} align="center">
-                            {row.subject}
+                            {exam.subject}
                           </TableCell>
                           <TableCell sx={tCellStyles} align="center">
-                            <Button
-                              color="primary"
-                              size="small"
-                              href={row.oldQ}
-                              target="_blank"
-                              rel="noreferrer noopener"
-                            >
-                              Batch 2020
-                            </Button>
+                            {exam.questions.map((question, index) => (
+                              <>
+                                <Button
+                                  key={index}
+                                  color="primary"
+                                  size="small"
+                                  href={question.link}
+                                  target="_blank"
+                                  rel="noreferrer noopener"
+                                >
+                                  Batch {question.batch}
+                                </Button>
+                                <br />
+                              </>
+                            ))}
                           </TableCell>
                         </TableRow>
                       </Fragment>

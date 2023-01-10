@@ -8,12 +8,10 @@ import {
 } from "@mui/material";
 import { useEffect } from "react";
 import { useRef } from "react";
-import constants from "../utils/frontPageGenerator/constants";
+import { opCodes } from "../utils/constants";
 import { useOpCodeStore } from "../src/store";
 
 const OpCodeFinder = ({ operate }) => {
-  const { opCodes } = constants;
-
   const {
     instruction,
     setInstruction,

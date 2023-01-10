@@ -1,5 +1,11 @@
 import generateDocument from "./useMailMerge";
-import constants from "./constants";
+import {
+  names,
+  dlAssignments,
+  fitAssignments,
+  dsAssignments,
+  oopAssignments,
+} from "../constants";
 import { useState } from "react";
 import { useBaseStore } from "../../src/store";
 
@@ -13,14 +19,6 @@ export default function useFrontPageGenerator() {
     assignmentName,
     wordFiles,
   }) => {
-    const {
-      names,
-      dlAssignments,
-      fitAssignments,
-      dsAssignments,
-      oopAssignments,
-    } = constants;
-
     setLoading(true);
     setError(null);
     if (roll === "0" || !roll) {
@@ -85,7 +83,6 @@ export default function useFrontPageGenerator() {
 export async function prefetchDocument({ wordFiles, subject, roll, setLoad }) {
   useBaseStore.setState({ wordFileLoaded: 0 });
 
-  const { names } = constants;
   if (subject === "DL") {
     if (roll === "0" || !roll) {
       return;

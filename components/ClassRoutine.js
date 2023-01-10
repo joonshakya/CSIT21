@@ -6,7 +6,7 @@ import { Fragment, useEffect, useState } from "react";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import constants from "../utils/frontPageGenerator/constants";
+import { classRoutine } from "../utils/constants";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -24,7 +24,6 @@ export default function ClassRoutine() {
   const setOnlySection = useBaseStore((state) => state.setOnlySection);
 
   const [loading, setLoading] = useState(true);
-  const { classRoutine } = constants;
   const [todayDayName, setTodayDayName] = useState("");
   const [tomorrowDayName, setTomorrowDayName] = useState("");
 

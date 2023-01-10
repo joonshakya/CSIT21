@@ -15,7 +15,13 @@ import { MenuItem, Tab, Tabs } from "@mui/material";
 import { useEffect, useState, useRef, useMemo } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import constants from "../utils/frontPageGenerator/constants";
+import {
+  names,
+  dlAssignments,
+  fitAssignments,
+  dsAssignments,
+  oopAssignments,
+} from "../utils/constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
 import { CircularProgress } from "@mui/material";
@@ -31,13 +37,6 @@ export default function FrontPageGenerator() {
   const [tab, setTab] = useState("assignment");
   const [subject, setSubject] = useState("OOP");
 
-  const {
-    names,
-    dlAssignments,
-    fitAssignments,
-    dsAssignments,
-    oopAssignments,
-  } = constants;
   const assignmentLists = useMemo(() => {
     return [
       {
@@ -87,7 +86,7 @@ export default function FrontPageGenerator() {
         ],
       },
     ];
-  }, [dlAssignments, fitAssignments, dsAssignments, oopAssignments]);
+  }, []);
 
   const [assignmentNumber, setAssignmentNumber] = useState(
     assignmentLists
