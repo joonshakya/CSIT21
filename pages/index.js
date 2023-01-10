@@ -10,12 +10,12 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import OpCodeFinder from "../components/OpCodeFinder";
 import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
-import ExamRoutine from "../components/ExamRoutine";
+// import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
-import {
-  midTermBatch2021Routine,
-  // preBoardsBatch2021Routine,
-} from "../utils/constants";
+// import {
+//   midTermBatch2021Routine,
+//   preBoardsBatch2021Routine,
+// } from "../utils/constants";
 export default function Index() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
@@ -76,11 +76,6 @@ export default function Index() {
                   title="Pre Boards Exam Routine"
                   subtitle="Room: Section A: 203, Section B: 204"
                 /> */}
-                <ExamRoutine
-                  routine={midTermBatch2021Routine}
-                  title="Mid Term Exam Routine"
-                  subtitle="Room: Section A: 203, Section B: 204"
-                />
                 <ClassRoutine />
               </Grid>
               <Grid item xs={12} sm={6} md={5}>
