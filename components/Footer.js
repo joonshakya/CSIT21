@@ -36,7 +36,7 @@ const Footer = () => {
             textAlign: "center",
           }}
         >
-          V0.2.1
+          V0.2.1 Beta
         </Typography>
       </Box>
     </Toolbar>
