@@ -9,28 +9,44 @@ const Alert = forwardRef(function Alert(props, ref) {
 
 const CheckForUpdate = () => {
   const [open, setOpen] = useState(false);
-
-  const checkForUpdate = setInterval(async () => {
-    if (typeof __NEXT_DATA__ !== "undefined") {
-      const buildId = __NEXT_DATA__.buildId; // eslint-disable-line no-undef
-      if (buildId === "development") return;
-      const res = await fetch(
-        `/_next/static/${buildId}/_ssgManifest.js?v=${Date.now()}`
-      );
-      if (res.status === 404) {
-        setOpen(true);
-        setTimeout(() => {
-          window.location.reload();
-        }, 10000);
-      }
-    }
-  }, 60000);
+  const [timeoutText, setTimeoutText] = useState(10);
 
   useEffect(() => {
+    const checkForUpdate = setInterval(async () => {
+      if (typeof __NEXT_DATA__ !== "undefined") {
+        const buildId = __NEXT_DATA__.buildId; // eslint-disable-line no-undef
+        if (buildId === "development") return;
+        const res = await fetch(
+          `/_next/static/${buildId}/_ssgManifest.js?v=${Date.now()}`
+        );
+        if (res.status === 404) {
+          setOpen(true);
+        }
+      }
+    }, 15000);
+
     return () => {
       clearInterval(checkForUpdate);
     };
-  }, [checkForUpdate]);
+  }, []);
+
+  useEffect(() => {
+    if (open) {
+      const timeout = setInterval(() => {
+        setTimeoutText((prev) => {
+          if (prev === 1) {
+            window.location.reload();
+          }
+          if (prev !== 0) {
+            return prev - 1;
+          }
+        });
+      }, 1000);
+      return () => {
+        clearInterval(timeout);
+      };
+    }
+  }, [open]);
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -42,7 +58,7 @@ const CheckForUpdate = () => {
 
   return (
     <>
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+      <Snackbar open={open} onClose={handleClose}>
         <Alert
           onClose={handleClose}
           severity="success"
@@ -51,7 +67,11 @@ const CheckForUpdate = () => {
             m: "env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)",
           }}
         >
-          A new version of the website is available. Refreshing in 10 seconds.
+          A new version of the website is available. Refreshing{" "}
+          {timeoutText !== 0
+            ? `in ${timeoutText} second${timeoutText > 1 ? "s" : ""}`
+            : "now"}
+          .
         </Alert>
       </Snackbar>
     </>
