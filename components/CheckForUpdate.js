@@ -1,5 +1,5 @@
 import { forwardRef, useEffect, useState } from "react";
-
+import { useRouter } from "next/router";
 import MuiAlert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 
@@ -10,6 +10,7 @@ const Alert = forwardRef(function Alert(props, ref) {
 const CheckForUpdate = () => {
   const [open, setOpen] = useState(false);
   const [timeoutText, setTimeoutText] = useState(10);
+  const router = useRouter();
 
   useEffect(() => {
     const checkForUpdate = setInterval(async () => {
@@ -35,7 +36,7 @@ const CheckForUpdate = () => {
       const timeout = setInterval(() => {
         setTimeoutText((prev) => {
           if (prev === 1) {
-            window.location.reload();
+            router.reload(window.location.pathname);
           }
           if (prev !== 0) {
             return prev - 1;
@@ -46,7 +47,7 @@ const CheckForUpdate = () => {
         clearInterval(timeout);
       };
     }
-  }, [open]);
+  }, [open, router]);
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
