@@ -76,7 +76,7 @@ const Sem2 = () => {
               },
               {
                 name: "Stats I",
-                link: "https://drive.google.com/drive/folders/1b6RLI0WL88wprctnlBwAge6gaXLW-VZW?usp=sharing",
+                link: "https://drive.google.com/drive/folders/1Ym1v7Aj3tX1rAL1CncO_-gxjTXjAfeML?usp=sharing",
                 bgColor: "#2d8968",
                 bgImage: "linear-gradient(42deg, #187a67 0%, #6ab26a 100%)",
               },
