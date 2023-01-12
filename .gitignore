@@ -25,3 +25,7 @@ yarn-error.log*
 # Next.js
 /.next
 out/
+
+# Joon commit hook
+commit.js
+outgit/
