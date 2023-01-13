@@ -1,4 +1,4 @@
-import create from "zustand";
+import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 export const useBaseStore = create(
@@ -26,7 +26,6 @@ export const useBaseStore = create(
     }),
     {
       name: "base-store",
-      getStorage: () => localStorage,
     }
   )
 );
