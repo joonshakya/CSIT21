@@ -37,8 +37,9 @@ const CheckForUpdate = () => {
         setTimeoutText((prev) => {
           if (prev === 1) {
             router.reload(window.location.pathname);
+            return 0;
           }
-          if (prev !== 0) {
+          if (prev > 1) {
             return prev - 1;
           }
         });
