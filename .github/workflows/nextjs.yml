@@ -1,0 +1,33 @@
+name: Deploy Next.js site to Pages
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Skip deploy
+        if: contains(github.event.head_commit.message, '[skip ci]')
+        run: exit 0
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Install dependencies
+        run: npm install
+      - name: Build with Next.js
+        run: npm run export
+      - name: Change into out directory
+        run: cd out
+      - name: Initialize git repository
+        run: git init
+      - name: Add remote
+        run: git remote add static-html https://<username>:${{ secrets.PAT }}@github.com/joonshakya/CSIT21-Next-Static.git
+      - name: Force push
+        run: git add . && git commit -m "Deploy" && git push static-html main --force
