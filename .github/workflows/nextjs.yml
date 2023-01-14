@@ -24,4 +24,4 @@ jobs:
       - name: Build with Next.js
         run: npm run export
       - name: Change into out directory and push to Static site
-        run: cd out && git init && git remote add static-html https://<username>:${{ secrets.PAT }}@github.com/joonshakya/CSIT21-Next-Static.git && git add . && git commit -m "Deploy" && git push static-html main --force
+        run: cd out && git init && git remote add static-html https://joonshakya:${{ secrets.PAT }}@github.com/joonshakya/CSIT21-Next-Static.git && git add . && git branch -M main && git commit -m "Deploy" && git push static-html main --force
