@@ -70,7 +70,7 @@ const CheckForUpdate = () => {
           }}
         >
           A new version of the website is available. Refreshing{" "}
-          {timeoutText !== 0
+          {timeoutText
             ? `in ${timeoutText} second${timeoutText > 1 ? "s" : ""}`
             : "now"}
           .
