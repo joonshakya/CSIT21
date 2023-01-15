@@ -35,13 +35,11 @@ const CheckForUpdate = () => {
     if (open) {
       const timeout = setInterval(() => {
         setTimeoutText((prev) => {
-          if (prev === 1) {
-            router.reload(window.location.pathname);
-            return 0;
-          }
           if (prev > 1) {
             return prev - 1;
           }
+          router.reload(window.location.pathname);
+          return 0;
         });
       }, 1000);
       return () => {
