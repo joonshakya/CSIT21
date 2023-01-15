@@ -33,6 +33,10 @@ export const oopAssignments = [
   {
     number: 4,
     name: "To understand the concept of Classes and Objects",
+  },
+  {
+    number: 5,
+    name: "To understand the concept of Inheritance",
     selected: true,
   },
 ];
