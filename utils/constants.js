@@ -704,7 +704,7 @@ export const opCodes = [
   },
   {
     label: "CMP M",
-    opCode: "BD",
+    opCode: "BE",
   },
   {
     label: "CNC Label",
