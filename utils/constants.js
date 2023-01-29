@@ -14,6 +14,10 @@ export const dsAssignments = [
   {
     number: 4,
     name: "Implementing Encryption/Decryption of Alphabets",
+  },
+  {
+    number: 5,
+    name: "Implementing Extended Euclidean Algorithm",
     selected: true,
   },
 ];
