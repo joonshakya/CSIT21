@@ -41,6 +41,10 @@ export const oopAssignments = [
   {
     number: 5,
     name: "To understand the concept of Inheritance",
+  },
+  {
+    number: 7,
+    name: "To understand the concept of Virtual Function and Polymorphism",
     selected: true,
   },
 ];
