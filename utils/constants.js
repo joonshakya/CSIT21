@@ -32,11 +32,11 @@ export const oopAssignments = [
   },
   {
     number: 3,
-    name: "To understand concept of Pointer, Dynamic Memory Allocation",
+    name: "To understand concepts of Pointer, Dynamic Memory Allocation",
   },
   {
     number: 4,
-    name: "To understand the concept of Classes and Objects",
+    name: "To understand the concepts of Classes and Objects",
   },
   {
     number: 5,
@@ -44,7 +44,7 @@ export const oopAssignments = [
   },
   {
     number: 7,
-    name: "To understand the concept of Virtual Function and Polymorphism",
+    name: "To understand the concepts of Virtual Function and Polymorphism",
     selected: true,
   },
 ];
