@@ -18,6 +18,26 @@ export const dsAssignments = [
   {
     number: 5,
     name: "Implementing Extended Euclidean Algorithm",
+  },
+  {
+    number: 6,
+    name: "Implementing Integer Arithmetics",
+  },
+  {
+    number: 7,
+    name: "Implementing Prime Number Checking",
+  },
+  {
+    number: 8,
+    name: "Random Integer Generation from a Range",
+  },
+  {
+    number: 9,
+    name: "Implementing Boolean Matrix Operations",
+  },
+  {
+    number: 10,
+    name: "Truth Table Generation",
     selected: true,
   },
 ];
