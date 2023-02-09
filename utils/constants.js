@@ -63,6 +63,10 @@ export const oopAssignments = [
     name: "To understand the concept of Inheritance",
   },
   {
+    number: 6,
+    name: "To understand the concept of Operator Overloading",
+  },
+  {
     number: 7,
     name: "To understand the concepts of Virtual Function and Polymorphism",
     selected: true,
@@ -236,17 +240,16 @@ export const classRoutine = [
     day: "Tue",
     // Totally wrong rooms
     a: [
-      // ["Math (RK)", "Lab E"],
-      ["Math (RK)", "416"],
-      // ["DS (Lab)", "416"],
+      // Temp was before: // ["Math (RK)", "416"],
+      ["DS", "318"],
       ["DS (Lab)", "Lab E"],
       ["Stat", "416"],
       ["OOP", "Lab B"],
     ],
     b: [
-      ["DS", "419"],
+      // Temp was before: // ["DS", "419"],
+      ["DS", "318"],
       ["Math (AMS)", "419"],
-      // ["MP", "Lab G"],
       ["MP", "419"],
       ["Stat", "Lab B"],
     ],
