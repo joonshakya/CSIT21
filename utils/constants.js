@@ -238,17 +238,14 @@ export const classRoutine = [
   },
   {
     day: "Tue",
-    // Totally wrong rooms
     a: [
-      // Temp was before: // ["Math (RK)", "416"],
-      ["DS", "318"],
+      ["Math (RK)", "416"],
       ["DS (Lab)", "Lab E"],
       ["Stat", "416"],
       ["OOP", "Lab B"],
     ],
     b: [
-      // Temp was before: // ["DS", "419"],
-      ["DS", "318"],
+      ["DS", "419"],
       ["Math (AMS)", "419"],
       ["MP", "419"],
       ["Stat", "Lab B"],
@@ -291,10 +288,9 @@ export const classRoutine = [
   {
     day: "Fri",
     a: [
-      // ["MP (Lab)", "Lab F"],
       ["MP (Lab)", "416"],
       ["Stat", "416"],
-      ["OOP", "416"],
+      ["OOP", "Lab F"],
       ["*", ""],
     ],
     b: [
@@ -497,33 +493,33 @@ export const midTermBatch2021Routine = [
 ];
 export const preBoardsBatch2021Routine = [
   {
-    day: "Wed",
+    day: "Mon",
     subject: "DS",
-    date: new Date("2023-01-04"),
+    date: new Date("2023-02-27"),
     questions: sem2Questions["SXC Pre Boards"]["DS"],
   },
   {
-    day: "Thu",
+    day: "Tue",
     subject: "OOP",
-    date: new Date("2023-01-05"),
+    date: new Date("2023-02-28"),
     questions: sem2Questions["SXC Pre Boards"]["OOP"],
   },
   {
-    day: "Fri",
-    subject: "Maths II",
-    date: new Date("2023-01-06"),
-    questions: sem2Questions["SXC Pre Boards"]["Maths II"],
-  },
-  {
-    day: "Mon",
+    day: "Wed",
     subject: "MP",
-    date: new Date("2023-01-09"),
+    date: new Date("2023-03-01"),
     questions: sem2Questions["SXC Pre Boards"]["MP"],
   },
   {
-    day: "Tue",
+    day: "Thu",
+    subject: "Maths II",
+    date: new Date("2023-03-02"),
+    questions: sem2Questions["SXC Pre Boards"]["Maths II"],
+  },
+  {
+    day: "Fri",
     subject: "Stats I",
-    date: new Date("2023-01-10"),
+    date: new Date("2023-03-03"),
     questions: sem2Questions["SXC Pre Boards"]["Stats I"],
   },
 ];
