@@ -69,6 +69,10 @@ export const oopAssignments = [
   {
     number: 7,
     name: "To understand the concepts of Virtual Function and Polymorphism",
+  },
+  {
+    number: 8,
+    name: "To understand the concept of Template, Exception Handling and File Handling",
     selected: true,
   },
 ];
