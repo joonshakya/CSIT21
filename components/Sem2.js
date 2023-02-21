@@ -122,7 +122,13 @@ const Sem2 = () => {
           >
             {[
               {
-                name: "Pratik Jung Karki",
+                name: (
+                  <>
+                    Pratik
+                    <br />
+                    Jung Karki
+                  </>
+                ),
                 link: "https://drive.google.com/drive/folders/1eypTAyhDoSx5CEZXsYnQtcaD_mur2udM?usp=sharing",
                 bgColor: "#6c55cb",
                 bgImage: "linear-gradient(43deg, #4158D0 0%, #C850C0 100%)",
@@ -138,6 +144,12 @@ const Sem2 = () => {
                 link: "https://drive.google.com/uc?export=download&id=1vc_TeosdUFqMUHqw0eD0t839NEUQxklt",
                 bgColor: "#72a0ce",
                 bgImage: "linear-gradient(120deg, #bcd8f0 0%, #4b83bc 100%)",
+              },
+              {
+                name: "DS PPT",
+                link: "https://drive.google.com/drive/folders/1hx7dQ0lO7Y-93sSc2L5tqDJerwPM0oP1?usp=sharing",
+                bgColor: "#55a3bf",
+                bgImage: "linear-gradient(62deg, #5682c4 0%, #52d0b8 100%)",
               },
             ].map(({ name, link, bgColor, bgImage }, index) => (
               <GradientButton
