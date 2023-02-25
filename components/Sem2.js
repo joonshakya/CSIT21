@@ -82,9 +82,15 @@ const Sem2 = () => {
               },
               {
                 name: "DS CSIT",
-                link: "https://drive.google.com/drive/folders/1e1wjlK7yvBb9I9Xna5N8zjuq6CVWnRnQ?usp=sharing",
+                link: "https://drive.google.com/drive/folders/1Zn4Bmxb8F9QT-GMHVOqKK9Y94vJGC7yc?usp=sharing",
                 bgColor: "#319ee3",
                 bgImage: "linear-gradient(175deg, #afdbff 0%, #2297df 100%)",
+              },
+              {
+                name: "MP CSIT",
+                link: "https://drive.google.com/file/d/1qSlG7t9-eghH7t4fphStuyT90TmNfJjW/view?usp=sharing",
+                bgColor: "#6eb944",
+                bgImage: "linear-gradient(175deg, #92de85 0%, #6bb843 100%)",
               },
               {
                 name: "DS Rosen",
