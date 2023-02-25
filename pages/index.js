@@ -70,7 +70,7 @@ export default function Index() {
                 <Sem2 />
                 <ExamRoutine
                   routine={preBoardsBatch2021Routine}
-                  title="Pre Boards Exam Routine (From 27th Feb)"
+                  title="Pre Boards Exam Routine"
                   // subtitle="Room: Section A: 103, Section B: 105"
                 />
                 <ClassRoutine />
