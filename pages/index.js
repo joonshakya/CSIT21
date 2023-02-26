@@ -71,7 +71,7 @@ export default function Index() {
                 <ExamRoutine
                   routine={preBoardsBatch2021Routine}
                   title="Pre Boards Exam Routine"
-                  // subtitle="Room: Section A: 103, Section B: 105"
+                  subtitle="Room: Section A: 104, Section B: 105"
                 />
                 <ClassRoutine />
               </Grid>
