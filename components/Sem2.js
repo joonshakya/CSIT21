@@ -130,6 +130,19 @@ const Sem2 = () => {
               {
                 name: (
                   <>
+                    Stats I
+                    <br />
+                    Ex. Copy
+                  </>
+                ),
+                link: "https://drive.google.com/file/d/1pnZHXIqFyYg-Nl07AlfshYKcQq91ug9M/view?usp=sharing",
+                bgColor: "#c39883",
+                bgImage:
+                  "linear-gradient(123deg, #eecc61 0%, #a86855 20%, #c9a38e 80%, #f4be38 100%)",
+              },
+              {
+                name: (
+                  <>
                     Pratik
                     <br />
                     Jung Karki
@@ -140,13 +153,19 @@ const Sem2 = () => {
                 bgImage: "linear-gradient(43deg, #4158D0 0%, #C850C0 100%)",
               },
               {
-                name: "SXC Old Qs",
+                name: (
+                  <>
+                    SXC
+                    <br />
+                    Old Qs
+                  </>
+                ),
                 link: "https://drive.google.com/drive/folders/13pQW9kwmIEDS1vgnrfAeigVyjhSP_dUR?usp=sharing",
                 bgColor: "#FBAB7E",
                 bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
               },
               {
-                name: "SPSS 2022",
+                name: "SPSS",
                 link: "https://drive.google.com/uc?export=download&id=1vc_TeosdUFqMUHqw0eD0t839NEUQxklt",
                 bgColor: "#72a0ce",
                 bgImage: "linear-gradient(120deg, #bcd8f0 0%, #4b83bc 100%)",
