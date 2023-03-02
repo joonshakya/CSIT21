@@ -362,7 +362,7 @@ export const sem2Questions = {
     "Maths II": [
       {
         batch: 2020,
-        link: "https://drive.google.com/file/d/1va_KRaJZhhny2lS4_rs1tW14HF5z7Hqb/view?usp=sharing",
+        link: "https://drive.google.com/file/d/1vOIAzTXv9ulxHNjvkVxs6D_jsfPlHxFf/view?usp=sharing",
       },
       // {
       //   batch: 2021,
@@ -402,7 +402,7 @@ export const sem2Questions = {
     "Stats I": [
       {
         batch: 2020,
-        link: "https://drive.google.com/file/d/1IKKhcks4CJKOJ8JMZ2ZWa9nUN64G99QA/view?usp=sharing",
+        link: "https://drive.google.com/file/d/19x68p_P1cyxjktaRR6CDmpKZqAkezjvX/view?usp=sharing",
       },
       // {
       //   batch: 2021,
