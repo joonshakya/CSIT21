@@ -12,7 +12,10 @@ import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
 import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
-import { preBoardsBatch2021Routine } from "../utils/constants";
+import {
+  preBoardsBatch2021Routine,
+  boardsBatch2021Routine,
+} from "../utils/constants";
 export default function Index() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
@@ -69,9 +72,10 @@ export default function Index() {
               >
                 <Sem2 />
                 <ExamRoutine
-                  routine={preBoardsBatch2021Routine}
-                  title="Pre Boards Exam Routine"
-                  subtitle="Room: Section A: 104, Section B: 105"
+                  // routine={preBoardsBatch2021Routine}
+                  routine={boardsBatch2021Routine}
+                  title="Boards Exam Routine"
+                  // subtitle="Room: Section A: 104, Section B: 105"
                 />
                 <ClassRoutine />
               </Grid>

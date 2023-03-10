@@ -527,6 +527,68 @@ export const preBoardsBatch2021Routine = [
     questions: sem2Questions["SXC Pre Boards"]["Stats I"],
   },
 ];
+export const boardsBatch2021Routine = [
+  {
+    day: "Mon",
+    subject: "DS",
+    date: new Date("2023-04-10"),
+    friendlyDate: (
+      <>
+        10<sup>th</sup> April
+        <br />
+        27<sup>th</sup> Chaitra
+      </>
+    ),
+    source: "https://www.tuiost.edu.np/storage/notice/csit-2-routine356.pdf",
+    sourceName: "TU Notice",
+  },
+  {
+    day: "Thu",
+    subject: "OOP",
+    date: new Date("2023-04-13"),
+    friendlyDate: (
+      <>
+        13<sup>th</sup> April
+        <br />
+        30<sup>th</sup> Chaitra
+      </>
+    ),
+  },
+  {
+    day: "Sun",
+    subject: "MP",
+    date: new Date("2023-04-16"),
+    friendlyDate: (
+      <>
+        16<sup>th</sup> April
+        <br />3<sup>rd</sup> Baishakh
+      </>
+    ),
+  },
+  {
+    day: "Wed",
+    subject: "Maths II",
+    date: new Date("2023-04-19"),
+    friendlyDate: (
+      <>
+        19<sup>th</sup> April
+        <br />6<sup>th</sup> Baishakh
+      </>
+    ),
+  },
+  {
+    day: "Sun",
+    subject: "Stats I",
+    date: new Date("2023-04-23"),
+    friendlyDate: (
+      <>
+        23<sup>rd</sup> April
+        <br />
+        10<sup>th</sup> Baishakh
+      </>
+    ),
+  },
+];
 export const names = {
   1: ["Aakash Shrestha", "021BSCIT001", "A"],
   2: ["Aayam Pokharel", "021BSCIT002", "A"],

@@ -10,7 +10,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Skeleton from "@mui/material/Skeleton";
-import { Button } from "@mui/material";
+import { Button, Link } from "@mui/material";
 
 export default function ExamRoutine({ routine, subtitle, title }) {
   const [loading, setLoading] = useState(true);
@@ -67,6 +67,18 @@ export default function ExamRoutine({ routine, subtitle, title }) {
           </Typography>
           <Typography variant="body2" gutterBottom color="text.secondary">
             {subtitle}
+            {routine[0].sourceName ? (
+              <>
+                Source:{" "}
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={routine[0].source}
+                >
+                  {routine[0].sourceName}
+                </Link>
+              </>
+            ) : null}
           </Typography>
           {loading ? (
             <Box
@@ -124,15 +136,22 @@ export default function ExamRoutine({ routine, subtitle, title }) {
                         },
                       }}
                     >
+                      {routine[0].friendlyDate ? (
+                        <TableCell sx={tCellStyles} align="center">
+                          Date
+                        </TableCell>
+                      ) : null}
                       <TableCell sx={tCellStyles} align="center">
                         Day
                       </TableCell>
                       <TableCell sx={tCellStyles} align="center">
                         Subject
                       </TableCell>
-                      <TableCell sx={tCellStyles} align="center">
-                        Old Qs
-                      </TableCell>
+                      {routine[0].questions ? (
+                        <TableCell sx={tCellStyles} align="center">
+                          Old Qs
+                        </TableCell>
+                      ) : null}
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -145,6 +164,12 @@ export default function ExamRoutine({ routine, subtitle, title }) {
                             },
                           }}
                         >
+                          {exam.friendlyDate ? (
+                            <TableCell sx={tCellStyles} align="center">
+                              {exam.friendlyDate}
+                            </TableCell>
+                          ) : null}
+
                           <TableCell sx={tCellStyles} align="center">
                             {exam.date.toDateString() ===
                             todayDate.toDateString() ? (
@@ -170,23 +195,25 @@ export default function ExamRoutine({ routine, subtitle, title }) {
                           <TableCell sx={tCellStyles} align="center">
                             {exam.subject}
                           </TableCell>
-                          <TableCell sx={tCellStyles} align="center">
-                            {exam.questions.map((question, index) => (
-                              <>
-                                <Button
-                                  key={index}
-                                  color="primary"
-                                  size="small"
-                                  href={question.link}
-                                  target="_blank"
-                                  rel="noreferrer noopener"
-                                >
-                                  Batch {question.batch}
-                                </Button>
-                                <br />
-                              </>
-                            ))}
-                          </TableCell>
+                          {exam.questions ? (
+                            <TableCell sx={tCellStyles} align="center">
+                              {exam.questions.map((question, index) => (
+                                <>
+                                  <Button
+                                    key={index}
+                                    color="primary"
+                                    size="small"
+                                    href={question.link}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                  >
+                                    Batch {question.batch}
+                                  </Button>
+                                  <br />
+                                </>
+                              ))}
+                            </TableCell>
+                          ) : null}
                         </TableRow>
                       </Fragment>
                     ))}
