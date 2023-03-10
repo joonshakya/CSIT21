@@ -12,10 +12,7 @@ import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
 import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
-import {
-  preBoardsBatch2021Routine,
-  boardsBatch2021Routine,
-} from "../utils/constants";
+import { boardsBatch2021Routine } from "../utils/constants";
 export default function Index() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
