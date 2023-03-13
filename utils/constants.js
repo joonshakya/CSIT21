@@ -21,7 +21,7 @@ export const dsAssignments = [
   },
   {
     number: 6,
-    name: "Implementing Integer Arithmetics",
+    name: "Implementing Integer Arithmetic",
   },
   {
     number: 7,
