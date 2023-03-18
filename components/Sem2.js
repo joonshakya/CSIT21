@@ -166,7 +166,7 @@ const Sem2 = () => {
               },
               {
                 name: "SPSS",
-                link: "https://drive.google.com/uc?export=download&id=1vc_TeosdUFqMUHqw0eD0t839NEUQxklt",
+                link: "https://youtu.be/h6mysceNFqg",
                 bgColor: "#72a0ce",
                 bgImage: "linear-gradient(120deg, #bcd8f0 0%, #4b83bc 100%)",
               },
