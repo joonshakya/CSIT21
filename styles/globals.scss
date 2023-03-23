@@ -1,0 +1,181 @@
+::-webkit-scrollbar {
+  width: 6px;
+  /* for vertical scrollbars */
+  height: 6px;
+  /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: #9b27b02f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9b27b079;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/static/fonts/Product Sans/ProductSans.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  font-style: normal;
+  font-weight: bold;
+  src: url("/static/fonts/Product Sans/ProductSans-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+// counter
+:root {
+  --blur: 0px;
+  --blur2: 6px;
+}
+.counter-text,
+.counter-number {
+  width: min-content;
+}
+.counter-days-0 .countdown-container {
+  filter: url(#days-0-threshold) blur(var(--blur));
+}
+.counter-days-1 .countdown-container {
+  filter: url(#days-1-threshold) blur(var(--blur));
+}
+.counter-days-text .countdown-container {
+  filter: url(#days-text-threshold) blur(var(--blur));
+}
+.counter-hours-0 .countdown-container {
+  filter: url(#hours-0-threshold) blur(var(--blur));
+}
+.counter-hours-1 .countdown-container {
+  filter: url(#hours-1-threshold) blur(var(--blur));
+}
+.counter-hours-text .countdown-container {
+  filter: url(#hours-text-threshold) blur(var(--blur));
+}
+.counter-minutes-0 .countdown-container {
+  filter: url(#minutes-0-threshold) blur(var(--blur));
+}
+.counter-minutes-1 .countdown-container {
+  filter: url(#minutes-1-threshold) blur(var(--blur));
+}
+.counter-minutes-text .countdown-container {
+  filter: url(#minutes-text-threshold) blur(var(--blur));
+}
+.counter-seconds-0 .countdown-container {
+  filter: url(#seconds-0-threshold) blur(var(--blur));
+}
+.counter-seconds-1 .countdown-container {
+  filter: url(#seconds-1-threshold) blur(var(--blur));
+}
+.counter-seconds-text .countdown-container {
+  filter: url(#seconds-text-threshold) blur(var(--blur));
+}
+/* .counter-days-text .countdown-container {
+  width: 1.5ch;
+}
+.counter-hours-text .countdown-container {
+  width: 1.5ch;
+}
+.counter-minutes-text .countdown-container {
+  width: 2ch;
+}
+.counter-seconds-text .countdown-container {
+  width: 4ch;
+} */
+
+.counter-days-text .countdown-container {
+  width: 2ch;
+}
+.counter-hours-text .countdown-container {
+  width: 2ch;
+}
+.counter-minutes-text .countdown-container {
+  width: 2ch;
+}
+.counter-seconds-text .countdown-container {
+  width: 6ch;
+}
+.countdown-container {
+  position: relative;
+  width: 1.05ch;
+  font-size: 36px;
+
+  .text1,
+  .text2 {
+    position: absolute;
+    color: var(--color-white);
+    font-weight: 700;
+    text-align: center;
+    user-select: none;
+  }
+  .text1 {
+    filter: blur(var(--blur2));
+    opacity: 0;
+  }
+  .text2 {
+    filter: blur(0px);
+    opacity: 1;
+  }
+
+  .text1.animate {
+    animation: text1-animate 0.75s ease;
+  }
+
+  .text2.animate {
+    animation: text2-animate 0.75s ease;
+  }
+}
+
+@keyframes text1-animate {
+  0% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(var(--blur2));
+    opacity: 0;
+  }
+}
+@keyframes text2-animate {
+  0% {
+    filter: blur(var(--blur2));
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --blur: 0px;
+    --blur2: 4px;
+  }
+  .countdown-container {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --blur: 0px;
+    --blur2: 4px;
+  }
+  .countdown-container {
+    font-size: 24px;
+  }
+}

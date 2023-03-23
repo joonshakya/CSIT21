@@ -11,6 +11,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Skeleton from "@mui/material/Skeleton";
 import { Button, Link } from "@mui/material";
+import Countdown from "./Countdown";
 
 export default function ExamRoutine({ routine, subtitle, title }) {
   const [loading, setLoading] = useState(true);
@@ -65,6 +66,15 @@ export default function ExamRoutine({ routine, subtitle, title }) {
           <Typography variant="h5" component="div">
             {title}
           </Typography>
+          <Box
+            sx={{
+              fontFamily: "Consolas, monospace, sans-serif",
+              fontWeight: "bold",
+              marginBottom: "-1rem",
+            }}
+          >
+            <Countdown />
+          </Box>
           <Typography variant="body2" gutterBottom color="text.secondary">
             {subtitle}
             {routine[0].sourceName ? (
@@ -156,7 +166,7 @@ export default function ExamRoutine({ routine, subtitle, title }) {
                   </TableHead>
                   <TableBody>
                     {routine.map((exam) => (
-                      <Fragment key={exam.day}>
+                      <Fragment key={exam.subject}>
                         <TableRow
                           sx={{
                             "&:nth-of-type(even)": {
