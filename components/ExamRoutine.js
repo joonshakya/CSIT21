@@ -66,15 +66,6 @@ export default function ExamRoutine({ routine, subtitle, title }) {
           <Typography variant="h5" component="div">
             {title}
           </Typography>
-          <Box
-            sx={{
-              fontFamily: "Consolas, monospace, sans-serif",
-              fontWeight: "bold",
-              marginBottom: "-1rem",
-            }}
-          >
-            <Countdown />
-          </Box>
           <Typography variant="body2" gutterBottom color="text.secondary">
             {subtitle}
             {routine[0].sourceName ? (
@@ -90,6 +81,15 @@ export default function ExamRoutine({ routine, subtitle, title }) {
               </>
             ) : null}
           </Typography>
+          <Box
+            sx={{
+              fontFamily: "Consolas, monospace, sans-serif",
+              fontWeight: "bold",
+              marginBottom: "-1rem",
+            }}
+          >
+            <Countdown />
+          </Box>
           {loading ? (
             <Box
               sx={{
