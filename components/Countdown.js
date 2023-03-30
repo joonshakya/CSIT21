@@ -78,7 +78,7 @@ export default function Countdown({ friendlyDate, hideTomorrow }) {
   const [hideDate, setHideDate] = useState(
     hideTomorrow ? new Date().setDate(new Date().getDate() + 1) : new Date()
   );
-  startDay.setMinutes(startDay.getMinutes());
+  startDay.setMinutes(startDay.getMinutes() + startDay.getTimezoneOffset());
 
   useEffect(() => {
     const interval = setInterval(() => {
