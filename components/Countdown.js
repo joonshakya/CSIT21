@@ -15,7 +15,7 @@ const divisions = [
   "seconds-text",
 ];
 
-function CountdoenText({ text1, index }) {
+function CountdoenText({ text1, index, startDay }) {
   const [date, setDate] = useState();
   const [prevDate, setPrevDate] = useState();
   const [textContent, setTextContent] = useState();
@@ -40,7 +40,6 @@ function CountdoenText({ text1, index }) {
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
-      const startDay = new Date(1681064100000);
       const diff = startDay.getTime() - now.getTime();
 
       setDate((date) => {
@@ -74,11 +73,31 @@ function CountdoenText({ text1, index }) {
   );
 }
 
-export default function Countdown() {
+export default function Countdown({ friendlyDate, hideTomorrow }) {
+  const startDay = new Date(friendlyDate);
+  const [hideDate, setHideDate] = useState(
+    hideTomorrow ? new Date().setDate(new Date().getDate() + 1) : new Date()
+  );
+  startDay.setMinutes(startDay.getMinutes());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHideDate(
+        hideTomorrow ? new Date().setDate(new Date().getDate() + 1) : new Date()
+      );
+    }, 60000);
+    return () => clearInterval(interval);
+  }, [hideTomorrow]);
+
+  if (startDay < hideDate) return null;
+
   return (
     <Box
       className="counter"
       sx={{
+        fontFamily: "Consolas, monospace, sans-serif",
+        fontWeight: "bold",
+        marginBottom: "-1rem",
         display: "flex",
         justifyContent: "center",
         flexWrap: "wrap",
@@ -92,8 +111,15 @@ export default function Countdown() {
           }`}
         >
           <div className="countdown-container">
-            <CountdoenText index={divisions.indexOf(unit)} text1 />
-            <CountdoenText index={divisions.indexOf(unit)} />
+            <CountdoenText
+              index={divisions.indexOf(unit)}
+              text1
+              startDay={startDay}
+            />
+            <CountdoenText
+              index={divisions.indexOf(unit)}
+              startDay={startDay}
+            />
           </div>
           <svg className="countdown-svg" viewBox="0 0 1920 1080">
             <filter id={`${unit}-threshold`}>

@@ -81,15 +81,7 @@ export default function ExamRoutine({ routine, subtitle, title }) {
               </>
             ) : null}
           </Typography>
-          <Box
-            sx={{
-              fontFamily: "Consolas, monospace, sans-serif",
-              fontWeight: "bold",
-              marginBottom: "-1rem",
-            }}
-          >
-            <Countdown />
-          </Box>
+          <Countdown friendlyDate={"2023-04-10"} hideTomorrow />
           {loading ? (
             <Box
               sx={{
