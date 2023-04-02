@@ -135,7 +135,7 @@ const Sem2 = () => {
                     Ex. Copy
                   </>
                 ),
-                link: "https://drive.google.com/file/d/1pnZHXIqFyYg-Nl07AlfshYKcQq91ug9M/view?usp=sharing",
+                link: "https://drive.google.com/drive/folders/1dlQeeP7dhB_upNMiiKEmXOL4nlPEMSGs?usp=sharing",
                 bgColor: "#c39883",
                 bgImage:
                   "linear-gradient(123deg, #eecc61 0%, #a86855 20%, #c9a38e 80%, #f4be38 100%)",
