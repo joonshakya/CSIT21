@@ -67,7 +67,12 @@ export default function ExamRoutine({ routine, subtitle, title }) {
             {title}
           </Typography>
           <Typography variant="body2" gutterBottom color="text.secondary">
-            {subtitle}
+            {subtitle ? (
+              <>
+                {subtitle}
+                <br />
+              </>
+            ) : null}
             {routine[0].sourceName ? (
               <>
                 Source:{" "}

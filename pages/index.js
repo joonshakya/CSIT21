@@ -72,7 +72,7 @@ export default function Index() {
                   // routine={preBoardsBatch2021Routine}
                   routine={boardsBatch2021Routine}
                   title="Boards Exam Routine"
-                  // subtitle="Room: Section A: 104, Section B: 105"
+                  subtitle="Exam time: 12:00 PM - 3:00 PM"
                 />
                 <ClassRoutine />
               </Grid>

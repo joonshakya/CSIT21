@@ -62,7 +62,7 @@ function CountdoenText({ text1, index, startDay }) {
       });
     }, 1000);
     return () => clearInterval(interval);
-  }, [index]);
+  }, [index, startDay]);
 
   return (
     <span
