@@ -577,14 +577,14 @@ export const boardsBatch2021Routine = [
     ),
   },
   {
-    day: "Sun",
+    day: "Thu",
     subject: "Stats I",
-    date: new Date("2023-04-23"),
+    date: new Date("2023-04-27"),
     friendlyDate: (
       <>
-        23<sup>rd</sup> April
+        27<sup>th</sup> April
         <br />
-        10<sup>th</sup> Baishakh
+        14<sup>th</sup> Baishakh
       </>
     ),
   },
