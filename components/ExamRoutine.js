@@ -13,7 +13,12 @@ import Skeleton from "@mui/material/Skeleton";
 import { Button, Link } from "@mui/material";
 import Countdown from "./Countdown";
 
-export default function ExamRoutine({ routine, subtitle, title }) {
+export default function ExamRoutine({
+  countdownDate,
+  routine,
+  subtitle,
+  title,
+}) {
   const [loading, setLoading] = useState(true);
   const [todayDate, setTodayDate] = useState("");
   const [tomorrowDate, setTomorrowDate] = useState("");
@@ -86,7 +91,7 @@ export default function ExamRoutine({ routine, subtitle, title }) {
               </>
             ) : null}
           </Typography>
-          <Countdown friendlyDate={"2023-04-10"} hideTomorrow />
+          <Countdown friendlyDate={countdownDate} hideTomorrow />
           {loading ? (
             <Box
               sx={{

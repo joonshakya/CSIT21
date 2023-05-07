@@ -12,7 +12,7 @@ import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
 import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
-import { boardsBatch2021Routine } from "../utils/constants";
+import { practicalBatch2021RoutineSem2 } from "../utils/constants";
 export default function Index() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
@@ -69,10 +69,11 @@ export default function Index() {
               >
                 <Sem2 />
                 <ExamRoutine
+                  countdownDate={"2023-05-16"}
                   // routine={preBoardsBatch2021Routine}
-                  routine={boardsBatch2021Routine}
-                  title="Boards Exam Routine"
-                  subtitle="Exam time: 12:00 PM - 3:00 PM"
+                  routine={practicalBatch2021RoutineSem2}
+                  title="Practical Exam Routine"
+                  subtitle="Exam time: 7:00 AM - 9:00 AM"
                 />
                 <ClassRoutine />
               </Grid>

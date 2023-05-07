@@ -463,7 +463,7 @@ export const sem2Questions = {
     ],
   },
 };
-export const midTermBatch2021Routine = [
+export const midTermBatch2021RoutineSem2 = [
   {
     day: "Wed",
     subject: "DS",
@@ -495,7 +495,7 @@ export const midTermBatch2021Routine = [
     questions: sem2Questions["SXC Mid Term"]["Stats I"],
   },
 ];
-export const preBoardsBatch2021Routine = [
+export const preBoardsBatch2021RoutineSem2 = [
   {
     day: "Mon",
     subject: "DS",
@@ -527,7 +527,7 @@ export const preBoardsBatch2021Routine = [
     questions: sem2Questions["SXC Pre Boards"]["Stats I"],
   },
 ];
-export const boardsBatch2021Routine = [
+export const boardsBatch2021RoutineSem2 = [
   {
     day: "Mon",
     subject: "DS",
@@ -589,6 +589,54 @@ export const boardsBatch2021Routine = [
     ),
   },
 ];
+
+export const practicalBatch2021RoutineSem2 = [
+  {
+    day: "Tue",
+    subject: "DS",
+    date: new Date("2023-05-16"),
+    friendlyDate: (
+      <>
+        16<sup>th</sup> May
+        <br />2<sup>nd</sup> Jestha
+      </>
+    ),
+  },
+  {
+    day: "Wed",
+    subject: "OOP",
+    date: new Date("2023-05-17"),
+    friendlyDate: (
+      <>
+        17<sup>th</sup> May
+        <br />3<sup>rd</sup> Jestha
+      </>
+    ),
+  },
+  {
+    day: "Thu",
+    subject: "MP",
+    date: new Date("2023-05-18"),
+    friendlyDate: (
+      <>
+        18<sup>th</sup> May
+        <br />4<sup>th</sup> Jestha
+      </>
+    ),
+  },
+  {
+    day: "Fri",
+    subject: "Stats I",
+    date: new Date("2023-05-19"),
+    friendlyDate: (
+      <>
+        19<sup>th</sup> May
+        <br />5<sup>th</sup> Jestha
+      </>
+    ),
+  },
+];
+
 export const names = {
   1: ["Aakash Shrestha", "021BSCIT001", "A"],
   2: ["Aayam Pokharel", "021BSCIT002", "A"],
