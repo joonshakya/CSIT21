@@ -10,9 +10,9 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import OpCodeFinder from "../components/OpCodeFinder";
 import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
-import ExamRoutine from "../components/ExamRoutine";
+// import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
-import { practicalBatch2021RoutineSem2 } from "../utils/constants";
+// import { practicalBatch2021RoutineSem2 } from "../utils/constants";
 export default function Index() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
