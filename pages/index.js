@@ -68,13 +68,13 @@ export default function Index() {
                 }}
               >
                 <Sem2 />
-                <ExamRoutine
+                {/* <ExamRoutine
                   countdownDate={"2023-05-16"}
                   // routine={preBoardsBatch2021Routine}
                   routine={practicalBatch2021RoutineSem2}
                   title="Practical Exam Routine"
                   subtitle="Exam time: 7:00 AM - 9:00 AM"
-                />
+                /> */}
                 <ClassRoutine />
               </Grid>
               <Grid item xs={12} sm={6} md={5}>
