@@ -38,6 +38,50 @@ export const dsAssignments = [
   {
     number: 10,
     name: "Truth Table Generation",
+  },
+  {
+    number: 11,
+    name: "Program for checking equivalence of two logical expression",
+  },
+  {
+    number: 12,
+    name: "Implementing recursive algorithm for Euclidean and extended Euclidean algorithm",
+  },
+  {
+    number: 13,
+    name: "Recursive program for generating n Fibonacci number",
+  },
+  {
+    number: 14,
+    name: "Recursive program for Tower of Hanoi problem",
+  },
+  {
+    number: 15,
+    name: "Program for generating permutation",
+  },
+  {
+    number: 16,
+    name: "Program for generating combination",
+  },
+  {
+    number: 17,
+    name: "Program for DFS graph traversal",
+  },
+  {
+    number: 18,
+    name: "Program for BFS graph traversal",
+  },
+  {
+    number: 19,
+    name: "Program for Prim's MST",
+  },
+  {
+    number: 20,
+    name: "Program for Kruskal's MST",
+  },
+  {
+    number: 21,
+    name: "Program for Dijkstra's shortest path algorithm",
     selected: true,
   },
 ];
