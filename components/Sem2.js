@@ -176,6 +176,18 @@ const Sem2 = () => {
                 bgColor: "#55a3bf",
                 bgImage: "linear-gradient(62deg, #5682c4 0%, #52d0b8 100%)",
               },
+              {
+                name: (
+                  <>
+                    Stats
+                    <br />
+                    Videos
+                  </>
+                ),
+                link: "https://www.youtube.com/watch?v=7yGljDNiofM&list=PLHiNd6FzL90J2t7KCFLG8EjuuInE8uI5N&index=1",
+                bgColor: "#e03b33",
+                bgImage: "linear-gradient(62deg, #ec4b4b 0%, #c91e07 100%)",
+              },
             ].map(({ name, link, bgColor, bgImage }, index) => (
               <GradientButton
                 key={index}
