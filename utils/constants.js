@@ -641,8 +641,8 @@ export const practicalBatch2021RoutineSem2 = [
     date: new Date("2023-05-22"),
     friendlyDate: (
       <>
-        22<sup>nd</sup> May
-        <br />8<sup>th</sup> Jestha
+        23<sup>nd</sup> May
+        <br />9<sup>th</sup> Jestha
       </>
     ),
   },
