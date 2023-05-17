@@ -637,45 +637,48 @@ export const boardsBatch2021RoutineSem2 = [
 export const practicalBatch2021RoutineSem2 = [
   {
     day: "Tue",
-    subject: "DS",
-    date: new Date("2023-05-16"),
+    subject: "MP",
+    date: new Date("2023-05-22"),
     friendlyDate: (
       <>
-        16<sup>th</sup> May
-        <br />2<sup>nd</sup> Jestha
-      </>
-    ),
-  },
-  {
-    day: "Wed",
-    subject: "OOP",
-    date: new Date("2023-05-17"),
-    friendlyDate: (
-      <>
-        17<sup>th</sup> May
-        <br />3<sup>rd</sup> Jestha
+        22<sup>nd</sup> May
+        <br />8<sup>th</sup> Jestha
       </>
     ),
   },
   {
     day: "Thu",
-    subject: "MP",
-    date: new Date("2023-05-18"),
+    subject: "DS",
+    date: new Date("2023-05-25"),
     friendlyDate: (
       <>
-        18<sup>th</sup> May
-        <br />4<sup>th</sup> Jestha
+        25<sup>th</sup> May
+        <br />
+        11<sup>th</sup> Jestha
       </>
     ),
   },
   {
     day: "Fri",
     subject: "Stats I",
-    date: new Date("2023-05-19"),
+    date: new Date("2023-05-26"),
     friendlyDate: (
       <>
-        19<sup>th</sup> May
-        <br />5<sup>th</sup> Jestha
+        26<sup>th</sup> May
+        <br />
+        12<sup>th</sup> Jestha
+      </>
+    ),
+  },
+  {
+    day: "Sun",
+    subject: "OOP",
+    date: new Date("2023-05-28"),
+    friendlyDate: (
+      <>
+        28<sup>th</sup> May
+        <br />
+        14<sup>th</sup> Jestha
       </>
     ),
   },
