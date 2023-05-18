@@ -57,11 +57,11 @@ export const dsAssignments = [
   },
   {
     number: 15,
-    name: "Program for generating permutation",
+    name: "Program for generating permutations",
   },
   {
     number: 16,
-    name: "Program for generating combination",
+    name: "Program for generating combinations",
   },
   {
     number: 17,
