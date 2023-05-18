@@ -41,7 +41,7 @@ export const dsAssignments = [
   },
   {
     number: 11,
-    name: "Program for checking equivalence of two logical expression",
+    name: "Program for checking equivalence of two logical expressions",
   },
   {
     number: 12,
@@ -49,7 +49,7 @@ export const dsAssignments = [
   },
   {
     number: 13,
-    name: "Recursive program for generating n Fibonacci number",
+    name: "Recursive program for generating n Fibonacci numbers",
   },
   {
     number: 14,
