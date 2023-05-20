@@ -69,7 +69,6 @@ export default function Index() {
               >
                 <Sem2 />
                 <ExamRoutine
-                  countdownDate={"2023-05-22"}
                   // routine={preBoardsBatch2021Routine}
                   routine={practicalBatch2021RoutineSem2}
                   title="Practical Exam Routine"
