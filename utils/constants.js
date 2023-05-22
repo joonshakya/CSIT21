@@ -647,7 +647,7 @@ export const practicalBatch2021RoutineSem2 = [
     ),
   },
   {
-    day: "Sun",
+    day: "Wed",
     subject: "OOP",
     date: new Date("2023-05-24"),
     friendlyDate: (
