@@ -188,6 +188,18 @@ const Sem2 = () => {
                 bgColor: "#e03b33",
                 bgImage: "linear-gradient(62deg, #ec4b4b 0%, #c91e07 100%)",
               },
+              {
+                name: (
+                  <>
+                    Stats
+                    <br />
+                    Lab
+                  </>
+                ),
+                link: "./files/JoonStatsLabV1.1.zip",
+                bgColor: "#348f5d",
+                bgImage: "linear-gradient(62deg, #217346 0%, #57c287 100%)",
+              },
             ].map(({ name, link, bgColor, bgImage }, index) => (
               <GradientButton
                 key={index}
