@@ -647,6 +647,18 @@ export const practicalBatch2021RoutineSem2 = [
     ),
   },
   {
+    day: "Sun",
+    subject: "OOP",
+    date: new Date("2023-05-24"),
+    friendlyDate: (
+      <>
+        24<sup>th</sup> May
+        <br />
+        10<sup>th</sup> Jestha
+      </>
+    ),
+  },
+  {
     day: "Thu",
     subject: "DS",
     date: new Date("2023-05-25"),
@@ -667,18 +679,6 @@ export const practicalBatch2021RoutineSem2 = [
         26<sup>th</sup> May
         <br />
         12<sup>th</sup> Jestha
-      </>
-    ),
-  },
-  {
-    day: "Sun",
-    subject: "OOP",
-    date: new Date("2023-05-28"),
-    friendlyDate: (
-      <>
-        28<sup>th</sup> May
-        <br />
-        14<sup>th</sup> Jestha
       </>
     ),
   },
