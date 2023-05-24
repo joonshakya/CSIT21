@@ -196,7 +196,7 @@ const Sem2 = () => {
                     Lab
                   </>
                 ),
-                link: "./files/JoonStatsLabV1.1.zip",
+                link: "./files/JoonStatsLabV1.2.zip",
                 bgColor: "#348f5d",
                 bgImage: "linear-gradient(62deg, #217346 0%, #57c287 100%)",
               },
