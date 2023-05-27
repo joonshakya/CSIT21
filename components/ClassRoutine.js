@@ -15,6 +15,46 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Skeleton from "@mui/material/Skeleton";
 import { useBaseStore } from "../src/store";
+import { Link } from "@mui/material";
+
+const tCellStyles = {
+  px: 1,
+  border: "1px solid #d7d7d7",
+};
+
+const RoutineTableCell = ({ sectionRoutine }) => {
+  sectionRoutine.forEach(([subject, room]) =>
+    console.log(subject.shortName, room)
+  );
+  return sectionRoutine.map(([subject, room], index) =>
+    subject.shortName ? (
+      <TableCell
+        component={Link}
+        align="center"
+        key={index}
+        href={subject.microSyllabus}
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{
+          ...tCellStyles,
+          textDecoration: "none",
+          transition: "all .1s",
+          "&:hover": {
+            backgroundColor: "#e3e3e3",
+          },
+        }}
+      >
+        {subject.shortName}
+        <br />
+        {room}
+      </TableCell>
+    ) : (
+      <TableCell key={index} sx={tCellStyles}>
+        ^
+      </TableCell>
+    )
+  );
+};
 
 export default function ClassRoutine() {
   const roll = useBaseStore((state) => state.roll);
@@ -64,13 +104,6 @@ export default function ClassRoutine() {
     return () => clearInterval(dateCheck);
   }, []);
 
-  const tCellStyles = {
-    px: 1,
-    border: "1px solid #d7d7d7",
-  };
-
-  const showRoom = true;
-
   return (
     <Card
       sx={{
@@ -99,7 +132,7 @@ export default function ClassRoutine() {
           }}
         >
           <Typography variant="h5" component="div">
-            Class Routine (Beta)
+            Class Routine
           </Typography>
           {loading ? (
             <Box
@@ -262,17 +295,7 @@ export default function ClassRoutine() {
                                   A
                                 </TableCell>
                               ) : null}
-                              {row.a.map(([period, room], index) => (
-                                <TableCell
-                                  sx={tCellStyles}
-                                  align="center"
-                                  key={index}
-                                >
-                                  {period.split(" (Lab)")[0]}
-                                  <br />
-                                  {showRoom ? room : null}
-                                </TableCell>
-                              ))}
+                              <RoutineTableCell sectionRoutine={row.a} />
                             </>
                           ) : null}
                         </TableRow>
@@ -290,17 +313,7 @@ export default function ClassRoutine() {
                                   B
                                 </TableCell>
                               ) : null}
-                              {row.b.map(([period, room], index) => (
-                                <TableCell
-                                  sx={tCellStyles}
-                                  align="center"
-                                  key={index}
-                                >
-                                  {period.split(" (Lab)")[0]}
-                                  <br />
-                                  {showRoom ? room : null}
-                                </TableCell>
-                              ))}
+                              <RoutineTableCell sectionRoutine={row.b} />
                             </>
                           ) : null}
                         </TableRow>

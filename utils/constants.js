@@ -268,6 +268,44 @@ export const fitAssignments = [
     selected: true,
   },
 ];
+export const sem3Subjects = {
+  NM: {
+    name: "Numerical Method",
+    shortName: "NM",
+    teacher: "Rabin Sir",
+    microSyllabus:
+      "https://drive.google.com/file/d/1sw9W10lpKWyNVCJIl_KezsoxdZh3GR0X/view?usp=sharing",
+  },
+  DSA: {
+    name: "Data Structure and Algorithm",
+    shortName: "DSA",
+    teacher: "Sudan Sir",
+    microSyllabus:
+      "https://drive.google.com/file/d/1xPyWp6Jdt6CvqECp-fv5cHVYE0O68tGZ/view?usp=sharing",
+  },
+  CA: {
+    name: "Computer Architecture",
+    shortName: "CA",
+    teacher: "Sarjan Sir",
+    microSyllabus:
+      "https://drive.google.com/file/d/1f-4nxi7B8sHv6a6FUI0gsXAe_3cHjfU1/view?usp=sharing",
+  },
+  CG: {
+    name: "Computer Graphics",
+    shortName: "CG",
+    teacher: "Bishnu Sir",
+    microSyllabus:
+      "https://drive.google.com/file/d/1E6rp8U-ILcdZrVyY8CXUJBns1M7bHDQN/view?usp=sharing",
+  },
+  Stat: {
+    name: "Statistics II",
+    shortName: "Stat",
+    teacher: "Pushpa Sir",
+    microSyllabus:
+      "https://drive.google.com/file/d/1D_6qw3_9KtpkeZtWQmRTI8ABGmVrkCdg/view?usp=sharing",
+  },
+};
+
 export const classRoutineSem2 = [
   {
     day: "Mon",
@@ -353,29 +391,29 @@ export const classRoutine = [
   {
     day: "Mon",
     a: [
-      ["CG", "315"],
-      ["NM", "315"],
+      [sem3Subjects.CG, "315"],
+      [sem3Subjects.NM, "315"],
       ["*", ""],
       ["*", ""],
     ],
     b: [
-      ["CA", "321"],
-      ["CG", "321"],
-      ["NM", "321"],
+      [sem3Subjects.CA, "321"],
+      [sem3Subjects.CG, "321"],
+      [sem3Subjects.NM, "321"],
       ["*", ""],
     ],
   },
   {
     day: "Tue",
     a: [
-      ["NM", "315"],
-      ["Stat", "315"],
-      ["CA", "315"],
-      ["DSA", "315"],
+      [sem3Subjects.NM, "315"],
+      [sem3Subjects.Stat, "315"],
+      [sem3Subjects.CA, "315"],
+      [sem3Subjects.DSA, "315"],
     ],
     b: [
-      ["CA", "321"],
-      ["CG", "321"],
+      [sem3Subjects.CA, "321"],
+      [sem3Subjects.CG, "321"],
       ["*", ""],
       ["*", ""],
     ],
@@ -383,46 +421,46 @@ export const classRoutine = [
   {
     day: "Wed",
     a: [
-      ["DSA", "315"],
-      ["Stat", "315"],
-      ["CA", "315"],
-      ["CG", "315"],
+      [sem3Subjects.DSA, "315"],
+      [sem3Subjects.Stat, "315"],
+      [sem3Subjects.CA, "315"],
+      [sem3Subjects.CG, "315"],
     ],
     b: [
-      ["DSA", "321"],
-      ["Stat", "321"],
-      ["NM", "321"],
+      [sem3Subjects.DSA, "321"],
+      [sem3Subjects.Stat, "321"],
+      [sem3Subjects.NM, "321"],
       ["*", ""],
     ],
   },
   {
     day: "Thu",
     a: [
-      ["NM", "315"],
-      ["Stat", "315"],
-      ["DSA", "315"],
+      [sem3Subjects.NM, "315"],
+      [sem3Subjects.Stat, "315"],
+      [sem3Subjects.DSA, "315"],
       ["*", ""],
     ],
     b: [
-      ["Stat", "321"],
-      ["NM", "321"],
-      ["Stat", "321"],
-      ["DSA", "321"],
+      [sem3Subjects.Stat, "321"],
+      [sem3Subjects.NM, "321"],
+      [sem3Subjects.Stat, "321"],
+      [sem3Subjects.DSA, "321"],
     ],
   },
   {
     day: "Fri",
     a: [
-      ["CA", "315"],
-      ["CG", "315"],
-      ["Stat", "315"],
+      [sem3Subjects.CA, "315"],
+      [sem3Subjects.CG, "315"],
+      [sem3Subjects.Stat, "315"],
       ["*", ""],
     ],
     b: [
-      ["Stat", "321"],
-      ["CA", "321"],
-      ["DSA", "321"],
-      ["CG", "321"],
+      [sem3Subjects.Stat, "321"],
+      [sem3Subjects.CA, "321"],
+      [sem3Subjects.DSA, "321"],
+      [sem3Subjects.CG, "321"],
     ],
   },
 ];
