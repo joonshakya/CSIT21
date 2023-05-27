@@ -268,7 +268,7 @@ export const fitAssignments = [
     selected: true,
   },
 ];
-export const classRoutine = [
+export const classRoutineSem2 = [
   {
     day: "Mon",
     a: [
@@ -346,6 +346,83 @@ export const classRoutine = [
       ["MP (Lab)", "419"],
       ["DS", "419"],
       ["*", ""],
+    ],
+  },
+];
+export const classRoutine = [
+  {
+    day: "Mon",
+    a: [
+      ["CG", ""],
+      ["NM", ""],
+      ["*", ""],
+      ["*", ""],
+    ],
+    b: [
+      ["CA", ""],
+      ["CG", ""],
+      ["NM", ""],
+      ["*", ""],
+    ],
+  },
+  {
+    day: "Tue",
+    a: [
+      ["NM", ""],
+      ["Stat", ""],
+      ["CA", ""],
+      ["DSA", ""],
+    ],
+    b: [
+      ["CA", ""],
+      ["CG", ""],
+      ["*", ""],
+      ["*", ""],
+    ],
+  },
+  {
+    day: "Wed",
+    a: [
+      ["DSA", ""],
+      ["Stat", ""],
+      ["CA", ""],
+      ["CG", ""],
+    ],
+    b: [
+      ["DSA", ""],
+      ["Stat", ""],
+      ["NM", ""],
+      ["*", ""],
+    ],
+  },
+  {
+    day: "Thu",
+    a: [
+      ["NM", ""],
+      ["Stat", ""],
+      ["DSA", ""],
+      ["*", ""],
+    ],
+    b: [
+      ["Stat", ""],
+      ["NM", ""],
+      ["Stat", ""],
+      ["DSA", ""],
+    ],
+  },
+  {
+    day: "Fri",
+    a: [
+      ["CA", ""],
+      ["CG", ""],
+      ["Stat", ""],
+      ["*", ""],
+    ],
+    b: [
+      ["Stat", ""],
+      ["CA", ""],
+      ["DSA", ""],
+      ["CG", ""],
     ],
   },
 ];
