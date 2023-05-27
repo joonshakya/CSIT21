@@ -49,7 +49,7 @@ const RoutineTableCell = ({ sectionRoutine }) => {
         {room}
       </TableCell>
     ) : (
-      <TableCell key={index} sx={tCellStyles}>
+      <TableCell align="center" key={index} sx={tCellStyles}>
         ^
       </TableCell>
     )
