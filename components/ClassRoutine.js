@@ -50,7 +50,7 @@ const RoutineTableCell = ({ sectionRoutine }) => {
       </TableCell>
     ) : (
       <TableCell align="center" key={index} sx={tCellStyles}>
-        ^
+        *
       </TableCell>
     )
   );
