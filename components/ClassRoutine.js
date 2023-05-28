@@ -22,11 +22,8 @@ const tCellStyles = {
   border: "1px solid #d7d7d7",
 };
 
-const RoutineTableCell = ({ sectionRoutine }) => {
-  sectionRoutine.forEach(([subject, room]) =>
-    console.log(subject.shortName, room)
-  );
-  return sectionRoutine.map(([subject, room], index) =>
+const RoutineTableCell = ({ sectionRoutine }) =>
+  sectionRoutine.map(([subject, room], index) =>
     subject.shortName ? (
       <TableCell
         component={Link}
@@ -54,7 +51,6 @@ const RoutineTableCell = ({ sectionRoutine }) => {
       </TableCell>
     )
   );
-};
 
 export default function ClassRoutine() {
   const roll = useBaseStore((state) => state.roll);
