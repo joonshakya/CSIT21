@@ -78,6 +78,7 @@ const Materials = () => {
                 setSem(event.target.value);
               }}
               sx={{
+                py: 1,
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "center",
