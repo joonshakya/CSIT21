@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import FrontPageGenerator from "../components/FrontPageGenerator";
 import Head from "next/head";
 import { Box, Container, Grid, Toolbar } from "@mui/material";
-import Sem2 from "../components/Sem2";
+import Materials from "../components/Materials";
 import Soon from "../components/Soon";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -67,7 +67,7 @@ export default function Index() {
                   mx: "auto",
                 }}
               >
-                <Sem2 />
+                <Materials />
                 {/* <ExamRoutine
                   // routine={preBoardsBatch2021Routine}
                   routine={practicalBatch2021RoutineSem2}

@@ -26,24 +26,34 @@ const RoutineTableCell = ({ sectionRoutine }) =>
   sectionRoutine.map(([subject, room], index) =>
     subject.shortName ? (
       <TableCell
-        component={Link}
-        align="center"
         key={index}
-        href={subject.microSyllabus}
-        target="_blank"
-        rel="noopener noreferrer"
         sx={{
           ...tCellStyles,
-          textDecoration: "none",
-          transition: "all .1s",
-          "&:hover": {
-            backgroundColor: "#e3e3e3",
-          },
+          p: 0,
         }}
       >
-        {subject.shortName}
-        <br />
-        {room}
+        <Link
+          align="center"
+          sx={{
+            p: 1,
+            color: "black",
+            height: "100%",
+            width: "100%",
+            display: "block",
+            textDecoration: "none",
+            transition: "all .1s",
+            "&:hover": {
+              backgroundColor: "#e3e3e3",
+            },
+          }}
+          href={subject.microSyllabus}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {subject.shortName}
+          <br />
+          {room}
+        </Link>
       </TableCell>
     ) : (
       <TableCell align="center" key={index} sx={tCellStyles}>
