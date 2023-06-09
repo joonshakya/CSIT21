@@ -472,6 +472,96 @@ export const sem3Subjects = {
   },
 };
 
+export const classRoutine = [
+  {
+    day: "Mon",
+    // a: [
+    //   [sem3Subjects.CG, "315"],
+    //   [sem3Subjects.NM, "315"],
+    //   ["*", ""],
+    //   ["*", ""],
+    // ],
+    a: [
+      [sem3Subjects.CA, "Maybe 318"],
+      [sem3Subjects.NM, "Maybe 318"],
+      ["*", ""],
+      ["*", ""],
+    ],
+    // b: [
+    //   [sem3Subjects.CA, "Lab D"],
+    //   [sem3Subjects.CG, "321"],
+    //   [sem3Subjects.NM, "321"],
+    //   ["*", ""],
+    // ],
+    b: [
+      [sem3Subjects.CA, "Maybe 318"],
+      [sem3Subjects.NM, "Maybe 318"],
+      ["*", ""],
+      ["*", ""],
+    ],
+  },
+  {
+    day: "Tue",
+    a: [
+      [sem3Subjects.NM, "Lab D"],
+      [sem3Subjects.Stat, "315"],
+      [sem3Subjects.CA, "315"],
+      [sem3Subjects.DSA, "Lab B"],
+    ],
+    b: [
+      [sem3Subjects.CA, "321"],
+      [sem3Subjects.CG, "321"],
+      ["*", ""],
+      ["*", ""],
+    ],
+  },
+  {
+    day: "Wed",
+    a: [
+      [sem3Subjects.DSA, "315"],
+      [sem3Subjects.Stat, "Lab D"],
+      [sem3Subjects.CA, "315"],
+      [sem3Subjects.CG, "Lab A"],
+    ],
+    b: [
+      [sem3Subjects.DSA, "321"],
+      [sem3Subjects.Stat, "Lab B"],
+      [sem3Subjects.NM, "Lab B"],
+      ["*", ""],
+    ],
+  },
+  {
+    day: "Thu",
+    a: [
+      [sem3Subjects.NM, "315"],
+      [sem3Subjects.Stat, "315"],
+      [sem3Subjects.DSA, "315"],
+      ["*", ""],
+    ],
+    b: [
+      [sem3Subjects.Stat, "321"],
+      [sem3Subjects.NM, "321"],
+      [sem3Subjects.Stat, "Lab B"],
+      [sem3Subjects.DSA, "Lab B"],
+    ],
+  },
+  {
+    day: "Fri",
+    a: [
+      [sem3Subjects.CA, "Lab C"],
+      [sem3Subjects.CG, "315"],
+      [sem3Subjects.Stat, "Lab D"],
+      ["*", ""],
+    ],
+    b: [
+      [sem3Subjects.Stat, "321"],
+      [sem3Subjects.CA, "321"],
+      [sem3Subjects.DSA, "321"],
+      [sem3Subjects.CG, "Lab B"],
+    ],
+  },
+];
+
 export const classRoutineSem2 = [
   {
     day: "Mon",
@@ -553,83 +643,7 @@ export const classRoutineSem2 = [
     ],
   },
 ];
-export const classRoutine = [
-  {
-    day: "Mon",
-    a: [
-      [sem3Subjects.CG, "315"],
-      [sem3Subjects.NM, "315"],
-      ["*", ""],
-      ["*", ""],
-    ],
-    b: [
-      [sem3Subjects.CA, "Lab D"],
-      [sem3Subjects.CG, "321"],
-      [sem3Subjects.NM, "321"],
-      ["*", ""],
-    ],
-  },
-  {
-    day: "Tue",
-    a: [
-      [sem3Subjects.NM, "Lab D"],
-      [sem3Subjects.Stat, "315"],
-      [sem3Subjects.CA, "315"],
-      [sem3Subjects.DSA, "Lab B"],
-    ],
-    b: [
-      [sem3Subjects.CA, "321"],
-      [sem3Subjects.CG, "321"],
-      ["*", ""],
-      ["*", ""],
-    ],
-  },
-  {
-    day: "Wed",
-    a: [
-      [sem3Subjects.DSA, "315"],
-      [sem3Subjects.Stat, "Lab D"],
-      [sem3Subjects.CA, "315"],
-      [sem3Subjects.CG, "Lab A"],
-    ],
-    b: [
-      [sem3Subjects.DSA, "321"],
-      [sem3Subjects.Stat, "Lab B"],
-      [sem3Subjects.NM, "Lab B"],
-      ["*", ""],
-    ],
-  },
-  {
-    day: "Thu",
-    a: [
-      [sem3Subjects.NM, "315"],
-      [sem3Subjects.Stat, "315"],
-      [sem3Subjects.DSA, "315"],
-      ["*", ""],
-    ],
-    b: [
-      [sem3Subjects.Stat, "321"],
-      [sem3Subjects.NM, "321"],
-      [sem3Subjects.Stat, "Lab B"],
-      [sem3Subjects.DSA, "Lab B"],
-    ],
-  },
-  {
-    day: "Fri",
-    a: [
-      [sem3Subjects.CA, "Lab C"],
-      [sem3Subjects.CG, "315"],
-      [sem3Subjects.Stat, "Lab D"],
-      ["*", ""],
-    ],
-    b: [
-      [sem3Subjects.Stat, "321"],
-      [sem3Subjects.CA, "321"],
-      [sem3Subjects.DSA, "321"],
-      [sem3Subjects.CG, "Lab B"],
-    ],
-  },
-];
+
 export const sem2Questions = {
   "SXC Mid Term": {
     "Maths II": [
