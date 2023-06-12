@@ -475,28 +475,16 @@ export const sem3Subjects = {
 export const classRoutine = [
   {
     day: "Mon",
-    // a: [
-    //   [sem3Subjects.CG, "315"],
-    //   [sem3Subjects.NM, "315"],
-    //   ["*", ""],
-    //   ["*", ""],
-    // ],
     a: [
-      [sem3Subjects.CA, "Maybe 318"],
-      [sem3Subjects.NM, "Maybe 318"],
+      [sem3Subjects.CG, "315"],
+      [sem3Subjects.NM, "315"],
       ["*", ""],
       ["*", ""],
     ],
-    // b: [
-    //   [sem3Subjects.CA, "Lab D"],
-    //   [sem3Subjects.CG, "321"],
-    //   [sem3Subjects.NM, "321"],
-    //   ["*", ""],
-    // ],
     b: [
-      [sem3Subjects.CA, "Maybe 318"],
-      [sem3Subjects.NM, "Maybe 318"],
-      ["*", ""],
+      [sem3Subjects.CA, "Lab D"],
+      [sem3Subjects.CG, "321"],
+      [sem3Subjects.NM, "321"],
       ["*", ""],
     ],
   },
