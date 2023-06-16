@@ -535,16 +535,10 @@ export const classRoutine = [
   },
   {
     day: "Fri",
-    // a: [
-    //   [sem3Subjects.CA, "Lab C"],
-    //   [sem3Subjects.CG, "315"],
-    //   [sem3Subjects.Stat, "Lab D"],
-    //   ["*", ""],
-    // ],
     a: [
-      [sem3Subjects.Stat, "315"],
+      [sem3Subjects.CA, "Lab C"],
       [sem3Subjects.CG, "315"],
-      ["*", ""],
+      [sem3Subjects.Stat, "Lab D"],
       ["*", ""],
     ],
     b: [
