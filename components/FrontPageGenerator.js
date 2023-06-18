@@ -35,7 +35,7 @@ export default function FrontPageGenerator() {
   const wordFileLoaded = useBaseStore((state) => state.wordFileLoaded);
 
   const [tab, setTab] = useState("assignment");
-  const [subject, setSubject] = useState("OOP");
+  const [subject, setSubject] = useState("DSA");
 
   const assignmentLists = useMemo(() => {
     return [
@@ -85,6 +85,15 @@ export default function FrontPageGenerator() {
           },
         ],
       },
+      {
+        subject: "DSA",
+        assignments: [
+          {
+            number: 1,
+            selected: true,
+          },
+        ],
+      },
     ];
   }, []);
 
@@ -96,19 +105,14 @@ export default function FrontPageGenerator() {
 
   useEffect(() => {
     if (tab === "assignment") {
-      setSubject("OOP");
+      setSubject("DSA");
     } else if (tab === "index") {
       setSubject("OOP Index");
     }
   }, [tab]);
 
   useEffect(() => {
-    if (
-      subject === "DL" ||
-      subject === "FIT" ||
-      subject === "DS" ||
-      subject === "OOP"
-    ) {
+    if (["DL", "FIT", "DS", "OOP"].includes(subject)) {
       assignmentLists.forEach((entry) => {
         if (entry.subject === subject) {
           setAssignmentNumber(
@@ -116,7 +120,7 @@ export default function FrontPageGenerator() {
           );
         }
       });
-    } else if (subject === "C") {
+    } else if (["C", "DSA"].includes(subject)) {
       setAssignmentNumber(
         assignmentLists
           .find((entry) => entry.subject === subject)
@@ -313,6 +317,31 @@ export default function FrontPageGenerator() {
                   {(tab === "assignment"
                     ? [
                         {
+                          shortHand: "DSA",
+                          longHand: "DSA",
+                        },
+                      ]
+                    : []
+                  ).map((subject, index) => (
+                    <FormControlLabel
+                      key={index}
+                      value={subject.shortHand}
+                      defaultChecked={index === 0}
+                      control={<Radio />}
+                      label={subject.longHand}
+                    />
+                  ))}
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
+                  {(tab === "assignment"
+                    ? [
+                        {
                           shortHand: "OOP",
                           longHand: "OOP",
                         },
@@ -355,41 +384,42 @@ export default function FrontPageGenerator() {
                     />
                   ))}
                 </Box>
-                {tab === "assignment" ? (
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexWrap: "wrap",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {[
-                      {
-                        shortHand: "DL",
-                        longHand: "DL",
-                      },
-                      {
-                        shortHand: "C",
-                        longHand: "C",
-                      },
-                      {
-                        shortHand: "FIT",
-                        longHand: "FIT",
-                      },
-                    ].map((subject, index) => (
-                      <FormControlLabel
-                        key={index}
-                        value={subject.shortHand}
-                        defaultChecked={index === 0}
-                        control={<Radio />}
-                        label={subject.longHand}
-                      />
-                    ))}
-                  </Box>
-                ) : null}
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
+                  {(tab === "assignment"
+                    ? [
+                        {
+                          shortHand: "DL",
+                          longHand: "DL",
+                        },
+                        {
+                          shortHand: "C",
+                          longHand: "C",
+                        },
+                        {
+                          shortHand: "FIT",
+                          longHand: "FIT",
+                        },
+                      ]
+                    : []
+                  ).map((subject, index) => (
+                    <FormControlLabel
+                      key={index}
+                      value={subject.shortHand}
+                      defaultChecked={index === 0}
+                      control={<Radio />}
+                      label={subject.longHand}
+                    />
+                  ))}
+                </Box>
               </Box>
             </RadioGroup>
-            {subject === "C" ? (
+            {["C", "DSA"].includes(subject) ? (
               <TextField
                 sx={{
                   my: 1,
@@ -411,10 +441,7 @@ export default function FrontPageGenerator() {
                   event.target.blur();
                 }}
               />
-            ) : subject === "DL" ||
-              subject == "FIT" ||
-              subject == "DS" ||
-              subject == "OOP" ? (
+            ) : ["DL", "OOP", "DS", "FIT"].includes(subject) ? (
               assignmentLists.map((entry, index) => (
                 <Box key={index}>
                   {entry.subject === subject ? (
