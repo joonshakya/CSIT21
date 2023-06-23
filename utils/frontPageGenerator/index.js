@@ -5,6 +5,7 @@ import {
   fitAssignments,
   dsAssignments,
   oopAssignments,
+  caAssignments,
 } from "../constants";
 import { useState } from "react";
 import { useBaseStore } from "../../src/store";
@@ -37,20 +38,17 @@ export default function useFrontPageGenerator() {
     } else {
       setError(null);
     }
-    if (subject === "DL") {
-      assignmentName = dlAssignments.find(
-        (assignment) => assignment.number === assignmentNumber
-      ).name;
-    } else if (subject === "FIT") {
-      assignmentName = fitAssignments.find(
-        (assignment) => assignment.number === assignmentNumber
-      ).name;
-    } else if (subject === "DS") {
-      assignmentName = dsAssignments.find(
-        (assignment) => assignment.number === assignmentNumber
-      ).name;
-    } else if (subject === "OOP") {
-      assignmentName = oopAssignments.find(
+
+    const assignmentMap = {
+      DL: dlAssignments,
+      FIT: fitAssignments,
+      DS: dsAssignments,
+      OOP: oopAssignments,
+      CA: caAssignments,
+    };
+
+    if (Object.prototype.hasOwnProperty.call(assignmentMap, subject)) {
+      assignmentName = assignmentMap[subject].find(
         (assignment) => assignment.number === assignmentNumber
       ).name;
     }

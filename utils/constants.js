@@ -164,6 +164,15 @@ export const materials = {
     ],
   },
 };
+
+export const caAssignments = [
+  {
+    number: 1,
+    name: "Familiarization with VHDL programming",
+    selected: true,
+  },
+];
+
 export const dsAssignments = [
   {
     number: 1,

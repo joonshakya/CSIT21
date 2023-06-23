@@ -21,6 +21,7 @@ import {
   fitAssignments,
   dsAssignments,
   oopAssignments,
+  caAssignments,
 } from "../utils/constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
@@ -34,8 +35,10 @@ export default function FrontPageGenerator() {
   const setRoll = useBaseStore((state) => state.setRoll);
   const wordFileLoaded = useBaseStore((state) => state.wordFileLoaded);
 
+  const initialSubject = "CA";
+
   const [tab, setTab] = useState("assignment");
-  const [subject, setSubject] = useState("DSA");
+  const [subject, setSubject] = useState(initialSubject);
 
   const assignmentLists = useMemo(() => {
     return [
@@ -51,6 +54,10 @@ export default function FrontPageGenerator() {
       {
         subject: "OOP",
         assignments: oopAssignments,
+      },
+      {
+        subject: "CA",
+        assignments: caAssignments,
       },
       {
         subject: "DS Index",
@@ -105,14 +112,14 @@ export default function FrontPageGenerator() {
 
   useEffect(() => {
     if (tab === "assignment") {
-      setSubject("DSA");
+      setSubject(initialSubject);
     } else if (tab === "index") {
       setSubject("OOP Index");
     }
   }, [tab]);
 
   useEffect(() => {
-    if (["DL", "FIT", "DS", "OOP"].includes(subject)) {
+    if (["DL", "FIT", "DS", "OOP", "CA"].includes(subject)) {
       assignmentLists.forEach((entry) => {
         if (entry.subject === subject) {
           setAssignmentNumber(
@@ -317,6 +324,10 @@ export default function FrontPageGenerator() {
                   {(tab === "assignment"
                     ? [
                         {
+                          shortHand: "CA",
+                          longHand: "CA",
+                        },
+                        {
                           shortHand: "DSA",
                           longHand: "DSA",
                         },
@@ -441,7 +452,7 @@ export default function FrontPageGenerator() {
                   event.target.blur();
                 }}
               />
-            ) : ["DL", "OOP", "DS", "FIT"].includes(subject) ? (
+            ) : ["DL", "OOP", "DS", "FIT", "CA"].includes(subject) ? (
               assignmentLists.map((entry, index) => (
                 <Box key={index}>
                   {entry.subject === subject ? (

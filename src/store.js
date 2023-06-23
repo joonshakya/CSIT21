@@ -56,10 +56,11 @@ export const useWordStore = create((set) => ({
   "DL Section B": null,
   FIT: null,
   C: null,
-  DSA: null,
   Index: null,
   DS: null,
   OOP: null,
+  DSA: null,
+  CA: null,
   setWordFile: ({ subject, content }) => {
     set(() => ({
       [subject]: content,
