@@ -37,12 +37,24 @@ export const materials = {
       {
         name: (
           <>
+            VHDL
+            <br />
+            Sonata
+          </>
+        ),
+        link: "https://drive.google.com/uc?export=download&id=1GPOcerrOkep_hKDgzyqs5GPryiY1UBXs",
+        bgColor: "#2938a4",
+        bgImage: "linear-gradient(160deg, #0000ff 0%, #00ff00 100%)",
+      },
+      {
+        name: (
+          <>
             DevC++ with
             <br />
             graphics.h
           </>
         ),
-        link: "https://youtu.be/tt1fmMwLcRo",
+        link: "https://drive.google.com/uc?export=download&id=1e4QYYMn_IL2RqC4EtZCWN7nEyo0nk6HE",
         bgColor: "#2938a4",
         bgImage: "linear-gradient(180deg, #3c3d7b 0%, #032ef5 100%)",
       },
@@ -487,8 +499,8 @@ export const classRoutine = [
     a: [
       [sem3Subjects.CG, "315"],
       [sem3Subjects.NM, "315"],
-      ["*", ""],
-      ["*", ""],
+      [sem3Subjects.DSA, ""],
+      [("*", "")],
     ],
     b: [
       [sem3Subjects.CA, "Lab D"],
