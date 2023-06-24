@@ -43,7 +43,7 @@ export const materials = {
           </>
         ),
         link: "https://drive.google.com/uc?export=download&id=1GPOcerrOkep_hKDgzyqs5GPryiY1UBXs",
-        bgColor: "#2938a4",
+        bgColor: "#00ba45",
         bgImage: "linear-gradient(160deg, #0000ff 0%, #00ff00 100%)",
       },
       {
