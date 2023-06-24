@@ -54,7 +54,7 @@ export const materials = {
             graphics.h
           </>
         ),
-        link: "https://drive.google.com/uc?export=download&id=1e4QYYMn_IL2RqC4EtZCWN7nEyo0nk6HE",
+        link: "https://drive.google.com/drive/folders/15-Ndr2OqZcldTR97tfnDxRDTIcesDDh5?usp=sharing",
         bgColor: "#2938a4",
         bgImage: "linear-gradient(180deg, #3c3d7b 0%, #032ef5 100%)",
       },
