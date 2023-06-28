@@ -6,6 +6,7 @@ import {
   dsAssignments,
   oopAssignments,
   caAssignments,
+  nmAssignments,
 } from "../constants";
 import { useState } from "react";
 import { useBaseStore } from "../../src/store";
@@ -45,6 +46,7 @@ export default function useFrontPageGenerator() {
       DS: dsAssignments,
       OOP: oopAssignments,
       CA: caAssignments,
+      NM: nmAssignments,
     };
 
     if (Object.prototype.hasOwnProperty.call(assignmentMap, subject)) {
@@ -86,7 +88,7 @@ export async function prefetchDocument({ wordFiles, subject, roll, setLoad }) {
       return;
     }
     subject = names[roll][2] == "A" ? "DL Section A" : "DL Section B";
-  } else if (subject.includes("Index")) {
+  } else if (subject !== "CG Index" && subject.includes("Index")) {
     subject = "Index";
   }
 

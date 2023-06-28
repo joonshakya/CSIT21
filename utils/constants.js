@@ -189,6 +189,14 @@ export const materials = {
   },
 };
 
+export const nmAssignments = [
+  {
+    number: 1,
+    name: "To find the solution of nonlinear equations",
+    selected: true,
+  },
+];
+
 export const caAssignments = [
   {
     number: 1,

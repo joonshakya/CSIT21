@@ -22,6 +22,7 @@ import {
   dsAssignments,
   oopAssignments,
   caAssignments,
+  nmAssignments,
 } from "../utils/constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
@@ -43,6 +44,32 @@ export default function FrontPageGenerator() {
   const assignmentLists = useMemo(() => {
     return [
       {
+        subject: "DSA",
+        assignments: [
+          {
+            number: 1,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "CG Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "CA",
+        assignments: caAssignments,
+      },
+      {
+        subject: "NM",
+        assignments: nmAssignments,
+      },
+      {
         subject: "OOP Index",
         assignments: [
           {
@@ -54,10 +81,6 @@ export default function FrontPageGenerator() {
       {
         subject: "OOP",
         assignments: oopAssignments,
-      },
-      {
-        subject: "CA",
-        assignments: caAssignments,
       },
       {
         subject: "DS Index",
@@ -92,15 +115,6 @@ export default function FrontPageGenerator() {
           },
         ],
       },
-      {
-        subject: "DSA",
-        assignments: [
-          {
-            number: 1,
-            selected: true,
-          },
-        ],
-      },
     ];
   }, []);
 
@@ -114,12 +128,12 @@ export default function FrontPageGenerator() {
     if (tab === "assignment") {
       setSubject(initialSubject);
     } else if (tab === "index") {
-      setSubject("OOP Index");
+      setSubject("CG Index");
     }
   }, [tab]);
 
   useEffect(() => {
-    if (["DL", "FIT", "DS", "OOP", "CA"].includes(subject)) {
+    if (["DL", "FIT", "DS", "OOP", "CA", "NM"].includes(subject)) {
       assignmentLists.forEach((entry) => {
         if (entry.subject === subject) {
           setAssignmentNumber(
@@ -331,8 +345,17 @@ export default function FrontPageGenerator() {
                           shortHand: "DSA",
                           longHand: "DSA",
                         },
+                        {
+                          shortHand: "NM",
+                          longHand: "NM",
+                        },
                       ]
-                    : []
+                    : [
+                        {
+                          shortHand: "CG Index",
+                          longHand: "CG",
+                        },
+                      ]
                   ).map((subject, index) => (
                     <FormControlLabel
                       key={index}
@@ -452,7 +475,7 @@ export default function FrontPageGenerator() {
                   event.target.blur();
                 }}
               />
-            ) : ["DL", "OOP", "DS", "FIT", "CA"].includes(subject) ? (
+            ) : ["DL", "OOP", "DS", "FIT", "CA", "NM"].includes(subject) ? (
               assignmentLists.map((entry, index) => (
                 <Box key={index}>
                   {entry.subject === subject ? (
