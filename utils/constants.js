@@ -29,6 +29,18 @@ export const materials = {
         bgImage: "linear-gradient(43deg, #4158D0 0%, #C850C0 100%)",
       },
       {
+        name: (
+          <>
+            SXC
+            <br />
+            Old Qs
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/12dd5x73lKeFK6gc2-Mi_czVAQcGWYeY7?usp=sharing",
+        bgColor: "#FBAB7E",
+        bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+      },
+      {
         name: "SPSS",
         link: "https://youtu.be/h6mysceNFqg",
         bgColor: "#72a0ce",
