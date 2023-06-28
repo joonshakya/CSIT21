@@ -12,7 +12,8 @@ import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
 // import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
-// import { practicalBatch2021RoutineSem2 } from "../utils/constants";
+// import { midTermBatch2021RoutineSem3 } from "../utils/constants";
+
 export default function Index() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
@@ -70,8 +71,8 @@ export default function Index() {
                 <Materials />
                 {/* <ExamRoutine
                   // routine={preBoardsBatch2021Routine}
-                  routine={practicalBatch2021RoutineSem2}
-                  title="Practical Exam Routine"
+                  routine={midTermBatch2021RoutineSem3}
+                  title="Mid Term Exam Routine"
                   subtitle="Exam time: 7:00 AM - 9:00 AM"
                 /> */}
                 <ClassRoutine />

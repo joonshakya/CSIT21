@@ -205,276 +205,6 @@ export const caAssignments = [
   },
 ];
 
-export const dsAssignments = [
-  {
-    number: 1,
-    name: "Implementing Set Operations",
-  },
-  {
-    number: 2,
-    name: "Implementing Fuzzy Set Operations",
-  },
-  {
-    number: 3,
-    name: "Finding Cartesian Product of Multiple Sets",
-  },
-  {
-    number: 4,
-    name: "Implementing Encryption/Decryption of Alphabets",
-  },
-  {
-    number: 5,
-    name: "Implementing Extended Euclidean Algorithm",
-  },
-  {
-    number: 6,
-    name: "Implementing Integer Arithmetic",
-  },
-  {
-    number: 7,
-    name: "Implementing Prime Number Checking",
-  },
-  {
-    number: 8,
-    name: "Random Integer Generation from a Range",
-  },
-  {
-    number: 9,
-    name: "Implementing Boolean Matrix Operations",
-  },
-  {
-    number: 10,
-    name: "Truth Table Generation",
-  },
-  {
-    number: 11,
-    name: "Program for checking equivalence of two logical expressions",
-  },
-  {
-    number: 12,
-    name: "Implementing recursive algorithm for Euclidean and extended Euclidean algorithm",
-  },
-  {
-    number: 13,
-    name: "Recursive program for generating n Fibonacci numbers",
-  },
-  {
-    number: 14,
-    name: "Recursive program for Tower of Hanoi problem",
-  },
-  {
-    number: 15,
-    name: "Program for generating permutations",
-  },
-  {
-    number: 16,
-    name: "Program for generating combinations",
-  },
-  {
-    number: 17,
-    name: "Program for DFS graph traversal",
-  },
-  {
-    number: 18,
-    name: "Program for BFS graph traversal",
-  },
-  {
-    number: 19,
-    name: "Program for Prim's MST",
-  },
-  {
-    number: 20,
-    name: "Program for Kruskal's MST",
-  },
-  {
-    number: 21,
-    name: "Program for Dijkstra's shortest path algorithm",
-    selected: true,
-  },
-];
-export const oopAssignments = [
-  {
-    number: 1,
-    name: "To familiarize with C++ Program Structure and C++ Operators",
-  },
-  {
-    number: 2,
-    name: "To understand and implement the concept of Function Overloading, Pass by Reference and Default Argument",
-  },
-  {
-    number: 3,
-    name: "To understand concepts of Pointer, Dynamic Memory Allocation",
-  },
-  {
-    number: 4,
-    name: "To understand the concepts of Classes and Objects",
-  },
-  {
-    number: 5,
-    name: "To understand the concept of Inheritance",
-  },
-  {
-    number: 6,
-    name: "To understand the concept of Operator Overloading",
-  },
-  {
-    number: 7,
-    name: "To understand the concepts of Virtual Function and Polymorphism",
-  },
-  {
-    number: 8,
-    name: "To understand the concept of Template, Exception Handling and File Handling",
-    selected: true,
-  },
-];
-
-export const dlAssignments = [
-  {
-    group: "0",
-    number: 1,
-    name: "To verify the operations of Basic Gates",
-  },
-  {
-    group: "0",
-    number: 2,
-    name: "To verify the operations of Derived Gates",
-  },
-  {
-    group: "0",
-    number: 3,
-    name: "To verify the operation of 3 input AND and OR gates using Multiple Gates",
-  },
-  {
-    group: "0",
-    number: 4,
-    name: "To verify the universality of NAND Gate and NOR Gate",
-  },
-  {
-    group: "0",
-    number: 5,
-    name: "To verify 2 and 3 variable De-Morgan's law",
-  },
-  {
-    group: "0",
-    number: 6,
-    name: "To verify the Laws of Boolean Algebra",
-  },
-  {
-    group: "0",
-    number: 7,
-    name: "To verify the steps for Combinational Logic Design",
-  },
-  {
-    group: "1",
-    number: 8,
-    name: `To verify the operations for Half Adder circuit.
-To verify the operations for Full Adder circuit.
-To construct a Full Adder using 2 Half Adders and verify the operations.`,
-  },
-  {
-    group: "1",
-    number: 9,
-    name: `To verify the operations for Half Subtractor circuit.
-To verify the operations for Full Subtractor circuit.`,
-  },
-  {
-    group: "2",
-    number: 10,
-    name: `To verify the operation of 2x4 decoder.
-To verify the operation of 3x8 decoder.
-To verify the operation of 4x16 decoder.`,
-  },
-  {
-    group: "3",
-    number: 11,
-    name: `To design BCD to Excess 3 code converter.`,
-  },
-  {
-    group: "3",
-    number: 12,
-    name: `To design 3-bit parity generator.
-To design 4-bit parity checker.`,
-  },
-  {
-    group: "4",
-    number: 13,
-    name: `To verify the operation of BCD to decimal decoder.`,
-  },
-  {
-    group: "4",
-    number: 14,
-    name: `To construct a full adder using required decoders.
-To construct a full subtractor using required decoders.`,
-  },
-  {
-    group: "5",
-    number: 15,
-    name: `To verify the operation of 2x1 Encoder.
-To verify the operation of 4x2 Encoder.
-To verify the operation of 8x3 Encoder.
-To verify the operation of 16x4 Encoder.`,
-  },
-  {
-    group: "5",
-    number: 16,
-    name: `To construct 4x1 multiplexer.
-To construct 8x1 multiplexer using smaller blocks.
-To construct 16x1 multiplexer using smaller blocks.`,
-  },
-  {
-    group: "5",
-    number: 17,
-    name: `To construct 1x4 demultiplexer.
-To construct 1x8 demultiplexer using smaller blocks.
-To construct 1x16 demultiplexer using smaller blocks.`,
-  },
-  {
-    group: "6",
-    number: 18,
-    name: `To construct a 2-bit asynchronous counter.
-To construct a 4-bit asynchronous counter.`,
-    selected: true,
-  },
-  {
-    group: "6",
-    number: 19,
-    name: `To construct a BCD asynchronous counter.`,
-  },
-  {
-    group: "6",
-    number: 20,
-    name: `To construct a 2-bit synchronous counter.
-To construct a 4-bit synchronous counter.`,
-  },
-  {
-    group: "6",
-    number: 21,
-    name: `To construct a BCD synchronous counter.`,
-  },
-  {
-    group: "6",
-    number: 22,
-    name: `To construct Serial In Serial Out Shift Register.
-To construct Serial In Parallel Out Shift Register.
-To construct Parallel In Serial Out Shift Register.
-To construct Parallel In Parallel Out Shift Register.`,
-  },
-];
-export const fitAssignments = [
-  {
-    number: 1,
-    name: "VLookup and Mail Merge",
-  },
-  {
-    number: 5,
-    name: "Computer Network",
-  },
-  {
-    number: 7,
-    name: "Computer Software",
-    selected: true,
-  },
-];
 export const sem3Subjects = {
   NM: {
     name: "Numerical Method",
@@ -588,6 +318,198 @@ export const classRoutine = [
       [sem3Subjects.DSA, "321"],
       [sem3Subjects.CG, "Lab B"],
     ],
+  },
+];
+
+export const sem3Questions = {
+  "SXC Mid Term": {
+    DSA: [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1b8gJ0FM_ehJHOkRpxjzBAy3o0kiJc82S/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+    CA: [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/13DeDGGm3NXlJQh4vkZiXQtfmfIbAEFG-/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+    CG: [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1HpsllQHs3wGWNb5BIzNsfj6J6xsw_Py1/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+    NM: [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1CgN11HSayGkWT-582B7hSZ1o0DMf0nVw/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+    "Stats II": [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1UA8TakfIJ4qmGKvJ4B-eisT52UQH1Gx1/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+  },
+  "SXC Pre Boards": {
+    DSA: [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1LG18b70rYqpeRPuEM0zh5R0PTqV3XIFZ/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+    CA: [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1PilfaCtgLJqksj1ZVNJpzS-Ohze3kVtK/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+    CG: [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1cZyI-IPa__snAb-L3HKbBwnZ2l2Cb5aD/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+    NM: [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1sJlIs9Sosj-4fErCg7V16kA2220-jeaY/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+    "Stats II": [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1HtifVPG8QRC319iPiycUW2yP8awZqrFA/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+  },
+  Boards: {
+    DSA: [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1l-xE087Zq-HyEJP043gELVZO03q6XMZM/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+    CA: [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1LD8oFR9X3A_-0Cex0ENhOI9_lQIX0A1m/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+    CG: [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1c99bZmqeHOJ0vtqQZyYJQqZ-ZsuKfz70/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+    NM: [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1amrHYREsFetDaO8h3ppxGTtU-D0oQdO9/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+    "Stats II": [
+      {
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1vpE578wVtbcbBmfsg2PEKW8i4c8qIIXI/view?usp=sharing",
+      },
+      // {
+      //   batch: 2021,
+      //   link: "",
+      // },
+    ],
+  },
+};
+
+export const midTermBatch2021RoutineSem3 = [
+  {
+    day: "Wed",
+    subject: "DSA",
+    date: new Date("2023-01-04"),
+    questions: sem3Questions["SXC Mid Term"]["DSA"],
+  },
+  {
+    day: "Thu",
+    subject: "NM",
+    date: new Date("2023-01-05"),
+    questions: sem3Questions["SXC Mid Term"]["NM"],
+  },
+  {
+    day: "Fri",
+    subject: "CA",
+    date: new Date("2023-01-06"),
+    questions: sem3Questions["SXC Mid Term"]["CA"],
+  },
+  {
+    day: "Mon",
+    subject: "CG",
+    date: new Date("2023-01-09"),
+    questions: sem3Questions["SXC Mid Term"]["CG"],
+  },
+  {
+    day: "Tue",
+    subject: "Stats II",
+    date: new Date("2023-01-10"),
+    questions: sem3Questions["SXC Mid Term"]["Stats II"],
   },
 ];
 
@@ -831,6 +753,7 @@ export const sem2Questions = {
     ],
   },
 };
+
 export const midTermBatch2021RoutineSem2 = [
   {
     day: "Wed",
@@ -863,6 +786,7 @@ export const midTermBatch2021RoutineSem2 = [
     questions: sem2Questions["SXC Mid Term"]["Stats I"],
   },
 ];
+
 export const preBoardsBatch2021RoutineSem2 = [
   {
     day: "Mon",
@@ -895,6 +819,7 @@ export const preBoardsBatch2021RoutineSem2 = [
     questions: sem2Questions["SXC Pre Boards"]["Stats I"],
   },
 ];
+
 export const boardsBatch2021RoutineSem2 = [
   {
     day: "Mon",
@@ -1058,6 +983,7 @@ export const names = {
   47: ["Yogesh Rijal", "021BSCIT047", "B"],
   48: ["Yubraj Khatiwada", "021BSCIT048", "B"],
 };
+
 export const opCodes = [
   {
     label: "ACI Data",
@@ -2042,5 +1968,278 @@ export const opCodes = [
   {
     label: "XTHL",
     opCode: "E3",
+  },
+];
+
+export const dsAssignments = [
+  {
+    number: 1,
+    name: "Implementing Set Operations",
+  },
+  {
+    number: 2,
+    name: "Implementing Fuzzy Set Operations",
+  },
+  {
+    number: 3,
+    name: "Finding Cartesian Product of Multiple Sets",
+  },
+  {
+    number: 4,
+    name: "Implementing Encryption/Decryption of Alphabets",
+  },
+  {
+    number: 5,
+    name: "Implementing Extended Euclidean Algorithm",
+  },
+  {
+    number: 6,
+    name: "Implementing Integer Arithmetic",
+  },
+  {
+    number: 7,
+    name: "Implementing Prime Number Checking",
+  },
+  {
+    number: 8,
+    name: "Random Integer Generation from a Range",
+  },
+  {
+    number: 9,
+    name: "Implementing Boolean Matrix Operations",
+  },
+  {
+    number: 10,
+    name: "Truth Table Generation",
+  },
+  {
+    number: 11,
+    name: "Program for checking equivalence of two logical expressions",
+  },
+  {
+    number: 12,
+    name: "Implementing recursive algorithm for Euclidean and extended Euclidean algorithm",
+  },
+  {
+    number: 13,
+    name: "Recursive program for generating n Fibonacci numbers",
+  },
+  {
+    number: 14,
+    name: "Recursive program for Tower of Hanoi problem",
+  },
+  {
+    number: 15,
+    name: "Program for generating permutations",
+  },
+  {
+    number: 16,
+    name: "Program for generating combinations",
+  },
+  {
+    number: 17,
+    name: "Program for DFS graph traversal",
+  },
+  {
+    number: 18,
+    name: "Program for BFS graph traversal",
+  },
+  {
+    number: 19,
+    name: "Program for Prim's MST",
+  },
+  {
+    number: 20,
+    name: "Program for Kruskal's MST",
+  },
+  {
+    number: 21,
+    name: "Program for Dijkstra's shortest path algorithm",
+    selected: true,
+  },
+];
+
+export const oopAssignments = [
+  {
+    number: 1,
+    name: "To familiarize with C++ Program Structure and C++ Operators",
+  },
+  {
+    number: 2,
+    name: "To understand and implement the concept of Function Overloading, Pass by Reference and Default Argument",
+  },
+  {
+    number: 3,
+    name: "To understand concepts of Pointer, Dynamic Memory Allocation",
+  },
+  {
+    number: 4,
+    name: "To understand the concepts of Classes and Objects",
+  },
+  {
+    number: 5,
+    name: "To understand the concept of Inheritance",
+  },
+  {
+    number: 6,
+    name: "To understand the concept of Operator Overloading",
+  },
+  {
+    number: 7,
+    name: "To understand the concepts of Virtual Function and Polymorphism",
+  },
+  {
+    number: 8,
+    name: "To understand the concept of Template, Exception Handling and File Handling",
+    selected: true,
+  },
+];
+
+export const dlAssignments = [
+  {
+    group: "0",
+    number: 1,
+    name: "To verify the operations of Basic Gates",
+  },
+  {
+    group: "0",
+    number: 2,
+    name: "To verify the operations of Derived Gates",
+  },
+  {
+    group: "0",
+    number: 3,
+    name: "To verify the operation of 3 input AND and OR gates using Multiple Gates",
+  },
+  {
+    group: "0",
+    number: 4,
+    name: "To verify the universality of NAND Gate and NOR Gate",
+  },
+  {
+    group: "0",
+    number: 5,
+    name: "To verify 2 and 3 variable De-Morgan's law",
+  },
+  {
+    group: "0",
+    number: 6,
+    name: "To verify the Laws of Boolean Algebra",
+  },
+  {
+    group: "0",
+    number: 7,
+    name: "To verify the steps for Combinational Logic Design",
+  },
+  {
+    group: "1",
+    number: 8,
+    name: `To verify the operations for Half Adder circuit.
+To verify the operations for Full Adder circuit.
+To construct a Full Adder using 2 Half Adders and verify the operations.`,
+  },
+  {
+    group: "1",
+    number: 9,
+    name: `To verify the operations for Half Subtractor circuit.
+To verify the operations for Full Subtractor circuit.`,
+  },
+  {
+    group: "2",
+    number: 10,
+    name: `To verify the operation of 2x4 decoder.
+To verify the operation of 3x8 decoder.
+To verify the operation of 4x16 decoder.`,
+  },
+  {
+    group: "3",
+    number: 11,
+    name: `To design BCD to Excess 3 code converter.`,
+  },
+  {
+    group: "3",
+    number: 12,
+    name: `To design 3-bit parity generator.
+To design 4-bit parity checker.`,
+  },
+  {
+    group: "4",
+    number: 13,
+    name: `To verify the operation of BCD to decimal decoder.`,
+  },
+  {
+    group: "4",
+    number: 14,
+    name: `To construct a full adder using required decoders.
+To construct a full subtractor using required decoders.`,
+  },
+  {
+    group: "5",
+    number: 15,
+    name: `To verify the operation of 2x1 Encoder.
+To verify the operation of 4x2 Encoder.
+To verify the operation of 8x3 Encoder.
+To verify the operation of 16x4 Encoder.`,
+  },
+  {
+    group: "5",
+    number: 16,
+    name: `To construct 4x1 multiplexer.
+To construct 8x1 multiplexer using smaller blocks.
+To construct 16x1 multiplexer using smaller blocks.`,
+  },
+  {
+    group: "5",
+    number: 17,
+    name: `To construct 1x4 demultiplexer.
+To construct 1x8 demultiplexer using smaller blocks.
+To construct 1x16 demultiplexer using smaller blocks.`,
+  },
+  {
+    group: "6",
+    number: 18,
+    name: `To construct a 2-bit asynchronous counter.
+To construct a 4-bit asynchronous counter.`,
+    selected: true,
+  },
+  {
+    group: "6",
+    number: 19,
+    name: `To construct a BCD asynchronous counter.`,
+  },
+  {
+    group: "6",
+    number: 20,
+    name: `To construct a 2-bit synchronous counter.
+To construct a 4-bit synchronous counter.`,
+  },
+  {
+    group: "6",
+    number: 21,
+    name: `To construct a BCD synchronous counter.`,
+  },
+  {
+    group: "6",
+    number: 22,
+    name: `To construct Serial In Serial Out Shift Register.
+To construct Serial In Parallel Out Shift Register.
+To construct Parallel In Serial Out Shift Register.
+To construct Parallel In Parallel Out Shift Register.`,
+  },
+];
+
+export const fitAssignments = [
+  {
+    number: 1,
+    name: "VLookup and Mail Merge",
+  },
+  {
+    number: 5,
+    name: "Computer Network",
+  },
+  {
+    number: 7,
+    name: "Computer Software",
+    selected: true,
   },
 ];
