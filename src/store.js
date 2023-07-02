@@ -69,3 +69,12 @@ export const useWordStore = create((set) => ({
     }));
   },
 }));
+
+export const useDevCppDownloadDialogStore = create((set) => ({
+  open: false,
+  setOpen: (open) => {
+    set(() => ({
+      open,
+    }));
+  },
+}));

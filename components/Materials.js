@@ -7,9 +7,10 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import { materials } from "../utils/constants";
 
-const GradientButton = ({ name, link, bgColor, bgImage }) => (
+const GradientButton = ({ name, link, bgColor, bgImage, onClick }) => (
   <Button
     href={link}
+    onClick={onClick}
     target="_blank"
     rel="noopener noreferrer"
     sx={{
@@ -134,11 +135,12 @@ const Materials = () => {
             }}
           >
             {materials[sem].materials.map(
-              ({ name, link, bgColor, bgImage }, index) => (
+              ({ name, link, onClick, bgColor, bgImage }, index) => (
                 <GradientButton
                   key={index}
                   name={name}
                   link={link}
+                  onClick={onClick}
                   bgColor={bgColor}
                   bgImage={bgImage}
                 />

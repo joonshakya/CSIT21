@@ -1,3 +1,5 @@
+import { useDevCppDownloadDialogStore } from "../src/store";
+
 export const materials = {
   sem3: {
     books: [
@@ -54,7 +56,7 @@ export const materials = {
             Sonata
           </>
         ),
-        link: "https://drive.google.com/uc?export=download&id=1GPOcerrOkep_hKDgzyqs5GPryiY1UBXs",
+        link: "https://github.com/joonshakyawebsites/upload-some-files-to-download/releases/download/main-release/SonataSetup.exe",
         bgColor: "#00ba45",
         bgImage: "linear-gradient(160deg, #0000ff 0%, #00ff00 100%)",
       },
@@ -66,7 +68,9 @@ export const materials = {
             graphics.h
           </>
         ),
-        link: "https://drive.google.com/drive/folders/15-Ndr2OqZcldTR97tfnDxRDTIcesDDh5?usp=sharing",
+        onClick: () => {
+          useDevCppDownloadDialogStore.getState().setOpen(true);
+        },
         bgColor: "#2938a4",
         bgImage: "linear-gradient(180deg, #3c3d7b 0%, #032ef5 100%)",
       },

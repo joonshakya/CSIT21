@@ -12,6 +12,7 @@ import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
 // import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
+import { DevCppAdminNoAdminDialog } from "../components/DevCppAdminNoAdminDialog";
 // import { midTermBatch2021RoutineSem3 } from "../utils/constants";
 
 export default function Index() {
@@ -75,6 +76,7 @@ export default function Index() {
                   title="Mid Term Exam Routine"
                   subtitle="Exam time: 7:00 AM - 9:00 AM"
                 /> */}
+                <DevCppAdminNoAdminDialog />
                 <ClassRoutine />
               </Grid>
               <Grid item xs={12} sm={6} md={5}>
