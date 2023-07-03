@@ -205,6 +205,10 @@ export const caAssignments = [
   {
     number: 1,
     name: "Familiarization with VHDL programming",
+  },
+  {
+    number: 2,
+    name: "Designing of decoder and half adder using VHDL",
     selected: true,
   },
 ];
