@@ -8,7 +8,6 @@ import { useDevCppDownloadDialogStore } from "../src/store";
 
 export function DevCppAdminNoAdminDialog() {
   const { open, setOpen } = useDevCppDownloadDialogStore();
-  console.log(open);
   return (
     <Dialog
       open={open}
