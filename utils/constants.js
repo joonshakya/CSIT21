@@ -284,11 +284,17 @@ export const classRoutine = [
   },
   {
     day: "Wed",
+    // a: [
+    //   [sem3Subjects.DSA, "Lab B"],
+    //   [sem3Subjects.Stat, "318"],
+    //   [sem3Subjects.CA, "315"],
+    //   [sem3Subjects.CG, "Lab A"],
+    // ],
     a: [
-      [sem3Subjects.DSA, "Lab B"],
+      [sem3Subjects.CA, "Lab C"],
       [sem3Subjects.Stat, "318"],
-      [sem3Subjects.CA, "315"],
-      [sem3Subjects.CG, "Lab A"],
+      [sem3Subjects.DSA, "Maybe Lab C"],
+      [sem3Subjects.CG, "Lab D"],
     ],
     b: [
       [sem3Subjects.DSA, "Lab B"],
@@ -490,34 +496,64 @@ export const sem3Questions = {
 
 export const midTermBatch2021RoutineSem3 = [
   {
-    day: "Wed",
-    subject: "DSA",
-    date: new Date("2023-01-04"),
-    questions: sem3Questions["SXC Mid Term"]["DSA"],
-  },
-  {
-    day: "Thu",
-    subject: "NM",
-    date: new Date("2023-01-05"),
-    questions: sem3Questions["SXC Mid Term"]["NM"],
-  },
-  {
-    day: "Fri",
-    subject: "CA",
-    date: new Date("2023-01-06"),
-    questions: sem3Questions["SXC Mid Term"]["CA"],
-  },
-  {
     day: "Mon",
-    subject: "CG",
-    date: new Date("2023-01-09"),
-    questions: sem3Questions["SXC Mid Term"]["CG"],
+    subject: "CA",
+    date: new Date("2023-07-17"),
+    questions: sem3Questions["SXC Mid Term"]["CA"],
+    friendlyDate: (
+      <>
+        17<sup>th</sup> July
+        <br />1<sup>st</sup> Shrawan
+      </>
+    ),
   },
   {
     day: "Tue",
+    subject: "NM",
+    date: new Date("2023-07-18"),
+    questions: sem3Questions["SXC Mid Term"]["NM"],
+    friendlyDate: (
+      <>
+        18<sup>th</sup> July
+        <br />2<sup>nd</sup> Shrawan
+      </>
+    ),
+  },
+  {
+    day: "Wed",
+    subject: "DSA",
+    date: new Date("2023-07-19"),
+    questions: sem3Questions["SXC Mid Term"]["DSA"],
+    friendlyDate: (
+      <>
+        19<sup>th</sup> July
+        <br />3<sup>rd</sup> Shrawan
+      </>
+    ),
+  },
+  {
+    day: "Thu",
+    subject: "CG",
+    date: new Date("2023-07-20"),
+    questions: sem3Questions["SXC Mid Term"]["CG"],
+    friendlyDate: (
+      <>
+        20<sup>th</sup> July
+        <br />4<sup>th</sup> Shrawan
+      </>
+    ),
+  },
+  {
+    day: "Fri",
     subject: "Stats II",
-    date: new Date("2023-01-10"),
+    date: new Date("2023-07-21"),
     questions: sem3Questions["SXC Mid Term"]["Stats II"],
+    friendlyDate: (
+      <>
+        21<sup>st</sup> July
+        <br />5<sup>th</sup> Shrawan
+      </>
+    ),
   },
 ];
 
