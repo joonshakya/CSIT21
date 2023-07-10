@@ -502,6 +502,54 @@ export const sem3Questions = {
 
 export const midTermBatch2021RoutineSem3 = [
   {
+    day: "Tue",
+    subject: "NM",
+    date: new Date("2023-07-18"),
+    questions: sem3Questions["SXC Mid Term"]["NM"],
+    friendlyDate: (
+      <>
+        18<sup>th</sup> July
+        <br />2<sup>nd</sup> Shrawan
+      </>
+    ),
+  },
+  {
+    day: "Wed",
+    subject: "DSA",
+    date: new Date("2023-07-19"),
+    questions: sem3Questions["SXC Mid Term"]["DSA"],
+    friendlyDate: (
+      <>
+        19<sup>th</sup> July
+        <br />3<sup>rd</sup> Shrawan
+      </>
+    ),
+  },
+  {
+    day: "Thu",
+    subject: "CG",
+    date: new Date("2023-07-20"),
+    questions: sem3Questions["SXC Mid Term"]["CG"],
+    friendlyDate: (
+      <>
+        20<sup>th</sup> July
+        <br />4<sup>th</sup> Shrawan
+      </>
+    ),
+  },
+  {
+    day: "Fri",
+    subject: "Stats II",
+    date: new Date("2023-07-21"),
+    questions: sem3Questions["SXC Mid Term"]["Stats II"],
+    friendlyDate: (
+      <>
+        21<sup>st</sup> July
+        <br />5<sup>th</sup> Shrawan
+      </>
+    ),
+  },
+  {
     day: "Sun",
     subject: "CA",
     date: new Date("2023-07-23"),
@@ -510,54 +558,6 @@ export const midTermBatch2021RoutineSem3 = [
       <>
         23<sup>rd</sup> July
         <br />7<sup>th</sup> Shrawan
-      </>
-    ),
-  },
-  {
-    day: "Mon",
-    subject: "NM",
-    date: new Date("2023-07-24"),
-    questions: sem3Questions["SXC Mid Term"]["NM"],
-    friendlyDate: (
-      <>
-        24<sup>th</sup> July
-        <br /> 8<sup>th</sup> Shrawan
-      </>
-    ),
-  },
-  {
-    day: "Tue",
-    subject: "DSA",
-    date: new Date("2023-07-25"),
-    questions: sem3Questions["SXC Mid Term"]["DSA"],
-    friendlyDate: (
-      <>
-        25<sup>th</sup> July
-        <br /> 9<sup>th</sup> Shrawan
-      </>
-    ),
-  },
-  {
-    day: "Wed",
-    subject: "CG",
-    date: new Date("2023-07-26"),
-    questions: sem3Questions["SXC Mid Term"]["CG"],
-    friendlyDate: (
-      <>
-        26<sup>th</sup> July
-        <br /> 10<sup>th</sup> Shrawan
-      </>
-    ),
-  },
-  {
-    day: "Thu",
-    subject: "Stats II",
-    date: new Date("2023-07-27"),
-    questions: sem3Questions["SXC Mid Term"]["Stats II"],
-    friendlyDate: (
-      <>
-        27<sup>th</sup> July
-        <br /> 11<sup>th</sup> Shrawan
       </>
     ),
   },
