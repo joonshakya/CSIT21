@@ -208,7 +208,11 @@ export const caAssignments = [
   },
   {
     number: 2,
-    name: "Designing of decoder and half adder using VHDL",
+    name: "Design Half Adder and 2x4 Decoder using VHDL",
+  },
+  {
+    number: 3,
+    name: "Design Circuit using Data Flow style and Behavioral style",
     selected: true,
   },
 ];
