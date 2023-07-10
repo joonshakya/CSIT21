@@ -269,14 +269,26 @@ export const classRoutine = [
   },
   {
     day: "Tue",
+    // a: [
+    //   [sem3Subjects.NM, "Lab D"],
+    //   [sem3Subjects.Stat, "315"],
+    //   [sem3Subjects.CA, "315"],
+    //   [("*", "")],
+    // ],
+    // b: [
+    //   [sem3Subjects.CA, "321"],
+    //   [sem3Subjects.CG, "321"],
+    //   ["*", ""],
+    //   ["*", ""],
+    // ],
     a: [
       [sem3Subjects.NM, "Lab D"],
       [sem3Subjects.Stat, "315"],
-      [sem3Subjects.CA, "315"],
+      [sem3Subjects.CA, "Lab B"],
       [("*", "")],
     ],
     b: [
-      [sem3Subjects.CA, "321"],
+      [sem3Subjects.CA, "Lab B"],
       [sem3Subjects.CG, "321"],
       ["*", ""],
       ["*", ""],
@@ -284,17 +296,11 @@ export const classRoutine = [
   },
   {
     day: "Wed",
-    // a: [
-    //   [sem3Subjects.DSA, "Lab B"],
-    //   [sem3Subjects.Stat, "318"],
-    //   [sem3Subjects.CA, "315"],
-    //   [sem3Subjects.CG, "Lab A"],
-    // ],
     a: [
-      [sem3Subjects.CA, "Lab C"],
+      [sem3Subjects.DSA, "Lab B"],
       [sem3Subjects.Stat, "318"],
-      [sem3Subjects.DSA, "Maybe Lab C"],
-      [sem3Subjects.CG, "Lab D"],
+      [sem3Subjects.CA, "315"],
+      [sem3Subjects.CG, "Lab A"],
     ],
     b: [
       [sem3Subjects.DSA, "Lab B"],
@@ -496,62 +502,62 @@ export const sem3Questions = {
 
 export const midTermBatch2021RoutineSem3 = [
   {
-    day: "Mon",
+    day: "Sun",
     subject: "CA",
-    date: new Date("2023-07-17"),
+    date: new Date("2023-07-23"),
     questions: sem3Questions["SXC Mid Term"]["CA"],
     friendlyDate: (
       <>
-        17<sup>th</sup> July
-        <br />1<sup>st</sup> Shrawan
+        23<sup>rd</sup> July
+        <br />7<sup>th</sup> Shrawan
+      </>
+    ),
+  },
+  {
+    day: "Mon",
+    subject: "NM",
+    date: new Date("2023-07-24"),
+    questions: sem3Questions["SXC Mid Term"]["NM"],
+    friendlyDate: (
+      <>
+        24<sup>th</sup> July
+        <br /> 8<sup>th</sup> Shrawan
       </>
     ),
   },
   {
     day: "Tue",
-    subject: "NM",
-    date: new Date("2023-07-18"),
-    questions: sem3Questions["SXC Mid Term"]["NM"],
+    subject: "DSA",
+    date: new Date("2023-07-25"),
+    questions: sem3Questions["SXC Mid Term"]["DSA"],
     friendlyDate: (
       <>
-        18<sup>th</sup> July
-        <br />2<sup>nd</sup> Shrawan
+        25<sup>th</sup> July
+        <br /> 9<sup>th</sup> Shrawan
       </>
     ),
   },
   {
     day: "Wed",
-    subject: "DSA",
-    date: new Date("2023-07-19"),
-    questions: sem3Questions["SXC Mid Term"]["DSA"],
+    subject: "CG",
+    date: new Date("2023-07-26"),
+    questions: sem3Questions["SXC Mid Term"]["CG"],
     friendlyDate: (
       <>
-        19<sup>th</sup> July
-        <br />3<sup>rd</sup> Shrawan
+        26<sup>th</sup> July
+        <br /> 10<sup>th</sup> Shrawan
       </>
     ),
   },
   {
     day: "Thu",
-    subject: "CG",
-    date: new Date("2023-07-20"),
-    questions: sem3Questions["SXC Mid Term"]["CG"],
-    friendlyDate: (
-      <>
-        20<sup>th</sup> July
-        <br />4<sup>th</sup> Shrawan
-      </>
-    ),
-  },
-  {
-    day: "Fri",
     subject: "Stats II",
-    date: new Date("2023-07-21"),
+    date: new Date("2023-07-27"),
     questions: sem3Questions["SXC Mid Term"]["Stats II"],
     friendlyDate: (
       <>
-        21<sup>st</sup> July
-        <br />5<sup>th</sup> Shrawan
+        27<sup>th</sup> July
+        <br /> 11<sup>th</sup> Shrawan
       </>
     ),
   },
