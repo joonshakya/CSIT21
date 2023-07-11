@@ -73,7 +73,7 @@ export default function Index() {
                 <ExamRoutine
                   // routine={preBoardsBatch2021Routine}
                   routine={midTermBatch2021RoutineSem3}
-                  title="Mid Term Exam Routine (unofficial)"
+                  title="Mid Term Exam Routine (beta)"
                   subtitle="Exam time: 6:15 AM - 8:15 AM"
                 />
                 <DevCppAdminNoAdminDialog />

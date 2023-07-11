@@ -273,26 +273,14 @@ export const classRoutine = [
   },
   {
     day: "Tue",
-    // a: [
-    //   [sem3Subjects.NM, "Lab D"],
-    //   [sem3Subjects.Stat, "315"],
-    //   [sem3Subjects.CA, "315"],
-    //   [("*", "")],
-    // ],
-    // b: [
-    //   [sem3Subjects.CA, "321"],
-    //   [sem3Subjects.CG, "321"],
-    //   ["*", ""],
-    //   ["*", ""],
-    // ],
     a: [
       [sem3Subjects.NM, "Lab D"],
       [sem3Subjects.Stat, "315"],
-      [sem3Subjects.CA, "Lab B"],
+      [sem3Subjects.CA, "315"],
       [("*", "")],
     ],
     b: [
-      [sem3Subjects.CA, "Lab B"],
+      [sem3Subjects.CA, "321"],
       [sem3Subjects.CG, "321"],
       ["*", ""],
       ["*", ""],
@@ -554,14 +542,14 @@ export const midTermBatch2021RoutineSem3 = [
     ),
   },
   {
-    day: "Sun",
+    day: "Tue",
     subject: "CA",
-    date: new Date("2023-07-23"),
+    date: new Date("2023-07-25"),
     questions: sem3Questions["SXC Mid Term"]["CA"],
     friendlyDate: (
       <>
-        23<sup>rd</sup> July
-        <br />7<sup>th</sup> Shrawan
+        25<sup>th</sup> July
+        <br />9<sup>th</sup> Shrawan
       </>
     ),
   },
