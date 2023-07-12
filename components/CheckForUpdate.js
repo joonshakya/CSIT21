@@ -38,7 +38,8 @@ const CheckForUpdate = () => {
           if (prev > 1) {
             return prev - 1;
           }
-          router.reload(window.location.pathname);
+          router.reload(window.location.pathname + `?refresh=${Date.now()}`);
+          clearInterval(timeout);
           return 0;
         });
       }, 1000);
