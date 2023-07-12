@@ -40,6 +40,7 @@ const CheckForUpdate = () => {
           }
           router.reload(window.location.pathname + `?refresh=${Date.now()}`);
           clearInterval(timeout);
+
           return 0;
         });
       }, 1000);
