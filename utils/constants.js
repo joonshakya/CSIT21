@@ -196,7 +196,11 @@ export const materials = {
 export const nmAssignments = [
   {
     number: 1,
-    name: "To find the solution of nonlinear equations",
+    name: "Solution of Nonlinear Equation",
+  },
+  {
+    number: 2,
+    name: "Interpolation and Regression",
     selected: true,
   },
 ];
@@ -318,17 +322,29 @@ export const classRoutine = [
   },
   {
     day: "Fri",
+    // a: [
+    //   [sem3Subjects.CA, "Lab C"],
+    //   [sem3Subjects.CG, "315"],
+    //   ["*", ""],
+    //   ["*", ""],
+    // ],
+    // b: [
+    //   [sem3Subjects.Stat, "321"],
+    //   [sem3Subjects.CA, "321"],
+    //   [sem3Subjects.DSA, "321"],
+    //   [sem3Subjects.CG, "Lab B"],
+    // ],
     a: [
-      [sem3Subjects.CA, "Lab C"],
-      [sem3Subjects.CG, "315"],
-      ["*", ""],
+      [sem3Subjects.Stat, "318"],
+      [sem3Subjects.CA, "Maybe Lab"],
+      ["Foundation Day", "Watrin Hall"],
       ["*", ""],
     ],
     b: [
-      [sem3Subjects.Stat, "321"],
-      [sem3Subjects.CA, "321"],
-      [sem3Subjects.DSA, "321"],
-      [sem3Subjects.CG, "Lab B"],
+      [sem3Subjects.Stat, "318"],
+      [sem3Subjects.CG, "Maybe 321"],
+      ["Foundation Day", "Watrin Hall"],
+      ["Not sure", ""],
     ],
   },
 ];

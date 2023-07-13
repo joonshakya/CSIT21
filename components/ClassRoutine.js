@@ -24,7 +24,7 @@ const tCellStyles = {
 
 const RoutineTableCell = ({ sectionRoutine }) =>
   sectionRoutine.map(([subject, room], index) =>
-    subject.shortName ? (
+    typeof subject !== "string" ? (
       <TableCell
         key={index}
         sx={{
@@ -46,18 +46,19 @@ const RoutineTableCell = ({ sectionRoutine }) =>
               backgroundColor: "#e3e3e3",
             },
           }}
-          href={subject.microSyllabus}
+          href={subject?.microSyllabus}
           target="_blank"
           rel="noopener noreferrer"
         >
-          {subject.shortName}
+          {subject?.shortName}
           <br />
           {room}
         </Link>
       </TableCell>
     ) : (
       <TableCell align="center" key={index} sx={tCellStyles}>
-        *
+        {subject} <br />
+        {room}
       </TableCell>
     )
   );
