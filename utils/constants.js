@@ -21,6 +21,19 @@ export const materials = {
       {
         name: (
           <>
+            Stats II
+            <br />
+            Ex. Copy
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1w-EiumutdnmJzPkLPdpsDcpnnuaxps5Y?usp=sharing",
+        bgColor: "#c39883",
+        bgImage:
+          "linear-gradient(123deg, #eecc61 0%, #a86855 20%, #c9a38e 80%, #f4be38 100%)",
+      },
+      {
+        name: (
+          <>
             Pratik
             <br />
             Jung Karki
@@ -266,7 +279,7 @@ export const classRoutine = [
       [sem3Subjects.CG, "315"],
       [sem3Subjects.NM, "315"],
       [sem3Subjects.DSA, "315"],
-      [("*", "")],
+      ["*", ""],
     ],
     b: [
       [sem3Subjects.CA, "Lab D"],
@@ -281,7 +294,7 @@ export const classRoutine = [
       [sem3Subjects.NM, "Lab D"],
       [sem3Subjects.Stat, "315"],
       [sem3Subjects.CA, "315"],
-      [("*", "")],
+      ["*", ""],
     ],
     b: [
       [sem3Subjects.CA, "321"],
@@ -322,18 +335,6 @@ export const classRoutine = [
   },
   {
     day: "Fri",
-    // a: [
-    //   [sem3Subjects.CA, "Lab C"],
-    //   [sem3Subjects.CG, "315"],
-    //   ["*", ""],
-    //   ["*", ""],
-    // ],
-    // b: [
-    //   [sem3Subjects.Stat, "321"],
-    //   [sem3Subjects.CA, "321"],
-    //   [sem3Subjects.DSA, "321"],
-    //   [sem3Subjects.CG, "Lab B"],
-    // ],
     a: [
       [sem3Subjects.Stat, "318"],
       [sem3Subjects.CA, "Maybe Lab"],
