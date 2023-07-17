@@ -74,7 +74,15 @@ export default function Index() {
                   // routine={preBoardsBatch2021Routine}
                   routine={midTermBatch2021RoutineSem3}
                   title="Mid Term Exam Routine"
-                  subtitle="Exam time: 6:15 AM - 8:15 AM"
+                  subtitle={
+                    <>
+                      Exam time: 6:15 AM - 8:15 AM
+                      <br />
+                      Section A: Room 403
+                      <br />
+                      Section B: Room 404
+                    </>
+                  }
                 />
                 <DevCppAdminNoAdminDialog />
                 <ClassRoutine />
