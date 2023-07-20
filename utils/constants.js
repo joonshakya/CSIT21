@@ -336,16 +336,16 @@ export const classRoutine = [
   {
     day: "Fri",
     a: [
-      [sem3Subjects.Stat, "318"],
-      [sem3Subjects.CA, "Maybe Lab"],
-      ["Foundation Day", "Watrin Hall"],
+      [sem3Subjects.CA, "Lab C"],
+      [sem3Subjects.CG, "315"],
+      ["*", ""],
       ["*", ""],
     ],
     b: [
-      [sem3Subjects.Stat, "318"],
-      [sem3Subjects.CG, "Maybe 321"],
-      ["Foundation Day", "Watrin Hall"],
-      ["Not sure", ""],
+      [sem3Subjects.Stat, "321"],
+      [sem3Subjects.CA, "321"],
+      [sem3Subjects.DSA, "321"],
+      [sem3Subjects.CG, "Lab B"],
     ],
   },
 ];
