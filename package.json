@@ -11,26 +11,26 @@
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "dependencies": {
-    "@emotion/cache": "11.10.5",
-    "@emotion/react": "11.10.5",
-    "@emotion/server": "11.10.0",
-    "@emotion/styled": "11.10.5",
-    "@mui/icons-material": "5.11.0",
-    "@mui/material": "5.11.4",
-    "@next/font": "13.1.2",
-    "docxtemplater": "^3.33.0",
+    "@emotion/cache": "11.11.0",
+    "@emotion/react": "11.11.1",
+    "@emotion/server": "11.11.0",
+    "@emotion/styled": "11.11.0",
+    "@mui/icons-material": "5.14.1",
+    "@mui/material": "5.14.2",
+    "@next/font": "13.4.12",
+    "docxtemplater": "^3.37.12",
     "file-saver": "^2.0.5",
-    "next": "13.1.2",
+    "next": "13.4.12",
     "next-pwa": "^5.6.0",
     "pizzip": "^3.1.4",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.59.3",
-    "zustand": "^4.3.1"
+    "sass": "^1.64.1",
+    "zustand": "^4.3.9"
   },
   "devDependencies": {
-    "eslint": "8.31.0",
-    "eslint-config-next": "13.1.2"
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.12"
   }
 }

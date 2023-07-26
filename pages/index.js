@@ -10,10 +10,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import OpCodeFinder from "../components/OpCodeFinder";
 import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
-import ExamRoutine from "../components/ExamRoutine";
+// import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
 import { DevCppAdminNoAdminDialog } from "../components/DevCppAdminNoAdminDialog";
-import { midTermBatch2021RoutineSem3 } from "../utils/constants";
+// import { midTermBatch2021RoutineSem3 } from "../utils/constants";
 
 export default function Index() {
   const theme = useTheme();
@@ -70,7 +70,7 @@ export default function Index() {
                 }}
               >
                 <Materials />
-                <ExamRoutine
+                {/* <ExamRoutine
                   // routine={preBoardsBatch2021Routine}
                   routine={midTermBatch2021RoutineSem3}
                   title="Mid Term Exam Routine"
@@ -83,7 +83,7 @@ export default function Index() {
                       Section B: Room 404
                     </>
                   }
-                />
+                /> */}
                 <DevCppAdminNoAdminDialog />
                 <ClassRoutine />
               </Grid>

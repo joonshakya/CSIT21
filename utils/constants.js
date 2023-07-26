@@ -230,6 +230,42 @@ export const nmAssignments = [
   },
 ];
 
+export const dsaAssignments = [
+  {
+    number: 1,
+    name: "Stack Operations",
+  },
+  {
+    number: 2,
+    name: "Infix to Postfix Conversion Using Stack",
+  },
+  {
+    number: 3,
+    name: "Queue Operations",
+  },
+  {
+    number: 4,
+    name: "Circular Queue Operations",
+  },
+  {
+    number: 5,
+    name: "Linked List Insertion Operations",
+  },
+  {
+    number: 6,
+    name: "Linked List Deletion, Search and Display Operations",
+    selected: true,
+  },
+  {
+    number: 7,
+    name: "Doubly Linked List Operations",
+  },
+  {
+    number: 8,
+    name: "Circular Linked List Operations",
+  },
+];
+
 export const caAssignments = [
   {
     number: 1,

@@ -23,6 +23,7 @@ import {
   oopAssignments,
   caAssignments,
   nmAssignments,
+  dsaAssignments,
 } from "../utils/constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
@@ -36,6 +37,9 @@ export default function FrontPageGenerator() {
   const setRoll = useBaseStore((state) => state.setRoll);
   const wordFileLoaded = useBaseStore((state) => state.wordFileLoaded);
 
+  const assignmentsWithTopics = ["DL", "FIT", "DS", "OOP", "CA", "NM", "DSA"];
+  const assignmentsWithoutTopics = ["C"];
+
   const initialSubject = "CA";
 
   const [tab, setTab] = useState("assignment");
@@ -45,12 +49,7 @@ export default function FrontPageGenerator() {
     return [
       {
         subject: "DSA",
-        assignments: [
-          {
-            number: 1,
-            selected: true,
-          },
-        ],
+        assignments: dsaAssignments,
       },
       {
         subject: "CG Index",
@@ -133,7 +132,7 @@ export default function FrontPageGenerator() {
   }, [tab]);
 
   useEffect(() => {
-    if (["DL", "FIT", "DS", "OOP", "CA", "NM"].includes(subject)) {
+    if (assignmentsWithTopics.includes(subject)) {
       assignmentLists.forEach((entry) => {
         if (entry.subject === subject) {
           setAssignmentNumber(
@@ -141,14 +140,19 @@ export default function FrontPageGenerator() {
           );
         }
       });
-    } else if (["C", "DSA"].includes(subject)) {
+    } else if (assignmentsWithoutTopics.includes(subject)) {
       setAssignmentNumber(
         assignmentLists
           .find((entry) => entry.subject === subject)
           .assignments.find((assignment) => assignment.selected).number
       );
     }
-  }, [subject, assignmentLists]);
+  }, [
+    subject,
+    assignmentLists,
+    assignmentsWithTopics,
+    assignmentsWithoutTopics,
+  ]);
 
   const list = [["0", ["Select your name"]], ...Object.entries(names)].map(
     (entry) => ({
@@ -453,7 +457,7 @@ export default function FrontPageGenerator() {
                 </Box>
               </Box>
             </RadioGroup>
-            {["C", "DSA"].includes(subject) ? (
+            {assignmentsWithoutTopics.includes(subject) ? (
               <TextField
                 sx={{
                   my: 1,
@@ -475,7 +479,7 @@ export default function FrontPageGenerator() {
                   event.target.blur();
                 }}
               />
-            ) : ["DL", "OOP", "DS", "FIT", "CA", "NM"].includes(subject) ? (
+            ) : assignmentsWithTopics.includes(subject) ? (
               assignmentLists.map((entry, index) => (
                 <Box key={index}>
                   {entry.subject === subject ? (

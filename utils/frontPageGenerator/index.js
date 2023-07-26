@@ -7,6 +7,7 @@ import {
   oopAssignments,
   caAssignments,
   nmAssignments,
+  dsaAssignments,
 } from "../constants";
 import { useState } from "react";
 import { useBaseStore } from "../../src/store";
@@ -47,6 +48,7 @@ export default function useFrontPageGenerator() {
       OOP: oopAssignments,
       CA: caAssignments,
       NM: nmAssignments,
+      DSA: dsaAssignments,
     };
 
     if (Object.prototype.hasOwnProperty.call(assignmentMap, subject)) {
