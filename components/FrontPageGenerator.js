@@ -37,8 +37,13 @@ export default function FrontPageGenerator() {
   const setRoll = useBaseStore((state) => state.setRoll);
   const wordFileLoaded = useBaseStore((state) => state.wordFileLoaded);
 
-  const assignmentsWithTopics = ["DL", "FIT", "DS", "OOP", "CA", "NM", "DSA"];
-  const assignmentsWithoutTopics = ["C"];
+  const assignmentsWithTopics = useMemo(() => {
+    return ["DL", "FIT", "DS", "OOP", "CA", "NM", "DSA"];
+  }, []);
+
+  const assignmentsWithoutTopics = useMemo(() => {
+    return ["CG Index", "OOP Index", "DS Index", "μP Index", "C"];
+  }, []);
 
   const initialSubject = "CA";
 
@@ -216,7 +221,6 @@ export default function FrontPageGenerator() {
             <Typography variant="body2" color="text.secondary">
               Generate your own front page with ease.
             </Typography>
-
             <Autocomplete
               sx={{
                 my: 2,
