@@ -355,13 +355,17 @@ export const classRoutine = [
     day: "Wed",
     a: [
       [sem3Subjects.DSA, "Lab B"],
-      [sem3Subjects.Stat, "318"],
+      [`Conference - ${sem3Subjects.Stat.shortName}`, "Watrin Hall - 318"],
+      // [sem3Subjects.Stat, "318"],
+
       [sem3Subjects.CA, "315"],
       [sem3Subjects.CG, "Lab A"],
     ],
     b: [
       [sem3Subjects.DSA, "Lab B"],
-      [sem3Subjects.Stat, "318"],
+      [`Conference - ${sem3Subjects.Stat.shortName}`, "Watrin Hall - 318"],
+      // [sem3Subjects.Stat, "318"],
+
       [sem3Subjects.NM, "Lab B"],
       ["*", ""],
     ],
