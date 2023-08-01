@@ -23,7 +23,8 @@ export function DevCppAdminNoAdminDialog() {
           Clicking &quot;YES&quot; will download the student version of Dev C++
           with graphics.h that doesn&apos;t require admin password. If you are
           not in college and you know the password of your PC, you can click
-          &quot;NO&quot; download the Admin version of Dev C++ with graphics.h.
+          &quot;NO&quot; to download the admin version of Dev C++ with
+          graphics.h.
         </DialogContentText>
       </DialogContent>
       <DialogActions>
