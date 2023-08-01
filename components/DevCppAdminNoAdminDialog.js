@@ -20,10 +20,10 @@ export function DevCppAdminNoAdminDialog() {
       <DialogTitle>Are you in college?</DialogTitle>
       <DialogContent>
         <DialogContentText>
-          If you are in college, you should download the Non Admin version of
-          Dev C++ with Graphics. If you are not in college and you know the
-          password of your PC, you can download the Admin version of Dev C++
-          with Graphics.
+          Clicking &quot;YES&quot; will download the student version of Dev C++
+          with graphics.h that doesn&apos;t require admin password. If you are
+          not in college and you know the password of your PC, you can click
+          &quot;NO&quot; download the Admin version of Dev C++ with graphics.h.
         </DialogContentText>
       </DialogContent>
       <DialogActions>
@@ -35,7 +35,7 @@ export function DevCppAdminNoAdminDialog() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Yes (Student)
+          Yes
         </Button>
         <Button
           onClick={() => {
@@ -46,7 +46,7 @@ export function DevCppAdminNoAdminDialog() {
           rel="noopener noreferrer"
           autoFocus
         >
-          No (Admin)
+          No
         </Button>
       </DialogActions>
     </Dialog>
