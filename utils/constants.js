@@ -278,6 +278,10 @@ export const caAssignments = [
   {
     number: 3,
     name: "Design Circuit using Data Flow style and Behavioral style",
+  },
+  {
+    number: 4,
+    name: "Computer Arithmetic",
     selected: true,
   },
 ];
