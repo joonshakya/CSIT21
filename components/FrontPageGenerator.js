@@ -462,27 +462,31 @@ export default function FrontPageGenerator() {
               </Box>
             </RadioGroup>
             {assignmentsWithoutTopics.includes(subject) ? (
-              <TextField
-                sx={{
-                  my: 1,
-                  mt: 2,
-                  width: "100%",
-                }}
-                name="assignmentNumber"
-                label="Assignment Number"
-                type="number"
-                inputProps={{
-                  min: 1,
-                }}
-                required
-                value={assignmentNumber}
-                onChange={(e) => {
-                  setAssignmentNumber(e.target.value);
-                }}
-                onWheel={(event) => {
-                  event.target.blur();
-                }}
-              />
+              <>
+                {tab === "assignment" ? (
+                  <TextField
+                    sx={{
+                      my: 1,
+                      mt: 2,
+                      width: "100%",
+                    }}
+                    name="assignmentNumber"
+                    label="Assignment Number"
+                    type="number"
+                    inputProps={{
+                      min: 1,
+                    }}
+                    required
+                    value={assignmentNumber}
+                    onChange={(e) => {
+                      setAssignmentNumber(e.target.value);
+                    }}
+                    onWheel={(event) => {
+                      event.target.blur();
+                    }}
+                  />
+                ) : null}
+              </>
             ) : assignmentsWithTopics.includes(subject) ? (
               assignmentLists.map((entry, index) => (
                 <Box key={index}>
