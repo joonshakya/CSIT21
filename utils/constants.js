@@ -262,7 +262,7 @@ export const dsaAssignments = [
   },
   {
     number: 8,
-    name: "Circular Linked List Operations",
+    name: "Circular Doubly Linked List Operations",
   },
 ];
 
