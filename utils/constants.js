@@ -254,7 +254,6 @@ export const dsaAssignments = [
   {
     number: 6,
     name: "Linked List Deletion, Search and Display Operations",
-    selected: true,
   },
   {
     number: 7,
@@ -263,6 +262,7 @@ export const dsaAssignments = [
   {
     number: 8,
     name: "Circular Doubly Linked List Operations",
+    selected: true,
   },
 ];
 
