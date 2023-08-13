@@ -10,10 +10,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import OpCodeFinder from "../components/OpCodeFinder";
 import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
-// import ExamRoutine from "../components/ExamRoutine";
+import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
 import { DevCppAdminNoAdminDialog } from "../components/DevCppAdminNoAdminDialog";
-// import { midTermBatch2021RoutineSem3 } from "../utils/constants";
+import { boardsBatch2021RoutineSem3 } from "../utils/constants";
 
 export default function Index() {
   const theme = useTheme();
@@ -70,20 +70,11 @@ export default function Index() {
                 }}
               >
                 <Materials />
-                {/* <ExamRoutine
-                  // routine={preBoardsBatch2021Routine}
-                  routine={midTermBatch2021RoutineSem3}
-                  title="Mid Term Exam Routine"
-                  subtitle={
-                    <>
-                      Exam time: 6:15 AM - 8:15 AM
-                      <br />
-                      Section A: Room 403
-                      <br />
-                      Section B: Room 404
-                    </>
-                  }
-                /> */}
+                <ExamRoutine
+                  routine={boardsBatch2021RoutineSem3}
+                  title="Board Exam Routine"
+                  subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
+                />
                 <DevCppAdminNoAdminDialog />
                 <ClassRoutine />
               </Grid>

@@ -13,8 +13,13 @@ export const materials = {
         name: "CA",
         link: "https://drive.google.com/file/d/1mBi5REwgrzAbuSr-eNyQZXlTRtU0dcfJ/view?usp=sharing",
         bgColor: "#60809d",
-
         bgImage: "linear-gradient(12deg, #929ea4 0%, #155592 100%)",
+      },
+      {
+        name: "NM",
+        link: "https://drive.google.com/drive/folders/1j22zeweR3IFWVELvtRnMUgaKc0YGnGG2?usp=drive_link",
+        bgColor: "#283e54",
+        bgImage: "linear-gradient(340deg, #283e54 50%, #ba0707 100%)",
       },
     ],
     materials: [
@@ -621,6 +626,76 @@ export const midTermBatch2021RoutineSem3 = [
       <>
         25<sup>th</sup> July
         <br />9<sup>th</sup> Shrawan
+      </>
+    ),
+  },
+];
+
+export const boardsBatch2021RoutineSem3 = [
+  {
+    day: "Fri",
+    subject: "DSA",
+    date: new Date("2023-09-29"),
+    questions: sem3Questions["Boards"]["DSA"],
+    friendlyDate: (
+      <>
+        29<sup>th</sup> September
+        <br />
+        12<sup>th</sup> Ashoj
+      </>
+    ),
+    source: "https://iost.tu.edu.np/notices/831",
+    sourceName: "TU Notice",
+  },
+  {
+    day: "Mon",
+    date: new Date("2023-10-02"),
+    subject: "NM",
+    questions: sem3Questions["Boards"]["NM"],
+    friendlyDate: (
+      <>
+        2<sup>nd</sup> October
+        <br />
+        15<sup>th</sup> Ashoj
+      </>
+    ),
+  },
+  {
+    day: "Thu",
+    date: new Date("2023-10-05"),
+    subject: "CA",
+    questions: sem3Questions["Boards"]["CA"],
+    friendlyDate: (
+      <>
+        5<sup>th</sup> October
+        <br />
+        18<sup>th</sup> Ashoj
+      </>
+    ),
+  },
+  {
+    day: "Sun",
+    date: new Date("2023-10-08"),
+    subject: "CG",
+    questions: sem3Questions["Boards"]["CG"],
+    friendlyDate: (
+      <>
+        8<sup>th</sup> October
+        <br />
+        21<sup>st</sup> Ashoj
+      </>
+    ),
+  },
+  {
+    day: "Wed",
+    date: new Date("2023-10-11"),
+    subject: "Stats II",
+    questions: sem3Questions["Boards"]["Stats II"],
+    friendlyDate: (
+      <>
+        11<sup>th</sup> October
+        <br />
+        24<sup>th</sup> Ashoj
       </>
     ),
   },
