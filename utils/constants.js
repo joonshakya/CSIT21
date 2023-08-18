@@ -1010,6 +1010,64 @@ export const preBoardsBatch2021RoutineSem2 = [
   },
 ];
 
+export const preBoardsBatch2021RoutineSem3 = [
+  {
+    day: "Tue",
+    subject: "CA",
+    date: new Date("2023-08-29"),
+    friendlyDate: (
+      <>
+        29<sup>th</sup> August
+      </>
+    ),
+    questions: sem3Questions["SXC Pre Boards"]["CA"],
+  },
+  {
+    day: "Wed",
+    subject: "NM",
+    date: new Date("2023-08-30"),
+    friendlyDate: (
+      <>
+        30<sup>th</sup> August
+      </>
+    ),
+    questions: sem3Questions["SXC Pre Boards"]["NM"],
+  },
+  {
+    day: "Mon",
+    subject: "DSA",
+    date: new Date("2023-09-04"),
+    friendlyDate: (
+      <>
+        4<sup>th</sup> September
+      </>
+    ),
+    questions: sem3Questions["SXC Pre Boards"]["DSA"],
+  },
+  {
+    day: "Tue",
+    subject: "CG",
+    date: new Date("2023-09-05"),
+    friendlyDate: (
+      <>
+        5<sup>th</sup> September
+      </>
+    ),
+    questions: sem3Questions["SXC Pre Boards"]["CG"],
+  },
+  {
+    day: "Wed",
+    subject: "Stats II",
+    date: new Date("2023-09-06"),
+    friendlyDate: (
+      <>
+        6<sup>th</sup> September
+      </>
+    ),
+    questions: sem3Questions["SXC Pre Boards"]["Stats II"],
+  },
+];
+
 export const boardsBatch2021RoutineSem2 = [
   {
     day: "Mon",

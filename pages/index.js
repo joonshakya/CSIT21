@@ -13,7 +13,10 @@ import ClassRoutine from "../components/ClassRoutine";
 import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
 import { DevCppAdminNoAdminDialog } from "../components/DevCppAdminNoAdminDialog";
-import { boardsBatch2021RoutineSem3 } from "../utils/constants";
+import {
+  boardsBatch2021RoutineSem3,
+  preBoardsBatch2021RoutineSem3,
+} from "../utils/constants";
 
 export default function Index() {
   const theme = useTheme();
@@ -70,13 +73,18 @@ export default function Index() {
                 }}
               >
                 <Materials />
+                <DevCppAdminNoAdminDialog />
+                <ExamRoutine
+                  routine={preBoardsBatch2021RoutineSem3}
+                  title="Pre Board Exam Routine"
+                  subtitle={<>Exam time: 6:15 AM - 9:15 AM</>}
+                />
+                <ClassRoutine />
                 <ExamRoutine
                   routine={boardsBatch2021RoutineSem3}
                   title="Board Exam Routine"
                   subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
                 />
-                <DevCppAdminNoAdminDialog />
-                <ClassRoutine />
               </Grid>
               <Grid item xs={12} sm={6} md={5}>
                 <FrontPageGenerator />
