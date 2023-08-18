@@ -23,18 +23,18 @@ export const materials = {
       },
     ],
     materials: [
-      {
-        name: (
-          <>
-            Stats II
-            <br />
-            Tables (Mid term)
-          </>
-        ),
-        link: "/files/Stats II ko mid term samma chahine table haru.pdf",
-        bgColor: "#FBAB7E",
-        bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
-      },
+      // {
+      //   name: (
+      //     <>
+      //       Stats II
+      //       <br />
+      //       Tables (Mid term)
+      //     </>
+      //   ),
+      //   link: "/files/Stats II ko mid term samma chahine table haru.pdf",
+      //   bgColor: "#FBAB7E",
+      //   bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+      // },
       {
         name: (
           <>
@@ -93,9 +93,9 @@ export const materials = {
       {
         name: (
           <>
-            DevC++ with
+            DevC++ +
             <br />
-            graphics.h
+            graphics.h + OpenGL
           </>
         ),
         onClick: () => {
