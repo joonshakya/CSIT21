@@ -29,12 +29,13 @@ export function DevCppAdminNoAdminDialog() {
       </DialogContent>
       <DialogActions>
         <Button
-          href="https://github.com/joonshakyawebsites/upload-some-files-to-download/releases/download/main-release/NoAdmin.DevC++WithGraphics.NoFileAssociation.exe"
+          href="https://github.com/joonshakyawebsites/upload-some-files-to-download/releases/download/OpenGL/NoAdmin.DevC++WithGraphics.NoFileAssociation.exe"
           onClick={() => {
             setOpen(false);
           }}
           target="_blank"
           rel="noopener noreferrer"
+          autoFocus
         >
           Yes
         </Button>
@@ -42,12 +43,18 @@ export function DevCppAdminNoAdminDialog() {
           onClick={() => {
             setOpen(false);
           }}
-          href="https://github.com/joonshakyawebsites/upload-some-files-to-download/releases/download/main-release/Admin.DevC++WithGraphics.FileAssociation.exe"
+          href="https://github.com/joonshakyawebsites/upload-some-files-to-download/releases/download/OpenGL/Admin.DevC++WithGraphics.FileAssociation.exe"
           target="_blank"
           rel="noopener noreferrer"
-          autoFocus
         >
           No
+        </Button>
+        <Button
+          onClick={() => {
+            setOpen(false);
+          }}
+        >
+          Cancel
         </Button>
       </DialogActions>
     </Dialog>

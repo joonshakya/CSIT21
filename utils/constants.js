@@ -95,8 +95,9 @@ export const materials = {
           <>
             DevC++
             <br />
-            + graphics.h
-            <br />+ OpenGL
+            graphics.h
+            <br />
+            OpenGL
           </>
         ),
         onClick: () => {

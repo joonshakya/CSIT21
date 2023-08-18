@@ -14,6 +14,7 @@ const GradientButton = ({ name, link, bgColor, bgImage, onClick }) => (
     target="_blank"
     rel="noopener noreferrer"
     sx={{
+      textAlign: "left",
       color: "white",
       fontSize: "1.2rem",
       minWidth: "6.2rem",
