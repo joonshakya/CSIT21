@@ -269,6 +269,10 @@ export const dsaAssignments = [
   {
     number: 8,
     name: "Circular Doubly Linked List Operations",
+  },
+  {
+    number: 9,
+    name: "Bubble Sort, Insertion Sort, Quick Sort and Merge Sort",
     selected: true,
   },
 ];
