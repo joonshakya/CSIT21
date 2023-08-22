@@ -233,7 +233,15 @@ export const nmAssignments = [
   {
     number: 2,
     name: "Interpolation and Regression",
+  },
+  {
+    number: 3,
+    name: "Differentiation and Integration",
     selected: true,
+  },
+  {
+    number: 4,
+    name: "Solution of Linear Equations",
   },
 ];
 
