@@ -69,7 +69,7 @@ const CheckForUpdate = () => {
             m: "env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)",
           }}
         >
-          A new version of the website is available. Refreshing{" "}
+          A new update of the website is available. Refreshing{" "}
           {timeoutText
             ? `in ${timeoutText} second${timeoutText > 1 ? "s" : ""}`
             : "now"}
