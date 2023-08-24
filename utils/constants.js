@@ -423,10 +423,10 @@ export const classRoutine = [
     a: [
       // [sem3Subjects.CA, "Lab C"],
       // [sem3Subjects.CG, "315"],
-      ["*", ""],
-      ["*", ""],
-      ["*", ""],
-      ["*", ""],
+      ["*", "*"],
+      ["*", "*"],
+      ["*", "*"],
+      ["*", "*"],
     ],
     b: [
       [sem3Subjects.Stat, "321"],
