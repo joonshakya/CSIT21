@@ -9,7 +9,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import OpCodeFinder from "../components/OpCodeFinder";
 import TallyBar from "../components/TallyBar";
-// import ClassRoutine from "../components/ClassRoutine";
+import ClassRoutine from "../components/ClassRoutine";
 import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
 import { DevCppAdminNoAdminDialog } from "../components/DevCppAdminNoAdminDialog";
@@ -85,7 +85,7 @@ export default function Index() {
                     </>
                   }
                 />
-                {/* <ClassRoutine /> */}
+                <ClassRoutine />
                 <ExamRoutine
                   routine={boardsBatch2021RoutineSem3}
                   title="Board Exam Routine"
