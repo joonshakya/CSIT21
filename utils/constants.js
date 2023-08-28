@@ -237,11 +237,11 @@ export const nmAssignments = [
   {
     number: 3,
     name: "Differentiation and Integration",
-    selected: true,
   },
   {
     number: 4,
     name: "Solution of Linear Equations",
+    selected: true,
   },
 ];
 
