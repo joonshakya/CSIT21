@@ -1,11 +1,11 @@
 import { Card, Box, CardContent, Typography, Button } from "@mui/material";
 
-import { useState } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import { materials } from "../utils/constants";
+import { useRouter } from "next/router";
 
 const GradientButton = ({ name, link, bgColor, bgImage, onClick }) => (
   <Button
@@ -38,8 +38,8 @@ const GradientButton = ({ name, link, bgColor, bgImage, onClick }) => (
   </Button>
 );
 
-const Materials = () => {
-  const [sem, setSem] = useState("sem3");
+const Materials = ({ sem }) => {
+  const router = useRouter();
   return (
     <Card
       sx={{
@@ -77,7 +77,8 @@ const Materials = () => {
               name="semChooseOptions"
               value={sem}
               onChange={(event) => {
-                setSem(event.target.value);
+                localStorage.setItem("sem", event.target.value.split("sem")[1]);
+                router.push(`/${event.target.value.split("sem")[1]}`);
               }}
               sx={{
                 py: 1,

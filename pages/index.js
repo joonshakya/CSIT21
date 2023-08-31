@@ -13,11 +13,31 @@ import TallyBar from "../components/TallyBar";
 import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
 import { DevCppAdminNoAdminDialog } from "../components/DevCppAdminNoAdminDialog";
-import { examTypes } from "../utils/constants";
+import { examTypes, currentJoonSem } from "../utils/constants";
+import Router, { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function Index() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
+
+  const router = useRouter();
+
+  let semParam = router.asPath.split("/")[1];
+
+  if (semParam === currentJoonSem.split("sem")[1]) {
+    semParam = "";
+  }
+
+  const sem = semParam ? `sem${parseInt(semParam)}` : "";
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (semParam) return;
+    const localStorageSem = localStorage.getItem("sem");
+    if (!localStorageSem) return;
+    Router.replace(`/${localStorageSem}`);
+  }, [semParam]);
 
   return (
     <>
@@ -40,7 +60,9 @@ export default function Index() {
         <meta property="og:description" content="Class Documents on the go" />
         <meta property="og:url" content="https://www.csit21.cf/" />
       </Head>
-      <Navbar />
+      <Navbar
+        text={`CSIT21${semParam ? ` - Sem ${parseInt(semParam)}` : ""}`}
+      />
       <Box
         sx={{
           display: "flex",
@@ -69,27 +91,31 @@ export default function Index() {
                   mx: "auto",
                 }}
               >
-                <Materials />
+                <Materials sem={sem || currentJoonSem} />
                 <DevCppAdminNoAdminDialog />
-                <ExamRoutine
-                  examType={examTypes.pre}
-                  sem="sem3"
-                  title="Pre Board Exam Routine"
-                  subtitle={
-                    <>
-                      Exam time: 6:15 AM - 9:15 AM
-                      <br />
-                      Section A: Room 103, Section B: Room 104
-                    </>
-                  }
-                />
-                {/* <ClassRoutine /> */}
-                <ExamRoutine
-                  examType={examTypes.board}
-                  sem="sem3"
-                  title="Board Exam Routine"
-                  subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
-                />
+                {sem === "" ? (
+                  <>
+                    <ExamRoutine
+                      examType={examTypes.pre}
+                      sem="sem3"
+                      title="Pre Board Exam Routine"
+                      subtitle={
+                        <>
+                          Exam time: 6:15 AM - 9:15 AM
+                          <br />
+                          Section A: Room 103, Section B: Room 104
+                        </>
+                      }
+                    />
+                    {/* <ClassRoutine /> */}
+                    <ExamRoutine
+                      examType={examTypes.board}
+                      sem="sem3"
+                      title="Board Exam Routine"
+                      subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
+                    />
+                  </>
+                ) : null}
               </Grid>
               <Grid item xs={12} sm={6} md={5}>
                 <FrontPageGenerator />

@@ -853,6 +853,7 @@ export const examRoutine = {
     ],
   },
 };
+export const currentJoonSem = "sem3";
 
 export const classRoutineSem2 = [
   {

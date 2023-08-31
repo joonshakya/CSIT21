@@ -43,7 +43,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        CSIT21
+        {props.text}
       </Typography>
       <Divider />
       <List>
@@ -98,7 +98,7 @@ function DrawerAppBar(props) {
                 fontWeight: "bold",
               }}
             >
-              CSIT21 {online ? "" : "- Offline"}
+              {props.text} {online ? "" : "- Offline"}
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
