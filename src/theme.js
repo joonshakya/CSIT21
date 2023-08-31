@@ -28,6 +28,15 @@ const productSans = localFont({
 
 // Create a theme instance.
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 720,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
   palette: {
     primary: {
       main: "#6671c6",

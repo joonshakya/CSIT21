@@ -68,7 +68,7 @@ export const materials = {
             Old Qs
           </>
         ),
-        link: "https://drive.google.com/drive/folders/12dd5x73lKeFK6gc2-Mi_czVAQcGWYeY7?usp=sharing",
+        link: "https://drive.google.com/drive/folders/1231LJG10XQ-xhLDFpbM2nh7ZA9T8Uvmx?usp=sharing",
         bgColor: "#FBAB7E",
         bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
       },
@@ -181,7 +181,7 @@ export const materials = {
             Old Qs
           </>
         ),
-        link: "https://drive.google.com/drive/folders/13pQW9kwmIEDS1vgnrfAeigVyjhSP_dUR?usp=sharing",
+        link: "https://drive.google.com/drive/folders/18sO0qaZbYCoo-Thae8TKDl3gL5OmDEtb?usp=sharing",
         bgColor: "#FBAB7E",
         bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
       },
@@ -225,121 +225,82 @@ export const materials = {
   },
 };
 
-export const nmAssignments = [
-  {
-    number: 1,
-    name: "Solution of Nonlinear Equation",
+export const subjects = {
+  sem1: {
+    Maths1: {
+      name: "Mathematics I",
+      shortName: "Maths I",
+    },
+    Physics: {
+      name: "Physics",
+      shortName: "Physics",
+    },
+    DL: {
+      name: "Digital Logic",
+      shortName: "DL",
+    },
+    C: {
+      name: "C Programming",
+      shortName: "C",
+    },
+    IIT: {
+      name: "Introduction to Information Technology",
+      shortName: "IIT",
+    },
   },
-  {
-    number: 2,
-    name: "Interpolation and Regression",
+  sem2: {
+    Maths2: {
+      name: "Mathematics II",
+      shortName: "Maths II",
+    },
+    OOP: {
+      name: "Object Oriented Programming",
+      shortName: "OOP",
+    },
+    DS: {
+      name: "Discrete Structure",
+      shortName: "DS",
+    },
+    MP: {
+      name: "Microprocessor",
+      shortName: "MP",
+    },
+    Stats1: {
+      name: "Statistics I",
+      shortName: "Stats I",
+    },
   },
-  {
-    number: 3,
-    name: "Differentiation and Integration",
-  },
-  {
-    number: 4,
-    name: "Solution of Linear Equations",
-    selected: true,
-  },
-];
-
-export const dsaAssignments = [
-  {
-    number: 1,
-    name: "Stack Operations",
-  },
-  {
-    number: 2,
-    name: "Infix to Postfix Conversion Using Stack",
-  },
-  {
-    number: 3,
-    name: "Queue Operations",
-  },
-  {
-    number: 4,
-    name: "Circular Queue Operations",
-  },
-  {
-    number: 5,
-    name: "Linked List Insertion Operations",
-  },
-  {
-    number: 6,
-    name: "Linked List Deletion, Search and Display Operations",
-  },
-  {
-    number: 7,
-    name: "Doubly Linked List Operations",
-  },
-  {
-    number: 8,
-    name: "Circular Doubly Linked List Operations",
-  },
-  {
-    number: 9,
-    name: "Bubble Sort, Insertion Sort, Quick Sort and Merge Sort",
-    selected: true,
-  },
-];
-
-export const caAssignments = [
-  {
-    number: 1,
-    name: "Familiarization with VHDL programming",
-  },
-  {
-    number: 2,
-    name: "Design Half Adder and 2x4 Decoder using VHDL",
-  },
-  {
-    number: 3,
-    name: "Design Circuit using Data Flow style and Behavioral style",
-  },
-  {
-    number: 4,
-    name: "Computer Arithmetic",
-    selected: true,
-  },
-];
-
-export const sem3Subjects = {
-  NM: {
-    name: "Numerical Method",
-    shortName: "NM",
-    teacher: "Rabin Sir",
-    microSyllabus:
-      "https://drive.google.com/file/d/1sw9W10lpKWyNVCJIl_KezsoxdZh3GR0X/view?usp=sharing",
-  },
-  DSA: {
-    name: "Data Structure and Algorithm",
-    shortName: "DSA",
-    teacher: "Sudan Sir",
-    microSyllabus:
-      "https://drive.google.com/file/d/1xPyWp6Jdt6CvqECp-fv5cHVYE0O68tGZ/view?usp=sharing",
-  },
-  CA: {
-    name: "Computer Architecture",
-    shortName: "CA",
-    teacher: "Sarjan Sir",
-    microSyllabus:
-      "https://drive.google.com/file/d/1f-4nxi7B8sHv6a6FUI0gsXAe_3cHjfU1/view?usp=sharing",
-  },
-  CG: {
-    name: "Computer Graphics",
-    shortName: "CG",
-    teacher: "Bishnu Sir",
-    microSyllabus:
-      "https://drive.google.com/file/d/1E6rp8U-ILcdZrVyY8CXUJBns1M7bHDQN/view?usp=sharing",
-  },
-  Stat: {
-    name: "Statistics II",
-    shortName: "Stat",
-    teacher: "Pushpa Sir",
-    microSyllabus:
-      "https://drive.google.com/file/d/1D_6qw3_9KtpkeZtWQmRTI8ABGmVrkCdg/view?usp=sharing",
+  sem3: {
+    NM: {
+      name: "Numerical Method",
+      shortName: "NM",
+      microSyllabus:
+        "https://drive.google.com/file/d/1sw9W10lpKWyNVCJIl_KezsoxdZh3GR0X/view?usp=sharing",
+    },
+    DSA: {
+      name: "Data Structure and Algorithm",
+      shortName: "DSA",
+      microSyllabus:
+        "https://drive.google.com/file/d/1xPyWp6Jdt6CvqECp-fv5cHVYE0O68tGZ/view?usp=sharing",
+    },
+    CA: {
+      name: "Computer Architecture",
+      shortName: "CA",
+      microSyllabus:
+        "https://drive.google.com/file/d/1f-4nxi7B8sHv6a6FUI0gsXAe_3cHjfU1/view?usp=sharing",
+    },
+    CG: {
+      name: "Computer Graphics",
+      shortName: "CG",
+      microSyllabus:
+        "https://drive.google.com/file/d/1E6rp8U-ILcdZrVyY8CXUJBns1M7bHDQN/view?usp=sharing",
+    },
+    Stats2: {
+      name: "Statistics II",
+      shortName: "Stats II",
+      microSyllabus:
+        "https://drive.google.com/file/d/1D_6qw3_9KtpkeZtWQmRTI8ABGmVrkCdg/view?usp=sharing",
+    },
   },
 };
 
@@ -347,29 +308,29 @@ export const classRoutine = [
   {
     day: "Mon",
     a: [
-      [sem3Subjects.CG, "315"],
-      [sem3Subjects.NM, "315"],
-      [sem3Subjects.DSA, "315"],
+      [subjects.sem3.CG, "315"],
+      [subjects.sem3.NM, "315"],
+      [subjects.sem3.DSA, "315"],
       ["*", ""],
     ],
     b: [
-      [sem3Subjects.CA, "Lab D"],
-      [sem3Subjects.CG, "321"],
-      [sem3Subjects.NM, "321"],
+      [subjects.sem3.CA, "Lab D"],
+      [subjects.sem3.CG, "321"],
+      [subjects.sem3.NM, "321"],
       ["*", ""],
     ],
   },
   {
     day: "Tue",
     a: [
-      [sem3Subjects.NM, "Lab D"],
-      [sem3Subjects.Stat, "315"],
-      [sem3Subjects.CA, "315"],
+      [subjects.sem3.NM, "Lab D"],
+      [subjects.sem3.Stats2, "315"],
+      [subjects.sem3.CA, "315"],
       ["*", ""],
     ],
     b: [
-      [sem3Subjects.CA, "321"],
-      [sem3Subjects.CG, "321"],
+      [subjects.sem3.CA, "321"],
+      [subjects.sem3.CG, "321"],
       ["*", ""],
       ["*", ""],
     ],
@@ -377,357 +338,521 @@ export const classRoutine = [
   {
     day: "Wed",
     a: [
-      [sem3Subjects.DSA, "Lab B"],
-      // [`Conference - ${sem3Subjects.Stat.shortName}`, "Watrin Hall - 318"],
-      [sem3Subjects.Stat, "Lab A"],
-      [sem3Subjects.CA, "315"],
-      [sem3Subjects.CG, "Lab A"],
+      [subjects.sem3.DSA, "Lab B"],
+      // [`Conference - ${subjects.sem3.Stat.shortName}`, "Watrin Hall - 318"],
+      [subjects.sem3.Stats2, "Lab A"],
+      [subjects.sem3.CA, "315"],
+      [subjects.sem3.CG, "Lab A"],
     ],
     b: [
-      [sem3Subjects.DSA, "Lab B"],
-      // [`Conference - ${sem3Subjects.Stat.shortName}`, "Watrin Hall - 318"],
-      [sem3Subjects.Stat, "Lab A"],
-      [sem3Subjects.NM, "Lab B"],
+      [subjects.sem3.DSA, "Lab B"],
+      // [`Conference - ${subjects.sem3.Stat.shortName}`, "Watrin Hall - 318"],
+      [subjects.sem3.Stats2, "Lab A"],
+      [subjects.sem3.NM, "Lab B"],
       ["*", ""],
     ],
   },
   {
     day: "Thu",
-    // a: [
-    //   [sem3Subjects.NM, "315"],
-    //   [sem3Subjects.Stat, "315"],
-    //   [sem3Subjects.DSA, "Combined"],
-    //   ["*", ""],
-    // ],
-    // b: [
-    //   [sem3Subjects.Stat, "321"],
-    //   [sem3Subjects.NM, "321"],
-    //   [sem3Subjects.DSA, "Combined"],
-    //   ["*", ""],
-    // ],
     a: [
-      [sem3Subjects.NM, "Lab A"],
-      [sem3Subjects.Stat, "Lab A"],
-      [sem3Subjects.DSA, "Combined"],
+      [subjects.sem3.NM, "315"],
+      [subjects.sem3.Stats2, "315"],
+      [subjects.sem3.DSA, "Combined"],
       ["*", ""],
     ],
     b: [
-      [sem3Subjects.NM, "Lab A"],
-      [sem3Subjects.Stat, "Lab A"],
-      [sem3Subjects.DSA, "Combined"],
+      [subjects.sem3.Stats2, "321"],
+      [subjects.sem3.NM, "321"],
+      [subjects.sem3.DSA, "Combined"],
       ["*", ""],
     ],
   },
   {
     day: "Fri",
     a: [
-      // [sem3Subjects.CA, "Lab C"],
-      // [sem3Subjects.CG, "315"],
-      ["*", "*"],
-      ["*", "*"],
+      [subjects.sem3.CA, "Lab C"],
+      [subjects.sem3.CG, "315"],
       ["*", "*"],
       ["*", "*"],
     ],
     b: [
-      [sem3Subjects.Stat, "321"],
-      [sem3Subjects.CA, "321"],
-      [sem3Subjects.DSA, "321"],
-      [sem3Subjects.CG, "Lab B"],
+      [subjects.sem3.Stats2, "321"],
+      [subjects.sem3.CA, "321"],
+      [subjects.sem3.DSA, "321"],
+      [subjects.sem3.CG, "Lab B"],
     ],
   },
 ];
 
-export const sem3Questions = {
-  "SXC Mid Term": {
-    DSA: [
+export const examTypes = {
+  mid: "Mid Term",
+  pre: "Pre Board",
+  board: "Board",
+};
+
+export const questionPapers = {
+  sem1: {
+    [subjects.sem1.Maths1.shortName]: [],
+    [subjects.sem1.Physics.shortName]: [],
+    [subjects.sem1.DL.shortName]: [],
+    [subjects.sem1.C.shortName]: [],
+    [subjects.sem1.IIT.shortName]: [],
+  },
+  sem2: {
+    [subjects.sem2.DS.shortName]: [
       {
+        examType: examTypes.mid,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1x7Jyr03XOa2Dmbz027FDwiBdwuWJJxOT/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1HDDVG42CasoGK6s9tem0XkR2tMYV3c1D/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2022,
+        link: "https://drive.google.com/file/d/1aEPAKal2x75BavDDHCUDT69V1w80oZh5/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1xwcM3OSqdp0bY841bcjQ03AUR9wSbGYD/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/16O2zI_vrZaKGQRxWZFEqDuGOdOJf8cB8/view?usp=sharing",
+      },
+      {
+        examType: examTypes.board,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1Oq1S5t9DfyHbgwZwV-hGdLjAIvAwDv0h/view?usp=sharing",
+      },
+    ],
+    [subjects.sem2.OOP.shortName]: [
+      {
+        examType: examTypes.mid,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1qLivCf8bjgRCTBQfOq1yUxL5ZkxoyWaN/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1EsqimrnoEAy4Q-7bSbgu32iwTlQKM27O/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2022,
+        link: "https://drive.google.com/file/d/1IAaXGM2j4gjKsoJ5ULPFLWpcQE4bQj8S/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1jQMXGUxqHetKEzO5xmt3Eha2NywlUUFQ/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1kQAuNvZN-wtOydnV3R_d1_yUgfwB1Thg/view?usp=sharing",
+      },
+      {
+        examType: examTypes.board,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1Vw_09Yu8UR3fyj4HTfh9l8rnQV2y8q0V/view?usp=sharing",
+      },
+    ],
+    [subjects.sem2.MP.shortName]: [
+      {
+        examType: examTypes.mid,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1bhTlKNl18zIKEnogHMlVAzoKxmJyE3Z5/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/10YZH7hOduUDUYuEEGU8uVGA6X5AWvPTd/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2022,
+        link: "https://drive.google.com/file/d/1aogMfgrI__PCdgNREiA9EDhW0dT5Hdl5/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1yYDVKykul4AH5OOTVZOzBvG2UQrCEGbm/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1rev8bLaWn_QF8s61WmG6n_i-H75YwpcS/view?usp=sharing",
+      },
+      {
+        examType: examTypes.board,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1AvSpFuEfuqWfrS5jszcVnk7VzncE1KjC/view?usp=sharing",
+      },
+    ],
+    [subjects.sem2.Maths2.shortName]: [
+      {
+        examType: examTypes.mid,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1mbVWqYZrJcnyw7CCfpx4rlMT_EjJ66uP/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1JaBlO_GwuxQ-W_a2ILvGrzTsJv8aMoby/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2022,
+        link: "https://drive.google.com/file/d/1cja7seNECQav0XHdyCtzivNaUOq2aP69/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1vOIAzTXv9ulxHNjvkVxs6D_jsfPlHxFf/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1XA4wat2weieOtz4w9YV06_QlOCxUhgzq/view?usp=sharing",
+      },
+      {
+        examType: examTypes.board,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/13Rg-Tf0JTpkLg0zvROTpyWdKdUP0oEPv/view?usp=sharing",
+      },
+    ],
+    [subjects.sem2.Stats1.shortName]: [
+      {
+        examType: examTypes.mid,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1Ft5_bgYtivlAAAIdK0DySEAMnX26mu8s/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1m4F0fm92AaKMDhzw92nsB1f5Y555tR9Q/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2022,
+        link: "https://drive.google.com/file/d/1-NLSGA5xoMzo1C5vPLuSru7cmeUl8Owt/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/19x68p_P1cyxjktaRR6CDmpKZqAkezjvX/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/15MUANysXDXlqa0fumKrFjUJADpG-i_eh/view?usp=sharing",
+      },
+      {
+        examType: examTypes.board,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/18HKz_Vy80ptDKSsHAU6rHk-DOWD_YoGJ/view?usp=sharing",
+      },
+    ],
+  },
+  sem3: {
+    [subjects.sem3.DSA.shortName]: [
+      {
+        examType: examTypes.mid,
         batch: 2020,
         link: "https://drive.google.com/file/d/1b8gJ0FM_ehJHOkRpxjzBAy3o0kiJc82S/view?usp=sharing",
       },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    CA: [
       {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/13DeDGGm3NXlJQh4vkZiXQtfmfIbAEFG-/view?usp=sharing",
+        examType: examTypes.mid,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1U64Rq0InJCUD9lgMdmpVVdhOgU1LUSoI/view?usp=sharing",
       },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    CG: [
       {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1HpsllQHs3wGWNb5BIzNsfj6J6xsw_Py1/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    NM: [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1CgN11HSayGkWT-582B7hSZ1o0DMf0nVw/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    "Stats II": [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1UA8TakfIJ4qmGKvJ4B-eisT52UQH1Gx1/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-  },
-  "SXC Pre Boards": {
-    DSA: [
-      {
+        examType: examTypes.pre,
         batch: 2020,
         link: "https://drive.google.com/file/d/1LG18b70rYqpeRPuEM0zh5R0PTqV3XIFZ/view?usp=sharing",
       },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    CA: [
       {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1PilfaCtgLJqksj1ZVNJpzS-Ohze3kVtK/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    CG: [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1cZyI-IPa__snAb-L3HKbBwnZ2l2Cb5aD/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    NM: [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1sJlIs9Sosj-4fErCg7V16kA2220-jeaY/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    "Stats II": [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1HtifVPG8QRC319iPiycUW2yP8awZqrFA/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-  },
-  Boards: {
-    DSA: [
-      {
+        examType: examTypes.board,
         batch: 2020,
         link: "https://drive.google.com/file/d/1l-xE087Zq-HyEJP043gELVZO03q6XMZM/view?usp=sharing",
       },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
     ],
-    CA: [
+    [subjects.sem3.CA.shortName]: [
       {
+        examType: examTypes.mid,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/13DeDGGm3NXlJQh4vkZiXQtfmfIbAEFG-/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1xNvHf46TXv3bogS-VtXW60AQrCTyiEEl/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1PilfaCtgLJqksj1ZVNJpzS-Ohze3kVtK/view?usp=sharing",
+      },
+      {
+        examType: examTypes.board,
         batch: 2020,
         link: "https://drive.google.com/file/d/1LD8oFR9X3A_-0Cex0ENhOI9_lQIX0A1m/view?usp=sharing",
       },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
     ],
-    CG: [
+    [subjects.sem3.CG.shortName]: [
       {
+        examType: examTypes.mid,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1HpsllQHs3wGWNb5BIzNsfj6J6xsw_Py1/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1JBsbdQtc4FFjBl09dWh68FoNbvNnjvX4/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1cZyI-IPa__snAb-L3HKbBwnZ2l2Cb5aD/view?usp=sharing",
+      },
+      {
+        examType: examTypes.board,
         batch: 2020,
         link: "https://drive.google.com/file/d/1c99bZmqeHOJ0vtqQZyYJQqZ-ZsuKfz70/view?usp=sharing",
       },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
     ],
-    NM: [
+    [subjects.sem3.NM.shortName]: [
       {
+        examType: examTypes.mid,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1CgN11HSayGkWT-582B7hSZ1o0DMf0nVw/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1Rsev3NqHbo12kj4k0c3uHP4WfqgcZkvj/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1sJlIs9Sosj-4fErCg7V16kA2220-jeaY/view?usp=sharing",
+      },
+      {
+        examType: examTypes.board,
         batch: 2020,
         link: "https://drive.google.com/file/d/1amrHYREsFetDaO8h3ppxGTtU-D0oQdO9/view?usp=sharing",
       },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
     ],
-    "Stats II": [
+    [subjects.sem3.Stats2.shortName]: [
       {
+        examType: examTypes.mid,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1UA8TakfIJ4qmGKvJ4B-eisT52UQH1Gx1/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1etcLTBh_RywbjqRslbDkErO0h7stsTOE/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1HtifVPG8QRC319iPiycUW2yP8awZqrFA/view?usp=sharing",
+      },
+      {
+        examType: examTypes.board,
         batch: 2020,
         link: "https://drive.google.com/file/d/1vpE578wVtbcbBmfsg2PEKW8i4c8qIIXI/view?usp=sharing",
       },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
     ],
   },
 };
 
-export const midTermBatch2021RoutineSem3 = [
-  {
-    day: "Tue",
-    subject: "NM",
-    date: new Date("2023-07-18"),
-    questions: sem3Questions["SXC Mid Term"]["NM"],
-    friendlyDate: (
-      <>
-        18<sup>th</sup> July
-        <br />2<sup>nd</sup> Shrawan
-      </>
-    ),
+export const examRoutine = {
+  sem1: {},
+  sem2: {},
+  sem3: {
+    [examTypes.mid]: [
+      {
+        day: "Tue",
+        subject: subjects.sem3.NM,
+        date: new Date("2023-07-18"),
+        friendlyDate: (
+          <>
+            18<sup>th</sup> July
+            <br />2<sup>nd</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem3.DSA,
+        date: new Date("2023-07-19"),
+        friendlyDate: (
+          <>
+            19<sup>th</sup> July
+            <br />3<sup>rd</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem3.CG,
+        date: new Date("2023-07-20"),
+        friendlyDate: (
+          <>
+            20<sup>th</sup> July
+            <br />4<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem3.Stats2,
+        date: new Date("2023-07-21"),
+        friendlyDate: (
+          <>
+            21<sup>st</sup> July
+            <br />5<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem3.CA,
+        date: new Date("2023-07-25"),
+        friendlyDate: (
+          <>
+            25<sup>th</sup> July
+            <br />9<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+    ],
+    [examTypes.pre]: [
+      {
+        day: "Tue",
+        subject: subjects.sem3.CA,
+        date: new Date("2023-08-29"),
+        friendlyDate: (
+          <>
+            29<sup>th</sup> August
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem3.NM,
+        date: new Date("2023-08-30"),
+        friendlyDate: (
+          <>
+            30<sup>th</sup> August
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem3.DSA,
+        date: new Date("2023-09-04"),
+        friendlyDate: (
+          <>
+            4<sup>th</sup> September
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem3.CG,
+        date: new Date("2023-09-05"),
+        friendlyDate: (
+          <>
+            5<sup>th</sup> September
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem3.Stats2,
+        date: new Date("2023-09-06"),
+        friendlyDate: (
+          <>
+            6<sup>th</sup> September
+          </>
+        ),
+      },
+    ],
+    [examTypes.board]: [
+      {
+        day: "Fri",
+        subject: subjects.sem3.DSA,
+        date: new Date("2023-09-29"),
+        friendlyDate: (
+          <>
+            29<sup>th</sup> September
+            <br />
+            12<sup>th</sup> Ashoj
+          </>
+        ),
+        source: "https://iost.tu.edu.np/notices/831",
+        sourceName: "TU Notice",
+      },
+      {
+        day: "Mon",
+        date: new Date("2023-10-02"),
+        subject: subjects.sem3.NM,
+        friendlyDate: (
+          <>
+            2<sup>nd</sup> October
+            <br />
+            15<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        date: new Date("2023-10-05"),
+        subject: subjects.sem3.CA,
+        friendlyDate: (
+          <>
+            5<sup>th</sup> October
+            <br />
+            18<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        date: new Date("2023-10-08"),
+        subject: subjects.sem3.CG,
+        friendlyDate: (
+          <>
+            8<sup>th</sup> October
+            <br />
+            21<sup>st</sup> Ashoj
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        date: new Date("2023-10-11"),
+        subject: subjects.sem3.Stats2,
+        friendlyDate: (
+          <>
+            11<sup>th</sup> October
+            <br />
+            24<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+    ],
   },
-  {
-    day: "Wed",
-    subject: "DSA",
-    date: new Date("2023-07-19"),
-    questions: sem3Questions["SXC Mid Term"]["DSA"],
-    friendlyDate: (
-      <>
-        19<sup>th</sup> July
-        <br />3<sup>rd</sup> Shrawan
-      </>
-    ),
-  },
-  {
-    day: "Thu",
-    subject: "CG",
-    date: new Date("2023-07-20"),
-    questions: sem3Questions["SXC Mid Term"]["CG"],
-    friendlyDate: (
-      <>
-        20<sup>th</sup> July
-        <br />4<sup>th</sup> Shrawan
-      </>
-    ),
-  },
-  {
-    day: "Fri",
-    subject: "Stats II",
-    date: new Date("2023-07-21"),
-    questions: sem3Questions["SXC Mid Term"]["Stats II"],
-    friendlyDate: (
-      <>
-        21<sup>st</sup> July
-        <br />5<sup>th</sup> Shrawan
-      </>
-    ),
-  },
-  {
-    day: "Tue",
-    subject: "CA",
-    date: new Date("2023-07-25"),
-    questions: sem3Questions["SXC Mid Term"]["CA"],
-    friendlyDate: (
-      <>
-        25<sup>th</sup> July
-        <br />9<sup>th</sup> Shrawan
-      </>
-    ),
-  },
-];
-
-export const boardsBatch2021RoutineSem3 = [
-  {
-    day: "Fri",
-    subject: "DSA",
-    date: new Date("2023-09-29"),
-    questions: sem3Questions["Boards"]["DSA"],
-    friendlyDate: (
-      <>
-        29<sup>th</sup> September
-        <br />
-        12<sup>th</sup> Ashoj
-      </>
-    ),
-    source: "https://iost.tu.edu.np/notices/831",
-    sourceName: "TU Notice",
-  },
-  {
-    day: "Mon",
-    date: new Date("2023-10-02"),
-    subject: "NM",
-    questions: sem3Questions["Boards"]["NM"],
-    friendlyDate: (
-      <>
-        2<sup>nd</sup> October
-        <br />
-        15<sup>th</sup> Ashoj
-      </>
-    ),
-  },
-  {
-    day: "Thu",
-    date: new Date("2023-10-05"),
-    subject: "CA",
-    questions: sem3Questions["Boards"]["CA"],
-    friendlyDate: (
-      <>
-        5<sup>th</sup> October
-        <br />
-        18<sup>th</sup> Ashoj
-      </>
-    ),
-  },
-  {
-    day: "Sun",
-    date: new Date("2023-10-08"),
-    subject: "CG",
-    questions: sem3Questions["Boards"]["CG"],
-    friendlyDate: (
-      <>
-        8<sup>th</sup> October
-        <br />
-        21<sup>st</sup> Ashoj
-      </>
-    ),
-  },
-  {
-    day: "Wed",
-    date: new Date("2023-10-11"),
-    subject: "Stats II",
-    questions: sem3Questions["Boards"]["Stats II"],
-    friendlyDate: (
-      <>
-        11<sup>th</sup> October
-        <br />
-        24<sup>th</sup> Ashoj
-      </>
-    ),
-  },
-];
+};
 
 export const classRoutineSem2 = [
   {
@@ -765,15 +890,11 @@ export const classRoutineSem2 = [
     a: [
       ["Math (BHS)", "416"],
       ["DS", "416"],
-      // Need to confirm lab
-      // ["MP (Lab)", "Lab G"],
       ["MP (Lab)", "Lab B"],
       ["Stat", "Lab B"],
     ],
     b: [
       ["Math (DKP)", "419"],
-      // Need to confirm lab
-      // ["MP (Lab)", "419"],
       ["MP (Lab)", "Lab B"],
       ["DS (Lab)", "Lab D"],
       ["OOP (Lab)", "Lab D"],
@@ -808,402 +929,6 @@ export const classRoutineSem2 = [
       ["DS", "419"],
       ["*", ""],
     ],
-  },
-];
-
-export const sem2Questions = {
-  "SXC Mid Term": {
-    "Maths II": [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1mbVWqYZrJcnyw7CCfpx4rlMT_EjJ66uP/view?usp=sharing",
-      },
-      {
-        batch: 2021,
-        link: "https://drive.google.com/file/d/1JaBlO_GwuxQ-W_a2ILvGrzTsJv8aMoby/view?usp=sharing",
-      },
-    ],
-    OOP: [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1qLivCf8bjgRCTBQfOq1yUxL5ZkxoyWaN/view?usp=sharing",
-      },
-      {
-        batch: 2021,
-        link: "https://drive.google.com/file/d/1EsqimrnoEAy4Q-7bSbgu32iwTlQKM27O/view?usp=sharing",
-      },
-    ],
-    DS: [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1x7Jyr03XOa2Dmbz027FDwiBdwuWJJxOT/view?usp=sharing",
-      },
-      {
-        batch: 2021,
-        link: "https://drive.google.com/file/d/1HDDVG42CasoGK6s9tem0XkR2tMYV3c1D/view?usp=sharing",
-      },
-    ],
-    MP: [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1bhTlKNl18zIKEnogHMlVAzoKxmJyE3Z5/view?usp=sharing",
-      },
-      {
-        batch: 2021,
-        link: "https://drive.google.com/file/d/10YZH7hOduUDUYuEEGU8uVGA6X5AWvPTd/view?usp=sharing",
-      },
-    ],
-    "Stats I": [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1Ft5_bgYtivlAAAIdK0DySEAMnX26mu8s/view?usp=sharing",
-      },
-      {
-        batch: 2021,
-        link: "https://drive.google.com/file/d/1m4F0fm92AaKMDhzw92nsB1f5Y555tR9Q/view?usp=sharing",
-      },
-    ],
-  },
-  "SXC Pre Boards": {
-    "Maths II": [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1vOIAzTXv9ulxHNjvkVxs6D_jsfPlHxFf/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    OOP: [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1jQMXGUxqHetKEzO5xmt3Eha2NywlUUFQ/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    DS: [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1xwcM3OSqdp0bY841bcjQ03AUR9wSbGYD/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    MP: [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1yYDVKykul4AH5OOTVZOzBvG2UQrCEGbm/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    "Stats I": [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/19x68p_P1cyxjktaRR6CDmpKZqAkezjvX/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-  },
-  Boards: {
-    "Maths II": [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/13Rg-Tf0JTpkLg0zvROTpyWdKdUP0oEPv/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    OOP: [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1Vw_09Yu8UR3fyj4HTfh9l8rnQV2y8q0V/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    DS: [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1Oq1S5t9DfyHbgwZwV-hGdLjAIvAwDv0h/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    MP: [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1AvSpFuEfuqWfrS5jszcVnk7VzncE1KjC/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-    "Stats I": [
-      {
-        batch: 2020,
-        link: "https://drive.google.com/file/d/18HKz_Vy80ptDKSsHAU6rHk-DOWD_YoGJ/view?usp=sharing",
-      },
-      // {
-      //   batch: 2021,
-      //   link: "",
-      // },
-    ],
-  },
-};
-
-export const midTermBatch2021RoutineSem2 = [
-  {
-    day: "Wed",
-    subject: "DS",
-    date: new Date("2023-01-04"),
-    questions: sem2Questions["SXC Mid Term"]["DS"],
-  },
-  {
-    day: "Thu",
-    subject: "OOP",
-    date: new Date("2023-01-05"),
-    questions: sem2Questions["SXC Mid Term"]["OOP"],
-  },
-  {
-    day: "Fri",
-    subject: "Maths II",
-    date: new Date("2023-01-06"),
-    questions: sem2Questions["SXC Mid Term"]["Maths II"],
-  },
-  {
-    day: "Mon",
-    subject: "MP",
-    date: new Date("2023-01-09"),
-    questions: sem2Questions["SXC Mid Term"]["MP"],
-  },
-  {
-    day: "Tue",
-    subject: "Stats I",
-    date: new Date("2023-01-10"),
-    questions: sem2Questions["SXC Mid Term"]["Stats I"],
-  },
-];
-
-export const preBoardsBatch2021RoutineSem2 = [
-  {
-    day: "Mon",
-    subject: "DS",
-    date: new Date("2023-02-27"),
-    questions: sem2Questions["SXC Pre Boards"]["DS"],
-  },
-  {
-    day: "Tue",
-    subject: "OOP",
-    date: new Date("2023-02-28"),
-    questions: sem2Questions["SXC Pre Boards"]["OOP"],
-  },
-  {
-    day: "Wed",
-    subject: "MP",
-    date: new Date("2023-03-01"),
-    questions: sem2Questions["SXC Pre Boards"]["MP"],
-  },
-  {
-    day: "Thu",
-    subject: "Maths II",
-    date: new Date("2023-03-02"),
-    questions: sem2Questions["SXC Pre Boards"]["Maths II"],
-  },
-  {
-    day: "Fri",
-    subject: "Stats I",
-    date: new Date("2023-03-03"),
-    questions: sem2Questions["SXC Pre Boards"]["Stats I"],
-  },
-];
-
-export const preBoardsBatch2021RoutineSem3 = [
-  {
-    day: "Tue",
-    subject: "CA",
-    date: new Date("2023-08-29"),
-    friendlyDate: (
-      <>
-        29<sup>th</sup> August
-      </>
-    ),
-    questions: sem3Questions["SXC Pre Boards"]["CA"],
-  },
-  {
-    day: "Wed",
-    subject: "NM",
-    date: new Date("2023-08-30"),
-    friendlyDate: (
-      <>
-        30<sup>th</sup> August
-      </>
-    ),
-    questions: sem3Questions["SXC Pre Boards"]["NM"],
-  },
-  {
-    day: "Mon",
-    subject: "DSA",
-    date: new Date("2023-09-04"),
-    friendlyDate: (
-      <>
-        4<sup>th</sup> September
-      </>
-    ),
-    questions: sem3Questions["SXC Pre Boards"]["DSA"],
-  },
-  {
-    day: "Tue",
-    subject: "CG",
-    date: new Date("2023-09-05"),
-    friendlyDate: (
-      <>
-        5<sup>th</sup> September
-      </>
-    ),
-    questions: sem3Questions["SXC Pre Boards"]["CG"],
-  },
-  {
-    day: "Wed",
-    subject: "Stats II",
-    date: new Date("2023-09-06"),
-    friendlyDate: (
-      <>
-        6<sup>th</sup> September
-      </>
-    ),
-    questions: sem3Questions["SXC Pre Boards"]["Stats II"],
-  },
-];
-
-export const boardsBatch2021RoutineSem2 = [
-  {
-    day: "Mon",
-    subject: "DS",
-    date: new Date("2023-04-10"),
-    friendlyDate: (
-      <>
-        10<sup>th</sup> April
-        <br />
-        27<sup>th</sup> Chaitra
-      </>
-    ),
-    source: "https://www.tuiost.edu.np/storage/notice/csit-2-routine356.pdf",
-    sourceName: "TU Notice",
-  },
-  {
-    day: "Thu",
-    subject: "OOP",
-    date: new Date("2023-04-13"),
-    friendlyDate: (
-      <>
-        13<sup>th</sup> April
-        <br />
-        30<sup>th</sup> Chaitra
-      </>
-    ),
-  },
-  {
-    day: "Sun",
-    subject: "MP",
-    date: new Date("2023-04-16"),
-    friendlyDate: (
-      <>
-        16<sup>th</sup> April
-        <br />3<sup>rd</sup> Baishakh
-      </>
-    ),
-  },
-  {
-    day: "Wed",
-    subject: "Maths II",
-    date: new Date("2023-04-19"),
-    friendlyDate: (
-      <>
-        19<sup>th</sup> April
-        <br />6<sup>th</sup> Baishakh
-      </>
-    ),
-  },
-  {
-    day: "Thu",
-    subject: "Stats I",
-    date: new Date("2023-04-27"),
-    friendlyDate: (
-      <>
-        27<sup>th</sup> April
-        <br />
-        14<sup>th</sup> Baishakh
-      </>
-    ),
-  },
-];
-
-export const practicalBatch2021RoutineSem2 = [
-  {
-    day: "Tue",
-    subject: "MP",
-    date: new Date("2023-05-23"),
-    friendlyDate: (
-      <>
-        23<sup>rd</sup> May
-        <br />9<sup>th</sup> Jestha
-      </>
-    ),
-  },
-  {
-    day: "Wed",
-    subject: "OOP",
-    date: new Date("2023-05-24"),
-    friendlyDate: (
-      <>
-        24<sup>th</sup> May
-        <br />
-        10<sup>th</sup> Jestha
-      </>
-    ),
-  },
-  {
-    day: "Thu",
-    subject: "DS",
-    date: new Date("2023-05-25"),
-    friendlyDate: (
-      <>
-        25<sup>th</sup> May
-        <br />
-        11<sup>th</sup> Jestha
-      </>
-    ),
-  },
-  {
-    day: "Fri",
-    subject: "Stats I",
-    date: new Date("2023-05-26"),
-    friendlyDate: (
-      <>
-        26<sup>th</sup> May
-        <br />
-        12<sup>th</sup> Jestha
-      </>
-    ),
   },
 ];
 
@@ -2242,6 +1967,86 @@ export const opCodes = [
   {
     label: "XTHL",
     opCode: "E3",
+  },
+];
+
+export const nmAssignments = [
+  {
+    number: 1,
+    name: "Solution of Nonlinear Equation",
+  },
+  {
+    number: 2,
+    name: "Interpolation and Regression",
+  },
+  {
+    number: 3,
+    name: "Differentiation and Integration",
+  },
+  {
+    number: 4,
+    name: "Solution of Linear Equations",
+    selected: true,
+  },
+];
+
+export const dsaAssignments = [
+  {
+    number: 1,
+    name: "Stack Operations",
+  },
+  {
+    number: 2,
+    name: "Infix to Postfix Conversion Using Stack",
+  },
+  {
+    number: 3,
+    name: "Queue Operations",
+  },
+  {
+    number: 4,
+    name: "Circular Queue Operations",
+  },
+  {
+    number: 5,
+    name: "Linked List Insertion Operations",
+  },
+  {
+    number: 6,
+    name: "Linked List Deletion, Search and Display Operations",
+  },
+  {
+    number: 7,
+    name: "Doubly Linked List Operations",
+  },
+  {
+    number: 8,
+    name: "Circular Doubly Linked List Operations",
+  },
+  {
+    number: 9,
+    name: "Bubble Sort, Insertion Sort, Quick Sort and Merge Sort",
+    selected: true,
+  },
+];
+
+export const caAssignments = [
+  {
+    number: 1,
+    name: "Familiarization with VHDL programming",
+  },
+  {
+    number: 2,
+    name: "Design Half Adder and 2x4 Decoder using VHDL",
+  },
+  {
+    number: 3,
+    name: "Design Circuit using Data Flow style and Behavioral style",
+  },
+  {
+    number: 4,
+    name: "Computer Arithmetic",
+    selected: true,
   },
 ];
 

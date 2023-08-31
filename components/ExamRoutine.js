@@ -12,8 +12,9 @@ import TableRow from "@mui/material/TableRow";
 import Skeleton from "@mui/material/Skeleton";
 import { Button, Link } from "@mui/material";
 import Countdown from "./Countdown";
+import { examRoutine, questionPapers } from "../utils/constants";
 
-export default function ExamRoutine({ routine, subtitle, title }) {
+export default function ExamRoutine({ examType, sem, subtitle, title }) {
   const [loading, setLoading] = useState(true);
   const [todayDate, setTodayDate] = useState("");
   const [tomorrowDate, setTomorrowDate] = useState("");
@@ -33,8 +34,12 @@ export default function ExamRoutine({ routine, subtitle, title }) {
 
   const tCellStyles = {
     px: 1,
+    height: "inherit",
     border: "1px solid #d7d7d7",
   };
+
+  const routine = examRoutine[sem][examType];
+  const questions = questionPapers[sem];
 
   return (
     <Card
@@ -130,8 +135,8 @@ export default function ExamRoutine({ routine, subtitle, title }) {
             <>
               <TableContainer
                 sx={{
-                  maxWidth: "24rem",
                   mx: "auto",
+                  maxWidth: "560px",
                 }}
               >
                 <Table size="small">
@@ -154,7 +159,7 @@ export default function ExamRoutine({ routine, subtitle, title }) {
                       <TableCell sx={tCellStyles} align="center">
                         Subject
                       </TableCell>
-                      {routine[0].questions ? (
+                      {questions ? (
                         <TableCell sx={tCellStyles} align="center">
                           Old Qs
                         </TableCell>
@@ -163,12 +168,13 @@ export default function ExamRoutine({ routine, subtitle, title }) {
                   </TableHead>
                   <TableBody>
                     {routine.map((exam) => (
-                      <Fragment key={exam.subject}>
+                      <Fragment key={exam.subject.shortName}>
                         <TableRow
                           sx={{
                             "&:nth-of-type(even)": {
                               backgroundColor: "#f5f5f5",
                             },
+                            height: "1px",
                           }}
                         >
                           {exam.friendlyDate ? (
@@ -199,26 +205,60 @@ export default function ExamRoutine({ routine, subtitle, title }) {
                             ) : null}
                             {exam.day}
                           </TableCell>
-                          <TableCell sx={tCellStyles} align="center">
-                            {exam.subject}
+                          <TableCell sx={{ ...tCellStyles, p: 0 }}>
+                            <Link
+                              align="center"
+                              sx={{
+                                p: 1,
+                                color: "black",
+                                height: "100%",
+                                width: "100%",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                textDecoration: "none",
+                                transition: "all .1s",
+                                "&:hover": {
+                                  backgroundColor: "#e3e3e3",
+                                },
+                              }}
+                              href={exam.subject?.microSyllabus}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {exam.subject?.shortName}
+                            </Link>
                           </TableCell>
-                          {exam.questions ? (
-                            <TableCell sx={tCellStyles} align="center">
-                              {exam.questions.map((question, index) => (
-                                <>
-                                  <Button
-                                    key={index}
-                                    color="primary"
-                                    size="small"
-                                    href={question.link}
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                  >
-                                    Batch {question.batch}
-                                  </Button>
-                                  <br />
-                                </>
-                              ))}
+                          {questions ? (
+                            <TableCell
+                              sx={{
+                                ...tCellStyles,
+                                maxWidth: "200px",
+                              }}
+                              align="center"
+                            >
+                              <Box
+                                sx={{
+                                  display: "flex",
+                                  flexWrap: "wrap",
+                                  justifyContent: "space-evenly",
+                                }}
+                              >
+                                {questions[exam.subject.shortName].map(
+                                  (question, index) => (
+                                    <Button
+                                      key={index}
+                                      color="primary"
+                                      size="small"
+                                      href={question.link}
+                                      target="_blank"
+                                      rel="noreferrer noopener"
+                                    >
+                                      {question.examType} {question.batch}
+                                    </Button>
+                                  )
+                                )}
+                              </Box>
                             </TableCell>
                           ) : null}
                         </TableRow>
