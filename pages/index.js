@@ -25,15 +25,14 @@ export default function Index() {
 
   let semParam = router.asPath.split("/")[1];
 
-  if (semParam === currentJoonSem.split("sem")[1]) {
-    semParam = "";
-  }
-
   const sem = semParam ? `sem${parseInt(semParam)}` : "";
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (semParam) return;
+    if (semParam) {
+      localStorage.setItem("sem", semParam);
+      return;
+    }
     const localStorageSem = localStorage.getItem("sem");
     if (!localStorageSem || localStorageSem === currentJoonSem.split("sem")[1])
       return;
@@ -94,7 +93,7 @@ export default function Index() {
               >
                 <Materials sem={sem || currentJoonSem} />
                 <DevCppAdminNoAdminDialog />
-                {sem === "" ? (
+                {sem === "" || sem === currentJoonSem ? (
                   <>
                     <ExamRoutine
                       examType={examTypes.pre}
