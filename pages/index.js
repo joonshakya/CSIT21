@@ -35,9 +35,10 @@ export default function Index() {
     if (typeof window === "undefined") return;
     if (semParam) return;
     const localStorageSem = localStorage.getItem("sem");
-    if (!localStorageSem) return;
+    if (!localStorageSem || localStorageSem === currentJoonSem.split("sem")[1])
+      return;
     Router.replace(`/${localStorageSem}`);
-  }, [semParam]);
+  }, [semParam, sem]);
 
   return (
     <>
