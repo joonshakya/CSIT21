@@ -67,7 +67,7 @@ const TallyBar = () => {
   return (
     <Card
       sx={{
-        mt: { xs: 2, sm: 0 },
+        mt: 2,
         borderRadius: ".6rem",
         "&:hover": {
           boxShadow:

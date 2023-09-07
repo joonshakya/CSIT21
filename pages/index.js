@@ -12,10 +12,10 @@ import TallyBar from "../components/TallyBar";
 // import ClassRoutine from "../components/ClassRoutine";
 import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
-import { DevCppAdminNoAdminDialog } from "../components/DevCppAdminNoAdminDialog";
 import { examTypes, currentJoonSem } from "../utils/constants";
 import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
+import Downlaods from "../components/Downloads";
 
 export default function Index() {
   const theme = useTheme();
@@ -85,17 +85,17 @@ export default function Index() {
             <Grid container spacing={2}>
               <Grid
                 item
-                sm={6}
+                xs={12}
+                sm={10}
                 md={7}
                 sx={{
                   mx: "auto",
                 }}
               >
                 <Materials sem={sem || currentJoonSem} />
-                <DevCppAdminNoAdminDialog />
                 {sem === "" || sem === currentJoonSem ? (
                   <>
-                    <ExamRoutine
+                    {/* <ExamRoutine
                       examType={examTypes.pre}
                       sem="sem3"
                       title="Pre Board Exam Routine"
@@ -106,7 +106,7 @@ export default function Index() {
                           Section A: Room 103, Section B: Room 104
                         </>
                       }
-                    />
+                    /> */}
                     {/* <ClassRoutine /> */}
                     <ExamRoutine
                       examType={examTypes.board}
@@ -117,60 +117,18 @@ export default function Index() {
                   </>
                 ) : null}
               </Grid>
-              <Grid item xs={12} sm={6} md={5}>
-                <FrontPageGenerator />
-                <Box
-                  sx={{
-                    display: {
-                      xs: "none",
-                      sm: "block",
-                    },
-                  }}
-                >
-                  <Grid container spacing={2}>
-                    <Grid
-                      item
-                      sm={12}
-                      sx={{
-                        mx: "auto",
-                      }}
-                    >
-                      <OpCodeFinder operate={isDesktop} />
-                    </Grid>
-                    <Grid
-                      item
-                      sm={12}
-                      sx={{
-                        mx: "auto",
-                      }}
-                    >
-                      <TallyBar />
-                    </Grid>
-                    <Grid
-                      item
-                      sm={12}
-                      sx={{
-                        mx: "auto",
-                      }}
-                    >
-                      <Soon />
-                    </Grid>
-                  </Grid>
-                </Box>
-              </Grid>
               <Grid
-                className="hidden"
                 item
-                sm={12}
+                xs={12}
+                sm={10}
+                md={5}
                 sx={{
                   mx: "auto",
-                  display: {
-                    xs: "block",
-                    sm: "none",
-                  },
                 }}
               >
-                <OpCodeFinder operate={!isDesktop} />
+                <FrontPageGenerator sem={sem || currentJoonSem} />
+                <Downlaods />
+                <OpCodeFinder operate={isDesktop} />
                 <TallyBar />
                 <Soon />
               </Grid>

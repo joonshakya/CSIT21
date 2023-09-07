@@ -31,7 +31,7 @@ const OpCodeFinder = ({ operate }) => {
   return (
     <Card
       sx={{
-        mt: { xs: 0, sm: 2 },
+        mt: 2,
         display: "flex",
         borderRadius: ".6rem",
         "&:hover": {

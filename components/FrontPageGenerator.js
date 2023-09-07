@@ -30,7 +30,7 @@ import useFrontPageGenerator from "../utils/frontPageGenerator";
 import { CircularProgress } from "@mui/material";
 import { useBaseStore, useWordStore } from "../src/store";
 
-export default function FrontPageGenerator() {
+export default function FrontPageGenerator({ sem }) {
   const namePicker = useRef(null);
 
   const roll = useBaseStore((state) => state.roll);
@@ -159,7 +159,7 @@ export default function FrontPageGenerator() {
     assignmentsWithoutTopics,
   ]);
 
-  const list = [["0", ["Select your name"]], ...Object.entries(names)].map(
+  const list = [["0", ["Select your name"]], ...Object.entries(names[sem])].map(
     (entry) => ({
       roll: entry[0],
       label: entry[1][0],
@@ -171,7 +171,7 @@ export default function FrontPageGenerator() {
 
   useEffect(() => {
     setError(false);
-    prefetchDocument({ wordFiles, subject, roll, setLoad: false });
+    prefetchDocument({ sem, wordFiles, subject, roll, setLoad: false });
   }, [subject, roll, setError]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
@@ -202,6 +202,7 @@ export default function FrontPageGenerator() {
               return;
             }
             generateFrontPage({
+              sem,
               roll,
               assignmentNumber,
               subject,

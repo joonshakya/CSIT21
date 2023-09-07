@@ -16,6 +16,7 @@ export default function useFrontPageGenerator() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const generateFrontPage = async ({
+    sem,
     roll,
     subject,
     assignmentNumber,
@@ -28,6 +29,7 @@ export default function useFrontPageGenerator() {
       return;
     }
     const { error, content } = await prefetchDocument({
+      sem,
       wordFiles,
       subject,
       roll,
@@ -64,15 +66,15 @@ export default function useFrontPageGenerator() {
     };
 
     const data = {
-      name: names[roll][0],
-      roll: names[roll][1],
+      name: names[sem][roll][0],
+      roll: names[sem][roll][1],
       assignmentNumber,
       assignmentName,
       subject: indexSubjectTable[subject],
-      section: names[roll][2],
+      section: names[sem][roll][2],
     };
 
-    const outputName = `${names[roll][0]} - ${
+    const outputName = `${names[sem][roll][0]} - ${
       subject.includes("Index")
         ? `${subject}`
         : `${subject} Assignment ${assignmentNumber}`
@@ -82,14 +84,20 @@ export default function useFrontPageGenerator() {
   return [generateFrontPage, error, loading, setError];
 }
 
-export async function prefetchDocument({ wordFiles, subject, roll, setLoad }) {
+export async function prefetchDocument({
+  sem,
+  wordFiles,
+  subject,
+  roll,
+  setLoad,
+}) {
   useBaseStore.setState({ wordFileLoaded: 0 });
 
   if (subject === "DL") {
     if (roll === "0" || !roll) {
       return;
     }
-    subject = names[roll][2] == "A" ? "DL Section A" : "DL Section B";
+    subject = names[sem][roll][2] == "A" ? "DL Section A" : "DL Section B";
   } else if (subject !== "CG Index" && subject.includes("Index")) {
     subject = "Index";
   }

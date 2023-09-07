@@ -17,7 +17,7 @@ export const materials = {
       },
       {
         name: "NM",
-        link: "https://drive.google.com/drive/folders/1j22zeweR3IFWVELvtRnMUgaKc0YGnGG2?usp=drive_link",
+        link: "https://drive.google.com/drive/folders/1j22zeweR3IFWVELvtRnMUgaKc0YGnGG2?usp=sharing",
         bgColor: "#283e54",
         bgImage: "linear-gradient(340deg, #283e54 50%, #ba0707 100%)",
       },
@@ -71,40 +71,6 @@ export const materials = {
         link: "https://drive.google.com/drive/folders/1231LJG10XQ-xhLDFpbM2nh7ZA9T8Uvmx?usp=sharing",
         bgColor: "#FBAB7E",
         bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
-      },
-      {
-        name: "SPSS",
-        link: "https://youtu.be/h6mysceNFqg",
-        bgColor: "#72a0ce",
-        bgImage: "linear-gradient(120deg, #bcd8f0 0%, #4b83bc 100%)",
-      },
-      {
-        name: (
-          <>
-            VHDL
-            <br />
-            Sonata
-          </>
-        ),
-        link: "https://github.com/joonshakyawebsites/upload-some-files-to-download/releases/download/main-release/SonataSetup.exe",
-        bgColor: "#00ba45",
-        bgImage: "linear-gradient(160deg, #0000ff 0%, #00ff00 100%)",
-      },
-      {
-        name: (
-          <>
-            DevC++
-            <br />
-            graphics.h
-            <br />
-            OpenGL
-          </>
-        ),
-        onClick: () => {
-          useDevCppDownloadDialogStore.getState().setOpen(true);
-        },
-        bgColor: "#2938a4",
-        bgImage: "linear-gradient(180deg, #3c3d7b 0%, #032ef5 100%)",
       },
     ],
   },
@@ -186,12 +152,6 @@ export const materials = {
         bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
       },
       {
-        name: "SPSS",
-        link: "https://youtu.be/h6mysceNFqg",
-        bgColor: "#72a0ce",
-        bgImage: "linear-gradient(120deg, #bcd8f0 0%, #4b83bc 100%)",
-      },
-      {
         name: "DS PPT",
         link: "https://drive.google.com/drive/folders/1hx7dQ0lO7Y-93sSc2L5tqDJerwPM0oP1?usp=sharing",
         bgColor: "#55a3bf",
@@ -224,6 +184,43 @@ export const materials = {
     ],
   },
 };
+
+export const downloads = [
+  {
+    name: "SPSS",
+    link: "https://youtu.be/h6mysceNFqg",
+    bgColor: "#72a0ce",
+    bgImage: "linear-gradient(120deg, #bcd8f0 0%, #4b83bc 100%)",
+  },
+  {
+    name: (
+      <>
+        VHDL
+        <br />
+        Sonata
+      </>
+    ),
+    link: "https://github.com/joonshakyawebsites/upload-some-files-to-download/releases/download/main-release/SonataSetup.exe",
+    bgColor: "#00ba45",
+    bgImage: "linear-gradient(160deg, #0000ff 0%, #00ff00 100%)",
+  },
+  {
+    name: (
+      <>
+        DevC++
+        <br />
+        graphics.h
+        <br />
+        OpenGL
+      </>
+    ),
+    onClick: () => {
+      useDevCppDownloadDialogStore.getState().setOpen(true);
+    },
+    bgColor: "#2938a4",
+    bgImage: "linear-gradient(180deg, #3c3d7b 0%, #032ef5 100%)",
+  },
+];
 
 export const subjects = {
   sem1: {
@@ -578,9 +575,41 @@ export const questionPapers = {
         link: "https://drive.google.com/file/d/1LG18b70rYqpeRPuEM0zh5R0PTqV3XIFZ/view?usp=sharing",
       },
       {
+        examType: examTypes.pre,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1DKJT0-dPVwh2zST6u3DSWNJNo2HDDKsx/view?usp=sharing",
+      },
+      {
         examType: examTypes.board,
         batch: 2020,
         link: "https://drive.google.com/file/d/1l-xE087Zq-HyEJP043gELVZO03q6XMZM/view?usp=sharing",
+      },
+    ],
+    [subjects.sem3.NM.shortName]: [
+      {
+        examType: examTypes.mid,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1CgN11HSayGkWT-582B7hSZ1o0DMf0nVw/view?usp=sharing",
+      },
+      {
+        examType: examTypes.mid,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1Rsev3NqHbo12kj4k0c3uHP4WfqgcZkvj/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1sJlIs9Sosj-4fErCg7V16kA2220-jeaY/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/1qOkO6tkaQj8jmDCCq-L6CfqaIIVD9UpE/view?usp=sharing",
+      },
+      {
+        examType: examTypes.board,
+        batch: 2020,
+        link: "https://drive.google.com/file/d/1amrHYREsFetDaO8h3ppxGTtU-D0oQdO9/view?usp=sharing",
       },
     ],
     [subjects.sem3.CA.shortName]: [
@@ -598,6 +627,11 @@ export const questionPapers = {
         examType: examTypes.pre,
         batch: 2020,
         link: "https://drive.google.com/file/d/1PilfaCtgLJqksj1ZVNJpzS-Ohze3kVtK/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/13SiisXbpBFrirhKdQCMlcU7V3B8qbgZs/view?usp=sharing",
       },
       {
         examType: examTypes.board,
@@ -622,31 +656,14 @@ export const questionPapers = {
         link: "https://drive.google.com/file/d/1cZyI-IPa__snAb-L3HKbBwnZ2l2Cb5aD/view?usp=sharing",
       },
       {
+        examType: examTypes.pre,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/16-89THl9IAcr8tbW0Zn0SQyK1WevGT4U/view?usp=sharing",
+      },
+      {
         examType: examTypes.board,
         batch: 2020,
         link: "https://drive.google.com/file/d/1c99bZmqeHOJ0vtqQZyYJQqZ-ZsuKfz70/view?usp=sharing",
-      },
-    ],
-    [subjects.sem3.NM.shortName]: [
-      {
-        examType: examTypes.mid,
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1CgN11HSayGkWT-582B7hSZ1o0DMf0nVw/view?usp=sharing",
-      },
-      {
-        examType: examTypes.mid,
-        batch: 2021,
-        link: "https://drive.google.com/file/d/1Rsev3NqHbo12kj4k0c3uHP4WfqgcZkvj/view?usp=sharing",
-      },
-      {
-        examType: examTypes.pre,
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1sJlIs9Sosj-4fErCg7V16kA2220-jeaY/view?usp=sharing",
-      },
-      {
-        examType: examTypes.board,
-        batch: 2020,
-        link: "https://drive.google.com/file/d/1amrHYREsFetDaO8h3ppxGTtU-D0oQdO9/view?usp=sharing",
       },
     ],
     [subjects.sem3.Stats2.shortName]: [
@@ -664,6 +681,11 @@ export const questionPapers = {
         examType: examTypes.pre,
         batch: 2020,
         link: "https://drive.google.com/file/d/1HtifVPG8QRC319iPiycUW2yP8awZqrFA/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2021,
+        link: "https://drive.google.com/file/d/12bYoKeNUHz6Sp-GeOx6zq4oXD05M9pxp/view?usp=sharing",
       },
       {
         examType: examTypes.board,
@@ -934,54 +956,106 @@ export const classRoutineSem2 = [
 ];
 
 export const names = {
-  1: ["Aakash Shrestha", "021BSCIT001", "A"],
-  2: ["Aayam Pokharel", "021BSCIT002", "A"],
-  3: ["Aayush Poudel", "021BSCIT003", "A"],
-  4: ["Aayush Shrestha", "021BSCIT004", "A"],
-  5: ["Abhishek Uprety", "021BSCIT005", "A"],
-  6: ["Ashraya Jung Sijapati", "021BSCIT006", "A"],
-  7: ["Binaya Paudel", "021BSCIT007", "A"],
-  8: ["Binaya Shrestha", "021BSCIT008", "A"],
-  9: ["Dhiraj Sah", "021BSCIT009", "A"],
-  10: ["Gaurav Bhatt", "021BSCIT010", "A"],
-  11: ["Gaurav Kafle", "021BSCIT011", "A"],
-  12: ["Joon Shakya", "021BSCIT012", "A"],
-  13: ["Nischal Shrestha", "021BSCIT013", "A"],
-  14: ["Nitika Pradhananga", "021BSCIT014", "A"],
-  15: ["Pralov Malla", "021BSCIT015", "A"],
-  16: ["Rasna Bhasima", "021BSCIT016", "A"],
-  17: ["Redikshya Phuyal", "021BSCIT017", "A"],
-  18: ["Rhizu Joshi", "021BSCIT018", "A"],
-  19: ["Riwaj Prasai", "021BSCIT019", "A"],
-  20: ["Ruby Shrestha", "021BSCIT020", "A"],
-  21: ["Rupesh Bashyal", "021BSCIT021", "A"],
-  22: ["Sahara Khatri", "021BSCIT022", "A"],
-  23: ["Sahil Lamsal", "021BSCIT023", "A"],
-  24: ["Saisab Karki", "021BSCIT024", "A"],
-  25: ["Sajina Basnet", "021BSCIT025", "B"],
-  26: ["Samarpan Bhandari", "021BSCIT026", "B"],
-  27: ["Sameer Shrestha", "021BSCIT027", "B"],
-  28: ["Sashwat Maharjan", "021BSCIT028", "B"],
-  29: ["Satish Maharjan", "021BSCIT029", "B"],
-  30: ["Saugat Dahal", "021BSCIT030", "B"],
-  31: ["Saurabh Baral", "021BSCIT031", "B"],
-  32: ["Saurav Bista", "021BSCIT032", "B"],
-  33: ["Selina Maharjan", "021BSCIT033", "B"],
-  34: ["Shamant Kharel", "021BSCIT034", "B"],
-  35: ["Shasin Regmi", "021BSCIT035", "B"],
-  36: ["Shreeya Nepal", "021BSCIT036", "B"],
-  37: ["Shristi Shakya", "021BSCIT037", "B"],
-  38: ["Shubham Belbase", "021BSCIT038", "B"],
-  39: ["Siddhanta Shrestha", "021BSCIT039", "B"],
-  40: ["Sijan Khatri", "021BSCIT040", "B"],
-  41: ["Spandan Shakya", "021BSCIT041", "B"],
-  42: ["Sudip Shrestha", "021BSCIT042", "B"],
-  43: ["Suhana Shrestha", "021BSCIT043", "B"],
-  44: ["Sujal Bajracharya", "021BSCIT044", "B"],
-  45: ["Susmita Majhi", "021BSCIT045", "B"],
-  46: ["Swoyesh Shrestha", "021BSCIT046", "B"],
-  47: ["Yogesh Rijal", "021BSCIT047", "B"],
-  48: ["Yubraj Khatiwada", "021BSCIT048", "B"],
+  sem3: {
+    1: ["Aakash Shrestha", "021BSCIT001", "A"],
+    2: ["Aayam Pokharel", "021BSCIT002", "A"],
+    3: ["Aayush Poudel", "021BSCIT003", "A"],
+    4: ["Aayush Shrestha", "021BSCIT004", "A"],
+    5: ["Abhishek Uprety", "021BSCIT005", "A"],
+    6: ["Ashraya Jung Sijapati", "021BSCIT006", "A"],
+    7: ["Binaya Paudel", "021BSCIT007", "A"],
+    8: ["Binaya Shrestha", "021BSCIT008", "A"],
+    9: ["Dhiraj Sah", "021BSCIT009", "A"],
+    10: ["Gaurav Bhatt", "021BSCIT010", "A"],
+    11: ["Gaurav Kafle", "021BSCIT011", "A"],
+    12: ["Joon Shakya", "021BSCIT012", "A"],
+    13: ["Nischal Shrestha", "021BSCIT013", "A"],
+    14: ["Nitika Pradhananga", "021BSCIT014", "A"],
+    15: ["Pralov Malla", "021BSCIT015", "A"],
+    16: ["Rasna Bhasima", "021BSCIT016", "A"],
+    17: ["Redikshya Phuyal", "021BSCIT017", "A"],
+    18: ["Rhizu Joshi", "021BSCIT018", "A"],
+    19: ["Riwaj Prasai", "021BSCIT019", "A"],
+    20: ["Ruby Shrestha", "021BSCIT020", "A"],
+    21: ["Rupesh Bashyal", "021BSCIT021", "A"],
+    22: ["Sahara Khatri", "021BSCIT022", "A"],
+    23: ["Sahil Lamsal", "021BSCIT023", "A"],
+    24: ["Saisab Karki", "021BSCIT024", "A"],
+    25: ["Sajina Basnet", "021BSCIT025", "B"],
+    26: ["Samarpan Bhandari", "021BSCIT026", "B"],
+    27: ["Sameer Shrestha", "021BSCIT027", "B"],
+    28: ["Sashwat Maharjan", "021BSCIT028", "B"],
+    29: ["Satish Maharjan", "021BSCIT029", "B"],
+    30: ["Saugat Dahal", "021BSCIT030", "B"],
+    31: ["Saurabh Baral", "021BSCIT031", "B"],
+    32: ["Saurav Bista", "021BSCIT032", "B"],
+    33: ["Selina Maharjan", "021BSCIT033", "B"],
+    34: ["Shamant Kharel", "021BSCIT034", "B"],
+    35: ["Shasin Regmi", "021BSCIT035", "B"],
+    36: ["Shreeya Nepal", "021BSCIT036", "B"],
+    37: ["Shristi Shakya", "021BSCIT037", "B"],
+    38: ["Shubham Belbase", "021BSCIT038", "B"],
+    39: ["Siddhanta Shrestha", "021BSCIT039", "B"],
+    40: ["Sijan Khatri", "021BSCIT040", "B"],
+    41: ["Spandan Shakya", "021BSCIT041", "B"],
+    42: ["Sudip Shrestha", "021BSCIT042", "B"],
+    43: ["Suhana Shrestha", "021BSCIT043", "B"],
+    44: ["Sujal Bajracharya", "021BSCIT044", "B"],
+    45: ["Susmita Majhi", "021BSCIT045", "B"],
+    46: ["Swoyesh Shrestha", "021BSCIT046", "B"],
+    47: ["Yogesh Rijal", "021BSCIT047", "B"],
+    48: ["Yubraj Khatiwada", "021BSCIT048", "B"],
+  },
+  sem2: {
+    1: ["Aarjan Mani", "022BSCIT001", "A"],
+    2: ["Aaryan Bista", "022BSCIT002", "A"],
+    3: ["Aasvi Lamsal", "022BSCIT003", "A"],
+    4: ["Aayush Acharya", "022BSCIT004", "A"],
+    5: ["Adarsha Baskota", "022BSCIT005", "A"],
+    6: ["Alis Maharjan", "022BSCIT006", "A"],
+    7: ["Barsha Regmi", "022BSCIT007", "A"],
+    8: ["Binish Shrestha", "022BSCIT008", "A"],
+    9: ["Deepika Gautam", "022BSCIT009", "A"],
+    10: ["Devesh Phaiju", "022BSCIT010", "A"],
+    11: ["Devesh Shrestha", "022BSCIT011", "A"],
+    12: ["Dipan Kharel", "022BSCIT012", "A"],
+    13: ["Dipesh Kumar Kushwaha", "022BSCIT013", "A"],
+    14: ["Jenish Shrestha", "022BSCIT014", "A"],
+    15: ["Kamal Dhami", "022BSCIT015", "A"],
+    16: ["Karuna Silwal", "022BSCIT016", "A"],
+    17: ["Mamata Pokharel", "022BSCIT017", "A"],
+    18: ["Niharika Khanal", "022BSCIT018", "A"],
+    19: ["Niharika Shrestha", "022BSCIT019", "A"],
+    20: ["Nilima Shrestha", "022BSCIT020", "A"],
+    21: ["Nilisha Shakya", "022BSCIT021", "A"],
+    22: ["Nirajan Kumar Yadav", "022BSCIT022", "A"],
+    23: ["Nirajan Paudel", "022BSCIT023", "A"],
+    24: ["Nirjal Maharjan", "022BSCIT024", "A"],
+    25: ["Nischal Gyawali", "022BSCIT025", "B"],
+    26: ["Nisum Yonghang", "022BSCIT026", "B"],
+    27: ["Parikshit Maharjan", "022BSCIT027", "B"],
+    28: ["Piyush K.C.", "022BSCIT028", "B"],
+    29: ["Prakriti Shrestha", "022BSCIT029", "B"],
+    30: ["Prasamsha Pudasaini", "022BSCIT030", "B"],
+    31: ["Pratistha Maharjan", "022BSCIT031", "B"],
+    32: ["Puspa Bhusal", "022BSCIT032", "B"],
+    33: ["Raman Shakya", "022BSCIT033", "B"],
+    34: ["Rayan Karki", "022BSCIT034", "B"],
+    35: ["Sabin Dahal", "022BSCIT035", "B"],
+    36: ["Samragi Dhakal", "022BSCIT036", "B"],
+    37: ["Samridh Kandel", "022BSCIT037", "B"],
+    38: ["Satish Dhakal", "022BSCIT038", "B"],
+    39: ["Saugat Thapa", "022BSCIT039", "B"],
+    40: ["Sejal Ghimire", "022BSCIT040", "B"],
+    41: ["Smriti Pant", "022BSCIT041", "B"],
+    42: ["Spandan Shah", "022BSCIT042", "B"],
+    43: ["Srijal Manandhar", "022BSCIT043", "B"],
+    44: ["Subham Sharma", "022BSCIT044", "B"],
+    45: ["Sumit Kumar Sah", "022BSCIT045", "B"],
+    46: ["Supreme Khadka", "022BSCIT046", "B"],
+    47: ["Swornim Raj Dangol", "022BSCIT047", "B"],
+    48: ["Utsav Adhikari", "022BSCIT048", "B"],
+  },
 };
 
 export const opCodes = [

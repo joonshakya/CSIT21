@@ -7,7 +7,7 @@ import FormControl from "@mui/material/FormControl";
 import { materials } from "../utils/constants";
 import { useRouter } from "next/router";
 
-const GradientButton = ({ name, link, bgColor, bgImage, onClick }) => (
+export const GradientButton = ({ name, link, bgColor, bgImage, onClick }) => (
   <Button
     href={link}
     onClick={onClick}
