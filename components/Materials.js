@@ -78,7 +78,7 @@ const Materials = ({ sem }) => {
               value={sem}
               onChange={(event) => {
                 localStorage.setItem("sem", event.target.value.split("sem")[1]);
-                router.push(`/${event.target.value.split("sem")[1]}`);
+                router.replace(`/${event.target.value.split("sem")[1]}`);
               }}
               sx={{
                 py: 1,
