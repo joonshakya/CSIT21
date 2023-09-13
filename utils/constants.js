@@ -2061,6 +2061,14 @@ export const nmAssignments = [
   {
     number: 4,
     name: "Solution of Linear Equations",
+  },
+  {
+    number: 5,
+    name: "Solution of Ordinary Differential Equation",
+  },
+  {
+    number: 6,
+    name: "Solution of Partial Differential Equation",
     selected: true,
   },
 ];
