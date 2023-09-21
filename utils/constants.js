@@ -698,7 +698,60 @@ export const questionPapers = {
 
 export const examRoutine = {
   sem1: {},
-  sem2: {},
+  sem2: {
+    [examTypes.pre]: [
+      {
+        day: "Mon",
+        subject: subjects.sem2.DS,
+        date: new Date("2023-09-25"),
+        friendlyDate: (
+          <>
+            25<sup>th</sup> September
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem2.OOP,
+        date: new Date("2023-09-26"),
+        friendlyDate: (
+          <>
+            26<sup>th</sup> September
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem2.MP,
+        date: new Date("2023-09-27"),
+        friendlyDate: (
+          <>
+            27<sup>th</sup> September
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem2.Maths2,
+        date: new Date("2023-09-28"),
+        friendlyDate: (
+          <>
+            28<sup>th</sup> September
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem2.Stats1,
+        date: new Date("2023-09-29"),
+        friendlyDate: (
+          <>
+            29<sup>th</sup> September
+          </>
+        ),
+      },
+    ],
+  },
   sem3: {
     [examTypes.mid]: [
       {
@@ -875,6 +928,7 @@ export const examRoutine = {
     ],
   },
 };
+
 export const currentJoonSem = "sem3";
 
 export const classRoutineSem2 = [

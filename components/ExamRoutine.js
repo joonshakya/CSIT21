@@ -218,9 +218,11 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                                 justifyContent: "center",
                                 textDecoration: "none",
                                 transition: "all .1s",
-                                "&:hover": {
-                                  backgroundColor: "#e3e3e3",
-                                },
+                                "&:hover": exam.subject?.microSyllabus
+                                  ? {
+                                      backgroundColor: "#e3e3e3",
+                                    }
+                                  : null,
                               }}
                               href={exam.subject?.microSyllabus}
                               target="_blank"

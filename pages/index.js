@@ -116,6 +116,30 @@ export default function Index() {
                     />
                   </>
                 ) : null}
+
+                {sem === "sem2" ? (
+                  <>
+                    {/* <ExamRoutine
+                      examType={examTypes.pre}
+                      sem="sem3"
+                      title="Pre Board Exam Routine"
+                      subtitle={
+                        <>
+                          Exam time: 6:15 AM - 9:15 AM
+                          <br />
+                          Section A: Room 103, Section B: Room 104
+                        </>
+                      }
+                    /> */}
+                    {/* <ClassRoutine /> */}
+                    <ExamRoutine
+                      examType={examTypes.pre}
+                      sem="sem2"
+                      title="Pre Board Exam Routine"
+                      subtitle={<>Exam time: 6:15 AM - 9:15 AM</>}
+                    />
+                  </>
+                ) : null}
               </Grid>
               <Grid
                 item
