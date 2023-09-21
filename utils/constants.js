@@ -385,6 +385,7 @@ export const examTypes = {
   mid: "Mid Term",
   pre: "Pre Board",
   board: "Board",
+  prac: "Practical",
 };
 
 export const questionPapers = {
@@ -747,6 +748,48 @@ export const examRoutine = {
         friendlyDate: (
           <>
             29<sup>th</sup> September
+          </>
+        ),
+      },
+    ],
+    [examTypes.prac]: [
+      {
+        day: "Mon",
+        subject: subjects.sem2.DS,
+        date: new Date("2023-10-09"),
+        friendlyDate: (
+          <>
+            9<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem2.OOP,
+        date: new Date("2023-10-10"),
+        friendlyDate: (
+          <>
+            10<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem2.MP,
+        date: new Date("2023-10-11"),
+        friendlyDate: (
+          <>
+            11<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem2.Stats1,
+        date: new Date("2023-10-12"),
+        friendlyDate: (
+          <>
+            12<sup>th</sup> October
           </>
         ),
       },

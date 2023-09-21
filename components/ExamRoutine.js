@@ -13,7 +13,7 @@ import Skeleton from "@mui/material/Skeleton";
 import { Button, Link } from "@mui/material";
 import Countdown from "./Countdown";
 import { examRoutine, questionPapers } from "../utils/constants";
-
+import { examTypes as examTypesObj } from "../utils/constants";
 export default function ExamRoutine({ examType, sem, subtitle, title }) {
   const [loading, setLoading] = useState(true);
   const [todayDate, setTodayDate] = useState("");
@@ -40,6 +40,12 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
 
   const routine = examRoutine[sem][examType];
   const questions = questionPapers[sem];
+
+  if (
+    routine[routine.length - 1].date <
+    new Date(new Date().getTime() - 24 * 60 * 60 * 1000)
+  )
+    return null;
 
   return (
     <Card
@@ -69,7 +75,7 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
           }}
         >
           <Typography variant="h5" component="div">
-            {title}
+            {title ? title : `${examType} Exam Routine`}
           </Typography>
           <Typography variant="body2" gutterBottom color="text.secondary">
             {subtitle ? (
@@ -136,7 +142,7 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
               <TableContainer
                 sx={{
                   mx: "auto",
-                  maxWidth: "560px",
+                  maxWidth: examType !== examTypesObj.prac ? "560px" : "360px",
                 }}
               >
                 <Table size="small">
@@ -159,7 +165,7 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                       <TableCell sx={tCellStyles} align="center">
                         Subject
                       </TableCell>
-                      {questions ? (
+                      {questions && examType !== examTypesObj.prac ? (
                         <TableCell sx={tCellStyles} align="center">
                           Old Qs
                         </TableCell>
@@ -231,7 +237,7 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                               {exam.subject?.shortName}
                             </Link>
                           </TableCell>
-                          {questions ? (
+                          {questions && examType !== examTypesObj.prac ? (
                             <TableCell
                               sx={{
                                 ...tCellStyles,
