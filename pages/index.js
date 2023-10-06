@@ -120,11 +120,11 @@ export default function Index() {
 
                 {sem === "sem2" ? (
                   <>
-                    {/* <ExamRoutine
+                    <ExamRoutine
                       examType={examTypes.pre}
                       sem="sem2"
                       subtitle={<>Exam time: 6:15 AM - 9:15 AM</>}
-                    /> */}
+                    />
                     <ExamRoutine examType={examTypes.prac} sem="sem2" />
                   </>
                 ) : null}

@@ -424,6 +424,11 @@ export const questionPapers = {
         link: "https://drive.google.com/file/d/16O2zI_vrZaKGQRxWZFEqDuGOdOJf8cB8/view?usp=sharing",
       },
       {
+        examType: examTypes.pre,
+        batch: 2022,
+        link: "https://drive.google.com/file/d/1p-NnuX7b956dlus-XFX-0i5RgRupuOj-/view?usp=sharing",
+      },
+      {
         examType: examTypes.board,
         batch: 2020,
         link: "https://drive.google.com/file/d/1Oq1S5t9DfyHbgwZwV-hGdLjAIvAwDv0h/view?usp=sharing",
@@ -454,6 +459,11 @@ export const questionPapers = {
         examType: examTypes.pre,
         batch: 2021,
         link: "https://drive.google.com/file/d/1kQAuNvZN-wtOydnV3R_d1_yUgfwB1Thg/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2022,
+        link: "https://drive.google.com/file/d/1gAh2LrnR8BIzM2c18QMJb_YPMgHkihGU/view?usp=sharing",
       },
       {
         examType: examTypes.board,
@@ -488,6 +498,11 @@ export const questionPapers = {
         link: "https://drive.google.com/file/d/1rev8bLaWn_QF8s61WmG6n_i-H75YwpcS/view?usp=sharing",
       },
       {
+        examType: examTypes.pre,
+        batch: 2022,
+        link: "https://drive.google.com/file/d/1KQf0Yp4Oez5iAPhWXSA16lVyb9RUmd2b/view?usp=sharing",
+      },
+      {
         examType: examTypes.board,
         batch: 2020,
         link: "https://drive.google.com/file/d/1AvSpFuEfuqWfrS5jszcVnk7VzncE1KjC/view?usp=sharing",
@@ -520,6 +535,11 @@ export const questionPapers = {
         link: "https://drive.google.com/file/d/1XA4wat2weieOtz4w9YV06_QlOCxUhgzq/view?usp=sharing",
       },
       {
+        examType: examTypes.pre,
+        batch: 2022,
+        link: "https://drive.google.com/file/d/1Y9Orz4p4J2f-v2papNetSmNcp8csd9ma/view?usp=sharing",
+      },
+      {
         examType: examTypes.board,
         batch: 2020,
         link: "https://drive.google.com/file/d/13Rg-Tf0JTpkLg0zvROTpyWdKdUP0oEPv/view?usp=sharing",
@@ -550,6 +570,11 @@ export const questionPapers = {
         examType: examTypes.pre,
         batch: 2021,
         link: "https://drive.google.com/file/d/15MUANysXDXlqa0fumKrFjUJADpG-i_eh/view?usp=sharing",
+      },
+      {
+        examType: examTypes.pre,
+        batch: 2022,
+        link: "https://drive.google.com/file/d/1XzE6iPG086GEZeMTBEB-41HA5uW9_lW3/view?usp=sharing",
       },
       {
         examType: examTypes.board,
