@@ -98,7 +98,7 @@ function sendMail({ name = "", message = "", sem = "", setName, setFeedback }) {
   try {
     document.createEvent("TouchEvent");
     window.location.href = `mailto:Joon Shakya<joonshakya07@gmail.com>?subject=Feedback by ${name} ${
-      sem ?? `from ${sem}`
+      sem ? `from ${sem}` : ""
     }&body=${message}`;
   } catch (e) {
     const h = 500;
@@ -107,7 +107,7 @@ function sendMail({ name = "", message = "", sem = "", setName, setFeedback }) {
     const topPosition = screen.height ? (screen.height - h) / 2 : 0;
     window.open(
       `https://mail.google.com?view=cm&to=Joon Shakya<joonshakya07@gmail.com>&su=Feedback by ${name} ${
-        sem ?? `from ${sem}`
+        sem ? `from ${sem}` : ""
       }&&body=${message}`,
       "popUpWindow",
       `height=${h},width=${w},left=${leftPosition},top=${topPosition},resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes&authuser=2`
