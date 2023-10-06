@@ -16,6 +16,8 @@ const CheckForUpdate = () => {
   const name = useNonPersistingStore((state) => state.feedbackName);
   const feedback = useNonPersistingStore((state) => state.feedbackMessage);
 
+  const preventRefresh = name || feedback;
+
   useEffect(() => {
     const checkForUpdate = setInterval(async () => {
       if (typeof __NEXT_DATA__ !== "undefined") {
@@ -37,7 +39,7 @@ const CheckForUpdate = () => {
 
   useEffect(() => {
     setTimeoutText(10);
-    if (open && !(name || feedback)) {
+    if (open && !preventRefresh) {
       const timeout = setInterval(() => {
         setTimeoutText((prev) => {
           if (prev > 1) {
@@ -53,7 +55,7 @@ const CheckForUpdate = () => {
         clearInterval(timeout);
       };
     }
-  }, [open, router, name, feedback]);
+  }, [open, router, preventRefresh]);
 
   // const handleClose = (event, reason) => {
   //   if (reason === "clickaway") {
@@ -74,7 +76,7 @@ const CheckForUpdate = () => {
           }}
         >
           A new update of the website is available.{" "}
-          {name || feedback
+          {preventRefresh
             ? `Please refresh the page to get the latest version.`
             : `Refreshing ${
                 timeoutText
