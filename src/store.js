@@ -78,3 +78,18 @@ export const useDevCppDownloadDialogStore = create((set) => ({
     }));
   },
 }));
+
+export const useNonPersistingStore = create((set) => ({
+  feedbackName: "",
+  setFeedbackName: (feedbackName) => {
+    set(() => ({
+      feedbackName,
+    }));
+  },
+  feedbackMessage: "",
+  setFeedbackMessage: (feedbackMessage) => {
+    set(() => ({
+      feedbackMessage,
+    }));
+  },
+}));

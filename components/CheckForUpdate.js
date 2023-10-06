@@ -2,6 +2,7 @@ import { forwardRef, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import MuiAlert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
+import { useNonPersistingStore } from "../src/store";
 
 const Alert = forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -11,6 +12,9 @@ const CheckForUpdate = () => {
   const [open, setOpen] = useState(false);
   const [timeoutText, setTimeoutText] = useState(10);
   const router = useRouter();
+
+  const name = useNonPersistingStore((state) => state.feedbackName);
+  const feedback = useNonPersistingStore((state) => state.feedbackMessage);
 
   useEffect(() => {
     const checkForUpdate = setInterval(async () => {
@@ -32,7 +36,8 @@ const CheckForUpdate = () => {
   }, []);
 
   useEffect(() => {
-    if (open) {
+    setTimeoutText(10);
+    if (open && !(name || feedback)) {
       const timeout = setInterval(() => {
         setTimeoutText((prev) => {
           if (prev > 1) {
@@ -48,31 +53,34 @@ const CheckForUpdate = () => {
         clearInterval(timeout);
       };
     }
-  }, [open, router]);
+  }, [open, router, name, feedback]);
 
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
+  // const handleClose = (event, reason) => {
+  //   if (reason === "clickaway") {
+  //     return;
+  //   }
 
-    setOpen(false);
-  };
+  //   setOpen(false);
+  // };
 
   return (
     <>
-      <Snackbar open={open} onClose={handleClose}>
+      <Snackbar open={open}>
         <Alert
-          onClose={handleClose}
           severity="success"
           sx={{
             width: "100%",
             m: "env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)",
           }}
         >
-          A new update of the website is available. Refreshing{" "}
-          {timeoutText
-            ? `in ${timeoutText} second${timeoutText > 1 ? "s" : ""}`
-            : "now"}
+          A new update of the website is available.{" "}
+          {name || feedback
+            ? `Please refresh the page to get the latest version.`
+            : `Refreshing ${
+                timeoutText
+                  ? `in ${timeoutText} second${timeoutText > 1 ? "s" : ""}`
+                  : "now"
+              }.`}
           .
         </Alert>
       </Snackbar>

@@ -6,11 +6,17 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import { useNonPersistingStore } from "../src/store";
 
 export default function Feedback({ sem }) {
-  const [name, setName] = useState("");
-  const [feedback, setFeedback] = useState("");
+  const name = useNonPersistingStore((state) => state.feedbackName);
+  const setName = useNonPersistingStore((state) => state.setFeedbackName);
+
+  const feedback = useNonPersistingStore((state) => state.feedbackMessage);
+  const setFeedback = useNonPersistingStore(
+    (state) => state.setFeedbackMessage
+  );
+
   return (
     <Card
       sx={{
@@ -39,13 +45,14 @@ export default function Feedback({ sem }) {
           id="feedback-form"
           onSubmit={(event) => {
             event.preventDefault();
+            console.log(event.target);
             sendMail({
               name: encodeURIComponent(name),
               message: encodeURIComponent(feedback),
               sem: sem ? encodeURIComponent(sem) : "",
-              setName,
-              setFeedback,
             });
+            setName("");
+            setFeedback("");
           }}
         >
           <div>
@@ -53,6 +60,7 @@ export default function Feedback({ sem }) {
               label="Your Name"
               name="name"
               required
+              multiline
               value={name}
               onChange={(event) => {
                 setName(event.target.value);
@@ -78,7 +86,6 @@ export default function Feedback({ sem }) {
               }}
             />
           </div>
-
           <CardActions
             sx={{
               flexWrap: "wrap",
@@ -94,7 +101,7 @@ export default function Feedback({ sem }) {
   );
 }
 
-function sendMail({ name = "", message = "", sem = "", setName, setFeedback }) {
+function sendMail({ name = "", message = "", sem = "" }) {
   try {
     document.createEvent("TouchEvent");
     window.location.href = `mailto:Joon Shakya<joonshakya07@gmail.com>?subject=Feedback by ${name} ${
@@ -113,7 +120,5 @@ function sendMail({ name = "", message = "", sem = "", setName, setFeedback }) {
       `height=${h},width=${w},left=${leftPosition},top=${topPosition},resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes&authuser=2`
     );
   }
-  setName("");
-  setFeedback("");
   return true;
 }
