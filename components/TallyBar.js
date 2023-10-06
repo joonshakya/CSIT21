@@ -76,111 +76,114 @@ const TallyBar = () => {
       }}
       elevation={3}
     >
-      <CardContent
-        sx={{
-          flex: 1,
-          pb: "0 !important",
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          copyToClipboard();
         }}
       >
-        <Typography gutterBottom variant="h5" component="div">
-          Tally Bar Generator
-        </Typography>
-        <Box
+        <CardContent
           sx={{
-            position: "relative",
+            flex: 1,
+            pb: "0 !important",
           }}
         >
-          <TextField
-            label="Input Frequency (Eg: 20)"
-            multiline
+          <Typography gutterBottom variant="h5" component="div">
+            Tally Bar Generator
+          </Typography>
+          <Box
             sx={{
-              mt: 1,
-              width: frequency ? "35%" : "100%",
-              transition: "all 0.2s",
-              backgroundColor: "white",
-              zIndex: 1,
-            }}
-            value={frequency}
-            onPaste={() => {
-              setPasted(true);
-            }}
-            // onFocus={(e) => {
-            //   e.target.select();
-            // }}
-            onChange={(e) => {
-              e.target.value = e.target.value
-                .replace(/[^0-9\n]/g, "")
-                .replace("\n\n", "\n")
-                .split("\n")
-                .map((line) => {
-                  if (line.length > 3) {
-                    return line.slice(0, 3);
-                  }
-                  return line;
-                })
-                .join("\n");
-              setFrequency(e.target.value);
-            }}
-          />
-          <Table
-            size="small"
-            sx={{
-              position: "absolute",
-              top: 0,
-              right: 0,
-              left: "35%",
+              position: "relative",
             }}
           >
-            <TableBody ref={tBodyRef}>
-              <TableRow>
-                <TableCell
-                  sx={{
-                    pt: 3,
-                    fontSize: "1rem",
-                    border: "none",
-                    userSelect: "all",
-                    whiteSpace: "nowrap",
-                    overflow: "hidden",
-                  }}
-                >
-                  {frequencies.map((freq, index) =>
-                    freq ? (
-                      <Fragment key={index}>
-                        {Array(Math.floor(freq / 5) || 0)
-                          .fill(
-                            <>
-                              <s>{"////"}</s>{" "}
-                            </>
-                          )
-                          .map((item, index) => (
-                            <Fragment key={index}>{item}</Fragment>
-                          ))}
-                        {new Array(freq % 5 || 0).fill("/")}
-                        <br />
-                      </Fragment>
-                    ) : null
-                  )}
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </Box>
-      </CardContent>
+            <TextField
+              label="Input Frequency (Eg: 20)"
+              multiline
+              sx={{
+                mt: 1,
+                width: frequency ? "35%" : "100%",
+                transition: "all 0.2s",
+                backgroundColor: "white",
+                zIndex: 1,
+              }}
+              required
+              value={frequency}
+              onPaste={() => {
+                setPasted(true);
+              }}
+              // onFocus={(e) => {
+              //   e.target.select();
+              // }}
+              onChange={(e) => {
+                e.target.value = e.target.value
+                  .replace(/[^0-9\n]/g, "")
+                  .replace("\n\n", "\n")
+                  .split("\n")
+                  .map((line) => {
+                    if (line.length > 3) {
+                      return line.slice(0, 3);
+                    }
+                    return line;
+                  })
+                  .join("\n");
+                setFrequency(e.target.value);
+              }}
+            />
+            <Table
+              size="small"
+              sx={{
+                position: "absolute",
+                top: 0,
+                right: 0,
+                left: "35%",
+              }}
+            >
+              <TableBody ref={tBodyRef}>
+                <TableRow>
+                  <TableCell
+                    sx={{
+                      pt: 3,
+                      fontSize: "1rem",
+                      border: "none",
+                      userSelect: "all",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                    }}
+                  >
+                    {frequencies.map((freq, index) =>
+                      freq ? (
+                        <Fragment key={index}>
+                          {Array(Math.floor(freq / 5) || 0)
+                            .fill(
+                              <>
+                                <s>{"////"}</s>{" "}
+                              </>
+                            )
+                            .map((item, index) => (
+                              <Fragment key={index}>{item}</Fragment>
+                            ))}
+                          {new Array(freq % 5 || 0).fill("/")}
+                          <br />
+                        </Fragment>
+                      ) : null
+                    )}
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </Box>
+        </CardContent>
 
-      <CardActions
-        sx={{
-          flexWrap: "wrap",
-        }}
-      >
-        <Button
-          size="small"
-          onClick={() => {
-            copyToClipboard();
+        <CardActions
+          sx={{
+            flexWrap: "wrap",
           }}
         >
-          Copy to Clipboard
-        </Button>
-      </CardActions>
+          <Button type="submit" size="small">
+            Copy to Clipboard
+          </Button>
+        </CardActions>
+      </form>
       <Snackbar open={alertOpen} autoHideDuration={3000} onClose={closeAlert}>
         <Alert
           onClose={closeAlert}

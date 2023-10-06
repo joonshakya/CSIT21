@@ -754,29 +754,10 @@ export const examRoutine = {
     ],
     [examTypes.prac]: [
       {
-        day: "Mon",
-        subject: subjects.sem2.DS,
-        date: new Date("2023-10-09"),
-        friendlyDate: (
-          <>
-            9<sup>th</sup> October
-          </>
-        ),
-      },
-      {
-        day: "Tue",
-        subject: subjects.sem2.OOP,
-        date: new Date("2023-10-10"),
-        friendlyDate: (
-          <>
-            10<sup>th</sup> October
-          </>
-        ),
-      },
-      {
         day: "Wed",
-        subject: subjects.sem2.MP,
+        subject: subjects.sem2.DS,
         date: new Date("2023-10-11"),
+        time: "7:00 AM",
         friendlyDate: (
           <>
             11<sup>th</sup> October
@@ -784,12 +765,35 @@ export const examRoutine = {
         ),
       },
       {
-        day: "Thu",
+        day: "Fri",
         subject: subjects.sem2.Stats1,
-        date: new Date("2023-10-12"),
+        date: new Date("2023-10-13"),
+        time: "7:00 AM",
         friendlyDate: (
           <>
-            12<sup>th</sup> October
+            13<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem2.OOP,
+        date: new Date("2023-10-16"),
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            16<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem2.MP,
+        date: new Date("2023-10-17"),
+        time: "11:30 AM",
+        friendlyDate: (
+          <>
+            17<sup>th</sup> October
           </>
         ),
       },
@@ -965,6 +969,75 @@ export const examRoutine = {
             11<sup>th</sup> October
             <br />
             24<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+    ],
+    [examTypes.prac]: [
+      {
+        day: "Thu",
+        subject: subjects.sem3.CG,
+        date: new Date("2023-10-12"),
+        time: "10:00 AM",
+        friendlyDate: (
+          <>
+            12<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem3.DSA,
+        date: new Date("2023-10-13"),
+        time: (
+          <>
+            7:00 AM
+            <br />
+            PTA Lab
+          </>
+        ),
+        friendlyDate: (
+          <>
+            13<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem3.NM,
+        date: new Date("2023-10-16"),
+        time: (
+          <>
+            7:00 AM
+            <br />
+            PTA Lab
+          </>
+        ),
+        friendlyDate: (
+          <>
+            16<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem3.CA,
+        date: new Date("2023-10-17"),
+        time: "10:00 AM",
+        friendlyDate: (
+          <>
+            17<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem3.Stats2,
+        date: new Date("2023-10-19"),
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            19<sup>th</sup> October
           </>
         ),
       },

@@ -68,6 +68,7 @@ function DrawerAppBar(props) {
           component="nav"
           sx={{
             background: "linear-gradient(90deg, #3498db, #8e44ad)",
+            zIndex: 1500, // just greater than dropdown,
           }}
         >
           <Box

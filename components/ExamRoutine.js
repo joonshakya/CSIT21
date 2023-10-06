@@ -162,6 +162,11 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                       <TableCell sx={tCellStyles} align="center">
                         Day
                       </TableCell>
+                      {routine[0].time ? (
+                        <TableCell sx={tCellStyles} align="center">
+                          Time
+                        </TableCell>
+                      ) : null}
                       <TableCell sx={tCellStyles} align="center">
                         Subject
                       </TableCell>
@@ -211,6 +216,11 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                             ) : null}
                             {exam.day}
                           </TableCell>
+                          {exam.time ? (
+                            <TableCell sx={tCellStyles} align="center">
+                              {exam.time}
+                            </TableCell>
+                          ) : null}
                           <TableCell sx={{ ...tCellStyles, p: 0 }}>
                             <Link
                               align="center"
