@@ -109,22 +109,22 @@ export default function Index() {
                       }
                     /> */}
                     {/* <ClassRoutine /> */}
-                    <ExamRoutine
+                    {/* <ExamRoutine
                       examType={examTypes.board}
                       sem="sem3"
                       subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
-                    />
+                    /> */}
                     <ExamRoutine examType={examTypes.prac} sem="sem3" />
                   </>
                 ) : null}
 
                 {sem === "sem2" ? (
                   <>
-                    <ExamRoutine
+                    {/* <ExamRoutine
                       examType={examTypes.pre}
                       sem="sem2"
                       subtitle={<>Exam time: 6:15 AM - 9:15 AM</>}
-                    />
+                    /> */}
                     <ExamRoutine examType={examTypes.prac} sem="sem2" />
                   </>
                 ) : null}
