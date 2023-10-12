@@ -98,7 +98,10 @@ export async function prefetchDocument({
       return;
     }
     subject = names[sem][roll][2] == "A" ? "DL Section A" : "DL Section B";
-  } else if (subject !== "CG Index" && subject.includes("Index")) {
+  } else if (
+    !["CG Index", "CA Index", "DSA Index", "NM Index"].includes(subject) &&
+    subject.includes("Index")
+  ) {
     subject = "Index";
   }
 

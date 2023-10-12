@@ -275,7 +275,7 @@ export const subjects = {
         "https://drive.google.com/file/d/1sw9W10lpKWyNVCJIl_KezsoxdZh3GR0X/view?usp=sharing",
     },
     DSA: {
-      name: "Data Structure and Algorithm",
+      name: "Data Structures and Algorithms",
       shortName: "DSA",
       microSyllabus:
         "https://drive.google.com/file/d/1xPyWp6Jdt6CvqECp-fv5cHVYE0O68tGZ/view?usp=sharing",

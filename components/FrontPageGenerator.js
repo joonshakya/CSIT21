@@ -42,7 +42,16 @@ export default function FrontPageGenerator({ sem }) {
   }, []);
 
   const assignmentsWithoutTopics = useMemo(() => {
-    return ["CG Index", "OOP Index", "DS Index", "μP Index", "C"];
+    return [
+      "CG Index",
+      "CA Index",
+      "DSA Index",
+      "NM Index",
+      "OOP Index",
+      "DS Index",
+      "μP Index",
+      "C",
+    ];
   }, []);
 
   const initialSubject = "CA";
@@ -58,6 +67,33 @@ export default function FrontPageGenerator({ sem }) {
       },
       {
         subject: "CG Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "CA Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "DSA Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "NM Index",
         assignments: [
           {
             number: 0,
@@ -363,6 +399,18 @@ export default function FrontPageGenerator({ sem }) {
                         {
                           shortHand: "CG Index",
                           longHand: "CG",
+                        },
+                        {
+                          shortHand: "CA Index",
+                          longHand: "CA",
+                        },
+                        {
+                          shortHand: "DSA Index",
+                          longHand: "DSA",
+                        },
+                        {
+                          shortHand: "NM Index",
+                          longHand: "NM",
                         },
                       ]
                   ).map((subject, index) => (
