@@ -823,6 +823,70 @@ export const examRoutine = {
         ),
       },
     ],
+    [examTypes.board]: [
+      {
+        day: "Tue",
+        subject: subjects.sem2.DS,
+        date: new Date("2023-11-28"),
+        friendlyDate: (
+          <>
+            28<sup>th</sup> November
+            <br />
+            12<sup>th</sup> Mangsir
+          </>
+        ),
+        source: "https://iost.tu.edu.np/notices/1410",
+        sourceName: "TU Notice",
+      },
+      {
+        day: "Fri",
+        date: new Date("2023-12-01"),
+        subject: subjects.sem2.OOP,
+        friendlyDate: (
+          <>
+            1<sup>st</sup> December
+            <br />
+            15<sup>th</sup> Mangsir
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        date: new Date("2023-12-04"),
+        subject: subjects.sem3.MP,
+        friendlyDate: (
+          <>
+            4<sup>th</sup> December
+            <br />
+            18<sup>th</sup> Mangsir
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        date: new Date("2023-12-07"),
+        subject: subjects.sem2.Maths2,
+        friendlyDate: (
+          <>
+            7<sup>th</sup> December
+            <br />
+            21<sup>st</sup> Mangsir
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        date: new Date("2023-12-10"),
+        subject: subjects.sem3.Stats2,
+        friendlyDate: (
+          <>
+            10<sup>th</sup> December
+            <br />
+            24<sup>th</sup> Mangsir
+          </>
+        ),
+      },
+    ],
   },
   sem3: {
     [examTypes.mid]: [
