@@ -853,7 +853,7 @@ export const examRoutine = {
       {
         day: "Mon",
         date: new Date("2023-12-04"),
-        subject: subjects.sem3.MP,
+        subject: subjects.sem2.MP,
         friendlyDate: (
           <>
             4<sup>th</sup> December
@@ -877,7 +877,7 @@ export const examRoutine = {
       {
         day: "Sun",
         date: new Date("2023-12-10"),
-        subject: subjects.sem3.Stats2,
+        subject: subjects.sem2.Stats1,
         friendlyDate: (
           <>
             10<sup>th</sup> December
