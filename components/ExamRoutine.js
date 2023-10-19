@@ -14,6 +14,7 @@ import { Button, Link } from "@mui/material";
 import Countdown from "./Countdown";
 import { examRoutine, questionPapers } from "../utils/constants";
 import { examTypes as examTypesObj } from "../utils/constants";
+import getKathmanduDate from "../src/getKathmanduDate";
 export default function ExamRoutine({ examType, sem, subtitle, title }) {
   const [loading, setLoading] = useState(true);
   const [todayDate, setTodayDate] = useState("");
@@ -23,11 +24,15 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
     setTimeout(() => {
       setLoading(false);
     }, 10);
-    setTodayDate(new Date());
-    setTomorrowDate(new Date(new Date().getTime() + 24 * 60 * 60 * 1000));
+    setTodayDate(getKathmanduDate());
+    setTomorrowDate(
+      getKathmanduDate(new Date().getTime() + 24 * 60 * 60 * 1000)
+    );
     const dateCheck = setInterval(() => {
-      setTodayDate(new Date());
-      setTomorrowDate(new Date(new Date().getTime() + 24 * 60 * 60 * 1000));
+      setTodayDate(getKathmanduDate());
+      setTomorrowDate(
+        getKathmanduDate(new Date().getTime() + 24 * 60 * 60 * 1000)
+      );
     }, 60000);
     return () => clearInterval(dateCheck);
   }, []);
@@ -43,7 +48,7 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
 
   if (
     routine[routine.length - 1].date <
-    new Date(new Date().getTime() - 24 * 60 * 60 * 1000)
+    getKathmanduDate(new Date().getTime() - 24 * 60 * 60 * 1000)
   )
     return null;
 
@@ -197,22 +202,22 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                           <TableCell sx={tCellStyles} align="center">
                             {exam.date.toDateString() ===
                             todayDate.toDateString() ? (
-                              <Typography
-                                sx={{
+                              <div
+                                style={{
                                   fontWeight: "bold",
                                 }}
                               >
                                 Today
-                              </Typography>
+                              </div>
                             ) : exam.date.toDateString() ===
                               tomorrowDate.toDateString() ? (
-                              <Typography
+                              <div
                                 sx={{
                                   fontWeight: "bold",
                                 }}
                               >
                                 Tom.
-                              </Typography>
+                              </div>
                             ) : null}
                             {exam.day}
                           </TableCell>

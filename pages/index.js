@@ -17,6 +17,7 @@ import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
 import Downlaods from "../components/Downloads";
 import Feedback from "../components/Feedback";
+import LeftSideCardMessage from "../components/LeftSideCardMessage";
 
 export default function Index() {
   const theme = useTheme();
@@ -115,12 +116,13 @@ export default function Index() {
                       subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
                     /> */}
                     <ExamRoutine examType={examTypes.prac} sem="sem3" />
+                    <LeftSideCardMessage title="Happy Dashain" />
                   </>
                 ) : null}
 
                 {sem === "sem2" ? (
                   <>
-                    <ExamRoutine examType={examTypes.prac} sem="sem2" />
+                    {/* <ExamRoutine examType={examTypes.prac} sem="sem2" /> */}
                     <ExamRoutine
                       examType={examTypes.board}
                       sem="sem2"

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
+import getKathmanduDate from "../src/getKathmanduDate";
 const divisions = [
   "days-0",
   "days-1",
@@ -39,7 +40,7 @@ function CountdoenText({ text1, index, startDay }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const now = new Date();
+      const now = getKathmanduDate();
       const diff = startDay.getTime() - now.getTime();
 
       setDate((date) => {
@@ -74,16 +75,22 @@ function CountdoenText({ text1, index, startDay }) {
 }
 
 export default function Countdown({ friendlyDate, hideTomorrow }) {
-  const startDay = new Date(friendlyDate);
+  const startDay = getKathmanduDate(friendlyDate);
   const [hideDate, setHideDate] = useState(
-    hideTomorrow ? new Date().setDate(new Date().getDate() + 1) : new Date()
+    getKathmanduDate(
+      hideTomorrow ? new Date().setDate(new Date().getDate() + 1) : new Date()
+    )
   );
   startDay.setMinutes(startDay.getMinutes() + startDay.getTimezoneOffset());
 
   useEffect(() => {
     const interval = setInterval(() => {
       setHideDate(
-        hideTomorrow ? new Date().setDate(new Date().getDate() + 1) : new Date()
+        getKathmanduDate(
+          hideTomorrow
+            ? new Date().setDate(new Date().getDate() + 1)
+            : new Date()
+        )
       );
     }, 60000);
     return () => clearInterval(interval);
