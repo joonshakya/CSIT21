@@ -1,8 +1,8 @@
-import { Roboto } from "@next/font/google";
+import { Roboto } from "next/font/google";
 
 import { createTheme } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 
 export const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
