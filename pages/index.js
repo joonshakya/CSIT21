@@ -115,7 +115,7 @@ export default function Index() {
                       sem="sem3"
                       subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
                     /> */}
-                    <ExamRoutine examType={examTypes.prac} sem="sem3" />
+                    {/* <ExamRoutine examType={examTypes.prac} sem="sem3" /> */}
                     <LeftSideCardMessage title="Happy Dashain" />
                   </>
                 ) : null}
