@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
-import getKathmanduDate from "../src/getKathmanduDate";
+
 const divisions = [
   "days-0",
   "days-1",
@@ -40,7 +40,11 @@ function CountdoenText({ text1, index, startDay }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const now = getKathmanduDate();
+      const now = new Date(
+        new Date().toLocaleString("en-US", {
+          timeZone: "Asia/Kathmandu",
+        })
+      );
       const diff = startDay.getTime() - now.getTime();
 
       setDate((date) => {
@@ -74,23 +78,26 @@ function CountdoenText({ text1, index, startDay }) {
   );
 }
 
-export default function Countdown({ friendlyDate, hideTomorrow }) {
-  const startDay = getKathmanduDate(friendlyDate);
-  const [hideDate, setHideDate] = useState(
-    getKathmanduDate(
-      hideTomorrow ? new Date().setDate(new Date().getDate() + 1) : new Date()
-    )
+export default function Countdown({ yyyymmddDate, hideTomorrow }) {
+  const startDay = new Date(yyyymmddDate + " GMT+05:45");
+  const nowDate = new Date(
+    new Date().toLocaleString("en-US", {
+      timeZone: "Asia/Kathmandu",
+    })
   );
-  startDay.setMinutes(startDay.getMinutes() + startDay.getTimezoneOffset());
+  const [hideDate, setHideDate] = useState(
+    hideTomorrow ? nowDate.setDate(nowDate.getDate() + 1) : nowDate
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
+      const nowDate = new Date(
+        new Date().toLocaleString("en-US", {
+          timeZone: "Asia/Kathmandu",
+        })
+      );
       setHideDate(
-        getKathmanduDate(
-          hideTomorrow
-            ? new Date().setDate(new Date().getDate() + 1)
-            : new Date()
-        )
+        hideTomorrow ? nowDate.setDate(nowDate.getDate() + 1) : nowDate
       );
     }, 60000);
     return () => clearInterval(interval);

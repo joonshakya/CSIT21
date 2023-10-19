@@ -16,7 +16,6 @@ import TableRow from "@mui/material/TableRow";
 import Skeleton from "@mui/material/Skeleton";
 import { useBaseStore } from "../src/store";
 import { Link } from "@mui/material";
-import getKathmanduDate from "../src/getKathmanduDate";
 
 const tCellStyles = {
   px: 1,
@@ -86,30 +85,35 @@ export default function ClassRoutine() {
       setLoading(false);
     }, 10);
     setTodayDayName(
-      getKathmanduDate().toLocaleString("en-US", {
-        weekday: "short",
-      })
-    );
-    setTomorrowDayName(
-      getKathmanduDate(
-        new Date().getTime() + 24 * 60 * 60 * 1000
+      new Date(
+        new Date().toISOString().split("T")[0] + " GMT+0545"
       ).toLocaleString("en-US", {
         weekday: "short",
       })
     );
+    setTomorrowDayName(
+      new Date(new Date().toISOString().split("T")[0] + " GMT+0545").getTime() +
+        24 * 60 * 60 * 1000
+    ).toLocaleString("en-US", {
+      weekday: "short",
+    });
+
     const dateCheck = setInterval(() => {
       setTodayDayName(
-        getKathmanduDate().toLocaleString("en-US", {
-          weekday: "short",
-        })
-      );
-      setTomorrowDayName(
-        getKathmanduDate(
-          new Date().getTime() + 24 * 60 * 60 * 1000
+        new Date(
+          new Date().toISOString().split("T")[0] + " GMT+0545"
         ).toLocaleString("en-US", {
           weekday: "short",
         })
       );
+      setTomorrowDayName(
+        new Date(
+          new Date().toISOString().split("T")[0] + " GMT+0545"
+        ).getTime() +
+          24 * 60 * 60 * 1000
+      ).toLocaleString("en-US", {
+        weekday: "short",
+      });
     }, 60000);
     return () => clearInterval(dateCheck);
   }, []);
