@@ -1,4 +1,3 @@
-import getKathmanduDate from "../src/getKathmanduDate";
 import { useDevCppDownloadDialogStore } from "../src/store";
 
 export const materials = {
@@ -730,7 +729,7 @@ export const examRoutine = {
       {
         day: "Mon",
         subject: subjects.sem2.DS,
-        date: getKathmanduDate("2023-09-25"),
+        date: "2023/09/25",
         friendlyDate: (
           <>
             25<sup>th</sup> September
@@ -740,7 +739,7 @@ export const examRoutine = {
       {
         day: "Tue",
         subject: subjects.sem2.OOP,
-        date: getKathmanduDate("2023-09-26"),
+        date: "2023/09/26",
         friendlyDate: (
           <>
             26<sup>th</sup> September
@@ -750,7 +749,7 @@ export const examRoutine = {
       {
         day: "Wed",
         subject: subjects.sem2.MP,
-        date: getKathmanduDate("2023-09-27"),
+        date: "2023/09/27",
         friendlyDate: (
           <>
             27<sup>th</sup> September
@@ -760,7 +759,7 @@ export const examRoutine = {
       {
         day: "Thu",
         subject: subjects.sem2.Maths2,
-        date: getKathmanduDate("2023-09-28"),
+        date: "2023/09/28",
         friendlyDate: (
           <>
             28<sup>th</sup> September
@@ -770,7 +769,7 @@ export const examRoutine = {
       {
         day: "Fri",
         subject: subjects.sem2.Stats1,
-        date: getKathmanduDate("2023-09-29"),
+        date: "2023/09/29",
         friendlyDate: (
           <>
             29<sup>th</sup> September
@@ -782,7 +781,7 @@ export const examRoutine = {
       {
         day: "Wed",
         subject: subjects.sem2.DS,
-        date: getKathmanduDate("2023-10-11"),
+        date: "2023/10/11",
         time: "7:00 AM",
         friendlyDate: (
           <>
@@ -793,7 +792,7 @@ export const examRoutine = {
       {
         day: "Fri",
         subject: subjects.sem2.Stats1,
-        date: getKathmanduDate("2023-10-13"),
+        date: "2023/10/13",
         time: "7:00 AM",
         friendlyDate: (
           <>
@@ -804,7 +803,7 @@ export const examRoutine = {
       {
         day: "Mon",
         subject: subjects.sem2.OOP,
-        date: getKathmanduDate("2023-10-16"),
+        date: "2023/10/16",
         time: "7:00 AM",
         friendlyDate: (
           <>
@@ -815,7 +814,7 @@ export const examRoutine = {
       {
         day: "Tue",
         subject: subjects.sem2.MP,
-        date: getKathmanduDate("2023-10-17"),
+        date: "2023/10/17",
         time: "11:30 AM",
         friendlyDate: (
           <>
@@ -828,7 +827,7 @@ export const examRoutine = {
       {
         day: "Tue",
         subject: subjects.sem2.DS,
-        date: getKathmanduDate("2023-11-28"),
+        date: "2023/11/28",
         friendlyDate: (
           <>
             28<sup>th</sup> November
@@ -841,7 +840,7 @@ export const examRoutine = {
       },
       {
         day: "Fri",
-        date: getKathmanduDate("2023-12-01"),
+        date: "2023/12/01",
         subject: subjects.sem2.OOP,
         friendlyDate: (
           <>
@@ -853,7 +852,7 @@ export const examRoutine = {
       },
       {
         day: "Mon",
-        date: getKathmanduDate("2023-12-04"),
+        date: "2023/12/04",
         subject: subjects.sem2.MP,
         friendlyDate: (
           <>
@@ -865,7 +864,7 @@ export const examRoutine = {
       },
       {
         day: "Thu",
-        date: getKathmanduDate("2023-12-07"),
+        date: "2023/12/07",
         subject: subjects.sem2.Maths2,
         friendlyDate: (
           <>
@@ -877,7 +876,7 @@ export const examRoutine = {
       },
       {
         day: "Sun",
-        date: getKathmanduDate("2023-12-10"),
+        date: "2023/12/10",
         subject: subjects.sem2.Stats1,
         friendlyDate: (
           <>
@@ -894,7 +893,7 @@ export const examRoutine = {
       {
         day: "Tue",
         subject: subjects.sem3.NM,
-        date: getKathmanduDate("2023-07-18"),
+        date: "2023/07/18",
         friendlyDate: (
           <>
             18<sup>th</sup> July
@@ -905,7 +904,7 @@ export const examRoutine = {
       {
         day: "Wed",
         subject: subjects.sem3.DSA,
-        date: getKathmanduDate("2023-07-19"),
+        date: "2023/07/19",
         friendlyDate: (
           <>
             19<sup>th</sup> July
@@ -916,7 +915,7 @@ export const examRoutine = {
       {
         day: "Thu",
         subject: subjects.sem3.CG,
-        date: getKathmanduDate("2023-07-20"),
+        date: "2023/07/20",
         friendlyDate: (
           <>
             20<sup>th</sup> July
@@ -927,7 +926,7 @@ export const examRoutine = {
       {
         day: "Fri",
         subject: subjects.sem3.Stats2,
-        date: getKathmanduDate("2023-07-21"),
+        date: "2023/07/21",
         friendlyDate: (
           <>
             21<sup>st</sup> July
@@ -938,7 +937,7 @@ export const examRoutine = {
       {
         day: "Tue",
         subject: subjects.sem3.CA,
-        date: getKathmanduDate("2023-07-25"),
+        date: "2023/07/25",
         friendlyDate: (
           <>
             25<sup>th</sup> July
@@ -951,7 +950,7 @@ export const examRoutine = {
       {
         day: "Tue",
         subject: subjects.sem3.CA,
-        date: getKathmanduDate("2023-08-29"),
+        date: "2023/08/29",
         friendlyDate: (
           <>
             29<sup>th</sup> August
@@ -961,7 +960,7 @@ export const examRoutine = {
       {
         day: "Wed",
         subject: subjects.sem3.NM,
-        date: getKathmanduDate("2023-08-30"),
+        date: "2023/08/30",
         friendlyDate: (
           <>
             30<sup>th</sup> August
@@ -971,7 +970,7 @@ export const examRoutine = {
       {
         day: "Mon",
         subject: subjects.sem3.DSA,
-        date: getKathmanduDate("2023-09-04"),
+        date: "2023/09/04",
         friendlyDate: (
           <>
             4<sup>th</sup> September
@@ -981,7 +980,7 @@ export const examRoutine = {
       {
         day: "Tue",
         subject: subjects.sem3.CG,
-        date: getKathmanduDate("2023-09-05"),
+        date: "2023/09/05",
         friendlyDate: (
           <>
             5<sup>th</sup> September
@@ -991,7 +990,7 @@ export const examRoutine = {
       {
         day: "Wed",
         subject: subjects.sem3.Stats2,
-        date: getKathmanduDate("2023-09-06"),
+        date: "2023/09/06",
         friendlyDate: (
           <>
             6<sup>th</sup> September
@@ -1003,7 +1002,7 @@ export const examRoutine = {
       {
         day: "Fri",
         subject: subjects.sem3.DSA,
-        date: getKathmanduDate("2023-09-29"),
+        date: "2023/09/29",
         friendlyDate: (
           <>
             29<sup>th</sup> September
@@ -1016,7 +1015,7 @@ export const examRoutine = {
       },
       {
         day: "Mon",
-        date: getKathmanduDate("2023-10-02"),
+        date: "2023/10/02",
         subject: subjects.sem3.NM,
         friendlyDate: (
           <>
@@ -1028,7 +1027,7 @@ export const examRoutine = {
       },
       {
         day: "Thu",
-        date: getKathmanduDate("2023-10-05"),
+        date: "2023/10/05",
         subject: subjects.sem3.CA,
         friendlyDate: (
           <>
@@ -1040,7 +1039,7 @@ export const examRoutine = {
       },
       {
         day: "Sun",
-        date: getKathmanduDate("2023-10-08"),
+        date: "2023/10/08",
         subject: subjects.sem3.CG,
         friendlyDate: (
           <>
@@ -1052,7 +1051,7 @@ export const examRoutine = {
       },
       {
         day: "Wed",
-        date: getKathmanduDate("2023-10-11"),
+        date: "2023/10/11",
         subject: subjects.sem3.Stats2,
         friendlyDate: (
           <>
@@ -1067,7 +1066,7 @@ export const examRoutine = {
       {
         day: "Thu",
         subject: subjects.sem3.CG,
-        date: getKathmanduDate("2023-10-12"),
+        date: "2023/10/12",
         time: "10:00 AM",
         friendlyDate: (
           <>
@@ -1078,7 +1077,7 @@ export const examRoutine = {
       {
         day: "Fri",
         subject: subjects.sem3.DSA,
-        date: getKathmanduDate("2023-10-13"),
+        date: "2023/10/13",
         time: (
           <>
             7:00 AM
@@ -1095,7 +1094,7 @@ export const examRoutine = {
       {
         day: "Mon",
         subject: subjects.sem3.NM,
-        date: getKathmanduDate("2023-10-16"),
+        date: "2023/10/16",
         time: (
           <>
             7:00 AM
@@ -1112,7 +1111,7 @@ export const examRoutine = {
       {
         day: "Tue",
         subject: subjects.sem3.CA,
-        date: getKathmanduDate("2023-10-17"),
+        date: "2023/10/17",
         time: "10:00 AM",
         friendlyDate: (
           <>
@@ -1123,7 +1122,7 @@ export const examRoutine = {
       {
         day: "Thu",
         subject: subjects.sem3.Stats2,
-        date: getKathmanduDate("2023-10-19"),
+        date: "2023/10/19",
         time: "7:00 AM",
         friendlyDate: (
           <>

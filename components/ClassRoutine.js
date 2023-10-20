@@ -16,7 +16,6 @@ import TableRow from "@mui/material/TableRow";
 import Skeleton from "@mui/material/Skeleton";
 import { useBaseStore } from "../src/store";
 import { Link } from "@mui/material";
-import getKathmanduDate from "../src/getKathmanduDate";
 
 const tCellStyles = {
   px: 1,
@@ -85,28 +84,37 @@ export default function ClassRoutine() {
     setTimeout(() => {
       setLoading(false);
     }, 10);
+    const npt = new Date(
+      new Date().getTime() +
+        new Date().getTimezoneOffset() * 60000 +
+        3600000 * 5 +
+        2700000
+    );
     setTodayDayName(
-      getKathmanduDate().toLocaleString("en-US", {
+      npt.toLocaleString("en-US", {
         weekday: "short",
       })
     );
     setTomorrowDayName(
-      getKathmanduDate(
-        new Date().getTime() + 24 * 60 * 60 * 1000
-      ).toLocaleString("en-US", {
+      (npt + 24 * 60 * 60 * 1000).toLocaleString("en-US", {
         weekday: "short",
       })
     );
+
     const dateCheck = setInterval(() => {
+      const npt = new Date(
+        new Date().getTime() +
+          new Date().getTimezoneOffset() * 60000 +
+          3600000 * 5 +
+          2700000
+      );
       setTodayDayName(
-        getKathmanduDate().toLocaleString("en-US", {
+        npt.toLocaleString("en-US", {
           weekday: "short",
         })
       );
       setTomorrowDayName(
-        getKathmanduDate(
-          new Date().getTime() + 24 * 60 * 60 * 1000
-        ).toLocaleString("en-US", {
+        (npt + 24 * 60 * 60 * 1000).toLocaleString("en-US", {
           weekday: "short",
         })
       );

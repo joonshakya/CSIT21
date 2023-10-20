@@ -14,25 +14,23 @@ import { Button, Link } from "@mui/material";
 import Countdown from "./Countdown";
 import { examRoutine, questionPapers } from "../utils/constants";
 import { examTypes as examTypesObj } from "../utils/constants";
-import getKathmanduDate from "../src/getKathmanduDate";
+
 export default function ExamRoutine({ examType, sem, subtitle, title }) {
   const [loading, setLoading] = useState(true);
-  const [todayDate, setTodayDate] = useState("");
-  const [tomorrowDate, setTomorrowDate] = useState("");
+  const [todayDate, setTodayDate] = useState(null);
+  const [tomorrowDate, setTomorrowDate] = useState(null);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 10);
-    setTodayDate(getKathmanduDate());
-    setTomorrowDate(
-      getKathmanduDate(new Date().getTime() + 24 * 60 * 60 * 1000)
-    );
+    const newDate = new Date();
+    setTodayDate(newDate);
+    setTomorrowDate(newDate.setDate(newDate.getDate() + 1));
     const dateCheck = setInterval(() => {
-      setTodayDate(getKathmanduDate());
-      setTomorrowDate(
-        getKathmanduDate(new Date().getTime() + 24 * 60 * 60 * 1000)
-      );
+      const newDate = new Date();
+      setTodayDate(newDate);
+      setTomorrowDate(newDate.setDate(newDate.getDate() + 1));
     }, 60000);
     return () => clearInterval(dateCheck);
   }, []);
@@ -47,8 +45,8 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
   const questions = questionPapers[sem];
 
   if (
-    routine[routine.length - 1].date <
-    getKathmanduDate(new Date().getTime() - 24 * 60 * 60 * 1000)
+    new Date(routine[routine.length - 1].date + " GMT+5:45") <
+    new Date().getTime() - 24 * 60 * 60 * 1000
   )
     return null;
 
@@ -102,7 +100,7 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
               </>
             ) : null}
           </Typography>
-          <Countdown friendlyDate={routine[0].date} hideTomorrow />
+          <Countdown yyyymmddDate={routine[0].date} hideTomorrow />
           {loading ? (
             <Box
               sx={{
@@ -200,8 +198,9 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                           ) : null}
 
                           <TableCell sx={tCellStyles} align="center">
-                            {exam.date.toDateString() ===
-                            todayDate.toDateString() ? (
+                            {new Date(
+                              exam.date + " GMT+5:45"
+                            ).toDateString() === todayDate.toDateString() ? (
                               <div
                                 style={{
                                   fontWeight: "bold",
@@ -209,8 +208,10 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                               >
                                 Today
                               </div>
-                            ) : exam.date.toDateString() ===
-                              tomorrowDate.toDateString() ? (
+                            ) : new Date(
+                                exam.date + " GMT+5:45"
+                              ).toDateString() ===
+                              new Date(tomorrowDate).toDateString() ? (
                               <div
                                 sx={{
                                   fontWeight: "bold",
