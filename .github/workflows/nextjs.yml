@@ -18,11 +18,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
       - name: Install dependencies
         run: npm install
       - name: Build with Next.js
-        run: npm run export
+        run: npm run build
       - name: Set git global config
         run: git config --global user.email "joonshakya07@gmail.com" && git config --global user.name "Joon Shakya (GitHub Actions)"
       - name: Change into out directory and push to Static site
