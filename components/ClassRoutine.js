@@ -15,53 +15,58 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Skeleton from "@mui/material/Skeleton";
 import { useBaseStore } from "../src/store";
-import { Link } from "@mui/material";
 
 const tCellStyles = {
   px: 1,
+  textAlign: "center",
   border: "1px solid #d7d7d7",
 };
 
-const RoutineTableCell = ({ sectionRoutine }) =>
-  sectionRoutine.map(([subject, room], index) =>
-    typeof subject !== "string" ? (
+const RoutineTableCell = ({ onlySection, section, routineRow }) =>
+  routineRow[section].map(([subject, room], index) => {
+    const combined =
+      routineRow.a[index]?.[0] === routineRow.b[index]?.[0] &&
+      routineRow.a[index]?.[1] === routineRow.b[index]?.[1];
+    if (section === "b" && combined && !onlySection) {
+      return null;
+    }
+    return typeof subject !== "string" ? (
       <TableCell
+        role={subject?.microSyllabus ? "button" : null}
+        onClick={() => {
+          if (subject?.microSyllabus) {
+            window.open(subject?.microSyllabus, "_blank");
+          }
+        }}
+        rowSpan={combined && !onlySection ? 2 : 1}
         key={index}
         sx={{
           ...tCellStyles,
+          backgroundColor: combined && !onlySection ? "#efefef" : "inherit",
           p: 0,
+          transition: "all .1s",
+          cursor: subject?.microSyllabus ? "pointer" : null,
+          "&:hover": {
+            backgroundColor: subject?.microSyllabus ? "#e3e3e3" : null,
+          },
         }}
       >
-        <Link
-          align="center"
-          sx={{
-            p: 1,
-            color: "black",
-            height: "100%",
-            width: "100%",
-            display: "block",
-            textDecoration: "none",
-            transition: "all .1s",
-            "&:hover": {
-              backgroundColor: "#e3e3e3",
-            },
-          }}
-          href={subject?.microSyllabus}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {subject?.shortName}
-          <br />
-          {room}
-        </Link>
+        {subject?.shortName}
+        <br />
+        {room}
       </TableCell>
     ) : (
-      <TableCell align="center" key={index} sx={tCellStyles}>
+      <TableCell
+        rowSpan={combined && !onlySection ? 2 : 1}
+        align="center"
+        key={index}
+        sx={tCellStyles}
+      >
         {subject} <br />
         {room}
       </TableCell>
-    )
-  );
+    );
+  });
 
 export default function ClassRoutine({ sem }) {
   const roll = useBaseStore((state) => state.roll);
@@ -246,8 +251,9 @@ export default function ClassRoutine({ sem }) {
                   <TableHead>
                     <TableRow
                       sx={{
+                        backgroundColor: "#f5f5f5",
                         "&:nth-of-type(odd)": {
-                          backgroundColor: "#f5f5f5",
+                          // backgroundColor: "#f5f5f5",
                         },
                       }}
                     >
@@ -284,8 +290,9 @@ export default function ClassRoutine({ sem }) {
                       <Fragment key={row.day}>
                         <TableRow
                           sx={{
+                            backgroundColor: "#fefefe",
                             "&:nth-of-type(odd)": {
-                              backgroundColor: "#f5f5f5",
+                              // backgroundColor: "#f5f5f5",
                             },
                           }}
                         >
@@ -320,14 +327,19 @@ export default function ClassRoutine({ sem }) {
                                   A
                                 </TableCell>
                               ) : null}
-                              <RoutineTableCell sectionRoutine={row.a} />
+                              <RoutineTableCell
+                                onlySection={onlySection}
+                                section="a"
+                                routineRow={row}
+                              />
                             </>
                           ) : null}
                         </TableRow>
                         <TableRow
                           sx={{
+                            backgroundColor: "#f5f5f5",
                             "&:nth-of-type(odd)": {
-                              backgroundColor: "#f5f5f5",
+                              // backgroundColor: "#f5f5f5",
                             },
                           }}
                         >
@@ -338,7 +350,11 @@ export default function ClassRoutine({ sem }) {
                                   B
                                 </TableCell>
                               ) : null}
-                              <RoutineTableCell sectionRoutine={row.b} />
+                              <RoutineTableCell
+                                onlySection={onlySection}
+                                section="b"
+                                routineRow={row}
+                              />
                             </>
                           ) : null}
                         </TableRow>
