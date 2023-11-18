@@ -63,7 +63,7 @@ const RoutineTableCell = ({ sectionRoutine }) =>
     )
   );
 
-export default function ClassRoutine() {
+export default function ClassRoutine({ sem }) {
   const roll = useBaseStore((state) => state.roll);
   const fullRoutine = useBaseStore((state) => state.fullRoutine);
   const setFullRoutine = useBaseStore((state) => state.setFullRoutine);
@@ -251,7 +251,14 @@ export default function ClassRoutine() {
                         },
                       }}
                     >
-                      {["Day", "", "1st", "2nd", "3rd", "4th"].map((item) =>
+                      {[
+                        "Day",
+                        "",
+                        "1st",
+                        "2nd",
+                        "3rd",
+                        ...(classRoutine[sem][0].a.length === 4 ? ["4th"] : []),
+                      ].map((item) =>
                         onlySection && item === "" ? null : (
                           <TableCell sx={tCellStyles} key={item} align="center">
                             {item}
@@ -263,16 +270,16 @@ export default function ClassRoutine() {
                   <TableBody>
                     {(!fullRoutine
                       ? [
-                          ...classRoutine.filter(
+                          ...classRoutine[sem].filter(
                             (row) =>
                               row.day === todayDayName ||
                               row.day === tomorrowDayName
                           ),
                           ...(todayDayName == "Fri" || todayDayName == "Sat"
-                            ? [classRoutine[0]]
+                            ? [classRoutine[sem][0]]
                             : []),
                         ]
-                      : classRoutine
+                      : classRoutine[sem]
                     ).map((row) => (
                       <Fragment key={row.day}>
                         <TableRow

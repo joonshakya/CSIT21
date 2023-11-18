@@ -9,7 +9,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import OpCodeFinder from "../components/OpCodeFinder";
 import TallyBar from "../components/TallyBar";
-// import ClassRoutine from "../components/ClassRoutine";
+import ClassRoutine from "../components/ClassRoutine";
 import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
 import { examTypes, currentJoonSem } from "../utils/constants";
@@ -17,7 +17,7 @@ import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
 import Downlaods from "../components/Downloads";
 import Feedback from "../components/Feedback";
-import LeftSideCardMessage from "../components/LeftSideCardMessage";
+// import LeftSideCardMessage from "../components/LeftSideCardMessage";
 
 export default function Index() {
   const theme = useTheme();
@@ -109,14 +109,14 @@ export default function Index() {
                         </>
                       }
                     /> */}
-                    {/* <ClassRoutine /> */}
+                    <ClassRoutine sem={sem || currentJoonSem} />
                     {/* <ExamRoutine
                       examType={examTypes.board}
                       sem="sem3"
                       subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
                     /> */}
                     {/* <ExamRoutine examType={examTypes.prac} sem="sem3" /> */}
-                    <LeftSideCardMessage title="Happy Dashain" />
+                    {/* <LeftSideCardMessage title="Happy Dashain" /> */}
                   </>
                 ) : null}
 

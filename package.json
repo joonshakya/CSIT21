@@ -14,21 +14,21 @@
     "@emotion/react": "11.11.1",
     "@emotion/server": "11.11.0",
     "@emotion/styled": "11.11.0",
-    "@mui/icons-material": "5.14.14",
-    "@mui/material": "5.14.14",
-    "docxtemplater": "^3.40.1",
+    "@mui/icons-material": "5.14.18",
+    "@mui/material": "5.14.18",
+    "docxtemplater": "^3.42.1",
     "file-saver": "^2.0.5",
-    "next": "13.5.6",
+    "next": "14.0.3",
     "next-pwa": "^5.6.0",
     "pizzip": "^3.1.4",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.69.4",
-    "zustand": "^4.4.3"
+    "sass": "^1.69.5",
+    "zustand": "^4.4.6"
   },
   "devDependencies": {
-    "eslint": "8.51.0",
-    "eslint-config-next": "13.5.6"
+    "eslint": "8.54.0",
+    "eslint-config-next": "14.0.3"
   }
 }

@@ -70,8 +70,12 @@ const Materials = ({ sem }) => {
             sx={{
               display: "flex",
               justifyContent: "center",
+              mt: 1,
             }}
           >
+            <Typography variant="h5" component="div">
+              Semester
+            </Typography>
             <RadioGroup
               defaultValue="sem3"
               name="semChooseOptions"
@@ -87,16 +91,9 @@ const Materials = ({ sem }) => {
                 justifyContent: "center",
               }}
             >
-              <FormControlLabel
-                value="sem3"
-                control={<Radio />}
-                label="3rd Semester"
-              />
-              <FormControlLabel
-                value="sem2"
-                control={<Radio />}
-                label="2nd Semester"
-              />
+              <FormControlLabel value="sem4" control={<Radio />} label="4th" />
+              <FormControlLabel value="sem3" control={<Radio />} label="3rd" />
+              <FormControlLabel value="sem2" control={<Radio />} label="2nd" />
             </RadioGroup>
           </FormControl>
 
@@ -110,8 +107,16 @@ const Materials = ({ sem }) => {
               alignItems: "center",
               justifyContent: "center",
               flexWrap: "wrap",
+              textAlign: "center",
             }}
           >
+            {materials[sem].books.length === 0 ? (
+              <p>
+                No books yet.
+                <br />
+                If you have any materials, do let me know.
+              </p>
+            ) : null}
             {materials[sem].books.map(
               ({ name, link, bgColor, bgImage }, index) => (
                 <GradientButton
@@ -134,8 +139,16 @@ const Materials = ({ sem }) => {
               alignItems: "center",
               justifyContent: "center",
               flexWrap: "wrap",
+              textAlign: "center",
             }}
           >
+            {materials[sem].materials.length === 0 ? (
+              <p>
+                No materials yet.
+                <br />
+                If you have any materials, do let me know.
+              </p>
+            ) : null}
             {materials[sem].materials.map(
               ({ name, link, onClick, bgColor, bgImage }, index) => (
                 <GradientButton
