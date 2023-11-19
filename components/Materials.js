@@ -114,7 +114,7 @@ const Materials = ({ sem }) => {
               <p>
                 No books yet.
                 <br />
-                If you have any materials, do let me know.
+                If you have any books, do let me know.
               </p>
             ) : null}
             {materials[sem].books.map(

@@ -3,7 +3,20 @@ import { useDevCppDownloadDialogStore } from "../src/store";
 export const materials = {
   sem4: {
     books: [],
-    materials: [],
+    materials: [
+      {
+        name: (
+          <>
+            Pratik
+            <br />
+            Jung Karki
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1pq5gvZTAE8ouByQzw5nso0cqTfLf9Jfe?usp=sharing",
+        bgColor: "#6c55cb",
+        bgImage: "linear-gradient(43deg, #4158D0 0%, #C850C0 100%)",
+      },
+    ],
   },
   sem3: {
     books: [

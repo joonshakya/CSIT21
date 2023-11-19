@@ -101,7 +101,7 @@ export default function ClassRoutine({ sem }) {
       })
     );
     setTomorrowDayName(
-      (npt + 24 * 60 * 60 * 1000).toLocaleString("en-US", {
+      new Date(npt.getTime() + 24 * 60 * 60 * 1000).toLocaleString("en-US", {
         weekday: "short",
       })
     );
@@ -119,13 +119,15 @@ export default function ClassRoutine({ sem }) {
         })
       );
       setTomorrowDayName(
-        (npt + 24 * 60 * 60 * 1000).toLocaleString("en-US", {
+        new Date(npt.getTime() + 24 * 60 * 60 * 1000).toLocaleString("en-US", {
           weekday: "short",
         })
       );
     }, 60000);
     return () => clearInterval(dateCheck);
   }, []);
+
+  console.log({ todayDayName, tomorrowDayName });
 
   return (
     <Card
