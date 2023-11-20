@@ -43,7 +43,6 @@ const RoutineTableCell = ({ onlySection, section, routineRow }) =>
         sx={{
           ...tCellStyles,
           backgroundColor: combined && !onlySection ? "#efefef" : "inherit",
-          p: 0,
           transition: "all .1s",
           cursor: subject?.microSyllabus ? "pointer" : null,
           "&:hover": {
@@ -60,7 +59,7 @@ const RoutineTableCell = ({ onlySection, section, routineRow }) =>
         rowSpan={combined && !onlySection ? 2 : 1}
         align="center"
         key={index}
-        sx={tCellStyles}
+        sx={[tCellStyles, { p: 0 }]}
       >
         {subject} <br />
         {room}
