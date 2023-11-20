@@ -42,7 +42,7 @@ const RoutineTableCell = ({ onlySection, section, routineRow }) =>
         key={index}
         sx={{
           ...tCellStyles,
-          backgroundColor: combined && !onlySection ? "#efefef" : "inherit",
+          backgroundColor: combined ? "#efefef" : "inherit",
           transition: "all .1s",
           cursor: subject?.microSyllabus ? "pointer" : null,
           "&:hover": {
