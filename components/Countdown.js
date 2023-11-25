@@ -39,7 +39,7 @@ function CountdoenText({ text1, index, startDay }) {
   }, [date, prevDate, text1, textContent]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    function updateCounter() {
       const now = new Date();
       const diff = startDay.getTime() - now.getTime();
 
@@ -61,7 +61,11 @@ function CountdoenText({ text1, index, startDay }) {
         ];
         return dates[index];
       });
+    }
+    const interval = setInterval(() => {
+      updateCounter();
     }, 1000);
+    updateCounter();
     return () => clearInterval(interval);
   }, [index, startDay]);
 
