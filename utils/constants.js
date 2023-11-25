@@ -384,7 +384,7 @@ export const classRoutine = {
     {
       day: "Wed",
       a: [
-        [subjects.sem4.CN, "314"],
+        [subjects.sem4.TOC, "314"],
         [subjects.sem4.OS, "314"],
         ["*", ""],
       ],
@@ -410,7 +410,7 @@ export const classRoutine = {
     {
       day: "Fri",
       a: [
-        [subjects.sem4.TOC, "314"],
+        [subjects.sem4.CN, "314"],
         [subjects.sem4.AI, ""],
         ["*", ""],
       ],
