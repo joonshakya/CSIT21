@@ -2480,6 +2480,10 @@ export const cnAssignments = [
   {
     number: 1,
     name: "Familiarizing with DOS Commands for Networking",
+  },
+  {
+    number: 1,
+    name: "Clamping RJ45 Connectors to CAT5e UTP Cables",
     selected: true,
   },
 ];
