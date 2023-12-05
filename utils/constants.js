@@ -2483,7 +2483,7 @@ export const cnAssignments = [
   },
   {
     number: 2,
-    name: "Clamping RJ45 Connectors to CAT5e UTP Cables",
+    name: "Clamping RJ45 Connector to CAT5e UTP Cable",
     selected: true,
   },
 ];
