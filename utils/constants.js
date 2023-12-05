@@ -1385,6 +1385,7 @@ export const names = {
     46: ["Swoyesh Shrestha", "021BSCIT046", "B"],
     47: ["Yogesh Rijal", "021BSCIT047", "B"],
     48: ["Yubraj Khatiwada", "021BSCIT048", "B"],
+    49: ["Laviz Pandey", "021BSCIT049", "B"],
   },
   sem3: {
     1: ["Aakash Shrestha", "021BSCIT001", "A"],
@@ -2472,6 +2473,14 @@ export const opCodes = [
   {
     label: "XTHL",
     opCode: "E3",
+  },
+];
+
+export const cnAssignments = [
+  {
+    number: 1,
+    name: "Familiarizing with DOS Commands for Networking",
+    selected: true,
   },
 ];
 

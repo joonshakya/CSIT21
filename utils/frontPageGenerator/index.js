@@ -8,6 +8,7 @@ import {
   caAssignments,
   nmAssignments,
   dsaAssignments,
+  cnAssignments,
 } from "../constants";
 import { useState } from "react";
 import { useBaseStore } from "../../src/store";
@@ -51,6 +52,7 @@ export default function useFrontPageGenerator() {
       CA: caAssignments,
       NM: nmAssignments,
       DSA: dsaAssignments,
+      CN: cnAssignments,
     };
 
     if (Object.prototype.hasOwnProperty.call(assignmentMap, subject)) {
@@ -70,6 +72,7 @@ export default function useFrontPageGenerator() {
       roll: names[sem][roll][1],
       assignmentNumber,
       assignmentName,
+      assignmentNameUpper: assignmentName.toUpperCase(),
       subject: indexSubjectTable[subject],
       section: names[sem][roll][2],
     };

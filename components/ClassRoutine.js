@@ -126,8 +126,6 @@ export default function ClassRoutine({ sem }) {
     return () => clearInterval(dateCheck);
   }, []);
 
-  console.log({ todayDayName, tomorrowDayName });
-
   return (
     <Card
       sx={{

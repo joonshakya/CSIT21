@@ -24,6 +24,7 @@ import {
   caAssignments,
   nmAssignments,
   dsaAssignments,
+  cnAssignments,
 } from "../utils/constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
@@ -38,7 +39,7 @@ export default function FrontPageGenerator({ sem }) {
   const wordFileLoaded = useBaseStore((state) => state.wordFileLoaded);
 
   const assignmentsWithTopics = useMemo(() => {
-    return ["DL", "FIT", "DS", "OOP", "CA", "NM", "DSA"];
+    return ["DL", "FIT", "DS", "OOP", "CA", "NM", "DSA", "CN"];
   }, []);
 
   const assignmentsWithoutTopics = useMemo(() => {
@@ -54,13 +55,17 @@ export default function FrontPageGenerator({ sem }) {
     ];
   }, []);
 
-  const initialSubject = "CA";
+  const initialSubject = "CN";
 
   const [tab, setTab] = useState("assignment");
   const [subject, setSubject] = useState(initialSubject);
 
   const assignmentLists = useMemo(() => {
     return [
+      {
+        subject: "CN",
+        assignments: cnAssignments,
+      },
       {
         subject: "DSA",
         assignments: dsaAssignments,
@@ -373,6 +378,31 @@ export default function FrontPageGenerator({ sem }) {
                   // backgroundColor: "#f3f4f9",
                 }}
               >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
+                  {(tab === "assignment"
+                    ? [
+                        {
+                          shortHand: "CN",
+                          longHand: "CN",
+                        },
+                      ]
+                    : []
+                  ).map((subject, index) => (
+                    <FormControlLabel
+                      key={index}
+                      value={subject.shortHand}
+                      defaultChecked={index === 0}
+                      control={<Radio />}
+                      label={subject.longHand}
+                    />
+                  ))}
+                </Box>
                 <Box
                   sx={{
                     display: "flex",
