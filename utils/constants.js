@@ -347,37 +347,37 @@ export const classRoutine = {
       a: [
         [subjects.sem4.AI, ""],
         [subjects.sem4.OS, ""],
-        [subjects.sem4.DBMS, ""],
+        [subjects.sem4.CN, "314"],
       ],
       b: [
         [subjects.sem4.AI, ""],
         [subjects.sem4.OS, ""],
-        [subjects.sem4.DBMS, ""],
+        [subjects.sem4.DBMS, "316"],
       ],
     },
     {
       day: "Mon",
       a: [
-        [subjects.sem4.DBMS, ""],
-        [subjects.sem4.CN, "314"],
-        ["*", ""],
-      ],
-      b: [
-        [subjects.sem4.DBMS, ""],
-        [subjects.sem4.TOC, "316"],
-        ["*", ""],
-      ],
-    },
-    {
-      day: "Tue",
-      a: [
-        [subjects.sem4.TOC, "314"],
+        [subjects.sem4.DBMS, "314"],
         [subjects.sem4.CN, "314"],
         ["*", ""],
       ],
       b: [
         [subjects.sem4.CN, "316"],
         [subjects.sem4.TOC, "316"],
+        [subjects.sem4.DBMS, "316"],
+      ],
+    },
+    {
+      day: "Tue",
+      a: [
+        [subjects.sem4.TOC, "314"],
+        [subjects.sem4.AI, ""],
+        [subjects.sem4.DBMS, "314"],
+      ],
+      b: [
+        [subjects.sem4.CN, "316"],
+        [subjects.sem4.AI, ""],
         ["*", ""],
       ],
     },
@@ -391,7 +391,7 @@ export const classRoutine = {
       b: [
         [subjects.sem4.OS, "316"],
         [subjects.sem4.CN, "316"],
-        ["*", ""],
+        [subjects.sem4.TOC, "316"],
       ],
     },
     {
@@ -404,7 +404,7 @@ export const classRoutine = {
       b: [
         [subjects.sem4.TOC, "316"],
         [subjects.sem4.DBMS, "316"],
-        [subjects.sem4.CN, "316"],
+        ["*", ""],
       ],
     },
     {
