@@ -25,6 +25,7 @@ import {
   nmAssignments,
   dsaAssignments,
   cnAssignments,
+  dbmsAssignments,
 } from "../utils/constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
@@ -39,7 +40,7 @@ export default function FrontPageGenerator({ sem }) {
   const wordFileLoaded = useBaseStore((state) => state.wordFileLoaded);
 
   const assignmentsWithTopics = useMemo(() => {
-    return ["DL", "FIT", "DS", "OOP", "CA", "NM", "DSA", "CN"];
+    return ["DL", "FIT", "DS", "OOP", "CA", "NM", "DSA", "CN", "DBMS"];
   }, []);
 
   const assignmentsWithoutTopics = useMemo(() => {
@@ -65,6 +66,10 @@ export default function FrontPageGenerator({ sem }) {
       {
         subject: "CN",
         assignments: cnAssignments,
+      },
+      {
+        subject: "DBMS",
+        assignments: dbmsAssignments,
       },
       {
         subject: "DSA",
@@ -390,6 +395,10 @@ export default function FrontPageGenerator({ sem }) {
                         {
                           shortHand: "CN",
                           longHand: "CN",
+                        },
+                        {
+                          shortHand: "DBMS",
+                          longHand: "DBMS",
                         },
                       ]
                     : []

@@ -2488,6 +2488,14 @@ export const cnAssignments = [
   },
 ];
 
+export const dbmsAssignments = [
+  {
+    number: 1,
+    name: "To familiarize with Structured Query Language DDL statements and Data Types",
+    selected: true,
+  },
+];
+
 export const nmAssignments = [
   {
     number: 1,
