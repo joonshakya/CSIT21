@@ -16,6 +16,18 @@ export const materials = {
         bgColor: "#6c55cb",
         bgImage: "linear-gradient(43deg, #4158D0 0%, #C850C0 100%)",
       },
+      {
+        name: (
+          <>
+            OS
+            <br />
+            Slides
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1mCO8ZIby5DqMG5KLfJhVlY3Quyjx-JXR?usp=sharing",
+        bgColor: "#55a3bf",
+        bgImage: "linear-gradient(62deg, #5682c4 0%, #52d0b8 100%)",
+      },
     ],
   },
   sem3: {
@@ -371,15 +383,25 @@ export const classRoutine = {
     {
       day: "Tue",
       a: [
-        [subjects.sem4.TOC, "314"],
         [subjects.sem4.AI, ""],
-        [subjects.sem4.DBMS, "314"],
-      ],
-      b: [
-        [subjects.sem4.CN, "316"],
-        [subjects.sem4.AI, ""],
+        [subjects.sem4.DBMS, ""],
         ["*", ""],
       ],
+      b: [
+        [subjects.sem4.AI, ""],
+        [subjects.sem4.DBMS, ""],
+        ["*", ""],
+      ],
+      // a: [
+      //   [subjects.sem4.TOC, "314"],
+      //   [subjects.sem4.AI, ""],
+      //   [subjects.sem4.DBMS, "314"],
+      // ],
+      // b: [
+      //   [subjects.sem4.CN, "316"],
+      //   [subjects.sem4.AI, ""],
+      //   ["*", ""],
+      // ],
     },
     {
       day: "Wed",
