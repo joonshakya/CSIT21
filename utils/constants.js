@@ -383,25 +383,15 @@ export const classRoutine = {
     {
       day: "Tue",
       a: [
+        [subjects.sem4.TOC, "314"],
         [subjects.sem4.AI, ""],
-        [subjects.sem4.DBMS, ""],
-        ["*", ""],
+        [subjects.sem4.DBMS, "314"],
       ],
       b: [
+        [subjects.sem4.CN, "316"],
         [subjects.sem4.AI, ""],
-        [subjects.sem4.DBMS, ""],
         ["*", ""],
       ],
-      // a: [
-      //   [subjects.sem4.TOC, "314"],
-      //   [subjects.sem4.AI, ""],
-      //   [subjects.sem4.DBMS, "314"],
-      // ],
-      // b: [
-      //   [subjects.sem4.CN, "316"],
-      //   [subjects.sem4.AI, ""],
-      //   ["*", ""],
-      // ],
     },
     {
       day: "Wed",
