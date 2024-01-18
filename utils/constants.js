@@ -2496,6 +2496,10 @@ export const cnAssignments = [
   {
     number: 2,
     name: "Clamping RJ45 Connector to CAT5e UTP Cable",
+  },
+  {
+    number: 3,
+    name: "Creating various LAN topologies using Cisco Packet Tracer",
     selected: true,
   },
 ];
@@ -2504,6 +2508,14 @@ export const dbmsAssignments = [
   {
     number: 1,
     name: "To familiarize with Structured Query Language DDL statements and Data Types",
+  },
+  {
+    number: 2,
+    name: "To learn about Data Manipulation Language",
+  },
+  {
+    number: 3,
+    name: "To learn about Data Manipulation Language",
     selected: true,
   },
 ];
