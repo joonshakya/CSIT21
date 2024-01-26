@@ -256,22 +256,32 @@ export const subjects = {
     AI: {
       name: "Artificial Intelligence",
       shortName: "AI",
+      microSyllabus:
+        "https://drive.google.com/file/d/19W3nTSHSFZtkN-huTJpQ_W-2Y0X9yOMX/view?usp=drive_link",
     },
     OS: {
       name: "Operating System",
       shortName: "OS",
+      microSyllabus:
+        "https://drive.google.com/file/d/1b0hVeMa3S29B3wp19_uBn1TtE4-inoVD/view?usp=drive_link",
     },
     DBMS: {
       name: "Database Management System",
       shortName: "DBMS",
+      microSyllabus:
+        "https://drive.google.com/file/d/10H8sfraUMAiRm8woBK_wmAOmbqk2P55U/view?usp=drive_link",
     },
     CN: {
       name: "Computer Networking",
       shortName: "CN",
+      microSyllabus:
+        "https://drive.google.com/file/d/1NRtBfwS80guHtUYhSgVp0eji2xHtyvDi/view?usp=drive_link",
     },
     TOC: {
       name: "Theory of Computation",
       shortName: "TOC",
+      microSyllabus:
+        "https://drive.google.com/file/d/1oUfjVtS8V-JdwLvwdYtEsfmXnaN5yCEF/view?usp=drive_link",
     },
   },
   sem3: {
@@ -1260,6 +1270,70 @@ export const examRoutine = {
         friendlyDate: (
           <>
             19<sup>th</sup> October
+          </>
+        ),
+      },
+    ],
+  },
+  sem4: {
+    [examTypes.mid]: [
+      {
+        day: "Tue",
+        subject: subjects.sem4.TOC,
+        date: "2024/01/30",
+        friendlyDate: (
+          <>
+            30<sup>th</sup> January
+            <br />
+            16<sup>th</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem4.CN,
+        date: "2024/01/31",
+        friendlyDate: (
+          <>
+            31<sup>st</sup> January
+            <br />
+            17<sup>th</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem4.OS,
+        date: "2024/02/01",
+        friendlyDate: (
+          <>
+            1<sup>st</sup> February
+            <br />
+            18<sup>th</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem4.DBMS,
+        date: "2024/02/02",
+        friendlyDate: (
+          <>
+            2<sup>nd</sup> February
+            <br />
+            19<sup>th</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem4.AI,
+        date: "2024/02/04",
+        friendlyDate: (
+          <>
+            4<sup>th</sup> February
+            <br />
+            21<sup>st</sup> Magh
           </>
         ),
       },

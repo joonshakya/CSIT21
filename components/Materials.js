@@ -96,72 +96,65 @@ const Materials = ({ sem }) => {
               <FormControlLabel value="sem2" control={<Radio />} label="2nd" />
             </RadioGroup>
           </FormControl>
-
-          <Typography variant="h5" component="div">
-            Books
-          </Typography>
-          <Box
-            sx={{
-              my: 1,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexWrap: "wrap",
-              textAlign: "center",
-            }}
-          >
-            {materials[sem].books.length === 0 ? (
-              <p>
-                No books yet.
-                <br />
-                If you have any books, do let me know.
-              </p>
-            ) : null}
-            {materials[sem].books.map(
-              ({ name, link, bgColor, bgImage }, index) => (
-                <GradientButton
-                  key={index}
-                  name={name}
-                  link={link}
-                  bgColor={bgColor}
-                  bgImage={bgImage}
-                />
-              )
-            )}
-          </Box>
-          <Typography variant="h5" component="div">
-            Materials
-          </Typography>
-          <Box
-            sx={{
-              mt: 1,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexWrap: "wrap",
-              textAlign: "center",
-            }}
-          >
-            {materials[sem].materials.length === 0 ? (
-              <p>
-                No materials yet.
-                <br />
-                If you have any materials, do let me know.
-              </p>
-            ) : null}
-            {materials[sem].materials.map(
-              ({ name, link, onClick, bgColor, bgImage }, index) => (
-                <GradientButton
-                  key={index}
-                  name={name}
-                  link={link}
-                  onClick={onClick}
-                  bgColor={bgColor}
-                  bgImage={bgImage}
-                />
-              )
-            )}
-          </Box>
+          {materials[sem].books.length !== 0 ? (
+            <>
+              <Typography variant="h5" component="div">
+                Books
+              </Typography>
+              <Box
+                sx={{
+                  my: 1,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                  textAlign: "center",
+                }}
+              >
+                {materials[sem].books.map(
+                  ({ name, link, bgColor, bgImage }, index) => (
+                    <GradientButton
+                      key={index}
+                      name={name}
+                      link={link}
+                      bgColor={bgColor}
+                      bgImage={bgImage}
+                    />
+                  )
+                )}
+              </Box>
+            </>
+          ) : null}
+          {materials[sem].materials.length !== 0 ? (
+            <>
+              <Typography variant="h5" component="div">
+                Materials
+              </Typography>
+              <Box
+                sx={{
+                  mt: 1,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                  textAlign: "center",
+                }}
+              >
+                {materials[sem].materials.map(
+                  ({ name, link, onClick, bgColor, bgImage }, index) => (
+                    <GradientButton
+                      key={index}
+                      name={name}
+                      link={link}
+                      onClick={onClick}
+                      bgColor={bgColor}
+                      bgImage={bgImage}
+                    />
+                  )
+                )}
+              </Box>
+            </>
+          ) : null}
         </CardContent>
       </Box>
     </Card>
