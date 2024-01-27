@@ -103,7 +103,7 @@ export default function Index() {
                       title="Mid Term Exam Routine"
                       subtitle={
                         <>
-                          Exam time: 6:15 AM - 8:15 AM
+                          Exam time: 6:35 AM - 8:35 AM
                           {/* <br />
                           Section A: Room 103, Section B: Room 104 */}
                         </>
