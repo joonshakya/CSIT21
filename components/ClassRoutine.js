@@ -280,7 +280,7 @@ export default function ClassRoutine({ sem }) {
                               row.day === todayDayName ||
                               row.day === tomorrowDayName
                           ),
-                          ...(todayDayName == "Fri" || todayDayName == "Sat"
+                          ...(todayDayName == "Fri"
                             ? [classRoutine[sem][0]]
                             : []),
                         ]
