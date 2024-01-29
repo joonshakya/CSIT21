@@ -26,11 +26,11 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
     }, 10);
     const newDate = new Date();
     setTodayDate(newDate);
-    setTomorrowDate(newDate.setDate(newDate.getDate() + 1));
+    setTomorrowDate(new Date(newDate.getTime() + 24 * 60 * 60 * 1000));
     const dateCheck = setInterval(() => {
       const newDate = new Date();
       setTodayDate(newDate);
-      setTomorrowDate(newDate.setDate(newDate.getDate() + 1));
+      setTomorrowDate(new Date(newDate.getTime() + 24 * 60 * 60 * 1000));
     }, 60000);
     return () => clearInterval(dateCheck);
   }, []);
@@ -40,6 +40,10 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
     height: "inherit",
     border: "1px solid #d7d7d7",
   };
+
+  console.log({
+    thing: todayDate,
+  });
 
   const routine = examRoutine[sem][examType];
   const questions = questionPapers[sem];
@@ -198,7 +202,7 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                           ) : null}
 
                           <TableCell sx={tCellStyles} align="center">
-                            {/* {new Date(
+                            {new Date(
                               exam.date + " GMT+5:45"
                             ).toDateString() === todayDate.toDateString() ? (
                               <div
@@ -219,7 +223,7 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                               >
                                 Tom.
                               </div>
-                            ) : null} */}
+                            ) : null}
                             {exam.day}
                           </TableCell>
                           {exam.time ? (
