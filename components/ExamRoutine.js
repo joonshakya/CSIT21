@@ -198,7 +198,7 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                           ) : null}
 
                           <TableCell sx={tCellStyles} align="center">
-                            {new Date(
+                            {/* {new Date(
                               exam.date + " GMT+5:45"
                             ).toDateString() === todayDate.toDateString() ? (
                               <div
@@ -219,7 +219,7 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                               >
                                 Tom.
                               </div>
-                            ) : null}
+                            ) : null} */}
                             {exam.day}
                           </TableCell>
                           {exam.time ? (
