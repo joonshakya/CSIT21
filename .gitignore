@@ -27,5 +27,4 @@ yarn-error.log*
 out/
 
 # Joon commit hook
-commit.js
 outgit/
