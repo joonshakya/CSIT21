@@ -41,10 +41,6 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
     border: "1px solid #d7d7d7",
   };
 
-  console.log({
-    thing: todayDate,
-  });
-
   const routine = examRoutine[sem][examType];
   const questions = questionPapers[sem];
 

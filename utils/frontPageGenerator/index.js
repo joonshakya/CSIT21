@@ -74,7 +74,7 @@ export default function useFrontPageGenerator() {
       roll: names[sem][roll][1],
       assignmentNumber,
       assignmentName,
-      assignmentNameUpper: assignmentName.toUpperCase(),
+      assignmentNameUpper: assignmentName?.toUpperCase(),
       subject: indexSubjectTable[subject],
       section: names[sem][roll][2],
     };
