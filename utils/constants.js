@@ -1326,14 +1326,14 @@ export const examRoutine = {
         ),
       },
       {
-        day: "Sun",
+        day: "Mon",
         subject: subjects.sem4.AI,
-        date: "2024/02/04",
+        date: "2024/02/05",
         friendlyDate: (
           <>
-            4<sup>th</sup> February
+            5<sup>th</sup> February
             <br />
-            21<sup>st</sup> Magh
+            22<sup>nd</sup> Magh
           </>
         ),
       },
