@@ -10,6 +10,7 @@ import {
   dsaAssignments,
   cnAssignments,
   dbmsAssignments,
+  tocAssignments,
 } from "../constants";
 import { useState } from "react";
 import { useBaseStore } from "../../src/store";
@@ -55,6 +56,7 @@ export default function useFrontPageGenerator() {
       DSA: dsaAssignments,
       CN: cnAssignments,
       DBMS: dbmsAssignments,
+      TOC: tocAssignments,
     };
 
     if (Object.prototype.hasOwnProperty.call(assignmentMap, subject)) {

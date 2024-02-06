@@ -2598,6 +2598,26 @@ export const dbmsAssignments = [
   },
 ];
 
+export const tocAssignments = [
+  {
+    number: 1,
+    name: "To validate the strings using C/C++ programming",
+  },
+  {
+    number: 2,
+    name: "To implement DFA over {a, b} that identifies all the strings having sub string 'aa'",
+  },
+  {
+    number: 3,
+    name: "To implement DFA Over {0, 1} that identifies all strings having 0's with multiple of 3",
+  },
+  {
+    number: 4,
+    name: "To implement NFA Over {a,b} having two consecutive 0's or 1's.",
+    selected: true,
+  },
+];
+
 export const nmAssignments = [
   {
     number: 1,
