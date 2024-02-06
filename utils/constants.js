@@ -2590,6 +2590,10 @@ export const dbmsAssignments = [
   {
     number: 3,
     name: "To learn about Data Manipulation Language",
+  },
+  {
+    number: 4,
+    name: "To familiarize with BETWEEN operator, SQL Wildcard (LIKE operator), GROUP BY, HAVING clause to group results",
     selected: true,
   },
 ];
