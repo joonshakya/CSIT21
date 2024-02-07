@@ -2613,7 +2613,7 @@ export const tocAssignments = [
   },
   {
     number: 4,
-    name: "To implement NFA Over {a,b} having two consecutive 0's or 1's.",
+    name: "To implement NFA Over {0, 1} having two consecutive 0's or 1's.",
     selected: true,
   },
 ];
