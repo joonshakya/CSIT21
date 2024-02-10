@@ -35,7 +35,7 @@ export default function Soon() {
       </CardContent>
       <CardActions>
         <Button
-          href="https://legacy.csit21.cf/"
+          href="https://legacy-csit21.joon.com.np/"
           target="_blank"
           rel="noopener noreferrer"
           size="small"
