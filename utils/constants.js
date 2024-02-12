@@ -28,6 +28,18 @@ export const materials = {
         bgColor: "#55a3bf",
         bgImage: "linear-gradient(62deg, #5682c4 0%, #52d0b8 100%)",
       },
+      {
+        name: (
+          <>
+            SXC
+            <br />
+            Old Qs
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1Tmf4_yMqhvpljxTzrkolZBAuH_mIP0kT?usp=drive_link",
+        bgColor: "#FBAB7E",
+        bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+      },
     ],
   },
   sem3: {

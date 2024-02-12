@@ -47,11 +47,11 @@ export default function Index() {
         <title>CSIT21 - SXC B.Sc. CSIT Batch 2021</title>
         <meta
           property="og:image"
-          content="https://www.csit21.cf/thumbnail.png"
+          content="https://csit21.joon.com.np/thumbnail.png"
         />
         <meta
           property="og:image:secure_url"
-          content="https://www.csit21.cf/thumbnail.png"
+          content="https://csit21.joon.com.np/thumbnail.png"
         />
         <meta property="og:image:width" content="1307" />
         <meta property="og:image:height" content="878" />
@@ -60,7 +60,7 @@ export default function Index() {
           content="CSIT21 - SXC B.Sc. CSIT Batch 2021"
         />
         <meta property="og:description" content="Class Documents on the go" />
-        <meta property="og:url" content="https://www.csit21.cf/" />
+        <meta property="og:url" content="https://csit21.joon.com.np/" />
       </Head>
       <Navbar
         text={`CSIT21${semParam ? ` - Sem ${parseInt(semParam)}` : ""}`}
