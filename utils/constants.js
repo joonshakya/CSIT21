@@ -1350,6 +1350,68 @@ export const examRoutine = {
         ),
       },
     ],
+    [examTypes.board]: [
+      {
+        day: "Tue",
+        subject: subjects.sem4.TOC,
+        date: "2024/03/19",
+        friendlyDate: (
+          <>
+            19<sup>th</sup> March
+            <br />6<sup>th</sup> Chaitra
+          </>
+        ),
+        source: "https://iost.tu.edu.np/notices/2426",
+        sourceName: "TU Notice",
+      },
+      {
+        day: "Fri",
+        date: "2024/03/22",
+        subject: subjects.sem4.CN,
+        friendlyDate: (
+          <>
+            22<sup>nd</sup> March
+            <br />9<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        date: "2024/03/26",
+        subject: subjects.sem4.OS,
+        friendlyDate: (
+          <>
+            26<sup>th</sup> March
+            <br />
+            13<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        date: "2024/03/29",
+        subject: subjects.sem4.DBMS,
+        friendlyDate: (
+          <>
+            29<sup>th</sup> March
+            <br />
+            16<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        date: "2024/04/01",
+        subject: subjects.sem4.AI,
+        friendlyDate: (
+          <>
+            1<sup>st</sup> April
+            <br />
+            19<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+    ],
   },
 };
 

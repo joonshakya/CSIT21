@@ -98,18 +98,12 @@ export default function Index() {
                 {sem === "" || sem === currentJoonSem ? (
                   <>
                     {
-                      // <ExamRoutine
-                      //  examType={examTypes.mid}
-                      //  sem={sem || currentJoonSem}
-                      //  title="Mid Term Exam Routine"
-                      //  subtitle={
-                      //   <>
-                      //    Exam time: 6:35 AM - 8:35 AM
-                      //    <br />
-                      //    Section A: Room 103, Section B: Room 104
-                      //   </>
-                      // }
-                      // />
+                      <ExamRoutine
+                        examType={examTypes.board}
+                        sem={sem || currentJoonSem}
+                        title="Board Exam Routine"
+                        subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
+                      />
                     }
                     <ClassRoutine sem={sem || currentJoonSem} />
                     {/* <ExamRoutine
