@@ -84,7 +84,7 @@ export default function useFrontPageGenerator() {
     const outputName = `${names[sem][roll][0]} - ${
       subject.includes("Index")
         ? `${subject}`
-        : `${subject} Assignment ${assignmentNumber}`
+        : `${subject} Lab ${assignmentNumber}`
     } - Front Page.docx`;
     generateDocument({ content, data, outputName }, setError, setLoading);
   };
