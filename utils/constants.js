@@ -2648,6 +2648,10 @@ export const cnAssignments = [
   {
     number: 3,
     name: "Creating various LAN topologies using Cisco Packet Tracer",
+  },
+  {
+    number: 4,
+    name: "Basic Router Configuration, Static Routing Implementation",
     selected: true,
   },
 ];
@@ -2668,6 +2672,10 @@ export const dbmsAssignments = [
   {
     number: 4,
     name: "To familiarize with BETWEEN operator, SQL Wildcard (LIKE operator), GROUP BY, HAVING clause to group results",
+  },
+  {
+    number: 5,
+    name: "To understand about JOIN operation and nested queries",
     selected: true,
   },
 ];
