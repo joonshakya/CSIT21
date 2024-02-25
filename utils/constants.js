@@ -228,6 +228,18 @@ export const materials = {
 
 export const downloads = [
   {
+    name: (
+      <>
+        SWI
+        <br />
+        Prolog
+      </>
+    ),
+    link: "https://github.com/joonshakyawebsites/upload-some-files-to-download/releases/download/add-swi-prolog/SWI-Prolog-Setup.exe",
+    bgColor: "#df7c1f",
+    bgImage: "linear-gradient(320deg, #a11116 0%, #f8a623 100%)",
+  },
+  {
     name: "SPSS",
     link: "https://youtu.be/h6mysceNFqg",
     bgColor: "#72a0ce",
