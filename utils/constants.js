@@ -394,13 +394,13 @@ export const classRoutine = {
     {
       day: "Mon",
       a: [
-        [subjects.sem4.CN, ""],
+        [subjects.sem4.AI, "Lab B"],
         [subjects.sem4.TOC, ""],
         [subjects.sem4.DBMS, ""],
         [subjects.sem4.OS, ""],
       ],
       b: [
-        [subjects.sem4.CN, ""],
+        [subjects.sem4.AI, "Lab B"],
         [subjects.sem4.TOC, ""],
         [subjects.sem4.DBMS, ""],
         [subjects.sem4.OS, ""],
@@ -2776,6 +2776,30 @@ export const tocAssignments = [
   {
     number: 4,
     name: "To implement NFA Over {0, 1} having two consecutive 0's or 1's.",
+  },
+  {
+    number: 5,
+    name: 'To implement Moore Machine which counts the occurrence of sub string "aab"',
+  },
+  {
+    number: 6,
+    name: "To implement Mealy Machine which works as a binary incrementer",
+  },
+  {
+    number: 7,
+    name: "To implement a program that identifies C-identifiers",
+  },
+  {
+    number: 8,
+    name: "To implement a program that identifies C-keyword",
+  },
+  {
+    number: 9,
+    name: "To implement a program that identifies valid MAC address",
+  },
+  {
+    number: 10,
+    name: "To implement a program that identifies valid Gmail address",
     selected: true,
   },
 ];
