@@ -1454,6 +1454,68 @@ export const examRoutine = {
         ),
       },
     ],
+    [examTypes.pre]: [
+      {
+        day: "Sun",
+        subject: subjects.sem4.TOC,
+        date: "2024/03/03",
+        friendlyDate: (
+          <>
+            3<sup>rd</sup> March
+            <br />
+            20<sup>th</sup> Falgun
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem4.CN,
+        date: "2024/03/04",
+        friendlyDate: (
+          <>
+            4<sup>th</sup> March
+            <br />
+            21<sup>st</sup> Falgun
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem4.OS,
+        date: "2024/03/05",
+        friendlyDate: (
+          <>
+            5<sup>th</sup> March
+            <br />
+            22<sup>nd</sup> Falgun
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem4.DBMS,
+        date: "2024/03/06",
+        friendlyDate: (
+          <>
+            6<sup>th</sup> March
+            <br />
+            23<sup>rd</sup> Falgun
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem4.AI,
+        date: "2024/03/07",
+        friendlyDate: (
+          <>
+            7<sup>th</sup> March
+            <br />
+            24<sup>th</sup> Falgun
+          </>
+        ),
+      },
+    ],
     [examTypes.board]: [
       {
         day: "Tue",
