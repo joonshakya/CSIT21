@@ -421,29 +421,29 @@ export const classRoutine = {
     {
       day: "Tue",
       a: [
-        [subjects.sem4.CN, "Lab B"],
+        [subjects.sem4.CN, ""],
         [subjects.sem4.AI, "Lab B"],
-        ["*", ""],
+        [subjects.sem4.OS, ""],
         ["*", ""],
       ],
       b: [
-        [subjects.sem4.CN, "Lab B"],
+        [subjects.sem4.CN, ""],
         [subjects.sem4.AI, "Lab B"],
-        ["*", ""],
+        [subjects.sem4.OS, ""],
         ["*", ""],
       ],
     },
     {
       day: "Wed",
       a: [
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem4.OS, ""],
+        [subjects.sem4.CN, ""],
         ["*", ""],
         ["*", ""],
       ],
       b: [
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem4.OS, ""],
+        [subjects.sem4.CN, ""],
         ["*", ""],
         ["*", ""],
       ],
@@ -451,126 +451,34 @@ export const classRoutine = {
     {
       day: "Thu",
       a: [
-        ["*", ""],
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem4.OS, ""],
+        [subjects.sem4.TOC, ""],
+        [subjects.sem4.DBMS, ""],
         ["*", ""],
       ],
       b: [
-        ["*", ""],
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem4.OS, ""],
+        [subjects.sem4.TOC, ""],
+        [subjects.sem4.DBMS, ""],
         ["*", ""],
       ],
     },
     {
       day: "Fri",
       a: [
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem4.OS, ""],
+        [subjects.sem4.AI, ""],
         ["*", ""],
         ["*", ""],
       ],
       b: [
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem4.OS, ""],
+        [subjects.sem4.AI, ""],
         ["*", ""],
         ["*", ""],
       ],
     },
   ],
-  // sem4: [
-  //   {
-  //     day: "Sun",
-  //     a: [
-  //       [subjects.sem4.AI, ""],
-  //       [subjects.sem4.TOC, ""],
-  //       [subjects.sem4.DBMS, ""],
-  //       [subjects.sem4.OS, ""],
-  //     ],
-  //     b: [
-  //       [subjects.sem4.AI, ""],
-  //       [subjects.sem4.TOC, ""],
-  //       [subjects.sem4.DBMS, ""],
-  //       [subjects.sem4.OS, ""],
-  //     ],
-  //   },
-  //   {
-  //     day: "Mon",
-  //     a: [
-  //       [subjects.sem4.AI, "Lab B"],
-  //       [subjects.sem4.TOC, ""],
-  //       [subjects.sem4.OS, "Lab B"],
-  //       ["*", ""],
-  //     ],
-  //     b: [
-  //       [subjects.sem4.AI, "Lab B"],
-  //       [subjects.sem4.TOC, ""],
-  //       [subjects.sem4.OS, "Lab B"],
-  //       ["*", ""],
-  //     ],
-  //   },
-  //   {
-  //     day: "Tue",
-  //     a: [
-  //       [subjects.sem4.CN, ""],
-  //       [subjects.sem4.AI, "Lab B"],
-  //       [subjects.sem4.OS, ""],
-  //       ["*", ""],
-  //     ],
-  //     b: [
-  //       [subjects.sem4.CN, ""],
-  //       [subjects.sem4.AI, "Lab B"],
-  //       [subjects.sem4.OS, ""],
-  //       ["*", ""],
-  //     ],
-  //   },
-  //   {
-  //     day: "Wed",
-  //     a: [
-  //       [subjects.sem4.OS, ""],
-  //       [subjects.sem4.CN, ""],
-  //       ["*", ""],
-  //       ["*", ""],
-  //     ],
-  //     b: [
-  //       [subjects.sem4.OS, ""],
-  //       [subjects.sem4.CN, ""],
-  //       ["*", ""],
-  //       ["*", ""],
-  //     ],
-  //   },
-  //   {
-  //     day: "Thu",
-  //     a: [
-  //       [subjects.sem4.OS, ""],
-  //       [subjects.sem4.TOC, ""],
-  //       [subjects.sem4.DBMS, ""],
-  //       ["*", ""],
-  //     ],
-  //     b: [
-  //       [subjects.sem4.OS, ""],
-  //       [subjects.sem4.TOC, ""],
-  //       [subjects.sem4.DBMS, ""],
-  //       ["*", ""],
-  //     ],
-  //   },
-  //   {
-  //     day: "Fri",
-  //     a: [
-  //       [subjects.sem4.OS, ""],
-  //       [subjects.sem4.AI, ""],
-  //       ["*", ""],
-  //       ["*", ""],
-  //     ],
-  //     b: [
-  //       [subjects.sem4.OS, ""],
-  //       [subjects.sem4.AI, ""],
-  //       ["*", ""],
-  //       ["*", ""],
-  //     ],
-  //   },
-  // ],
   // sem4: [
   //   {
   //     day: "Sun",
