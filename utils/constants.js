@@ -24,7 +24,7 @@ export const materials = {
             Slides
           </>
         ),
-        link: "https://drive.google.com/drive/folders/1mCO8ZIby5DqMG5KLfJhVlY3Quyjx-JXR?usp=sharing",
+        link: "https://drive.google.com/drive/folders/1O4zMlPNaO_zlCQ4loBewK1Wy-XsMaaPL?usp=drive_link",
         bgColor: "#55a3bf",
         bgImage: "linear-gradient(62deg, #5682c4 0%, #52d0b8 100%)",
       },
