@@ -2886,6 +2886,10 @@ export const tocAssignments = [
   {
     number: 10,
     name: "To implement a program that identifies valid Gmail address",
+  },
+  {
+    number: 11,
+    name: "To implement a R.E. that identifies the structure of the input: ab*b+aa*b over {a, b}",
     selected: true,
   },
 ];
