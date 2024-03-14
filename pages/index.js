@@ -35,7 +35,9 @@ export default function Index() {
         Router.replace(`/`);
         return `sem${parseInt(semParam)}`;
       }
-      return `sem${localStorage.getItem("sem")}` || "";
+      return localStorage.getItem("sem")
+        ? `sem${localStorage.getItem("sem")}`
+        : "";
     })()
   );
 
