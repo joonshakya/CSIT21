@@ -14,7 +14,7 @@ import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
 import { examTypes, currentJoonSem } from "../utils/constants";
 import Router, { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Downlaods from "../components/Downloads";
 import Feedback from "../components/Feedback";
 // import LeftSideCardMessage from "../components/LeftSideCardMessage";
@@ -27,19 +27,23 @@ export default function Index() {
 
   let semParam = router.asPath.split("/")[1];
 
-  const sem = semParam ? `sem${parseInt(semParam)}` : "";
+  const [sem, setSem] = useState(
+    (() => {
+      if (typeof window === "undefined") return "";
+      if (semParam) {
+        localStorage.setItem("sem", semParam);
+        Router.replace(`/`);
+        return `sem${parseInt(semParam)}`;
+      }
+      return `sem${localStorage.getItem("sem")}` || "";
+    })()
+  );
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (semParam) {
-      localStorage.setItem("sem", semParam);
-      return;
+    if (sem) {
+      localStorage.setItem("sem", sem.split("sem")[1]);
     }
-    const localStorageSem = localStorage.getItem("sem");
-    if (!localStorageSem || localStorageSem === currentJoonSem.split("sem")[1])
-      return;
-    Router.replace(`/${localStorageSem}`);
-  }, [semParam, sem]);
+  }, [sem]);
 
   return (
     <>
@@ -63,7 +67,7 @@ export default function Index() {
         <meta property="og:url" content="https://www.csit21.cf/" />
       </Head>
       <Navbar
-        text={`CSIT21${semParam ? ` - Sem ${parseInt(semParam)}` : ""}`}
+        text={`CSIT21 - Sem ${(sem || currentJoonSem).split("sem")[1]}`}
       />
       <Box
         sx={{
@@ -94,7 +98,7 @@ export default function Index() {
                   mx: "auto",
                 }}
               >
-                <Materials sem={sem || currentJoonSem} />
+                <Materials sem={sem || currentJoonSem} setSem={setSem} />
                 {sem === "" || sem === currentJoonSem ? (
                   <>
                     {/* <ExamRoutine

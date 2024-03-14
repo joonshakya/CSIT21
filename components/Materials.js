@@ -38,8 +38,7 @@ export const GradientButton = ({ name, link, bgColor, bgImage, onClick }) => (
   </Button>
 );
 
-const Materials = ({ sem }) => {
-  const router = useRouter();
+const Materials = ({ sem, setSem }) => {
   return (
     <Card
       sx={{
@@ -81,8 +80,7 @@ const Materials = ({ sem }) => {
               name="semChooseOptions"
               value={sem}
               onChange={(event) => {
-                localStorage.setItem("sem", event.target.value.split("sem")[1]);
-                router.replace(`/${event.target.value.split("sem")[1]}`);
+                setSem(event.target.value);
               }}
               sx={{
                 py: 1,
