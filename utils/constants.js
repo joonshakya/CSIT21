@@ -277,35 +277,35 @@ export const downloads = [
 
 export const subjects = {
   sem4: {
-    AI: {
-      name: "Artificial Intelligence",
-      shortName: "AI",
+    TOC: {
+      name: "Theory of Computation",
+      shortName: "TOC",
       microSyllabus:
-        "https://drive.google.com/file/d/19W3nTSHSFZtkN-huTJpQ_W-2Y0X9yOMX/view?usp=drive_link",
-    },
-    OS: {
-      name: "Operating System",
-      shortName: "OS",
-      microSyllabus:
-        "https://drive.google.com/file/d/1b0hVeMa3S29B3wp19_uBn1TtE4-inoVD/view?usp=drive_link",
-    },
-    DBMS: {
-      name: "Database Management System",
-      shortName: "DBMS",
-      microSyllabus:
-        "https://drive.google.com/file/d/10H8sfraUMAiRm8woBK_wmAOmbqk2P55U/view?usp=drive_link",
+        "https://drive.google.com/file/d/1WjQKlZjNYopJBgxNQxgToDtU593BmD_Y/view?usp=drive_link",
     },
     CN: {
       name: "Computer Networking",
       shortName: "CN",
       microSyllabus:
-        "https://drive.google.com/file/d/1NRtBfwS80guHtUYhSgVp0eji2xHtyvDi/view?usp=drive_link",
+        "https://drive.google.com/file/d/111cf1R_1bVxr26TVohRiUjeKc6QIUigk/view?usp=drive_link",
     },
-    TOC: {
-      name: "Theory of Computation",
-      shortName: "TOC",
+    OS: {
+      name: "Operating System",
+      shortName: "OS",
       microSyllabus:
-        "https://drive.google.com/file/d/1oUfjVtS8V-JdwLvwdYtEsfmXnaN5yCEF/view?usp=drive_link",
+        "https://drive.google.com/file/d/1ltJ9G11kKj-v66r5OFDK8NeSX_l0Et61/view?usp=drive_link",
+    },
+    DBMS: {
+      name: "Database Management System",
+      shortName: "DBMS",
+      microSyllabus:
+        "https://drive.google.com/file/d/1YZmgUD9OCgEoYcysyweiVzyvKYAjeSac/view?usp=drive_link",
+    },
+    AI: {
+      name: "Artificial Intelligence",
+      shortName: "AI",
+      microSyllabus:
+        "https://drive.google.com/file/d/1G2ZukFy_gvjwrB-Sh6AU1gA3w_qRpFdE/view?usp=drive_link",
     },
   },
   sem3: {
