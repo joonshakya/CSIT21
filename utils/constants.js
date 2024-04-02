@@ -2890,6 +2890,14 @@ export const tocAssignments = [
   {
     number: 11,
     name: "To implement a R.E. that identifies the structure of the input: ab*b+aa*b over {a, b}",
+  },
+  {
+    number: 12,
+    name: "To implement PDA {a, b} having equal no. of a's and b's",
+  },
+  {
+    number: 13,
+    name: "To implement TM over {a, b} that recognizes string of languages L = {ww | w belongs to (a+b)}",
     selected: true,
   },
 ];
