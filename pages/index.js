@@ -31,9 +31,14 @@ export default function Index() {
     (() => {
       if (typeof window === "undefined") return "";
       if (semParam) {
+        const semParamNum = parseInt(semParam);
+        if (semParamNum < 1 || semParamNum > currentJoonSem.split("sem")[1]) {
+          Router.replace(`/`);
+          return "";
+        }
         localStorage.setItem("sem", semParam);
         Router.replace(`/`);
-        return `sem${parseInt(semParam)}`;
+        return `sem${semParamNum}`;
       }
       return localStorage.getItem("sem")
         ? `sem${localStorage.getItem("sem")}`
