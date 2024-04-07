@@ -32,13 +32,15 @@ export default function Index() {
       if (typeof window === "undefined") return "";
       if (semParam) {
         const semParamNum = parseInt(semParam);
-        if (semParamNum < 1 || semParamNum > currentJoonSem.split("sem")[1]) {
+
+        if (semParamNum >= 1 || semParamNum <= currentJoonSem.split("sem")[1]) {
+          localStorage.setItem("sem", semParam);
           Router.replace(`/`);
-          return "";
+          return `sem${semParamNum}`;
         }
-        localStorage.setItem("sem", semParam);
+        localStorage.setItem("sem", currentJoonSem.split("sem")[1]);
         Router.replace(`/`);
-        return `sem${semParamNum}`;
+        return "";
       }
       return localStorage.getItem("sem")
         ? `sem${localStorage.getItem("sem")}`
