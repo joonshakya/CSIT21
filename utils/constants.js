@@ -1578,6 +1578,69 @@ export const examRoutine = {
         ),
       },
     ],
+    [examTypes.prac]: [
+      {
+        day: "Tue",
+        subject: subjects.sem4.DBMS,
+        date: "2024/04/16",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            16<sup>th</sup> April
+            <br />4<sup>th</sup> Baisakh
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem4.CN,
+        date: "2024/04/18",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            18<sup>th</sup> April
+            <br />6<sup>th</sup> Baisakh
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem4.TOC,
+        date: "2024/04/19",
+        time: "8:00 AM",
+        friendlyDate: (
+          <>
+            19<sup>th</sup> April
+            <br />7<sup>th</sup> Baisakh
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem4.AI,
+        date: "2024/04/21",
+        time: "8:00 AM",
+        friendlyDate: (
+          <>
+            21<sup>st</sup> April
+            <br />9<sup>th</sup> Baisakh
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem4.OS,
+        date: "2024/04/22",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            22<sup>nd</sup> April
+            <br />
+            10<sup>th</sup> Baisakh
+          </>
+        ),
+      },
+    ],
   },
 };
 
