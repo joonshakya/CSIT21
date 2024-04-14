@@ -46,6 +46,9 @@ export default function FrontPageGenerator({ sem }) {
 
   const assignmentsWithoutTopics = useMemo(() => {
     return [
+      "TOC Index",
+      "DBMS Index",
+      "AI Index",
       "CG Index",
       "CA Index",
       "DSA Index",
@@ -79,6 +82,33 @@ export default function FrontPageGenerator({ sem }) {
       {
         subject: "DSA",
         assignments: dsaAssignments,
+      },
+      {
+        subject: "TOC Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "DBMS Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "AI Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
       },
       {
         subject: "CG Index",
@@ -183,7 +213,7 @@ export default function FrontPageGenerator({ sem }) {
     if (tab === "assignment") {
       setSubject(initialSubject);
     } else if (tab === "index") {
-      setSubject("CG Index");
+      setSubject("TOC Index");
     }
   }, [tab]);
 
@@ -444,6 +474,18 @@ export default function FrontPageGenerator({ sem }) {
                         },
                       ]
                     : [
+                        {
+                          shortHand: "TOC Index",
+                          longHand: "TOC",
+                        },
+                        {
+                          shortHand: "DBMS Index",
+                          longHand: "DBMS",
+                        },
+                        {
+                          shortHand: "AI Index",
+                          longHand: "AI",
+                        },
                         {
                           shortHand: "CG Index",
                           longHand: "CG",
