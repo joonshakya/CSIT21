@@ -440,7 +440,20 @@ export default function FrontPageGenerator({ sem }) {
                           longHand: "TOC",
                         },
                       ]
-                    : []
+                    : [
+                        {
+                          shortHand: "TOC Index",
+                          longHand: "TOC",
+                        },
+                        {
+                          shortHand: "DBMS Index",
+                          longHand: "DBMS",
+                        },
+                        {
+                          shortHand: "AI Index",
+                          longHand: "AI",
+                        },
+                      ]
                   ).map((subject, index) => (
                     <FormControlLabel
                       key={index}
@@ -474,18 +487,6 @@ export default function FrontPageGenerator({ sem }) {
                         },
                       ]
                     : [
-                        {
-                          shortHand: "TOC Index",
-                          longHand: "TOC",
-                        },
-                        {
-                          shortHand: "DBMS Index",
-                          longHand: "DBMS",
-                        },
-                        {
-                          shortHand: "AI Index",
-                          longHand: "AI",
-                        },
                         {
                           shortHand: "CG Index",
                           longHand: "CG",
