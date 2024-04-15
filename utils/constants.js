@@ -2960,7 +2960,7 @@ export const tocAssignments = [
   },
   {
     number: 13,
-    name: "To implement TM over {a, b} that recognizes string of languages L = {ww | w belongs to (a+b)}",
+    name: "To implement TM over {a, b} that recognizes string of languages L = {a^n b^n c^n | n >= 1}",
     selected: true,
   },
 ];
