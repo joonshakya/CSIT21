@@ -79,6 +79,8 @@ export default function useFrontPageGenerator() {
       assignmentNameUpper: assignmentName?.toUpperCase(),
       subject: indexSubjectTable[subject],
       section: names[sem][roll][2],
+      openBr: "{",
+      closeBr: "}",
     };
 
     const outputName = `${names[sem][roll][0]} - ${
