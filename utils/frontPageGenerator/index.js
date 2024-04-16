@@ -111,6 +111,7 @@ export async function prefetchDocument({
     ![
       "TOC Index",
       "DBMS Index",
+      "CN Index",
       "AI Index",
       "CG Index",
       "CA Index",

@@ -59,6 +59,7 @@ export const useWordStore = create((set) => ({
   Index: null,
   ["TOC Index"]: null,
   ["DBMS Index"]: null,
+  ["CN Index"]: null,
   ["AI Index"]: null,
   ["CG Index"]: null,
   ["CA Index"]: null,

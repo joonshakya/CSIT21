@@ -48,6 +48,7 @@ export default function FrontPageGenerator({ sem }) {
     return [
       "TOC Index",
       "DBMS Index",
+      "CN Index",
       "AI Index",
       "CG Index",
       "CA Index",
@@ -94,6 +95,15 @@ export default function FrontPageGenerator({ sem }) {
       },
       {
         subject: "DBMS Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "CN Index",
         assignments: [
           {
             number: 0,
@@ -448,6 +458,10 @@ export default function FrontPageGenerator({ sem }) {
                         {
                           shortHand: "DBMS Index",
                           longHand: "DBMS",
+                        },
+                        {
+                          shortHand: "CN Index",
+                          longHand: "CN",
                         },
                         {
                           shortHand: "AI Index",

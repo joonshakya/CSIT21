@@ -2880,8 +2880,29 @@ export const cnAssignments = [
   },
   {
     number: 4,
-    name: "Basic Router Configuration, Static Routing Implementation",
+    name: "Implementation of DHCP server",
+  },
+  {
+    number: 5,
+    name: "Static Routing Implementation",
+  },
+
+  {
+    number: 6,
+    name: "Dynamic Routing Implementation using RIP",
+  },
+  {
+    number: 7,
+    name: "Setting up VLAN",
+  },
+  {
+    number: 8,
+    name: "Setting up Email Server",
+  },
+  {
+    number: 9,
     selected: true,
+    name: "Setting up DNS Server",
   },
 ];
 
