@@ -1,6 +1,23 @@
 import { useDevCppDownloadDialogStore } from "../src/store";
 
 export const materials = {
+  sem5: {
+    books: [],
+    materials: [
+      {
+        name: (
+          <>
+            Ankit
+            <br />
+            Pangeni
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1fhkU4pVANv9uVzlYKwWn5PCBjR3LXl3_",
+        bgColor: "#548982",
+        bgImage: "linear-gradient(90deg, #585c5b 0%, #44b8ab 100%)",
+      },
+    ],
+  },
   sem4: {
     books: [],
     materials: [
@@ -276,6 +293,50 @@ export const downloads = [
 ];
 
 export const subjects = {
+  sem5: {
+    "Web Tech": {
+      name: "Web Technology",
+      shortName: "Web Tech",
+      microSyllabus:
+        "https://drive.google.com/file/d/1gXp-bh087842e57ROCkZQoSkU5z8qG0V/view?usp=drive_link",
+    },
+    DAA: {
+      name: "Design and Analysis of Algorithms",
+      shortName: "DAA",
+      microSyllabus:
+        "https://drive.google.com/file/d/1xZ_1S_Nny3dzctfEdV8MaR8R6IkcoR8B/view?usp=drive_link",
+    },
+    Simulation: {
+      name: "Simulation and Modeling",
+      shortName: "Simulation",
+      microSyllabus:
+        "https://drive.google.com/file/d/1HQG_q-iR-o-Bj_564pZcwfQzsGjLJ9Mx/view?usp=drive_link",
+    },
+    Crypto: {
+      name: "Cryptography",
+      shortName: "Crypto",
+      microSyllabus:
+        "https://drive.google.com/file/d/1FxND026KaYM_y_TW_j5AkPPsB21Oan8L/view?usp=drive_link",
+    },
+    MM: {
+      name: "Multimedia",
+      shortName: "MM",
+      microSyllabus:
+        "https://drive.google.com/file/d/1IoJc_P_gG4Gle648UhYoJM7BeNC0-Lh1/view?usp=drive_link",
+    },
+    IP: {
+      name: "Image Processing",
+      shortName: "IP",
+      microSyllabus:
+        "https://drive.google.com/file/d/1XE-OuQi1pIBOltTSVY3r_36o1-NzBG6V/view?usp=drive_link",
+    },
+    SAD: {
+      name: "System Analysis and Design",
+      shortName: "SAD",
+      microSyllabus:
+        "https://drive.google.com/file/d/1OVNyU_TCpP7tQNfZ_tB2jon-jAsFfg3D/view?usp=drive_link",
+    },
+  },
   sem4: {
     TOC: {
       name: "Theory of Computation",
@@ -387,6 +448,98 @@ export const subjects = {
 };
 
 export const classRoutine = {
+  sem5: [
+    {
+      day: "Sun",
+      a: [
+        [subjects.sem5["Web Tech"], "314"],
+        [subjects.sem5.DAA, "314"],
+        [subjects.sem5.Simulation, "314"],
+        [subjects.sem5.SAD, "317"],
+      ],
+      b: [
+        [subjects.sem5.DAA, "316"],
+        [subjects.sem5["Web Tech"], "316"],
+        [subjects.sem5.Crypto, "316"],
+        [subjects.sem5.SAD, "317"],
+      ],
+    },
+    {
+      day: "Mon",
+      a: [
+        [subjects.sem5["Web Tech"], "314"],
+        [subjects.sem5.Crypto, "314"],
+        [subjects.sem5.DAA, "314"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem5.DAA, "316"],
+        [subjects.sem5["Web Tech"], "316"],
+        [subjects.sem5.Crypto, "316"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Tue",
+      a: [
+        [subjects.sem5.DAA, "314"],
+        [subjects.sem5.MM, "317"],
+        [subjects.sem5.Simulation, "314"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem5.Simulation, "316"],
+        [subjects.sem5.MM, "317"],
+        [subjects.sem5.Crypto, "316"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Wed",
+      a: [
+        [subjects.sem5.Simulation, "314"],
+        [subjects.sem5.MM, "317"],
+        [subjects.sem5.SAD, "317"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem5.DAA, "316"],
+        [subjects.sem5.MM, "317"],
+        [subjects.sem5.SAD, "317"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Thu",
+      a: [
+        [subjects.sem5.Crypto, "314"],
+        [subjects.sem5["Web Tech"], "314"],
+        [subjects.sem5.SAD, "317"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem5["Web Tech"], "316"],
+        [subjects.sem5.Simulation, "316"],
+        [subjects.sem5.SAD, "317"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Fri",
+      a: [
+        [subjects.sem5.Crypto, "314"],
+        [subjects.sem5.MM, "317"],
+        ["*", ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem5.Simulation, "316"],
+        [subjects.sem5.MM, "317"],
+        ["*", ""],
+        ["*", ""],
+      ],
+    },
+  ],
   sem4: [
     {
       day: "Sun",
@@ -1644,7 +1797,7 @@ export const examRoutine = {
   },
 };
 
-export const currentJoonSem = "sem4";
+export const currentJoonSem = "sem5";
 
 export const classRoutineSem2 = [
   {
@@ -1725,7 +1878,7 @@ export const classRoutineSem2 = [
 ];
 
 export const names = {
-  sem4: {
+  sem5: {
     1: ["Aakash Shrestha", "021BSCIT001", "A"],
     2: ["Aayam Pokharel", "021BSCIT002", "A"],
     3: ["Aayush Poudel", "021BSCIT003", "A"],
@@ -1776,57 +1929,157 @@ export const names = {
     48: ["Yubraj Khatiwada", "021BSCIT048", "B"],
     49: ["Laviz Pandey", "021BSCIT049", "B"],
   },
+  sem4: {
+    1: ["Aarjan Mani", "022BSCIT001", "A"],
+    2: ["Aaryan Bista", "022BSCIT002", "A"],
+    3: ["Aasvi Lamsal", "022BSCIT003", "A"],
+    4: ["Aayush Acharya", "022BSCIT004", "A"],
+    5: ["Adarsha Baskota", "022BSCIT005", "A"],
+    6: ["Alis Maharjan", "022BSCIT006", "A"],
+    7: ["Barsha Regmi", "022BSCIT007", "A"],
+    8: ["Binish Shrestha", "022BSCIT008", "A"],
+    9: ["Deepika Gautam", "022BSCIT009", "A"],
+    10: ["Devesh Phaiju", "022BSCIT010", "A"],
+    11: ["Devesh Shrestha", "022BSCIT011", "A"],
+    12: ["Dipan Kharel", "022BSCIT012", "A"],
+    13: ["Dipesh Kumar Kushwaha", "022BSCIT013", "A"],
+    14: ["Jenish Shrestha", "022BSCIT014", "A"],
+    15: ["Kamal Dhami", "022BSCIT015", "A"],
+    16: ["Karuna Silwal", "022BSCIT016", "A"],
+    17: ["Mamata Pokharel", "022BSCIT017", "A"],
+    18: ["Niharika Khanal", "022BSCIT018", "A"],
+    19: ["Niharika Shrestha", "022BSCIT019", "A"],
+    20: ["Nilima Shrestha", "022BSCIT020", "A"],
+    21: ["Nilisha Shakya", "022BSCIT021", "A"],
+    22: ["Nirajan Kumar Yadav", "022BSCIT022", "A"],
+    23: ["Nirajan Paudel", "022BSCIT023", "A"],
+    24: ["Nirjal Maharjan", "022BSCIT024", "A"],
+    25: ["Nischal Gyawali", "022BSCIT025", "B"],
+    26: ["Nisum Yonghang", "022BSCIT026", "B"],
+    27: ["Parikshit Maharjan", "022BSCIT027", "B"],
+    28: ["Piyush K.C.", "022BSCIT028", "B"],
+    29: ["Prakriti Shrestha", "022BSCIT029", "B"],
+    30: ["Prasamsha Pudasaini", "022BSCIT030", "B"],
+    31: ["Pratistha Maharjan", "022BSCIT031", "B"],
+    32: ["Puspa Bhusal", "022BSCIT032", "B"],
+    33: ["Raman Shakya", "022BSCIT033", "B"],
+    34: ["Rayan Karki", "022BSCIT034", "B"],
+    35: ["Sabin Dahal", "022BSCIT035", "B"],
+    36: ["Samragi Dhakal", "022BSCIT036", "B"],
+    37: ["Samridh Kandel", "022BSCIT037", "B"],
+    38: ["Satish Dhakal", "022BSCIT038", "B"],
+    39: ["Saugat Thapa", "022BSCIT039", "B"],
+    40: ["Sejal Ghimire", "022BSCIT040", "B"],
+    41: ["Smriti Pant", "022BSCIT041", "B"],
+    42: ["Spandan Shah", "022BSCIT042", "B"],
+    43: ["Srijal Manandhar", "022BSCIT043", "B"],
+    44: ["Subham Sharma", "022BSCIT044", "B"],
+    45: ["Sumit Kumar Sah", "022BSCIT045", "B"],
+    46: ["Supreme Khadka", "022BSCIT046", "B"],
+    47: ["Swornim Raj Dangol", "022BSCIT047", "B"],
+    48: ["Utsav Adhikari", "022BSCIT048", "B"],
+  },
   sem3: {
-    1: ["Aakash Shrestha", "021BSCIT001", "A"],
-    2: ["Aayam Pokharel", "021BSCIT002", "A"],
-    3: ["Aayush Poudel", "021BSCIT003", "A"],
-    4: ["Aayush Shrestha", "021BSCIT004", "A"],
-    5: ["Abhishek Uprety", "021BSCIT005", "A"],
-    6: ["Ashraya Jung Sijapati", "021BSCIT006", "A"],
-    7: ["Binaya Paudel", "021BSCIT007", "A"],
-    8: ["Binaya Shrestha", "021BSCIT008", "A"],
-    9: ["Dhiraj Sah", "021BSCIT009", "A"],
-    10: ["Gaurav Bhatt", "021BSCIT010", "A"],
-    11: ["Gaurav Kafle", "021BSCIT011", "A"],
-    12: ["Joon Shakya", "021BSCIT012", "A"],
-    13: ["Nischal Shrestha", "021BSCIT013", "A"],
-    14: ["Nitika Pradhananga", "021BSCIT014", "A"],
-    15: ["Pralov Malla", "021BSCIT015", "A"],
-    16: ["Rasna Bhasima", "021BSCIT016", "A"],
-    17: ["Redikshya Phuyal", "021BSCIT017", "A"],
-    18: ["Rhizu Joshi", "021BSCIT018", "A"],
-    19: ["Riwaj Prasai", "021BSCIT019", "A"],
-    20: ["Ruby Shrestha", "021BSCIT020", "A"],
-    21: ["Rupesh Bashyal", "021BSCIT021", "A"],
-    22: ["Sahara Khatri", "021BSCIT022", "A"],
-    23: ["Sahil Lamsal", "021BSCIT023", "A"],
-    24: ["Saisab Karki", "021BSCIT024", "A"],
-    25: ["Sajina Basnet", "021BSCIT025", "B"],
-    26: ["Samarpan Bhandari", "021BSCIT026", "B"],
-    27: ["Sameer Shrestha", "021BSCIT027", "B"],
-    28: ["Sashwat Maharjan", "021BSCIT028", "B"],
-    29: ["Satish Maharjan", "021BSCIT029", "B"],
-    30: ["Saugat Dahal", "021BSCIT030", "B"],
-    31: ["Saurabh Baral", "021BSCIT031", "B"],
-    32: ["Saurav Bista", "021BSCIT032", "B"],
-    33: ["Selina Maharjan", "021BSCIT033", "B"],
-    34: ["Shamant Kharel", "021BSCIT034", "B"],
-    35: ["Shasin Regmi", "021BSCIT035", "B"],
-    36: ["Shreeya Nepal", "021BSCIT036", "B"],
-    37: ["Shristi Shakya", "021BSCIT037", "B"],
-    38: ["Shubham Belbase", "021BSCIT038", "B"],
-    39: ["Siddhanta Shrestha", "021BSCIT039", "B"],
-    40: ["Sijan Khatri", "021BSCIT040", "B"],
-    41: ["Spandan Shakya", "021BSCIT041", "B"],
-    42: ["Sudip Shrestha", "021BSCIT042", "B"],
-    43: ["Suhana Shrestha", "021BSCIT043", "B"],
-    44: ["Sujal Bajracharya", "021BSCIT044", "B"],
-    45: ["Susmita Majhi", "021BSCIT045", "B"],
-    46: ["Swoyesh Shrestha", "021BSCIT046", "B"],
-    47: ["Yogesh Rijal", "021BSCIT047", "B"],
-    48: ["Yubraj Khatiwada", "021BSCIT048", "B"],
+    1: ["Aarjan Mani", "022BSCIT001", "A"],
+    2: ["Aaryan Bista", "022BSCIT002", "A"],
+    3: ["Aasvi Lamsal", "022BSCIT003", "A"],
+    4: ["Aayush Acharya", "022BSCIT004", "A"],
+    5: ["Adarsha Baskota", "022BSCIT005", "A"],
+    6: ["Alis Maharjan", "022BSCIT006", "A"],
+    7: ["Barsha Regmi", "022BSCIT007", "A"],
+    8: ["Binish Shrestha", "022BSCIT008", "A"],
+    9: ["Deepika Gautam", "022BSCIT009", "A"],
+    10: ["Devesh Phaiju", "022BSCIT010", "A"],
+    11: ["Devesh Shrestha", "022BSCIT011", "A"],
+    12: ["Dipan Kharel", "022BSCIT012", "A"],
+    13: ["Dipesh Kumar Kushwaha", "022BSCIT013", "A"],
+    14: ["Jenish Shrestha", "022BSCIT014", "A"],
+    15: ["Kamal Dhami", "022BSCIT015", "A"],
+    16: ["Karuna Silwal", "022BSCIT016", "A"],
+    17: ["Mamata Pokharel", "022BSCIT017", "A"],
+    18: ["Niharika Khanal", "022BSCIT018", "A"],
+    19: ["Niharika Shrestha", "022BSCIT019", "A"],
+    20: ["Nilima Shrestha", "022BSCIT020", "A"],
+    21: ["Nilisha Shakya", "022BSCIT021", "A"],
+    22: ["Nirajan Kumar Yadav", "022BSCIT022", "A"],
+    23: ["Nirajan Paudel", "022BSCIT023", "A"],
+    24: ["Nirjal Maharjan", "022BSCIT024", "A"],
+    25: ["Nischal Gyawali", "022BSCIT025", "B"],
+    26: ["Nisum Yonghang", "022BSCIT026", "B"],
+    27: ["Parikshit Maharjan", "022BSCIT027", "B"],
+    28: ["Piyush K.C.", "022BSCIT028", "B"],
+    29: ["Prakriti Shrestha", "022BSCIT029", "B"],
+    30: ["Prasamsha Pudasaini", "022BSCIT030", "B"],
+    31: ["Pratistha Maharjan", "022BSCIT031", "B"],
+    32: ["Puspa Bhusal", "022BSCIT032", "B"],
+    33: ["Raman Shakya", "022BSCIT033", "B"],
+    34: ["Rayan Karki", "022BSCIT034", "B"],
+    35: ["Sabin Dahal", "022BSCIT035", "B"],
+    36: ["Samragi Dhakal", "022BSCIT036", "B"],
+    37: ["Samridh Kandel", "022BSCIT037", "B"],
+    38: ["Satish Dhakal", "022BSCIT038", "B"],
+    39: ["Saugat Thapa", "022BSCIT039", "B"],
+    40: ["Sejal Ghimire", "022BSCIT040", "B"],
+    41: ["Smriti Pant", "022BSCIT041", "B"],
+    42: ["Spandan Shah", "022BSCIT042", "B"],
+    43: ["Srijal Manandhar", "022BSCIT043", "B"],
+    44: ["Subham Sharma", "022BSCIT044", "B"],
+    45: ["Sumit Kumar Sah", "022BSCIT045", "B"],
+    46: ["Supreme Khadka", "022BSCIT046", "B"],
+    47: ["Swornim Raj Dangol", "022BSCIT047", "B"],
+    48: ["Utsav Adhikari", "022BSCIT048", "B"],
   },
   sem2: {
+    1: ["Aarjan Mani", "022BSCIT001", "A"],
+    2: ["Aaryan Bista", "022BSCIT002", "A"],
+    3: ["Aasvi Lamsal", "022BSCIT003", "A"],
+    4: ["Aayush Acharya", "022BSCIT004", "A"],
+    5: ["Adarsha Baskota", "022BSCIT005", "A"],
+    6: ["Alis Maharjan", "022BSCIT006", "A"],
+    7: ["Barsha Regmi", "022BSCIT007", "A"],
+    8: ["Binish Shrestha", "022BSCIT008", "A"],
+    9: ["Deepika Gautam", "022BSCIT009", "A"],
+    10: ["Devesh Phaiju", "022BSCIT010", "A"],
+    11: ["Devesh Shrestha", "022BSCIT011", "A"],
+    12: ["Dipan Kharel", "022BSCIT012", "A"],
+    13: ["Dipesh Kumar Kushwaha", "022BSCIT013", "A"],
+    14: ["Jenish Shrestha", "022BSCIT014", "A"],
+    15: ["Kamal Dhami", "022BSCIT015", "A"],
+    16: ["Karuna Silwal", "022BSCIT016", "A"],
+    17: ["Mamata Pokharel", "022BSCIT017", "A"],
+    18: ["Niharika Khanal", "022BSCIT018", "A"],
+    19: ["Niharika Shrestha", "022BSCIT019", "A"],
+    20: ["Nilima Shrestha", "022BSCIT020", "A"],
+    21: ["Nilisha Shakya", "022BSCIT021", "A"],
+    22: ["Nirajan Kumar Yadav", "022BSCIT022", "A"],
+    23: ["Nirajan Paudel", "022BSCIT023", "A"],
+    24: ["Nirjal Maharjan", "022BSCIT024", "A"],
+    25: ["Nischal Gyawali", "022BSCIT025", "B"],
+    26: ["Nisum Yonghang", "022BSCIT026", "B"],
+    27: ["Parikshit Maharjan", "022BSCIT027", "B"],
+    28: ["Piyush K.C.", "022BSCIT028", "B"],
+    29: ["Prakriti Shrestha", "022BSCIT029", "B"],
+    30: ["Prasamsha Pudasaini", "022BSCIT030", "B"],
+    31: ["Pratistha Maharjan", "022BSCIT031", "B"],
+    32: ["Puspa Bhusal", "022BSCIT032", "B"],
+    33: ["Raman Shakya", "022BSCIT033", "B"],
+    34: ["Rayan Karki", "022BSCIT034", "B"],
+    35: ["Sabin Dahal", "022BSCIT035", "B"],
+    36: ["Samragi Dhakal", "022BSCIT036", "B"],
+    37: ["Samridh Kandel", "022BSCIT037", "B"],
+    38: ["Satish Dhakal", "022BSCIT038", "B"],
+    39: ["Saugat Thapa", "022BSCIT039", "B"],
+    40: ["Sejal Ghimire", "022BSCIT040", "B"],
+    41: ["Smriti Pant", "022BSCIT041", "B"],
+    42: ["Spandan Shah", "022BSCIT042", "B"],
+    43: ["Srijal Manandhar", "022BSCIT043", "B"],
+    44: ["Subham Sharma", "022BSCIT044", "B"],
+    45: ["Sumit Kumar Sah", "022BSCIT045", "B"],
+    46: ["Supreme Khadka", "022BSCIT046", "B"],
+    47: ["Swornim Raj Dangol", "022BSCIT047", "B"],
+    48: ["Utsav Adhikari", "022BSCIT048", "B"],
+  },
+  sem4: {
     1: ["Aarjan Mani", "022BSCIT001", "A"],
     2: ["Aaryan Bista", "022BSCIT002", "A"],
     3: ["Aasvi Lamsal", "022BSCIT003", "A"],

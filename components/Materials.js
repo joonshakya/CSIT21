@@ -89,6 +89,7 @@ const Materials = ({ sem, setSem }) => {
                 justifyContent: "center",
               }}
             >
+              <FormControlLabel value="sem5" control={<Radio />} label="5th" />
               <FormControlLabel value="sem4" control={<Radio />} label="4th" />
               <FormControlLabel value="sem3" control={<Radio />} label="3rd" />
               <FormControlLabel value="sem2" control={<Radio />} label="2nd" />

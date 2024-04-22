@@ -116,12 +116,12 @@ export default function Index() {
                       title="Pre Board Routine"
                       subtitle={<>Exam time: 6:15 AM - 9:15 AM</>}
                     /> */}
-                    <ExamRoutine
+                    {/* <ExamRoutine
                       examType={examTypes.prac}
                       sem={sem || currentJoonSem}
                       title="Practical Exam Routine"
-                    />
-                    {/* <ClassRoutine sem={sem || currentJoonSem} /> */}
+                    /> */}
+                    <ClassRoutine sem={sem || currentJoonSem} />
                     {/* <ExamRoutine
                       examType={examTypes.board}
                       sem="sem3"
