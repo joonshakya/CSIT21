@@ -527,13 +527,15 @@ export const classRoutine = {
     {
       day: "Fri",
       a: [
-        [subjects.sem5.Crypto, "314"],
+        [subjects.sem5.Simulation, "317"],
+        // [subjects.sem5.Crypto, "314"],
         [subjects.sem5.MM, "317"],
         ["*", ""],
         ["*", ""],
       ],
       b: [
-        [subjects.sem5.Simulation, "316"],
+        [subjects.sem5.Simulation, "317"],
+        // [subjects.sem5.Simulation, "316"],
         [subjects.sem5.MM, "317"],
         ["*", ""],
         ["*", ""],
