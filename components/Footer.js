@@ -1,6 +1,7 @@
 import { Toolbar, Typography, Box } from "@mui/material";
 import Link from "next/link";
 import React from "react";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Footer = () => {
   return (
@@ -20,14 +21,23 @@ const Footer = () => {
         }}
       >
         <Link
-          href="/"
+          href="https://www.github.com/joonshakya/CSIT21"
           style={{
             color: "white",
             margin: ".4rem 1rem",
-            textAlign: "center",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          Copyright © SXC B.Sc. CSIT Batch 2021
+          {/* add github icon */}
+          <GitHubIcon
+            style={{
+              marginRight: "0.5rem",
+              fontSize: "1.2rem",
+            }}
+          />
+          joonshakya/CSIT21
         </Link>
         <Typography
           color="white"
@@ -36,7 +46,7 @@ const Footer = () => {
             textAlign: "center",
           }}
         >
-          V2.0.3
+          V2.0.4
         </Typography>
       </Box>
     </Toolbar>
