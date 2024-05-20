@@ -26,6 +26,34 @@ You can access the live version of CSIT21 at [https://www.csit21.cf](https://www
 
 Contributions to CSIT21 are welcome! If you'd like to contribute, please fork the repository, make your changes, and submit a pull request.
 
+## Project Setup
+
+Prerequisites: You should have node and npm installed, if not so do it by downloading node from the website [https://nodejs.org/en/download/prebuilt-installer] (https://nodejs.org/en/download/prebuilt-installer)
+
+# Installation
+
+1. Clone this repository
+
+   `git clone https://github.com/joonshakya/CSIT21`
+
+ 2. Install dependencies
+
+		
+
+    Install pnpm globally
+
+    `npm i -g pnpm@8`
+
+ 4. Install project dependencies
+
+    `pnpm i`
+
+**Run the project**
+Navigate to CSIT21 folder in your terminal and run: 
+
+CSIT21> `pnpm dev`
+
+
 ## Issues
 
 If you encounter any issues or have suggestions for improvement, please feel free to open an issue on the GitHub repository.
