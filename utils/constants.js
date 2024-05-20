@@ -2,17 +2,19 @@ import { useDevCppDownloadDialogStore } from "../src/store";
 
 export const materials = {
   sem5: {
-    books: [{
-      name: (
-        <>
-          SAD
-          <br />
-        </>
-      ),
-      link: "https://drive.google.com/file/d/19HPF413qJgLRbceB4jQjRVzOKF7Zr5vR/view?usp=sharing",
-      bgColor: "#283e54",
-      bgImage: "linear-gradient(340deg, #283e54 50%, #ba0707 100%)",
-    },],
+    books: [
+      {
+        name: (
+          <>
+            SAD
+            <br />
+          </>
+        ),
+        link: "https://drive.google.com/file/d/19HPF413qJgLRbceB4jQjRVzOKF7Zr5vR/view?usp=sharing",
+        bgColor: "#283e54",
+        bgImage: "linear-gradient(340deg, #283e54 50%, #ba0707 100%)",
+      },
+    ],
     materials: [
       {
         name: (
@@ -26,9 +28,7 @@ export const materials = {
         bgColor: "#548982",
         bgImage: "linear-gradient(90deg, #585c5b 0%, #44b8ab 100%)",
       },
-      
     ],
-    
   },
   sem4: {
     books: [],
@@ -479,14 +479,14 @@ export const classRoutine = {
     {
       day: "Mon",
       a: [
-        [subjects.sem5.DAA, "218"],
-        [subjects.sem5["Web Tech"], "218"],
+        [subjects.sem5.DAA, "Lab B"],
+        [subjects.sem5["Web Tech"], "Lab B"],
         [subjects.sem5.Crypto, "218"],
         ["*", ""],
       ],
       b: [
-        [subjects.sem5.DAA, "218"],
-        [subjects.sem5["Web Tech"], "218"],
+        [subjects.sem5.DAA, "Lab B"],
+        [subjects.sem5["Web Tech"], "Lab B"],
         [subjects.sem5.Crypto, "218"],
         ["*", ""],
       ],
