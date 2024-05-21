@@ -26,7 +26,7 @@ You can access the live version of CSIT21 at [https://www.csit21.cf](https://www
 
 Contributions to CSIT21 are welcome! If you'd like to contribute, please fork the repository, make your changes, and submit a pull request.
 
-# Installation
+## Installation
 
 1. Clone this repository
 
@@ -45,45 +45,29 @@ Contributions to CSIT21 are welcome! If you'd like to contribute, please fork th
       ``` bash
       npm i -g pnpm@8
       ```
-    
 
-  * For yarn
-
-      Install yarn globally
-
-      ``` bash  
-      npm install -g yarn
-      ```
-
-  * For bun
-
-      Install bun globally
-
-      ``` bash
-      npm install -g bun
-      ```
     <br/>
 
 3. Install project dependencies
 
   * If you are using npm
     ```bash
-    npm i
+    npm install
     ```
 
   * If you are using pnpm
     ```bash
-    pnpm i
+    pnpm install
     ```
 
   * If you are using yarn
     ```bash
-    yarn i
+    yarn
     ```
 
   * If you are using bun
     ```bash
-    bun i
+    bun install
     ```
 <br/>
 
