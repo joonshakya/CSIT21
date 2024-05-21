@@ -22,10 +22,6 @@ CSIT21 is a comprehensive website designed to cater to the needs of Computer Sci
 
 You can access the live version of CSIT21 at [https://www.csit21.cf](https://www.csit21.cf).
 
-## Contributing
-
-Contributions to CSIT21 are welcome! If you'd like to contribute, please fork the repository, make your changes, and submit a pull request.
-
 ## Installation
 
 1. Clone this repository
@@ -35,20 +31,13 @@ Contributions to CSIT21 are welcome! If you'd like to contribute, please fork th
    ```
 <br/>
 
-2. Install dependencies
 
-		
-  * For pnpm
+2. Navigate to CSIT21 folder in your terminal
 
-      Install pnpm globally
-
-      ``` bash
-      npm i -g pnpm@8
-      ```
-
-    <br/>
 
 3. Install project dependencies
+
+   
 
   * If you are using npm
     ```bash
@@ -71,8 +60,8 @@ Contributions to CSIT21 are welcome! If you'd like to contribute, please fork th
     ```
 <br/>
 
-# Run the project
-Navigate to CSIT21 folder in your terminal and run: 
+4. To run the server, run the following commands
+ 
 
   * For npm 
   ```bash
@@ -93,6 +82,11 @@ Navigate to CSIT21 folder in your terminal and run:
   ``` bash
   bun run dev
   ```
+<br/>
+
+## Contributing
+
+Contributions to CSIT21 are welcome! If you'd like to contribute, please fork the repository, make your changes, and submit a pull request.
 
 
 
