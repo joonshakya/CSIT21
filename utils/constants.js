@@ -479,7 +479,7 @@ export const classRoutine = {
     {
       day: "Mon",
       a: [
-        [subjects.sem5["Web Tech"], "314"],
+        [subjects.sem5["Web Tech"], "Lab B"],
         [subjects.sem5.Crypto, "314"],
         [subjects.sem5.DAA, "314"],
         ["*", ""],
