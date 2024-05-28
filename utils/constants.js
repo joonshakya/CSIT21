@@ -19,6 +19,18 @@ export const materials = {
       {
         name: (
           <>
+            Pratik
+            <br />
+            Jung Karki
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1QzVrD2qWDzemVEUD4tQwIPNHhOQLwixq?usp=sharing",
+        bgColor: "#6c55cb",
+        bgImage: "linear-gradient(43deg, #4158D0 0%, #C850C0 100%)",
+      },
+      {
+        name: (
+          <>
             Ankit
             <br />
             Pangeni
