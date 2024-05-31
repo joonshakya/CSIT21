@@ -50,7 +50,7 @@ const RoutineTableCell = ({ onlySection, section, routineRow }) =>
           },
         }}
       >
-        {subject?.shortName === "MM" ? "MM/IP" : subject?.shortName}
+        {subject?.shortName}
         <br />
         {room}
       </TableCell>
