@@ -110,12 +110,11 @@ export default function Index() {
                 <Materials sem={sem || currentJoonSem} setSem={setSem} />
                 {sem === "" || sem === currentJoonSem ? (
                   <>
-                    {/* <ExamRoutine
-                      examType={examTypes.pre}
+                    <ExamRoutine
+                      examType={examTypes.mid}
                       sem={sem || currentJoonSem}
-                      title="Pre Board Routine"
-                      subtitle={<>Exam time: 6:15 AM - 9:15 AM</>}
-                    /> */}
+                      subtitle={<>Exam time: 6:15 AM - 8:15 AM</>}
+                    />
                     {/* <ExamRoutine
                       examType={examTypes.prac}
                       sem={sem || currentJoonSem}

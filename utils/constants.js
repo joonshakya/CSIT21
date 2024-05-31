@@ -1831,6 +1831,76 @@ export const examRoutine = {
       },
     ],
   },
+  sem5: {
+    [examTypes.mid]: [
+      {
+        day: "Sun",
+        subject: subjects.sem5.DAA,
+        date: "2024/06/16",
+        friendlyDate: (
+          <>
+            16<sup>th</sup> June
+            <br />2<sup>nd</sup> Ashad
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem5.SAD,
+        date: "2024/06/17",
+        friendlyDate: (
+          <>
+            17<sup>th</sup> June
+            <br />3<sup>rd</sup> Ashad
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem5.Crypto,
+        date: "2024/06/18",
+        friendlyDate: (
+          <>
+            18<sup>th</sup> June
+            <br />4<sup>th</sup> Ashad
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem5.Simulation,
+        date: "2024/06/19",
+        friendlyDate: (
+          <>
+            19<sup>th</sup> June
+            <br />5<sup>th</sup> Ashad
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem5["Web Tech"],
+        date: "2024/06/20",
+        friendlyDate: (
+          <>
+            20<sup>th</sup> June
+            <br />6<sup>th</sup> Ashad
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem5.MM,
+        date: "2024/06/21",
+        friendlyDate: (
+          <>
+            21<sup>st</sup> June
+            <br />7<sup>th</sup> Ashad
+          </>
+        ),
+      },
+    ],
+  },
 };
 
 export const currentJoonSem = "sem5";
