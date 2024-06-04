@@ -1,5 +1,37 @@
 import { useDevCppDownloadDialogStore } from "../src/store";
 
+export const webTechAssignments = [
+  {
+    number: 1,
+    name: "To determine the value of pi using monte carlo simulation",
+  },
+  {
+    number: 2,
+    name: "Working with CSS",
+  },
+  {
+    number: 3,
+    name: "Working with CSS positioning and media queries",
+    selected: true,
+  },
+];
+
+export const simulationAssignments = [
+  {
+    number: 1,
+    name: "To determine the area under the curve y = x^2 over the interval (0 to 4)",
+  },
+  {
+    number: 2,
+    name: "To determine the area under the curve y = x^2 over the interval (0 to 4)",
+  },
+  {
+    number: 3,
+    name: "To determine the area under the curve x = y^2 over the interval (0 to 4)",
+    selected: true,
+  },
+];
+
 export const materials = {
   sem5: {
     books: [
@@ -2034,6 +2066,7 @@ export const names = {
     47: ["Yogesh Rijal", "021BSCIT047", "B"],
     48: ["Yubraj Khatiwada", "021BSCIT048", "B"],
     49: ["Laviz Pandey", "021BSCIT049", "B"],
+    50: ["Nirajan Acharya", "021BSCIT050", "B"],
   },
   sem4: {
     1: ["Aarjan Mani", "022BSCIT001", "A"],

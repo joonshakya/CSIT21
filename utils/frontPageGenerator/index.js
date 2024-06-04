@@ -11,6 +11,8 @@ import {
   cnAssignments,
   dbmsAssignments,
   tocAssignments,
+  simulationAssignments,
+  webTechAssignments,
 } from "../constants";
 import { useState } from "react";
 import { useBaseStore } from "../../src/store";
@@ -57,6 +59,8 @@ export default function useFrontPageGenerator() {
       CN: cnAssignments,
       DBMS: dbmsAssignments,
       TOC: tocAssignments,
+      Simulation: simulationAssignments,
+      "Web Tech": webTechAssignments,
     };
 
     if (Object.prototype.hasOwnProperty.call(assignmentMap, subject)) {

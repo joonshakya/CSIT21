@@ -27,6 +27,8 @@ import {
   cnAssignments,
   dbmsAssignments,
   tocAssignments,
+  webTechAssignments,
+  simulationAssignments,
 } from "../utils/constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
@@ -41,7 +43,20 @@ export default function FrontPageGenerator({ sem }) {
   const wordFileLoaded = useBaseStore((state) => state.wordFileLoaded);
 
   const assignmentsWithTopics = useMemo(() => {
-    return ["DL", "FIT", "DS", "OOP", "CA", "NM", "DSA", "CN", "DBMS", "TOC"];
+    return [
+      "DL",
+      "FIT",
+      "DS",
+      "OOP",
+      "CA",
+      "NM",
+      "DSA",
+      "CN",
+      "DBMS",
+      "TOC",
+      "Web Tech",
+      "Simulation",
+    ];
   }, []);
 
   const assignmentsWithoutTopics = useMemo(() => {
@@ -61,7 +76,7 @@ export default function FrontPageGenerator({ sem }) {
     ];
   }, []);
 
-  const initialSubject = "CN";
+  const initialSubject = "Web Tech";
 
   const [tab, setTab] = useState("assignment");
   const [subject, setSubject] = useState(initialSubject);
@@ -75,6 +90,14 @@ export default function FrontPageGenerator({ sem }) {
       {
         subject: "DBMS",
         assignments: dbmsAssignments,
+      },
+      {
+        subject: "Web Tech",
+        assignments: webTechAssignments,
+      },
+      {
+        subject: "Simulation",
+        assignments: simulationAssignments,
       },
       {
         subject: "TOC",
@@ -428,6 +451,35 @@ export default function FrontPageGenerator({ sem }) {
                   // backgroundColor: "#f3f4f9",
                 }}
               >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
+                  {(tab === "assignment"
+                    ? [
+                        {
+                          shortHand: "Web Tech",
+                          longHand: "Web Tech",
+                        },
+                        {
+                          shortHand: "Simulation",
+                          longHand: "Simulation",
+                        },
+                      ]
+                    : []
+                  ).map((subject, index) => (
+                    <FormControlLabel
+                      key={index}
+                      value={subject.shortHand}
+                      defaultChecked={index === 0}
+                      control={<Radio />}
+                      label={subject.longHand}
+                    />
+                  ))}
+                </Box>
                 <Box
                   sx={{
                     display: "flex",
