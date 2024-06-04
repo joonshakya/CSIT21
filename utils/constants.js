@@ -3,7 +3,7 @@ import { useDevCppDownloadDialogStore } from "../src/store";
 export const webTechAssignments = [
   {
     number: 1,
-    name: "To determine the value of pi using monte carlo simulation",
+    name: "To familiarize with creating basic HTML pages with heading, paragraph, lists, forms, tables, links and canvas",
   },
   {
     number: 2,
@@ -19,15 +19,15 @@ export const webTechAssignments = [
 export const simulationAssignments = [
   {
     number: 1,
-    name: "To determine the area under the curve y = x^2 over the interval (0 to 4)",
+    name: "To determine the value of PI using Monte Carlo simulation",
   },
   {
     number: 2,
-    name: "To determine the area under the curve y = x^2 over the interval (0 to 4)",
+    name: "To determine the area under the curve y = x^2 over the interval (1 to 4)",
   },
   {
     number: 3,
-    name: "To determine the area under the curve x = y^2 over the interval (0 to 4)",
+    name: "To determine the area under the curve x = y^2 over the interval (1 to 4)",
     selected: true,
   },
 ];
