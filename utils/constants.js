@@ -511,13 +511,13 @@ export const classRoutine = {
         [subjects.sem5["Web Tech"], "314"],
         [subjects.sem5.DAA, "314"],
         [subjects.sem5.Simulation, "314"],
-        [subjects.sem5.SAD, "Lab C"],
+        ["*", ""],
       ],
       b: [
         [subjects.sem5.DAA, "316"],
         [subjects.sem5["Web Tech"], "316"],
         [subjects.sem5.Crypto, "316"],
-        [subjects.sem5.SAD, "Lab C"],
+        ["*", ""],
       ],
     },
     {
@@ -539,13 +539,25 @@ export const classRoutine = {
       day: "Tue",
       a: [
         [subjects.sem5.DAA, "314"],
-        [subjects.sem5.MM, "PTA Lab"],
+        [
+          subjects.sem5.MM,
+          <>
+            PTA Lab
+            <br />+ Conference
+          </>,
+        ],
         [subjects.sem5.Simulation, "314"],
         ["*", ""],
       ],
       b: [
         [subjects.sem5.Simulation, "316"],
-        [subjects.sem5.MM, "PTA Lab"],
+        [
+          subjects.sem5.MM,
+          <>
+            PTA Lab
+            <br />+ Conference
+          </>,
+        ],
         [subjects.sem5.Crypto, "316"],
         ["*", ""],
       ],
@@ -586,14 +598,15 @@ export const classRoutine = {
         [subjects.sem5.Crypto, "314"],
         [subjects.sem5.MM, "318"],
         // [subjects.sem5.SAD, "Lab C"],
-        ["*", ""],
+        [subjects.sem5.SAD, "Lab C"],
+
         ["*", ""],
       ],
       b: [
         [subjects.sem5.Simulation, "316"],
         [subjects.sem5.MM, "318"],
         // [subjects.sem5.SAD, "Lab C"],
-        ["*", ""],
+        [subjects.sem5.SAD, "Lab C"],
         ["*", ""],
       ],
       // a: [
