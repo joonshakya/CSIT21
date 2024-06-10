@@ -46,8 +46,11 @@ const RoutineTableCell = ({ onlySection, section, routineRow }) =>
           transition: "all .1s",
           cursor: subject?.microSyllabus ? "pointer" : null,
           "&:hover": {
-            backgroundColor: subject?.microSyllabus ? "#e3e3e3" : null,
+            backgroundColor: subject?.microSyllabus
+              ? "#e3e3e3"
+              : null,
           },
+          whiteSpace: "pre-wrap",
         }}
       >
         {subject?.shortName}
@@ -70,15 +73,21 @@ const RoutineTableCell = ({ onlySection, section, routineRow }) =>
 export default function ClassRoutine({ sem }) {
   const roll = useBaseStore((state) => state.roll);
   const fullRoutine = useBaseStore((state) => state.fullRoutine);
-  const setFullRoutine = useBaseStore((state) => state.setFullRoutine);
+  const setFullRoutine = useBaseStore(
+    (state) => state.setFullRoutine
+  );
   const onlySection = useBaseStore((state) => state.onlySection);
-  const setOnlySection = useBaseStore((state) => state.setOnlySection);
+  const setOnlySection = useBaseStore(
+    (state) => state.setOnlySection
+  );
 
   const [loading, setLoading] = useState(true);
   const [todayDayName, setTodayDayName] = useState("");
   const [tomorrowDayName, setTomorrowDayName] = useState("");
 
-  const [section, setSection] = useState(roll !== "0" && roll < 25 ? "A" : "B");
+  const [section, setSection] = useState(
+    roll !== "0" && roll < 25 ? "A" : "B"
+  );
 
   useEffect(() => {
     setSection(roll !== "0" ? (roll < 25 ? "A" : "B") : false);
@@ -100,9 +109,12 @@ export default function ClassRoutine({ sem }) {
       })
     );
     setTomorrowDayName(
-      new Date(npt.getTime() + 24 * 60 * 60 * 1000).toLocaleString("en-US", {
-        weekday: "short",
-      })
+      new Date(npt.getTime() + 24 * 60 * 60 * 1000).toLocaleString(
+        "en-US",
+        {
+          weekday: "short",
+        }
+      )
     );
 
     const dateCheck = setInterval(() => {
@@ -118,9 +130,12 @@ export default function ClassRoutine({ sem }) {
         })
       );
       setTomorrowDayName(
-        new Date(npt.getTime() + 24 * 60 * 60 * 1000).toLocaleString("en-US", {
-          weekday: "short",
-        })
+        new Date(npt.getTime() + 24 * 60 * 60 * 1000).toLocaleString(
+          "en-US",
+          {
+            weekday: "short",
+          }
+        )
       );
     }, 60000);
     return () => clearInterval(dateCheck);
@@ -262,10 +277,16 @@ export default function ClassRoutine({ sem }) {
                         "1st",
                         "2nd",
                         "3rd",
-                        ...(classRoutine[sem][0].a.length === 4 ? ["4th"] : []),
+                        ...(classRoutine[sem][0].a.length === 4
+                          ? ["4th"]
+                          : []),
                       ].map((item) =>
                         onlySection && item === "" ? null : (
-                          <TableCell sx={tCellStyles} key={item} align="center">
+                          <TableCell
+                            sx={tCellStyles}
+                            key={item}
+                            align="center"
+                          >
                             {item}
                           </TableCell>
                         )
@@ -319,10 +340,14 @@ export default function ClassRoutine({ sem }) {
                             ) : null}
                             {row.day}
                           </TableCell>
-                          {!onlySection || (onlySection && section !== "B") ? (
+                          {!onlySection ||
+                          (onlySection && section !== "B") ? (
                             <>
                               {!onlySection ? (
-                                <TableCell sx={tCellStyles} align="center">
+                                <TableCell
+                                  sx={tCellStyles}
+                                  align="center"
+                                >
                                   A
                                 </TableCell>
                               ) : null}
@@ -342,10 +367,14 @@ export default function ClassRoutine({ sem }) {
                             },
                           }}
                         >
-                          {!onlySection || (onlySection && section !== "A") ? (
+                          {!onlySection ||
+                          (onlySection && section !== "A") ? (
                             <>
                               {!onlySection ? (
-                                <TableCell sx={tCellStyles} align="center">
+                                <TableCell
+                                  sx={tCellStyles}
+                                  align="center"
+                                >
                                   B
                                 </TableCell>
                               ) : null}
