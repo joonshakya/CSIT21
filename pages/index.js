@@ -59,28 +59,6 @@ export default function Index() {
 
   return (
     <>
-      <Head>
-        <title key="title">CSIT21 - SXC B.Sc. CSIT Batch 2021</title>
-        <meta
-          property="og:image"
-          content="https://www.csit21.cf/thumbnail.png"
-        />
-        <meta
-          property="og:image:secure_url"
-          content="https://www.csit21.cf/thumbnail.png"
-        />
-        <meta property="og:image:width" content="1307" />
-        <meta property="og:image:height" content="878" />
-        <meta
-          property="og:title"
-          content="CSIT21 - SXC B.Sc. CSIT Batch 2021"
-        />
-        <meta
-          property="og:description"
-          content="Class Documents on the go"
-        />
-        <meta property="og:url" content="https://www.csit21.cf/" />
-      </Head>
       <Navbar
         text={`CSIT21 - Sem ${
           (sem || currentJoonSem).split("sem")[1]

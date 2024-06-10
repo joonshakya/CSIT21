@@ -46,6 +46,18 @@ export const materials = {
         bgColor: "#283e54",
         bgImage: "linear-gradient(340deg, #283e54 50%, #ba0707 100%)",
       },
+      {
+        name: (
+          <>
+            OS
+            <br />
+            Slides
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1eC2-wpUg6jYy2Zv3dHHV-Ult3yZTUTl0?usp=drive_link",
+        bgColor: "#55a3bf",
+        bgImage: "linear-gradient(62deg, #5682c4 0%, #52d0b8 100%)",
+      },
     ],
     materials: [
       {

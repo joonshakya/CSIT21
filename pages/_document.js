@@ -1,5 +1,10 @@
 import * as React from "react";
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 import theme, { roboto } from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
@@ -9,9 +14,38 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en" className={roboto.className}>
         <Head>
+          <title key="title">
+            CSIT21 - SXC B.Sc. CSIT Batch 2021
+          </title>
+          <meta
+            property="og:image"
+            content="https://www.csit21.cf/thumbnail.png"
+          />
+          <meta
+            property="og:image:secure_url"
+            content="https://www.csit21.cf/thumbnail.png"
+          />
+          <meta property="og:image:width" content="1307" />
+          <meta property="og:image:height" content="878" />
+          <meta
+            property="og:title"
+            content="CSIT21 - SXC B.Sc. CSIT Batch 2021"
+          />
+          <meta
+            property="og:description"
+            content="Class Documents on the go"
+          />
+          <meta property="og:url" content="https://www.csit21.cf/" />
+
           {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="shortcut icon" href="/static/favicon/favicon.ico" />
+          <meta
+            name="theme-color"
+            content={theme.palette.primary.main}
+          />
+          <link
+            rel="shortcut icon"
+            href="/static/favicon/favicon.ico"
+          />
           <meta name="emotion-insertion-point" content="" />
           <link rel="manifest" href="/manifest.json" />
           <meta

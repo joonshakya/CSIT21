@@ -12,7 +12,11 @@ import dynamic from "next/dynamic";
 const clientSideEmotionCache = createEmotionCache();
 
 function MyApp(props) {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const {
+    Component,
+    emotionCache = clientSideEmotionCache,
+    pageProps,
+  } = props;
 
   return (
     <CacheProvider value={emotionCache}>
