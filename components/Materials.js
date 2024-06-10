@@ -93,9 +93,10 @@ const Materials = ({ sem, setSem }) => {
               <FormControlLabel value="sem4" control={<Radio />} label="4th" />
               <FormControlLabel value="sem3" control={<Radio />} label="3rd" />
               <FormControlLabel value="sem2" control={<Radio />} label="2nd" />
+              <FormControlLabel value="sem1" control={<Radio />} label="1st" />
             </RadioGroup>
           </FormControl>
-          {materials[sem].books.length !== 0 ? (
+          {materials[sem]?.books.length !== 0 ? (
             <>
               <Typography variant="h5" component="div">
                 Books
@@ -110,21 +111,27 @@ const Materials = ({ sem, setSem }) => {
                   textAlign: "center",
                 }}
               >
-                {materials[sem].books.map(
-                  ({ name, link, bgColor, bgImage }, index) => (
-                    <GradientButton
-                      key={index}
-                      name={name}
-                      link={link}
-                      bgColor={bgColor}
-                      bgImage={bgImage}
-                    />
+                {!materials[sem]?.books ? (
+                  <Typography variant="subtitle1" component="div">
+                    No books available for this semester
+                  </Typography>
+                ) : (
+                  materials[sem]?.books.map(
+                    ({ name, link, bgColor, bgImage }, index) => (
+                      <GradientButton
+                        key={index}
+                        name={name}
+                        link={link}
+                        bgColor={bgColor}
+                        bgImage={bgImage}
+                      />
+                    )
                   )
                 )}
               </Box>
             </>
           ) : null}
-          {materials[sem].materials.length !== 0 ? (
+          {materials[sem]?.materials.length !== 0 ? (
             <>
               <Typography variant="h5" component="div">
                 Materials
@@ -139,16 +146,22 @@ const Materials = ({ sem, setSem }) => {
                   textAlign: "center",
                 }}
               >
-                {materials[sem].materials.map(
-                  ({ name, link, onClick, bgColor, bgImage }, index) => (
-                    <GradientButton
-                      key={index}
-                      name={name}
-                      link={link}
-                      onClick={onClick}
-                      bgColor={bgColor}
-                      bgImage={bgImage}
-                    />
+                {!materials[sem]?.materials ? (
+                  <Typography variant="subtitle1" component="div">
+                    No materials available for this semester
+                  </Typography>
+                ) : (
+                  materials[sem]?.materials.map(
+                    ({ name, link, onClick, bgColor, bgImage }, index) => (
+                      <GradientButton
+                        key={index}
+                        name={name}
+                        link={link}
+                        onClick={onClick}
+                        bgColor={bgColor}
+                        bgImage={bgImage}
+                      />
+                    )
                   )
                 )}
               </Box>
