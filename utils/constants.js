@@ -554,7 +554,7 @@ export const classRoutine = {
         [
           subjects.sem5.MM,
           <>
-            PTA Lab
+            314
             <br />+ Conference
           </>,
         ],
@@ -566,7 +566,7 @@ export const classRoutine = {
         [
           subjects.sem5.MM,
           <>
-            PTA Lab
+            316
             <br />+ Conference
           </>,
         ],
