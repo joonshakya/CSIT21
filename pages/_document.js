@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <meta
             name="description"
-            content="CSIT21 Beta website made with react."
+            content="Class Documents on the go."
           />
           <meta property="og:type" content="website" />
           <meta property="fb:app_id" content="1265498347173300" />
