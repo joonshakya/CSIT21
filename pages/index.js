@@ -33,7 +33,10 @@ export default function Index() {
       if (semParam) {
         const semParamNum = parseInt(semParam);
 
-        if (semParamNum >= 1 || semParamNum <= currentJoonSem.split("sem")[1]) {
+        if (
+          semParamNum >= 1 ||
+          semParamNum <= currentJoonSem.split("sem")[1]
+        ) {
           localStorage.setItem("sem", semParam);
           Router.replace(`/`);
           return `sem${semParamNum}`;
@@ -57,7 +60,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>CSIT21 - SXC B.Sc. CSIT Batch 2021</title>
+        <title key="title">CSIT21 - SXC B.Sc. CSIT Batch 2021</title>
         <meta
           property="og:image"
           content="https://www.csit21.cf/thumbnail.png"
@@ -72,11 +75,16 @@ export default function Index() {
           property="og:title"
           content="CSIT21 - SXC B.Sc. CSIT Batch 2021"
         />
-        <meta property="og:description" content="Class Documents on the go" />
+        <meta
+          property="og:description"
+          content="Class Documents on the go"
+        />
         <meta property="og:url" content="https://www.csit21.cf/" />
       </Head>
       <Navbar
-        text={`CSIT21 - Sem ${(sem || currentJoonSem).split("sem")[1]}`}
+        text={`CSIT21 - Sem ${
+          (sem || currentJoonSem).split("sem")[1]
+        }`}
       />
       <Box
         sx={{
@@ -107,7 +115,10 @@ export default function Index() {
                   mx: "auto",
                 }}
               >
-                <Materials sem={sem || currentJoonSem} setSem={setSem} />
+                <Materials
+                  sem={sem || currentJoonSem}
+                  setSem={setSem}
+                />
                 {sem === "" || sem === currentJoonSem ? (
                   <>
                     <ExamRoutine
