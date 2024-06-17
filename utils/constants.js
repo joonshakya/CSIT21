@@ -49,7 +49,7 @@ export const materials = {
       {
         name: (
           <>
-            OS
+            Crypto
             <br />
             Slides
           </>
