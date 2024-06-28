@@ -12,6 +12,14 @@ export const webTechAssignments = [
   {
     number: 3,
     name: "Working with CSS positioning and media queries",
+  },
+  {
+    number: 4,
+    name: "Working with JS",
+  },
+  {
+    number: 5,
+    name: "Working with JS Lab 2",
     selected: true,
   },
 ];
@@ -28,6 +36,14 @@ export const simulationAssignments = [
   {
     number: 3,
     name: "To determine the area under the curve x = y^2 over the interval (1 to 4)",
+  },
+  {
+    number: 4,
+    name: "To Model an M / M / 1 Queuing system where λ = 5 and μ = 6 and using simulation",
+  },
+  {
+    number: 5,
+    name: "To predict the weather of a particular day i.e.: after 2 days, after 3 days upto 20 days",
     selected: true,
   },
 ];
@@ -600,28 +616,16 @@ export const classRoutine = {
       day: "Fri",
       a: [
         [subjects.sem5.Crypto, "314"],
-        [subjects.sem5.MM, "Lab C"],
+        [subjects.sem5.MM, "318"], // Lab?
         [subjects.sem5.SAD, "Lab C"],
         ["*", ""],
       ],
       b: [
         [subjects.sem5.Simulation, "316"],
-        [subjects.sem5.MM, "Lab C"],
+        [subjects.sem5.MM, "318"], // Lab?
         [subjects.sem5.SAD, "Lab C"],
         ["*", ""],
       ],
-      // a: [
-      //   [subjects.sem5.Crypto, "314"],
-      //   [subjects.sem5.MM, "318"],
-      //   [subjects.sem5.SAD, "Lab C"],
-      //   ["*", ""],
-      // ],
-      // b: [
-      //   [subjects.sem5.Simulation, "316"],
-      //   [subjects.sem5.MM, "318"],
-      //   [subjects.sem5.SAD, "Lab C"],
-      //   ["*", ""],
-      // ],
     },
   ],
   sem4: [
