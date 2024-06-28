@@ -18,27 +18,44 @@ export default class MyDocument extends Document {
             CSIT21 - SXC B.Sc. CSIT Batch 2021
           </title>
           <meta
+            key="og:image"
             property="og:image"
             content="https://www.csit21.cf/thumbnail.png"
           />
           <meta
+            key="og:image:secure_url"
             property="og:image:secure_url"
             content="https://www.csit21.cf/thumbnail.png"
           />
-          <meta property="og:image:width" content="1307" />
-          <meta property="og:image:height" content="878" />
           <meta
+            key="og:image:width"
+            property="og:image:width"
+            content="1307"
+          />
+          <meta
+            key="og:image:height"
+            property="og:image:height"
+            content="878"
+          />
+          <meta
+            key="og:title"
             property="og:title"
             content="CSIT21 - SXC B.Sc. CSIT Batch 2021"
           />
           <meta
+            key="og:description"
             property="og:description"
-            content="Class Documents on the go"
+            content="CSIT21 is a comprehensive platform offering study materials, classroom routines, exam schedules, front page generator, and more for CSIT students."
           />
-          <meta property="og:url" content="https://www.csit21.cf/" />
+          <meta
+            key="og:url"
+            property="og:url"
+            content="https://www.csit21.cf/"
+          />
 
           {/* PWA primary color */}
           <meta
+            key="theme-color"
             name="theme-color"
             content={theme.palette.primary.main}
           />
