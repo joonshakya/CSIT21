@@ -43,7 +43,7 @@ export const simulationAssignments = [
   },
   {
     number: 5,
-    name: "To predict the weather of a particular day i.e.: after 2 days, after 3 days upto 20 days",
+    name: "To predict the weather of a particular day i.e.: after 2 days, after 3 days up to 20 days",
     selected: true,
   },
 ];
