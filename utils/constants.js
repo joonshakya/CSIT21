@@ -20,6 +20,10 @@ export const webTechAssignments = [
   {
     number: 5,
     name: "Working with JS Lab 2",
+  },
+  {
+    number: 6,
+    name: "Working with PHP Lab 1",
     selected: true,
   },
 ];
