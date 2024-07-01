@@ -574,17 +574,29 @@ export const classRoutine = {
     {
       day: "Tue",
       a: [
-        [subjects.sem5.DAA, "314"],
-        [subjects.sem5.MM, `318`],
-        [subjects.sem5.Simulation, "314"],
-        ["*", ""],
+        [subjects.sem5["Web Tech"], "Lab A"],
+        ["Quiz", "Watrin Hall"],
+        ["Quiz", "Watrin Hall"],
+        ["Quiz", "Watrin Hall"],
       ],
       b: [
-        [subjects.sem5.Simulation, "316"],
-        [subjects.sem5.MM, `318`],
-        [subjects.sem5.Crypto, "316"],
-        ["*", ""],
+        [subjects.sem5["Web Tech"], "Lab A"],
+        ["Quiz", "Watrin Hall"],
+        ["Quiz", "Watrin Hall"],
+        ["Quiz", "Watrin Hall"],
       ],
+      // a: [
+      //   [subjects.sem5.DAA, "314"],
+      //   [subjects.sem5.MM, `318`],
+      //   [subjects.sem5.Simulation, "314"],
+      //   ["*", ""],
+      // ],
+      // b: [
+      //   [subjects.sem5.Simulation, "316"],
+      //   [subjects.sem5.MM, `318`],
+      //   [subjects.sem5.Crypto, "316"],
+      //   ["*", ""],
+      // ],
     },
     {
       day: "Wed",
