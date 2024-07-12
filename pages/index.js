@@ -33,7 +33,10 @@ export default function Index() {
       if (semParam) {
         const semParamNum = parseInt(semParam);
 
-        if (semParamNum >= 1 || semParamNum <= currentJoonSem.split("sem")[1]) {
+        if (
+          semParamNum >= 1 ||
+          semParamNum <= currentJoonSem.split("sem")[1]
+        ) {
           localStorage.setItem("sem", semParam);
           Router.replace(`/`);
           return `sem${semParamNum}`;
@@ -57,7 +60,9 @@ export default function Index() {
   return (
     <>
       <Navbar
-        text={`CSIT21 - Sem ${(sem || currentJoonSem).split("sem")[1]}`}
+        text={`CSIT21 - Sem ${
+          (sem || currentJoonSem).split("sem")[1]
+        }`}
       />
       <Box
         sx={{
@@ -88,8 +93,11 @@ export default function Index() {
                   mx: "auto",
                 }}
               >
-                <Materials sem={sem || currentJoonSem} setSem={setSem} />
-                {sem === "" || sem === currentJoonSem || sem === sem4 ? (
+                <Materials
+                  sem={sem || currentJoonSem}
+                  setSem={setSem}
+                />
+                {sem === "" || sem === currentJoonSem ? (
                   <>
                     <ExamRoutine
                       examType={examTypes.mid}
@@ -114,6 +122,12 @@ export default function Index() {
                     /> */}
                     {/* <ExamRoutine examType={examTypes.prac} sem="sem3" /> */}
                     {/* <LeftSideCardMessage title="Happy Dashain" /> */}
+                  </>
+                ) : null}
+
+                {sem === "sem4" ? (
+                  <>
+                    <ClassRoutine sem={sem || currentJoonSem} />
                   </>
                 ) : null}
 

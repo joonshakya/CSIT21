@@ -1960,7 +1960,6 @@ export const examRoutine = {
 };
 
 export const currentJoonSem = "sem5";
-export const sem4 = "sem4";
 
 export const classRoutineSem2 = [
   {
