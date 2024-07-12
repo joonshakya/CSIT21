@@ -12,7 +12,7 @@ import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
 import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
-import { examTypes, currentJoonSem } from "../utils/constants";
+import { examTypes, currentJoonSem, sem4 } from "../utils/constants";
 import Router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Downlaods from "../components/Downloads";
@@ -33,10 +33,7 @@ export default function Index() {
       if (semParam) {
         const semParamNum = parseInt(semParam);
 
-        if (
-          semParamNum >= 1 ||
-          semParamNum <= currentJoonSem.split("sem")[1]
-        ) {
+        if (semParamNum >= 1 || semParamNum <= currentJoonSem.split("sem")[1]) {
           localStorage.setItem("sem", semParam);
           Router.replace(`/`);
           return `sem${semParamNum}`;
@@ -60,9 +57,7 @@ export default function Index() {
   return (
     <>
       <Navbar
-        text={`CSIT21 - Sem ${
-          (sem || currentJoonSem).split("sem")[1]
-        }`}
+        text={`CSIT21 - Sem ${(sem || currentJoonSem).split("sem")[1]}`}
       />
       <Box
         sx={{
@@ -93,11 +88,8 @@ export default function Index() {
                   mx: "auto",
                 }}
               >
-                <Materials
-                  sem={sem || currentJoonSem}
-                  setSem={setSem}
-                />
-                {sem === "" || sem === currentJoonSem ? (
+                <Materials sem={sem || currentJoonSem} setSem={setSem} />
+                {sem === "" || sem === currentJoonSem || sem === sem4 ? (
                   <>
                     <ExamRoutine
                       examType={examTypes.mid}
