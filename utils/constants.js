@@ -48,6 +48,18 @@ export const simulationAssignments = [
   {
     number: 5,
     name: "To predict the weather of a particular day i.e.: after 2 days, after 3 days up to 20 days",
+  },
+  {
+    number: 6,
+    name: "To implement game of dice that generate discrete random variables using rand function using C/C++ Program.",
+  },
+  {
+    number: 7,
+    name: "To implement Linear Congruential Method for Generating Pseudo Random Number using C/C++ Program.",
+  },
+  {
+    number: 8,
+    name: "To implement Random Walk Model with and without drift value",
     selected: true,
   },
 ];
