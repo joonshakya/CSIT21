@@ -804,6 +804,98 @@ export const classRoutine = {
   //     ],
   //   },
   // ],
+  sem2: [
+    {
+      day: "Sun",
+      a: [
+        [subjects.sem2.OOP, ""],
+        [subjects.sem2.Maths2, ""],
+        [subjects.sem2.DS, ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem2.MP, ""],
+        [subjects.sem2.OOP, ""],
+        [subjects.sem2.Stats1, ""],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Mon",
+      a: [
+        [subjects.sem2.OOP, ""],
+        [subjects.sem2.DS, ""],
+        [subjects.sem2.MP, ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem2.Maths2, ""],
+        [subjects.sem2.Stats1, ""],
+        [subjects.sem2.OOP, ""],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Tue",
+      a: [
+        [subjects.sem2.Maths2, ""],
+        [subjects.sem2.Stats1, ""],
+        [subjects.sem2.MP, ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem2.Maths2, ""],
+        [subjects.sem2.OOP, ""],
+        [subjects.sem2.DS, ""],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Wed",
+      a: [
+        [subjects.sem2.Maths2, ""],
+        [subjects.sem2.MP, ""],
+        [subjects.sem2.Maths2, ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem2.Maths2, ""],
+        [subjects.sem2.MP, ""],
+        [subjects.sem2.DS, ""],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Thu",
+      a: [
+        [subjects.sem2.Stats1, ""],
+        [subjects.sem2.DS, ""],
+        [subjects.sem2.OOP, ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem2.DS, ""],
+        [subjects.sem2.Stats1, ""],
+        [subjects.sem2.MP, ""],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Fri",
+      a: [
+        [subjects.sem2.DS, ""],
+        [subjects.sem2.Stats1, ""],
+        ["*", ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem2.DS, ""],
+        [subjects.sem2.Maths2, ""],
+        ["*", ""],
+        ["*", ""],
+      ],
+    },
+  ],
   sem3: [
     {
       day: "Mon",
