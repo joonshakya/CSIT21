@@ -33,7 +33,10 @@ export default function Index() {
       if (semParam) {
         const semParamNum = parseInt(semParam);
 
-        if (semParamNum >= 1 || semParamNum <= currentJoonSem.split("sem")[1]) {
+        if (
+          semParamNum >= 1 ||
+          semParamNum <= currentJoonSem.split("sem")[1]
+        ) {
           localStorage.setItem("sem", semParam);
           Router.replace(`/`);
           return `sem${semParamNum}`;
@@ -57,7 +60,9 @@ export default function Index() {
   return (
     <>
       <Navbar
-        text={`CSIT21 - Sem ${(sem || currentJoonSem).split("sem")[1]}`}
+        text={`CSIT21 - Sem ${
+          (sem || currentJoonSem).split("sem")[1]
+        }`}
       />
       <Box
         sx={{
@@ -88,7 +93,10 @@ export default function Index() {
                   mx: "auto",
                 }}
               >
-                <Materials sem={sem || currentJoonSem} setSem={setSem} />
+                <Materials
+                  sem={sem || currentJoonSem}
+                  setSem={setSem}
+                />
                 {sem === "" || sem === currentJoonSem ? (
                   <>
                     <ExamRoutine
@@ -117,15 +125,15 @@ export default function Index() {
                   </>
                 ) : null}
 
-                {sem === "sem2" ? (
+                {sem === "sem4" ? (
                   <>
-                    <ClassRoutine sem={sem || currentJoonSem} />
+                    <ClassRoutine sem={sem} />
                   </>
                 ) : null}
-
                 {sem === "sem2" ? (
                   <>
                     {/* <ExamRoutine examType={examTypes.prac} sem="sem2" /> */}
+                    <ClassRoutine sem={sem} />
                     <ExamRoutine
                       examType={examTypes.board}
                       sem="sem2"
