@@ -567,14 +567,26 @@ export const classRoutine = {
         [subjects.sem5["Web Tech"], "314"],
         [subjects.sem5.DAA, "314"],
         [subjects.sem5.Simulation, "314"],
-        [subjects.sem5.SAD, "Lab C"],
+        ["*", ""],
       ],
       b: [
         [subjects.sem5.DAA, "316"],
         [subjects.sem5["Web Tech"], "316"],
         [subjects.sem5.Crypto, "316"],
-        [subjects.sem5.SAD, "Lab C"],
+        ["*", ""],
       ],
+      // a: [
+      //   [subjects.sem5["Web Tech"], "314"],
+      //   [subjects.sem5.DAA, "314"],
+      //   [subjects.sem5.Simulation, "314"],
+      //   [subjects.sem5.SAD, "Lab C"],
+      // ],
+      // b: [
+      //   [subjects.sem5.DAA, "316"],
+      //   [subjects.sem5["Web Tech"], "316"],
+      //   [subjects.sem5.Crypto, "316"],
+      //   [subjects.sem5.SAD, "Lab C"],
+      // ],
     },
     {
       day: "Mon",
