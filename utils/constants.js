@@ -2080,6 +2080,80 @@ export const examRoutine = {
         ),
       },
     ],
+    [examTypes.board]: [
+      {
+        day: "Fri",
+        subject: subjects.sem5.DAA,
+        date: "2024/09/13",
+        friendlyDate: (
+          <>
+            13<sup>th</sup> Sept
+            <br />
+            28<sup>th</sup> Bhadra
+          </>
+        ),
+        source: "https://iost.tu.edu.np/notices/3878",
+        sourceName: "TU Notice",
+      },
+      {
+        day: "Mon",
+        date: "2024/09/16",
+        subject: subjects.sem5.SAD,
+        friendlyDate: (
+          <>
+            16<sup>th</sup> Sept
+            <br />
+            31<sup>st</sup> Bhadra
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        date: "2024/09/20",
+        subject: subjects.sem5.Crypto,
+        friendlyDate: (
+          <>
+            20<sup>th</sup> Sept
+            <br />4<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        date: "2024/09/24",
+        subject: subjects.sem5.Simulation,
+        friendlyDate: (
+          <>
+            24<sup>th</sup> Sept
+            <br />8<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        date: "2024/09/27",
+        subject: subjects.sem5["Web Tech"],
+        friendlyDate: (
+          <>
+            27<sup>th</sup> Sept
+            <br />
+            11<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        date: "2024/09/30",
+        subject: subjects.sem5.MM,
+        friendlyDate: (
+          <>
+            30<sup>th</sup> Sept
+            <br />
+            14<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+    ],
   },
 };
 
