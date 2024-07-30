@@ -71,23 +71,23 @@ export const simulationAssignments = [
   },
   {
     number: 9,
-    name: "Manufacturing Shop Model 1",
+    name: "Manufacturing Shop Model - 1",
   },
   {
     number: 10,
-    name: "Manufacturing Shop Model 2",
+    name: "Manufacturing Shop Model - 2",
   },
   {
     number: 11,
-    name: "Manufacturing Shop Model 3",
+    name: "Manufacturing Shop Model - 3",
   },
   {
     number: 12,
-    name: "Manufacturing Shop Model 4",
+    name: "Manufacturing Shop Model - 4",
   },
   {
     number: 13,
-    name: "Manufacturing Shop Model 5",
+    name: "Manufacturing Shop Model - 5",
     selected: true,
   },
 ];
