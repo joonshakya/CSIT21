@@ -68,6 +68,26 @@ export const simulationAssignments = [
   {
     number: 8,
     name: "To implement Random Walk Model with and without drift value",
+  },
+  {
+    number: 9,
+    name: "Manufacturing Shop Model 1",
+  },
+  {
+    number: 10,
+    name: "Manufacturing Shop Model 2",
+  },
+  {
+    number: 11,
+    name: "Manufacturing Shop Model 3",
+  },
+  {
+    number: 12,
+    name: "Manufacturing Shop Model 4",
+  },
+  {
+    number: 13,
+    name: "Manufacturing Shop Model 5",
     selected: true,
   },
 ];
