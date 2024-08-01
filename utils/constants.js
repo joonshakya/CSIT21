@@ -32,6 +32,10 @@ export const webTechAssignments = [
   {
     number: 8,
     name: "Working with database",
+  },
+  {
+    number: 9,
+    name: "Working with AJAX",
     selected: true,
   },
 ];
