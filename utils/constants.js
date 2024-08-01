@@ -1787,62 +1787,62 @@ export const examRoutine = {
   sem4: {
     [examTypes.mid]: [
       {
-        day: "Tue",
+        day: "Mon",
         subject: subjects.sem4.TOC,
-        date: "2024/01/30",
+        date: "2024/08/12",
         friendlyDate: (
           <>
-            30<sup>th</sup> January
+            12<sup>th</sup> August
             <br />
-            16<sup>th</sup> Magh
+            28<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem4.CN,
+        date: "2024/08/13",
+        friendlyDate: (
+          <>
+            13<sup>th</sup> August
+            <br />
+            29<sup>th</sup> Shrawan
           </>
         ),
       },
       {
         day: "Wed",
-        subject: subjects.sem4.CN,
-        date: "2024/01/31",
+        subject: subjects.sem4.OS,
+        date: "2024/08/14",
         friendlyDate: (
           <>
-            31<sup>st</sup> January
+            14<sup>th</sup> August
             <br />
-            17<sup>th</sup> Magh
+            30<sup>th</sup> Shrawan
           </>
         ),
       },
       {
         day: "Thu",
-        subject: subjects.sem4.OS,
-        date: "2024/02/01",
+        subject: subjects.sem4.DBMS,
+        date: "2024/08/15",
         friendlyDate: (
           <>
-            1<sup>st</sup> February
+            15<sup>th</sup> August
             <br />
-            18<sup>th</sup> Magh
+            31<sup>st</sup> Shrawan
           </>
         ),
       },
       {
         day: "Fri",
-        subject: subjects.sem4.DBMS,
-        date: "2024/02/02",
-        friendlyDate: (
-          <>
-            2<sup>nd</sup> February
-            <br />
-            19<sup>th</sup> Magh
-          </>
-        ),
-      },
-      {
-        day: "Mon",
         subject: subjects.sem4.AI,
-        date: "2024/02/05",
+        date: "2024/08/16",
         friendlyDate: (
           <>
-            5<sup>th</sup> February
+            16<sup>th</sup> August
             <br />
-            22<sup>nd</sup> Magh
+            32<sup>nd</sup> Shrawan
           </>
         ),
       },
@@ -2100,6 +2100,79 @@ export const examRoutine = {
           <>
             21<sup>st</sup> June
             <br />7<sup>th</sup> Ashad
+          </>
+        ),
+      },
+    ],
+    [examTypes.pre]: [
+      {
+        day: "Mon",
+        subject: subjects.sem5.DAA,
+        date: "2024/08/12",
+        friendlyDate: (
+          <>
+            12<sup>th</sup> August
+            <br />
+            28<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem5.SAD,
+        date: "2024/08/13",
+        friendlyDate: (
+          <>
+            13<sup>th</sup> August
+            <br />
+            29<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem5.Crypto,
+        date: "2024/08/14",
+        friendlyDate: (
+          <>
+            14<sup>th</sup> August
+            <br />
+            30<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem5.Simulation,
+        date: "2024/08/15",
+        friendlyDate: (
+          <>
+            15<sup>th</sup> August
+            <br />
+            31<sup>st</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem5["Web Tech"],
+        date: "2024/08/16",
+        friendlyDate: (
+          <>
+            16<sup>th</sup> August
+            <br />
+            32<sup>nd</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem5.MM,
+        date: "2024/08/18",
+        friendlyDate: (
+          <>
+            18<sup>th</sup> August
+            <br />2<sup>nd</sup> Bhadra
           </>
         ),
       },

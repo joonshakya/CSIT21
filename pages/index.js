@@ -100,6 +100,16 @@ export default function Index() {
                 {sem === "" || sem === currentJoonSem ? (
                   <>
                     <ExamRoutine
+                      examType={examTypes.pre}
+                      sem={sem || currentJoonSem}
+                      subtitle={
+                        <>
+                          Exam time: 6:15 AM - 9:15 AM <br />
+                          {/* Room:- Section A: 403, Section B: 406 <br /> */}
+                        </>
+                      }
+                    />
+                    <ExamRoutine
                       examType={examTypes.board}
                       sem={sem || currentJoonSem}
                       // subtitle={
@@ -127,6 +137,16 @@ export default function Index() {
 
                 {sem === "sem4" ? (
                   <>
+                    <ExamRoutine
+                      examType={examTypes.mid}
+                      sem={"sem4"}
+                      subtitle={
+                        <>
+                          Exam time: 6:15 AM - 8:15 AM <br />
+                          {/* Room:- Section A: 403, Section B: 406 <br /> */}
+                        </>
+                      }
+                    />
                     <ClassRoutine sem={sem} />
                   </>
                 ) : null}
