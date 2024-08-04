@@ -142,7 +142,7 @@ export default function Index() {
                       sem={"sem4"}
                       subtitle={
                         <>
-                          Exam time: 6:15 AM - 8:15 AM <br />
+                          Exam time: 6:15 AM - 8:15 AM
                           {/* Room:- Section A: 403, Section B: 406 <br /> */}
                         </>
                       }
