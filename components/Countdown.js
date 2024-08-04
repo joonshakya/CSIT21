@@ -71,7 +71,9 @@ function CountdoenText({ text1, index, startDay }) {
 
   return (
     <span
-      className={`${text1 ? "text1" : "text2"} ${animate ? "animate" : ""}`}
+      className={`${text1 ? "text1" : "text2"} ${
+        animate ? "animate" : ""
+      }`}
     >
       {textContent}
     </span>
@@ -89,13 +91,24 @@ export default function Countdown({ yyyymmddDate, hideTomorrow }) {
     const interval = setInterval(() => {
       const nowDate = new Date();
       setHideDate(
-        hideTomorrow ? nowDate.setDate(nowDate.getDate() + 1) : nowDate
+        hideTomorrow
+          ? nowDate.setDate(nowDate.getDate() + 1)
+          : nowDate
       );
     }, 60000);
     return () => clearInterval(interval);
   }, [hideTomorrow]);
 
   if (startDay < hideDate) return null;
+
+  const isSafari =
+    /constructor/i.test(window.HTMLElement) ||
+    (function (p) {
+      return p.toString() === "[object SafariRemoteNotification]";
+    })(
+      !window["safari"] ||
+        (typeof safari !== "undefined" && safari.pushNotification)
+    );
 
   return (
     <Box
@@ -129,17 +142,19 @@ export default function Countdown({ yyyymmddDate, hideTomorrow }) {
           </div>
           <svg className="countdown-svg" viewBox="0 0 1920 1080">
             <filter id={`${unit}-threshold`}>
-              <feColorMatrix
-                type="matrix"
-                // values="1 0 0 0 0
-                //     0 1 0 0 0
-                //     0 0 1 0 0
-                //     0 0 0 255 -100"
-                values="1 0 0 0 0
+              {isSafari ? null : (
+                <feColorMatrix
+                  type="matrix"
+                  // values="1 0 0 0 0
+                  //     0 1 0 0 0
+                  //     0 0 1 0 0
+                  //     0 0 0 255 -100"
+                  values="1 0 0 0 0
                         0 1 0 0 0
                         0 0 1 0 0
                         0 0 0 255 -80"
-              />
+                />
+              )}
             </filter>
           </svg>
         </div>
