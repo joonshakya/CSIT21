@@ -108,6 +108,17 @@ export default function Index() {
                           {/* Room:- Section A: 403, Section B: 406 <br /> */}
                         </>
                       }
+                    />{" "}
+                    <ExamRoutine
+                      sem={sem || currentJoonSem}
+                      title="Crypto Lab report submisssion"
+                      examType={"crypto-lab"}
+                      // subtitle={
+                      //   <>
+                      //     Exam time: 6:15 AM - 9:15 AM <br />
+                      //     {/* Room:- Section A: 403, Section B: 406 <br /> */}
+                      //   </>
+                      // }
                     />
                     <ExamRoutine
                       examType={examTypes.board}
