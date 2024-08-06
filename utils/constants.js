@@ -2121,10 +2121,21 @@ export const examRoutine = {
     ],
   },
   sem5: {
-    ["crypto-lab"]: [
+    ["lab"]: [
       {
         day: "Sun",
         subject: subjects.sem5.Crypto,
+        date: "2024/08/25",
+        friendlyDate: (
+          <>
+            25<sup>th</sup> August
+            <br />9<sup>th</sup> Bhadra
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem5.SAD,
         date: "2024/08/25",
         friendlyDate: (
           <>

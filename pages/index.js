@@ -111,8 +111,8 @@ export default function Index() {
                     />{" "}
                     <ExamRoutine
                       sem={sem || currentJoonSem}
-                      title="Crypto Lab report submisssion"
-                      examType={"crypto-lab"}
+                      title="Lab Report Submisssion"
+                      examType={"lab"}
                       // subtitle={
                       //   <>
                       //     Exam time: 6:15 AM - 9:15 AM <br />
