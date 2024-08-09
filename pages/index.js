@@ -138,7 +138,7 @@ export default function Index() {
                       sem={sem || currentJoonSem}
                       title="Practical Exam Routine"
                     /> */}
-                    <ClassRoutine sem={sem || currentJoonSem} />
+                    {/* <ClassRoutine sem={sem || currentJoonSem} /> */}
                     {/* <ExamRoutine
                       examType={examTypes.board}
                       sem="sem3"

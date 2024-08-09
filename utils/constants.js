@@ -607,171 +607,79 @@ export const classRoutine = {
     {
       day: "Mon",
       a: [
-        [subjects.sem5.DAA, ""],
-        [subjects.sem5.Crypto, ""],
-        [subjects.sem5.Crypto, ""],
+        [subjects.sem5["Web Tech"], "Lab B"],
+        [subjects.sem5.Crypto, "314"],
+        [subjects.sem5.DAA, "314"],
         ["*", ""],
       ],
       b: [
-        [subjects.sem5.DAA, ""],
-        [subjects.sem5.Crypto, ""],
-        [subjects.sem5.Crypto, ""],
+        [subjects.sem5.DAA, "316"],
+        [subjects.sem5["Web Tech"], "316"],
+        [subjects.sem5.Crypto, "316"],
         ["*", ""],
       ],
     },
     {
       day: "Tue",
       a: [
-        [subjects.sem5.Crypto, ""],
-        [subjects.sem5.MM, ``],
-        [subjects.sem5.SAD, "Lab C"],
+        [subjects.sem5.DAA, "314"],
+        [subjects.sem5.MM, `318`],
+        [subjects.sem5.Simulation, "314"],
         ["*", ""],
       ],
       b: [
-        [subjects.sem5.Crypto, ""],
-        [subjects.sem5.MM, ``],
-        [subjects.sem5.SAD, "Lab C"],
+        [subjects.sem5.Simulation, "316"],
+        [subjects.sem5.MM, `318`],
+        [subjects.sem5.Crypto, "316"],
         ["*", ""],
       ],
     },
     {
       day: "Wed",
       a: [
-        ["*", ""],
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem5.Simulation, "314"],
+        [subjects.sem5.MM, "318"],
+        [subjects.sem5.SAD, "Lab C"],
         ["*", ""],
       ],
       b: [
-        ["*", ""],
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem5.DAA, "316"],
+        [subjects.sem5.MM, "318"],
+        [subjects.sem5.SAD, "Lab C"],
         ["*", ""],
       ],
     },
     {
       day: "Thu",
       a: [
-        ["*", ""],
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem5.Crypto, "314"],
+        [subjects.sem5["Web Tech"], "314"],
+        [subjects.sem5.SAD, "Lab C"],
         ["*", ""],
       ],
       b: [
-        ["*", ""],
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem5["Web Tech"], "316"],
+        [subjects.sem5.Simulation, "316"],
+        [subjects.sem5.SAD, "Lab C"],
         ["*", ""],
       ],
     },
     {
       day: "Fri",
       a: [
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem5.Crypto, "314"],
+        [subjects.sem5.MM, "318"], // Lab?
         ["*", ""],
         ["*", ""],
       ],
       b: [
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem5.Simulation, "316"],
+        [subjects.sem5.MM, "318"], // Lab?
         ["*", ""],
         ["*", ""],
       ],
     },
   ],
-  // sem5: [
-  //   {
-  //     day: "Sun",
-  //     a: [
-  //       [subjects.sem5["Web Tech"], "314"],
-  //       [subjects.sem5.DAA, "314"],
-  //       [subjects.sem5.Simulation, "314"],
-  //       [subjects.sem5.SAD, "Lab C"],
-  //     ],
-  //     b: [
-  //       [subjects.sem5.DAA, "316"],
-  //       [subjects.sem5["Web Tech"], "316"],
-  //       [subjects.sem5.Crypto, "316"],
-  //       [subjects.sem5.SAD, "Lab C"],
-  //     ],
-  //   },
-  //   {
-  //     day: "Mon",
-  //     a: [
-  //       [subjects.sem5["Web Tech"], "Lab B"],
-  //       [subjects.sem5.Crypto, "314"],
-  //       [subjects.sem5.DAA, "314"],
-  //       ["*", ""],
-  //     ],
-  //     b: [
-  //       [subjects.sem5.DAA, "316"],
-  //       [subjects.sem5["Web Tech"], "316"],
-  //       [subjects.sem5.Crypto, "316"],
-  //       ["*", ""],
-  //     ],
-  //   },
-  //   {
-  //     day: "Tue",
-  //     a: [
-  //       [subjects.sem5.DAA, "314"],
-  //       [subjects.sem5.MM, `318`],
-  //       [subjects.sem5.Simulation, "314"],
-  //       ["*", ""],
-  //     ],
-  //     b: [
-  //       [subjects.sem5.Simulation, "316"],
-  //       [subjects.sem5.MM, `318`],
-  //       [subjects.sem5.Crypto, "316"],
-  //       ["*", ""],
-  //     ],
-  //   },
-  //   {
-  //     day: "Wed",
-  //     a: [
-  //       [subjects.sem5.Simulation, "314"],
-  //       [subjects.sem5.MM, "318"],
-  //       [subjects.sem5.SAD, "Lab C"],
-  //       ["*", ""],
-  //     ],
-  //     b: [
-  //       [subjects.sem5.DAA, "316"],
-  //       [subjects.sem5.MM, "318"],
-  //       [subjects.sem5.SAD, "Lab C"],
-  //       ["*", ""],
-  //     ],
-  //   },
-  //   {
-  //     day: "Thu",
-  //     a: [
-  //       [subjects.sem5.Crypto, "314"],
-  //       [subjects.sem5["Web Tech"], "314"],
-  //       [subjects.sem5.SAD, "Lab C"],
-  //       ["*", ""],
-  //     ],
-  //     b: [
-  //       [subjects.sem5["Web Tech"], "316"],
-  //       [subjects.sem5.Simulation, "316"],
-  //       [subjects.sem5.SAD, "Lab C"],
-  //       ["*", ""],
-  //     ],
-  //   },
-  //   {
-  //     day: "Fri",
-  //     a: [
-  //       [subjects.sem5.Crypto, "314"],
-  //       [subjects.sem5.MM, "318"], // Lab?
-  //       ["*", ""],
-  //       ["*", ""],
-  //     ],
-  //     b: [
-  //       [subjects.sem5.Simulation, "316"],
-  //       [subjects.sem5.MM, "318"], // Lab?
-  //       ["*", ""],
-  //       ["*", ""],
-  //     ],
-  //   },
-  // ],
   sem4: [
     {
       day: "Sun",
