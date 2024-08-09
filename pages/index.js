@@ -105,10 +105,13 @@ export default function Index() {
                       subtitle={
                         <>
                           Exam time: 6:15 AM - 9:15 AM <br />
-                          {/* Room:- Section A: 403, Section B: 406 <br /> */}
+                          Roll 1 to 16: Room 103 <br />
+                          Roll 17 to 24: Room 105 <br />
+                          Roll 25 to 43: Room 104 <br />
+                          Roll 44 to 50: Room 105
                         </>
                       }
-                    />{" "}
+                    />
                     <ExamRoutine
                       sem={sem || currentJoonSem}
                       title="Lab Report Submisssion"
@@ -153,7 +156,11 @@ export default function Index() {
                       sem={"sem4"}
                       subtitle={
                         <>
-                          Exam time: 6:15 AM - 8:15 AM
+                          Exam time: 6:15 AM - 8:15 AM <br />
+                          Roll 1 to 16: Room 103 <br />
+                          Roll 17 to 24: Room 105 <br />
+                          Roll 25 to 40: Room 104 <br />
+                          Roll 41 to 48: Room 105
                           {/* Room:- Section A: 403, Section B: 406 <br /> */}
                         </>
                       }
