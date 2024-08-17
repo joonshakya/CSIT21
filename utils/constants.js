@@ -3629,8 +3629,8 @@ export const cnAssignments = [
   },
   {
     number: 9,
-    selected: true,
     name: "Setting up DNS Server",
+    selected: true,
   },
 ];
 
