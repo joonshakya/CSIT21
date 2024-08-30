@@ -179,6 +179,16 @@ export default function Index() {
                     />
                   </>
                 ) : null}
+
+                {sem === "sem4" ? (
+                  <>
+                    <ExamRoutine
+                      examType={examTypes.pre}
+                      sem="sem4"
+                      subtitle={<>Exam time: 06:15 AM - 09:15 AM</>}
+                    />
+                  </>
+                ) : null}
               </Grid>
               <Grid
                 item

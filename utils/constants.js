@@ -1844,60 +1844,57 @@ export const examRoutine = {
       {
         day: "Sun",
         subject: subjects.sem4.TOC,
-        date: "2024/03/03",
+        date: "2024/09/15",
         friendlyDate: (
           <>
-            3<sup>rd</sup> March
+            15<sup>th</sup> September
             <br />
-            20<sup>th</sup> Falgun
+            30<sup>th</sup> Bhadra
           </>
         ),
       },
       {
         day: "Mon",
         subject: subjects.sem4.CN,
-        date: "2024/03/04",
+        date: "2024/09/16",
         friendlyDate: (
           <>
-            4<sup>th</sup> March
+            16<sup>th</sup> September
             <br />
-            21<sup>st</sup> Falgun
-          </>
-        ),
-      },
-      {
-        day: "Tue",
-        subject: subjects.sem4.OS,
-        date: "2024/03/05",
-        friendlyDate: (
-          <>
-            5<sup>th</sup> March
-            <br />
-            22<sup>nd</sup> Falgun
+            31<sup>st</sup> Bhadra
           </>
         ),
       },
       {
         day: "Wed",
-        subject: subjects.sem4.DBMS,
-        date: "2024/03/06",
+        subject: subjects.sem4.OS,
+        date: "2024/09/18",
         friendlyDate: (
           <>
-            6<sup>th</sup> March
-            <br />
-            23<sup>rd</sup> Falgun
+            18<sup>th</sup> September
+            <br />2<sup>nd</sup> Asoj
           </>
         ),
       },
       {
-        day: "Thu",
-        subject: subjects.sem4.AI,
-        date: "2024/03/07",
+        day: "Fri",
+        subject: subjects.sem4.DBMS,
+        date: "2024/09/20",
         friendlyDate: (
           <>
-            7<sup>th</sup> March
-            <br />
-            24<sup>th</sup> Falgun
+            20<sup>th</sup> September
+            <br />4<sup>th</sup> Asoj
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem4.AI,
+        date: "2024/09/22",
+        friendlyDate: (
+          <>
+            22<sup>nd</sup> September
+            <br />6<sup>th</sup> Asoj
           </>
         ),
       },
