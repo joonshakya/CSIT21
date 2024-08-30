@@ -36,7 +36,7 @@ const jExec = async (command) => {
     await jExec(`pnpm build`);
     console.log("\nCommitting Static HTML...");
     await jExec(
-      `cd out && git init && git remote add static-html https://github.com/joonshakya/CSIT21-Next-Static.git && git add . && git branch -M static && git commit -m "Deploy from local" && git push static-html static --force`
+      `cd out && git init && git remote add static-html https://github.com/joonshakya/CSIT21-Next-Static.git && git add . && git branch -M static && git commit -m "Deploy from local" && git config http.postBuffer 524288000 && git push static-html static --force`
     );
     console.log("\nCommitting code...");
     await jExec(
