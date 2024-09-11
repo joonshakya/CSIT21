@@ -97,32 +97,29 @@ export default function Index() {
                   sem={sem || currentJoonSem}
                   setSem={setSem}
                 />
-                {sem === "" || sem === currentJoonSem ? (
+                {sem === "sem2" ? (
+                  <>
+                    {/* <ExamRoutine examType={examTypes.prac} sem="sem2" /> */}
+                    <ClassRoutine sem={sem} />
+                    <ExamRoutine
+                      examType={examTypes.board}
+                      sem="sem2"
+                      subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
+                    />
+                  </>
+                ) : null}
+                {sem === "sem4" ? (
                   <>
                     <ExamRoutine
                       examType={examTypes.pre}
-                      sem={sem || currentJoonSem}
-                      subtitle={
-                        <>
-                          Exam time: 6:15 AM - 9:15 AM <br />
-                          Roll 1 to 16: Room 103 <br />
-                          Roll 17 to 24: Room 105 <br />
-                          Roll 25 to 43: Room 104 <br />
-                          Roll 44 to 50: Room 105
-                        </>
-                      }
+                      sem="sem4"
+                      subtitle={<>Exam time: 06:15 AM - 09:15 AM</>}
                     />
-                    <ExamRoutine
-                      sem={sem || currentJoonSem}
-                      title="Lab Report Submisssion"
-                      examType={"lab"}
-                      // subtitle={
-                      //   <>
-                      //     Exam time: 6:15 AM - 9:15 AM <br />
-                      //     {/* Room:- Section A: 403, Section B: 406 <br /> */}
-                      //   </>
-                      // }
-                    />
+                    <ClassRoutine sem={sem} />
+                  </>
+                ) : null}
+                {sem === "" || sem === currentJoonSem ? (
+                  <>
                     <ExamRoutine
                       examType={examTypes.board}
                       sem={sem || currentJoonSem}
@@ -141,47 +138,6 @@ export default function Index() {
                     /> */}
                     {/* <ExamRoutine examType={examTypes.prac} sem="sem3" /> */}
                     {/* <LeftSideCardMessage title="Happy Dashain" /> */}
-                  </>
-                ) : null}
-
-                {sem === "sem4" ? (
-                  <>
-                    <ExamRoutine
-                      examType={examTypes.mid}
-                      sem={"sem4"}
-                      subtitle={
-                        <>
-                          Exam time: 6:15 AM - 8:15 AM <br />
-                          Roll 1 to 16: Room 103 <br />
-                          Roll 17 to 24: Room 105 <br />
-                          Roll 25 to 40: Room 104 <br />
-                          Roll 41 to 48: Room 105
-                          {/* Room:- Section A: 403, Section B: 406 <br /> */}
-                        </>
-                      }
-                    />
-                    <ClassRoutine sem={sem} />
-                  </>
-                ) : null}
-                {sem === "sem2" ? (
-                  <>
-                    {/* <ExamRoutine examType={examTypes.prac} sem="sem2" /> */}
-                    <ClassRoutine sem={sem} />
-                    <ExamRoutine
-                      examType={examTypes.board}
-                      sem="sem2"
-                      subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
-                    />
-                  </>
-                ) : null}
-
-                {sem === "sem4" ? (
-                  <>
-                    <ExamRoutine
-                      examType={examTypes.pre}
-                      sem="sem4"
-                      subtitle={<>Exam time: 06:15 AM - 09:15 AM</>}
-                    />
                   </>
                 ) : null}
               </Grid>
