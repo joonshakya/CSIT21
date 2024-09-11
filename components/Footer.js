@@ -22,6 +22,8 @@ const Footer = () => {
       >
         <Link
           href="https://www.github.com/joonshakya/CSIT21"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             color: "white",
             margin: ".4rem 1rem",
