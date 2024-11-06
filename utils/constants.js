@@ -1913,62 +1913,65 @@ export const examRoutine = {
     ],
     [examTypes.board]: [
       {
-        day: "Tue",
+        day: "Fri",
         subject: subjects.sem4.TOC,
-        date: "2024/03/19",
+        date: "2024/11/29",
         friendlyDate: (
           <>
-            19<sup>th</sup> March
-            <br />6<sup>th</sup> Chaitra
+            29<sup>th</sup> November
+            <br />
+            14<sup>th</sup> Mangsir
           </>
         ),
-        source: "https://iost.tu.edu.np/notices/2426",
+        source:
+          "https://portal.tu.edu.np/notice/4880/B.Sc.CSIT%20&%20BIT%204%20routine.pdf",
         sourceName: "TU Notice",
       },
       {
-        day: "Fri",
-        date: "2024/03/22",
+        day: "Mon",
+        date: "2024/12/02",
         subject: subjects.sem4.CN,
         friendlyDate: (
           <>
-            22<sup>nd</sup> March
-            <br />9<sup>th</sup> Chaitra
+            2<sup>nd</sup> December
+            <br />
+            17<sup>th</sup> Mangsir
           </>
         ),
       },
       {
-        day: "Tue",
-        date: "2024/03/26",
+        day: "Thu",
+        date: "2024/12/05",
         subject: subjects.sem4.OS,
         friendlyDate: (
           <>
-            26<sup>th</sup> March
+            5<sup>th</sup> December
             <br />
-            13<sup>th</sup> Chaitra
+            20<sup>th</sup> Mangsir
           </>
         ),
       },
       {
-        day: "Fri",
-        date: "2024/03/29",
+        day: "Sun",
+        date: "2024/12/08",
         subject: subjects.sem4.DBMS,
         friendlyDate: (
           <>
-            29<sup>th</sup> March
+            8<sup>th</sup> December
             <br />
-            16<sup>th</sup> Chaitra
+            23<sup>rd</sup> Mangsir
           </>
         ),
       },
       {
-        day: "Mon",
-        date: "2024/04/01",
+        day: "Wed",
+        date: "2024/12/11",
         subject: subjects.sem4.AI,
         friendlyDate: (
           <>
-            1<sup>st</sup> April
+            11<sup>th</sup> December
             <br />
-            19<sup>th</sup> Chaitra
+            26<sup>th</sup> Mangsir
           </>
         ),
       },

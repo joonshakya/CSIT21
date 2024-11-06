@@ -93,10 +93,8 @@ export default function Index() {
                   mx: "auto",
                 }}
               >
-                <Materials
-                  sem={sem || currentJoonSem}
-                  setSem={setSem}
-                />
+                <Materials sem={sem || currentJoonSem} setSem={setSem} />
+            
                 {sem === "sem2" ? (
                   <>
                     {/* <ExamRoutine examType={examTypes.prac} sem="sem2" /> */}
@@ -111,9 +109,9 @@ export default function Index() {
                 {sem === "sem4" ? (
                   <>
                     <ExamRoutine
-                      examType={examTypes.pre}
+                      examType={examTypes.board}
                       sem="sem4"
-                      subtitle={<>Exam time: 06:15 AM - 09:15 AM</>}
+                      subtitle={<>Exam time: 12:00 AM - 03:00 AM</>}
                     />
                     <ClassRoutine sem={sem} />
                   </>
