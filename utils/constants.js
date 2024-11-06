@@ -2277,6 +2277,85 @@ export const examRoutine = {
         ),
       },
     ],
+    [examTypes.prac]: [
+      {
+        day: "Mon",
+        subject: subjects.sem5["Web Tech"],
+        time: "7:00 AM",
+        date: "2024/11/11",
+        friendlyDate: (
+          <>
+            11<sup>th</sup> November
+            <br />
+            26<sup>th</sup> Kartik
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem5.DAA,
+        time: "8:00 AM",
+        date: "2024/11/12",
+        friendlyDate: (
+          <>
+            12<sup>th</sup> November
+            <br />
+            27<sup>th</sup> Kartik
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        time: "6:30 AM",
+        date: "2024/11/13",
+        subject: subjects.sem5.MM,
+        friendlyDate: (
+          <>
+            13<sup>th</sup> November
+            <br />
+            28<sup>th</sup> Kartik
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        time: "8:00 AM",
+        date: "2024/11/14",
+        subject: subjects.sem5.Simulation,
+        friendlyDate: (
+          <>
+            14<sup>th</sup> November
+            <br />
+            29<sup>th</sup> Kartik
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        date: "2024/11/15",
+        time: "7:00 AM",
+        subject: subjects.sem5.SAD,
+        friendlyDate: (
+          <>
+            15<sup>th</sup> November
+            <br />
+            30<sup>th</sup> Kartik
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        time: "7:00 AM",
+        date: "2024/11/17",
+        subject: subjects.sem5.Crypto,
+        friendlyDate: (
+          <>
+            17<sup>th</sup> November
+            <br />2<sup>nd</sup> Mangsir
+          </>
+        ),
+      },
+    ],
   },
 };
 
