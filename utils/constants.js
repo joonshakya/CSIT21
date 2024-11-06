@@ -24,6 +24,22 @@ export const webTechAssignments = [
   {
     number: 6,
     name: "Working with PHP Lab 1",
+  },
+  {
+    number: 7,
+    name: "Working with PHP Forms",
+  },
+  {
+    number: 8,
+    name: "Working with database",
+  },
+  {
+    number: 9,
+    name: "Working with AJAX",
+  },
+  {
+    number: 10,
+    name: "Working with XML",
     selected: true,
   },
 ];
@@ -48,6 +64,38 @@ export const simulationAssignments = [
   {
     number: 5,
     name: "To predict the weather of a particular day i.e.: after 2 days, after 3 days up to 20 days",
+  },
+  {
+    number: 6,
+    name: "To implement game of dice that generate discrete random variables using rand function using C/C++ Program.",
+  },
+  {
+    number: 7,
+    name: "To implement Linear Congruential Method for Generating Pseudo Random Number using C/C++ Program.",
+  },
+  {
+    number: 8,
+    name: "To implement Random Walk Model with and without drift value",
+  },
+  {
+    number: 9,
+    name: "Manufacturing Shop Model - 1",
+  },
+  {
+    number: 10,
+    name: "Manufacturing Shop Model - 2",
+  },
+  {
+    number: 11,
+    name: "Manufacturing Shop Model - 3",
+  },
+  {
+    number: 12,
+    name: "Manufacturing Shop Model - 4",
+  },
+  {
+    number: 13,
+    name: "Manufacturing Shop Model - 5",
     selected: true,
   },
 ];
@@ -103,6 +151,18 @@ export const materials = {
         link: "https://drive.google.com/drive/folders/1fhkU4pVANv9uVzlYKwWn5PCBjR3LXl3_",
         bgColor: "#548982",
         bgImage: "linear-gradient(90deg, #585c5b 0%, #44b8ab 100%)",
+      },
+      {
+        name: (
+          <>
+            SXC
+            <br />
+            Old Qs
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1FXWDXF_X0oDFMs6lj2JMgAuFl0l0LcPY?usp=drive_link",
+        bgColor: "#FBAB7E",
+        bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
       },
     ],
   },
@@ -547,13 +607,13 @@ export const classRoutine = {
         [subjects.sem5["Web Tech"], "314"],
         [subjects.sem5.DAA, "314"],
         [subjects.sem5.Simulation, "314"],
-        ["*", ""],
+        [subjects.sem5.SAD, "Lab C"],
       ],
       b: [
         [subjects.sem5.DAA, "316"],
         [subjects.sem5["Web Tech"], "316"],
         [subjects.sem5.Crypto, "316"],
-        ["*", ""],
+        [subjects.sem5.SAD, "Lab C"],
       ],
     },
     {
@@ -621,13 +681,13 @@ export const classRoutine = {
       a: [
         [subjects.sem5.Crypto, "314"],
         [subjects.sem5.MM, "318"], // Lab?
-        [subjects.sem5.SAD, "Lab C"],
+        ["*", ""],
         ["*", ""],
       ],
       b: [
         [subjects.sem5.Simulation, "316"],
         [subjects.sem5.MM, "318"], // Lab?
-        [subjects.sem5.SAD, "Lab C"],
+        ["*", ""],
         ["*", ""],
       ],
     },
@@ -804,6 +864,98 @@ export const classRoutine = {
   //     ],
   //   },
   // ],
+  sem2: [
+    {
+      day: "Sun",
+      a: [
+        [subjects.sem2.OOP, ""],
+        [subjects.sem2.Maths2, ""],
+        [subjects.sem2.DS, ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem2.MP, ""],
+        [subjects.sem2.OOP, ""],
+        [subjects.sem2.Stats1, ""],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Mon",
+      a: [
+        [subjects.sem2.OOP, ""],
+        [subjects.sem2.DS, ""],
+        [subjects.sem2.MP, ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem2.Maths2, ""],
+        [subjects.sem2.Stats1, ""],
+        [subjects.sem2.OOP, ""],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Tue",
+      a: [
+        [subjects.sem2.Maths2, ""],
+        [subjects.sem2.Stats1, ""],
+        [subjects.sem2.MP, ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem2.Maths2, ""],
+        [subjects.sem2.OOP, ""],
+        [subjects.sem2.DS, ""],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Wed",
+      a: [
+        [subjects.sem2.Maths2, ""],
+        [subjects.sem2.MP, ""],
+        [subjects.sem2.Maths2, ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem2.Maths2, ""],
+        [subjects.sem2.MP, ""],
+        [subjects.sem2.DS, ""],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Thu",
+      a: [
+        [subjects.sem2.Stats1, ""],
+        [subjects.sem2.DS, ""],
+        [subjects.sem2.OOP, ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem2.DS, ""],
+        [subjects.sem2.Stats1, ""],
+        [subjects.sem2.MP, ""],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Fri",
+      a: [
+        [subjects.sem2.DS, ""],
+        [subjects.sem2.Stats1, ""],
+        ["*", ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem2.DS, ""],
+        [subjects.sem2.Maths2, ""],
+        ["*", ""],
+        ["*", ""],
+      ],
+    },
+  ],
   sem3: [
     {
       day: "Mon",
@@ -1639,62 +1791,63 @@ export const examRoutine = {
   sem4: {
     [examTypes.mid]: [
       {
-        day: "Tue",
+        day: "Sun",
         subject: subjects.sem4.TOC,
-        date: "2024/01/30",
+        date: "2024/08/11",
         friendlyDate: (
           <>
-            30<sup>th</sup> January
+            11<sup>th</sup> August
             <br />
-            16<sup>th</sup> Magh
-          </>
-        ),
-      },
-      {
-        day: "Wed",
-        subject: subjects.sem4.CN,
-        date: "2024/01/31",
-        friendlyDate: (
-          <>
-            31<sup>st</sup> January
-            <br />
-            17<sup>th</sup> Magh
-          </>
-        ),
-      },
-      {
-        day: "Thu",
-        subject: subjects.sem4.OS,
-        date: "2024/02/01",
-        friendlyDate: (
-          <>
-            1<sup>st</sup> February
-            <br />
-            18<sup>th</sup> Magh
-          </>
-        ),
-      },
-      {
-        day: "Fri",
-        subject: subjects.sem4.DBMS,
-        date: "2024/02/02",
-        friendlyDate: (
-          <>
-            2<sup>nd</sup> February
-            <br />
-            19<sup>th</sup> Magh
+            27<sup>th</sup> Shrawan
           </>
         ),
       },
       {
         day: "Mon",
-        subject: subjects.sem4.AI,
-        date: "2024/02/05",
+        subject: subjects.sem4.CN,
+        date: "2024/08/12",
         friendlyDate: (
           <>
-            5<sup>th</sup> February
+            12<sup>th</sup> August
             <br />
-            22<sup>nd</sup> Magh
+            28<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem4.OS,
+        date: "2024/08/13",
+        friendlyDate: (
+          <>
+            13<sup>th</sup> August
+            <br />
+            29<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem4.DBMS,
+        date: "2024/08/14",
+        friendlyDate: (
+          <>
+            14<sup>th</sup> August
+            <br />
+            30<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem4.AI,
+
+        date: "2024/08/15",
+        friendlyDate: (
+          <>
+            15<sup>th</sup> August
+            <br />
+            31<sup>st</sup> Shrawan
           </>
         ),
       },
@@ -1888,6 +2041,30 @@ export const examRoutine = {
     ],
   },
   sem5: {
+    ["lab"]: [
+      {
+        day: "Sun",
+        subject: subjects.sem5.Crypto,
+        date: "2024/08/25",
+        friendlyDate: (
+          <>
+            25<sup>th</sup> August
+            <br />9<sup>th</sup> Bhadra
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem5.SAD,
+        date: "2024/08/25",
+        friendlyDate: (
+          <>
+            25<sup>th</sup> August
+            <br />9<sup>th</sup> Bhadra
+          </>
+        ),
+      },
+    ],
     [examTypes.mid]: [
       {
         day: "Sun",
@@ -1956,11 +2133,236 @@ export const examRoutine = {
         ),
       },
     ],
+    [examTypes.pre]: [
+      {
+        day: "Sun",
+        subject: subjects.sem5.DAA,
+        date: "2024/08/11",
+        friendlyDate: (
+          <>
+            11<sup>th</sup> August
+            <br />
+            27<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem5.SAD,
+        date: "2024/08/12",
+        friendlyDate: (
+          <>
+            12<sup>th</sup> August
+            <br />
+            28<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem5.Crypto,
+        date: "2024/08/13",
+        friendlyDate: (
+          <>
+            13<sup>th</sup> August
+            <br />
+            29<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem5.Simulation,
+        date: "2024/08/14",
+        friendlyDate: (
+          <>
+            14<sup>th</sup> August
+            <br />
+            30<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem5["Web Tech"],
+        date: "2024/08/15",
+        friendlyDate: (
+          <>
+            15<sup>th</sup> August
+            <br />
+            31<sup>st</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem5.MM,
+        date: "2024/08/18",
+        friendlyDate: (
+          <>
+            18<sup>th</sup> August
+            <br />2<sup>nd</sup> Bhadra
+          </>
+        ),
+      },
+    ],
+    [examTypes.board]: [
+      {
+        day: "Fri",
+        subject: subjects.sem5.DAA,
+        date: "2024/09/13",
+        friendlyDate: (
+          <>
+            13<sup>th</sup> Sept
+            <br />
+            28<sup>th</sup> Bhadra
+          </>
+        ),
+        source: "https://iost.tu.edu.np/notices/3878",
+        sourceName: "TU Notice",
+      },
+      {
+        day: "Mon",
+        date: "2024/09/16",
+        subject: subjects.sem5.SAD,
+        friendlyDate: (
+          <>
+            16<sup>th</sup> Sept
+            <br />
+            31<sup>st</sup> Bhadra
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        date: "2024/09/20",
+        subject: subjects.sem5.Crypto,
+        friendlyDate: (
+          <>
+            20<sup>th</sup> Sept
+            <br />4<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        date: "2024/09/24",
+        subject: subjects.sem5.Simulation,
+        friendlyDate: (
+          <>
+            24<sup>th</sup> Sept
+            <br />8<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        date: "2024/09/27",
+        subject: subjects.sem5["Web Tech"],
+        friendlyDate: (
+          <>
+            27<sup>th</sup> Sept
+            <br />
+            11<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        date: "2024/09/30",
+        subject: subjects.sem5.MM,
+        friendlyDate: (
+          <>
+            30<sup>th</sup> Sept
+            <br />
+            14<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+    ],
+    [examTypes.prac]: [
+      {
+        day: "Mon",
+        subject: subjects.sem5["Web Tech"],
+        time: "7:00 AM",
+        date: "2024/11/11",
+        friendlyDate: (
+          <>
+            11<sup>th</sup> November
+            <br />
+            26<sup>th</sup> Kartik
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem5.DAA,
+        time: "8:00 AM",
+        date: "2024/11/12",
+        friendlyDate: (
+          <>
+            12<sup>th</sup> November
+            <br />
+            27<sup>th</sup> Kartik
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        time: "6:30 AM",
+        date: "2024/11/13",
+        subject: subjects.sem5.MM,
+        friendlyDate: (
+          <>
+            13<sup>th</sup> November
+            <br />
+            28<sup>th</sup> Kartik
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        time: "8:00 AM",
+        date: "2024/11/14",
+        subject: subjects.sem5.Simulation,
+        friendlyDate: (
+          <>
+            14<sup>th</sup> November
+            <br />
+            29<sup>th</sup> Kartik
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        date: "2024/11/15",
+        time: "7:00 AM",
+        subject: subjects.sem5.SAD,
+        friendlyDate: (
+          <>
+            15<sup>th</sup> November
+            <br />
+            30<sup>th</sup> Kartik
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        time: "7:00 AM",
+        date: "2024/11/17",
+        subject: subjects.sem5.Crypto,
+        friendlyDate: (
+          <>
+            17<sup>th</sup> November
+            <br />2<sup>nd</sup> Mangsir
+          </>
+        ),
+      },
+    ],
   },
 };
 
 export const currentJoonSem = "sem5";
-export const sem4 = "sem4";
 
 export const classRoutineSem2 = [
   {
@@ -3318,8 +3720,8 @@ export const cnAssignments = [
   },
   {
     number: 9,
-    selected: true,
     name: "Setting up DNS Server",
+    selected: true,
   },
 ];
 

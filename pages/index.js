@@ -33,7 +33,10 @@ export default function Index() {
       if (semParam) {
         const semParamNum = parseInt(semParam);
 
-        if (semParamNum >= 1 || semParamNum <= currentJoonSem.split("sem")[1]) {
+        if (
+          semParamNum >= 1 ||
+          semParamNum <= currentJoonSem.split("sem")[1]
+        ) {
           localStorage.setItem("sem", semParam);
           Router.replace(`/`);
           return `sem${semParamNum}`;
@@ -57,7 +60,9 @@ export default function Index() {
   return (
     <>
       <Navbar
-        text={`CSIT21 - Sem ${(sem || currentJoonSem).split("sem")[1]}`}
+        text={`CSIT21 - Sem ${
+          (sem || currentJoonSem).split("sem")[1]
+        }`}
       />
       <Box
         sx={{
@@ -89,37 +94,11 @@ export default function Index() {
                 }}
               >
                 <Materials sem={sem || currentJoonSem} setSem={setSem} />
-                {sem === "" || sem === currentJoonSem ? (
-                  <>
-                    <ExamRoutine
-                      examType={examTypes.mid}
-                      sem={sem || currentJoonSem}
-                      subtitle={
-                        <>
-                          Exam time: 6:15 AM - 8:15 AM <br />
-                          Room:- Section A: 403, Section B: 406 <br />
-                        </>
-                      }
-                    />
-                    {/* <ExamRoutine
-                      examType={examTypes.prac}
-                      sem={sem || currentJoonSem}
-                      title="Practical Exam Routine"
-                    /> */}
-                    <ClassRoutine sem={sem || currentJoonSem} />
-                    {/* <ExamRoutine
-                      examType={examTypes.board}
-                      sem="sem3"
-                      subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
-                    /> */}
-                    {/* <ExamRoutine examType={examTypes.prac} sem="sem3" /> */}
-                    {/* <LeftSideCardMessage title="Happy Dashain" /> */}
-                  </>
-                ) : null}
-
+            
                 {sem === "sem2" ? (
                   <>
                     {/* <ExamRoutine examType={examTypes.prac} sem="sem2" /> */}
+                    <ClassRoutine sem={sem} />
                     <ExamRoutine
                       examType={examTypes.board}
                       sem="sem2"
@@ -127,7 +106,6 @@ export default function Index() {
                     />
                   </>
                 ) : null}
-
                 {sem === "sem4" ? (
                   <>
                     <ExamRoutine
@@ -135,6 +113,28 @@ export default function Index() {
                       sem="sem4"
                       subtitle={<>Exam time: 12:00 AM - 03:00 AM</>}
                     />
+                    <ClassRoutine sem={sem} />
+                  </>
+                ) : null}
+                {sem === "" || sem === currentJoonSem ? (
+                  <>
+                    <ExamRoutine
+                      examType={examTypes.prac}
+                      sem={sem || currentJoonSem}
+                    />
+                    {/* <ExamRoutine
+                      examType={examTypes.prac}
+                      sem={sem || currentJoonSem}
+                      title="Practical Exam Routine"
+                    /> */}
+                    {/* <ClassRoutine sem={sem || currentJoonSem} /> */}
+                    {/* <ExamRoutine
+                      examType={examTypes.board}
+                      sem="sem3"
+                      subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
+                    /> */}
+                    {/* <ExamRoutine examType={examTypes.prac} sem="sem3" /> */}
+                    {/* <LeftSideCardMessage title="Happy Dashain" /> */}
                   </>
                 ) : null}
               </Grid>
