@@ -257,7 +257,7 @@ export default function ClassRoutine({ sem }) {
                       }}
                     />
                   }
-                  label={`Show only today, tom.`}
+                  label={`Show only today, tmr.`}
                 />
               </FormGroup>
               <TableContainer>
@@ -335,7 +335,7 @@ export default function ClassRoutine({ sem }) {
                                   fontWeight: "bold",
                                 }}
                               >
-                                Tom.
+                                Tmr.
                               </div>
                             ) : null}
                             {row.day}
