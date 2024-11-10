@@ -63,7 +63,9 @@ export default function useFrontPageGenerator() {
       "Web Tech": webTechAssignments,
     };
 
-    if (Object.prototype.hasOwnProperty.call(assignmentMap, subject)) {
+    if (
+      Object.prototype.hasOwnProperty.call(assignmentMap, subject)
+    ) {
       assignmentName = assignmentMap[subject].find(
         (assignment) => assignment.number === assignmentNumber
       ).name;
@@ -92,7 +94,11 @@ export default function useFrontPageGenerator() {
         ? `${subject}`
         : `${subject} Lab ${assignmentNumber}`
     } - Front Page.docx`;
-    generateDocument({ content, data, outputName }, setError, setLoading);
+    generateDocument(
+      { content, data, outputName },
+      setError,
+      setLoading
+    );
   };
   return [generateFrontPage, error, loading, setError];
 }
@@ -110,9 +116,14 @@ export async function prefetchDocument({
     if (roll === "0" || !roll) {
       return;
     }
-    subject = names[sem][roll][2] == "A" ? "DL Section A" : "DL Section B";
+    subject =
+      names[sem][roll][2] == "A" ? "DL Section A" : "DL Section B";
   } else if (
     ![
+      "Web Tech Index",
+      "Simulation Index",
+      "DAA Index",
+      "MM Index",
       "TOC Index",
       "DBMS Index",
       "CN Index",

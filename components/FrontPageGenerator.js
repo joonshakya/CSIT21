@@ -40,7 +40,9 @@ export default function FrontPageGenerator({ sem }) {
 
   const roll = useBaseStore((state) => state.roll);
   const setRoll = useBaseStore((state) => state.setRoll);
-  const wordFileLoaded = useBaseStore((state) => state.wordFileLoaded);
+  const wordFileLoaded = useBaseStore(
+    (state) => state.wordFileLoaded
+  );
 
   const assignmentsWithTopics = useMemo(() => {
     return [
@@ -61,6 +63,10 @@ export default function FrontPageGenerator({ sem }) {
 
   const assignmentsWithoutTopics = useMemo(() => {
     return [
+      "Web Tech Index",
+      "Simulation Index",
+      "DAA Index",
+      "MM Index",
       "TOC Index",
       "DBMS Index",
       "CN Index",
@@ -109,6 +115,42 @@ export default function FrontPageGenerator({ sem }) {
       },
       {
         subject: "TOC Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "Web Tech Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "Simulation Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "DAA Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "MM Index",
         assignments: [
           {
             number: 0,
@@ -246,7 +288,7 @@ export default function FrontPageGenerator({ sem }) {
     if (tab === "assignment") {
       setSubject(initialSubject);
     } else if (tab === "index") {
-      setSubject("TOC Index");
+      setSubject("Web Tech Index");
     }
   }, [tab]);
 
@@ -255,7 +297,9 @@ export default function FrontPageGenerator({ sem }) {
       assignmentLists.forEach((entry) => {
         if (entry.subject === subject) {
           setAssignmentNumber(
-            entry.assignments.find((assignment) => assignment.selected).number
+            entry.assignments.find(
+              (assignment) => assignment.selected
+            ).number
           );
         }
       });
@@ -263,7 +307,8 @@ export default function FrontPageGenerator({ sem }) {
       setAssignmentNumber(
         assignmentLists
           .find((entry) => entry.subject === subject)
-          .assignments.find((assignment) => assignment.selected).number
+          .assignments.find((assignment) => assignment.selected)
+          .number
       );
     }
   }, [
@@ -273,19 +318,27 @@ export default function FrontPageGenerator({ sem }) {
     assignmentsWithoutTopics,
   ]);
 
-  const list = [["0", ["Select your name"]], ...Object.entries(names[sem])].map(
-    (entry) => ({
-      roll: entry[0],
-      label: entry[1][0],
-    })
-  );
+  const list = [
+    ["0", ["Select your name"]],
+    ...Object.entries(names[sem]),
+  ].map((entry) => ({
+    roll: entry[0],
+    label: entry[1][0],
+  }));
 
   const wordFiles = useWordStore();
-  const [generateFrontPage, error, loading, setError] = useFrontPageGenerator();
+  const [generateFrontPage, error, loading, setError] =
+    useFrontPageGenerator();
 
   useEffect(() => {
     setError(false);
-    prefetchDocument({ sem, wordFiles, subject, roll, setLoad: false });
+    prefetchDocument({
+      sem,
+      wordFiles,
+      subject,
+      roll,
+      setLoad: false,
+    });
   }, [subject, roll, setError]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
@@ -469,7 +522,24 @@ export default function FrontPageGenerator({ sem }) {
                           longHand: "Simulation",
                         },
                       ]
-                    : []
+                    : [
+                        {
+                          shortHand: "Web Tech Index",
+                          longHand: "Web Tech",
+                        },
+                        {
+                          shortHand: "Simulation Index",
+                          longHand: "Simulation",
+                        },
+                        {
+                          shortHand: "DAA Index",
+                          longHand: "DAA",
+                        },
+                        {
+                          shortHand: "MM Index",
+                          longHand: "MM",
+                        },
+                      ]
                   ).map((subject, index) => (
                     <FormControlLabel
                       key={index}
@@ -727,17 +797,19 @@ export default function FrontPageGenerator({ sem }) {
                           setAssignmentNumber(event.target.value)
                         }
                       >
-                        {entry.assignments.map((assignment, index) => (
-                          <MenuItem
-                            key={index}
-                            sx={{
-                              whiteSpace: "break-spaces",
-                            }}
-                            value={assignment.number}
-                          >
-                            {assignment.number}. {assignment.name}
-                          </MenuItem>
-                        ))}
+                        {entry.assignments.map(
+                          (assignment, index) => (
+                            <MenuItem
+                              key={index}
+                              sx={{
+                                whiteSpace: "break-spaces",
+                              }}
+                              value={assignment.number}
+                            >
+                              {assignment.number}. {assignment.name}
+                            </MenuItem>
+                          )
+                        )}
                       </Select>
                     </FormControl>
                   ) : null}
