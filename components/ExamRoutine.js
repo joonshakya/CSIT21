@@ -15,7 +15,12 @@ import Countdown from "./Countdown";
 import { examRoutine, questionPapers } from "../utils/constants";
 import { examTypes as examTypesObj } from "../utils/constants";
 
-export default function ExamRoutine({ examType, sem, subtitle, title }) {
+export default function ExamRoutine({
+  examType,
+  sem,
+  subtitle,
+  title,
+}) {
   const [loading, setLoading] = useState(true);
   const [todayDate, setTodayDate] = useState(null);
   const [tomorrowDate, setTomorrowDate] = useState(null);
@@ -26,11 +31,15 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
     }, 10);
     const newDate = new Date();
     setTodayDate(newDate);
-    setTomorrowDate(new Date(newDate.getTime() + 24 * 60 * 60 * 1000));
+    setTomorrowDate(
+      new Date(newDate.getTime() + 24 * 60 * 60 * 1000)
+    );
     const dateCheck = setInterval(() => {
       const newDate = new Date();
       setTodayDate(newDate);
-      setTomorrowDate(new Date(newDate.getTime() + 24 * 60 * 60 * 1000));
+      setTomorrowDate(
+        new Date(newDate.getTime() + 24 * 60 * 60 * 1000)
+      );
     }, 60000);
     return () => clearInterval(dateCheck);
   }, []);
@@ -80,7 +89,11 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
           <Typography variant="h5" component="div">
             {title ? title : `${examType} Exam Routine`}
           </Typography>
-          <Typography variant="body2" gutterBottom color="text.secondary">
+          <Typography
+            variant="body2"
+            gutterBottom
+            color="text.secondary"
+          >
             {subtitle ? (
               <>
                 {subtitle}
@@ -145,7 +158,10 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
               <TableContainer
                 sx={{
                   mx: "auto",
-                  maxWidth: examType !== examTypesObj.prac ? "560px" : "360px",
+                  maxWidth:
+                    examType !== examTypesObj.prac
+                      ? "560px"
+                      : "360px",
                 }}
               >
                 <Table size="small">
@@ -192,7 +208,10 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                           }}
                         >
                           {exam.friendlyDate ? (
-                            <TableCell sx={tCellStyles} align="center">
+                            <TableCell
+                              sx={tCellStyles}
+                              align="center"
+                            >
                               {exam.friendlyDate}
                             </TableCell>
                           ) : null}
@@ -200,7 +219,8 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                           <TableCell sx={tCellStyles} align="center">
                             {new Date(
                               exam.date + " GMT+5:45"
-                            ).toDateString() === todayDate.toDateString() ? (
+                            ).toDateString() ===
+                            todayDate.toDateString() ? (
                               <div
                                 style={{
                                   fontWeight: "bold",
@@ -211,19 +231,24 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                             ) : new Date(
                                 exam.date + " GMT+5:45"
                               ).toDateString() ===
-                              new Date(tomorrowDate).toDateString() ? (
+                              new Date(
+                                tomorrowDate
+                              ).toDateString() ? (
                               <div
                                 sx={{
                                   fontWeight: "bold",
                                 }}
                               >
-                                Tom.
+                                Tmr.
                               </div>
                             ) : null}
                             {exam.day}
                           </TableCell>
                           {exam.time ? (
-                            <TableCell sx={tCellStyles} align="center">
+                            <TableCell
+                              sx={tCellStyles}
+                              align="center"
+                            >
                               {exam.time}
                             </TableCell>
                           ) : null}
@@ -253,7 +278,8 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                               {exam.subject?.shortName}
                             </Link>
                           </TableCell>
-                          {questions && examType !== examTypesObj.prac ? (
+                          {questions &&
+                          examType !== examTypesObj.prac ? (
                             <TableCell
                               sx={{
                                 ...tCellStyles,
@@ -268,20 +294,21 @@ export default function ExamRoutine({ examType, sem, subtitle, title }) {
                                   justifyContent: "space-evenly",
                                 }}
                               >
-                                {questions[exam.subject.shortName].map(
-                                  (question, index) => (
-                                    <Button
-                                      key={index}
-                                      color="primary"
-                                      size="small"
-                                      href={question.link}
-                                      target="_blank"
-                                      rel="noreferrer noopener"
-                                    >
-                                      {question.examType} {question.batch}
-                                    </Button>
-                                  )
-                                )}
+                                {questions[
+                                  exam.subject.shortName
+                                ].map((question, index) => (
+                                  <Button
+                                    key={index}
+                                    color="primary"
+                                    size="small"
+                                    href={question.link}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                  >
+                                    {question.examType}{" "}
+                                    {question.batch}
+                                  </Button>
+                                ))}
                               </Box>
                             </TableCell>
                           ) : null}
