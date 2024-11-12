@@ -2321,22 +2321,9 @@ export const examRoutine = {
         ),
       },
       {
-        day: "Thu",
-        time: "8:00 AM",
-        date: "2024/11/14",
-        subject: subjects.sem5.Simulation,
-        friendlyDate: (
-          <>
-            14<sup>th</sup> November
-            <br />
-            29<sup>th</sup> Kartik
-          </>
-        ),
-      },
-      {
         day: "Fri",
         date: "2024/11/15",
-        time: "7:00 AM",
+        time: "6:20 AM",
         subject: subjects.sem5.SAD,
         friendlyDate: (
           <>
@@ -2355,6 +2342,18 @@ export const examRoutine = {
           <>
             17<sup>th</sup> November
             <br />2<sup>nd</sup> Mangsir
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        time: "8:00 AM",
+        date: "2024/11/18",
+        subject: subjects.sem5.Simulation,
+        friendlyDate: (
+          <>
+            18<sup>th</sup> November
+            <br />3<sup>rd</sup> Mangsir
           </>
         ),
       },
