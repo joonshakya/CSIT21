@@ -11,7 +11,6 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import { materials } from "../utils/constants";
-import { useRouter } from "next/router";
 
 export const GradientButton = ({
   name,
@@ -101,6 +100,11 @@ const Materials = ({ sem, setSem }) => {
                 justifyContent: "center",
               }}
             >
+              <FormControlLabel
+                value="sem6"
+                control={<Radio />}
+                label="6th"
+              />
               <FormControlLabel
                 value="sem5"
                 control={<Radio />}

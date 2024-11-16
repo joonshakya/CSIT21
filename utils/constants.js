@@ -101,6 +101,35 @@ export const simulationAssignments = [
 ];
 
 export const materials = {
+  sem6: {
+    books: [],
+    materials: [
+      {
+        name: (
+          <>
+            Pratik
+            <br />
+            Jung Karki
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1en35lArehz1xUA7l7ZHsjpoZZik13plI?usp=drive_link",
+        bgColor: "#6c55cb",
+        bgImage: "linear-gradient(43deg, #4158D0 0%, #C850C0 100%)",
+      },
+      {
+        name: (
+          <>
+            Ankit
+            <br />
+            Pangeni
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/10t3wS_w5dBya9rKsObj6yVtwx-91OAGU",
+        bgColor: "#548982",
+        bgImage: "linear-gradient(90deg, #585c5b 0%, #44b8ab 100%)",
+      },
+    ],
+  },
   sem5: {
     books: [
       {
@@ -445,6 +474,32 @@ export const downloads = [
 ];
 
 export const subjects = {
+  sem6: {
+    NCC: {
+      name: "NET Centric Computing",
+      shortName: "NCC",
+    },
+    SE: {
+      name: "Software Engineering",
+      shortName: "SE",
+    },
+    EGov: {
+      name: "E-Governance",
+      shortName: "E-Gov",
+    },
+    ECom: {
+      name: "E-Commerce",
+      shortName: "E-Com",
+    },
+    Compiler: {
+      name: "Compiler Design and Construction",
+      shortName: "Compiler",
+    },
+    TW: {
+      name: "Technical Writing",
+      shortName: "TW",
+    },
+  },
   sem5: {
     "Web Tech": {
       name: "Web Technology",
@@ -600,6 +655,98 @@ export const subjects = {
 };
 
 export const classRoutine = {
+  sem6: [
+    {
+      day: "Sun",
+      a: [
+        [subjects.sem6.NCC, "314"],
+        [subjects.sem6.SE, "314"],
+        [subjects.sem6.EGov, "314"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem6.ECom, "316"],
+        [subjects.sem6.TW, "316"],
+        [subjects.sem6.Compiler, "316"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Mon",
+      a: [
+        [subjects.sem6.ECom, "314"],
+        [subjects.sem6.SE, "314"],
+        [subjects.sem6.Compiler, "314"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem6.NCC, "314"],
+        [subjects.sem6.TW, "314"],
+        [subjects.sem6.EGov, "314"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Tue",
+      a: [
+        [subjects.sem6.NCC, "314"],
+        [subjects.sem6.SE, "314"],
+        [subjects.sem6.EGov, "314"],
+        [subjects.sem6.Compiler, "314"],
+      ],
+      b: [
+        [subjects.sem6.ECom, "316"],
+        [subjects.sem6.TW, "316"],
+        [subjects.sem6.Compiler, "316"],
+        [subjects.sem6.EGov, "316"],
+      ],
+    },
+    {
+      day: "Wed",
+      a: [
+        [subjects.sem6.ECom, "316"],
+        [subjects.sem6.TW, "316"],
+        [subjects.sem6.Compiler, "316"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem6.NCC, "314"],
+        [subjects.sem6.SE, "314"],
+        [subjects.sem6.EGov, "314"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Thu",
+      a: [
+        [subjects.sem6["NCC"], "314"],
+        [subjects.sem6.TW, "314"],
+        [subjects.sem6.EGov, "314"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem6.ECom, "316"],
+        [subjects.sem6.SE, "316"],
+        [subjects.sem6.Compiler, "316"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Fri",
+      a: [
+        [subjects.sem6.ECom, "314"],
+        [subjects.sem6.TW, "318"], // Lab?
+        ["*", ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem6.NCC, "316"],
+        [subjects.sem6.SE, "318"], // Lab?
+        ["*", ""],
+        ["*", ""],
+      ],
+    },
+  ],
   sem5: [
     {
       day: "Sun",
@@ -864,6 +1011,85 @@ export const classRoutine = {
   //     ],
   //   },
   // ],
+  sem3: [
+    {
+      day: "Mon",
+      a: [
+        [subjects.sem3.CG, "315"],
+        [subjects.sem3.NM, "315"],
+        [subjects.sem3.DSA, "315"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem3.CA, "Lab D"],
+        [subjects.sem3.CG, ""],
+        [subjects.sem3.NM, ""],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Tue",
+      a: [
+        [subjects.sem3.NM, "Lab D"],
+        [subjects.sem3.Stats2, "315"],
+        [subjects.sem3.CA, "315"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem3.CA, ""],
+        [subjects.sem3.CG, ""],
+        ["*", ""],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Wed",
+      a: [
+        [subjects.sem3.DSA, "Lab B"],
+        // [`Conference - ${subjects.sem3.Stat.shortName}`, "Watrin Hall - 318"],
+        [subjects.sem3.Stats2, "Lab A"],
+        [subjects.sem3.CA, "315"],
+        [subjects.sem3.CG, "Lab A"],
+      ],
+      b: [
+        [subjects.sem3.DSA, "Lab B"],
+        // [`Conference - ${subjects.sem3.Stat.shortName}`, "Watrin Hall - 318"],
+        [subjects.sem3.Stats2, "Lab A"],
+        [subjects.sem3.NM, "Lab B"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Thu",
+      a: [
+        [subjects.sem3.NM, "315"],
+        [subjects.sem3.Stats2, "315"],
+        [subjects.sem3.DSA, "Combined"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem3.Stats2, ""],
+        [subjects.sem3.NM, ""],
+        [subjects.sem3.DSA, "Combined"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Fri",
+      a: [
+        [subjects.sem3.CA, "Lab C"],
+        [subjects.sem3.CG, "315"],
+        ["*", "*"],
+        ["*", "*"],
+      ],
+      b: [
+        [subjects.sem3.Stats2, ""],
+        [subjects.sem3.CA, ""],
+        [subjects.sem3.DSA, ""],
+        [subjects.sem3.CG, "Lab B"],
+      ],
+    },
+  ],
   sem2: [
     {
       day: "Sun",
@@ -953,85 +1179,6 @@ export const classRoutine = {
         [subjects.sem2.Maths2, ""],
         ["*", ""],
         ["*", ""],
-      ],
-    },
-  ],
-  sem3: [
-    {
-      day: "Mon",
-      a: [
-        [subjects.sem3.CG, "315"],
-        [subjects.sem3.NM, "315"],
-        [subjects.sem3.DSA, "315"],
-        ["*", ""],
-      ],
-      b: [
-        [subjects.sem3.CA, "Lab D"],
-        [subjects.sem3.CG, ""],
-        [subjects.sem3.NM, ""],
-        ["*", ""],
-      ],
-    },
-    {
-      day: "Tue",
-      a: [
-        [subjects.sem3.NM, "Lab D"],
-        [subjects.sem3.Stats2, "315"],
-        [subjects.sem3.CA, "315"],
-        ["*", ""],
-      ],
-      b: [
-        [subjects.sem3.CA, ""],
-        [subjects.sem3.CG, ""],
-        ["*", ""],
-        ["*", ""],
-      ],
-    },
-    {
-      day: "Wed",
-      a: [
-        [subjects.sem3.DSA, "Lab B"],
-        // [`Conference - ${subjects.sem3.Stat.shortName}`, "Watrin Hall - 318"],
-        [subjects.sem3.Stats2, "Lab A"],
-        [subjects.sem3.CA, "315"],
-        [subjects.sem3.CG, "Lab A"],
-      ],
-      b: [
-        [subjects.sem3.DSA, "Lab B"],
-        // [`Conference - ${subjects.sem3.Stat.shortName}`, "Watrin Hall - 318"],
-        [subjects.sem3.Stats2, "Lab A"],
-        [subjects.sem3.NM, "Lab B"],
-        ["*", ""],
-      ],
-    },
-    {
-      day: "Thu",
-      a: [
-        [subjects.sem3.NM, "315"],
-        [subjects.sem3.Stats2, "315"],
-        [subjects.sem3.DSA, "Combined"],
-        ["*", ""],
-      ],
-      b: [
-        [subjects.sem3.Stats2, ""],
-        [subjects.sem3.NM, ""],
-        [subjects.sem3.DSA, "Combined"],
-        ["*", ""],
-      ],
-    },
-    {
-      day: "Fri",
-      a: [
-        [subjects.sem3.CA, "Lab C"],
-        [subjects.sem3.CG, "315"],
-        ["*", "*"],
-        ["*", "*"],
-      ],
-      b: [
-        [subjects.sem3.Stats2, ""],
-        [subjects.sem3.CA, ""],
-        [subjects.sem3.DSA, ""],
-        [subjects.sem3.CG, "Lab B"],
       ],
     },
   ],
@@ -2442,6 +2589,58 @@ export const classRoutineSem2 = [
 ];
 
 export const names = {
+  sem6: {
+    1: ["Aakash Shrestha", "021BSCIT001", "A"],
+    2: ["Aayam Pokharel", "021BSCIT002", "A"],
+    3: ["Aayush Poudel", "021BSCIT003", "A"],
+    4: ["Aayush Shrestha", "021BSCIT004", "A"],
+    5: ["Abhishek Uprety", "021BSCIT005", "A"],
+    6: ["Ashraya Jung Sijapati", "021BSCIT006", "A"],
+    7: ["Binaya Paudel", "021BSCIT007", "A"],
+    8: ["Binaya Shrestha", "021BSCIT008", "A"],
+    9: ["Dhiraj Sah", "021BSCIT009", "A"],
+    10: ["Gaurav Bhatt", "021BSCIT010", "A"],
+    11: ["Gaurav Kafle", "021BSCIT011", "A"],
+    12: ["Joon Shakya", "021BSCIT012", "A"],
+    13: ["Nischal Shrestha", "021BSCIT013", "A"],
+    14: ["Nitika Pradhananga", "021BSCIT014", "A"],
+    15: ["Pralov Malla", "021BSCIT015", "A"],
+    16: ["Rasna Bhasima", "021BSCIT016", "A"],
+    17: ["Redikshya Phuyal", "021BSCIT017", "A"],
+    18: ["Rhizu Joshi", "021BSCIT018", "A"],
+    19: ["Riwaj Prasai", "021BSCIT019", "A"],
+    20: ["Ruby Shrestha", "021BSCIT020", "A"],
+    21: ["Rupesh Bashyal", "021BSCIT021", "A"],
+    22: ["Sahara Khatri", "021BSCIT022", "A"],
+    23: ["Sahil Lamsal", "021BSCIT023", "A"],
+    24: ["Saisab Karki", "021BSCIT024", "A"],
+    25: ["Sajina Basnet", "021BSCIT025", "B"],
+    26: ["Samarpan Bhandari", "021BSCIT026", "B"],
+    27: ["Sameer Shrestha", "021BSCIT027", "B"],
+    28: ["Sashwat Maharjan", "021BSCIT028", "B"],
+    29: ["Satish Maharjan", "021BSCIT029", "B"],
+    30: ["Saugat Dahal", "021BSCIT030", "B"],
+    31: ["Saurabh Baral", "021BSCIT031", "B"],
+    32: ["Saurav Bista", "021BSCIT032", "B"],
+    33: ["Selina Maharjan", "021BSCIT033", "B"],
+    34: ["Shamant Kharel", "021BSCIT034", "B"],
+    35: ["Shasin Regmi", "021BSCIT035", "B"],
+    36: ["Shreeya Nepal", "021BSCIT036", "B"],
+    37: ["Shristi Shakya", "021BSCIT037", "B"],
+    38: ["Shubham Belbase", "021BSCIT038", "B"],
+    39: ["Siddhanta Shrestha", "021BSCIT039", "B"],
+    40: ["Sijan Khatri", "021BSCIT040", "B"],
+    41: ["Spandan Shakya", "021BSCIT041", "B"],
+    42: ["Sudip Shrestha", "021BSCIT042", "B"],
+    43: ["Suhana Shrestha", "021BSCIT043", "B"],
+    44: ["Sujal Bajracharya", "021BSCIT044", "B"],
+    45: ["Susmita Majhi", "021BSCIT045", "B"],
+    46: ["Swoyesh Shrestha", "021BSCIT046", "B"],
+    47: ["Yogesh Rijal", "021BSCIT047", "B"],
+    48: ["Yubraj Khatiwada", "021BSCIT048", "B"],
+    49: ["Laviz Pandey", "021BSCIT049", "B"],
+    50: ["Nirajan Acharya", "021BSCIT050", "B"],
+  },
   sem5: {
     1: ["Aakash Shrestha", "021BSCIT001", "A"],
     2: ["Aayam Pokharel", "021BSCIT002", "A"],

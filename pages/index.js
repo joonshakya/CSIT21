@@ -1,8 +1,9 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FrontPageGenerator from "../components/FrontPageGenerator";
-import Head from "next/head";
-import { Box, Container, Grid, Toolbar } from "@mui/material";
+import { Box, Container, Toolbar } from "@mui/material";
+import Grid from "@mui/material/Grid2";
+
 import Materials from "../components/Materials";
 import Soon from "../components/Soon";
 import { useTheme } from "@mui/material/styles";
@@ -12,7 +13,7 @@ import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
 import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
-import { examTypes, currentJoonSem, sem4 } from "../utils/constants";
+import { examTypes, currentJoonSem } from "../utils/constants";
 import Router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Downlaods from "../components/Downloads";
@@ -85,24 +86,44 @@ export default function Index() {
           >
             <Grid container spacing={2}>
               <Grid
-                item
-                xs={12}
-                sm={10}
-                md={7}
                 sx={{
                   mx: "auto",
                 }}
+                size={{ xs: 12, sm: 10, md: 7 }}
               >
-                <Materials sem={sem || currentJoonSem} setSem={setSem} />
-            
-                {sem === "sem2" ? (
-                  <>
-                    {/* <ExamRoutine examType={examTypes.prac} sem="sem2" /> */}
-                    <ClassRoutine sem={sem} />
-                    <ExamRoutine
+                <Materials
+                  sem={sem || currentJoonSem}
+                  setSem={setSem}
+                />
+
+                {/* Components */}
+
+                {/* <ExamRoutine
+                      examType={examTypes.prac}
+                      sem={sem || currentJoonSem}
+                      title="Practical Exam Routine"
+                    /> */}
+                {/* <ClassRoutine sem={sem || currentJoonSem} /> */}
+                {/* <ExamRoutine
                       examType={examTypes.board}
-                      sem="sem2"
+                      sem="sem3"
                       subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
+                    /> */}
+                {/* <ExamRoutine examType={examTypes.prac} sem="sem3" /> */}
+                {/* <LeftSideCardMessage title="Happy Dashain" /> */}
+
+                {/* End Components */}
+
+                {sem === "sem6" ? (
+                  <>
+                    <ClassRoutine sem={sem} />{" "}
+                  </>
+                ) : null}
+                {sem === "" || sem === currentJoonSem ? (
+                  <>
+                    <ExamRoutine
+                      examType={examTypes.prac}
+                      sem={sem || currentJoonSem}
                     />
                   </>
                 ) : null}
@@ -116,36 +137,22 @@ export default function Index() {
                     <ClassRoutine sem={sem} />
                   </>
                 ) : null}
-                {sem === "" || sem === currentJoonSem ? (
+                {sem === "sem2" ? (
                   <>
                     <ExamRoutine
-                      examType={examTypes.prac}
-                      sem={sem || currentJoonSem}
-                    />
-                    {/* <ExamRoutine
-                      examType={examTypes.prac}
-                      sem={sem || currentJoonSem}
-                      title="Practical Exam Routine"
-                    /> */}
-                    {/* <ClassRoutine sem={sem || currentJoonSem} /> */}
-                    {/* <ExamRoutine
                       examType={examTypes.board}
-                      sem="sem3"
+                      sem="sem2"
                       subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
-                    /> */}
-                    {/* <ExamRoutine examType={examTypes.prac} sem="sem3" /> */}
-                    {/* <LeftSideCardMessage title="Happy Dashain" /> */}
+                    />
+                    <ClassRoutine sem={sem} />
                   </>
                 ) : null}
               </Grid>
               <Grid
-                item
-                xs={12}
-                sm={10}
-                md={5}
                 sx={{
                   mx: "auto",
                 }}
+                size={{ xs: 12, sm: 10, md: 5 }}
               >
                 <FrontPageGenerator sem={sem || currentJoonSem} />
                 <Downlaods />
