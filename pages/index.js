@@ -116,7 +116,7 @@ export default function Index() {
 
                 {sem === "" || sem === currentJoonSem ? (
                   <>
-                    <ClassRoutine sem={sem} />{" "}
+                    <ClassRoutine sem={sem || currentJoonSem} />{" "}
                   </>
                 ) : null}
                 {sem === "sem5" ? (
