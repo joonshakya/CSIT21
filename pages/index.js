@@ -114,12 +114,12 @@ export default function Index() {
 
                 {/* End Components */}
 
-                {sem === "sem6" ? (
+                {sem === "" || sem === currentJoonSem ? (
                   <>
                     <ClassRoutine sem={sem} />{" "}
                   </>
                 ) : null}
-                {sem === "" || sem === currentJoonSem ? (
+                {sem === "sem5" ? (
                   <>
                     <ExamRoutine
                       examType={examTypes.prac}

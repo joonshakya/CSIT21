@@ -478,32 +478,38 @@ export const subjects = {
     NCC: {
       name: "NET Centric Computing",
       shortName: "NCC",
-      microSyllabus: "https://drive.google.com/file/d/1hkT51S15N1jq7Y1T-Qm6U8AJX5m-HyLg/view?usp=drive_link",
+      microSyllabus:
+        "https://drive.google.com/file/d/1hkT51S15N1jq7Y1T-Qm6U8AJX5m-HyLg/view?usp=drive_link",
     },
     SE: {
       name: "Software Engineering",
       shortName: "SE",
-      microSyllabus: "https://drive.google.com/file/d/19rOlgTtKckOcqA-PMvsOz9kzbQhv2KEH/view?usp=drive_link",
+      microSyllabus:
+        "https://drive.google.com/file/d/19rOlgTtKckOcqA-PMvsOz9kzbQhv2KEH/view?usp=drive_link",
     },
     EGov: {
       name: "E-Governance",
       shortName: "E-Gov",
-      microSyllabus: "https://drive.google.com/file/d/19udV5_kjZvovp3yK8HEvUnSWqgVkS2WG/view?usp=drive_link",
+      microSyllabus:
+        "https://drive.google.com/file/d/19udV5_kjZvovp3yK8HEvUnSWqgVkS2WG/view?usp=drive_link",
     },
     ECom: {
       name: "E-Commerce",
       shortName: "E-Com",
-      microSyllabus: "https://drive.google.com/file/d/1Jiy5HylCSMqciWYpSebIdenlr7GGoWFB/view?usp=drive_link",
+      microSyllabus:
+        "https://drive.google.com/file/d/1Jiy5HylCSMqciWYpSebIdenlr7GGoWFB/view?usp=drive_link",
     },
     Compiler: {
       name: "Compiler Design and Construction",
       shortName: "Compiler",
-      microSyllabus: "https://drive.google.com/file/d/1QTtI65r_T5c7p67mw5hILZ0Ewk4lJnDX/view?usp=drive_link",
+      microSyllabus:
+        "https://drive.google.com/file/d/1QTtI65r_T5c7p67mw5hILZ0Ewk4lJnDX/view?usp=drive_link",
     },
     TW: {
       name: "Technical Writing",
       shortName: "TW",
-      microSyllabus: "https://drive.google.com/file/d/1dDRvBZMqLCxBFjCBt1v-itOPlvGCUGb3/view?usp=drive_link",
+      microSyllabus:
+        "https://drive.google.com/file/d/1dDRvBZMqLCxBFjCBt1v-itOPlvGCUGb3/view?usp=drive_link",
     },
   },
   sem5: {
@@ -2514,7 +2520,7 @@ export const examRoutine = {
   },
 };
 
-export const currentJoonSem = "sem5";
+export const currentJoonSem = "sem6";
 
 export const classRoutineSem2 = [
   {
