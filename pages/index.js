@@ -33,7 +33,6 @@ export default function Index() {
       if (typeof window === "undefined") return "";
       if (semParam) {
         const semParamNum = parseInt(semParam);
-
         if (
           semParamNum >= 1 ||
           semParamNum <= currentJoonSem.split("sem")[1]
@@ -116,7 +115,7 @@ export default function Index() {
 
                 {sem === "" || sem === currentJoonSem ? (
                   <>
-                    <ClassRoutine sem={sem || currentJoonSem} />{" "}
+                    <ClassRoutine sem={sem || currentJoonSem} />
                   </>
                 ) : null}
                 {sem === "sem5" ? (
