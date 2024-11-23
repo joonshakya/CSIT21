@@ -702,8 +702,8 @@ export const classRoutine = {
       day: "Tue",
       a: [
         [subjects.sem6.EGov, "315"],
-        [subjects.sem6.ECom, "315"],
         [subjects.sem6.SE, "315"],
+        [subjects.sem6.ECom, "315"],
         [subjects.sem6.Compiler, "Lab C"],
       ],
       b: [
