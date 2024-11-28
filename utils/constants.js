@@ -724,30 +724,18 @@ export const classRoutine = {
       b: [
         [subjects.sem6.ECom, "321"],
         [subjects.sem6.SE, "321"],
-        [subjects.sem6.Compiler, "Lab C"],
+        [subjects.sem6.EGov, "321"],
         ["*", ""],
       ],
-      // b: [
-      //   [subjects.sem6.ECom, "321"],
-      //   [subjects.sem6.SE, "321"],
-      //   [subjects.sem6.EGov, "321"],
-      //   ["*", ""],
-      // ],
     },
     {
       day: "Thu",
       a: [
         [subjects.sem6.EGov, "315"],
         [subjects.sem6.TW, "315"],
-        [subjects.sem6.Compiler, "Lab C"],
+        [subjects.sem6.ECom, "315"],
         ["*", ""],
       ],
-      // a: [
-      //   [subjects.sem6.EGov, "315"],
-      //   [subjects.sem6.TW, "315"],
-      //   [subjects.sem6.ECom, "315"],
-      //   ["*", ""],
-      // ],
       b: [
         [subjects.sem6.NCC, "321"],
         [subjects.sem6.SE, "321"],
