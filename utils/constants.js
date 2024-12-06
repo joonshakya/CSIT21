@@ -671,15 +671,15 @@ export const classRoutine = {
     {
       day: "Sun",
       a: [
-        [subjects.sem6.NCC, "315"],
+        [subjects.sem6.NCC, "Lab C"],
         [subjects.sem6.EGov, "315"],
         [subjects.sem6.SE, "315"],
         ["*", ""],
       ],
       b: [
         [subjects.sem6.ECom, "321"],
-        [subjects.sem6.NCC, "321"],
-        [subjects.sem6.Compiler, "Lab C"],
+        [subjects.sem6.NCC, "Lab C"],
+        [subjects.sem6.Compiler, "Lab B"],
         ["*", ""],
       ],
     },
@@ -687,7 +687,7 @@ export const classRoutine = {
       day: "Mon",
       a: [
         [subjects.sem6.NCC, "315"],
-        [subjects.sem6.SE, "315"],
+        [subjects.sem6.SE, "Lab F"],
         [subjects.sem6.Compiler, "Lab C"],
         ["*", ""],
       ],
@@ -703,11 +703,11 @@ export const classRoutine = {
       a: [
         [subjects.sem6.NCC, "315"],
         [subjects.sem6.SE, "315"],
-        [subjects.sem6.EGov, "315"],
+        [subjects.sem6.EGov, "Lab D"],
         [subjects.sem6.Compiler, "Lab C"],
       ],
       b: [
-        [subjects.sem6.ECom, "321"],
+        [subjects.sem6.ECom, "Lab C"],
         [subjects.sem6.NCC, "321"],
         [subjects.sem6.Compiler, "Lab C"],
         [subjects.sem6.EGov, "321"],
@@ -718,13 +718,13 @@ export const classRoutine = {
       a: [
         [subjects.sem6.ECom, "315"],
         [subjects.sem6.TW, "315"],
-        [subjects.sem6.Compiler, "Lab C"],
+        [subjects.sem6.Compiler, "Lab B"],
         ["*", ""],
       ],
       b: [
         [subjects.sem6.TW, "321"],
         [subjects.sem6.SE, "321"],
-        [subjects.sem6.EGov, "321"],
+        [subjects.sem6.EGov, "Lab C"],
         ["*", ""],
       ],
     },
@@ -733,12 +733,12 @@ export const classRoutine = {
       a: [
         [subjects.sem6.EGov, "315"],
         [subjects.sem6.TW, "315"],
-        [subjects.sem6.ECom, "315"],
+        [subjects.sem6.ECom, "Lab F"],
         ["*", ""],
       ],
       b: [
         [subjects.sem6.TW, "321"],
-        [subjects.sem6.SE, "321"],
+        [subjects.sem6.SE, "Lab F"],
         [subjects.sem6.Compiler, "Lab C"],
         ["*", ""],
       ],
