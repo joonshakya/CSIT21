@@ -13,6 +13,7 @@ import {
   tocAssignments,
   simulationAssignments,
   webTechAssignments,
+  nccAssignments,
 } from "../constants";
 import { useState } from "react";
 import { useBaseStore } from "../../src/store";
@@ -61,6 +62,7 @@ export default function useFrontPageGenerator() {
       TOC: tocAssignments,
       Simulation: simulationAssignments,
       "Web Tech": webTechAssignments,
+      NCC: nccAssignments,
     };
 
     if (

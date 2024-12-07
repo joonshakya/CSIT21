@@ -1,5 +1,9 @@
 import { useDevCppDownloadDialogStore } from "../src/store";
 
+export const nccAssignments = [
+  { number: 1, name: "C# Basics - Part 1", selected: true },
+];
+
 export const webTechAssignments = [
   {
     number: 1,
