@@ -124,7 +124,6 @@ export default function Index() {
                       examType={examTypes.prac}
                       sem={sem || currentJoonSem}
                     />
-                    <ClassRoutine sem={sem} />
                   </>
                 ) : null}
                 {sem === "sem4" ? (
