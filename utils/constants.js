@@ -3,7 +3,12 @@ import { useDevCppDownloadDialogStore } from "../src/store";
 export const nccAssignments = [
   { number: 1, name: "C# Basics - Part 1" },
   { number: 2, name: "C# Basics - Part 2" },
-  { number: 3, name: "ASP.NET core MVC Basic", selected: true },
+  { number: 3, name: "ASP.NET core MVC Basic" },
+  {
+    number: 4,
+    name: "ASP.NET core MVC Basic - Part 2",
+    selected: true,
+  },
 ];
 
 export const webTechAssignments = [
@@ -677,7 +682,7 @@ export const classRoutine = {
     {
       day: "Sun",
       a: [
-        [subjects.sem6.NCC, "Lab C"],
+        [subjects.sem6.NCC, "Lab B"],
         [subjects.sem6.EGov, "315"],
         [subjects.sem6.SE, "315"],
         ["*", ""],
@@ -724,7 +729,7 @@ export const classRoutine = {
       a: [
         [subjects.sem6.ECom, "315"],
         [subjects.sem6.TW, "315"],
-        [subjects.sem6.Compiler, "Lab B"],
+        [subjects.sem6.Compiler, "Lab D"],
         ["*", ""],
       ],
       b: [
