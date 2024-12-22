@@ -3,10 +3,10 @@ import { useDevCppDownloadDialogStore } from "../src/store";
 export const nccAssignments = [
   { number: 1, name: "C# Basics - Part 1" },
   { number: 2, name: "C# Basics - Part 2" },
-  { number: 3, name: "ASP.NET core MVC Basic" },
+  { number: 3, name: "ASP.NET Core MVC Basics" },
   {
     number: 4,
-    name: "ASP.NET core MVC Basic - Part 2",
+    name: "ASP.NET Core MVC Basics - Part 2",
     selected: true,
   },
 ];
