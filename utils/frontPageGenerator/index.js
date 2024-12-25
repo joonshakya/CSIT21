@@ -14,6 +14,7 @@ import {
   simulationAssignments,
   webTechAssignments,
   nccAssignments,
+  compilerAssignments,
 } from "../constants";
 import { useState } from "react";
 import { useBaseStore } from "../../src/store";
@@ -63,6 +64,7 @@ export default function useFrontPageGenerator() {
       Simulation: simulationAssignments,
       "Web Tech": webTechAssignments,
       NCC: nccAssignments,
+      Compiler: compilerAssignments,
     };
 
     if (

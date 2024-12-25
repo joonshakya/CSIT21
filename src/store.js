@@ -52,6 +52,7 @@ export const useOpCodeStore = create((set) => ({
 }));
 
 export const useWordStore = create((set) => ({
+  Compiler: null,
   NCC: null,
   Simulation: null,
   ["Web Tech"]: null,

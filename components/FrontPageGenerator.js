@@ -30,6 +30,7 @@ import {
   webTechAssignments,
   simulationAssignments,
   nccAssignments,
+  compilerAssignments,
 } from "../utils/constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
@@ -60,6 +61,7 @@ export default function FrontPageGenerator({ sem }) {
       "Web Tech",
       "Simulation",
       "NCC",
+      "Compiler",
     ];
   }, []);
 
@@ -84,13 +86,17 @@ export default function FrontPageGenerator({ sem }) {
     ];
   }, []);
 
-  const initialSubject = "NCC";
+  const initialSubject = "Compiler";
 
   const [tab, setTab] = useState("assignment");
   const [subject, setSubject] = useState(initialSubject);
 
   const assignmentLists = useMemo(() => {
     return [
+      {
+        subject: "Compiler",
+        assignments: compilerAssignments,
+      },
       {
         subject: "NCC",
         assignments: nccAssignments,
@@ -519,6 +525,10 @@ export default function FrontPageGenerator({ sem }) {
                 >
                   {(tab === "assignment"
                     ? [
+                        {
+                          shortHand: "Compiler",
+                          longHand: "Compiler",
+                        },
                         {
                           shortHand: "NCC",
                           longHand: "NCC",

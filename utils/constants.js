@@ -1,5 +1,9 @@
 import { useDevCppDownloadDialogStore } from "../src/store";
 
+export const compilerAssignments = [
+  { number: 1, name: "Tokenizing Source Code", selected: true },
+];
+
 export const nccAssignments = [
   { number: 1, name: "C# Basics - Part 1" },
   { number: 2, name: "C# Basics - Part 2" },
