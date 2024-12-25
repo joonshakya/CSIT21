@@ -1,7 +1,7 @@
 import { useDevCppDownloadDialogStore } from "../src/store";
 
 export const compilerAssignments = [
-  { number: 1, name: "Tokenizing Source Code", selected: true },
+  { number: 1, name: "Tokenizing the Source Code", selected: true },
 ];
 
 export const nccAssignments = [
