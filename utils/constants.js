@@ -10,7 +10,11 @@ export const nccAssignments = [
   { number: 3, name: "ASP.NET Core MVC Basics" },
   {
     number: 4,
-    name: "ASP.NET Core MVC Basics - Part 2",
+    name: "ASP.NET Core MVC CRUD Operations",
+  },
+  {
+    number: 5,
+    name: "ASP.NET Core MVC Dependency Injection",
     selected: true,
   },
 ];
