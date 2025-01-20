@@ -24,6 +24,10 @@ export const nccAssignments = [
   {
     number: 5,
     name: "ASP.NET Core MVC Dependency Injection",
+  },
+  {
+    number: 6,
+    name: "ASP.NET Core Repository: ADO.NET & EF Core",
     selected: true,
   },
 ];
