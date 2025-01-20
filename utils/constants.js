@@ -5,6 +5,10 @@ export const compilerAssignments = [
   {
     number: 2,
     name: "Removing whitespaces and comments",
+  },
+  {
+    number: 3,
+    name: "Detection of Lexical Errors",
     selected: true,
   },
 ];
@@ -2537,6 +2541,82 @@ export const examRoutine = {
           <>
             18<sup>th</sup> November
             <br />3<sup>rd</sup> Mangsir
+          </>
+        ),
+      },
+    ],
+  },
+  sem6: {
+    [examTypes.mid]: [
+      {
+        day: "Wed",
+        subject: subjects.sem6.SE,
+        date: "2025/01/29",
+        friendlyDate: (
+          <>
+            29<sup>th</sup> January
+            <br />
+            16<sup>th</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem6.Compiler,
+        date: "2025/01/30",
+        friendlyDate: (
+          <>
+            30<sup>th</sup> January
+            <br />
+            17<sup>th</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem6.EGov,
+        date: "2025/01/31",
+        friendlyDate: (
+          <>
+            31<sup>st</sup> January
+            <br />
+            18<sup>th</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem6.NCC,
+        date: "2025/02/02",
+        friendlyDate: (
+          <>
+            2<sup>nd</sup> February
+            <br />
+            20<sup>th</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem6.TW,
+        date: "2025/02/03",
+        friendlyDate: (
+          <>
+            3<sup>rd</sup> February
+            <br />
+            21<sup>st</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem6.ECom,
+        date: "2025/02/04",
+        friendlyDate: (
+          <>
+            4<sup>th</sup> February
+            <br />
+            22<sup>nd</sup> Magh
           </>
         ),
       },
