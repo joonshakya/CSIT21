@@ -115,41 +115,41 @@ export default function Index() {
 
                 {sem === "" || sem === currentJoonSem ? (
                   <>
-                    <ClassRoutine sem={sem || currentJoonSem} />
                     <ExamRoutine
                       examType={examTypes.mid}
                       sem={sem || currentJoonSem}
                       subtitle={<>Exam time: 6:35 AM - 8:35 AM</>}
                     />
+                    <ClassRoutine sem={sem || currentJoonSem} />
                   </>
                 ) : null}
                 {sem === "sem5" ? (
                   <>
-                    <ClassRoutine sem={sem} />
                     {/* <ExamRoutine
                       examType={examTypes.prac}
                       sem="sem5"
                     /> */}
+                    <ClassRoutine sem={sem} />
                   </>
                 ) : null}
                 {sem === "sem4" ? (
                   <>
-                    <ClassRoutine sem={sem} />
                     {/* <ExamRoutine
                       examType={examTypes.board}
                       sem="sem4"
                       subtitle={<>Exam time: 12:00 AM - 03:00 AM</>}
                     /> */}
+                    <ClassRoutine sem={sem} />
                   </>
                 ) : null}
                 {sem === "sem2" ? (
                   <>
-                    <ClassRoutine sem={sem} />
                     {/* <ExamRoutine
                       examType={examTypes.board}
                       sem="sem2"
                       subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
                     /> */}
+                    <ClassRoutine sem={sem} />
                   </>
                 ) : null}
               </Grid>
