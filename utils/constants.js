@@ -2553,18 +2553,6 @@ export const examRoutine = {
   sem6: {
     [examTypes.mid]: [
       {
-        day: "Wed",
-        subject: subjects.sem6.SE,
-        date: "2025/01/29",
-        friendlyDate: (
-          <>
-            29<sup>th</sup> January
-            <br />
-            16<sup>th</sup> Magh
-          </>
-        ),
-      },
-      {
         day: "Thu",
         subject: subjects.sem6.Compiler,
         date: "2025/01/30",
@@ -2621,6 +2609,18 @@ export const examRoutine = {
             4<sup>th</sup> February
             <br />
             22<sup>nd</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem6.SE,
+        date: "2025/02/05",
+        friendlyDate: (
+          <>
+            5<sup>th</sup> February
+            <br />
+            23<sup>rd</sup> Magh
           </>
         ),
       },
