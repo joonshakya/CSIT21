@@ -6,7 +6,7 @@ import { Fragment, useEffect, useState } from "react";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import { classRoutine } from "../utils/constants";
+import { classRoutine, names } from "../utils/constants";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -86,11 +86,15 @@ export default function ClassRoutine({ sem }) {
   const [tomorrowDayName, setTomorrowDayName] = useState("");
 
   const [section, setSection] = useState(
-    roll !== "0" && roll < 25 ? "A" : "B"
+    (roll !== "0" && names[sem]?.[roll]?.[2]) || roll < 25 ? "A" : "B"
   );
 
   useEffect(() => {
-    setSection(roll !== "0" ? (roll < 25 ? "A" : "B") : false);
+    setSection(
+      roll !== "0"
+        ? names[sem]?.[roll]?.[2] || (roll < 25 ? "A" : "B")
+        : false
+    );
   }, [roll]);
 
   useEffect(() => {

@@ -127,7 +127,7 @@ export default function Index() {
                   <>
                     {/* <ExamRoutine
                       examType={examTypes.prac}
-                      sem="sem5"
+                      sem={sem}
                     /> */}
                     <ClassRoutine sem={sem} />
                   </>
@@ -136,7 +136,17 @@ export default function Index() {
                   <>
                     {/* <ExamRoutine
                       examType={examTypes.board}
-                      sem="sem4"
+                      sem={sem}
+                      subtitle={<>Exam time: 12:00 AM - 03:00 AM</>}
+                    /> */}
+                    <ClassRoutine sem={sem} />
+                  </>
+                ) : null}
+                {sem === "sem3" ? (
+                  <>
+                    {/* <ExamRoutine
+                      examType={examTypes.board}
+                      sem={sem}
                       subtitle={<>Exam time: 12:00 AM - 03:00 AM</>}
                     /> */}
                     <ClassRoutine sem={sem} />
@@ -146,7 +156,7 @@ export default function Index() {
                   <>
                     {/* <ExamRoutine
                       examType={examTypes.board}
-                      sem="sem2"
+                      sem={sem}
                       subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
                     /> */}
                     <ClassRoutine sem={sem} />
