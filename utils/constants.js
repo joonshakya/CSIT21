@@ -2568,6 +2568,7 @@ export const examRoutine = {
         day: "Thu",
         subject: subjects.sem6.Compiler,
         date: "2025/01/30",
+        time: "6:35 AM",
         friendlyDate: (
           <>
             30<sup>th</sup> January
@@ -2580,6 +2581,7 @@ export const examRoutine = {
         day: "Fri",
         subject: subjects.sem6.EGov,
         date: "2025/01/31",
+        time: "6:35 AM",
         friendlyDate: (
           <>
             31<sup>st</sup> January
@@ -2592,6 +2594,7 @@ export const examRoutine = {
         day: "Sun",
         subject: subjects.sem6.NCC,
         date: "2025/02/02",
+        time: "6:15 AM",
         friendlyDate: (
           <>
             2<sup>nd</sup> February
@@ -2604,6 +2607,7 @@ export const examRoutine = {
         day: "Mon",
         subject: subjects.sem6.TW,
         date: "2025/02/03",
+        time: "6:15 AM",
         friendlyDate: (
           <>
             3<sup>rd</sup> February
@@ -2616,6 +2620,7 @@ export const examRoutine = {
         day: "Tue",
         subject: subjects.sem6.ECom,
         date: "2025/02/04",
+        time: "6:15 AM",
         friendlyDate: (
           <>
             4<sup>th</sup> February
@@ -2628,6 +2633,7 @@ export const examRoutine = {
         day: "Wed",
         subject: subjects.sem6.SE,
         date: "2025/02/05",
+        time: "6:15 AM",
         friendlyDate: (
           <>
             5<sup>th</sup> February

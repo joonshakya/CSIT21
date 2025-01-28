@@ -118,7 +118,9 @@ export default function Index() {
                     <ExamRoutine
                       examType={examTypes.mid}
                       sem={sem || currentJoonSem}
-                      subtitle={<>Exam time: 6:35 AM - 8:35 AM</>}
+                      subtitle={
+                        <>Room: Section A: 105; Section B: 106</>
+                      }
                     />
                     <ClassRoutine sem={sem || currentJoonSem} />
                   </>
