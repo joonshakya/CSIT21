@@ -9,6 +9,10 @@ export const compilerAssignments = [
   {
     number: 3,
     name: "Detection of Lexical Errors",
+  },
+  {
+    number: 4,
+    name: "Implementation of DFA",
     selected: true,
   },
 ];
