@@ -13,6 +13,10 @@ export const compilerAssignments = [
   {
     number: 4,
     name: "Implementation of DFA",
+  },
+  {
+    number: 5,
+    name: "Find FIRST and FOLLOW of a given grammar",
     selected: true,
   },
 ];
