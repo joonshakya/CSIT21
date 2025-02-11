@@ -17,6 +17,10 @@ export const compilerAssignments = [
   {
     number: 5,
     name: "Find FIRST and FOLLOW of a given grammar",
+  },
+  {
+    number: 6,
+    name: "Construction of LL(1) Parser",
     selected: true,
   },
 ];
@@ -741,16 +745,16 @@ export const classRoutine = {
     {
       day: "Tue",
       a: [
-        [subjects.sem6.NCC, "Combined"],
-        [subjects.sem6.SE, "Combined"],
+        [subjects.sem6.NCC, "315"],
+        [subjects.sem6.SE, "315"],
+        [subjects.sem6.EGov, "Lab D"],
         [subjects.sem6.Compiler, "Lab C"],
-        ["*", ""],
       ],
       b: [
-        [subjects.sem6.NCC, "Combined"],
-        [subjects.sem6.SE, "Combined"],
+        [subjects.sem6.ECom, "Lab C"],
+        [subjects.sem6.NCC, "321"],
         [subjects.sem6.Compiler, "Lab C"],
-        ["*", ""],
+        [subjects.sem6.EGov, "321"],
       ],
     },
     {
