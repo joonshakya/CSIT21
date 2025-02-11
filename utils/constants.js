@@ -16,7 +16,7 @@ export const compilerAssignments = [
   },
   {
     number: 5,
-    name: "Find FIRST and FOLLOW of a given grammar",
+    name: "Find FIRST of the given grammar",
   },
   {
     number: 6,
