@@ -21,6 +21,10 @@ export const compilerAssignments = [
   {
     number: 6,
     name: "Construction of LL(1) Parser",
+  },
+  {
+    number: 7,
+    name: "Design LALR Bottom Up Parser",
     selected: true,
   },
 ];
