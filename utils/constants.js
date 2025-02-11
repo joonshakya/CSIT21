@@ -764,14 +764,15 @@ export const classRoutine = {
     {
       day: "Wed",
       a: [
-        [subjects.sem6.ECom, "315"],
-        [subjects.sem6.TW, "315"],
+        // [subjects.sem6.ECom, "315"],
+        [subjects.sem6.NCC, "315"],
+        [subjects.sem6.TW, "Bimonthly Conf. and 315"],
         [subjects.sem6.Compiler, "Lab D"],
         ["*", ""],
       ],
       b: [
         [subjects.sem6.TW, "321"],
-        [subjects.sem6.SE, "321"],
+        [subjects.sem6.SE, "Bimonthly Conf. and 321"],
         [subjects.sem6.EGov, "Lab C"],
         ["*", ""],
       ],
