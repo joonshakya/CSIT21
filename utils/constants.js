@@ -43,6 +43,14 @@ export const nccAssignments = [
   },
   {
     number: 6,
+    name: "ASP.NET Core Repository: ADO.NET",
+  },
+  {
+    number: 7,
+    name: "ASP.NET Core Repository: EntityFramework Core",
+  },
+  {
+    number: 8,
     name: "ASP.NET Core Repository: ADO.NET & EF Core",
     selected: true,
   },

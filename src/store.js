@@ -61,6 +61,8 @@ export const useWordStore = create((set) => ({
   FIT: null,
   C: null,
   Index: null,
+  ["NCC Index"]: null,
+  ["Compiler Index"]: null,
   ["Web Tech Index"]: null,
   ["Simulation Index"]: null,
   ["DAA Index"]: null,

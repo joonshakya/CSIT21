@@ -67,6 +67,8 @@ export default function FrontPageGenerator({ sem }) {
 
   const assignmentsWithoutTopics = useMemo(() => {
     return [
+      "Compiler Index",
+      "NCC Index",
       "Web Tech Index",
       "Simulation Index",
       "DAA Index",
@@ -127,6 +129,24 @@ export default function FrontPageGenerator({ sem }) {
       },
       {
         subject: "TOC Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "Compiler Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "NCC Index",
         assignments: [
           {
             number: 0,
@@ -300,7 +320,7 @@ export default function FrontPageGenerator({ sem }) {
     if (tab === "assignment") {
       setSubject(initialSubject);
     } else if (tab === "index") {
-      setSubject("Web Tech Index");
+      setSubject("Compiler Index");
     }
   }, [tab]);
 
@@ -534,7 +554,16 @@ export default function FrontPageGenerator({ sem }) {
                           longHand: "NCC",
                         },
                       ]
-                    : []
+                    : [
+                        {
+                          shortHand: "Compiler Index",
+                          longHand: "Compiler",
+                        },
+                        {
+                          shortHand: "NCC Index",
+                          longHand: "NCC",
+                        },
+                      ]
                   ).map((subject, index) => (
                     <FormControlLabel
                       key={index}

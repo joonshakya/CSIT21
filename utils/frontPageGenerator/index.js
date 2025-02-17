@@ -124,6 +124,8 @@ export async function prefetchDocument({
       names[sem][roll][2] == "A" ? "DL Section A" : "DL Section B";
   } else if (
     ![
+      "NCC Index",
+      "Compiler Index",
       "Web Tech Index",
       "Simulation Index",
       "DAA Index",
