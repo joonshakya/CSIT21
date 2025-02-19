@@ -753,7 +753,7 @@ export const classRoutine = {
         [subjects.sem6.EGov, "321"],
         ["*", ""],
       ],
-    },  
+    },
     {
       day: "Tue",
       a: [
@@ -2663,6 +2663,80 @@ export const examRoutine = {
             5<sup>th</sup> February
             <br />
             23<sup>rd</sup> Magh
+          </>
+        ),
+      },
+    ],
+    [examTypes.pre]: [
+      {
+        day: "Thu",
+        subject: subjects.sem6.Compiler,
+        date: "2025/02/27",
+        friendlyDate: (
+          <>
+            27<sup>th</sup> February
+            <br />
+            15<sup>th</sup> Falgun
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem6.NCC,
+        date: "2025/03/02",
+        friendlyDate: (
+          <>
+            2<sup>nd</sup> March
+            <br />
+            18<sup>th</sup> Falgun
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem6.EGov,
+        date: "2025/03/03",
+        friendlyDate: (
+          <>
+            3<sup>rd</sup> March
+            <br />
+            19<sup>th</sup> Falgun
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem6.SE,
+        date: "2025/03/04",
+        friendlyDate: (
+          <>
+            4<sup>th</sup> March
+            <br />
+            20<sup>th</sup> Falgun
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem6.TW,
+        date: "2025/03/05",
+        friendlyDate: (
+          <>
+            5<sup>th</sup> March
+            <br />
+            21<sup>st</sup> Falgun
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem6.ECom,
+        date: "2025/03/06",
+        friendlyDate: (
+          <>
+            6<sup>th</sup> March
+            <br />
+            22<sup>nd</sup> Falgun
           </>
         ),
       },
