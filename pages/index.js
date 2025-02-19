@@ -110,17 +110,13 @@ export default function Index() {
                     /> */}
                 {/* <ExamRoutine examType={examTypes.prac} sem="sem3" /> */}
                 {/* <LeftSideCardMessage title="Happy Dashain" /> */}
-
                 {/* End Components */}
-
                 {sem === "" || sem === currentJoonSem ? (
                   <>
                     <ExamRoutine
-                      examType={examTypes.mid}
+                      examType={examTypes.board}
                       sem={sem || currentJoonSem}
-                      subtitle={
-                        <>Room: Section A: 105; Section B: 106</>
-                      }
+                      subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
                     />
                     <ClassRoutine sem={sem || currentJoonSem} />
                   </>

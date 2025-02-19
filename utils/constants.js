@@ -2667,6 +2667,81 @@ export const examRoutine = {
         ),
       },
     ],
+    [examTypes.board]: [
+      {
+        day: "Fri",
+        subject: subjects.sem6.SE,
+        date: "2025/03/21",
+        friendlyDate: (
+          <>
+            21<sup>st</sup> March
+            <br />8<sup>th</sup> Chaitra
+          </>
+        ),
+        source: "https://iost.tu.edu.np/notices/6370",
+        sourceName: "TU Notice",
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem6.Compiler,
+        date: "2025/03/25",
+        friendlyDate: (
+          <>
+            25<sup>th</sup> March
+            <br />
+            12<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem6.EGov,
+        date: "2025/03/28",
+        friendlyDate: (
+          <>
+            28<sup>th</sup> March
+            <br />
+            15<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem6.NCC,
+        date: "2025/03/31",
+        friendlyDate: (
+          <>
+            31<sup>st</sup> March
+            <br />
+            18<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem6.TW,
+        date: "2025/04/03",
+        friendlyDate: (
+          <>
+            3<sup>rd</sup> April
+            <br />
+            21<sup>st</sup> Chaitra
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem6.ECom,
+        date: "2025/04/06",
+        friendlyDate: (
+          <>
+            6<sup>th</sup> April
+            <br />
+            24<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+    ],
   },
 };
 
