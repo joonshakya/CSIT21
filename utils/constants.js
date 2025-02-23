@@ -52,6 +52,10 @@ export const nccAssignments = [
   {
     number: 8,
     name: "ASP.NET Core Repository: ADO.NET & EF Core",
+  },
+  {
+    number: 9,
+    name: "ASP.NET: Authorization: Roles, Claims and Policies",
     selected: true,
   },
 ];
