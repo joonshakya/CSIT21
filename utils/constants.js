@@ -188,6 +188,18 @@ export const materials = {
         bgColor: "#548982",
         bgImage: "linear-gradient(90deg, #585c5b 0%, #44b8ab 100%)",
       },
+      {
+        name: (
+          <>
+            SXC
+            <br />
+            Old Qs
+          </>
+        ),
+        link: "https://drive.google.com/drive/u/1/folders/10t7GrCv1_kWMUd6vizBqTOH55zsNXCu0",
+        bgColor: "#FBAB7E",
+        bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+      },
     ],
   },
   sem5: {
