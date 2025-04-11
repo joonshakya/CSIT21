@@ -192,7 +192,7 @@ export default function Index() {
                           <Countdown
                             text="6th Sem Practical Exam"
                             hideTomorrow={true}
-                            yyyymmddDate={"2025-05-14"}
+                            yyyymmddDate={"2025/05/14"}
                           />
                         </CardContent>
                       </Box>
