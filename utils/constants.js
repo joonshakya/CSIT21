@@ -161,6 +161,35 @@ export const simulationAssignments = [
 ];
 
 export const materials = {
+  sem7: {
+    books: [],
+    materials: [
+      {
+        name: (
+          <>
+            Ankit
+            <br />
+            Pangeni
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1-owheFVO-RurZxc-8pbu4b4n-nF_tJ5Z",
+        bgColor: "#548982",
+        bgImage: "linear-gradient(90deg, #585c5b 0%, #44b8ab 100%)",
+      },
+      // {
+      //   name: (
+      //     <>
+      //       SXC
+      //       <br />
+      //       Old Qs
+      //     </>
+      //   ),
+      //   link: "https://drive.google.com/drive/u/1/folders/10t7GrCv1_kWMUd6vizBqTOH55zsNXCu0",
+      //   bgColor: "#FBAB7E",
+      //   bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+      // },
+    ],
+  },
   sem6: {
     books: [],
     materials: [
@@ -546,6 +575,50 @@ export const downloads = [
 ];
 
 export const subjects = {
+  sem7: {
+    Java: {
+      name: "Advanced Java Programming",
+      shortName: "Java",
+      microSyllabus:
+        "https://drive.google.com/file/d/1ss_Py7COLT53QAv1E0YyTMoHmMFP4LoE/view?usp=drive_link",
+    },
+    DW: {
+      name: "Data Warehousing and Data Mining",
+      shortName: "DW",
+      microSyllabus:
+        "https://drive.google.com/file/d/12Qp9rr6tmC4LJJhXybmkslKUz9LFMwEI/view?usp=drive_link",
+    },
+    PoM: {
+      name: "Principles of Management",
+      shortName: "PoM",
+      microSyllabus:
+        "https://drive.google.com/file/d/1WeZ3sDeh36OhKf-v-Iv8AKrxb67FG-Uo/view?usp=drive_link",
+    },
+    PW: {
+      name: "Project Work",
+      shortName: "PW",
+      microSyllabus:
+        "https://drive.google.com/file/d/16Pjb1czLdmelzsereZjCM57FFZOli7q5/view?usp=drive_link",
+    },
+    IR: {
+      name: "Information Retrieval",
+      shortName: "IR",
+      microSyllabus:
+        "https://drive.google.com/file/d/1P4DjuhJQNAgmkiuKHUDVZsA9jYCJp7ue/view?usp=drive_link",
+    },
+    DBA: {
+      name: "Database Administration",
+      shortName: "DBA",
+      microSyllabus:
+        "https://drive.google.com/file/d/1Re2xKjNz-2lCvYujYj77WdBVncRdHsPR/view?usp=drive_link",
+    },
+    SPM: {
+      name: "Software Project Management",
+      shortName: "SPM",
+      microSyllabus:
+        "https://drive.google.com/file/d/1IFpy5k99oK7HLbyHsw95nIBow5MheaOR/view?usp=drive_link",
+    },
+  },
   sem6: {
     NCC: {
       name: "NET Centric Computing",
@@ -739,6 +812,98 @@ export const subjects = {
 };
 
 export const classRoutine = {
+  sem7: [
+    {
+      day: "Sun",
+      a: [
+        [subjects.sem6.NCC, "Lab B"],
+        [subjects.sem6.EGov, "315"],
+        [subjects.sem6.SE, "315"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem6.ECom, "321"],
+        [subjects.sem6.NCC, "Lab C"],
+        [subjects.sem6.Compiler, "Lab B"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Mon",
+      a: [
+        [subjects.sem6.NCC, "315"],
+        [subjects.sem6.SE, "Lab F"],
+        [subjects.sem6.Compiler, "Lab C"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem6.ECom, "321"],
+        [subjects.sem6.NCC, "321"],
+        [subjects.sem6.EGov, "321"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Tue",
+      a: [
+        [subjects.sem6.NCC, "315"],
+        [subjects.sem6.SE, "315"],
+        [subjects.sem6.EGov, "Lab D"],
+        [subjects.sem6.Compiler, "Lab C"],
+      ],
+      b: [
+        [subjects.sem6.ECom, "Lab C"],
+        [subjects.sem6.NCC, "321"],
+        [subjects.sem6.Compiler, "Lab C"],
+        [subjects.sem6.EGov, "321"],
+      ],
+    },
+    {
+      day: "Wed",
+      a: [
+        [subjects.sem6.ECom, "315"],
+        [subjects.sem6.TW, "315"],
+        [subjects.sem6.Compiler, "Lab D"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem6.TW, "321"],
+        [subjects.sem6.SE, "321"],
+        [subjects.sem6.EGov, "Lab C"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Thu",
+      a: [
+        [subjects.sem6.EGov, "315"],
+        [subjects.sem6.TW, "315"],
+        [subjects.sem6.ECom, "Lab F"],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem6.TW, "321"],
+        [subjects.sem6.SE, "Lab F"],
+        [subjects.sem6.Compiler, "Lab C"],
+        ["*", ""],
+      ],
+    },
+    {
+      day: "Fri",
+      a: [
+        [subjects.sem6.ECom, "315"],
+        [subjects.sem6.TW, "315"],
+        ["*", ""],
+        ["*", ""],
+      ],
+      b: [
+        [subjects.sem6.TW, "321"],
+        [subjects.sem6.SE, "321"],
+        ["*", ""],
+        ["*", ""],
+      ],
+    },
+  ],
   sem6: [
     {
       day: "Sun",
@@ -1622,277 +1787,158 @@ export const questionPapers = {
 };
 
 export const examRoutine = {
-  sem1: {},
-  sem2: {
-    [examTypes.pre]: [
-      {
-        day: "Mon",
-        subject: subjects.sem2.DS,
-        date: "2023/09/25",
-        friendlyDate: (
-          <>
-            25<sup>th</sup> September
-          </>
-        ),
-      },
-      {
-        day: "Tue",
-        subject: subjects.sem2.OOP,
-        date: "2023/09/26",
-        friendlyDate: (
-          <>
-            26<sup>th</sup> September
-          </>
-        ),
-      },
-      {
-        day: "Wed",
-        subject: subjects.sem2.MP,
-        date: "2023/09/27",
-        friendlyDate: (
-          <>
-            27<sup>th</sup> September
-          </>
-        ),
-      },
-      {
-        day: "Thu",
-        subject: subjects.sem2.Maths2,
-        date: "2023/09/28",
-        friendlyDate: (
-          <>
-            28<sup>th</sup> September
-          </>
-        ),
-      },
-      {
-        day: "Fri",
-        subject: subjects.sem2.Stats1,
-        date: "2023/09/29",
-        friendlyDate: (
-          <>
-            29<sup>th</sup> September
-          </>
-        ),
-      },
-    ],
-    [examTypes.prac]: [
-      {
-        day: "Wed",
-        subject: subjects.sem2.DS,
-        date: "2023/10/11",
-        time: "7:00 AM",
-        friendlyDate: (
-          <>
-            11<sup>th</sup> October
-          </>
-        ),
-      },
-      {
-        day: "Fri",
-        subject: subjects.sem2.Stats1,
-        date: "2023/10/13",
-        time: "7:00 AM",
-        friendlyDate: (
-          <>
-            13<sup>th</sup> October
-          </>
-        ),
-      },
-      {
-        day: "Mon",
-        subject: subjects.sem2.OOP,
-        date: "2023/10/16",
-        time: "7:00 AM",
-        friendlyDate: (
-          <>
-            16<sup>th</sup> October
-          </>
-        ),
-      },
-      {
-        day: "Tue",
-        subject: subjects.sem2.MP,
-        date: "2023/10/17",
-        time: "11:30 AM",
-        friendlyDate: (
-          <>
-            17<sup>th</sup> October
-          </>
-        ),
-      },
-    ],
-    [examTypes.board]: [
-      {
-        day: "Tue",
-        subject: subjects.sem2.DS,
-        date: "2023/11/28",
-        friendlyDate: (
-          <>
-            28<sup>th</sup> November
-            <br />
-            12<sup>th</sup> Mangsir
-          </>
-        ),
-        source: "https://iost.tu.edu.np/notices/1410",
-        sourceName: "TU Notice",
-      },
-      {
-        day: "Fri",
-        date: "2023/12/01",
-        subject: subjects.sem2.OOP,
-        friendlyDate: (
-          <>
-            1<sup>st</sup> December
-            <br />
-            15<sup>th</sup> Mangsir
-          </>
-        ),
-      },
-      {
-        day: "Mon",
-        date: "2023/12/04",
-        subject: subjects.sem2.MP,
-        friendlyDate: (
-          <>
-            4<sup>th</sup> December
-            <br />
-            18<sup>th</sup> Mangsir
-          </>
-        ),
-      },
-      {
-        day: "Thu",
-        date: "2023/12/07",
-        subject: subjects.sem2.Maths2,
-        friendlyDate: (
-          <>
-            7<sup>th</sup> December
-            <br />
-            21<sup>st</sup> Mangsir
-          </>
-        ),
-      },
-      {
-        day: "Sun",
-        date: "2023/12/10",
-        subject: subjects.sem2.Stats1,
-        friendlyDate: (
-          <>
-            10<sup>th</sup> December
-            <br />
-            24<sup>th</sup> Mangsir
-          </>
-        ),
-      },
-    ],
-  },
-  sem3: {
+  sem7: {},
+  sem6: {
     [examTypes.mid]: [
       {
-        day: "Tue",
-        subject: subjects.sem3.NM,
-        date: "2023/07/18",
-        friendlyDate: (
-          <>
-            18<sup>th</sup> July
-            <br />2<sup>nd</sup> Shrawan
-          </>
-        ),
-      },
-      {
-        day: "Wed",
-        subject: subjects.sem3.DSA,
-        date: "2023/07/19",
-        friendlyDate: (
-          <>
-            19<sup>th</sup> July
-            <br />3<sup>rd</sup> Shrawan
-          </>
-        ),
-      },
-      {
         day: "Thu",
-        subject: subjects.sem3.CG,
-        date: "2023/07/20",
+        subject: subjects.sem6.Compiler,
+        date: "2025/01/30",
+        time: "6:35 AM",
         friendlyDate: (
           <>
-            20<sup>th</sup> July
-            <br />4<sup>th</sup> Shrawan
+            30<sup>th</sup> January
+            <br />
+            17<sup>th</sup> Magh
           </>
         ),
       },
       {
         day: "Fri",
-        subject: subjects.sem3.Stats2,
-        date: "2023/07/21",
+        subject: subjects.sem6.EGov,
+        date: "2025/01/31",
+        time: "6:35 AM",
         friendlyDate: (
           <>
-            21<sup>st</sup> July
-            <br />5<sup>th</sup> Shrawan
+            31<sup>st</sup> January
+            <br />
+            18<sup>th</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem6.NCC,
+        date: "2025/02/02",
+        time: "6:15 AM",
+        friendlyDate: (
+          <>
+            2<sup>nd</sup> February
+            <br />
+            20<sup>th</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem6.TW,
+        date: "2025/02/03",
+        time: "6:15 AM",
+        friendlyDate: (
+          <>
+            3<sup>rd</sup> February
+            <br />
+            21<sup>st</sup> Magh
           </>
         ),
       },
       {
         day: "Tue",
-        subject: subjects.sem3.CA,
-        date: "2023/07/25",
+        subject: subjects.sem6.ECom,
+        date: "2025/02/04",
+        time: "6:15 AM",
         friendlyDate: (
           <>
-            25<sup>th</sup> July
-            <br />9<sup>th</sup> Shrawan
+            4<sup>th</sup> February
+            <br />
+            22<sup>nd</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem6.SE,
+        date: "2025/02/05",
+        time: "6:15 AM",
+        friendlyDate: (
+          <>
+            5<sup>th</sup> February
+            <br />
+            23<sup>rd</sup> Magh
           </>
         ),
       },
     ],
     [examTypes.pre]: [
       {
-        day: "Tue",
-        subject: subjects.sem3.CA,
-        date: "2023/08/29",
+        day: "Thu",
+        subject: subjects.sem6.Compiler,
+        date: "2025/02/27",
         friendlyDate: (
           <>
-            29<sup>th</sup> August
+            27<sup>th</sup> February
+            <br />
+            15<sup>th</sup> Falgun
           </>
         ),
       },
       {
-        day: "Wed",
-        subject: subjects.sem3.NM,
-        date: "2023/08/30",
+        day: "Sun",
+        subject: subjects.sem6.NCC,
+        date: "2025/03/02",
         friendlyDate: (
           <>
-            30<sup>th</sup> August
+            2<sup>nd</sup> March
+            <br />
+            18<sup>th</sup> Falgun
           </>
         ),
       },
       {
         day: "Mon",
-        subject: subjects.sem3.DSA,
-        date: "2023/09/04",
+        subject: subjects.sem6.EGov,
+        date: "2025/03/03",
         friendlyDate: (
           <>
-            4<sup>th</sup> September
+            3<sup>rd</sup> March
+            <br />
+            19<sup>th</sup> Falgun
           </>
         ),
       },
       {
         day: "Tue",
-        subject: subjects.sem3.CG,
-        date: "2023/09/05",
+        subject: subjects.sem6.SE,
+        date: "2025/03/04",
         friendlyDate: (
           <>
-            5<sup>th</sup> September
+            4<sup>th</sup> March
+            <br />
+            20<sup>th</sup> Falgun
           </>
         ),
       },
       {
         day: "Wed",
-        subject: subjects.sem3.Stats2,
-        date: "2023/09/06",
+        subject: subjects.sem6.TW,
+        date: "2025/03/05",
         friendlyDate: (
           <>
-            6<sup>th</sup> September
+            5<sup>th</sup> March
+            <br />
+            21<sup>st</sup> Falgun
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem6.ECom,
+        date: "2025/03/06",
+        friendlyDate: (
+          <>
+            6<sup>th</sup> March
+            <br />
+            22<sup>nd</sup> Falgun
           </>
         ),
       },
@@ -1900,384 +1946,74 @@ export const examRoutine = {
     [examTypes.board]: [
       {
         day: "Fri",
-        subject: subjects.sem3.DSA,
-        date: "2023/09/29",
+        subject: subjects.sem6.SE,
+        date: "2025/03/21",
         friendlyDate: (
           <>
-            29<sup>th</sup> September
-            <br />
-            12<sup>th</sup> Ashoj
+            21<sup>st</sup> March
+            <br />8<sup>th</sup> Chaitra
           </>
         ),
-        source: "https://iost.tu.edu.np/notices/831",
+        source: "https://iost.tu.edu.np/notices/6370",
         sourceName: "TU Notice",
       },
       {
-        day: "Mon",
-        date: "2023/10/02",
-        subject: subjects.sem3.NM,
-        friendlyDate: (
-          <>
-            2<sup>nd</sup> October
-            <br />
-            15<sup>th</sup> Ashoj
-          </>
-        ),
-      },
-      {
-        day: "Thu",
-        date: "2023/10/05",
-        subject: subjects.sem3.CA,
-        friendlyDate: (
-          <>
-            5<sup>th</sup> October
-            <br />
-            18<sup>th</sup> Ashoj
-          </>
-        ),
-      },
-      {
-        day: "Sun",
-        date: "2023/10/08",
-        subject: subjects.sem3.CG,
-        friendlyDate: (
-          <>
-            8<sup>th</sup> October
-            <br />
-            21<sup>st</sup> Ashoj
-          </>
-        ),
-      },
-      {
-        day: "Wed",
-        date: "2023/10/11",
-        subject: subjects.sem3.Stats2,
-        friendlyDate: (
-          <>
-            11<sup>th</sup> October
-            <br />
-            24<sup>th</sup> Ashoj
-          </>
-        ),
-      },
-    ],
-    [examTypes.prac]: [
-      {
-        day: "Thu",
-        subject: subjects.sem3.CG,
-        date: "2023/10/12",
-        time: "10:00 AM",
-        friendlyDate: (
-          <>
-            12<sup>th</sup> October
-          </>
-        ),
-      },
-      {
-        day: "Fri",
-        subject: subjects.sem3.DSA,
-        date: "2023/10/13",
-        time: (
-          <>
-            7:00 AM
-            <br />
-            PTA Lab
-          </>
-        ),
-        friendlyDate: (
-          <>
-            13<sup>th</sup> October
-          </>
-        ),
-      },
-      {
-        day: "Mon",
-        subject: subjects.sem3.NM,
-        date: "2023/10/16",
-        time: (
-          <>
-            7:00 AM
-            <br />
-            PTA Lab
-          </>
-        ),
-        friendlyDate: (
-          <>
-            16<sup>th</sup> October
-          </>
-        ),
-      },
-      {
         day: "Tue",
-        subject: subjects.sem3.CA,
-        date: "2023/10/17",
-        time: "10:00 AM",
+        subject: subjects.sem6.Compiler,
+        date: "2025/03/25",
         friendlyDate: (
           <>
-            17<sup>th</sup> October
-          </>
-        ),
-      },
-      {
-        day: "Thu",
-        subject: subjects.sem3.Stats2,
-        date: "2023/10/19",
-        time: "7:00 AM",
-        friendlyDate: (
-          <>
-            19<sup>th</sup> October
-          </>
-        ),
-      },
-    ],
-  },
-  sem4: {
-    [examTypes.mid]: [
-      {
-        day: "Sun",
-        subject: subjects.sem4.TOC,
-        date: "2024/08/11",
-        friendlyDate: (
-          <>
-            11<sup>th</sup> August
+            25<sup>th</sup> March
             <br />
-            27<sup>th</sup> Shrawan
-          </>
-        ),
-      },
-      {
-        day: "Mon",
-        subject: subjects.sem4.CN,
-        date: "2024/08/12",
-        friendlyDate: (
-          <>
-            12<sup>th</sup> August
-            <br />
-            28<sup>th</sup> Shrawan
-          </>
-        ),
-      },
-      {
-        day: "Tue",
-        subject: subjects.sem4.OS,
-        date: "2024/08/13",
-        friendlyDate: (
-          <>
-            13<sup>th</sup> August
-            <br />
-            29<sup>th</sup> Shrawan
-          </>
-        ),
-      },
-      {
-        day: "Wed",
-        subject: subjects.sem4.DBMS,
-        date: "2024/08/14",
-        friendlyDate: (
-          <>
-            14<sup>th</sup> August
-            <br />
-            30<sup>th</sup> Shrawan
-          </>
-        ),
-      },
-      {
-        day: "Thu",
-        subject: subjects.sem4.AI,
-
-        date: "2024/08/15",
-        friendlyDate: (
-          <>
-            15<sup>th</sup> August
-            <br />
-            31<sup>st</sup> Shrawan
-          </>
-        ),
-      },
-    ],
-    [examTypes.pre]: [
-      {
-        day: "Sun",
-        subject: subjects.sem4.TOC,
-        date: "2024/09/15",
-        friendlyDate: (
-          <>
-            15<sup>th</sup> September
-            <br />
-            30<sup>th</sup> Bhadra
-          </>
-        ),
-      },
-      {
-        day: "Mon",
-        subject: subjects.sem4.CN,
-        date: "2024/09/16",
-        friendlyDate: (
-          <>
-            16<sup>th</sup> September
-            <br />
-            31<sup>st</sup> Bhadra
-          </>
-        ),
-      },
-      {
-        day: "Wed",
-        subject: subjects.sem4.OS,
-        date: "2024/09/18",
-        friendlyDate: (
-          <>
-            18<sup>th</sup> September
-            <br />2<sup>nd</sup> Asoj
+            12<sup>th</sup> Chaitra
           </>
         ),
       },
       {
         day: "Fri",
-        subject: subjects.sem4.DBMS,
-        date: "2024/09/20",
+        subject: subjects.sem6.EGov,
+        date: "2025/03/28",
         friendlyDate: (
           <>
-            20<sup>th</sup> September
-            <br />4<sup>th</sup> Asoj
-          </>
-        ),
-      },
-      {
-        day: "Sun",
-        subject: subjects.sem4.AI,
-        date: "2024/09/22",
-        friendlyDate: (
-          <>
-            22<sup>nd</sup> September
-            <br />6<sup>th</sup> Asoj
-          </>
-        ),
-      },
-    ],
-    [examTypes.board]: [
-      {
-        day: "Fri",
-        subject: subjects.sem4.TOC,
-        date: "2024/11/29",
-        friendlyDate: (
-          <>
-            29<sup>th</sup> November
+            28<sup>th</sup> March
             <br />
-            14<sup>th</sup> Mangsir
-          </>
-        ),
-        source:
-          "https://portal.tu.edu.np/notice/4880/B.Sc.CSIT%20&%20BIT%204%20routine.pdf",
-        sourceName: "TU Notice",
-      },
-      {
-        day: "Mon",
-        date: "2024/12/02",
-        subject: subjects.sem4.CN,
-        friendlyDate: (
-          <>
-            2<sup>nd</sup> December
-            <br />
-            17<sup>th</sup> Mangsir
-          </>
-        ),
-      },
-      {
-        day: "Thu",
-        date: "2024/12/05",
-        subject: subjects.sem4.OS,
-        friendlyDate: (
-          <>
-            5<sup>th</sup> December
-            <br />
-            20<sup>th</sup> Mangsir
-          </>
-        ),
-      },
-      {
-        day: "Sun",
-        date: "2024/12/08",
-        subject: subjects.sem4.DBMS,
-        friendlyDate: (
-          <>
-            8<sup>th</sup> December
-            <br />
-            23<sup>rd</sup> Mangsir
-          </>
-        ),
-      },
-      {
-        day: "Wed",
-        date: "2024/12/11",
-        subject: subjects.sem4.AI,
-        friendlyDate: (
-          <>
-            11<sup>th</sup> December
-            <br />
-            26<sup>th</sup> Mangsir
-          </>
-        ),
-      },
-    ],
-    [examTypes.prac]: [
-      {
-        day: "Tue",
-        subject: subjects.sem4.DBMS,
-        date: "2024/04/16",
-        time: "7:00 AM",
-        friendlyDate: (
-          <>
-            16<sup>th</sup> April
-            <br />4<sup>th</sup> Baisakh
-          </>
-        ),
-      },
-      {
-        day: "Thu",
-        subject: subjects.sem4.CN,
-        date: "2024/04/18",
-        time: "7:00 AM",
-        friendlyDate: (
-          <>
-            18<sup>th</sup> April
-            <br />6<sup>th</sup> Baisakh
-          </>
-        ),
-      },
-      {
-        day: "Fri",
-        subject: subjects.sem4.TOC,
-        date: "2024/04/19",
-        time: "8:00 AM",
-        friendlyDate: (
-          <>
-            19<sup>th</sup> April
-            <br />7<sup>th</sup> Baisakh
-          </>
-        ),
-      },
-      {
-        day: "Sun",
-        subject: subjects.sem4.AI,
-        date: "2024/04/21",
-        time: "8:00 AM",
-        friendlyDate: (
-          <>
-            21<sup>st</sup> April
-            <br />9<sup>th</sup> Baisakh
+            15<sup>th</sup> Chaitra
           </>
         ),
       },
       {
         day: "Mon",
-        subject: subjects.sem4.OS,
-        date: "2024/04/22",
-        time: "7:00 AM",
+        subject: subjects.sem6.NCC,
+        date: "2025/03/31",
         friendlyDate: (
           <>
-            22<sup>nd</sup> April
+            31<sup>st</sup> March
             <br />
-            10<sup>th</sup> Baisakh
+            18<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem6.TW,
+        date: "2025/04/03",
+        friendlyDate: (
+          <>
+            3<sup>rd</sup> April
+            <br />
+            21<sup>st</sup> Chaitra
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem6.ECom,
+        date: "2025/04/06",
+        friendlyDate: (
+          <>
+            6<sup>th</sup> April
+            <br />
+            24<sup>th</sup> Chaitra
           </>
         ),
       },
@@ -2602,157 +2338,126 @@ export const examRoutine = {
       },
     ],
   },
-  sem6: {
+
+  sem4: {
     [examTypes.mid]: [
       {
-        day: "Thu",
-        subject: subjects.sem6.Compiler,
-        date: "2025/01/30",
-        time: "6:35 AM",
-        friendlyDate: (
-          <>
-            30<sup>th</sup> January
-            <br />
-            17<sup>th</sup> Magh
-          </>
-        ),
-      },
-      {
-        day: "Fri",
-        subject: subjects.sem6.EGov,
-        date: "2025/01/31",
-        time: "6:35 AM",
-        friendlyDate: (
-          <>
-            31<sup>st</sup> January
-            <br />
-            18<sup>th</sup> Magh
-          </>
-        ),
-      },
-      {
         day: "Sun",
-        subject: subjects.sem6.NCC,
-        date: "2025/02/02",
-        time: "6:15 AM",
+        subject: subjects.sem4.TOC,
+        date: "2024/08/11",
         friendlyDate: (
           <>
-            2<sup>nd</sup> February
+            11<sup>th</sup> August
             <br />
-            20<sup>th</sup> Magh
+            27<sup>th</sup> Shrawan
           </>
         ),
       },
       {
         day: "Mon",
-        subject: subjects.sem6.TW,
-        date: "2025/02/03",
-        time: "6:15 AM",
+        subject: subjects.sem4.CN,
+        date: "2024/08/12",
         friendlyDate: (
           <>
-            3<sup>rd</sup> February
+            12<sup>th</sup> August
             <br />
-            21<sup>st</sup> Magh
+            28<sup>th</sup> Shrawan
           </>
         ),
       },
       {
         day: "Tue",
-        subject: subjects.sem6.ECom,
-        date: "2025/02/04",
-        time: "6:15 AM",
+        subject: subjects.sem4.OS,
+        date: "2024/08/13",
         friendlyDate: (
           <>
-            4<sup>th</sup> February
+            13<sup>th</sup> August
             <br />
-            22<sup>nd</sup> Magh
+            29<sup>th</sup> Shrawan
           </>
         ),
       },
       {
         day: "Wed",
-        subject: subjects.sem6.SE,
-        date: "2025/02/05",
-        time: "6:15 AM",
+        subject: subjects.sem4.DBMS,
+        date: "2024/08/14",
         friendlyDate: (
           <>
-            5<sup>th</sup> February
+            14<sup>th</sup> August
             <br />
-            23<sup>rd</sup> Magh
+            30<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem4.AI,
+
+        date: "2024/08/15",
+        friendlyDate: (
+          <>
+            15<sup>th</sup> August
+            <br />
+            31<sup>st</sup> Shrawan
           </>
         ),
       },
     ],
     [examTypes.pre]: [
       {
-        day: "Thu",
-        subject: subjects.sem6.Compiler,
-        date: "2025/02/27",
-        friendlyDate: (
-          <>
-            27<sup>th</sup> February
-            <br />
-            15<sup>th</sup> Falgun
-          </>
-        ),
-      },
-      {
         day: "Sun",
-        subject: subjects.sem6.NCC,
-        date: "2025/03/02",
+        subject: subjects.sem4.TOC,
+        date: "2024/09/15",
         friendlyDate: (
           <>
-            2<sup>nd</sup> March
+            15<sup>th</sup> September
             <br />
-            18<sup>th</sup> Falgun
+            30<sup>th</sup> Bhadra
           </>
         ),
       },
       {
         day: "Mon",
-        subject: subjects.sem6.EGov,
-        date: "2025/03/03",
+        subject: subjects.sem4.CN,
+        date: "2024/09/16",
         friendlyDate: (
           <>
-            3<sup>rd</sup> March
+            16<sup>th</sup> September
             <br />
-            19<sup>th</sup> Falgun
-          </>
-        ),
-      },
-      {
-        day: "Tue",
-        subject: subjects.sem6.SE,
-        date: "2025/03/04",
-        friendlyDate: (
-          <>
-            4<sup>th</sup> March
-            <br />
-            20<sup>th</sup> Falgun
+            31<sup>st</sup> Bhadra
           </>
         ),
       },
       {
         day: "Wed",
-        subject: subjects.sem6.TW,
-        date: "2025/03/05",
+        subject: subjects.sem4.OS,
+        date: "2024/09/18",
         friendlyDate: (
           <>
-            5<sup>th</sup> March
-            <br />
-            21<sup>st</sup> Falgun
+            18<sup>th</sup> September
+            <br />2<sup>nd</sup> Asoj
           </>
         ),
       },
       {
-        day: "Thu",
-        subject: subjects.sem6.ECom,
-        date: "2025/03/06",
+        day: "Fri",
+        subject: subjects.sem4.DBMS,
+        date: "2024/09/20",
         friendlyDate: (
           <>
-            6<sup>th</sup> March
-            <br />
-            22<sup>nd</sup> Falgun
+            20<sup>th</sup> September
+            <br />4<sup>th</sup> Asoj
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem4.AI,
+        date: "2024/09/22",
+        friendlyDate: (
+          <>
+            22<sup>nd</sup> September
+            <br />6<sup>th</sup> Asoj
           </>
         ),
       },
@@ -2760,82 +2465,544 @@ export const examRoutine = {
     [examTypes.board]: [
       {
         day: "Fri",
-        subject: subjects.sem6.SE,
-        date: "2025/03/21",
+        subject: subjects.sem4.TOC,
+        date: "2024/11/29",
         friendlyDate: (
           <>
-            21<sup>st</sup> March
-            <br />8<sup>th</sup> Chaitra
+            29<sup>th</sup> November
+            <br />
+            14<sup>th</sup> Mangsir
           </>
         ),
-        source: "https://iost.tu.edu.np/notices/6370",
+        source:
+          "https://portal.tu.edu.np/notice/4880/B.Sc.CSIT%20&%20BIT%204%20routine.pdf",
         sourceName: "TU Notice",
       },
       {
-        day: "Tue",
-        subject: subjects.sem6.Compiler,
-        date: "2025/03/25",
-        friendlyDate: (
-          <>
-            25<sup>th</sup> March
-            <br />
-            12<sup>th</sup> Chaitra
-          </>
-        ),
-      },
-      {
-        day: "Fri",
-        subject: subjects.sem6.EGov,
-        date: "2025/03/28",
-        friendlyDate: (
-          <>
-            28<sup>th</sup> March
-            <br />
-            15<sup>th</sup> Chaitra
-          </>
-        ),
-      },
-      {
         day: "Mon",
-        subject: subjects.sem6.NCC,
-        date: "2025/03/31",
+        date: "2024/12/02",
+        subject: subjects.sem4.CN,
         friendlyDate: (
           <>
-            31<sup>st</sup> March
+            2<sup>nd</sup> December
             <br />
-            18<sup>th</sup> Chaitra
+            17<sup>th</sup> Mangsir
           </>
         ),
       },
       {
         day: "Thu",
-        subject: subjects.sem6.TW,
-        date: "2025/04/03",
+        date: "2024/12/05",
+        subject: subjects.sem4.OS,
         friendlyDate: (
           <>
-            3<sup>rd</sup> April
+            5<sup>th</sup> December
             <br />
-            21<sup>st</sup> Chaitra
+            20<sup>th</sup> Mangsir
           </>
         ),
       },
       {
         day: "Sun",
-        subject: subjects.sem6.ECom,
-        date: "2025/04/06",
+        date: "2024/12/08",
+        subject: subjects.sem4.DBMS,
         friendlyDate: (
           <>
-            6<sup>th</sup> April
+            8<sup>th</sup> December
             <br />
-            24<sup>th</sup> Chaitra
+            23<sup>rd</sup> Mangsir
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        date: "2024/12/11",
+        subject: subjects.sem4.AI,
+        friendlyDate: (
+          <>
+            11<sup>th</sup> December
+            <br />
+            26<sup>th</sup> Mangsir
+          </>
+        ),
+      },
+    ],
+    [examTypes.prac]: [
+      {
+        day: "Tue",
+        subject: subjects.sem4.DBMS,
+        date: "2024/04/16",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            16<sup>th</sup> April
+            <br />4<sup>th</sup> Baisakh
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem4.CN,
+        date: "2024/04/18",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            18<sup>th</sup> April
+            <br />6<sup>th</sup> Baisakh
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem4.TOC,
+        date: "2024/04/19",
+        time: "8:00 AM",
+        friendlyDate: (
+          <>
+            19<sup>th</sup> April
+            <br />7<sup>th</sup> Baisakh
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        subject: subjects.sem4.AI,
+        date: "2024/04/21",
+        time: "8:00 AM",
+        friendlyDate: (
+          <>
+            21<sup>st</sup> April
+            <br />9<sup>th</sup> Baisakh
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem4.OS,
+        date: "2024/04/22",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            22<sup>nd</sup> April
+            <br />
+            10<sup>th</sup> Baisakh
           </>
         ),
       },
     ],
   },
+  sem3: {
+    [examTypes.mid]: [
+      {
+        day: "Tue",
+        subject: subjects.sem3.NM,
+        date: "2023/07/18",
+        friendlyDate: (
+          <>
+            18<sup>th</sup> July
+            <br />2<sup>nd</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem3.DSA,
+        date: "2023/07/19",
+        friendlyDate: (
+          <>
+            19<sup>th</sup> July
+            <br />3<sup>rd</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem3.CG,
+        date: "2023/07/20",
+        friendlyDate: (
+          <>
+            20<sup>th</sup> July
+            <br />4<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem3.Stats2,
+        date: "2023/07/21",
+        friendlyDate: (
+          <>
+            21<sup>st</sup> July
+            <br />5<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem3.CA,
+        date: "2023/07/25",
+        friendlyDate: (
+          <>
+            25<sup>th</sup> July
+            <br />9<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+    ],
+    [examTypes.pre]: [
+      {
+        day: "Tue",
+        subject: subjects.sem3.CA,
+        date: "2023/08/29",
+        friendlyDate: (
+          <>
+            29<sup>th</sup> August
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem3.NM,
+        date: "2023/08/30",
+        friendlyDate: (
+          <>
+            30<sup>th</sup> August
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem3.DSA,
+        date: "2023/09/04",
+        friendlyDate: (
+          <>
+            4<sup>th</sup> September
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem3.CG,
+        date: "2023/09/05",
+        friendlyDate: (
+          <>
+            5<sup>th</sup> September
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem3.Stats2,
+        date: "2023/09/06",
+        friendlyDate: (
+          <>
+            6<sup>th</sup> September
+          </>
+        ),
+      },
+    ],
+    [examTypes.board]: [
+      {
+        day: "Fri",
+        subject: subjects.sem3.DSA,
+        date: "2023/09/29",
+        friendlyDate: (
+          <>
+            29<sup>th</sup> September
+            <br />
+            12<sup>th</sup> Ashoj
+          </>
+        ),
+        source: "https://iost.tu.edu.np/notices/831",
+        sourceName: "TU Notice",
+      },
+      {
+        day: "Mon",
+        date: "2023/10/02",
+        subject: subjects.sem3.NM,
+        friendlyDate: (
+          <>
+            2<sup>nd</sup> October
+            <br />
+            15<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        date: "2023/10/05",
+        subject: subjects.sem3.CA,
+        friendlyDate: (
+          <>
+            5<sup>th</sup> October
+            <br />
+            18<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        date: "2023/10/08",
+        subject: subjects.sem3.CG,
+        friendlyDate: (
+          <>
+            8<sup>th</sup> October
+            <br />
+            21<sup>st</sup> Ashoj
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        date: "2023/10/11",
+        subject: subjects.sem3.Stats2,
+        friendlyDate: (
+          <>
+            11<sup>th</sup> October
+            <br />
+            24<sup>th</sup> Ashoj
+          </>
+        ),
+      },
+    ],
+    [examTypes.prac]: [
+      {
+        day: "Thu",
+        subject: subjects.sem3.CG,
+        date: "2023/10/12",
+        time: "10:00 AM",
+        friendlyDate: (
+          <>
+            12<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem3.DSA,
+        date: "2023/10/13",
+        time: (
+          <>
+            7:00 AM
+            <br />
+            PTA Lab
+          </>
+        ),
+        friendlyDate: (
+          <>
+            13<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem3.NM,
+        date: "2023/10/16",
+        time: (
+          <>
+            7:00 AM
+            <br />
+            PTA Lab
+          </>
+        ),
+        friendlyDate: (
+          <>
+            16<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem3.CA,
+        date: "2023/10/17",
+        time: "10:00 AM",
+        friendlyDate: (
+          <>
+            17<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem3.Stats2,
+        date: "2023/10/19",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            19<sup>th</sup> October
+          </>
+        ),
+      },
+    ],
+  },
+  sem2: {
+    [examTypes.pre]: [
+      {
+        day: "Mon",
+        subject: subjects.sem2.DS,
+        date: "2023/09/25",
+        friendlyDate: (
+          <>
+            25<sup>th</sup> September
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem2.OOP,
+        date: "2023/09/26",
+        friendlyDate: (
+          <>
+            26<sup>th</sup> September
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem2.MP,
+        date: "2023/09/27",
+        friendlyDate: (
+          <>
+            27<sup>th</sup> September
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem2.Maths2,
+        date: "2023/09/28",
+        friendlyDate: (
+          <>
+            28<sup>th</sup> September
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem2.Stats1,
+        date: "2023/09/29",
+        friendlyDate: (
+          <>
+            29<sup>th</sup> September
+          </>
+        ),
+      },
+    ],
+    [examTypes.prac]: [
+      {
+        day: "Wed",
+        subject: subjects.sem2.DS,
+        date: "2023/10/11",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            11<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem2.Stats1,
+        date: "2023/10/13",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            13<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem2.OOP,
+        date: "2023/10/16",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            16<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem2.MP,
+        date: "2023/10/17",
+        time: "11:30 AM",
+        friendlyDate: (
+          <>
+            17<sup>th</sup> October
+          </>
+        ),
+      },
+    ],
+    [examTypes.board]: [
+      {
+        day: "Tue",
+        subject: subjects.sem2.DS,
+        date: "2023/11/28",
+        friendlyDate: (
+          <>
+            28<sup>th</sup> November
+            <br />
+            12<sup>th</sup> Mangsir
+          </>
+        ),
+        source: "https://iost.tu.edu.np/notices/1410",
+        sourceName: "TU Notice",
+      },
+      {
+        day: "Fri",
+        date: "2023/12/01",
+        subject: subjects.sem2.OOP,
+        friendlyDate: (
+          <>
+            1<sup>st</sup> December
+            <br />
+            15<sup>th</sup> Mangsir
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        date: "2023/12/04",
+        subject: subjects.sem2.MP,
+        friendlyDate: (
+          <>
+            4<sup>th</sup> December
+            <br />
+            18<sup>th</sup> Mangsir
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        date: "2023/12/07",
+        subject: subjects.sem2.Maths2,
+        friendlyDate: (
+          <>
+            7<sup>th</sup> December
+            <br />
+            21<sup>st</sup> Mangsir
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        date: "2023/12/10",
+        subject: subjects.sem2.Stats1,
+        friendlyDate: (
+          <>
+            10<sup>th</sup> December
+            <br />
+            24<sup>th</sup> Mangsir
+          </>
+        ),
+      },
+    ],
+  },
+  sem1: {},
 };
 
-export const currentJoonSem = "sem6";
+export const currentJoonSem = "sem7";
 
 export const classRoutineSem2 = [
   {
@@ -2916,6 +3083,58 @@ export const classRoutineSem2 = [
 ];
 
 export const names = {
+  sem7: {
+    1: ["Aakash Shrestha", "021BSCIT001", "A"],
+    2: ["Aayam Pokharel", "021BSCIT002", "A"],
+    3: ["Aayush Poudel", "021BSCIT003", "A"],
+    4: ["Aayush Shrestha", "021BSCIT004", "A"],
+    5: ["Abhishek Uprety", "021BSCIT005", "A"],
+    6: ["Ashraya Jung Sijapati", "021BSCIT006", "A"],
+    7: ["Binaya Paudel", "021BSCIT007", "A"],
+    8: ["Binaya Shrestha", "021BSCIT008", "A"],
+    9: ["Dhiraj Sah", "021BSCIT009", "A"],
+    10: ["Gaurav Bhatt", "021BSCIT010", "A"],
+    11: ["Gaurav Kafle", "021BSCIT011", "A"],
+    12: ["Joon Shakya", "021BSCIT012", "A"],
+    13: ["Nischal Shrestha", "021BSCIT013", "A"],
+    14: ["Nitika Pradhananga", "021BSCIT014", "A"],
+    15: ["Pralov Malla", "021BSCIT015", "A"],
+    16: ["Rasna Bhasima", "021BSCIT016", "A"],
+    17: ["Redikshya Phuyal", "021BSCIT017", "A"],
+    18: ["Rhizu Joshi", "021BSCIT018", "A"],
+    19: ["Riwaj Prasai", "021BSCIT019", "A"],
+    20: ["Ruby Shrestha", "021BSCIT020", "A"],
+    21: ["Rupesh Bashyal", "021BSCIT021", "A"],
+    22: ["Sahara Khatri", "021BSCIT022", "A"],
+    23: ["Sahil Lamsal", "021BSCIT023", "A"],
+    24: ["Saisab Karki", "021BSCIT024", "A"],
+    25: ["Sajina Basnet", "021BSCIT025", "B"],
+    26: ["Samarpan Bhandari", "021BSCIT026", "B"],
+    27: ["Sameer Shrestha", "021BSCIT027", "B"],
+    28: ["Sashwat Maharjan", "021BSCIT028", "B"],
+    29: ["Satish Maharjan", "021BSCIT029", "B"],
+    30: ["Saugat Dahal", "021BSCIT030", "B"],
+    31: ["Saurabh Baral", "021BSCIT031", "B"],
+    32: ["Saurav Bista", "021BSCIT032", "B"],
+    33: ["Selina Maharjan", "021BSCIT033", "B"],
+    34: ["Shamant Kharel", "021BSCIT034", "B"],
+    35: ["Shasin Regmi", "021BSCIT035", "B"],
+    36: ["Shreeya Nepal", "021BSCIT036", "B"],
+    37: ["Shristi Shakya", "021BSCIT037", "B"],
+    38: ["Shubham Belbase", "021BSCIT038", "B"],
+    39: ["Siddhanta Shrestha", "021BSCIT039", "B"],
+    40: ["Sijan Khatri", "021BSCIT040", "B"],
+    41: ["Spandan Shakya", "021BSCIT041", "B"],
+    42: ["Sudip Shrestha", "021BSCIT042", "B"],
+    43: ["Suhana Shrestha", "021BSCIT043", "B"],
+    44: ["Sujal Bajracharya", "021BSCIT044", "B"],
+    45: ["Susmita Majhi", "021BSCIT045", "B"],
+    46: ["Swoyesh Shrestha", "021BSCIT046", "B"],
+    47: ["Yogesh Rijal", "021BSCIT047", "B"],
+    48: ["Yubraj Khatiwada", "021BSCIT048", "B"],
+    49: ["Laviz Pandey", "021BSCIT049", "B"],
+    50: ["Nirajan Acharya", "021BSCIT050", "B"],
+  },
   sem6: {
     1: ["Aakash Shrestha", "021BSCIT001", "A"],
     2: ["Aayam Pokharel", "021BSCIT002", "A"],

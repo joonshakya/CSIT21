@@ -1,7 +1,14 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FrontPageGenerator from "../components/FrontPageGenerator";
-import { Box, Container, Toolbar } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  Container,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import Grid from "@mui/material/Grid2";
 
 import Materials from "../components/Materials";
@@ -18,6 +25,7 @@ import Router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Downlaods from "../components/Downloads";
 import Feedback from "../components/Feedback";
+import Countdown from "../components/Countdown";
 // import LeftSideCardMessage from "../components/LeftSideCardMessage";
 
 export default function Index() {
@@ -113,6 +121,77 @@ export default function Index() {
                 {/* End Components */}
                 {sem === "" || sem === currentJoonSem ? (
                   <>
+                    <Card
+                      sx={{
+                        mt: 2,
+                        display: "flex",
+                        borderRadius: ".6rem",
+                        "&:hover": {
+                          boxShadow:
+                            "0 20px 20px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+                        },
+                        overflowX: "auto",
+                      }}
+                      elevation={3}
+                    >
+                      <Box
+                        sx={{
+                          flex: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <CardContent
+                          sx={{
+                            flex: 1,
+                            pb: "0 !important",
+                          }}
+                        >
+                          <Countdown
+                            text="Orientation Classes"
+                            yyyymmddDate={"2025-04-16 6:15 AM"}
+                          />
+                        </CardContent>
+                      </Box>
+                    </Card>
+                    <Card
+                      sx={{
+                        mt: 2,
+                        display: "flex",
+                        borderRadius: ".6rem",
+                        "&:hover": {
+                          boxShadow:
+                            "0 20px 20px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+                        },
+                        overflowX: "auto",
+                      }}
+                      elevation={3}
+                    >
+                      <Box
+                        sx={{
+                          flex: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <CardContent
+                          sx={{
+                            flex: 1,
+                            pb: "0 !important",
+                          }}
+                        >
+                          <Countdown
+                            text="Practical Exam"
+                            hideTomorrow={true}
+                            yyyymmddDate={"2025-05-11"}
+                          />
+                        </CardContent>
+                      </Box>
+                    </Card>
+                  </>
+                ) : null}
+                {sem === "sem6" ? (
+                  <>
                     <ExamRoutine
                       examType={examTypes.pre}
                       sem={sem || currentJoonSem}
@@ -138,6 +217,7 @@ export default function Index() {
                       examType={examTypes.prac}
                       sem={sem}
                     /> */}
+
                     <ClassRoutine sem={sem} />
                   </>
                 ) : null}

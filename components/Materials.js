@@ -101,6 +101,11 @@ const Materials = ({ sem, setSem }) => {
               }}
             >
               <FormControlLabel
+                value="sem7"
+                control={<Radio />}
+                label="7th"
+              />
+              <FormControlLabel
                 value="sem6"
                 control={<Radio />}
                 label="6th"

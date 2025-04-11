@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const divisions = [
   "days-0",
@@ -80,7 +80,11 @@ function CountdoenText({ text1, index, startDay }) {
   );
 }
 
-export default function Countdown({ yyyymmddDate, hideTomorrow }) {
+export default function Countdown({
+  text,
+  yyyymmddDate,
+  hideTomorrow,
+}) {
   const startDay = new Date(yyyymmddDate + " GMT+05:45");
   const nowDate = new Date();
   const [hideDate, setHideDate] = useState(
@@ -99,7 +103,23 @@ export default function Countdown({ yyyymmddDate, hideTomorrow }) {
     return () => clearInterval(interval);
   }, [hideTomorrow]);
 
-  if (startDay < hideDate) return null;
+  if (startDay < hideDate) {
+    if (!text) return null;
+    if (startDay > new Date()) {
+      return (
+        <Typography
+          variant="h5"
+          component="div"
+          sx={{
+            textAlign: "center",
+            marginBottom: ".8rem",
+          }}
+        >
+          {text} tomorrow
+        </Typography>
+      );
+    }
+  }
 
   const isSafari =
     /constructor/i.test(window.HTMLElement) ||
@@ -111,54 +131,67 @@ export default function Countdown({ yyyymmddDate, hideTomorrow }) {
     );
 
   return (
-    <Box
-      className="counter"
-      sx={{
-        fontFamily: "Consolas, monospace, sans-serif",
-        fontWeight: "bold",
-        marginBottom: "-1rem",
-        display: "flex",
-        justifyContent: "center",
-        flexWrap: "wrap",
-      }}
-    >
-      {divisions.map((unit) => (
-        <div
-          key={unit}
-          className={`counter-${unit} counter-${
-            unit.endsWith("text") ? "text" : "number"
-          }`}
+    <>
+      {text ? (
+        <Typography
+          variant="h5"
+          component="div"
+          sx={{
+            textAlign: "center",
+          }}
         >
-          <div className="countdown-container">
-            <CountdoenText
-              index={divisions.indexOf(unit)}
-              text1
-              startDay={startDay}
-            />
-            <CountdoenText
-              index={divisions.indexOf(unit)}
-              startDay={startDay}
-            />
-          </div>
-          <svg className="countdown-svg" viewBox="0 0 1920 1080">
-            <filter id={`${unit}-threshold`}>
-              {isSafari ? null : (
-                <feColorMatrix
-                  type="matrix"
-                  // values="1 0 0 0 0
-                  //     0 1 0 0 0
-                  //     0 0 1 0 0
-                  //     0 0 0 255 -100"
-                  values="1 0 0 0 0
+          {text}
+        </Typography>
+      ) : null}
+      <Box
+        className="counter"
+        sx={{
+          fontFamily: "Consolas, monospace, sans-serif",
+          fontWeight: "bold",
+          marginBottom: "-1rem",
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        {divisions.map((unit) => (
+          <div
+            key={unit}
+            className={`counter-${unit} counter-${
+              unit.endsWith("text") ? "text" : "number"
+            }`}
+          >
+            <div className="countdown-container">
+              <CountdoenText
+                index={divisions.indexOf(unit)}
+                text1
+                startDay={startDay}
+              />
+              <CountdoenText
+                index={divisions.indexOf(unit)}
+                startDay={startDay}
+              />
+            </div>
+            <svg className="countdown-svg" viewBox="0 0 1920 1080">
+              <filter id={`${unit}-threshold`}>
+                {isSafari ? null : (
+                  <feColorMatrix
+                    type="matrix"
+                    // values="1 0 0 0 0
+                    //     0 1 0 0 0
+                    //     0 0 1 0 0
+                    //     0 0 0 255 -100"
+                    values="1 0 0 0 0
                         0 1 0 0 0
                         0 0 1 0 0
                         0 0 0 255 -80"
-                />
-              )}
-            </filter>
-          </svg>
-        </div>
-      ))}
-    </Box>
+                  />
+                )}
+              </filter>
+            </svg>
+          </div>
+        ))}
+      </Box>
+    </>
   );
 }
