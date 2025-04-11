@@ -149,12 +149,12 @@ export default function Index() {
                         >
                           <Countdown
                             text="Orientation Classes"
-                            yyyymmddDate={"2025-04-11 12:59 PM"}
+                            yyyymmddDate={"2025/04/16 6:15 AM"}
                           />
                           <Countdown
                             text="6th Sem Practical Exam"
                             hideTomorrow={true}
-                            yyyymmddDate={"2025-05-14"}
+                            yyyymmddDate={"2025/05/14"}
                           />
                         </CardContent>
                       </Box>
