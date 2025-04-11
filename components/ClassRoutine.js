@@ -14,6 +14,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Skeleton from "@mui/material/Skeleton";
+import FormControl from "@mui/material/FormControl";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
 import { useBaseStore } from "../src/store";
 
 const tCellStyles = {
@@ -34,8 +37,16 @@ const RoutineTableCell = ({ onlySection, section, routineRow }) =>
       <TableCell
         role={subject?.microSyllabus ? "button" : null}
         onClick={() => {
-          if (subject?.microSyllabus) {
-            window.open(subject?.microSyllabus, "_blank");
+          const clickOpens =
+            localStorage.getItem("clickOpens") || "notes";
+          if (clickOpens === "syllabus" && subject?.microSyllabus) {
+            window.open(subject.microSyllabus, "_blank");
+          }
+          if (clickOpens === "notes" && subject?.notes) {
+            window.open(subject.notes, "_blank");
+          }
+          if (clickOpens === "question" && subject?.questions) {
+            window.open(subject.questions, "_blank");
           }
         }}
         rowSpan={combined && !onlySection ? 2 : 1}
@@ -145,6 +156,14 @@ export default function ClassRoutine({ sem }) {
     return () => clearInterval(dateCheck);
   }, []);
 
+  const [clickOpens, setClickOpens] = useState(
+    localStorage.getItem("clickOpens") || "notes"
+  );
+
+  useEffect(() => {
+    localStorage.setItem("clickOpens", clickOpens);
+  }, [clickOpens]);
+
   return (
     <Card
       sx={{
@@ -218,7 +237,6 @@ export default function ClassRoutine({ sem }) {
             <>
               <FormGroup
                 sx={{
-                  mb: 1,
                   userSelect: "none",
                   display: "flex",
                   flexDirection: "row",
@@ -231,6 +249,7 @@ export default function ClassRoutine({ sem }) {
                   <FormControlLabel
                     control={
                       <Checkbox
+                        size="small"
                         checked={onlySection}
                         onChange={(e) => {
                           setOnlySection(e.target.checked);
@@ -249,6 +268,7 @@ export default function ClassRoutine({ sem }) {
                 <FormControlLabel
                   control={
                     <Checkbox
+                      size="small"
                       checked={!fullRoutine}
                       onChange={(e) => {
                         setFullRoutine(!e.target.checked);
@@ -264,6 +284,56 @@ export default function ClassRoutine({ sem }) {
                   label={`Show only today, tmr.`}
                 />
               </FormGroup>
+              <FormControl
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  mb: 1,
+                }}
+              >
+                <Typography
+                  sx={{
+                    flexShrink: 0,
+                    marginRight: 2,
+                    marginLeft: 2,
+                  }}
+                >
+                  Click opens
+                </Typography>
+                <RadioGroup
+                  defaultValue="sem3"
+                  name="clickOpensOptions"
+                  value={clickOpens}
+                  onChange={(event) => {
+                    setClickOpens(event.target.value);
+                  }}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
+                  <FormControlLabel
+                    value="notes"
+                    control={<Radio size="small" />}
+                    label="Notes"
+                  />
+                  <FormControlLabel
+                    value="syllabus"
+                    control={<Radio size="small" />}
+                    label="Syllabus"
+                  />
+                  <FormControlLabel
+                    value="question"
+                    control={<Radio size="small" />}
+                    label="Question Bank"
+                  />
+                </RadioGroup>
+              </FormControl>
               <TableContainer>
                 <Table size="small">
                   <TableHead>
