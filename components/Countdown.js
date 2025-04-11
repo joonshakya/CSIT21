@@ -43,7 +43,9 @@ function CountdoenText({ text1, index, startDay }) {
     function updateCounter() {
       const now = new Date();
       const diff = startDay.getTime() - now.getTime();
-
+      if (diff <= 0) {
+        window.location.reload();
+      }
       setDate((date) => {
         setPrevDate(date);
         const dates = [
@@ -91,7 +93,6 @@ export default function Countdown({
   const [hideDate, setHideDate] = useState(
     hideTomorrow ? nowDate.setDate(nowDate.getDate() + 1) : nowDate
   );
-
   useEffect(() => {
     const interval = setInterval(() => {
       const nowDate = new Date();
@@ -119,6 +120,8 @@ export default function Countdown({
           {text} tomorrow
         </Typography>
       );
+    } else {
+      return null;
     }
   }
 

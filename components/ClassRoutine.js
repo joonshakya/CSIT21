@@ -301,7 +301,7 @@ export default function ClassRoutine({ sem }) {
                     marginLeft: 2,
                   }}
                 >
-                  Click opens
+                  On click, open
                 </Typography>
                 <RadioGroup
                   defaultValue="sem3"

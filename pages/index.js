@@ -149,11 +149,20 @@ export default function Index() {
                         >
                           <Countdown
                             text="Orientation Classes"
-                            yyyymmddDate={"2025-04-16 6:15 AM"}
+                            yyyymmddDate={"2025-04-11 12:59 PM"}
+                          />
+                          <Countdown
+                            text="6th Sem Practical Exam"
+                            hideTomorrow={true}
+                            yyyymmddDate={"2025-05-14"}
                           />
                         </CardContent>
                       </Box>
                     </Card>
+                  </>
+                ) : null}
+                {sem === "sem6" ? (
+                  <>
                     <Card
                       sx={{
                         mt: 2,
@@ -181,17 +190,13 @@ export default function Index() {
                           }}
                         >
                           <Countdown
-                            text="Practical Exam"
+                            text="6th Sem Practical Exam"
                             hideTomorrow={true}
-                            yyyymmddDate={"2025-05-11"}
+                            yyyymmddDate={"2025-05-14"}
                           />
                         </CardContent>
                       </Box>
                     </Card>
-                  </>
-                ) : null}
-                {sem === "sem6" ? (
-                  <>
                     <ExamRoutine
                       examType={examTypes.pre}
                       sem={sem || currentJoonSem}

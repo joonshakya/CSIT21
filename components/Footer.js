@@ -41,15 +41,6 @@ const Footer = () => {
           />
           joonshakya/CSIT21
         </Link>
-        <Typography
-          color="white"
-          sx={{
-            margin: ".4rem 1rem",
-            textAlign: "center",
-          }}
-        >
-          V2.0.4
-        </Typography>
       </Box>
     </Toolbar>
   );
