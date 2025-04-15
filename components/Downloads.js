@@ -53,7 +53,10 @@ export default function Downlaods() {
               }}
             >
               {downloads.map(
-                ({ name, link, onClick, bgColor, bgImage }, index) => (
+                (
+                  { name, link, onClick, bgColor, bgImage },
+                  index
+                ) => (
                   <GradientButton
                     key={index}
                     name={name}
@@ -68,11 +71,13 @@ export default function Downlaods() {
           </CardContent>
         </Box>
       </Card>
-
       <Dialog
         open={open}
         onClose={() => {
           setOpen(false);
+        }}
+        sx={{
+          zIndex: 1500,
         }}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
@@ -80,11 +85,12 @@ export default function Downlaods() {
         <DialogTitle>Are you in college?</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Clicking &quot;YES&quot; will download the student version of Dev
-            C++ with graphics.h and OpenGL that doesn&apos;t require admin
-            password. If you are not in college and you know the password of
-            your PC, you can click &quot;NO&quot; to download the admin version
-            of Dev C++ with graphics.h and OpenGL.
+            Clicking &quot;YES&quot; will download the student version
+            of Dev C++ with graphics.h and OpenGL that doesn&apos;t
+            require admin password. If you are not in college and you
+            know the password of your PC, you can click &quot;NO&quot;
+            to download the admin version of Dev C++ with graphics.h
+            and OpenGL.
           </DialogContentText>
         </DialogContent>
         <DialogActions>

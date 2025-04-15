@@ -159,6 +159,7 @@ export default function Index() {
                         </CardContent>
                       </Box>
                     </Card>
+                    <ClassRoutine sem={sem || currentJoonSem} />
                   </>
                 ) : null}
                 {sem === "sem6" ? (

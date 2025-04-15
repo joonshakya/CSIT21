@@ -586,9 +586,9 @@ export const subjects = {
       questions:
         "https://hamrocsit.com/semester/seventh/advanced-java/question-bank",
     },
-    DW: {
+    DWDM: {
       name: "Data Warehousing and Data Mining",
-      shortName: "DW",
+      shortName: "DWDM",
       microSyllabus:
         "https://drive.google.com/file/d/12Qp9rr6tmC4LJJhXybmkslKUz9LFMwEI/view?usp=drive_link",
       notes:
@@ -979,89 +979,65 @@ export const classRoutine = {
     {
       day: "Sun",
       a: [
-        [subjects.sem6.NCC, "Lab B"],
-        [subjects.sem6.EGov, "315"],
-        [subjects.sem6.SE, "315"],
+        ["*", ""],
         ["*", ""],
       ],
       b: [
-        [subjects.sem6.ECom, "321"],
-        [subjects.sem6.NCC, "Lab C"],
-        [subjects.sem6.Compiler, "Lab B"],
+        ["*", ""],
         ["*", ""],
       ],
     },
     {
       day: "Mon",
       a: [
-        [subjects.sem6.NCC, "315"],
-        [subjects.sem6.SE, "Lab F"],
-        [subjects.sem6.Compiler, "Lab C"],
-        ["*", ""],
+        [subjects.sem7.Java, "318"],
+        [subjects.sem7.PoM, "318"],
       ],
       b: [
-        [subjects.sem6.ECom, "321"],
-        [subjects.sem6.NCC, "321"],
-        [subjects.sem6.EGov, "321"],
-        ["*", ""],
+        [subjects.sem7.Java, "318"],
+        [subjects.sem7.PoM, "318"],
       ],
     },
     {
       day: "Tue",
       a: [
-        [subjects.sem6.NCC, "315"],
-        [subjects.sem6.SE, "315"],
-        [subjects.sem6.EGov, "Lab D"],
-        [subjects.sem6.Compiler, "Lab C"],
+        ["*", ""],
+        ["*", ""],
       ],
       b: [
-        [subjects.sem6.ECom, "Lab C"],
-        [subjects.sem6.NCC, "321"],
-        [subjects.sem6.Compiler, "Lab C"],
-        [subjects.sem6.EGov, "321"],
+        ["*", ""],
+        ["*", ""],
       ],
     },
     {
       day: "Wed",
       a: [
-        [subjects.sem6.ECom, "315"],
-        [subjects.sem6.TW, "315"],
-        [subjects.sem6.Compiler, "Lab D"],
-        ["*", ""],
+        [subjects.sem7.SPM, "318"],
+        [subjects.sem7.DWDM, "318"],
       ],
       b: [
-        [subjects.sem6.TW, "321"],
-        [subjects.sem6.SE, "321"],
-        [subjects.sem6.EGov, "Lab C"],
-        ["*", ""],
+        [subjects.sem7.SPM, "318"],
+        [subjects.sem7.DWDM, "318"],
       ],
     },
     {
       day: "Thu",
       a: [
-        [subjects.sem6.EGov, "315"],
-        [subjects.sem6.TW, "315"],
-        [subjects.sem6.ECom, "Lab F"],
-        ["*", ""],
+        [subjects.sem7.DBA, "318"],
+        [subjects.sem7.IR, "318"],
       ],
       b: [
-        [subjects.sem6.TW, "321"],
-        [subjects.sem6.SE, "Lab F"],
-        [subjects.sem6.Compiler, "Lab C"],
-        ["*", ""],
+        [subjects.sem7.DBA, "318"],
+        [subjects.sem7.IR, "318"],
       ],
     },
     {
       day: "Fri",
       a: [
-        [subjects.sem6.ECom, "315"],
-        [subjects.sem6.TW, "315"],
         ["*", ""],
         ["*", ""],
       ],
       b: [
-        [subjects.sem6.TW, "321"],
-        [subjects.sem6.SE, "321"],
         ["*", ""],
         ["*", ""],
       ],
