@@ -45,7 +45,7 @@ const RoutineTableCell = ({
         role={subject?.microSyllabus ? "button" : null}
         onClick={() => {
           const clickOpens =
-            localStorage.getItem("clickOpens") || "notes";
+            localStorage.getItem("clickOpens") || "syllabus";
           if (clickOpens === "syllabus") {
             if (subject?.microSyllabus) {
               window.open(subject.microSyllabus, "_blank");
@@ -185,7 +185,7 @@ export default function ClassRoutine({ sem }) {
   }, []);
 
   const [clickOpens, setClickOpens] = useState(
-    localStorage.getItem("clickOpens") || "notes"
+    localStorage.getItem("clickOpens") || "syllabus"
   );
 
   useEffect(() => {
@@ -357,14 +357,14 @@ export default function ClassRoutine({ sem }) {
                     }}
                   >
                     <FormControlLabel
-                      value="notes"
-                      control={<Radio size="small" />}
-                      label="Notes"
-                    />
-                    <FormControlLabel
                       value="syllabus"
                       control={<Radio size="small" />}
                       label="Syllabus"
+                    />
+                    <FormControlLabel
+                      value="notes"
+                      control={<Radio size="small" />}
+                      label="Notes"
                     />
                     <FormControlLabel
                       value="question"
