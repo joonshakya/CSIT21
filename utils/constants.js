@@ -990,11 +990,11 @@ export const classRoutine = {
     {
       day: "Mon",
       a: [
-        [subjects.sem7.Java, "318"],
+        [subjects.sem7.SPM, "318"],
         [subjects.sem7.PoM, "318"],
       ],
       b: [
-        [subjects.sem7.Java, "318"],
+        [subjects.sem7.SPM, "318"],
         [subjects.sem7.PoM, "318"],
       ],
     },
@@ -1012,12 +1012,12 @@ export const classRoutine = {
     {
       day: "Wed",
       a: [
-        [subjects.sem7.SPM, "318"],
         [subjects.sem7.DWDM, "318"],
+        [subjects.sem7.Java, "318"],
       ],
       b: [
-        [subjects.sem7.SPM, "318"],
         [subjects.sem7.DWDM, "318"],
+        [subjects.sem7.Java, "318"],
       ],
     },
     {
