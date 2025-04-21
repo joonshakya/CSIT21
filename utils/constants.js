@@ -1001,45 +1001,45 @@ export const classRoutine = {
     {
       day: "Tue",
       a: [
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem7.IR, "318"],
+        ["FYP Orientation", ""],
       ],
       b: [
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem7.IR, "318"],
+        ["FYP Orientation", ""],
       ],
     },
     {
       day: "Wed",
       a: [
-        [subjects.sem7.DWDM, "318"],
-        [subjects.sem7.Java, "318"],
+        [subjects.sem7.SPM, "318"],
+        [subjects.sem7.PoM, "318"],
       ],
       b: [
-        [subjects.sem7.DWDM, "318"],
-        [subjects.sem7.Java, "318"],
+        [subjects.sem7.SPM, "318"],
+        [subjects.sem7.PoM, "318"],
       ],
     },
     {
       day: "Thu",
       a: [
-        [subjects.sem7.DBA, "318"],
-        [subjects.sem7.IR, "318"],
+        ["IR/SPM", ""],
+        [subjects.sem7.Java, "318"],
       ],
       b: [
-        [subjects.sem7.DBA, "318"],
-        [subjects.sem7.IR, "318"],
+        ["IR/SPM", ""],
+        [subjects.sem7.DWDM, "318"],
       ],
     },
     {
       day: "Fri",
       a: [
-        ["*", ""],
-        ["*", ""],
+        ["IR/SPM", ""],
+        [subjects.sem7.DWDM, "318"],
       ],
       b: [
-        ["*", ""],
-        ["*", ""],
+        ["IR/SPM", ""],
+        [subjects.sem7.Java, "318"],
       ],
     },
   ],
