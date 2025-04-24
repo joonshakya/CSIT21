@@ -1,6 +1,6 @@
 import Index from ".";
 
-function Sem() {
+export default function Sem() {
   return (
     <>
       <Index />
