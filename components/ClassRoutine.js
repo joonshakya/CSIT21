@@ -140,7 +140,7 @@ const RoutineTableCell = ({
                 borderLeft:
                   index === 0 ? "none" : "1px solid #d7d7d7",
                 p: 1,
-                backgroundColor: "#ddd",
+                backgroundColor: "#f6f6f6",
                 flex: 1,
                 display: "flex",
                 alignItems: "center",
