@@ -1023,22 +1023,34 @@ export const classRoutine = {
     {
       day: "Thu",
       a: [
-        ["IR/SPM", ""],
+        [
+          [subjects.sem7.SPM, "318"],
+          [subjects.sem7.IR, "320"],
+        ],
         [subjects.sem7.Java, "318"],
       ],
       b: [
-        ["IR/SPM", ""],
+        [
+          [subjects.sem7.SPM, "318"],
+          [subjects.sem7.IR, "320"],
+        ],
         [subjects.sem7.DWDM, "318"],
       ],
     },
     {
       day: "Fri",
       a: [
-        ["IR/SPM", ""],
+        [
+          [subjects.sem7.SPM, "318"],
+          [subjects.sem7.IR, "320"],
+        ],
         [subjects.sem7.DWDM, "318"],
       ],
       b: [
-        ["IR/SPM", ""],
+        [
+          [subjects.sem7.SPM, "318"],
+          [subjects.sem7.IR, "320"],
+        ],
         [subjects.sem7.Java, "318"],
       ],
     },

@@ -33,14 +33,32 @@ const RoutineTableCell = ({
   setContributeDialogOpen,
   setContributeDialogTitle,
 }) =>
-  routineRow[section].map(([subject, room], index) => {
+  routineRow[section].map((subjectsAndRoom, index) => {
     const combined =
-      routineRow.a[index]?.[0] === routineRow.b[index]?.[0] &&
-      routineRow.a[index]?.[1] === routineRow.b[index]?.[1];
+      JSON.stringify(routineRow.a[index]?.[0]) ===
+        JSON.stringify(routineRow.b[index]?.[0]) &&
+      JSON.stringify(routineRow.a[index]?.[1]) ===
+        JSON.stringify(routineRow.b[index]?.[1]);
     if (section === "b" && combined && !onlySection) {
       return null;
     }
-    return typeof subject !== "string" ? (
+    let subject;
+    let room;
+    if (!Array.isArray(subjectsAndRoom[0])) {
+      subject = subjectsAndRoom?.[0];
+      room = subjectsAndRoom?.[1];
+    }
+    return typeof subject === "string" ? (
+      <TableCell
+        rowSpan={combined && !onlySection ? 2 : 1}
+        align="center"
+        key={index}
+        sx={[tCellStyles, { p: 0 }]}
+      >
+        {subject} <br />
+        {room}
+      </TableCell>
+    ) : !Array.isArray(subjectsAndRoom[0]) ? (
       <TableCell
         role={subject?.microSyllabus ? "button" : null}
         onClick={() => {
@@ -98,13 +116,86 @@ const RoutineTableCell = ({
       </TableCell>
     ) : (
       <TableCell
-        rowSpan={combined && !onlySection ? 2 : 1}
-        align="center"
         key={index}
-        sx={[tCellStyles, { p: 0 }]}
+        sx={{
+          // display: "flex",
+          ...tCellStyles,
+          p: 0,
+          px: 0,
+        }}
+        rowSpan={combined && !onlySection ? 2 : 1}
       >
-        {subject} <br />
-        {room}
+        <Box
+          sx={{
+            display: "flex",
+            height: "100%",
+          }}
+        >
+          {subjectsAndRoom.map(([subject, room], index) => (
+            <Box
+              key={subject?.shortName}
+              sx={{
+                // ...tCellStyles,
+                // border: "none",
+                borderLeft:
+                  index === 0 ? "none" : "1px solid #d7d7d7",
+                p: 1,
+                backgroundColor: "#ddd",
+                flex: 1,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                transition: "all .1s",
+                cursor: subject?.microSyllabus ? "pointer" : null,
+                "&:hover": {
+                  backgroundColor: subject?.microSyllabus
+                    ? "#e3e3e3"
+                    : null,
+                },
+                whiteSpace: "pre-wrap",
+              }}
+              role={subject?.microSyllabus ? "button" : null}
+              onClick={() => {
+                const clickOpens =
+                  localStorage.getItem("clickOpens") || "syllabus";
+                if (clickOpens === "syllabus") {
+                  if (subject?.microSyllabus) {
+                    window.open(subject.microSyllabus, "_blank");
+                  } else {
+                    setContributeDialogOpen(true);
+                    setContributeDialogTitle(
+                      `${subject?.shortName} syllabus not found`
+                    );
+                  }
+                }
+                if (clickOpens === "notes") {
+                  if (subject?.notes) {
+                    window.open(subject.notes, "_blank");
+                  } else {
+                    setContributeDialogOpen(true);
+                    setContributeDialogTitle(
+                      `${subject?.shortName} notes not found`
+                    );
+                  }
+                }
+                if (clickOpens === "question") {
+                  if (subject?.questions) {
+                    window.open(subject.questions, "_blank");
+                  } else {
+                    setContributeDialogOpen(true);
+                    setContributeDialogTitle(
+                      `${subject?.shortName} question bank not found`
+                    );
+                  }
+                }
+              }}
+            >
+              {subject?.shortName}
+              <br />
+              {room}
+            </Box>
+          ))}
+        </Box>
       </TableCell>
     );
   });
@@ -374,7 +465,12 @@ export default function ClassRoutine({ sem }) {
                   </RadioGroup>
                 </FormControl>
                 <TableContainer>
-                  <Table size="small">
+                  <Table
+                    size="small"
+                    sx={{
+                      height: 1, // to make td fill the height of the table
+                    }}
+                  >
                     <TableHead>
                       <TableRow
                         sx={{
