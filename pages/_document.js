@@ -14,9 +14,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en" className={roboto.className}>
         <Head>
-          <title key="title">
-            CSIT21 - SXC B.Sc. CSIT Batch 2021
-          </title>
           <meta
             key="og:image"
             property="og:image"

@@ -7,9 +7,9 @@ import {
   CardContent,
   Container,
   Toolbar,
-  Typography,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
+import dynamic from "next/dynamic";
 
 import Materials from "../components/Materials";
 import Soon from "../components/Soon";
@@ -28,7 +28,7 @@ import Feedback from "../components/Feedback";
 import Countdown from "../components/Countdown";
 // import LeftSideCardMessage from "../components/LeftSideCardMessage";
 
-export default function Index() {
+function Index() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
 
@@ -280,3 +280,7 @@ export default function Index() {
     </>
   );
 }
+
+export default dynamic(() => Promise.resolve(Index), {
+  ssr: false,
+});

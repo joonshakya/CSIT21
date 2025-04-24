@@ -6,12 +6,11 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider } from "@emotion/react";
 import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
-import dynamic from "next/dynamic";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
-function MyApp(props) {
+export default function MyApp(props) {
   const {
     Component,
     emotionCache = clientSideEmotionCache,
@@ -297,7 +296,3 @@ MyApp.propTypes = {
   emotionCache: PropTypes.object,
   pageProps: PropTypes.object.isRequired,
 };
-
-export default dynamic(() => Promise.resolve(MyApp), {
-  ssr: false,
-});
