@@ -101,29 +101,9 @@ const Materials = ({ sem, setSem }) => {
               }}
             >
               <FormControlLabel
-                value="sem7"
+                value="sem1"
                 control={<Radio />}
-                label="7th"
-              />
-              <FormControlLabel
-                value="sem6"
-                control={<Radio />}
-                label="6th"
-              />
-              <FormControlLabel
-                value="sem5"
-                control={<Radio />}
-                label="5th"
-              />
-              <FormControlLabel
-                value="sem4"
-                control={<Radio />}
-                label="4th"
-              />
-              <FormControlLabel
-                value="sem3"
-                control={<Radio />}
-                label="3rd"
+                label="1st"
               />
               <FormControlLabel
                 value="sem2"
@@ -131,9 +111,29 @@ const Materials = ({ sem, setSem }) => {
                 label="2nd"
               />
               <FormControlLabel
-                value="sem1"
+                value="sem3"
                 control={<Radio />}
-                label="1st"
+                label="3rd"
+              />
+              <FormControlLabel
+                value="sem4"
+                control={<Radio />}
+                label="4th"
+              />
+              <FormControlLabel
+                value="sem5"
+                control={<Radio />}
+                label="5th"
+              />
+              <FormControlLabel
+                value="sem6"
+                control={<Radio />}
+                label="6th"
+              />
+              <FormControlLabel
+                value="sem7"
+                control={<Radio />}
+                label="7th"
               />
             </RadioGroup>
           </FormControl>

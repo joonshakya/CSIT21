@@ -619,16 +619,10 @@ export const subjects = {
       shortName: "IR",
       microSyllabus:
         "https://drive.google.com/file/d/1P4DjuhJQNAgmkiuKHUDVZsA9jYCJp7ue/view?usp=drive_link",
-      notes: "",
-      questions: "",
-    },
-    DBA: {
-      name: "Database Administration",
-      shortName: "DBA",
-      microSyllabus:
-        "https://drive.google.com/file/d/1Re2xKjNz-2lCvYujYj77WdBVncRdHsPR/view?usp=drive_link",
-      notes: "",
-      questions: "",
+      notes:
+        "https://collegenote.net/courses/notes/information-retrieval-csit-2074-syllabus-39",
+      questions:
+        "https://collegenote.net/old-question/information-retrieval-2076-502",
     },
     SPM: {
       name: "Software Project Management",
