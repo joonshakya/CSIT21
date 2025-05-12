@@ -55,9 +55,11 @@ You can access the live version of CSIT21 at [https://www.csit21.cf](https://www
   ```
 
 - If you are using bun
-  `bash
+
+  ```bash
     bun install
-    `
+  ```
+
   <br/>
 
 4. To run the server, run the following commands
