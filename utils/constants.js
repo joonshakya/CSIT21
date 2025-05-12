@@ -973,79 +973,85 @@ export const classRoutine = {
     {
       day: "Sun",
       a: [
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem7.DWDM, ""],
+        [subjects.sem7.PoM, ""],
       ],
       b: [
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem7.PoM, ""],
+        [subjects.sem7.Java, ""],
       ],
     },
     {
       day: "Mon",
       a: [
-        [subjects.sem7.SPM, "318"],
-        [subjects.sem7.PoM, "318"],
+        [subjects.sem7.DWDM, ""],
+        [subjects.sem7.PoM, ""],
       ],
       b: [
-        [subjects.sem7.SPM, "318"],
-        [subjects.sem7.PoM, "318"],
+        [subjects.sem7.PoM, ""],
+        [subjects.sem7.Java, ""],
       ],
     },
     {
       day: "Tue",
       a: [
-        [subjects.sem7.IR, "318"],
-        ["FYP Orientation", ""],
+        [subjects.sem7.DWDM, ""],
+        [subjects.sem7.PoM, ""],
       ],
       b: [
-        [subjects.sem7.IR, "318"],
-        ["FYP Orientation", ""],
+        [subjects.sem7.PoM, ""],
+        [subjects.sem7.Java, ""],
       ],
     },
     {
       day: "Wed",
       a: [
-        [subjects.sem7.SPM, "318"],
-        [subjects.sem7.PoM, "318"],
+        [
+          [subjects.sem7.SPM, ""],
+          [subjects.sem7.IR, ""],
+        ],
+        [subjects.sem7.Java, ""],
       ],
       b: [
-        [subjects.sem7.SPM, "318"],
-        [subjects.sem7.PoM, "318"],
+        [
+          [subjects.sem7.SPM, ""],
+          [subjects.sem7.IR, ""],
+        ],
+        [subjects.sem7.DWDM, ""],
       ],
     },
     {
       day: "Thu",
       a: [
         [
-          [subjects.sem7.SPM, "318"],
-          [subjects.sem7.IR, "320"],
+          [subjects.sem7.SPM, ""],
+          [subjects.sem7.IR, ""],
         ],
-        [subjects.sem7.Java, "318"],
+        [subjects.sem7.Java, ""],
       ],
       b: [
         [
-          [subjects.sem7.SPM, "318"],
-          [subjects.sem7.IR, "320"],
+          [subjects.sem7.SPM, ""],
+          [subjects.sem7.IR, ""],
         ],
-        [subjects.sem7.DWDM, "318"],
+        [subjects.sem7.DWDM, ""],
       ],
     },
     {
       day: "Fri",
       a: [
         [
-          [subjects.sem7.SPM, "318"],
-          [subjects.sem7.IR, "320"],
+          [subjects.sem7.SPM, ""],
+          [subjects.sem7.IR, ""],
         ],
-        [subjects.sem7.DWDM, "318"],
+        [subjects.sem7.Java, ""],
       ],
       b: [
         [
-          [subjects.sem7.SPM, "318"],
-          [subjects.sem7.IR, "320"],
+          [subjects.sem7.SPM, ""],
+          [subjects.sem7.IR, ""],
         ],
-        [subjects.sem7.Java, "318"],
+        [subjects.sem7.DWDM, ""],
       ],
     },
   ],
@@ -2159,6 +2165,69 @@ export const examRoutine = {
             6<sup>th</sup> April
             <br />
             24<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+    ],
+    [examTypes.prac]: [
+      {
+        day: "Wed",
+        subject: subjects.sem6.SE,
+        time: "7:00 AM",
+        date: "2025/05/14",
+        friendlyDate: (
+          <>
+            14<sup>th</sup> May
+            <br />
+            31<sup>st</sup> Baisakh
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem6.Compiler,
+        time: "7:00 AM",
+        date: "2025/05/15",
+        friendlyDate: (
+          <>
+            15<sup>th</sup> May
+            <br />1<sup>st</sup> Jestha
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        time: "7:00 AM",
+        date: "2025/05/16",
+        subject: subjects.sem6.ECom,
+        friendlyDate: (
+          <>
+            16<sup>th</sup> May
+            <br />2<sup>nd</sup> Jestha
+          </>
+        ),
+      },
+      {
+        day: "Sun",
+        date: "2025/05/18",
+        time: "7:00 AM",
+        subject: subjects.sem6.NCC,
+        friendlyDate: (
+          <>
+            18<sup>th</sup> May
+            <br />4<sup>th</sup> Jestha
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        time: "7:00 AM",
+        date: "2025/05/19",
+        subject: subjects.sem6.EGov,
+        friendlyDate: (
+          <>
+            19<sup>th</sup> May
+            <br />5<sup>th</sup> Jestha
           </>
         ),
       },

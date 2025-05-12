@@ -121,83 +121,22 @@ function Index() {
                 {/* End Components */}
                 {sem === "" || sem === currentJoonSem ? (
                   <>
-                    <Card
-                      sx={{
-                        mt: 2,
-                        display: "flex",
-                        borderRadius: ".6rem",
-                        "&:hover": {
-                          boxShadow:
-                            "0 20px 20px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
-                        },
-                        overflowX: "auto",
-                      }}
-                      elevation={3}
-                    >
-                      <Box
-                        sx={{
-                          flex: 1,
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        <CardContent
-                          sx={{
-                            flex: 1,
-                            pb: "0 !important",
-                          }}
-                        >
-                          <Countdown
-                            text="Orientation Classes"
-                            yyyymmddDate={"2025/04/16 6:15 AM"}
-                          />
-                          <Countdown
-                            text="6th Sem Practical Exam"
-                            hideTomorrow={true}
-                            yyyymmddDate={"2025/05/14"}
-                          />
-                        </CardContent>
-                      </Box>
-                    </Card>
+                    <ExamRoutine
+                      examType={examTypes.prac}
+                      title="6th Sem Practical Exam Routine"
+                      subtitle="Venue: Lab A and Lab B"
+                      sem={"sem6"}
+                    />
                     <ClassRoutine sem={sem || currentJoonSem} />
                   </>
                 ) : null}
                 {sem === "sem6" ? (
                   <>
-                    <Card
-                      sx={{
-                        mt: 2,
-                        display: "flex",
-                        borderRadius: ".6rem",
-                        "&:hover": {
-                          boxShadow:
-                            "0 20px 20px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
-                        },
-                        overflowX: "auto",
-                      }}
-                      elevation={3}
-                    >
-                      <Box
-                        sx={{
-                          flex: 1,
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        <CardContent
-                          sx={{
-                            flex: 1,
-                            pb: "0 !important",
-                          }}
-                        >
-                          <Countdown
-                            text="6th Sem Practical Exam"
-                            hideTomorrow={true}
-                            yyyymmddDate={"2025/05/14"}
-                          />
-                        </CardContent>
-                      </Box>
-                    </Card>
+                    <ExamRoutine
+                      examType={examTypes.prac}
+                      subtitle="Venue: Lab A and Lab B"
+                      sem={"sem6"}
+                    />
                     <ExamRoutine
                       examType={examTypes.pre}
                       sem={sem || currentJoonSem}
