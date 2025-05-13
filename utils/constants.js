@@ -58,6 +58,10 @@ export const eComAssignments = [
   {
     number: 7,
     name: "Product Feedback Collection",
+  },
+  {
+    number: 8,
+    name: "Payment API Integration",
     selected: true,
   },
 ];
