@@ -15,6 +15,7 @@ import {
   webTechAssignments,
   nccAssignments,
   compilerAssignments,
+  eComAssignments,
 } from "../constants";
 import { useState } from "react";
 import { useBaseStore } from "../../src/store";
@@ -64,6 +65,7 @@ export default function useFrontPageGenerator() {
       Simulation: simulationAssignments,
       "Web Tech": webTechAssignments,
       NCC: nccAssignments,
+      ECom: eComAssignments,
       Compiler: compilerAssignments,
     };
 
@@ -125,6 +127,8 @@ export async function prefetchDocument({
   } else if (
     ![
       "NCC Index",
+      "SE Index",
+      "ECom Index",
       "Compiler Index",
       "Web Tech Index",
       "Simulation Index",

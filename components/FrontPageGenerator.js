@@ -31,6 +31,7 @@ import {
   simulationAssignments,
   nccAssignments,
   compilerAssignments,
+  eComAssignments,
 } from "../utils/constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
@@ -61,6 +62,7 @@ export default function FrontPageGenerator({ sem }) {
       "Web Tech",
       "Simulation",
       "NCC",
+      "ECom",
       "Compiler",
     ];
   }, []);
@@ -68,6 +70,8 @@ export default function FrontPageGenerator({ sem }) {
   const assignmentsWithoutTopics = useMemo(() => {
     return [
       "Compiler Index",
+      "Ecom Index",
+      "SE Index",
       "NCC Index",
       "Web Tech Index",
       "Simulation Index",
@@ -98,6 +102,10 @@ export default function FrontPageGenerator({ sem }) {
       {
         subject: "Compiler",
         assignments: compilerAssignments,
+      },
+      {
+        subject: "ECom",
+        assignments: eComAssignments,
       },
       {
         subject: "NCC",
@@ -147,6 +155,24 @@ export default function FrontPageGenerator({ sem }) {
       },
       {
         subject: "NCC Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "ECom Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "SE Index",
         assignments: [
           {
             number: 0,
@@ -553,6 +579,10 @@ export default function FrontPageGenerator({ sem }) {
                           shortHand: "NCC",
                           longHand: "NCC",
                         },
+                        {
+                          shortHand: "ECom",
+                          longHand: "ECom",
+                        },
                       ]
                     : [
                         {
@@ -562,6 +592,14 @@ export default function FrontPageGenerator({ sem }) {
                         {
                           shortHand: "NCC Index",
                           longHand: "NCC",
+                        },
+                        {
+                          shortHand: "SE Index",
+                          longHand: "SE",
+                        },
+                        {
+                          shortHand: "ECom Index",
+                          longHand: "ECom",
                         },
                       ]
                   ).map((subject, index) => (

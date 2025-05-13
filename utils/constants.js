@@ -1,3 +1,4 @@
+import { number } from "prop-types";
 import { useDevCppDownloadDialogStore } from "../src/store";
 
 export const compilerAssignments = [
@@ -25,6 +26,38 @@ export const compilerAssignments = [
   {
     number: 7,
     name: "Design LALR Bottom Up Parser",
+    selected: true,
+  },
+];
+
+export const eComAssignments = [
+  {
+    number: 1,
+    name: "User Registration",
+  },
+  {
+    number: 2,
+    name: "User Login",
+  },
+  {
+    number: 3,
+    name: "Product List",
+  },
+  {
+    number: 4,
+    name: "Product Search",
+  },
+  {
+    number: 5,
+    name: "Product Catalog",
+  },
+  {
+    number: 6,
+    name: "Shopping Cart",
+  },
+  {
+    number: 7,
+    name: "Product Feedback Collection",
     selected: true,
   },
 ];

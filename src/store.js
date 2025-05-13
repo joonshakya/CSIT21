@@ -54,6 +54,7 @@ export const useOpCodeStore = create((set) => ({
 export const useWordStore = create((set) => ({
   Compiler: null,
   NCC: null,
+  ECom: null,
   Simulation: null,
   ["Web Tech"]: null,
   "DL Section A": null,
@@ -62,6 +63,8 @@ export const useWordStore = create((set) => ({
   C: null,
   Index: null,
   ["NCC Index"]: null,
+  ["SE Index"]: null,
+  ["ECom Index"]: null,
   ["Compiler Index"]: null,
   ["Web Tech Index"]: null,
   ["Simulation Index"]: null,
