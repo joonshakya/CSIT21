@@ -2223,7 +2223,7 @@ export const examRoutine = {
       {
         day: "Thu",
         subject: subjects.sem6.Compiler,
-        time: "7:00 AM",
+        time: "7:30 AM",
         date: "2025/05/15",
         friendlyDate: (
           <>
