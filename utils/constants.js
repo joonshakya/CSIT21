@@ -2234,7 +2234,7 @@ export const examRoutine = {
       },
       {
         day: "Fri",
-        time: "7:00 AM",
+        time: "6:30 AM",
         date: "2025/05/16",
         subject: subjects.sem6.ECom,
         friendlyDate: (
