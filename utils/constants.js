@@ -1010,85 +1010,85 @@ export const classRoutine = {
     {
       day: "Sun",
       a: [
-        [subjects.sem7.DWDM, ""],
-        [subjects.sem7.PoM, ""],
+        [subjects.sem7.DWDM, "315"],
+        [subjects.sem7.PoM, "315"],
       ],
       b: [
-        [subjects.sem7.PoM, ""],
-        [subjects.sem7.Java, ""],
+        [subjects.sem7.PoM, "321"],
+        [subjects.sem7.Java, "321"],
       ],
     },
     {
       day: "Mon",
       a: [
-        [subjects.sem7.DWDM, ""],
-        [subjects.sem7.PoM, ""],
+        [subjects.sem7.DWDM, "315"],
+        [subjects.sem7.PoM, "315"],
       ],
       b: [
-        [subjects.sem7.PoM, ""],
-        [subjects.sem7.Java, ""],
+        [subjects.sem7.PoM, "321"],
+        [subjects.sem7.Java, "321"],
       ],
     },
     {
       day: "Tue",
       a: [
-        [subjects.sem7.DWDM, ""],
-        [subjects.sem7.PoM, ""],
+        [subjects.sem7.DWDM, "315"],
+        [subjects.sem7.PoM, "315"],
       ],
       b: [
-        [subjects.sem7.PoM, ""],
-        [subjects.sem7.Java, ""],
+        [subjects.sem7.PoM, "321"],
+        [subjects.sem7.Java, "321"],
       ],
     },
     {
       day: "Wed",
       a: [
         [
-          [subjects.sem7.SPM, ""],
-          [subjects.sem7.IR, ""],
+          [subjects.sem7.SPM, "321"],
+          [subjects.sem7.IR, "315"],
         ],
-        [subjects.sem7.Java, ""],
+        [subjects.sem7.Java, "315"],
       ],
       b: [
         [
-          [subjects.sem7.SPM, ""],
-          [subjects.sem7.IR, ""],
+          [subjects.sem7.SPM, "321"],
+          [subjects.sem7.IR, "315"],
         ],
-        [subjects.sem7.DWDM, ""],
+        [subjects.sem7.DWDM, "321"],
       ],
     },
     {
       day: "Thu",
       a: [
         [
-          [subjects.sem7.SPM, ""],
-          [subjects.sem7.IR, ""],
+          [subjects.sem7.SPM, "321"],
+          [subjects.sem7.IR, "315"],
         ],
-        [subjects.sem7.Java, ""],
+        [subjects.sem7.Java, "315"],
       ],
       b: [
         [
-          [subjects.sem7.SPM, ""],
-          [subjects.sem7.IR, ""],
+          [subjects.sem7.SPM, "321"],
+          [subjects.sem7.IR, "315"],
         ],
-        [subjects.sem7.DWDM, ""],
+        [subjects.sem7.DWDM, "321"],
       ],
     },
     {
       day: "Fri",
       a: [
         [
-          [subjects.sem7.SPM, ""],
-          [subjects.sem7.IR, ""],
+          [subjects.sem7.SPM, "321"],
+          [subjects.sem7.IR, "315"],
         ],
-        [subjects.sem7.Java, ""],
+        [subjects.sem7.Java, "315"],
       ],
       b: [
         [
-          [subjects.sem7.SPM, ""],
-          [subjects.sem7.IR, ""],
+          [subjects.sem7.SPM, "321"],
+          [subjects.sem7.IR, "315"],
         ],
-        [subjects.sem7.DWDM, ""],
+        [subjects.sem7.DWDM, "321"],
       ],
     },
   ],
