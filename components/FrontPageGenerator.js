@@ -94,7 +94,7 @@ export default function FrontPageGenerator({ sem }) {
     ];
   }, []);
 
-  const initialSubject = "Compiler";
+  const initialSubject = "Java";
 
   const [tab, setTab] = useState("assignment");
   const [subject, setSubject] = useState(initialSubject);
