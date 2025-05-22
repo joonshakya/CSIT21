@@ -32,6 +32,7 @@ import {
   nccAssignments,
   compilerAssignments,
   eComAssignments,
+  javaAssignments,
 } from "../utils/constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
@@ -64,6 +65,7 @@ export default function FrontPageGenerator({ sem }) {
       "NCC",
       "ECom",
       "Compiler",
+      "Java",
     ];
   }, []);
 
@@ -99,6 +101,10 @@ export default function FrontPageGenerator({ sem }) {
 
   const assignmentLists = useMemo(() => {
     return [
+      {
+        subject: "Java",
+        assignments: javaAssignments,
+      },
       {
         subject: "Compiler",
         assignments: compilerAssignments,
@@ -562,6 +568,31 @@ export default function FrontPageGenerator({ sem }) {
                   // backgroundColor: "#f3f4f9",
                 }}
               >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
+                  {(tab === "assignment"
+                    ? [
+                        {
+                          shortHand: "Java",
+                          longHand: "Java",
+                        },
+                      ]
+                    : []
+                  ).map((subject, index) => (
+                    <FormControlLabel
+                      key={index}
+                      value={subject.shortHand}
+                      defaultChecked={index === 0}
+                      control={<Radio />}
+                      label={subject.longHand}
+                    />
+                  ))}
+                </Box>
                 <Box
                   sx={{
                     display: "flex",

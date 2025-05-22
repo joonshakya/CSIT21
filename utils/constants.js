@@ -1,5 +1,8 @@
-import { number } from "prop-types";
 import { useDevCppDownloadDialogStore } from "../src/store";
+
+export const javaAssignments = [
+  { number: 1, name: "Lab Sheet 1 to 10", selected: true },
+];
 
 export const compilerAssignments = [
   { number: 1, name: "Tokenizing the Source Code" },

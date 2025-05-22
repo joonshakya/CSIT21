@@ -52,6 +52,7 @@ export const useOpCodeStore = create((set) => ({
 }));
 
 export const useWordStore = create((set) => ({
+  Java: null,
   Compiler: null,
   NCC: null,
   ECom: null,
