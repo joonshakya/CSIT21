@@ -7,7 +7,8 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import { materials } from "../utils/constants";
+import EditOnGithubButton from "./EditOnGithubButton";
+import { materials } from "../utils/constants/materials";
 
 export function GradientButton({
   name,
@@ -82,6 +83,7 @@ const Materials = ({ sem, setSem }) => {
             pt: 1,
           }}
         >
+          <EditOnGithubButton link="https://www.github.com/" />
           <FormControl
             sx={{
               display: "flex",

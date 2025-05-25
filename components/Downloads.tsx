@@ -9,8 +9,8 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useDevCppDownloadDialogStore } from "../src/store";
-import { downloads } from "../utils/constants";
 import { GradientButton } from "./Materials";
+import { downloads } from "../utils/constants/downloads";
 
 export default function Downlaods() {
   const { open, setOpen } = useDevCppDownloadDialogStore();

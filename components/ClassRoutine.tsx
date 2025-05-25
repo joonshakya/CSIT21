@@ -6,7 +6,7 @@ import { Fragment, useEffect, useState } from "react";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import { classRoutine, names } from "../utils/constants";
+import { names } from "../utils/constants";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -19,6 +19,7 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import { useBaseStore } from "../src/store";
 import ContributeDialog from "./ContributeDialog";
+import { classRoutine } from "../utils/constants/classRoutine";
 
 const tCellStyles = {
   px: 1,
