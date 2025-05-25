@@ -11,7 +11,9 @@ import FormLabel from "@mui/material/FormLabel";
 import Typography from "@mui/material/Typography";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
-import { MenuItem, Tab, Tabs } from "@mui/material";
+import MenuItem from "@mui/material/MenuItem";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 import { useEffect, useState, useRef, useMemo } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -36,10 +38,12 @@ import {
 } from "../utils/constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
-import { CircularProgress } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 import { useBaseStore, useWordStore } from "../src/store";
+import { Sem } from "../utils/constants/types";
+import { ListItem } from "@mui/material";
 
-export default function FrontPageGenerator({ sem }) {
+export default function FrontPageGenerator({ sem }: { sem: Sem }) {
   const namePicker = useRef(null);
 
   const roll = useBaseStore((state) => state.roll);
@@ -382,20 +386,30 @@ export default function FrontPageGenerator({ sem }) {
     assignmentsWithoutTopics,
   ]);
 
-  const list = [
+  const list: Array<{
+    roll: number;
+    label: string;
+  }> = [
     ["0", ["Select your name"]],
     ...Object.entries(names[sem]),
-  ].map((entry) => ({
-    roll: entry[0],
+  ].map((entry: [roll: string, [name: string]]) => ({
+    roll: parseInt(entry[0]),
     label: entry[1][0],
   }));
 
-  const wordFiles = useWordStore();
-  const [generateFrontPage, error, loading, setError] =
+  const wordFiles = useWordStore() as {
+    setWordFile: (data: {
+      subject: string;
+      content: ArrayBuffer;
+    }) => void;
+  } & {
+    [key: string]: ArrayBuffer | null;
+  };
+  const { generateFrontPage, error, loading, setError } =
     useFrontPageGenerator();
 
   useEffect(() => {
-    setError(false);
+    setError(null);
     prefetchDocument({
       sem,
       wordFiles,
@@ -428,7 +442,7 @@ export default function FrontPageGenerator({ sem }) {
           component="form"
           onSubmit={(e) => {
             e.preventDefault();
-            if (roll === "0" || !roll) {
+            if (!roll) {
               namePicker.current.select();
               return;
             }
@@ -468,7 +482,7 @@ export default function FrontPageGenerator({ sem }) {
               autoHighlight
               options={list}
               getOptionDisabled={(option) =>
-                option === list.find((entry) => entry.roll === "0")
+                option === list.find((entry) => entry.roll === 0)
               }
               renderInput={(params) => (
                 <TextField
@@ -483,7 +497,7 @@ export default function FrontPageGenerator({ sem }) {
                 option.roll === value.roll
               }
               renderOption={(props, option) => (
-                <Box
+                <ListItem
                   {...props}
                   sx={{
                     display: "flex",
@@ -497,7 +511,7 @@ export default function FrontPageGenerator({ sem }) {
                     {option.label}
                   </Typography>
                   <Typography>{option.roll}</Typography>
-                </Box>
+                </ListItem>
               )}
             />
             <FormLabel
@@ -894,10 +908,10 @@ export default function FrontPageGenerator({ sem }) {
                     required
                     value={assignmentNumber}
                     onChange={(e) => {
-                      setAssignmentNumber(e.target.value);
+                      setAssignmentNumber(parseInt(e.target.value));
                     }}
                     onWheel={(event) => {
-                      event.target.blur();
+                      (event.target as HTMLInputElement).blur();
                     }}
                   />
                 ) : null}
@@ -933,7 +947,11 @@ export default function FrontPageGenerator({ sem }) {
                         }}
                         value={assignmentNumber}
                         onChange={(event) =>
-                          setAssignmentNumber(event.target.value)
+                          setAssignmentNumber(
+                            typeof event.target.value === "string"
+                              ? parseInt(event.target.value)
+                              : event.target.value
+                          )
                         }
                       >
                         {entry.assignments.map(

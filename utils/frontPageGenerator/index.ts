@@ -22,19 +22,34 @@ import { useState } from "react";
 import { useBaseStore } from "../../src/store";
 
 export default function useFrontPageGenerator() {
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const generateFrontPage = async ({
+
+  async function generateFrontPage({
     sem,
     roll,
     subject,
     assignmentNumber,
     assignmentName,
     wordFiles,
-  }) => {
+  }: {
+    sem: string;
+    roll: number;
+    subject: string;
+    assignmentNumber: number;
+    assignmentName?: string;
+    wordFiles: {
+      setWordFile: (data: {
+        subject: string;
+        content: ArrayBuffer;
+      }) => void;
+    } & {
+      [key: string]: ArrayBuffer | null;
+    };
+  }) {
     setLoading(true);
     setError(null);
-    if (roll === "0" || !roll) {
+    if (!roll) {
       return;
     }
     const { error, content } = await prefetchDocument({
@@ -44,13 +59,13 @@ export default function useFrontPageGenerator() {
       roll,
       setLoad: true,
     });
-    if (error) {
+
+    if (error !== null) {
       setError(error);
       setLoading(false);
       return;
-    } else {
-      setError(null);
     }
+    setError(null);
 
     const assignmentMap = {
       DL: dlAssignments,
@@ -102,13 +117,14 @@ export default function useFrontPageGenerator() {
         ? `${subject}`
         : `${subject} Lab ${assignmentNumber}`
     } - Front Page.docx`;
+
     generateDocument(
       { content, data, outputName },
       setError,
       setLoading
     );
-  };
-  return [generateFrontPage, error, loading, setError];
+  }
+  return { generateFrontPage, error, loading, setError };
 }
 
 export async function prefetchDocument({
@@ -117,12 +133,36 @@ export async function prefetchDocument({
   subject,
   roll,
   setLoad,
-}) {
+}: {
+  sem: string;
+  wordFiles: {
+    setWordFile: (data: {
+      subject: string;
+      content: ArrayBuffer;
+    }) => void;
+  } & {
+    [key: string]: ArrayBuffer | null;
+  };
+  subject: string;
+  roll: number | string;
+  setLoad?: boolean;
+}): Promise<
+  | {
+      content: ArrayBuffer;
+      error: null;
+    }
+  | {
+      content: null;
+      error: string;
+    }
+> {
   useBaseStore.setState({ wordFileLoaded: 0 });
-
   if (subject === "DL") {
     if (roll === "0" || !roll) {
-      return;
+      return {
+        content: null,
+        error: "Invalid roll number",
+      };
     }
     subject =
       names[sem][roll][2] == "A" ? "DL Section A" : "DL Section B";
@@ -153,7 +193,7 @@ export async function prefetchDocument({
   let content = wordFiles[subject];
   if (content) {
     // console.log(`Using cached ${subject}`);
-    return { content, error: false };
+    return { content, error: null };
   }
 
   const link = `/static/word-templates/${subject}.docx?${Date.now()}`;
@@ -162,14 +202,23 @@ export async function prefetchDocument({
   try {
     const response = await fetch(link);
     if (!response.ok) {
-      return { error: "File downloading failed" };
+      return {
+        content: null,
+        error: "File downloading failed",
+      };
     }
-    const contentLength = response.headers.get("content-length");
+    const contentLength =
+      response.headers.get("content-length") || "";
     const total = parseInt(contentLength, 10);
     let loaded = 0;
     const res = new Response(
       new ReadableStream({
         async start(controller) {
+          if (!response.body) {
+            throw new Error(
+              "ReadableStream not yet supported in this browser."
+            );
+          }
           const reader = response.body.getReader();
           for (let i = 0; ; i++) {
             const { done, value } = await reader.read();
@@ -193,9 +242,12 @@ export async function prefetchDocument({
     content = await res.arrayBuffer();
     // console.log(`Downloaded ${subject}`);
     wordFiles.setWordFile({ subject, content });
-    return { content, error: false };
+    return { content, error: null };
   } catch (error) {
     console.log(error);
-    return { error: "File downloading failed" };
+    return {
+      content: null,
+      error: "File downloading failed",
+    };
   }
 }

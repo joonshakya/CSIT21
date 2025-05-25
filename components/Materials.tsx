@@ -1,53 +1,58 @@
-import {
-  Card,
-  Box,
-  CardContent,
-  Typography,
-  Button,
-} from "@mui/material";
-
+import Card from "@mui/material/Card";
+import Box from "@mui/material/Box";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import { materials } from "../utils/constants";
 
-export const GradientButton = ({
+export function GradientButton({
   name,
   link,
   bgColor,
   bgImage,
   onClick,
-}) => (
-  <Button
-    href={link}
-    onClick={onClick}
-    target="_blank"
-    rel="noopener noreferrer"
-    sx={{
-      textAlign: "left",
-      color: "white",
-      fontSize: "1.2rem",
-      minWidth: "6.2rem",
-      borderRadius: "0.5rem",
-      height: "5.4rem",
-      fontWeight: "bold",
-      alignItems: "flex-end",
-      justifyContent: "flex-start",
-      px: 1.6,
-      m: 1,
-      lineHeight: 1.2,
-      backgroundColor: bgColor,
-      backgroundImage: bgImage,
-      boxShadow: `0 4px 12px -2px ${bgColor}`,
-      "&:hover": {
-        boxShadow: `0 4px 24px 0 ${bgColor}`,
-      },
-    }}
-  >
-    {name}
-  </Button>
-);
+}: {
+  name: string | React.ReactNode;
+  link: string;
+  bgColor: string;
+  bgImage: string;
+  onClick?: () => void;
+}) {
+  return (
+    <Button
+      href={link}
+      onClick={onClick}
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        textAlign: "left",
+        color: "white",
+        fontSize: "1.2rem",
+        minWidth: "6.2rem",
+        borderRadius: "0.5rem",
+        height: "5.4rem",
+        fontWeight: "bold",
+        alignItems: "flex-end",
+        justifyContent: "flex-start",
+        px: 1.6,
+        m: 1,
+        lineHeight: 1.2,
+        backgroundColor: bgColor,
+        backgroundImage: bgImage,
+        boxShadow: `0 4px 12px -2px ${bgColor}`,
+        "&:hover": {
+          boxShadow: `0 4px 24px 0 ${bgColor}`,
+        },
+      }}
+    >
+      {name}
+    </Button>
+  );
+}
 
 const Materials = ({ sem, setSem }) => {
   return (
@@ -71,6 +76,7 @@ const Materials = ({ sem, setSem }) => {
       >
         <CardContent
           sx={{
+            position: "relative",
             flex: 1,
             pb: 0,
             pt: 1,

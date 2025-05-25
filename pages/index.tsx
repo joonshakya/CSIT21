@@ -1,13 +1,9 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FrontPageGenerator from "../components/FrontPageGenerator";
-import {
-  Box,
-  Card,
-  CardContent,
-  Container,
-  Toolbar,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Toolbar from "@mui/material/Toolbar";
 import Grid from "@mui/material/Grid2";
 import dynamic from "next/dynamic";
 
@@ -26,6 +22,7 @@ import { useEffect, useState } from "react";
 import Downlaods from "../components/Downloads";
 import Feedback from "../components/Feedback";
 import Countdown from "../components/Countdown";
+import { Sem } from "../utils/constants/types";
 // import LeftSideCardMessage from "../components/LeftSideCardMessage";
 
 function Index() {
@@ -36,26 +33,26 @@ function Index() {
 
   let semParam = router.asPath.split("/")[1];
 
-  const [sem, setSem] = useState(
+  const [sem, setSem] = useState<Sem | null>(
     (() => {
-      if (typeof window === "undefined") return "";
+      if (typeof window === "undefined") return null;
       if (semParam) {
         const semParamNum = parseInt(semParam);
         if (
           semParamNum >= 1 ||
-          semParamNum <= currentJoonSem.split("sem")[1]
+          semParamNum <= parseInt(currentJoonSem.split("sem")[1])
         ) {
           localStorage.setItem("sem", semParam);
           Router.replace(`/`);
-          return `sem${semParamNum}`;
+          return `sem${semParamNum}` as Sem;
         }
         localStorage.setItem("sem", currentJoonSem.split("sem")[1]);
         Router.replace(`/`);
-        return "";
+        return null;
       }
       return localStorage.getItem("sem")
-        ? `sem${localStorage.getItem("sem")}`
-        : "";
+        ? (`sem${localStorage.getItem("sem")}` as Sem)
+        : null;
     })()
   );
 
@@ -119,7 +116,7 @@ function Index() {
                 {/* <ExamRoutine examType={examTypes.prac} sem="sem3" /> */}
                 {/* <LeftSideCardMessage title="Happy Dashain" /> */}
                 {/* End Components */}
-                {sem === "" || sem === currentJoonSem ? (
+                {sem === null || sem === currentJoonSem ? (
                   <>
                     <ExamRoutine
                       examType={examTypes.prac}

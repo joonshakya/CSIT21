@@ -1,4 +1,7 @@
-import { Card, Box, CardContent, Typography } from "@mui/material";
+import Card from "@mui/material/Card";
+import Box from "@mui/material/Box";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";

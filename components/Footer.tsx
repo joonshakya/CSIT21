@@ -1,4 +1,5 @@
-import { Toolbar, Typography, Box } from "@mui/material";
+import Toolbar from "@mui/material/Toolbar";
+import Box from "@mui/material/Box";
 import Link from "next/link";
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";

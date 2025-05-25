@@ -216,12 +216,12 @@ export default function ClassRoutine({ sem }) {
   const [tomorrowDayName, setTomorrowDayName] = useState("");
 
   const [section, setSection] = useState(
-    (roll !== "0" && names[sem]?.[roll]?.[2]) || roll < 25 ? "A" : "B"
+    (roll && names[sem]?.[roll]?.[2]) || roll < 25 ? "A" : "B"
   );
 
   useEffect(() => {
     setSection(
-      roll !== "0"
+      roll
         ? names[sem]?.[roll]?.[2] || (roll < 25 ? "A" : "B")
         : false
     );
@@ -338,7 +338,7 @@ export default function ClassRoutine({ sem }) {
                   }}
                 >
                   {Array(3)
-                    .fill()
+                    .fill(null)
                     .map((item, index) => (
                       <Box
                         key={index}
@@ -349,7 +349,7 @@ export default function ClassRoutine({ sem }) {
                         }}
                       >
                         {Array(3)
-                          .fill()
+                          .fill(null)
                           .map((item, index) => (
                             <Skeleton
                               key={index}
@@ -533,7 +533,7 @@ export default function ClassRoutine({ sem }) {
                             >
                               {todayDayName === row.day ? (
                                 <div
-                                  sx={{
+                                  style={{
                                     fontWeight: "bold",
                                   }}
                                 >
@@ -541,7 +541,7 @@ export default function ClassRoutine({ sem }) {
                                 </div>
                               ) : tomorrowDayName === row.day ? (
                                 <div
-                                  sx={{
+                                  style={{
                                     fontWeight: "bold",
                                   }}
                                 >

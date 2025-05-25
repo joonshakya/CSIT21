@@ -1,18 +1,20 @@
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  TextField,
-  Typography,
-} from "@mui/material";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 import { useNonPersistingStore } from "../src/store";
 
-export default function Feedback({ sem }) {
+export default function Feedback({ sem }: { sem: string }) {
   const name = useNonPersistingStore((state) => state.feedbackName);
-  const setName = useNonPersistingStore((state) => state.setFeedbackName);
+  const setName = useNonPersistingStore(
+    (state) => state.setFeedbackName
+  );
 
-  const feedback = useNonPersistingStore((state) => state.feedbackMessage);
+  const feedback = useNonPersistingStore(
+    (state) => state.feedbackMessage
+  );
   const setFeedback = useNonPersistingStore(
     (state) => state.setFeedbackMessage
   );

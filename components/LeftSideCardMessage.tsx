@@ -42,7 +42,11 @@ export default function LeftSideCardMessage({ title, body }) {
           >
             {title}
           </Typography>
-          <Typography variant="body2" gutterBottom color="text.secondary">
+          <Typography
+            variant="body2"
+            gutterBottom
+            color="text.secondary"
+          >
             {body ? (
               <>
                 {body}

@@ -2,20 +2,34 @@ import Docxtemplater from "docxtemplater";
 import PizZip from "pizzip";
 import { saveAs } from "file-saver";
 
-function replaceErrors(key, value) {
+function replaceErrors(_, value: any) {
   if (value instanceof Error) {
-    return Object.getOwnPropertyNames(value).reduce(function (error, key) {
+    return Object.getOwnPropertyNames(value).reduce(function (
+      error,
+      key
+    ) {
       error[key] = value[key];
       return error;
-    }, {});
+    },
+    {});
   }
   return value;
 }
 
 export default function generateDocument(
-  { content, data, outputName },
-  setError,
-  setLoading
+  {
+    content,
+    data,
+    outputName,
+  }: {
+    content: ArrayBuffer;
+    data: {
+      [key: string]: string | number;
+    };
+    outputName: string;
+  },
+  setError: React.Dispatch<React.SetStateAction<string | null>>,
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>
 ) {
   var zip = new PizZip(content);
   var doc = new Docxtemplater(zip, {
@@ -24,14 +38,14 @@ export default function generateDocument(
   });
   doc.setData(data);
   try {
-    // render the document (replace all occurences of {first_name} by John, {last_name} by Doe, ...)
     doc.render();
   } catch (error) {
-    // The error thrown here contains additional information when logged with JSON.stringify (it contains a properties object containing all suberrors).
-
     console.error(JSON.stringify({ error: error }, replaceErrors));
 
-    if (error.properties && error.properties.errors instanceof Array) {
+    if (
+      error.properties &&
+      error.properties.errors instanceof Array
+    ) {
       const errorMessages = error.properties.errors
         .map(function (error) {
           return error.properties.explanation;

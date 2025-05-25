@@ -17,10 +17,18 @@ const divisions = [
   "seconds-text",
 ];
 
-function CountdoenText({ text1, index, startDay }) {
-  const [date, setDate] = useState();
-  const [prevDate, setPrevDate] = useState();
-  const [textContent, setTextContent] = useState();
+function CountdoenText({
+  text1,
+  index,
+  startDay,
+}: {
+  text1?: boolean;
+  index: number;
+  startDay: Date;
+}) {
+  const [date, setDate] = useState<string | null>(null);
+  const [prevDate, setPrevDate] = useState<string | null>(null);
+  const [textContent, setTextContent] = useState<string | null>(null);
   const [animate, setAnimate] = useState(false);
   useEffect(() => {
     if (date !== prevDate || (!text1 && textContent !== date)) {
@@ -62,7 +70,7 @@ function CountdoenText({ text1, index, startDay }) {
           (Math.floor(diff / 1000) % 60) % 10,
           "s left",
         ];
-        return dates[index];
+        return dates[index].toString();
       });
     }
     const interval = setInterval(() => {
@@ -87,6 +95,10 @@ export default function Countdown({
   text,
   yyyymmddDate,
   hideTomorrow,
+}: {
+  text?: string;
+  yyyymmddDate: string;
+  hideTomorrow?: boolean;
 }) {
   const startDay = new Date(yyyymmddDate + " GMT+05:45");
   const nowDate = new Date();
@@ -124,13 +136,14 @@ export default function Countdown({
       return null;
     }
   }
-
   const isSafari =
+    // @ts-ignore
     /constructor/i.test(window.HTMLElement) ||
     (function (p) {
       return p.toString() === "[object SafariRemoteNotification]";
     })(
       !window["safari"] ||
+        // @ts-ignore
         (typeof safari !== "undefined" && safari.pushNotification)
     );
 

@@ -10,7 +10,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Skeleton from "@mui/material/Skeleton";
-import { Button, Link } from "@mui/material";
+import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 import Countdown from "./Countdown";
 import { examRoutine, questionPapers } from "../utils/constants";
 import { examTypes as examTypesObj } from "../utils/constants";
@@ -20,6 +21,11 @@ export default function ExamRoutine({
   sem,
   subtitle,
   title,
+}: {
+  examType: string;
+  sem: string;
+  subtitle?: string | React.ReactNode;
+  title?: string;
 }) {
   const [loading, setLoading] = useState(true);
   const [todayDate, setTodayDate] = useState(null);
@@ -54,10 +60,13 @@ export default function ExamRoutine({
   const questions = questionPapers[sem];
 
   if (
-    new Date(routine[routine.length - 1].date + " GMT+5:45") <
+    new Date(
+      routine[routine.length - 1].date + " GMT+5:45"
+    ).getTime() <
     new Date().getTime() - 24 * 60 * 60 * 1000
-  )
+  ) {
     return null;
+  }
 
   return (
     <Card
@@ -128,7 +137,7 @@ export default function ExamRoutine({
                 }}
               >
                 {Array(3)
-                  .fill()
+                  .fill(null)
                   .map((item, index) => (
                     <Box
                       key={index}
@@ -139,7 +148,7 @@ export default function ExamRoutine({
                       }}
                     >
                       {Array(3)
-                        .fill()
+                        .fill(null)
                         .map((item, index) => (
                           <Skeleton
                             key={index}
@@ -235,7 +244,7 @@ export default function ExamRoutine({
                                 tomorrowDate
                               ).toDateString() ? (
                               <div
-                                sx={{
+                                style={{
                                   fontWeight: "bold",
                                 }}
                               >

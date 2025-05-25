@@ -1,18 +1,16 @@
-import {
-  TextField,
-  Box,
-  Typography,
-  Card,
-  CardContent,
-  CardActions,
-  Button,
-  Table,
-  TableRow,
-  TableCell,
-  TableBody,
-} from "@mui/material";
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import Button from "@mui/material/Button";
+import Table from "@mui/material/Table";
+import TableRow from "@mui/material/TableRow";
+import TableCell from "@mui/material/TableCell";
+import TableBody from "@mui/material/TableBody";
 import Snackbar from "@mui/material/Snackbar";
-import MuiAlert from "@mui/material/Alert";
+import MuiAlert, { AlertProps } from "@mui/material/Alert";
 
 import {
   useState,
@@ -22,14 +20,16 @@ import {
   Fragment,
   forwardRef,
 } from "react";
-const Alert = forwardRef(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+const Alert = forwardRef(function Alert(props: AlertProps) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
 });
 const TallyBar = () => {
   const [frequency, setFrequency] = useState("");
   const [pasted, setPasted] = useState(false);
   const [alertOpen, setAlertOpen] = useState(false);
-  const frequencies = frequency.split("\n").map((freq) => parseInt(freq));
+  const frequencies = frequency
+    .split("\n")
+    .map((freq) => parseInt(freq));
   const tBodyRef = useRef(null);
 
   function listener(e) {
@@ -46,14 +46,6 @@ const TallyBar = () => {
       setAlertOpen(true);
     }
   }, []);
-
-  const closeAlert = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-
-    setAlertOpen(false);
-  };
 
   useEffect(() => {
     if (pasted && tBodyRef.current) {
@@ -184,9 +176,20 @@ const TallyBar = () => {
           </Button>
         </CardActions>
       </form>
-      <Snackbar open={alertOpen} autoHideDuration={3000} onClose={closeAlert}>
+      <Snackbar
+        open={alertOpen}
+        autoHideDuration={3000}
+        onClose={(event, reason) => {
+          if (reason === "clickaway") {
+            return;
+          }
+          setAlertOpen(false);
+        }}
+      >
         <Alert
-          onClose={closeAlert}
+          onClose={() => {
+            setAlertOpen(false);
+          }}
           severity="success"
           sx={{
             width: "100%",

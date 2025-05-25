@@ -1,10 +1,20 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-export const useBaseStore = create(
+interface BearState {
+  roll: number;
+  setRoll: (roll: number) => void;
+  fullRoutine: boolean;
+  setFullRoutine: (fullRoutine: boolean) => void;
+  onlySection: boolean;
+  setOnlySection: (onlySection: boolean) => void;
+  wordFileLoaded: number;
+}
+
+export const useBaseStore = create<BearState>()(
   persist(
     (set) => ({
-      roll: "0",
+      roll: 0,
       setRoll: (roll) => {
         set(() => ({
           roll,
@@ -30,7 +40,18 @@ export const useBaseStore = create(
   )
 );
 
-export const useOpCodeStore = create((set) => ({
+interface OpCodeStore {
+  instruction: string;
+  setInstruction: (instruction: string) => void;
+  opCode: string;
+  setOpCode: (opCode: string) => void;
+  opCodeContainerWidth: number | null;
+  setOpCodeContainerWidth: (
+    opCodeContainerWidth: number | null
+  ) => void;
+}
+
+export const useOpCodeStore = create<OpCodeStore>((set) => ({
   instruction: "MVI A, Data",
   setInstruction: (instruction) => {
     set(() => ({
@@ -94,16 +115,28 @@ export const useWordStore = create((set) => ({
   },
 }));
 
-export const useDevCppDownloadDialogStore = create((set) => ({
-  open: false,
-  setOpen: (open) => {
-    set(() => ({
-      open,
-    }));
-  },
-}));
+interface DevCppDownloadDialogStore {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}
 
-export const useNonPersistingStore = create((set) => ({
+export const useDevCppDownloadDialogStore =
+  create<DevCppDownloadDialogStore>((set) => ({
+    open: false,
+    setOpen: (open) => {
+      set(() => ({
+        open,
+      }));
+    },
+  }));
+
+interface FeedbackStore {
+  feedbackName: string;
+  setFeedbackName: (feedbackName: string) => void;
+  feedbackMessage: string;
+  setFeedbackMessage: (feedbackMessage: string) => void;
+}
+export const useNonPersistingStore = create<FeedbackStore>((set) => ({
   feedbackName: "",
   setFeedbackName: (feedbackName) => {
     set(() => ({

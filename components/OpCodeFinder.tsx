@@ -1,15 +1,14 @@
-import {
-  Autocomplete,
-  TextField,
-  Box,
-  Typography,
-  Card,
-  CardContent,
-} from "@mui/material";
+import Autocomplete from "@mui/material/Autocomplete";
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 import { useEffect } from "react";
 import { useRef } from "react";
 import { opCodes } from "../utils/constants";
 import { useOpCodeStore } from "../src/store";
+import { ListItem } from "@mui/material";
 
 const OpCodeFinder = ({ operate }) => {
   const {
@@ -68,7 +67,9 @@ const OpCodeFinder = ({ operate }) => {
                 setOpCode(value.opCode);
               }
             }}
-            value={opCodes.find((entry) => entry.label === instruction)}
+            value={opCodes.find(
+              (entry) => entry.label === instruction
+            )}
             autoHighlight
             options={opCodes}
             renderInput={(params) => (
@@ -90,7 +91,9 @@ const OpCodeFinder = ({ operate }) => {
                 />
                 <Box
                   sx={{
-                    width: instruction ? opCodeContainerWidth || 0 : 0,
+                    width: instruction
+                      ? opCodeContainerWidth || 0
+                      : 0,
                     position: "relative",
                     ml: instruction && opCodeContainerWidth ? 2 : 0,
                     transition: "all 0.2s ease-in",
@@ -118,7 +121,7 @@ const OpCodeFinder = ({ operate }) => {
               option.label === value?.label
             }
             renderOption={(props, option) => (
-              <Box
+              <ListItem
                 {...props}
                 sx={{
                   display: "flex",
@@ -132,7 +135,7 @@ const OpCodeFinder = ({ operate }) => {
                   {option.label}
                 </Typography>
                 <Typography>{option.opCode}</Typography>
-              </Box>
+              </ListItem>
             )}
           />
         </CardContent>
