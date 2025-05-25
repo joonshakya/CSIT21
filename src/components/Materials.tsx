@@ -83,7 +83,7 @@ const Materials = ({ sem, setSem }) => {
             pt: 1,
           }}
         >
-          <EditOnGithubButton link="https://www.github.com/" />
+          <EditOnGithubButton link="https://github.com/joonshakya/CSIT21/blob/main/src/constants/materials.tsx" />
           <FormControl
             sx={{
               display: "flex",

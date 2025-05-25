@@ -324,7 +324,7 @@ export default function ClassRoutine({ sem }) {
               pb: "1rem !important",
             }}
           >
-            <EditOnGithubButton link="https://www.github.com/" />
+            <EditOnGithubButton link="https://github.com/joonshakya/CSIT21/blob/main/src/constants/classRoutine.tsx" />
             <Typography variant="h5" component="div">
               Class Routine
             </Typography>

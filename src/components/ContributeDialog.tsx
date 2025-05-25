@@ -27,7 +27,7 @@ export default function ContributeDialog({ title, open, setOpen }) {
       </DialogContent>
       <DialogActions>
         <Button
-          href="https://github.com/joonshakya/CSIT21/blob/main/utils/constants.js#L578"
+          href="https://github.com/joonshakya/CSIT21/blob/main/src/constants/subjects.ts"
           onClick={() => {
             setOpen(false);
           }}
