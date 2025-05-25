@@ -8,7 +8,7 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import EditOnGithubButton from "./EditOnGithubButton";
-import { materials } from "../utils/constants/materials";
+import { materials } from "../constants/materials";
 
 export function GradientButton({
   name,

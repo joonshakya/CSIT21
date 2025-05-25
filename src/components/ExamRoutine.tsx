@@ -13,8 +13,8 @@ import Skeleton from "@mui/material/Skeleton";
 import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import Countdown from "./Countdown";
-import { examRoutine, questionPapers } from "../utils/constants";
-import { examTypes as examTypesObj } from "../utils/constants";
+import { examRoutine, questionPapers } from "../constants";
+import { examTypes as examTypesObj } from "../constants";
 
 export default function ExamRoutine({
   examType,

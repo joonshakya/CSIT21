@@ -35,12 +35,12 @@ import {
   compilerAssignments,
   eComAssignments,
   javaAssignments,
-} from "../utils/constants";
+} from "../constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useBaseStore, useWordStore } from "../store";
-import { Sem } from "../utils/constants/types";
+import { Sem } from "../constants/types";
 import { ListItem } from "@mui/material";
 
 export default function FrontPageGenerator({ sem }: { sem: Sem }) {

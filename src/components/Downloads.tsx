@@ -10,7 +10,7 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useDevCppDownloadDialogStore } from "../store";
 import { GradientButton } from "./Materials";
-import { downloads } from "../utils/constants/downloads";
+import { downloads } from "../constants/downloads";
 import EditOnGithubButton from "./EditOnGithubButton";
 
 export default function Downlaods() {

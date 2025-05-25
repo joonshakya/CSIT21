@@ -21,8 +21,8 @@ import { useEffect, useState } from "react";
 import Downlaods from "../components/Downloads";
 import Feedback from "../components/Feedback";
 import Countdown from "../components/Countdown";
-import { currentJoonSem, examTypes } from "../utils/constants";
-import { Sem } from "../utils/constants/types";
+import { currentJoonSem, examTypes } from "../constants";
+import { Sem } from "../constants/types";
 // import LeftSideCardMessage from "../components/LeftSideCardMessage";
 
 function Index() {

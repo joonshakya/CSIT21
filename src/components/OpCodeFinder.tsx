@@ -6,7 +6,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { useEffect } from "react";
 import { useRef } from "react";
-import { opCodes } from "../utils/constants";
+import { opCodes } from "../constants";
 import { useOpCodeStore } from "../store";
 import { ListItem } from "@mui/material";
 

@@ -1,4 +1,4 @@
-import { useDevCppDownloadDialogStore } from "../../../src/store";
+import { useDevCppDownloadDialogStore } from "../store";
 
 export const downloads = [
   {

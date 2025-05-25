@@ -17,7 +17,7 @@ import {
   compilerAssignments,
   eComAssignments,
   javaAssignments,
-} from "../constants";
+} from "../../constants";
 import { useState } from "react";
 import { useBaseStore } from "../../../src/store";
 
