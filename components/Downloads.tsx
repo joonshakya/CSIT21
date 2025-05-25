@@ -11,6 +11,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { useDevCppDownloadDialogStore } from "../src/store";
 import { GradientButton } from "./Materials";
 import { downloads } from "../utils/constants/downloads";
+import EditOnGithubButton from "./EditOnGithubButton";
 
 export default function Downlaods() {
   const { open, setOpen } = useDevCppDownloadDialogStore();
@@ -39,10 +40,12 @@ export default function Downlaods() {
           <CardContent
             sx={{
               flex: 1,
+              position: "relative",
               pb: 0,
               pt: 2,
             }}
           >
+            <EditOnGithubButton link="https://www.github.com/" />
             <Typography variant="h5" component="div">
               Downloads
             </Typography>

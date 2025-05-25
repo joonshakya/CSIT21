@@ -20,6 +20,7 @@ import RadioGroup from "@mui/material/RadioGroup";
 import { useBaseStore } from "../src/store";
 import ContributeDialog from "./ContributeDialog";
 import { classRoutine } from "../utils/constants/classRoutine";
+import EditOnGithubButton from "./EditOnGithubButton";
 
 const tCellStyles = {
   px: 1,
@@ -318,10 +319,12 @@ export default function ClassRoutine({ sem }) {
         >
           <CardContent
             sx={{
+              position: "relative",
               flex: 1,
               pb: "1rem !important",
             }}
           >
+            <EditOnGithubButton link="https://www.github.com/" />
             <Typography variant="h5" component="div">
               Class Routine
             </Typography>
