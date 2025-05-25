@@ -4,7 +4,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import { useNonPersistingStore } from "../src/store";
+import { useNonPersistingStore } from "../store";
 
 export default function Feedback({ sem }: { sem: string }) {
   const name = useNonPersistingStore((state) => state.feedbackName);

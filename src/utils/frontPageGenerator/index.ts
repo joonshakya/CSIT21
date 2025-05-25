@@ -19,7 +19,7 @@ import {
   javaAssignments,
 } from "../constants";
 import { useState } from "react";
-import { useBaseStore } from "../../src/store";
+import { useBaseStore } from "../../../src/store";
 
 export default function useFrontPageGenerator() {
   const [error, setError] = useState<string | null>(null);

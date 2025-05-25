@@ -16,12 +16,12 @@ import TallyBar from "../components/TallyBar";
 import ClassRoutine from "../components/ClassRoutine";
 import ExamRoutine from "../components/ExamRoutine";
 import CheckForUpdate from "../components/CheckForUpdate";
-import { examTypes, currentJoonSem } from "../utils/constants";
 import Router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Downlaods from "../components/Downloads";
 import Feedback from "../components/Feedback";
 import Countdown from "../components/Countdown";
+import { currentJoonSem, examTypes } from "../utils/constants";
 import { Sem } from "../utils/constants/types";
 // import LeftSideCardMessage from "../components/LeftSideCardMessage";
 

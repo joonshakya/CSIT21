@@ -8,7 +8,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { useDevCppDownloadDialogStore } from "../src/store";
+import { useDevCppDownloadDialogStore } from "../store";
 import { GradientButton } from "./Materials";
 import { downloads } from "../utils/constants/downloads";
 import EditOnGithubButton from "./EditOnGithubButton";

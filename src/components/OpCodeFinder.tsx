@@ -7,7 +7,7 @@ import CardContent from "@mui/material/CardContent";
 import { useEffect } from "react";
 import { useRef } from "react";
 import { opCodes } from "../utils/constants";
-import { useOpCodeStore } from "../src/store";
+import { useOpCodeStore } from "../store";
 import { ListItem } from "@mui/material";
 
 const OpCodeFinder = ({ operate }) => {

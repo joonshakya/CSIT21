@@ -2,7 +2,7 @@ import { forwardRef, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
-import { useNonPersistingStore } from "../src/store";
+import { useNonPersistingStore } from "../store";
 import { NEXT_DATA } from "next/dist/shared/lib/utils";
 
 const Alert = forwardRef(function Alert(props: AlertProps) {

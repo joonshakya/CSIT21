@@ -1,6 +1,4 @@
-import { useDevCppDownloadDialogStore } from "../../src/store";
 import { subjects } from "./subjects";
-import { Sem } from "./types";
 
 export const javaAssignments = [
   { number: 1, name: "Lab Sheet 1 to 10", selected: true },

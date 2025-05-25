@@ -17,7 +17,7 @@ import Skeleton from "@mui/material/Skeleton";
 import FormControl from "@mui/material/FormControl";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
-import { useBaseStore } from "../src/store";
+import { useBaseStore } from "../store";
 import ContributeDialog from "./ContributeDialog";
 import { classRoutine } from "../utils/constants/classRoutine";
 import EditOnGithubButton from "./EditOnGithubButton";

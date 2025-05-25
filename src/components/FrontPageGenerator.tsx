@@ -39,7 +39,7 @@ import {
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
 import CircularProgress from "@mui/material/CircularProgress";
-import { useBaseStore, useWordStore } from "../src/store";
+import { useBaseStore, useWordStore } from "../store";
 import { Sem } from "../utils/constants/types";
 import { ListItem } from "@mui/material";
 
