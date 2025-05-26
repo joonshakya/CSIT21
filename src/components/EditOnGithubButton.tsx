@@ -16,7 +16,7 @@ export default function EditOnGithubButton({
       sx={{
         zIndex: 2,
         position: "absolute",
-        top: 18,
+        top: 20,
         right: 24,
         display: "flex",
         alignItems: "center",
