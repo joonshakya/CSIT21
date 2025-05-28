@@ -1,7 +1,9 @@
 import { subjects } from "./subjects";
 
 export const javaAssignments = [
-  { number: 1, name: "Lab Sheet 1 to 10", selected: true },
+  { number: 1, name: "Lab Sheet 1 to 10" },
+  { number: 2, name: "Lab Sheet 11 to 20" },
+  { number: 3, name: "Lab Sheet 21 to 30", selected: true },
 ];
 
 export const compilerAssignments = [
