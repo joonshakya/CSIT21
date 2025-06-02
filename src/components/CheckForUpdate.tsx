@@ -55,6 +55,7 @@ const CheckForUpdate = () => {
 
   useEffect(() => {
     setTimeoutText(10);
+
     if (open && !preventRefresh) {
       const timeout = setInterval(() => {
         setTimeoutText((prev) => {
