@@ -1,17 +1,14 @@
 import { forwardRef, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import MuiAlert, { AlertProps } from "@mui/material/Alert";
+import MuiAlert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
-import { useNonPersistingStore } from "../store";
-// import { NEXT_DATA } from "next/dist/shared/lib/utils";
+import { useNonPersistingStore } from "../src/store";
 
-const Alert = forwardRef(function Alert(props: AlertProps) {
-  return <MuiAlert elevation={6} variant="filled" {...props} />;
+const Alert = forwardRef(function Alert(props, ref) {
+  return (
+    <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
+  );
 });
-
-// declare global {
-//   var __NEXT_DATA__: NEXT_DATA;
-// }
 
 const CheckForUpdate = () => {
   const [open, setOpen] = useState(false);
@@ -25,25 +22,16 @@ const CheckForUpdate = () => {
 
   const preventRefresh = name || feedback;
 
-  console.log("open", open);
-
   useEffect(() => {
     const checkForUpdate = setInterval(async () => {
-      ///@ts-ignore
       if (typeof __NEXT_DATA__ !== "undefined") {
-        ///@ts-ignore
         const buildId = __NEXT_DATA__.buildId; // eslint-disable-line no-undef
         if (buildId === "development") return;
-        try {
-          const res = await fetch(
-            `/_next/static/${buildId}/_ssgManifest.js?v=${Date.now()}`
-          );
-          if (res.status === 404) {
-            setOpen(true);
-          }
-        } catch (error) {
-          console.error("Error fetching the SSG manifest:", error);
-          return;
+        const res = await fetch(
+          `/_next/static/${buildId}/_ssgManifest.js?v=${Date.now()}`
+        );
+        if (res.status === 404) {
+          setOpen(true);
         }
       }
     }, 15000);
@@ -55,7 +43,6 @@ const CheckForUpdate = () => {
 
   useEffect(() => {
     setTimeoutText(10);
-
     if (open && !preventRefresh) {
       const timeout = setInterval(() => {
         setTimeoutText((prev) => {
@@ -63,7 +50,6 @@ const CheckForUpdate = () => {
             return prev - 1;
           }
           router.reload(
-            //@ts-ignore
             window.location.pathname + `?refresh=${Date.now()}`
           );
           clearInterval(timeout);
