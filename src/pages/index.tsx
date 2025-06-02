@@ -50,9 +50,12 @@ function Index() {
   }
 
   useEffect(() => {
-    new Array(10).fill(0).forEach((_, i) => {
-      checkCollegeEmail(i.toString());
-    });
+    const check = setTimeout(() => {
+      new Array(10).fill(0).forEach((_, i) => {
+        checkCollegeEmail(i.toString());
+      });
+    }, 0);
+    return () => clearTimeout(check);
   }, []);
 
   const [sem, setSem] = useState<Sem | null>(
