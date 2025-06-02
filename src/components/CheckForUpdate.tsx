@@ -56,7 +56,10 @@ const CheckForUpdate = () => {
           if (prev > 1) {
             return prev - 1;
           }
-          router.reload();
+          router.reload(
+            //@ts-ignore
+            window.location.pathname + `?refresh=${Date.now()}`
+          );
           clearInterval(timeout);
 
           return 0;
