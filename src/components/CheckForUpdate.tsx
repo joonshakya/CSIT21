@@ -27,7 +27,9 @@ const CheckForUpdate = () => {
 
   useEffect(() => {
     const checkForUpdate = setInterval(async () => {
+      ///@ts-ignore
       if (typeof __NEXT_DATA__ !== "undefined") {
+        ///@ts-ignore
         const buildId = __NEXT_DATA__.buildId; // eslint-disable-line no-undef
         if (buildId === "development") return;
         const res = await fetch(
