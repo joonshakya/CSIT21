@@ -25,6 +25,8 @@ const CheckForUpdate = () => {
 
   const preventRefresh = name || feedback;
 
+  console.log("open", open);
+
   useEffect(() => {
     const checkForUpdate = setInterval(async () => {
       ///@ts-ignore
