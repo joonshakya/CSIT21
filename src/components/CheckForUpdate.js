@@ -13,6 +13,7 @@ const Alert = forwardRef(function Alert(props, ref) {
 const CheckForUpdate = () => {
   const [open, setOpen] = useState(false);
   const [timeoutText, setTimeoutText] = useState(10);
+
   const router = useRouter();
 
   const name = useNonPersistingStore((state) => state.feedbackName);
