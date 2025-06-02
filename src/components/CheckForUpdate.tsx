@@ -34,11 +34,16 @@ const CheckForUpdate = () => {
         ///@ts-ignore
         const buildId = __NEXT_DATA__.buildId; // eslint-disable-line no-undef
         if (buildId === "development") return;
-        const res = await fetch(
-          `/_next/static/${buildId}/_ssgManifest.js?v=${Date.now()}`
-        );
-        if (res.status === 404) {
-          setOpen(true);
+        try {
+          const res = await fetch(
+            `/_next/static/${buildId}/_ssgManifest.js?v=${Date.now()}`
+          );
+          if (res.status === 404) {
+            setOpen(true);
+          }
+        } catch (error) {
+          console.error("Error fetching the SSG manifest:", error);
+          return;
         }
       }
     }, 15000);
