@@ -19,10 +19,18 @@ import {
   useCallback,
   Fragment,
   forwardRef,
+  ForwardedRef,
 } from "react";
-const Alert = forwardRef(function Alert(props: AlertProps) {
-  return <MuiAlert elevation={6} variant="filled" {...props} />;
+
+const Alert = forwardRef(function Alert(
+  props: AlertProps,
+  ref: ForwardedRef<HTMLDivElement>
+) {
+  return (
+    <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
+  );
 });
+
 const TallyBar = () => {
   const [frequency, setFrequency] = useState("");
   const [pasted, setPasted] = useState(false);
