@@ -1,19 +1,26 @@
-import { forwardRef, useEffect, useState } from "react";
+import { ForwardedRef, forwardRef, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import MuiAlert from "@mui/material/Alert";
+import MuiAlert, { AlertProps } from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
-import { useNonPersistingStore } from "../../src/store.ts";
+import { useNonPersistingStore } from "../store";
+import { NEXT_DATA } from "next/dist/shared/lib/utils";
 
-const Alert = forwardRef(function Alert(props, ref) {
+const Alert = forwardRef(function Alert(
+  props: AlertProps,
+  ref: ForwardedRef<HTMLDivElement>
+) {
   return (
     <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
   );
 });
 
+declare global {
+  var __NEXT_DATA__: NEXT_DATA;
+}
+
 const CheckForUpdate = () => {
   const [open, setOpen] = useState(false);
   const [timeoutText, setTimeoutText] = useState(10);
-
   const router = useRouter();
 
   const name = useNonPersistingStore((state) => state.feedbackName);
@@ -50,9 +57,7 @@ const CheckForUpdate = () => {
           if (prev > 1) {
             return prev - 1;
           }
-          router.reload(
-            window.location.pathname + `?refresh=${Date.now()}`
-          );
+          router.reload();
           clearInterval(timeout);
 
           return 0;
