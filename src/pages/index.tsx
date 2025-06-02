@@ -33,36 +33,26 @@ function Index() {
 
   let semParam = router.asPath.split("/")[1];
 
-  async function checkCollegeEmail() {
-    let imgs: HTMLImageElement[] = [];
-    const authuser = 1;
-    imgs[authuser] = document.createElement("img");
-    imgs[authuser].src =
+  async function checkCollegeEmail(authuser: string) {
+    const img = document.createElement("img");
+    img.src =
       "https://drive.google.com/thumbnail?id=1f0uYyaFOd_oI4Gda5FFmtao-obpz9HVT&authuser=" +
       authuser;
-    imgs[authuser].style.display = "none";
-    document.body.appendChild(imgs[authuser]);
-    imgs[authuser].onload = function () {
-      // if (firstAuthuser != authuser || notify) {
-      //   showToast("Cool, you are in 12 'G'" + authuser, "success");
-      console.log("found authuser: ", authuser);
-      localStorage.setItem("authuser", authuser.toString());
-      // changeLink(authuser);
+    img.style.display = "none";
+    document.body.appendChild(img);
+    img.onload = function () {
+      localStorage.setItem("authuser", authuser);
+      console.log("success on: " + authuser);
     };
-    // imgs[authuser].onerror = function () {
-    //   noUser++;
-    //   if (noUser == 20) {
-    //     showToast(
-    //       "Hmm, it seems you are not from 12 'G'.<br>If you are, log into google classroom website with the college email.",
-    //       "error"
-    //     );
-    //     $(".warning-login").show();
-    //   }
-    // };
+    img.onerror = function () {
+      console.log("error on: " + authuser);
+    };
   }
 
   useEffect(() => {
-    checkCollegeEmail();
+    new Array(10).fill(0).forEach((_, i) => {
+      checkCollegeEmail(i.toString());
+    });
   }, []);
 
   const [sem, setSem] = useState<Sem | null>(
