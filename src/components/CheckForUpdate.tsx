@@ -3,15 +3,15 @@ import { useRouter } from "next/router";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 import { useNonPersistingStore } from "../store";
-import { NEXT_DATA } from "next/dist/shared/lib/utils";
+// import { NEXT_DATA } from "next/dist/shared/lib/utils";
 
 const Alert = forwardRef(function Alert(props: AlertProps) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 });
 
-declare global {
-  var __NEXT_DATA__: NEXT_DATA;
-}
+// declare global {
+//   var __NEXT_DATA__: NEXT_DATA;
+// }
 
 const CheckForUpdate = () => {
   const [open, setOpen] = useState(false);

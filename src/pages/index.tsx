@@ -20,7 +20,6 @@ import Router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Downlaods from "../components/Downloads";
 import Feedback from "../components/Feedback";
-import Countdown from "../components/Countdown";
 import { currentJoonSem, examTypes } from "../constants";
 import { Sem } from "../constants/types";
 // import LeftSideCardMessage from "../components/LeftSideCardMessage";
