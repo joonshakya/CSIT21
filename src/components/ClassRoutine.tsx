@@ -428,15 +428,6 @@ export default function ClassRoutine({ sem }) {
                     mb: 1,
                   }}
                 >
-                  <Typography
-                    sx={{
-                      flexShrink: 0,
-                      marginRight: 2,
-                      marginLeft: 2,
-                    }}
-                  >
-                    On click, open
-                  </Typography>
                   <RadioGroup
                     defaultValue="sem3"
                     name="clickOpensOptions"
@@ -464,8 +455,13 @@ export default function ClassRoutine({ sem }) {
                     <FormControlLabel
                       value="question"
                       control={<Radio size="small" />}
-                      label="Question Bank"
+                      label="Questions"
                     />
+                    {/* <FormControlLabel
+                      value="meet"
+                      control={<Radio size="small" />}
+                      label="Meet"
+                    /> */}
                   </RadioGroup>
                 </FormControl>
                 <TableContainer>
