@@ -31,7 +31,7 @@ export const subjects = {
         "https://hamrocsit.com/note/pom/the-nature-of-organizations/",
       questions:
         "https://hamrocsit.com/semester/seventh/pom/question-bank",
-      meetCodeA: "abc-def-ghr",
+      meetCodeA: "ait-song-xpi",
       meetCodeB: "ait-song-xpi",
     },
     PW: {
