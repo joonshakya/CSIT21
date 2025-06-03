@@ -51,6 +51,8 @@ export const subjects = {
         "https://collegenote.net/courses/notes/information-retrieval-csit-2074-syllabus-39",
       questions:
         "https://collegenote.net/old-question/information-retrieval-2076-502",
+      meetCodeA: "obq-gwau-jrz",
+      meetCodeB: "obq-gwau-jrz",
     },
     SPM: {
       name: "Software Project Management",
