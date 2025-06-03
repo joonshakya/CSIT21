@@ -42,7 +42,7 @@ const CheckForUpdate = () => {
           setOpen(true);
         }
       }
-    }, 15000);
+    }, 10000);
 
     return () => {
       clearInterval(checkForUpdate);
