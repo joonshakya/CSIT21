@@ -53,7 +53,7 @@ function Index() {
       new Array(10).fill(0).forEach((_, i) => {
         checkCollegeEmail(i.toString());
       });
-    }, 20);
+    }, 1000);
     return () => clearTimeout(check);
   }, []);
 
