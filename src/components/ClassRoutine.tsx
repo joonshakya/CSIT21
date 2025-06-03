@@ -28,6 +28,8 @@ const tCellStyles = {
   border: "1px solid #d7d7d7",
 };
 
+type ClickOpens = "syllabus" | "notes" | "question" | "meet";
+
 const RoutineTableCell = ({
   onlySection,
   section,
@@ -64,8 +66,9 @@ const RoutineTableCell = ({
       <TableCell
         role={subject?.microSyllabus ? "button" : null}
         onClick={() => {
-          const clickOpens =
-            localStorage.getItem("clickOpens") || "syllabus";
+          const clickOpens: ClickOpens =
+            (localStorage.getItem("clickOpens") as ClickOpens) ||
+            "syllabus";
           if (clickOpens === "syllabus") {
             if (subject?.microSyllabus) {
               window.open(subject.microSyllabus, "_blank");
@@ -93,6 +96,32 @@ const RoutineTableCell = ({
               setContributeDialogOpen(true);
               setContributeDialogTitle(
                 `${subject?.shortName} question bank not found`
+              );
+            }
+          }
+          if (clickOpens === "meet") {
+            if (section === "a" && subject?.meetCodeA) {
+              window.open(
+                `https://meet.google.com/${
+                  subject.meetCodeA
+                }?authuser=${
+                  localStorage.getItem("authuser") || "0"
+                }`,
+                "_blank"
+              );
+            } else if (section === "b" && subject?.meetCodeB) {
+              window.open(
+                `https://meet.google.com/${
+                  subject.meetCodeB
+                }?authuser=${
+                  localStorage.getItem("authuser") || "0"
+                }`,
+                "_blank"
+              );
+            } else {
+              setContributeDialogOpen(true);
+              setContributeDialogTitle(
+                `${subject?.shortName} meet link not found`
               );
             }
           }
@@ -187,6 +216,32 @@ const RoutineTableCell = ({
                     setContributeDialogOpen(true);
                     setContributeDialogTitle(
                       `${subject?.shortName} question bank not found`
+                    );
+                  }
+                }
+                if (clickOpens === "meet") {
+                  if (section === "a" && subject?.meetCodeA) {
+                    window.open(
+                      `https://meet.google.com/${
+                        subject.meetCodeA
+                      }?authuser=${
+                        localStorage.getItem("authuser") || "0"
+                      }`,
+                      "_blank"
+                    );
+                  } else if (section === "b" && subject?.meetCodeB) {
+                    window.open(
+                      `https://meet.google.com/${
+                        subject.meetCodeB
+                      }?authuser=${
+                        localStorage.getItem("authuser") || "0"
+                      }`,
+                      "_blank"
+                    );
+                  } else {
+                    setContributeDialogOpen(true);
+                    setContributeDialogTitle(
+                      `${subject?.shortName} meet link not found`
                     );
                   }
                 }
@@ -457,11 +512,11 @@ export default function ClassRoutine({ sem }) {
                       control={<Radio size="small" />}
                       label="Questions"
                     />
-                    {/* <FormControlLabel
+                    <FormControlLabel
                       value="meet"
                       control={<Radio size="small" />}
                       label="Meet"
-                    /> */}
+                    />
                   </RadioGroup>
                 </FormControl>
                 <TableContainer>

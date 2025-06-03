@@ -19,6 +19,8 @@ export const subjects = {
         "https://hamrocsit.com/note/data-mining/introduction-to-data-warehousing/",
       questions:
         "https://hamrocsit.com/semester/seventh/data-mining/question-bank",
+      meetCodeA: "ont-priv-dcj",
+      meetCodeB: "ont-priv-dcj",
     },
     PoM: {
       name: "Principles of Management",
@@ -29,6 +31,8 @@ export const subjects = {
         "https://hamrocsit.com/note/pom/the-nature-of-organizations/",
       questions:
         "https://hamrocsit.com/semester/seventh/pom/question-bank",
+      meetCodeA: "ait-song-xpi",
+      meetCodeB: "ait-song-xpi",
     },
     PW: {
       name: "Project Work",
