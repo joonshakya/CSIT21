@@ -6,7 +6,7 @@ export const javaAssignments = [
   { number: 3, name: "Lab Sheet 21 to 30" },
   {
     number: 4,
-    name: "Create a register Form using AWT",
+    name: "Create a Registration Form using AWT",
     selected: true,
   },
 ];
