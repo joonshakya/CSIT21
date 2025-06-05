@@ -7,6 +7,10 @@ export const javaAssignments = [
   {
     number: 4,
     name: "Create a Registration Form using AWT",
+  },
+  {
+    number: 5,
+    name: "Applet Program",
     selected: true,
   },
 ];
