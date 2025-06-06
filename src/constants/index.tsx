@@ -11,6 +11,10 @@ export const javaAssignments = [
   {
     number: 5,
     name: "Applet Program",
+  },
+  {
+    number: 6,
+    name: "Menu and Layout",
     selected: true,
   },
 ];
