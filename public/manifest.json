@@ -5,7 +5,7 @@
   "scope": ".",
   "display": "standalone",
   "background_color": "#6671c6",
-  "description": "Class Documents on the go",
+  "description": "CSIT21 is a comprehensive platform built specifically for our class offering study materials, classroom routines, exam schedules, front page generator, and more.",
   "theme_color": "#6671c6",
   "icons": [
     {

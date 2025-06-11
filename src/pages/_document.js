@@ -63,7 +63,7 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <meta
             name="description"
-            content="Class Documents on the go."
+            content="CSIT21 is a comprehensive platform built specifically for our class offering study materials, classroom routines, exam schedules, front page generator, and more."
           />
           <meta property="og:type" content="website" />
           <meta property="fb:app_id" content="1265498347173300" />
