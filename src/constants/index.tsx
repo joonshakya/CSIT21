@@ -14,7 +14,11 @@ export const javaAssignments = [
   },
   {
     number: 6,
-    name: "Menu and Layout",
+    name: "Menu and Layout in AWT",
+  },
+  {
+    number: 7,
+    name: "Menu and Layout in Swing",
     selected: true,
   },
 ];
