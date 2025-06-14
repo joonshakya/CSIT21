@@ -16,12 +16,12 @@ export const classRoutine = {
     {
       day: "Mon",
       a: [
-        [subjects.sem7.DWDM, "315"],
+        [subjects.sem7.DWDM, "Lab C"],
         [subjects.sem7.PoM, "315"],
       ],
       b: [
         [subjects.sem7.PoM, "321"],
-        [subjects.sem7.Java, "321"],
+        [subjects.sem7.Java, "Lab C"],
       ],
     },
     {
@@ -39,15 +39,15 @@ export const classRoutine = {
       day: "Wed",
       a: [
         [
-          [subjects.sem7.SPM, "321"],
-          [subjects.sem7.IR, "315"],
+          [subjects.sem7.SPM, "lab E"],
+          [subjects.sem7.IR, "Lab C"],
         ],
         [subjects.sem7.Java, "315"],
       ],
       b: [
         [
-          [subjects.sem7.SPM, "321"],
-          [subjects.sem7.IR, "315"],
+          [subjects.sem7.SPM, "lab E"],
+          [subjects.sem7.IR, "Lab C"],
         ],
         [subjects.sem7.DWDM, "321"],
       ],
@@ -59,7 +59,7 @@ export const classRoutine = {
           [subjects.sem7.SPM, "321"],
           [subjects.sem7.IR, "315"],
         ],
-        [subjects.sem7.Java, "315"],
+        [subjects.sem7.Java, "Lab C"],
       ],
       b: [
         [
@@ -83,7 +83,7 @@ export const classRoutine = {
           [subjects.sem7.SPM, "321"],
           [subjects.sem7.IR, "315"],
         ],
-        [subjects.sem7.DWDM, "321"],
+        [subjects.sem7.DWDM, "Lab C"],
       ],
     },
   ],

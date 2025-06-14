@@ -13,8 +13,10 @@ import Skeleton from "@mui/material/Skeleton";
 import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import Countdown from "./Countdown";
-import { examRoutine, questionPapers } from "../constants";
+import { questionPapers } from "../constants";
 import { examTypes as examTypesObj } from "../constants";
+import { examRoutine } from "../constants/examRoutine";
+import EditOnGithubButton from "./EditOnGithubButton";
 
 export default function ExamRoutine({
   examType,
@@ -91,10 +93,13 @@ export default function ExamRoutine({
       >
         <CardContent
           sx={{
+            position: "relative",
+
             flex: 1,
             pb: "1rem !important",
           }}
         >
+          <EditOnGithubButton link="https://github.com/joonshakya/CSIT21/blob/main/src/constants/examRoutine.tsx" />
           <Typography variant="h5" component="div">
             {title ? title : `${examType} Exam Routine`}
           </Typography>
@@ -198,11 +203,11 @@ export default function ExamRoutine({
                       <TableCell sx={tCellStyles} align="center">
                         Subject
                       </TableCell>
-                      {questions && examType !== examTypesObj.prac ? (
+                      {/* {questions && examType !== examTypesObj.prac ? (
                         <TableCell sx={tCellStyles} align="center">
                           Old Qs
                         </TableCell>
-                      ) : null}
+                      ) : null} */}
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -261,33 +266,178 @@ export default function ExamRoutine({
                               {exam.time}
                             </TableCell>
                           ) : null}
-                          <TableCell sx={{ ...tCellStyles, p: 0 }}>
-                            <Link
-                              align="center"
+
+                          {!Array.isArray(exam.subject) ? (
+                            <TableCell sx={{ ...tCellStyles, p: 0 }}>
+                              <Link
+                                align="center"
+                                sx={{
+                                  p: 1,
+                                  color: "black",
+                                  height: "100%",
+                                  width: "100%",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  textDecoration: "none",
+                                  transition: "all .1s",
+                                  "&:hover": exam.subject
+                                    ?.microSyllabus
+                                    ? {
+                                        backgroundColor: "#e3e3e3",
+                                      }
+                                    : null,
+                                }}
+                                href={exam.subject?.microSyllabus}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {exam.subject?.shortName}
+                              </Link>
+                            </TableCell>
+                          ) : (
+                            <TableCell
                               sx={{
-                                p: 1,
-                                color: "black",
-                                height: "100%",
-                                width: "100%",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                textDecoration: "none",
-                                transition: "all .1s",
-                                "&:hover": exam.subject?.microSyllabus
-                                  ? {
-                                      backgroundColor: "#e3e3e3",
-                                    }
-                                  : null,
+                                // display: "flex",
+                                ...tCellStyles,
+                                p: 0,
+                                px: 0,
                               }}
-                              href={exam.subject?.microSyllabus}
-                              target="_blank"
-                              rel="noopener noreferrer"
                             >
-                              {exam.subject?.shortName}
-                            </Link>
-                          </TableCell>
-                          {questions &&
+                              <Box
+                                sx={{
+                                  display: "flex",
+                                  height: "100%",
+                                }}
+                              >
+                                {exam.subject.map(
+                                  (subject, index) => (
+                                    <Link
+                                      align="center"
+                                      sx={{
+                                        p: 1,
+                                        color: "black",
+                                        height: "100%",
+                                        width: "100%",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        textDecoration: "none",
+                                        borderLeft:
+                                          index === 0
+                                            ? "none"
+                                            : "1px solid #d7d7d7",
+
+                                        transition: "all .1s",
+                                        "&:hover":
+                                          subject.microSyllabus
+                                            ? {
+                                                backgroundColor:
+                                                  "#e3e3e3",
+                                              }
+                                            : null,
+                                      }}
+                                      href={subject.microSyllabus}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                    >
+                                      {subject.shortName}
+                                    </Link>
+                                    // <Box
+                                    //   key={subject?.shortName}
+                                    //   sx={{
+                                    //     // ...tCellStyles,
+                                    //     // border: "none",
+                                    //     borderLeft:
+                                    //       index === 0 ? "none" : "1px solid #d7d7d7",
+                                    //     p: 1,
+                                    //     backgroundColor: "#f6f6f6",
+                                    //     flex: 1,
+                                    //     display: "flex",
+                                    //     alignItems: "center",
+                                    //     justifyContent: "center",
+                                    //     transition: "all .1s",
+                                    //     cursor: subject?.microSyllabus ? "pointer" : null,
+                                    //     "&:hover": {
+                                    //       backgroundColor: subject?.microSyllabus
+                                    //         ? "#e3e3e3"
+                                    //         : null,
+                                    //     },
+                                    //     whiteSpace: "pre-wrap",
+                                    //   }}
+                                    //   role={subject?.microSyllabus ? "button" : null}
+                                    //   onClick={() => {
+                                    //     const clickOpens =
+                                    //       localStorage.getItem("clickOpens") || "syllabus";
+                                    //     if (clickOpens === "syllabus") {
+                                    //       if (subject?.microSyllabus) {
+                                    //         window.open(subject.microSyllabus, "_blank");
+                                    //       } else {
+                                    //         setContributeDialogOpen(true);
+                                    //         setContributeDialogTitle(
+                                    //           `${subject?.shortName} syllabus not found`
+                                    //         );
+                                    //       }
+                                    //     }
+                                    //     if (clickOpens === "notes") {
+                                    //       if (subject?.notes) {
+                                    //         window.open(subject.notes, "_blank");
+                                    //       } else {
+                                    //         setContributeDialogOpen(true);
+                                    //         setContributeDialogTitle(
+                                    //           `${subject?.shortName} notes not found`
+                                    //         );
+                                    //       }
+                                    //     }
+                                    //     if (clickOpens === "question") {
+                                    //       if (subject?.questions) {
+                                    //         window.open(subject.questions, "_blank");
+                                    //       } else {
+                                    //         setContributeDialogOpen(true);
+                                    //         setContributeDialogTitle(
+                                    //           `${subject?.shortName} question bank not found`
+                                    //         );
+                                    //       }
+                                    //     }
+                                    //     if (clickOpens === "meet") {
+                                    //       if (section === "a" && subject?.meetCodeA) {
+                                    //         window.open(
+                                    //           `https://meet.google.com/${
+                                    //             subject.meetCodeA
+                                    //           }?authuser=${
+                                    //             localStorage.getItem("authuser") || "0"
+                                    //           }`,
+                                    //           "_blank"
+                                    //         );
+                                    //       } else if (section === "b" && subject?.meetCodeB) {
+                                    //         window.open(
+                                    //           `https://meet.google.com/${
+                                    //             subject.meetCodeB
+                                    //           }?authuser=${
+                                    //             localStorage.getItem("authuser") || "0"
+                                    //           }`,
+                                    //           "_blank"
+                                    //         );
+                                    //       } else {
+                                    //         setContributeDialogOpen(true);
+                                    //         setContributeDialogTitle(
+                                    //           `${subject?.shortName} meet link not found`
+                                    //         );
+                                    //       }
+                                    //     }
+                                    //   }}
+                                    // >
+                                    //   {subject?.shortName}
+                                    //   <br />
+                                    //   {room}
+                                    // </Box>
+                                  )
+                                )}
+                              </Box>
+                            </TableCell>
+                          )}
+
+                          {/* {questions &&
                           examType !== examTypesObj.prac ? (
                             <TableCell
                               sx={{
@@ -320,7 +470,7 @@ export default function ExamRoutine({
                                 ))}
                               </Box>
                             </TableCell>
-                          ) : null}
+                          ) : null} */}
                         </TableRow>
                       </Fragment>
                     ))}
