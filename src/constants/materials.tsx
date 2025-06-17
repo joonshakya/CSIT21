@@ -36,6 +36,18 @@ export const materials: Record<
         bgColor: "#548982",
         bgImage: "linear-gradient(90deg, #585c5b 0%, #44b8ab 100%)",
       },
+      {
+        name: (
+          <>
+            DWDM
+            <br />
+            Slides
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1H8DQcAsH9iglTv2MzhM4Gwo_K4XS1X57?usp=sharing",
+        bgColor: "#55a3bf",
+        bgImage: "linear-gradient(62deg, #5682c4 0%, #52d0b8 100%)",
+      },
       // {
       //   name: (
       //     <>
