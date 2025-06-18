@@ -19,6 +19,14 @@ export const javaAssignments = [
   {
     number: 7,
     name: "Menu and Layout in Swing",
+  },
+  {
+    number: 8,
+    name: "Swing Event Handling",
+  },
+  {
+    number: 9,
+    name: "Swing Key Listener",
     selected: true,
   },
 ];
