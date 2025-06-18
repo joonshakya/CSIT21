@@ -44,15 +44,15 @@ export const examRoutine = {
         ),
       },
       {
-        day: "Mon",
+        day: "Fri",
         subject: [subjects.sem7.IR, subjects.sem7.SPM],
-        date: "2025/06/29",
+        date: "2025/06/27",
         time: "6:15 AM",
         friendlyDate: (
           <>
-            29<sup>th</sup> June
+            27<sup>th</sup> June
             <br />
-            15<sup>th</sup> Ashad
+            13<sup>th</sup> Ashad
           </>
         ),
       },
