@@ -76,14 +76,14 @@ export const classRoutine = {
           [subjects.sem7.SPM, "321"],
           [subjects.sem7.IR, "315"],
         ],
-        [subjects.sem7.Java, "315"],
+        [subjects.sem7.DWDM, "Lab C"],
       ],
       b: [
         [
           [subjects.sem7.SPM, "321"],
           [subjects.sem7.IR, "315"],
         ],
-        [subjects.sem7.DWDM, "Lab C"],
+        [subjects.sem7.Java, "315"],
       ],
     },
   ],
