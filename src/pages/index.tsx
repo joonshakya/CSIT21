@@ -126,10 +126,10 @@ function Index() {
 
                 {/* Components */}
 
-                <ExamRoutine
+                {/* <ExamRoutine
                   examType={examTypes.mid}
                   sem={sem || currentJoonSem}
-                />
+                /> */}
                 {/* <ExamRoutine
                       examType={examTypes.prac}
                       sem={sem || currentJoonSem}
