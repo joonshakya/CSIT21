@@ -10,7 +10,7 @@ export const classRoutine = {
       ],
       b: [
         [subjects.sem7.PoM, "321"],
-        [subjects.sem7.Java, "321"],
+        [subjects.sem7.Java, "PTA Lab"],
       ],
     },
     {
@@ -21,7 +21,7 @@ export const classRoutine = {
       ],
       b: [
         [subjects.sem7.PoM, "321"],
-        [subjects.sem7.Java, "Lab C"],
+        [subjects.sem7.Java, "PTA Lab"],
       ],
     },
     {
@@ -32,7 +32,7 @@ export const classRoutine = {
       ],
       b: [
         [subjects.sem7.PoM, "321"],
-        [subjects.sem7.Java, "321"],
+        [subjects.sem7.Java, "PTA Lab"],
       ],
     },
     {
@@ -42,7 +42,7 @@ export const classRoutine = {
           [subjects.sem7.SPM, "lab E"],
           [subjects.sem7.IR, "Lab C"],
         ],
-        [subjects.sem7.Java, "315"],
+        [subjects.sem7.Java, "PTA Lab"],
       ],
       b: [
         [
@@ -59,7 +59,7 @@ export const classRoutine = {
           [subjects.sem7.SPM, "321"],
           [subjects.sem7.IR, "315"],
         ],
-        [subjects.sem7.Java, "Lab C"],
+        [subjects.sem7.Java, "PTA Lab"],
       ],
       b: [
         [
@@ -83,7 +83,7 @@ export const classRoutine = {
           [subjects.sem7.SPM, "321"],
           [subjects.sem7.IR, "315"],
         ],
-        [subjects.sem7.Java, "315"],
+        [subjects.sem7.Java, "PTA Lab"],
       ],
     },
   ],
