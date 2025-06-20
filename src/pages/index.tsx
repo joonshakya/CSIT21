@@ -89,9 +89,7 @@ function Index() {
   return (
     <>
       <Navbar
-        text={`CSIT21 - Sem ${
-          (sem || currentJoonSem).split("sem")[1]
-        }`}
+        text={`CSIT21 - Sem ${(sem || currentJoonSem).split("sem")[1]}`}
       />
       <Box
         sx={{
@@ -119,10 +117,7 @@ function Index() {
                 }}
                 size={{ xs: 12, sm: 10, md: 7 }}
               >
-                <Materials
-                  sem={sem || currentJoonSem}
-                  setSem={setSem}
-                />
+                <Materials sem={sem || currentJoonSem} setSem={setSem} />
 
                 {/* Components */}
 
@@ -213,11 +208,11 @@ function Index() {
                 ) : null}
                 {sem === "sem2" ? (
                   <>
-                    {/* <ExamRoutine
-                      examType={examTypes.board}
+                    <ExamRoutine
+                      examType={examTypes.mid}
                       sem={sem}
-                      subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
-                    /> */}
+                      subtitle={<>Exam time: 6:15 AM - 9:15 AM</>}
+                    />
                     <ClassRoutine sem={sem} />
                   </>
                 ) : null}

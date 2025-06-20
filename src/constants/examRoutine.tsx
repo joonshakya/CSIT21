@@ -1224,48 +1224,69 @@ export const examRoutine = {
         ),
       },
     ],
-    [examTypes.prac]: [
+    [examTypes.mid]: [
       {
-        day: "Wed",
+        day: "Sun",
         subject: subjects.sem2.DS,
-        date: "2023/10/11",
-        time: "7:00 AM",
+        date: "2025/06/29",
+        time: "6:15 AM",
         friendlyDate: (
           <>
-            11<sup>th</sup> October
-          </>
-        ),
-      },
-      {
-        day: "Fri",
-        subject: subjects.sem2.Stats1,
-        date: "2023/10/13",
-        time: "7:00 AM",
-        friendlyDate: (
-          <>
-            13<sup>th</sup> October
+            29<sup>th</sup> June
+            <br />
+            15<sup>th</sup> Ashad
           </>
         ),
       },
       {
         day: "Mon",
         subject: subjects.sem2.OOP,
-        date: "2023/10/16",
-        time: "7:00 AM",
+        date: "2025/06/30",
+        time: "6:15 AM",
         friendlyDate: (
           <>
-            16<sup>th</sup> October
+            30<sup>th</sup> June
+            <br />
+            16<sup>th</sup> Ashad
           </>
         ),
       },
       {
         day: "Tue",
         subject: subjects.sem2.MP,
-        date: "2023/10/17",
-        time: "11:30 AM",
+        date: "2025/07/01",
+        time: "6:15 AM",
         friendlyDate: (
           <>
-            17<sup>th</sup> October
+            1<sup>st</sup> July
+            <br />
+            17<sup>th</sup> Ashad
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: subjects.sem2.Maths2,
+        date: "2025/07/02",
+        time: "6:15 AM",
+        friendlyDate: (
+          <>
+            2<sup>nd</sup> July
+            <br />
+            18<sup>th</sup> Ashad
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem2.Stats1,
+        date: "2025/07/03",
+        time: "6:15 AM",
+        friendlyDate: (
+          <>
+            3<sup>rd</sup> July
+            <br />
+            19<sup>th</sup> Ashad
           </>
         ),
       },
