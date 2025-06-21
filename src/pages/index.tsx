@@ -89,7 +89,9 @@ function Index() {
   return (
     <>
       <Navbar
-        text={`CSIT21 - Sem ${(sem || currentJoonSem).split("sem")[1]}`}
+        text={`CSIT21 - Sem ${
+          (sem || currentJoonSem).split("sem")[1]
+        }`}
       />
       <Box
         sx={{
@@ -117,7 +119,10 @@ function Index() {
                 }}
                 size={{ xs: 12, sm: 10, md: 7 }}
               >
-                <Materials sem={sem || currentJoonSem} setSem={setSem} />
+                <Materials
+                  sem={sem || currentJoonSem}
+                  setSem={setSem}
+                />
 
                 {/* Components */}
 
@@ -211,7 +216,7 @@ function Index() {
                     <ExamRoutine
                       examType={examTypes.mid}
                       sem={sem}
-                      subtitle={<>Exam time: 6:15 AM - 9:15 AM</>}
+                      subtitle={<>Exam time: 6:15 AM - 8:15 AM</>}
                     />
                     <ClassRoutine sem={sem} />
                   </>

@@ -539,16 +539,12 @@ export const classRoutine = {
       day: "Sun",
       a: [
         [subjects.sem2.MP, ""],
-
         [subjects.sem2.Maths2, ""],
-
         [subjects.sem2.DS, ""],
       ],
       b: [
         [subjects.sem2.DS, ""],
-
         [subjects.sem2.OOP, ""],
-
         [subjects.sem2.Stats1, ""],
       ],
     },
@@ -557,14 +553,11 @@ export const classRoutine = {
       a: [
         [subjects.sem2.MP, ""],
         [subjects.sem2.DS, ""],
-
         [subjects.sem2.OOP, ""],
       ],
       b: [
         [subjects.sem2.Maths2, ""],
-
         [subjects.sem2.Stats1, ""],
-
         [subjects.sem2.DS, ""],
       ],
     },
@@ -577,9 +570,7 @@ export const classRoutine = {
       ],
       b: [
         [subjects.sem2.OOP, ""],
-
         [subjects.sem2.Maths2, ""],
-
         [subjects.sem2.DS, ""],
       ],
     },
@@ -588,14 +579,11 @@ export const classRoutine = {
       a: [
         [subjects.sem2.Maths2, ""],
         [subjects.sem2.Stats1, ""],
-
         [subjects.sem2.MP, ""],
       ],
       b: [
         [subjects.sem2.Maths2, ""],
-
         [subjects.sem2.MP, ""],
-
         [subjects.sem2.OOP, ""],
       ],
     },
@@ -604,14 +592,11 @@ export const classRoutine = {
       a: [
         [subjects.sem2.Stats1, ""],
         [subjects.sem2.DS, ""],
-
         [subjects.sem2.Maths2, ""],
       ],
       b: [
         [subjects.sem2.DS, ""],
-
         [subjects.sem2.MP, ""],
-
         [subjects.sem2.Stats1, ""],
       ],
     },
@@ -620,12 +605,10 @@ export const classRoutine = {
       a: [
         [subjects.sem2.DS, ""],
         [subjects.sem2.OOP, ""],
-
         ["*", ""],
       ],
       b: [
         [subjects.sem2.MP, ""],
-
         [subjects.sem2.Maths2, ""],
         ["*", ""],
       ],

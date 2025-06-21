@@ -1224,6 +1224,52 @@ export const examRoutine = {
         ),
       },
     ],
+    [examTypes.prac]: [
+      {
+        day: "Wed",
+        subject: subjects.sem2.DS,
+        date: "2023/10/11",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            11<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem2.Stats1,
+        date: "2023/10/13",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            13<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem2.OOP,
+        date: "2023/10/16",
+        time: "7:00 AM",
+        friendlyDate: (
+          <>
+            16<sup>th</sup> October
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem2.MP,
+        date: "2023/10/17",
+        time: "11:30 AM",
+        friendlyDate: (
+          <>
+            17<sup>th</sup> October
+          </>
+        ),
+      },
+    ],
     [examTypes.mid]: [
       {
         day: "Sun",
