@@ -127,10 +127,6 @@ function Index() {
                 {/* Components */}
 
                 {/* <ExamRoutine
-                  examType={examTypes.mid}
-                  sem={sem || currentJoonSem}
-                /> */}
-                {/* <ExamRoutine
                       examType={examTypes.prac}
                       sem={sem || currentJoonSem}
                       title="Practical Exam Routine"
@@ -146,6 +142,10 @@ function Index() {
                 {/* End Components */}
                 {sem === null || sem === currentJoonSem ? (
                   <>
+                    <ExamRoutine
+                      examType={examTypes.mid}
+                      sem={sem || currentJoonSem}
+                    />
                     <ExamRoutine
                       examType={examTypes.prac}
                       title="6th Sem Practical Exam Routine"
