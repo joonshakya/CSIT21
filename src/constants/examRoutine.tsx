@@ -1275,7 +1275,6 @@ export const examRoutine = {
         day: "Sun",
         subject: subjects.sem2.DS,
         date: "2025/06/29",
-        time: "6:15 AM",
         friendlyDate: (
           <>
             29<sup>th</sup> June
@@ -1288,7 +1287,6 @@ export const examRoutine = {
         day: "Mon",
         subject: subjects.sem2.OOP,
         date: "2025/06/30",
-        time: "6:15 AM",
         friendlyDate: (
           <>
             30<sup>th</sup> June
@@ -1301,7 +1299,6 @@ export const examRoutine = {
         day: "Tue",
         subject: subjects.sem2.MP,
         date: "2025/07/01",
-        time: "6:15 AM",
         friendlyDate: (
           <>
             1<sup>st</sup> July
@@ -1314,7 +1311,6 @@ export const examRoutine = {
         day: "Wed",
         subject: subjects.sem2.Maths2,
         date: "2025/07/02",
-        time: "6:15 AM",
         friendlyDate: (
           <>
             2<sup>nd</sup> July
@@ -1327,7 +1323,6 @@ export const examRoutine = {
         day: "Thu",
         subject: subjects.sem2.Stats1,
         date: "2025/07/03",
-        time: "6:15 AM",
         friendlyDate: (
           <>
             3<sup>rd</sup> July
