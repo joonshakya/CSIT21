@@ -125,7 +125,6 @@ function Index() {
                 />
 
                 {/* Components */}
-
                 {/* <ExamRoutine
                       examType={examTypes.prac}
                       sem={sem || currentJoonSem}
@@ -144,6 +143,13 @@ function Index() {
                   <>
                     <ExamRoutine
                       examType={examTypes.mid}
+                      subtitle={
+                        <>
+                          Exam time: 6:15 AM - 8:15 AM
+                          <br />
+                          Room 207 (Section A), Room 206 (Section B)
+                        </>
+                      }
                       sem={sem || currentJoonSem}
                     />
                     <ExamRoutine
