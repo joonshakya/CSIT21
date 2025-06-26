@@ -48,7 +48,7 @@ export const subjects = {
       microSyllabus:
         "https://drive.google.com/file/d/1P4DjuhJQNAgmkiuKHUDVZsA9jYCJp7ue/view?usp=drive_link",
       notes:
-        "https://collegenote.net/courses/notes/information-retrieval-csit-2074-syllabus-39",
+        "https://docs.google.com/presentation/d/e/2PACX-1vS52srRjGzFNRsd4Am7OmScceezVU3nzSS0J69-qbEif1-dpsNvernIJxf6kVbkxU6eBcV3VtGVZR0G/pubembed",
       questions:
         "https://collegenote.net/old-question/information-retrieval-2076-502",
       meetCodeA: "obq-gwau-jrz",
