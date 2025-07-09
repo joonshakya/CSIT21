@@ -56,14 +56,14 @@ export const classRoutine = {
       day: "Thu",
       a: [
         [
-          [subjects.sem7.SPM, "321"],
+          [subjects.sem7.SPM, "Lab C"],
           [subjects.sem7.IR, "315"],
         ],
         [subjects.sem7.Java, "PTA Lab"],
       ],
       b: [
         [
-          [subjects.sem7.SPM, "321"],
+          [subjects.sem7.SPM, "Lab C"],
           [subjects.sem7.IR, "315"],
         ],
         [subjects.sem7.DWDM, "321"],
