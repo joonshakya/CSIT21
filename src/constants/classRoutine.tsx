@@ -24,15 +24,26 @@ export const classRoutine = {
         [subjects.sem7.Java, "PTA Lab"],
       ],
     },
+    //    {
+    //   day: "Tue",
+    //   a: [
+    //     [subjects.sem7.Java, "PTA Lab"],
+    //     [subjects.sem7.PoM, "315"],
+    //   ],
+    //   b: [
+    //     [subjects.sem7.Java, "PTA Lab"],
+    //     [subjects.sem7.PoM, "321"],
+    //   ],
+    // },
     {
       day: "Tue",
       a: [
-        [subjects.sem7.DWDM, "315"],
-        [subjects.sem7.PoM, "315"],
+        [subjects.sem7.Java, "PTA Lab"],
+        [subjects.sem7.PoM, "PTA Lab"],
       ],
       b: [
-        [subjects.sem7.PoM, "321"],
         [subjects.sem7.Java, "PTA Lab"],
+        [subjects.sem7.PoM, "PTA Lab"],
       ],
     },
     {
@@ -56,14 +67,14 @@ export const classRoutine = {
       day: "Thu",
       a: [
         [
-          [subjects.sem7.SPM, "Lab C"],
+          [subjects.sem7.SPM, "321"],
           [subjects.sem7.IR, "315"],
         ],
         [subjects.sem7.Java, "PTA Lab"],
       ],
       b: [
         [
-          [subjects.sem7.SPM, "Lab C"],
+          [subjects.sem7.SPM, "321"],
           [subjects.sem7.IR, "315"],
         ],
         [subjects.sem7.DWDM, "321"],
