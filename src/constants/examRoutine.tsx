@@ -54,7 +54,56 @@ export const examRoutine = {
       },
     ],
     [examTypes.pre]: [],
-    [examTypes.board]: [],
+    [examTypes.board]: [
+      {
+        day: "Tue",
+        subject: subjects.sem7.Java,
+        date: "2025/08/12",
+        friendlyDate: (
+          <>
+            12<sup>th</sup> August
+            <br />
+            27<sup>th</sup> Shrawan
+          </>
+        ),
+        // source: "https://iost.tu.edu.np/notices/6370",
+        // sourceName: "TU Notice",
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem7.DWDM,
+        date: "2025/08/15",
+        friendlyDate: (
+          <>
+            15<sup>th</sup> August
+            <br />
+            30<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem7.PoM,
+        date: "2025/08/19",
+        friendlyDate: (
+          <>
+            19<sup>th</sup> August
+            <br />3<sup>rd</sup> Bhadra
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: [subjects.sem7.IR, subjects.sem7.SPM],
+        date: "2025/08/22",
+        friendlyDate: (
+          <>
+            22<sup>nd</sup> August
+            <br />6<sup>th</sup> Bhadra
+          </>
+        ),
+      },
+    ],
     [examTypes.prac]: [],
   },
   sem6: {

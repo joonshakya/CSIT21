@@ -142,21 +142,15 @@ function Index() {
                 {sem === null || sem === currentJoonSem ? (
                   <>
                     <ExamRoutine
-                      examType={examTypes.mid}
-                      subtitle={
-                        <>
-                          Exam time: 6:15 AM - 8:15 AM
-                          <br />
-                          Room 207 (Section A), Room 206 (Section B)
-                        </>
-                      }
+                      examType={examTypes.board}
+                      // subtitle={
+                      //   <>
+                      //     Exam time: 6:15 AM - 8:15 AM
+                      //     <br />
+                      //     Room 207 (Section A), Room 206 (Section B)
+                      //   </>
+                      // }
                       sem={sem || currentJoonSem}
-                    />
-                    <ExamRoutine
-                      examType={examTypes.prac}
-                      title="6th Sem Practical Exam Routine"
-                      subtitle="Venue: Lab A and Lab B"
-                      sem={"sem6"}
                     />
                     <ClassRoutine sem={sem || currentJoonSem} />
                   </>
