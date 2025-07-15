@@ -143,13 +143,7 @@ function Index() {
                   <>
                     <ExamRoutine
                       examType={examTypes.board}
-                      // subtitle={
-                      //   <>
-                      //     Exam time: 6:15 AM - 8:15 AM
-                      //     <br />
-                      //     Room 207 (Section A), Room 206 (Section B)
-                      //   </>
-                      // }
+                      subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
                       sem={sem || currentJoonSem}
                     />
                     <ClassRoutine sem={sem || currentJoonSem} />

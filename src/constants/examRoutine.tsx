@@ -66,8 +66,8 @@ export const examRoutine = {
             27<sup>th</sup> Shrawan
           </>
         ),
-        // source: "https://iost.tu.edu.np/notices/6370",
-        // sourceName: "TU Notice",
+        source: "https://iost.tu.edu.np/notices/8188",
+        sourceName: "TU Notice",
       },
       {
         day: "Fri",
