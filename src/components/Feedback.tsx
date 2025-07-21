@@ -4,7 +4,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import { useNonPersistingStore } from "../store";
+import { useBaseStore, useNonPersistingStore } from "../store";
 
 export default function Feedback({ sem }: { sem: string }) {
   const name = useNonPersistingStore((state) => state.feedbackName);
@@ -104,6 +104,7 @@ export default function Feedback({ sem }: { sem: string }) {
 }
 
 function sendMail({ name = "", message = "", sem = "" }) {
+  const authuser = useBaseStore.getState().authuser;
   try {
     document.createEvent("TouchEvent");
     window.location.href = `mailto:Joon Shakya<joonshakya07@gmail.com>?subject=Feedback by ${name} ${
@@ -119,7 +120,7 @@ function sendMail({ name = "", message = "", sem = "" }) {
         sem ? `from ${sem}` : ""
       }&&body=${message}`,
       "popUpWindow",
-      `height=${h},width=${w},left=${leftPosition},top=${topPosition},resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes&authuser=2`
+      `height=${h},width=${w},left=${leftPosition},top=${topPosition},resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes&authuser=${authuser}`
     );
   }
   return true;

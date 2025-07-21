@@ -2,6 +2,8 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 interface BearState {
+  authuser: string;
+  setAuthuser: (authuser: string) => void;
   roll: number;
   setRoll: (roll: number) => void;
   fullRoutine: boolean;
@@ -14,6 +16,12 @@ interface BearState {
 export const useBaseStore = create<BearState>()(
   persist(
     (set) => ({
+      authuser: "0",
+      setAuthuser: (authuser) => {
+        set(() => ({
+          authuser,
+        }));
+      },
       roll: 0,
       setRoll: (roll) => {
         set(() => ({

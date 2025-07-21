@@ -22,6 +22,8 @@ import Downlaods from "../components/Downloads";
 import Feedback from "../components/Feedback";
 import { currentJoonSem, examTypes } from "../constants";
 import { Sem } from "../constants/types";
+import { useBaseStore } from "../store";
+import { checkCollegeEmail } from "../utils/checkCollegeEmail";
 // import LeftSideCardMessage from "../components/LeftSideCardMessage";
 
 function Index() {
@@ -31,22 +33,6 @@ function Index() {
   const router = useRouter();
 
   let semParam = router.asPath.split("/")[1];
-
-  async function checkCollegeEmail(authuser: string) {
-    const img = document.createElement("img");
-    img.src =
-      "https://drive.google.com/thumbnail?id=1f0uYyaFOd_oI4Gda5FFmtao-obpz9HVT&authuser=" +
-      authuser;
-    img.style.display = "none";
-    document.body.appendChild(img);
-    img.onload = function () {
-      localStorage.setItem("authuser", authuser);
-      console.log("success on: " + authuser);
-    };
-    img.onerror = function () {
-      console.log("error on: " + authuser);
-    };
-  }
 
   useEffect(() => {
     const check = setTimeout(() => {

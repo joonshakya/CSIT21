@@ -8,12 +8,14 @@ export const materials: Record<
       link: string;
       bgColor: string;
       bgImage: string;
+      requiresCollegeEmail?: boolean;
     }[];
     materials: {
       name: React.ReactNode;
       link: string;
       bgColor: string;
       bgImage: string;
+      requiresCollegeEmail?: boolean;
     }[];
   }
 > = {
@@ -47,6 +49,7 @@ export const materials: Record<
         link: "https://drive.google.com/drive/folders/1WX2Iqgkzkkg8ZR_QT3hoEQ48vZNU6uiD?usp=drive_link",
         bgColor: "#55a3bf",
         bgImage: "linear-gradient(62deg, #5682c4 0%, #52d0b8 100%)",
+        requiresCollegeEmail: true,
       },
       // {
       //   name: (

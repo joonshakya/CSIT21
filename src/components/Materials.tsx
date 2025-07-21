@@ -9,6 +9,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import EditOnGithubButton from "./EditOnGithubButton";
 import { materials } from "../constants/materials";
+import { useBaseStore } from "../store";
 
 export function GradientButton({
   name,
@@ -55,7 +56,8 @@ export function GradientButton({
   );
 }
 
-const Materials = ({ sem, setSem }) => {
+function Materials({ sem, setSem }) {
+  const authuser = useBaseStore((state) => state.authuser);
   return (
     <Card
       sx={{
@@ -161,11 +163,24 @@ const Materials = ({ sem, setSem }) => {
                 }}
               >
                 {materials[sem].books.map(
-                  ({ name, link, bgColor, bgImage }, index) => (
+                  (
+                    {
+                      name,
+                      link,
+                      bgColor,
+                      bgImage,
+                      requiresCollegeEmail,
+                    },
+                    index
+                  ) => (
                     <GradientButton
                       key={index}
                       name={name}
-                      link={link}
+                      link={
+                        requiresCollegeEmail
+                          ? `${link}&authuser=${authuser}`
+                          : link
+                      }
                       bgColor={bgColor}
                       bgImage={bgImage}
                     />
@@ -191,13 +206,24 @@ const Materials = ({ sem, setSem }) => {
               >
                 {materials[sem].materials.map(
                   (
-                    { name, link, onClick, bgColor, bgImage },
+                    {
+                      name,
+                      link,
+                      onClick,
+                      bgColor,
+                      bgImage,
+                      requiresCollegeEmail,
+                    },
                     index
                   ) => (
                     <GradientButton
                       key={index}
                       name={name}
-                      link={link}
+                      link={
+                        requiresCollegeEmail
+                          ? `${link}&authuser=${authuser}`
+                          : link
+                      }
                       onClick={onClick}
                       bgColor={bgColor}
                       bgImage={bgImage}
@@ -223,6 +249,6 @@ const Materials = ({ sem, setSem }) => {
       </Box>
     </Card>
   );
-};
+}
 
 export default Materials;

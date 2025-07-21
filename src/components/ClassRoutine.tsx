@@ -36,8 +36,9 @@ const RoutineTableCell = ({
   routineRow,
   setContributeDialogOpen,
   setContributeDialogTitle,
-}) =>
-  routineRow[section].map((subjectsAndRoom, index) => {
+}) => {
+  const authuser = useBaseStore((state) => state.authuser);
+  return routineRow[section].map((subjectsAndRoom, index) => {
     const combined =
       JSON.stringify(routineRow.a[index]?.[0]) ===
         JSON.stringify(routineRow.b[index]?.[0]) &&
@@ -102,20 +103,12 @@ const RoutineTableCell = ({
           if (clickOpens === "meet") {
             if (section === "a" && subject?.meetCodeA) {
               window.open(
-                `https://meet.google.com/${
-                  subject.meetCodeA
-                }?authuser=${
-                  localStorage.getItem("authuser") || "0"
-                }`,
+                `https://meet.google.com/${subject.meetCodeA}?authuser=${authuser}`,
                 "_blank"
               );
             } else if (section === "b" && subject?.meetCodeB) {
               window.open(
-                `https://meet.google.com/${
-                  subject.meetCodeB
-                }?authuser=${
-                  localStorage.getItem("authuser") || "0"
-                }`,
+                `https://meet.google.com/${subject.meetCodeB}?authuser=${authuser}`,
                 "_blank"
               );
             } else {
@@ -222,20 +215,12 @@ const RoutineTableCell = ({
                 if (clickOpens === "meet") {
                   if (section === "a" && subject?.meetCodeA) {
                     window.open(
-                      `https://meet.google.com/${
-                        subject.meetCodeA
-                      }?authuser=${
-                        localStorage.getItem("authuser") || "0"
-                      }`,
+                      `https://meet.google.com/${subject.meetCodeA}?authuser=${authuser}`,
                       "_blank"
                     );
                   } else if (section === "b" && subject?.meetCodeB) {
                     window.open(
-                      `https://meet.google.com/${
-                        subject.meetCodeB
-                      }?authuser=${
-                        localStorage.getItem("authuser") || "0"
-                      }`,
+                      `https://meet.google.com/${subject.meetCodeB}?authuser=${authuser}`,
                       "_blank"
                     );
                   } else {
@@ -256,6 +241,7 @@ const RoutineTableCell = ({
       </TableCell>
     );
   });
+};
 
 export default function ClassRoutine({ sem }) {
   const roll = useBaseStore((state) => state.roll);

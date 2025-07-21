@@ -313,6 +313,7 @@ export default function ExamRoutine({
                                 {exam.subject.map(
                                   (subject, index) => (
                                     <Link
+                                      key={subject?.shortName}
                                       align="center"
                                       sx={{
                                         p: 1,
