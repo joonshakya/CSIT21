@@ -44,7 +44,7 @@ export const materials: Record<
             Slides
           </>
         ),
-        link: "https://drive.google.com/drive/folders/1H8DQcAsH9iglTv2MzhM4Gwo_K4XS1X57?usp=sharing",
+        link: "https://drive.google.com/drive/folders/1WX2Iqgkzkkg8ZR_QT3hoEQ48vZNU6uiD?usp=drive_link",
         bgColor: "#55a3bf",
         bgImage: "linear-gradient(62deg, #5682c4 0%, #52d0b8 100%)",
       },
