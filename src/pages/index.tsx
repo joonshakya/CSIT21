@@ -128,6 +128,17 @@ function Index() {
                 {sem === null || sem === currentJoonSem ? (
                   <>
                     <ExamRoutine
+                      examType={examTypes.pre}
+                      subtitle={
+                        <>
+                          Exam time: 6:15 AM - 9:15 AM
+                          <br />
+                          Room 321 (Section A), Room 315 (Section B)
+                        </>
+                      }
+                      sem={sem || currentJoonSem}
+                    />
+                    <ExamRoutine
                       examType={examTypes.board}
                       subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
                       sem={sem || currentJoonSem}

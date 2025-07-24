@@ -53,7 +53,56 @@ export const examRoutine = {
         ),
       },
     ],
-    [examTypes.pre]: [],
+    [examTypes.pre]: [
+      {
+        day: "Sun",
+        subject: subjects.sem7.Java,
+        date: "2025/07/27",
+        friendlyDate: (
+          <>
+            27<sup>th</sup> July
+            <br />
+            11<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem7.DWDM,
+        date: "2025/07/28",
+        friendlyDate: (
+          <>
+            28<sup>th</sup> July
+            <br />
+            12<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem7.PoM,
+        date: "2025/07/29",
+        friendlyDate: (
+          <>
+            29<sup>th</sup> July
+            <br />
+            13<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: [subjects.sem7.IR, subjects.sem7.SPM],
+        date: "2025/07/30",
+        friendlyDate: (
+          <>
+            30<sup>th</sup> July
+            <br />
+            14<sup>th</sup> Shrawan
+          </>
+        ),
+      },
+    ],
     [examTypes.board]: [
       {
         day: "Tue",
