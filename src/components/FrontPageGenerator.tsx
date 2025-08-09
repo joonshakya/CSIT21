@@ -496,23 +496,27 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
               isOptionEqualToValue={(option, value) =>
                 option.roll === value.roll
               }
-              renderOption={(props, option) => (
-                <ListItem
-                  {...props}
-                  sx={{
-                    display: "flex",
-                  }}
-                >
-                  <Typography
+              renderOption={(props, option) => {
+                const { key, ...optionProps } = props as any;
+                return (
+                  <ListItem
+                    {...optionProps}
+                    key={key}
                     sx={{
-                      flex: 1,
+                      display: "flex",
                     }}
                   >
-                    {option.label}
-                  </Typography>
-                  <Typography>{option.roll}</Typography>
-                </ListItem>
-              )}
+                    <Typography
+                      sx={{
+                        flex: 1,
+                      }}
+                    >
+                      {option.label}
+                    </Typography>
+                    <Typography>{option.roll}</Typography>
+                  </ListItem>
+                );
+              }}
             />
             <FormLabel
               sx={{

@@ -14,6 +14,6 @@ export async function checkCollegeEmail(authuser: string) {
     });
   };
   img.onerror = function () {
-    console.log(`failed on college email`, authuser);
+    // console.log(`failed on college email`, authuser);
   };
 }

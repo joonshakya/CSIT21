@@ -120,23 +120,27 @@ const OpCodeFinder = ({ operate }) => {
             isOptionEqualToValue={(option, value) =>
               option.label === value?.label
             }
-            renderOption={(props, option) => (
-              <ListItem
-                {...props}
-                sx={{
-                  display: "flex",
-                }}
-              >
-                <Typography
+            renderOption={(props, option) => {
+              const { key, ...optionProps } = props as any;
+              return (
+                <ListItem
+                  {...optionProps}
+                  key={key}
                   sx={{
-                    flex: 1,
+                    display: "flex",
                   }}
                 >
-                  {option.label}
-                </Typography>
-                <Typography>{option.opCode}</Typography>
-              </ListItem>
-            )}
+                  <Typography
+                    sx={{
+                      flex: 1,
+                    }}
+                  >
+                    {option.label}
+                  </Typography>
+                  <Typography>{option.opCode}</Typography>
+                </ListItem>
+              );
+            }}
           />
         </CardContent>
       </Box>

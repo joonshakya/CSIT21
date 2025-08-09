@@ -212,7 +212,13 @@ export default function ExamRoutine({
                   </TableHead>
                   <TableBody>
                     {routine.map((exam) => (
-                      <Fragment key={exam.subject.shortName}>
+                      <Fragment
+                        key={
+                          exam.subject.shortName ||
+                          exam.subject[0]?.shortName ||
+                          exam.date + exam.day + exam.time
+                        }
+                      >
                         <TableRow
                           sx={{
                             "&:nth-of-type(even)": {
