@@ -18,7 +18,10 @@ const drawerWidth = 240;
 // const navItems = ["Home", "About", "Contact"];
 const navItems = [];
 
-function DrawerAppBar(props) {
+function DrawerAppBar(props: {
+  text: string;
+  window?: () => Window;
+}) {
   const { window: _window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 
