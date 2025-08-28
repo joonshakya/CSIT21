@@ -168,28 +168,28 @@ export const examRoutine = {
         ),
       },
       {
-        day: "Tue",
+        day: "Mon",
         subject: subjects.sem7.Java,
         time: "6:30 AM",
+        date: "2025/09/01",
+        friendlyDate: (
+          <>
+            1<sup>st</sup> September
+            <br />
+            16<sup>th</sup> Bhadra
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem7.DWDM,
+        time: "7:30 AM",
         date: "2025/09/02",
         friendlyDate: (
           <>
             2<sup>nd</sup> September
             <br />
             17<sup>th</sup> Bhadra
-          </>
-        ),
-      },
-      {
-        day: "Thu",
-        subject: subjects.sem7.DWDM,
-        time: "7:30 AM",
-        date: "2025/09/04",
-        friendlyDate: (
-          <>
-            4<sup>th</sup> September
-            <br />
-            19<sup>th</sup> Bhadra
           </>
         ),
       },
