@@ -135,6 +135,7 @@ function Index() {
                     /> */}
                     <ExamRoutine
                       examType={examTypes.prac}
+                      subtitle={<>Venue: Lab A and Lab B</>}
                       sem={sem || currentJoonSem}
                     />
                     <ClassRoutine sem={sem || currentJoonSem} />
