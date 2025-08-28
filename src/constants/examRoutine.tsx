@@ -153,7 +153,47 @@ export const examRoutine = {
         ),
       },
     ],
-    [examTypes.prac]: [],
+    [examTypes.prac]: [
+      {
+        day: "Sun",
+        subject: [subjects.sem7.IR, subjects.sem7.SPM],
+        time: "7:00 AM",
+        date: "2025/08/31",
+        friendlyDate: (
+          <>
+            31<sup>st</sup> August
+            <br />
+            15<sup>th</sup> Bhadra
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem7.Java,
+        time: "6:30 AM",
+        date: "2025/09/02",
+        friendlyDate: (
+          <>
+            2<sup>nd</sup> September
+            <br />
+            17<sup>th</sup> Bhadra
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem7.DWDM,
+        time: "7:30 AM",
+        date: "2025/09/04",
+        friendlyDate: (
+          <>
+            4<sup>th</sup> September
+            <br />
+            19<sup>th</sup> Bhadra
+          </>
+        ),
+      },
+    ],
   },
   sem6: {
     [examTypes.mid]: [
