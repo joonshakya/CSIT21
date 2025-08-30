@@ -34,7 +34,6 @@ import {
   nccAssignments,
   compilerAssignments,
   eComAssignments,
-  javaAssignments,
 } from "../constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
@@ -69,7 +68,6 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
       "NCC",
       "ECom",
       "Compiler",
-      "Java",
     ];
   }, []);
 
@@ -98,17 +96,13 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
     ];
   }, []);
 
-  const initialSubject = "Java";
+  const initialSubject = "Compiler";
 
   const [tab, setTab] = useState("assignment");
   const [subject, setSubject] = useState(initialSubject);
 
   const assignmentLists = useMemo(() => {
     return [
-      {
-        subject: "Java",
-        assignments: javaAssignments,
-      },
       {
         subject: "Compiler",
         assignments: compilerAssignments,
@@ -593,23 +587,17 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
                     justifyContent: "center",
                   }}
                 >
-                  {(tab === "assignment"
-                    ? [
-                        {
-                          shortHand: "Java",
-                          longHand: "Java",
-                        },
-                      ]
-                    : []
-                  ).map((subject, index) => (
-                    <FormControlLabel
-                      key={index}
-                      value={subject.shortHand}
-                      defaultChecked={index === 0}
-                      control={<Radio />}
-                      label={subject.longHand}
-                    />
-                  ))}
+                  {(tab === "assignment" ? [] : []).map(
+                    (subject, index) => (
+                      <FormControlLabel
+                        key={index}
+                        value={subject.shortHand}
+                        defaultChecked={index === 0}
+                        control={<Radio />}
+                        label={subject.longHand}
+                      />
+                    )
+                  )}
                 </Box>
                 <Box
                   sx={{

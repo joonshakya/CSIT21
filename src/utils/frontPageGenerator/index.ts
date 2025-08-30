@@ -16,7 +16,6 @@ import {
   nccAssignments,
   compilerAssignments,
   eComAssignments,
-  javaAssignments,
 } from "../../constants";
 import { useState } from "react";
 import { useBaseStore } from "../../../src/store";
@@ -83,7 +82,6 @@ export default function useFrontPageGenerator() {
       NCC: nccAssignments,
       ECom: eComAssignments,
       Compiler: compilerAssignments,
-      Java: javaAssignments,
     };
 
     if (

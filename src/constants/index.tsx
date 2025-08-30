@@ -1,36 +1,5 @@
 import { subjects } from "./subjects";
 
-export const javaAssignments = [
-  { number: 1, name: "Lab Sheet 1 to 10" },
-  { number: 2, name: "Lab Sheet 11 to 20" },
-  { number: 3, name: "Lab Sheet 21 to 30" },
-  {
-    number: 4,
-    name: "Create a Registration Form using AWT",
-  },
-  {
-    number: 5,
-    name: "Applet Program",
-  },
-  {
-    number: 6,
-    name: "Menu and Layout in AWT",
-  },
-  {
-    number: 7,
-    name: "Menu and Layout in Swing",
-  },
-  {
-    number: 8,
-    name: "Swing Event Handling",
-  },
-  {
-    number: 9,
-    name: "Swing Key Listener",
-    selected: true,
-  },
-];
-
 export const compilerAssignments = [
   { number: 1, name: "Tokenizing the Source Code" },
   {
