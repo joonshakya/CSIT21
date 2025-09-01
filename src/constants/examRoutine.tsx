@@ -183,7 +183,7 @@ export const examRoutine = {
       {
         day: "Tue",
         subject: subjects.sem7.DWDM,
-        time: "7:30 AM",
+        time: "6:30 AM",
         date: "2025/09/02",
         friendlyDate: (
           <>
