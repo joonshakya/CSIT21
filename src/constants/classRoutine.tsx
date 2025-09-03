@@ -1,6 +1,74 @@
 import { subjects } from "./subjects";
 
 export const classRoutine = {
+  sem8: [
+    {
+      day: "Sun",
+      a: [
+        [subjects.sem8.IBM, "318"],
+        [subjects.sem8.CC, "318"],
+      ],
+      b: [
+        [subjects.sem8.IBM, "318"],
+        [subjects.sem8.CC, "318"],
+      ],
+    },
+    {
+      day: "Mon",
+      a: [
+        [subjects.sem8.ADB, "318"],
+        [subjects.sem8.IBM, "318"],
+      ],
+      b: [
+        [subjects.sem8.ADB, "318"],
+        [subjects.sem8.IBM, "318"],
+      ],
+    },
+    {
+      day: "Tue",
+      a: [
+        [subjects.sem8.ADB, "318"],
+        [subjects.sem8.DN, "318"],
+      ],
+      b: [
+        [subjects.sem8.ADB, "318"],
+        [subjects.sem8.DN, "318"],
+      ],
+    },
+    {
+      day: "Wed",
+      a: [
+        [subjects.sem8.IBM, "318"],
+        [subjects.sem8.DN, "318"],
+      ],
+      b: [
+        [subjects.sem8.IBM, "318"],
+        [subjects.sem8.DN, "318"],
+      ],
+    },
+    {
+      day: "Thu",
+      a: [
+        [subjects.sem8.DN, "318"],
+        [subjects.sem8.CC, "318"],
+      ],
+      b: [
+        [subjects.sem8.DN, "318"],
+        [subjects.sem8.CC, "318"],
+      ],
+    },
+    {
+      day: "Fri",
+      a: [
+        [subjects.sem8.ADB, "318"],
+        [subjects.sem8.CC, "318"],
+      ],
+      b: [
+        [subjects.sem8.ADB, "318"],
+        [subjects.sem8.CC, "318"],
+      ],
+    },
+  ],
   sem7: [
     {
       day: "Sun",

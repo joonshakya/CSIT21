@@ -145,6 +145,11 @@ function Materials({ sem, setSem }) {
                 control={<Radio />}
                 label="7th"
               />
+              <FormControlLabel
+                value="sem8"
+                control={<Radio />}
+                label="8th"
+              />
             </RadioGroup>
           </FormControl>
           {materials[sem].books.length !== 0 ? (

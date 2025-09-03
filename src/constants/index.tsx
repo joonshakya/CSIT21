@@ -537,7 +537,7 @@ export const questionPapers = {
   },
 };
 
-export const currentJoonSem = "sem7";
+export const currentJoonSem = "sem8";
 
 export const classRoutineSem2 = [
   {
@@ -618,7 +618,59 @@ export const classRoutineSem2 = [
 ];
 
 export const names = {
-  sem7: {
+  sem8: {
+    1: ["Aakash Shrestha", "021BSCIT001", "A"],
+    2: ["Aayam Pokharel", "021BSCIT002", "A"],
+    3: ["Aayush Poudel", "021BSCIT003", "A"],
+    4: ["Aayush Shrestha", "021BSCIT004", "A"],
+    5: ["Abhishek Uprety", "021BSCIT005", "A"],
+    6: ["Ashraya Jung Sijapati", "021BSCIT006", "A"],
+    7: ["Binaya Paudel", "021BSCIT007", "A"],
+    8: ["Binaya Shrestha", "021BSCIT008", "A"],
+    9: ["Dhiraj Sah", "021BSCIT009", "A"],
+    10: ["Gaurav Bhatt", "021BSCIT010", "A"],
+    11: ["Gaurav Kafle", "021BSCIT011", "A"],
+    12: ["Joon Shakya", "021BSCIT012", "A"],
+    13: ["Nischal Shrestha", "021BSCIT013", "A"],
+    14: ["Nitika Pradhananga", "021BSCIT014", "A"],
+    15: ["Pralov Malla", "021BSCIT015", "A"],
+    16: ["Rasna Bhasima", "021BSCIT016", "A"],
+    17: ["Redikshya Phuyal", "021BSCIT017", "A"],
+    18: ["Rhizu Joshi", "021BSCIT018", "A"],
+    19: ["Riwaj Prasai", "021BSCIT019", "A"],
+    20: ["Ruby Shrestha", "021BSCIT020", "A"],
+    21: ["Rupesh Bashyal", "021BSCIT021", "A"],
+    22: ["Sahara Khatri", "021BSCIT022", "A"],
+    23: ["Sahil Lamsal", "021BSCIT023", "A"],
+    24: ["Saisab Karki", "021BSCIT024", "A"],
+    25: ["Sajina Basnet", "021BSCIT025", "B"],
+    26: ["Samarpan Bhandari", "021BSCIT026", "B"],
+    27: ["Sameer Shrestha", "021BSCIT027", "B"],
+    28: ["Sashwat Maharjan", "021BSCIT028", "B"],
+    29: ["Satish Maharjan", "021BSCIT029", "B"],
+    30: ["Saugat Dahal", "021BSCIT030", "B"],
+    31: ["Saurabh Baral", "021BSCIT031", "B"],
+    32: ["Saurav Bista", "021BSCIT032", "B"],
+    33: ["Selina Maharjan", "021BSCIT033", "B"],
+    34: ["Shamant Kharel", "021BSCIT034", "B"],
+    35: ["Shasin Regmi", "021BSCIT035", "B"],
+    36: ["Shreeya Nepal", "021BSCIT036", "B"],
+    37: ["Shristi Shakya", "021BSCIT037", "B"],
+    38: ["Shubham Belbase", "021BSCIT038", "B"],
+    39: ["Siddhanta Shrestha", "021BSCIT039", "B"],
+    40: ["Sijan Khatri", "021BSCIT040", "B"],
+    41: ["Spandan Shakya", "021BSCIT041", "B"],
+    42: ["Sudip Shrestha", "021BSCIT042", "B"],
+    43: ["Suhana Shrestha", "021BSCIT043", "B"],
+    44: ["Sujal Bajracharya", "021BSCIT044", "B"],
+    45: ["Susmita Majhi", "021BSCIT045", "B"],
+    46: ["Swoyesh Shrestha", "021BSCIT046", "B"],
+    47: ["Yogesh Rijal", "021BSCIT047", "B"],
+    48: ["Yubraj Khatiwada", "021BSCIT048", "B"],
+    49: ["Laviz Pandey", "021BSCIT049", "B"],
+    50: ["Nirajan Acharya", "021BSCIT050", "B"],
+  },
+   sem7: {
     1: ["Aakash Shrestha", "021BSCIT001", "A"],
     2: ["Aayam Pokharel", "021BSCIT002", "A"],
     3: ["Aayush Poudel", "021BSCIT003", "A"],

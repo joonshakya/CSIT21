@@ -21,7 +21,20 @@ export const materials: Record<
 > = {
   sem8: {
     books: [],
-    materials: [],
+    materials: [
+      {
+        name: (
+          <>
+            Ankit
+            <br />
+            Pangeni
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/14tPiF2cV21_7Aq-M5755ZqXm_zI2twaj",
+        bgColor: "#548982",
+        bgImage: "linear-gradient(90deg, #585c5b 0%, #44b8ab 100%)",
+      },
+    ],
   },
   sem7: {
     books: [],

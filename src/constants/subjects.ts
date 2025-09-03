@@ -1,4 +1,34 @@
 export const subjects = {
+  sem8: {
+    ADB: {
+      name: "Advanced Database",
+      shortName: "ADB",
+      microSyllabus: "https://drive.google.com/file/d/1OtJadE2JmfZDxWweiyOg6ZYHwhuQXdTl/view?usp=drive_link",
+      notes: "https://hamrocsit.com/note/advanced-database/enhanced-entity-relationship-model-and-relational-model/",
+      questions: "https://hamrocsit.com/semester/eight/advanced-database/question-bank",
+    },
+    DN: {
+      name: "Distributed Network",
+      shortName: "DN",
+      microSyllabus: "https://drive.google.com/file/d/1BIw5479lBZhvu88ttNoufqDiJvBGT8bh/view?usp=drive_link",
+      notes: "",
+      questions: "",
+    },
+    IBM: {
+      name: "International Business Management",
+      shortName: "IBM",
+      microSyllabus: "https://drive.google.com/file/d/1TDd8CYbBoYLxEu6ORXUU8wAXhgR6ynGk/view?usp=drive_link",
+      notes: "https://hamrocsit.com/note/international-business-management/globalization-and-international-business/",
+      questions: "https://hamrocsit.com/semester/eight/international-business-management/question-bank",
+    },
+    CC: {
+      name: "Introduction to Cloud Computing",
+      shortName: "CC",
+      microSyllabus: "https://drive.google.com/file/d/1_dr_Lw_ZHzzAnetHlT_jj1k1P4tIu9vyG/view?usp=drive_link",
+      notes: "https://hamrocsit.com/note/introduction-to-cloud-computing/introduction-to-cloud-computing/",
+      questions: "https://hamrocsit.com/semester/eight/introduction-to-cloud-computing/question-bank",
+    },
+  },
   sem7: {
     Java: {
       name: "Advanced Java Programming",

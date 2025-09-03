@@ -2,6 +2,12 @@ import { examTypes } from ".";
 import { subjects } from "./subjects";
 
 export const examRoutine = {
+  sem8: {
+    [examTypes.mid]: [],
+    [examTypes.pre]: [],
+    [examTypes.board]: [],
+    [examTypes.prac]: [],
+  },
   sem7: {
     [examTypes.mid]: [
       {

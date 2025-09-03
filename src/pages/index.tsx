@@ -127,6 +127,11 @@ function Index() {
                 {/* End Components */}
                 {sem === null || sem === currentJoonSem ? (
                   <>
+                    <ClassRoutine sem={sem || currentJoonSem} />
+                  </>
+                ) : null}
+                {sem === "sem7" ? (
+                  <>
                     {/*                   
                     <ExamRoutine
                       examType={examTypes.board}
