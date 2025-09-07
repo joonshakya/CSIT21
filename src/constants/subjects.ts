@@ -14,7 +14,7 @@ export const subjects = {
       name: "Distributed Network",
       shortName: "DN",
       microSyllabus:
-        "https://drive.google.com/file/d/1BIw5479lBZhvu88ttNoufqDiJvBGT8bh/view?usp=drive_link",
+        "https://drive.google.com/file/d/1nx1VmJ3tjvwog8_iT4Lc2CNx16FEUaJG/view?usp=drive_link",
       notes: "",
       questions: "",
     },
@@ -32,7 +32,7 @@ export const subjects = {
       name: "Introduction to Cloud Computing",
       shortName: "CC",
       microSyllabus:
-        "https://drive.google.com/file/d/1_dr_Lw_ZHzzAnetHlT_jj1kP4tIu9vyG/view?usp=drive_link",
+        "https://drive.google.com/file/d/1qYb3juY6YiSeCSTE8yXrzxDj8Ne6lGQs/view?usp=drive_link",
       notes:
         "https://hamrocsit.com/note/introduction-to-cloud-computing/introduction-to-cloud-computing/",
       questions:
