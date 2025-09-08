@@ -9,6 +9,8 @@ export const subjects = {
         "https://hamrocsit.com/note/advanced-database/enhanced-entity-relationship-model-and-relational-model/",
       questions:
         "https://hamrocsit.com/semester/eight/advanced-database/question-bank",
+      meetCodeA: "jtz-idaf-ain",
+      meetCodeB: "jtz-idaf-ain",
     },
     DN: {
       name: "Distributed Network",
