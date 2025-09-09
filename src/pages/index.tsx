@@ -24,6 +24,7 @@ import { currentJoonSem, examTypes } from "../constants";
 import { Sem } from "../constants/types";
 import { useBaseStore } from "../store";
 import { checkCollegeEmail } from "../utils/checkCollegeEmail";
+import { Card, CardContent, Typography } from "@mui/material";
 // import LeftSideCardMessage from "../components/LeftSideCardMessage";
 
 function Index() {
@@ -127,7 +128,45 @@ function Index() {
                 {/* End Components */}
                 {sem === null || sem === currentJoonSem ? (
                   <>
-                    <ClassRoutine sem={sem || currentJoonSem} />
+                    {/* <ClassRoutine sem={sem || currentJoonSem} /> */}
+                    <Card
+                      sx={{
+                        mt: 2,
+                        display: "flex",
+                        borderRadius: ".6rem",
+                        "&:hover": {
+                          boxShadow:
+                            "0 20px 20px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+                        },
+                        overflowX: "auto",
+                      }}
+                      elevation={3}
+                    >
+                      <Box
+                        sx={{
+                          flex: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <CardContent
+                          sx={{
+                            position: "relative",
+                            flex: 1,
+                            pb: "1rem !important",
+                          }}
+                        >
+                          <Typography
+                            variant="h5"
+                            component="div"
+                            textAlign={"center"}
+                            fontWeight={"bold"}
+                          >
+                            Stay Safe Everyone
+                          </Typography>
+                        </CardContent>
+                      </Box>
+                    </Card>
                   </>
                 ) : null}
                 {sem === "sem7" ? (
