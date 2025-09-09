@@ -19,6 +19,8 @@ export const subjects = {
         "https://drive.google.com/file/d/1nx1VmJ3tjvwog8_iT4Lc2CNx16FEUaJG/view?usp=drive_link",
       notes: "",
       questions: "",
+      meetCodeA: "jzg-pijq-gga",
+      meetCodeB: "jzg-pijq-gga",
     },
     IBM: {
       name: "International Business Management",
