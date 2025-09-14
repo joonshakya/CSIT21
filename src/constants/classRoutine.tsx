@@ -5,67 +5,67 @@ export const classRoutine = {
     {
       day: "Sun",
       a: [
-        [subjects.sem8.IBM, "318"],
-        [subjects.sem8.CC, "318"],
+        [subjects.sem8.ADB, "Meet"],
+        [subjects.sem8.IBM, "Meet"],
       ],
       b: [
-        [subjects.sem8.IBM, "318"],
-        [subjects.sem8.CC, "318"],
+        [subjects.sem8.ADB, "Meet"],
+        [subjects.sem8.IBM, "Meet"],
       ],
     },
     {
       day: "Mon",
       a: [
-        [subjects.sem8.ADB, "Lab A"],
-        [subjects.sem8.IBM, "Lab A"],
+        [subjects.sem8.ADB, "Meet"],
+        [subjects.sem8.CC, "Meet"],
       ],
       b: [
-        [subjects.sem8.ADB, "Lab A"],
-        [subjects.sem8.IBM, "Lab A"],
+        [subjects.sem8.ADB, "Meet"],
+        [subjects.sem8.CC, "Meet"],
       ],
     },
     {
       day: "Tue",
       a: [
-        [subjects.sem8.ADB, "Meet"],
+        [subjects.sem8.IBM, "Meet"],
         [subjects.sem8.DN, "Meet"],
       ],
       b: [
-        [subjects.sem8.ADB, "Meet"],
+        [subjects.sem8.IBM, "Meet"],
         [subjects.sem8.DN, "Meet"],
       ],
     },
     {
       day: "Wed",
       a: [
-        [subjects.sem8.IBM, "318"],
-        [subjects.sem8.DN, "318"],
+        [subjects.sem8.ADB, "Meet"],
+        [subjects.sem8.CC, "Meet"],
       ],
       b: [
-        [subjects.sem8.IBM, "318"],
-        [subjects.sem8.DN, "318"],
+        [subjects.sem8.ADB, "Meet"],
+        [subjects.sem8.CC, "Meet"],
       ],
     },
     {
       day: "Thu",
       a: [
-        [subjects.sem8.DN, "318"],
-        [subjects.sem8.CC, "318"],
+        [subjects.sem8.DN, "Meet"],
+        [subjects.sem8.CC, "Meet"],
       ],
       b: [
-        [subjects.sem8.DN, "318"],
-        [subjects.sem8.CC, "318"],
+        [subjects.sem8.DN, "Meet"],
+        [subjects.sem8.CC, "Meet"],
       ],
     },
     {
       day: "Fri",
       a: [
-        [subjects.sem8.ADB, "318"],
-        [subjects.sem8.CC, "318"],
+        [subjects.sem8.DN, "Meet"],
+        [subjects.sem8.ADB, "Meet"],
       ],
       b: [
-        [subjects.sem8.ADB, "318"],
-        [subjects.sem8.CC, "318"],
+        [subjects.sem8.DN, "Meet"],
+        [subjects.sem8.ADB, "Meet"],
       ],
     },
   ],
