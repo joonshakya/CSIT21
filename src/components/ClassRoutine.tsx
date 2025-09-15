@@ -21,6 +21,7 @@ import { useBaseStore } from "../store";
 import ContributeDialog from "./ContributeDialog";
 import { classRoutine } from "../constants/classRoutine";
 import EditOnGithubButton from "./EditOnGithubButton";
+import { Sem } from "../constants/types";
 
 const tCellStyles = {
   px: 1,
@@ -243,7 +244,13 @@ const RoutineTableCell = ({
   });
 };
 
-export default function ClassRoutine({ sem }) {
+export default function ClassRoutine({
+  sem,
+  subTitle,
+}: {
+  sem: Sem;
+  subTitle?: string;
+}) {
   const roll = useBaseStore((state) => state.roll);
   const fullRoutine = useBaseStore((state) => state.fullRoutine);
   const setFullRoutine = useBaseStore(
@@ -369,6 +376,15 @@ export default function ClassRoutine({ sem }) {
             <Typography variant="h5" component="div">
               Class Routine
             </Typography>
+            {subTitle ? (
+              <Typography
+                sx={{ mb: 1.5, mt: 0.5 }}
+                color="text.secondary"
+                variant="body2"
+              >
+                {subTitle}
+              </Typography>
+            ) : null}
             {loading ? (
               <Box
                 sx={{

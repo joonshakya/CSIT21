@@ -41,6 +41,8 @@ export const subjects = {
         "https://hamrocsit.com/note/introduction-to-cloud-computing/introduction-to-cloud-computing/",
       questions:
         "https://hamrocsit.com/semester/eight/introduction-to-cloud-computing/question-bank",
+      meetCodeA: "rvp-taks-owv",
+      meetCodeB: "rvp-taks-owv",
     },
   },
   sem7: {
