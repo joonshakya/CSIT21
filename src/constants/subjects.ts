@@ -31,6 +31,8 @@ export const subjects = {
         "https://hamrocsit.com/note/international-business-management/globalization-and-international-business/",
       questions:
         "https://hamrocsit.com/semester/eight/international-business-management/question-bank",
+      meetCodeA: "ait-song-xpi",
+      meetCodeB: "ait-song-xpi",
     },
     CC: {
       name: "Introduction to Cloud Computing",
