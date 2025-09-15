@@ -378,7 +378,7 @@ export default function ClassRoutine({
             </Typography>
             {subTitle ? (
               <Typography
-                sx={{ mb: 1.5, mt: 0.5 }}
+                sx={{ my: 0.5 }}
                 color="text.secondary"
                 variant="body2"
               >
