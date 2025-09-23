@@ -24,6 +24,8 @@ import { currentJoonSem, examTypes } from "../constants";
 import { Sem } from "../constants/types";
 import { useBaseStore } from "../store";
 import { checkCollegeEmail } from "../utils/checkCollegeEmail";
+import Countdown from "../components/Countdown";
+import { Card, CardContent, Typography } from "@mui/material";
 // import LeftSideCardMessage from "../components/LeftSideCardMessage";
 
 function Index() {
@@ -131,6 +133,34 @@ function Index() {
                       sem={sem || currentJoonSem}
                       subTitle="Classes start at 6:30 AM"
                     />
+                    <Card
+                      sx={{
+                        mt: 2,
+                        display: "flex",
+                        borderRadius: ".6rem",
+                        "&:hover": {
+                          boxShadow:
+                            "0 20px 20px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+                        },
+                        overflowX: "auto",
+                      }}
+                      elevation={3}
+                    >
+                      <CardContent
+                        sx={{
+                          position: "relative",
+                          flex: 1,
+                          pb: "0 !important",
+                        }}
+                      >
+                        <Typography variant="h5" component="div">
+                          FYP Deadline
+                        </Typography>
+                        <Countdown
+                          yyyymmddDate="2025-10-17" // October 17, 2025
+                        />
+                      </CardContent>
+                    </Card>
                   </>
                 ) : null}
                 {sem === "sem7" ? (
