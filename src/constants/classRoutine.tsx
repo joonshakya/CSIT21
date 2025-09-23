@@ -38,11 +38,11 @@ export const classRoutine = {
     {
       day: "Wed",
       a: [
-        [subjects.sem8.ADB, "Maybe busy"],
+        [subjects.sem8.ADB, "No Class\nDo Assignment"],
         [subjects.sem8.CC, ""],
       ],
       b: [
-        [subjects.sem8.ADB, "Maybe busy"],
+        [subjects.sem8.ADB, "No Class\nDo Assignment"],
         [subjects.sem8.CC, ""],
       ],
     },
