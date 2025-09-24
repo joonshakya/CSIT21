@@ -157,7 +157,7 @@ function Index() {
                           FYP Deadline
                         </Typography>
                         <Countdown
-                          yyyymmddDate="2025-10-17" // October 17, 2025
+                          yyyymmddDate="2025/10/17" // October 17, 2025
                         />
                       </CardContent>
                     </Card>

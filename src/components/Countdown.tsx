@@ -97,7 +97,7 @@ export default function Countdown({
   hideTomorrow,
 }: {
   text?: string;
-  yyyymmddDate: string;
+  yyyymmddDate: `${number}/${number}/${number}`;
   hideTomorrow?: boolean;
 }) {
   const startDay = new Date(yyyymmddDate + " GMT+05:45");
