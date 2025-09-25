@@ -49,13 +49,11 @@ export const classRoutine = {
     {
       day: "Thu",
       a: [
-        // [subjects.sem8.DN, ""],
-        [subjects.sem8.IBM, ""],
+        [subjects.sem8.DN, ""],
         [subjects.sem8.CC, ""],
       ],
       b: [
-        // [subjects.sem8.DN, ""],
-        [subjects.sem8.IBM, ""],
+        [subjects.sem8.DN, ""],
         [subjects.sem8.CC, ""],
       ],
     },
@@ -64,12 +62,10 @@ export const classRoutine = {
       a: [
         // [subjects.sem8.DN, ""],
         [subjects.sem8.IBM, ""],
-        [subjects.sem8.ADB, ""],
       ],
       b: [
         // [subjects.sem8.DN, ""],
         [subjects.sem8.IBM, ""],
-        [subjects.sem8.ADB, ""],
       ],
     },
   ],
