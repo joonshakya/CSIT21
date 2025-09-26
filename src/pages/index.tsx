@@ -129,10 +129,6 @@ function Index() {
                 {/* End Components */}
                 {sem === null || sem === currentJoonSem ? (
                   <>
-                    <ClassRoutine
-                      sem={sem || currentJoonSem}
-                      subTitle="Classes start at 6:30 AM"
-                    />
                     <Card
                       sx={{
                         mt: 2,
@@ -161,6 +157,10 @@ function Index() {
                         />
                       </CardContent>
                     </Card>
+                    <ClassRoutine
+                      sem={sem || currentJoonSem}
+                      subTitle="Classes start at 6:30 AM"
+                    />
                   </>
                 ) : null}
                 {sem === "sem7" ? (
