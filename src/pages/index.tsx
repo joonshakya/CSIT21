@@ -129,7 +129,7 @@ function Index() {
                 {/* End Components */}
                 {sem === null || sem === currentJoonSem ? (
                   <>
-                    <Card
+                    {/* <Card
                       sx={{
                         mt: 2,
                         display: "flex",
@@ -156,7 +156,7 @@ function Index() {
                           yyyymmddDate="2025/10/17" // October 17, 2025
                         />
                       </CardContent>
-                    </Card>
+                    </Card> */}
                     <ClassRoutine
                       sem={sem || currentJoonSem}
                       subTitle="Classes start at 6:30 AM"
