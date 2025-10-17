@@ -156,9 +156,7 @@ function Index() {
                         <Typography variant="h5" component="div">
                           FYP Deadline
                         </Typography>
-                        <Countdown
-                          yyyymmddDate="2025/10/17" // October 17, 2025
-                        />
+                        <Countdown yyyymmddDate="2025/10/21" />
                       </CardContent>
                     </Card>
                   </>
