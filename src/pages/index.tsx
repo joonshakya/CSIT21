@@ -133,32 +133,6 @@ function Index() {
                       sem={sem || currentJoonSem}
                       subTitle="Classes start at 6:30 AM"
                     />
-                    <Card
-                      sx={{
-                        mt: 2,
-                        display: "flex",
-                        borderRadius: ".6rem",
-                        "&:hover": {
-                          boxShadow:
-                            "0 20px 20px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
-                        },
-                        overflowX: "auto",
-                      }}
-                      elevation={3}
-                    >
-                      <CardContent
-                        sx={{
-                          position: "relative",
-                          flex: 1,
-                          pb: "0 !important",
-                        }}
-                      >
-                        <Typography variant="h5" component="div">
-                          FYP Deadline
-                        </Typography>
-                        <Countdown yyyymmddDate="2025/10/21" />
-                      </CardContent>
-                    </Card>
                   </>
                 ) : null}
                 {sem === "sem7" ? (
