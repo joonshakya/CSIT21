@@ -46,6 +46,17 @@ export const subjects = {
       meetCodeA: "rvp-taks-owv",
       meetCodeB: "rvp-taks-owv",
     },
+    Intern: {
+      name: "Internship",
+      shortName: "Intern",
+      microSyllabus:
+        "https://drive.google.com/file/d/1DF-B7ERsWlklq_1usOIgIpbnomcZml8v/view",
+      notes:
+        "https://hamrocsit.com/note/internship/internship-guidelines/",
+      questions: "",
+      meetCodeA: "",
+      meetCodeB: "",
+    },
   },
   sem7: {
     Java: {

@@ -6,66 +6,84 @@ export const classRoutine = {
       day: "Sun",
       a: [
         [subjects.sem8.ADB, "425"],
-        [subjects.sem8.IBM, "425"],
+        [
+          [subjects.sem8.DN, ""],
+          [subjects.sem8.IBM, ""],
+        ],
       ],
       b: [
         [subjects.sem8.CC, "422"],
-        [subjects.sem8.DN, "422"],
+        [
+          [subjects.sem8.DN, ""],
+          [subjects.sem8.IBM, ""],
+        ],
       ],
     },
     {
       day: "Mon",
       a: [
         [subjects.sem8.ADB, "425"],
-        [subjects.sem8.DN, "425"],
+        [
+          [subjects.sem8.DN, ""],
+          [subjects.sem8.IBM, ""],
+        ],
       ],
       b: [
         [subjects.sem8.CC, "422"],
-        [subjects.sem8.IBM, "422"],
+        [
+          [subjects.sem8.DN, ""],
+          [subjects.sem8.IBM, ""],
+        ],
       ],
     },
     {
       day: "Tue",
       a: [
-        [subjects.sem8.CC, "425"],
-        [subjects.sem8.DN, "425"],
+        [subjects.sem8.ADB, "Lab"],
+        [subjects.sem8.CC, "Lab"],
       ],
       b: [
-        [subjects.sem8.ADB, "422"],
-        [subjects.sem8.IBM, "422"],
+        [subjects.sem8.ADB, "Lab"],
+        [subjects.sem8.CC, "Lab"],
       ],
     },
     {
       day: "Wed",
       a: [
-        [subjects.sem8.ADB, "425"],
-        [subjects.sem8.IBM, "425"],
+        [subjects.sem8.ADB, "Lab"],
+        [subjects.sem8.CC, "Lab"],
       ],
       b: [
-        [subjects.sem8.CC, "422"],
-        [subjects.sem8.DN, "422"],
+        [subjects.sem8.ADB, "Lab"],
+        [subjects.sem8.CC, "Lab"],
       ],
     },
     {
       day: "Thu",
       a: [
         [subjects.sem8.CC, "425"],
-        [subjects.sem8.DN, "425"],
+        [
+          [subjects.sem8.DN, ""],
+          [subjects.sem8.IBM, ""],
+        ],
       ],
       b: [
         [subjects.sem8.ADB, "422"],
-        [subjects.sem8.IBM, "422"],
+        [
+          [subjects.sem8.DN, ""],
+          [subjects.sem8.IBM, ""],
+        ],
       ],
     },
     {
       day: "Fri",
       a: [
         [subjects.sem8.CC, "425"],
-        [subjects.sem8.IBM, "425"],
+        [subjects.sem8.Intern, ""],
       ],
       b: [
         [subjects.sem8.ADB, "422"],
-        [subjects.sem8.DN, "422"],
+        [subjects.sem8.Intern, ""],
       ],
     },
   ],
