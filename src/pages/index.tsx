@@ -129,10 +129,7 @@ function Index() {
                 {/* End Components */}
                 {sem === null || sem === currentJoonSem ? (
                   <>
-                    <ClassRoutine
-                      sem={sem || currentJoonSem}
-                      subTitle="Classes start at 6:30 AM"
-                    />
+                    <ClassRoutine sem={sem || currentJoonSem} />
                   </>
                 ) : null}
                 {sem === "sem7" ? (
