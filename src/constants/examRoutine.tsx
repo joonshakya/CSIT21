@@ -3,7 +3,44 @@ import { subjects } from "./subjects";
 
 export const examRoutine = {
   sem8: {
-    [examTypes.mid]: [],
+    [examTypes.mid]: [
+      {
+        day: "Wed",
+        subject: subjects.sem8.ADB,
+        date: "2025/11/26",
+        friendlyDate: (
+          <>
+            26<sup>th</sup> November
+            <br />
+            10<sup>th</sup> Mangsir
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem8.CC,
+        date: "2025/11/27",
+        friendlyDate: (
+          <>
+            27<sup>th</sup> November
+            <br />
+            11<sup>th</sup> Mangsir
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: [subjects.sem8.DN, subjects.sem8.IBM],
+        date: "2025/11/28",
+        friendlyDate: (
+          <>
+            28<sup>th</sup> November
+            <br />
+            12<sup>th</sup> Mangsir
+          </>
+        ),
+      },
+    ],
     [examTypes.pre]: [],
     [examTypes.board]: [],
     [examTypes.prac]: [],

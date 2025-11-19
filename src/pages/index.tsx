@@ -129,6 +129,17 @@ function Index() {
                 {/* End Components */}
                 {sem === null || sem === currentJoonSem ? (
                   <>
+                    <ExamRoutine
+                      examType={examTypes.mid}
+                      subtitle={
+                        <>
+                          Exam time: 6:35 AM - 8:35 AM
+                          <br />
+                          Room 103 (Section A), Room 105 (Section B)
+                        </>
+                      }
+                      sem={sem || currentJoonSem}
+                    />
                     <ClassRoutine sem={sem || currentJoonSem} />
                   </>
                 ) : null}
