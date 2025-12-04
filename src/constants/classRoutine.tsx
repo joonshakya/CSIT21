@@ -5,14 +5,14 @@ export const classRoutine = {
     {
       day: "Sun",
       a: [
-        [subjects.sem8.ADB, "425"],
+        [subjects.sem8.ADB, "218"],
         [
           [subjects.sem8.DN, ""],
           [subjects.sem8.IBM, ""],
         ],
       ],
       b: [
-        [subjects.sem8.CC, "422"],
+        [subjects.sem8.CC, "220"],
         [
           [subjects.sem8.DN, ""],
           [subjects.sem8.IBM, ""],
@@ -22,14 +22,14 @@ export const classRoutine = {
     {
       day: "Mon",
       a: [
-        [subjects.sem8.ADB, "425"],
+        [subjects.sem8.ADB, "218"],
         [
           [subjects.sem8.DN, ""],
           [subjects.sem8.IBM, ""],
         ],
       ],
       b: [
-        [subjects.sem8.CC, "422"],
+        [subjects.sem8.CC, "220"],
         [
           [subjects.sem8.DN, ""],
           [subjects.sem8.IBM, ""],
@@ -39,36 +39,36 @@ export const classRoutine = {
     {
       day: "Tue",
       a: [
-        [subjects.sem8.ADB, "Lab"],
-        [subjects.sem8.CC, "Lab"],
+        [subjects.sem8.ADB, "Lab C"],
+        [subjects.sem8.CC, "Lab C"],
       ],
       b: [
-        [subjects.sem8.ADB, "Lab"],
-        [subjects.sem8.CC, "Lab"],
+        [subjects.sem8.ADB, "Lab C"],
+        [subjects.sem8.CC, "Lab C"],
       ],
     },
     {
       day: "Wed",
       a: [
-        [subjects.sem8.ADB, "Lab"],
-        [subjects.sem8.CC, "Lab"],
+        [subjects.sem8.ADB, "Lab C"],
+        [subjects.sem8.CC, "Lab C"],
       ],
       b: [
-        [subjects.sem8.ADB, "Lab"],
-        [subjects.sem8.CC, "Lab"],
+        [subjects.sem8.ADB, "Lab C"],
+        [subjects.sem8.CC, "Lab C"],
       ],
     },
     {
       day: "Thu",
       a: [
-        [subjects.sem8.CC, "425"],
+        [subjects.sem8.CC, "218"],
         [
           [subjects.sem8.DN, ""],
           [subjects.sem8.IBM, ""],
         ],
       ],
       b: [
-        [subjects.sem8.ADB, "422"],
+        [subjects.sem8.ADB, "220"],
         [
           [subjects.sem8.DN, ""],
           [subjects.sem8.IBM, ""],
@@ -78,11 +78,11 @@ export const classRoutine = {
     {
       day: "Fri",
       a: [
-        [subjects.sem8.CC, "425"],
+        [subjects.sem8.CC, "218"],
         [subjects.sem8.Intern, ""],
       ],
       b: [
-        [subjects.sem8.ADB, "422"],
+        [subjects.sem8.ADB, "220"],
         [subjects.sem8.Intern, ""],
       ],
     },
