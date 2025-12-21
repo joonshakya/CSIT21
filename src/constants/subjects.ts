@@ -26,7 +26,7 @@ export const subjects = {
       name: "International Business Management",
       shortName: "IBM",
       microSyllabus:
-        "https://drive.google.com/file/d/1TDd8CYbBoYLxEu6ORXUU8wAXhgR6ynGk/view?usp=drive_link",
+        "https://drive.google.com/file/d/1cchv9p2Gqn-3WskuKxufWxuJMNYffkwj/view?usp=sharing",
       notes:
         "https://hamrocsit.com/note/international-business-management/globalization-and-international-business/",
       questions:
