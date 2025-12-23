@@ -41,7 +41,44 @@ export const examRoutine = {
         ),
       },
     ],
-    [examTypes.pre]: [],
+    [examTypes.pre]: [
+      {
+        day: "Mon",
+        subject: subjects.sem8.ADB,
+        date: "2026/01/05",
+        friendlyDate: (
+          <>
+            5<sup>th</sup> January
+            <br />
+            21<sup>st</sup> Poush
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem8.CC,
+        date: "2026/01/06",
+        friendlyDate: (
+          <>
+            6<sup>th</sup> January
+            <br />
+            22<sup>nd</sup> Poush
+          </>
+        ),
+      },
+      {
+        day: "Wed",
+        subject: [subjects.sem8.DN, subjects.sem8.IBM],
+        date: "2026/01/07",
+        friendlyDate: (
+          <>
+            7<sup>th</sup> January
+            <br />
+            23<sup>rd</sup> Poush
+          </>
+        ),
+      },
+    ],
     [examTypes.board]: [],
     [examTypes.prac]: [],
   },
