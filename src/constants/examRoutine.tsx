@@ -79,7 +79,58 @@ export const examRoutine = {
         ),
       },
     ],
-    [examTypes.board]: [],
+    [examTypes.board]: [
+      {
+        day: "Sun",
+        subject: subjects.sem8.ADB,
+        date: "2026/02/08",
+        friendlyDate: (
+          <>
+            8<sup>th</sup> February
+            <br />
+            25<sup>th</sup> Magh
+          </>
+        ),
+        source: "https://iost.tu.edu.np/notices/10929",
+        sourceName: "TU Notice",
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem8.IBM,
+        date: "2026/02/10",
+        friendlyDate: (
+          <>
+            10<sup>th</sup> February
+            <br />
+            27<sup>th</sup> Magh
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem8.DN,
+        date: "2026/02/13",
+        friendlyDate: (
+          <>
+            13<sup>th</sup> February
+            <br />
+            1<sup>st</sup> Falgun
+          </>
+        ),
+      },
+      {
+        day: "Fri",
+        subject: subjects.sem8.CC,
+        date: "2026/02/20",
+        friendlyDate: (
+          <>
+            20<sup>th</sup> February
+            <br />
+            8<sup>th</sup> Falgun
+          </>
+        ),
+      },
+    ],
     [examTypes.prac]: [],
   },
   sem7: {
