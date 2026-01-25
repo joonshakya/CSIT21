@@ -556,8 +556,8 @@ export const classRoutine = {
         ["*", ""],
       ],
       b: [
+        [subjects.sem3.NM, ""],
         [subjects.sem3.CG, ""],
-        [subjects.sem3.Stats2, ""],
         ["*", ""],
       ],
     },
@@ -571,7 +571,7 @@ export const classRoutine = {
       ],
       b: [
         [subjects.sem3.DSA, ""],
-        [subjects.sem3.CG, ""],
+        [subjects.sem3.Stats2, ""],
         [subjects.sem3.Stats2, ""],
         ["*", ""],
       ],
@@ -630,7 +630,7 @@ export const classRoutine = {
         ["*", ""],
       ],
       b: [
-        [subjects.sem3.NM, ""],
+        [subjects.sem3.CG, ""],
         [subjects.sem3.CA, ""],
         ["*", ""],
         ["*", ""],
