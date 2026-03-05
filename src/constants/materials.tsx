@@ -34,6 +34,18 @@ export const materials: Record<
         bgColor: "#548982",
         bgImage: "linear-gradient(90deg, #585c5b 0%, #44b8ab 100%)",
       },
+      {
+        name: (
+          <>
+            SXC
+            <br />
+            Old Qs
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1tvMO425C8kkKUpckx6kiqnX6377NwmqP",
+        bgColor: "#FBAB7E",
+        bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+      },
     ],
   },
   sem7: {
@@ -64,18 +76,18 @@ export const materials: Record<
         bgImage: "linear-gradient(62deg, #5682c4 0%, #52d0b8 100%)",
         requiresCollegeEmail: true,
       },
-      // {
-      //   name: (
-      //     <>
-      //       SXC
-      //       <br />
-      //       Old Qs
-      //     </>
-      //   ),
-      //   link: "https://drive.google.com/drive/u/1/folders/10t7GrCv1_kWMUd6vizBqTOH55zsNXCu0",
-      //   bgColor: "#FBAB7E",
-      //   bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
-      // },
+      {
+        name: (
+          <>
+            SXC
+            <br />
+            Old Qs
+          </>
+        ),
+        link: "https://drive.google.com/drive/folders/1qmqxCMqAyOGsWJPnAWECzP-yXLPUXurw",
+        bgColor: "#FBAB7E",
+        bgImage: "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
+      },
     ],
   },
   sem6: {
