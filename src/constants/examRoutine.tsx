@@ -131,7 +131,60 @@ export const examRoutine = {
         ),
       },
     ],
-    [examTypes.prac]: [],
+    [examTypes.prac]: [
+      {
+        day: "Sun",
+        subject: subjects.sem8.ADB,
+        time: "7:00 AM",
+        date: "2026/03/22",
+        friendlyDate: (
+          <>
+            22<sup>nd</sup> March
+            <br />
+            8<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+      {
+        day: "Mon",
+        subject: subjects.sem8.CC,
+        time: "7:00 AM",
+        date: "2026/03/23",
+        friendlyDate: (
+          <>
+            23<sup>rd</sup> March
+            <br />
+            9<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+      {
+        day: "Tue",
+        subject: subjects.sem8.DN,
+        time: "7:00 AM",
+        date: "2026/03/24",
+        friendlyDate: (
+          <>
+            24<sup>th</sup> March
+            <br />
+            10<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+      {
+        day: "Thu",
+        subject: subjects.sem8.Intern,
+        time: "7:00 AM",
+        date: "2026/03/26",
+        friendlyDate: (
+          <>
+            26<sup>th</sup> March
+            <br />
+            12<sup>th</sup> Chaitra
+          </>
+        ),
+      },
+    ],
   },
   sem7: {
     [examTypes.mid]: [

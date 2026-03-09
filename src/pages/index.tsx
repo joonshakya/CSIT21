@@ -65,7 +65,7 @@ function Index() {
       return localStorage.getItem("sem")
         ? (`sem${localStorage.getItem("sem")}` as Sem)
         : null;
-    })()
+    })(),
   );
 
   useEffect(() => {
@@ -130,11 +130,11 @@ function Index() {
                 {sem === null || sem === currentJoonSem ? (
                   <>
                     <ExamRoutine
-                      examType={examTypes.board}
-                      subtitle={<>Exam time: 12:00 PM - 3:00 PM</>}
+                      examType={examTypes.prac}
+                      subtitle={<>Exam time: 7:00 AM</>}
                       sem={sem || currentJoonSem}
                     />
-                    <ExamRoutine
+                    {/* <ExamRoutine
                       examType={examTypes.pre}
                       subtitle={
                         <>
@@ -150,7 +150,7 @@ function Index() {
                         </>
                       }
                       sem={sem || currentJoonSem}
-                    />
+                    /> */}
                     <ClassRoutine sem={sem || currentJoonSem} />
                   </>
                 ) : null}
