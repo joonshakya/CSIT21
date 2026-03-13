@@ -129,11 +129,10 @@ function Index() {
                 {/* End Components */}
                 {sem === null || sem === currentJoonSem ? (
                   <>
-                    {/* <ExamRoutine
+                    <ExamRoutine
                       examType={examTypes.prac}
-                      subtitle={<>Exam time: 7:00 AM</>}
                       sem={sem || currentJoonSem}
-                    /> */}
+                    />
                     {/* <ExamRoutine
                       examType={examTypes.pre}
                       subtitle={
