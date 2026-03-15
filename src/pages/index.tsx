@@ -4,7 +4,7 @@ import FrontPageGenerator from "../components/FrontPageGenerator";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
-import Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid";
 import dynamic from "next/dynamic";
 
 import Materials from "../components/Materials";

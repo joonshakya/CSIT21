@@ -4,6 +4,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV !== "development",
   },
   output: "export",
+  turbopack: {},
 };
 
 const withPWA = require("next-pwa")({
