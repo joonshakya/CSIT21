@@ -132,6 +132,11 @@ function Index() {
                     <ExamRoutine
                       examType={examTypes.prac}
                       sem={sem || currentJoonSem}
+                      subtitle={
+                        (sem || currentJoonSem) === "sem8"
+                          ? "Internship Defense will be in Loyola Building 6th floor hall"
+                          : undefined
+                      }
                     />
                     {/* <ExamRoutine
                       examType={examTypes.pre}
