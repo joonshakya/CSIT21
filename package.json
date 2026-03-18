@@ -17,18 +17,18 @@
     "@types/file-saver": "^2.0.7",
     "docxtemplater": "^3.68.3",
     "file-saver": "^2.0.5",
-    "next": "16.1.6",
+    "next": "16.1.7",
     "next-pwa": "^5.6.0",
     "pizzip": "^3.2.0",
     "prop-types": "15.8.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "sass": "1.98.0",
-    "zustand": "^5.0.11"
+    "zustand": "^5.0.12"
   },
-  "devDependencies": {
-    "eslint": "10.0.3",
-    "eslint-config-next": "16.1.6"
-  },
-  "packageManager": "bun@1.2.0"
+  "packageManager": "bun@1.2.0",
+  "overrides": {
+    "ajv": ">=8.18.0",
+    "rollup": ">=4.59.0"
+  }
 }
