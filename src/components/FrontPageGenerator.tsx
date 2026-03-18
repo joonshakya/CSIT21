@@ -92,6 +92,8 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
       "OOP Index",
       "DS Index",
       "μP Index",
+      "ADB Index",
+      "CC Index",
       "C",
     ];
   }, []);
@@ -333,6 +335,24 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
         assignments: [
           {
             number: 10,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "ADB Index",
+        assignments: [
+          {
+            number: 0,
+            selected: true,
+          },
+        ],
+      },
+      {
+        subject: "CC Index",
+        assignments: [
+          {
+            number: 0,
             selected: true,
           },
         ],
@@ -580,6 +600,35 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
                   // backgroundColor: "#f3f4f9",
                 }}
               >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
+                  {(tab === "assignment"
+                    ? []
+                    : [
+                        {
+                          shortHand: "ADB Index",
+                          longHand: "ADB",
+                        },
+                        {
+                          shortHand: "CC Index",
+                          longHand: "CC",
+                        },
+                      ]
+                  ).map((subject, index) => (
+                    <FormControlLabel
+                      key={index}
+                      value={subject.shortHand}
+                      defaultChecked={index === 0}
+                      control={<Radio />}
+                      label={subject.longHand}
+                    />
+                  ))}
+                </Box>
                 <Box
                   sx={{
                     display: "flex",

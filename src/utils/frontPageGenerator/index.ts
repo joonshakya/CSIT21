@@ -182,6 +182,8 @@ export async function prefetchDocument({
       "CA Index",
       "DSA Index",
       "NM Index",
+      "ADB Index",
+      "CC Index",
     ].includes(subject) &&
     subject.includes("Index")
   ) {
