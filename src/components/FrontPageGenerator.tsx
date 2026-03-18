@@ -370,7 +370,7 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
     if (tab === "assignment") {
       setSubject(initialSubject);
     } else if (tab === "index") {
-      setSubject("Compiler Index");
+      setSubject("ADB Index");
     }
   }, [tab]);
 
