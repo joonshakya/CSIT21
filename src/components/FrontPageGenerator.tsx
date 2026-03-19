@@ -48,7 +48,7 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
   const roll = useBaseStore((state) => state.roll);
   const setRoll = useBaseStore((state) => state.setRoll);
   const wordFileLoaded = useBaseStore(
-    (state) => state.wordFileLoaded
+    (state) => state.wordFileLoaded,
   );
 
   const assignmentsWithTopics = useMemo(() => {
@@ -363,7 +363,7 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
   const [assignmentNumber, setAssignmentNumber] = useState(
     assignmentLists
       .find((entry) => entry.subject === subject)
-      .assignments.find((assignment) => assignment.selected).number
+      .assignments.find((assignment) => assignment.selected).number,
   );
 
   useEffect(() => {
@@ -380,8 +380,8 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
         if (entry.subject === subject) {
           setAssignmentNumber(
             entry.assignments.find(
-              (assignment) => assignment.selected
-            ).number
+              (assignment) => assignment.selected,
+            ).number,
           );
         }
       });
@@ -390,7 +390,7 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
         assignmentLists
           .find((entry) => entry.subject === subject)
           .assignments.find((assignment) => assignment.selected)
-          .number
+          .number,
       );
     }
   }, [
@@ -645,7 +645,7 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
                         control={<Radio />}
                         label={subject.longHand}
                       />
-                    )
+                    ),
                   )}
                 </Box>
                 <Box
@@ -991,7 +991,7 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
                           setAssignmentNumber(
                             typeof event.target.value === "string"
                               ? parseInt(event.target.value)
-                              : event.target.value
+                              : event.target.value,
                           )
                         }
                       >
@@ -1006,7 +1006,7 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
                             >
                               {assignment.number}. {assignment.name}
                             </MenuItem>
-                          )
+                          ),
                         )}
                       </Select>
                     </FormControl>
