@@ -113,8 +113,7 @@ export const examRoutine = {
         friendlyDate: (
           <>
             13<sup>th</sup> February
-            <br />
-            1<sup>st</sup> Falgun
+            <br />1<sup>st</sup> Falgun
           </>
         ),
       },
@@ -125,8 +124,7 @@ export const examRoutine = {
         friendlyDate: (
           <>
             20<sup>th</sup> February
-            <br />
-            8<sup>th</sup> Falgun
+            <br />8<sup>th</sup> Falgun
           </>
         ),
       },
@@ -140,21 +138,19 @@ export const examRoutine = {
         friendlyDate: (
           <>
             22<sup>nd</sup> March
-            <br />
-            8<sup>th</sup> Chaitra
+            <br />8<sup>th</sup> Chaitra
           </>
         ),
       },
       {
         day: "Mon",
         subject: subjects.sem8.CC,
-        time: "7:00 AM",
+        time: "9:00 AM",
         date: "2026/03/23",
         friendlyDate: (
           <>
             23<sup>rd</sup> March
-            <br />
-            9<sup>th</sup> Chaitra
+            <br />9<sup>th</sup> Chaitra
           </>
         ),
       },
