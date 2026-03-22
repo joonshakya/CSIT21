@@ -34,6 +34,7 @@ import {
   nccAssignments,
   compilerAssignments,
   eComAssignments,
+  ccAssignments,
 } from "../constants";
 import { prefetchDocument } from "../utils/frontPageGenerator";
 import useFrontPageGenerator from "../utils/frontPageGenerator";
@@ -68,6 +69,7 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
       "NCC",
       "ECom",
       "Compiler",
+      "CC",
     ];
   }, []);
 
@@ -98,7 +100,7 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
     ];
   }, []);
 
-  const initialSubject = "Compiler";
+  const initialSubject = sem === "sem8" ? "CC" : "Compiler";
 
   const [tab, setTab] = useState("assignment");
   const [subject, setSubject] = useState(initialSubject);
@@ -330,6 +332,7 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
       },
       { subject: "DL", assignments: dlAssignments },
       { subject: "FIT", assignments: fitAssignments },
+      { subject: "CC", assignments: ccAssignments },
       {
         subject: "C",
         assignments: [
@@ -608,7 +611,12 @@ export default function FrontPageGenerator({ sem }: { sem: Sem }) {
                   }}
                 >
                   {(tab === "assignment"
-                    ? []
+                    ? [
+                        {
+                          shortHand: "CC",
+                          longHand: "CC",
+                        },
+                      ]
                     : [
                         {
                           shortHand: "ADB Index",

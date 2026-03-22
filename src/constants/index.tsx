@@ -196,6 +196,38 @@ export const simulationAssignments = [
   },
 ];
 
+export const ccAssignments = [
+  {
+    number: 1,
+    name: "AWS Storage",
+  },
+  {
+    number: 2,
+    name: "AWS Compute",
+  },
+  {
+    number: 3,
+    name: "Containerization with Docker",
+  },
+  {
+    number: 4,
+    name: "AWS Cloud Security",
+  },
+  {
+    number: 5,
+    name: "AWS Networking and Content Delivery",
+  },
+  {
+    number: 6,
+    name: "AWS Databases",
+  },
+  {
+    number: 7,
+    name: "Setting Up ownCloud/NextCloud",
+    selected: true,
+  },
+];
+
 export const examTypes = {
   mid: "Mid Term",
   pre: "Pre Board",
