@@ -202,11 +202,37 @@ function Index() {
                 ) : null}
                 {sem === "sem5" ? (
                   <>
-                    <ExamRoutine
-                      examType={examTypes.prac}
-                      sem={sem}
-                      subtitle="Board Exam will be conducted only after the completion of 1st Sem Board Exam."
-                    />
+                    <Card
+                      sx={{
+                        mt: 2,
+                        display: "flex",
+                        borderRadius: ".6rem",
+                        "&:hover": {
+                          boxShadow:
+                            "0 20px 20px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+                        },
+                      }}
+                      elevation={3}
+                    >
+                      <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+                        <CardContent sx={{ position: "relative", flex: 1, pb: "1rem !important", pt: 2 }}>
+                          <Typography variant="h5" component="div">
+                            Notice
+                          </Typography>
+                          <Typography
+                            variant="h6"
+                            sx={{
+                              mt: 1,
+                              color: "#d32f2f",
+                              fontWeight: "bold",
+                              textAlign: "center",
+                            }}
+                          >
+                            Board Exam will be conducted only after the completion of 1st Sem Board Exam.
+                          </Typography>
+                        </CardContent>
+                      </Box>
+                    </Card>
 
                     <ClassRoutine sem={sem} />
                   </>

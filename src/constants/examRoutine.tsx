@@ -986,19 +986,6 @@ export const examRoutine = {
           </>
         ),
       },
-      {
-        day: "TBA",
-        subject: "Board Exam",
-        time: "TBA",
-        date: "2026/06/01",
-        friendlyDate: (
-          <>
-            1<sup>st</sup> June
-            <br />
-            18<sup>th</sup> Jestha
-          </>
-        ),
-      },
     ],
   },
 
