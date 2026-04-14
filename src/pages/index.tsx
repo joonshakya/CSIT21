@@ -202,10 +202,11 @@ function Index() {
                 ) : null}
                 {sem === "sem5" ? (
                   <>
-                    {/* <ExamRoutine
+                    <ExamRoutine
                       examType={examTypes.prac}
                       sem={sem}
-                    /> */}
+                      subtitle="Board Exam will be conducted only after the completion of 1st Sem Board Exam."
+                    />
 
                     <ClassRoutine sem={sem} />
                   </>
