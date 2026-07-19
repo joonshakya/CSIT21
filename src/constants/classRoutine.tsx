@@ -190,14 +190,12 @@ export const classRoutine = {
       a: [
         [subjects.sem6.TW, "Online"],
         [subjects.sem6.ECom, "Online"],
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem6.EGov, "Online"],
       ],
       b: [
         [subjects.sem6.TW, "Online"],
         [subjects.sem6.NCC, "Online"],
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem6.EGov, "Online"],
       ],
     },
     {
@@ -206,13 +204,11 @@ export const classRoutine = {
         [subjects.sem6.ECom, ""],
         [subjects.sem6.TW, ""],
         [subjects.sem6.Compiler, ""],
-        [subjects.sem6.SE, ""],
       ],
       b: [
         [subjects.sem6.TW, ""],
         [subjects.sem6.NCC, ""],
         [subjects.sem6.EGov, ""],
-        ["*", ""],
       ],
     },
     {
@@ -227,22 +223,19 @@ export const classRoutine = {
         [subjects.sem6.NCC, ""],
         [subjects.sem6.Compiler, ""],
         [subjects.sem6.SE, "Lab"],
-        [subjects.sem6.EGov,""],
       ],
     },
     {
       day: "Wed",
       a: [
         [subjects.sem6.NCC, ""],
-        [subjects.sem6.EGov, ""],
+        [subjects.sem6.SE, ""],
         [subjects.sem6.Compiler, ""],
-        ["*", ""],
       ],
       b: [
         [subjects.sem6.ECom, ""],
         [subjects.sem6.Compiler, ""],
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem6.SE, ""],
       ],
     },
     {
@@ -250,14 +243,12 @@ export const classRoutine = {
       a: [
         [subjects.sem6.NCC, ""],
         [subjects.sem6.EGov, ""],
-        [subjects.sem6.Compiler, ""],
         [subjects.sem6.SE, ""],
       ],
       b: [
         [subjects.sem6.ECom, ""],
         [subjects.sem6.SE, ""],
         [subjects.sem6.EGov, ""],
-        ["*", ""],
       ],
     },
     {
@@ -265,14 +256,12 @@ export const classRoutine = {
       a: [
         [subjects.sem6.TW, ""],
         [subjects.sem6.EGov, ""],
-        ["*", ""],
-        ["*", ""],
+        [subjects.sem6.Compiler, ""],
       ],
       b: [
         [subjects.sem6.ECom, ""],
         [subjects.sem6.TW, ""],
         [subjects.sem6.Compiler, ""],
-        [subjects.sem6.SE, ""],
       ],
     },
   ],
