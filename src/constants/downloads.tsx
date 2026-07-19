@@ -59,4 +59,16 @@ export const downloads = [
     bgColor: "#2938a4",
     bgImage: "linear-gradient(180deg, #3c3d7b 0%, #032ef5 100%)",
   },
+  {
+    name: (
+      <>
+        CV
+        <br />
+        Generator
+      </>
+    ),
+    link: "https://cvgenerator.duckdns.org/",
+    bgColor: "#6a4c93",
+    bgImage: "linear-gradient(120deg, #6a4c93 0%, #b8a1d9 100%)",
+  },
 ];
