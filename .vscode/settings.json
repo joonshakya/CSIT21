@@ -3,8 +3,10 @@
     "statusBar.background": "#5f44a0",
     "statusBar.foreground": "#e7e7e7",
     "statusBarItem.hoverBackground": "#785dba",
-    "statusBarItem.remoteBackground": "#5f44a0",
-    "statusBarItem.remoteForeground": "#e7e7e7"
+    "statusBarItem.remoteBackground": "#2d1b13",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "statusBar.debuggingBackground": "#5f44a0",
+    "statusBar.debuggingForeground": "#e7e7e7"
   },
   "peacock.color": "#5f44a0"
 }

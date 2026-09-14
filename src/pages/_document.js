@@ -16,12 +16,12 @@ export default class MyDocument extends Document {
           <meta
             key="og:image"
             property="og:image"
-            content="https://www.csit21.cf/thumbnail.png"
+            content="https://csit21.joon.com.np/thumbnail.png"
           />
           <meta
             key="og:image:secure_url"
             property="og:image:secure_url"
-            content="https://www.csit21.cf/thumbnail.png"
+            content="https://csit21.joon.com.np/thumbnail.png"
           />
           <meta
             key="og:image:width"
@@ -46,7 +46,7 @@ export default class MyDocument extends Document {
           <meta
             key="og:url"
             property="og:url"
-            content="https://www.csit21.cf/"
+            content="https://csit21.joon.com.np/"
           />
 
           {/* PWA primary color */}
