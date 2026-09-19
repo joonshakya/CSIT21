@@ -26,6 +26,7 @@ import { useBaseStore } from "../store";
 import { checkCollegeEmail } from "../utils/checkCollegeEmail";
 import Countdown from "../components/Countdown";
 import { Card, CardContent, Typography } from "@mui/material";
+import CallForMaintainers from "../components/CallForMaintainers";
 // import LeftSideCardMessage from "../components/LeftSideCardMessage";
 
 function Index() {
@@ -274,6 +275,7 @@ function Index() {
                 }}
                 size={{ xs: 12, sm: 10, md: 5 }}
               >
+                <CallForMaintainers />
                 <FrontPageGenerator sem={sem || currentJoonSem} />
                 <Downlaods />
                 <OpCodeFinder operate={isDesktop} />

@@ -20,7 +20,7 @@ CSIT21 is a comprehensive website designed to cater to the needs of Computer Sci
 
 ## Live Website
 
-You can access the live version of CSIT21 at [https://csit21.joon.com.np](https://csit21.joon.com.np).
+You can access the live version of CSIT21 at [https://csit21.sxcdocs.com](https://csit21.sxcdocs.com).
 
 ## Installation
 
