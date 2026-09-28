@@ -6,7 +6,8 @@
     "statusBarItem.remoteBackground": "#2d1b13",
     "statusBarItem.remoteForeground": "#e7e7e7",
     "statusBar.debuggingBackground": "#5f44a0",
-    "statusBar.debuggingForeground": "#e7e7e7"
+    "statusBar.debuggingForeground": "#e7e7e7",
+    "statusBar.inactiveBackground": "#5f44a0"
   },
   "peacock.color": "#5f44a0"
 }
