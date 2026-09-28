@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
           <meta
             key="og:title"
             property="og:title"
-            content="CSIT21 - SXC B.Sc. CSIT Batch 2021"
+            content="CSIT21 - SXC B.Sc. CSIT"
           />
           <meta
             key="og:description"
@@ -47,6 +47,30 @@ export default class MyDocument extends Document {
             key="og:url"
             property="og:url"
             content="https://csit21.sxcdocs.com/"
+          />
+          <meta
+            key="og:site_name"
+            property="og:site_name"
+            content="CSIT21"
+          />
+          <meta
+            key="application-name"
+            name="application-name"
+            content="CSIT21"
+          />
+          <script
+            key="ld-website"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "CSIT21",
+                alternateName:
+                  "CSIT21 - SXC B.Sc. CSIT",
+                url: "https://csit21.sxcdocs.com/",
+              }),
+            }}
           />
 
           {/* PWA primary color */}
